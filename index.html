@@ -261,34 +261,43 @@ input.nm:focus{border-color:var(--cyan)}
 <script>
 /* ================= DATOS ================= */
 const AVATARES=["🦁","🐉","🦅","🐺","🦊","🤖","👽","🥷"];
-const NIVELES=[
- {id:0,nombre:"Los grandes viajes",icono:"⛵",preguntas:[
-   {q:"¿En qué año llegó Cristóbal Colón a América?",ops:["1492","1520","1810","1392"],ok:0,tip:"Colón zarpó de España y llegó el 12 de octubre de 1492."},
-   {q:"¿Qué buscaban los europeos al explorar nuevas rutas marítimas?",ops:["Una ruta a Asia para el comercio de especias","Nuevos lugares para vacacionar","Petróleo","Oro de los vikingos"],ok:0,tip:"Querían llegar a Asia sin pasar por rutas controladas por otros."},
-   {q:"¿Qué expedición dio la primera vuelta al mundo?",ops:["La de Magallanes y Elcano","La de Colón","La de Marco Polo","La de Almagro"],ok:0,tip:"Partió en 1519; Elcano completó la vuelta en 1522."},
- ]},
- {id:1,nombre:"Grandes civilizaciones",icono:"🏛️",preguntas:[
-   {q:"¿Cuál era la capital del imperio azteca?",ops:["Tenochtitlán","Cusco","Machu Picchu","Chichén Itzá"],ok:0,tip:"Estaba construida sobre un lago, donde hoy está Ciudad de México."},
-   {q:"El imperio inca se ubicaba principalmente en…",ops:["Los Andes (Perú y alrededores)","La selva amazónica","Norteamérica","La Patagonia"],ok:0,tip:"Su capital era Cusco y su red de caminos se llamaba Qhapaq Ñan."},
-   {q:"¿Qué pueblo originario resistió la conquista en el sur de Chile?",ops:["Mapuche","Maya","Azteca","Guaraní"],ok:0,tip:"La resistencia mapuche mantuvo la frontera en el río Biobío."},
- ]},
- {id:2,nombre:"La Conquista",icono:"⚔️",preguntas:[
-   {q:"¿Quién lideró la conquista del imperio azteca?",ops:["Hernán Cortés","Francisco Pizarro","Pedro de Valdivia","Diego de Almagro"],ok:0,tip:"Cortés llegó a México en 1519."},
-   {q:"¿Quién fundó la ciudad de Santiago en 1541?",ops:["Pedro de Valdivia","Diego de Almagro","Cristóbal Colón","García Hurtado"],ok:0,tip:"La fundó el 12 de febrero de 1541 a los pies del cerro Huelén."},
-   {q:"¿Qué factor ayudó MÁS a los conquistadores frente a los grandes imperios?",ops:["Enfermedades, alianzas y armas nuevas","Tener más soldados","Conocer mejor el territorio","La ayuda de otros países europeos"],ok:0,tip:"Las enfermedades europeas causaron millones de muertes."},
- ]},
- {id:3,nombre:"La vida colonial",icono:"🏰",preguntas:[
-   {q:"¿Qué era la encomienda?",ops:["Un grupo de indígenas asignados a un español para trabajar","Un tipo de barco","Una carta del rey","Un mercado colonial"],ok:0,tip:"A cambio, el encomendero debía protegerlos y evangelizarlos."},
-   {q:"El mestizaje en América fue…",ops:["La mezcla entre pueblos originarios, europeos y africanos","Un tipo de comida","Una guerra colonial","Una moneda"],ok:0,tip:"Dio origen a gran parte de la sociedad chilena actual."},
-   {q:"¿Quién gobernaba Chile en nombre del rey durante la Colonia?",ops:["El Gobernador","El Presidente","El Alcalde","El Cacique"],ok:0,tip:"Chile era una Capitanía General dependiente del Virreinato del Perú."},
- ]},
- {id:4,nombre:"⚡ JEFE FINAL",icono:"🐲",preguntas:[
-   {q:"Ordena la historia: ¿qué ocurrió PRIMERO?",ops:["Llegada de Colón a América","Fundación de Santiago","Conquista del imperio inca","Vuelta al mundo de Elcano"],ok:0,tip:"1492 → 1522 → 1533 → 1541."},
-   {q:"¿Por qué se dice que 1492 cambió el mundo?",ops:["Conectó continentes que no tenían contacto entre sí","Se inventó la imprenta","Terminó el imperio romano","Comenzó la independencia de Chile"],ok:0,tip:"Se inició el intercambio de personas, plantas, animales e ideas."},
-   {q:"¿Qué producto americano cambió la comida del mundo entero?",ops:["La papa y el maíz","El trigo","El arroz","La caña de azúcar"],ok:0,tip:"La papa es originaria de los Andes; el maíz, de Mesoamérica."},
-   {q:"La resistencia mapuche logró que la Corona…",ops:["Aceptara una frontera y parlamentos","Abandonara América","Liberara a todos los encomendados","Trasladara la capital a Concepción"],ok:0,tip:"Los parlamentos eran reuniones de negociación entre ambas partes."},
- ]},
+
+/* Expedición piloto: "Los europeos llegan a América".
+   Cada etapa saca preguntas al azar del pool (contenido/historia-8basico/preguntas.json).
+   El jefe final mezcla preguntas de todos los OA de la expedición. */
+const EXPEDICION=[
+ {oa:"HI08 OA 04",nombre:"Los grandes viajes",icono:"⛵",n:6},
+ {oa:"HI08 OA 05",nombre:"El encuentro de dos mundos",icono:"🌎",n:6},
+ {oa:"HI08 OA 06",nombre:"La conquista",icono:"⚔️",n:6},
+ {oa:"HI08 OA 07",nombre:"Un mundo nuevo",icono:"🌍",n:6},
+ {oa:"BOSS",nombre:"⚡ JEFE FINAL",icono:"🐲",n:8,oas:["HI08 OA 04","HI08 OA 05","HI08 OA 06","HI08 OA 07"]},
 ];
+const N_ETAPAS=EXPEDICION.length;
+
+/* Pool de preguntas cargado desde el JSON (oa -> [preguntas]) */
+let POOL={};
+fetch('contenido/historia-8basico/preguntas.json')
+ .then(r=>r.json())
+ .then(d=>{(d.preguntas||[]).forEach(q=>{(POOL[q.oa]=POOL[q.oa]||[]).push(q);});})
+ .catch(e=>{console.error('No se pudo cargar el pool de preguntas',e);});
+
+function pickN(arr,n){
+ const a=(arr||[]).slice();
+ for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}
+ return a.slice(0,n);
+}
+function buildPreguntas(lvl){
+ const c=EXPEDICION[lvl];let sel;
+ if(c.oas){const per=Math.max(1,Math.floor(c.n/c.oas.length));
+  sel=[];c.oas.forEach(oa=>{sel=sel.concat(pickN(POOL[oa],per));});
+  sel=pickN(sel,c.n);
+ }else{sel=pickN(POOL[c.oa],c.n);}
+ return sel.map(q=>({q:q.pregunta,ops:q.opciones,ok:q.correcta,tip:q.tip}));
+}
+function poolListo(lvl){
+ const c=EXPEDICION[lvl];
+ return c.oas?c.oas.every(oa=>(POOL[oa]||[]).length):(POOL[c.oa]||[]).length>0;
+}
 const LOGROS={
  primera:{ic:"🥇",tx:"Primera victoria"},
  combo3:{ic:"🔥",tx:"Combo x3 — ¡Imparable!"},
@@ -351,7 +360,7 @@ $('btnStart').onclick=()=>{
 /* ================= MAPA ================= */
 function renderMapa(){
  const box=$('mapbox');box.innerHTML='';
- NIVELES.forEach((n,i)=>{
+ EXPEDICION.forEach((n,i)=>{
   const p=S.progreso[i];
   const d=document.createElement('div');d.className='node '+p.est;
   const est=p.est==='done'?'✓ Completado':(p.est==='open'?'▶ ¡Jugar ahora!':'🔒 Bloqueado');
@@ -378,15 +387,16 @@ document.querySelectorAll('.nav button').forEach(b=>b.onclick=()=>{
 
 /* ================= QUIZ ================= */
 function startQuiz(lvl){
- Q={lvl,idx:0,aciertos:0,combo:0,comboMax:0,xpGanado:0,timer:null,t:15,lock:false};
+ if(!poolListo(lvl)){alert('Cargando preguntas… intenta de nuevo en un momento.');return;}
+ Q={lvl,idx:0,aciertos:0,combo:0,comboMax:0,xpGanado:0,timer:null,t:15,lock:false,preguntas:buildPreguntas(lvl)};
  go('scr-quiz');pintaPregunta();}
 $('btnBack').onclick=()=>{clearInterval(Q.timer);go('scr-mapa');};
 
 function pintaPregunta(){
- const N=NIVELES[Q.lvl],P=N.preguntas[Q.idx];Q.lock=false;
- $('qTag').textContent=`${N.icono} ${N.nombre} · Pregunta ${Q.idx+1}/${N.preguntas.length}`;
+ const N=EXPEDICION[Q.lvl],P=Q.preguntas[Q.idx];Q.lock=false;
+ $('qTag').textContent=`${N.icono} ${N.nombre} · Pregunta ${Q.idx+1}/${Q.preguntas.length}`;
  $('qText').textContent=P.q;$('qFb').textContent='';$('qFb').className='feedback';
- $('qProg').style.width=(Q.idx/N.preguntas.length*100)+'%';
+ $('qProg').style.width=(Q.idx/Q.preguntas.length*100)+'%';
  // barajar opciones
  const orden=P.ops.map((o,i)=>({o,i})).sort(()=>Math.random()-.5);
  $('qOpts').innerHTML='';
@@ -423,31 +433,39 @@ function responder(el,ok,P,e){
  refreshHud();
  setTimeout(()=>{
   Q.idx++;
-  if(Q.idx<NIVELES[Q.lvl].preguntas.length)pintaPregunta();
+  if(Q.idx<Q.preguntas.length)pintaPregunta();
   else terminarNivel();
  }, ok?1100:2200);
 }
 function terminarNivel(){
- const N=NIVELES[Q.lvl],tot=N.preguntas.length;
+ const tot=Q.preguntas.length;
  const ratio=Q.aciertos/tot;
- const estrellas=ratio===1?3:(ratio>=0.66?2:(ratio>=0.34?1:0));
- const paso=estrellas>=1;
+ const estrellas=ratio>=1?3:(ratio>=0.80?2:(ratio>=0.66?1:0));
+ const paso=estrellas>=1;               // pasa con >=66% de aciertos
+ const esJefe=Q.lvl===N_ETAPAS-1;
  const p=S.progreso[Q.lvl];
  if(paso){p.est='done';p.estrellas=Math.max(p.estrellas,estrellas);
   if(S.progreso[Q.lvl+1]&&S.progreso[Q.lvl+1].est==='lock')S.progreso[Q.lvl+1].est='open';
   toast('primera');
   if(estrellas===3)toast('perfecto');
-  if(Q.lvl===4)toast('jefe');
+  if(esJefe)toast('jefe');
   S.monedas+=estrellas*10;
  }
- $('resIc').textContent=paso?(Q.lvl===4?'👑':'🎉'):'😵';
- $('resTitle').textContent=paso?(Q.lvl===4?'¡EXPEDICIÓN COMPLETA!':'¡Nivel superado!'):'¡Casi! Inténtalo de nuevo';
+ $('resIc').textContent=paso?(esJefe?'👑':'🎉'):'😵';
+ $('resTitle').textContent=paso?(esJefe?'¡EXPEDICIÓN COMPLETA!':'¡Nivel superado!'):'¡Casi! Necesitas 66% para pasar';
  $('resStars').innerHTML=[1,2,3].map(i=>i<=estrellas?'<span class="g">★</span>':'<span class="w">★</span>').join('');
  $('resXp').textContent='+'+Q.xpGanado;
  $('resCoins').textContent='+'+(estrellas*10+Q.aciertos*5);
  $('resCombo').textContent='x'+Q.comboMax;
- $('btnNext').style.display=(paso&&Q.lvl<4)?'block':'none';
- $('btnNext').onclick=()=>startQuiz(Q.lvl+1);
+ if(paso){
+  $('btnNext').style.display=(Q.lvl<N_ETAPAS-1)?'block':'none';
+  $('btnNext').textContent='SIGUIENTE ETAPA ➜';
+  $('btnNext').onclick=()=>startQuiz(Q.lvl+1);
+ }else{
+  $('btnNext').style.display='block';
+  $('btnNext').textContent='🔁 REINTENTAR';
+  $('btnNext').onclick=()=>startQuiz(Q.lvl);
+ }
  $('btnMap').onclick=()=>{renderMapa();renderRanking();go('scr-mapa');};
  refreshHud();
  if(paso)particulas(window.innerWidth/2,window.innerHeight/3,['🎉','⭐','✨','🎊'],24);

@@ -135,6 +135,30 @@ JavaScript): `python -m http.server 8765` y abrir `http://localhost:8765/`.
 Une los archivos verificados, elimina duplicados, **baraja las opciones** (evita
 el sesgo de posición), asigna IDs por OA y escribe `preguntas.json`.
 
+### Flujo de revisión pedagógica (marcar preguntas como "revisadas")
+
+1. En el tablero (Admin), pincha un OA y marca la casilla de las preguntas que
+   apruebes. Las marcas se guardan en el navegador.
+2. Pulsa **"Exportar revisadas"** → descarga `revisadas.json`.
+3. Aplica las marcas al banco: `python scripts/aplicar-revisadas.py` (busca el
+   archivo en la raíz o en Descargas; también acepta la ruta como argumento).
+4. Regenera el tablero: `python scripts/generar-tablero.py`. La barra rosada
+   "Revisadas por ti" reflejará el avance real de revisión.
+
+## Reglas de avance (acordadas)
+
+### Del jugador (juego)
+- Cada etapa saca **6 preguntas al azar** del pool (jefe final: 8, mezcla de OA).
+- **Pasa con ≥66%** de aciertos (4 de 6). Si no, repite la etapa con preguntas
+  nuevas. Estrellas: 3★ = 100%, 2★ ≥ 80%, 1★ ≥ 66%.
+- XP, monedas, combos y timer (15 s) se mantienen.
+- Expedición piloto "Los europeos llegan a América": etapas OA04, OA05, OA06,
+  OA07 + jefe final. El juego lee las preguntas de `preguntas.json` (fetch).
+
+### Del tablero (producción)
+- Cobertura: `preguntas / 25` por OA.
+- Revisión: `revisadas / total` (aprobadas por un humano).
+
 ## Bitácora de sesiones
 
 ### Sesión 1 (2026-08-12)

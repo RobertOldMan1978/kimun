@@ -2,22 +2,21 @@
 """
 KIMUN - Generador del tablero de desarrollo (Admin).
 
-Lee el contenido curricular (contenido/<asignatura>/oa.json) y las preguntas
-(preguntas.json), calcula el % de avance por OA/unidad/asignatura y genera una
-pantalla estatica en dev/tablero.html con:
+Genera dev/tablero.html con:
   - Bloqueo suave por contrasena (modo Admin).
-  - Acordeon: al pinchar un OA se despliegan sus preguntas (solo enunciado +
-    respuesta correcta).
+  - Acordeon: al pinchar un OA se despliegan sus preguntas (enunciado +
+    respuesta correcta) con una casilla para marcarlas como "revisadas".
+  - Dos metricas por OA: COBERTURA (cantidad vs meta) y REVISADAS (aprobadas
+    por un humano).
+  - Boton "Exportar revisadas" (descarga revisadas.json) para luego aplicarlo
+    con scripts/aplicar-revisadas.py.
   - Boton para volver al juego.
-
-El % de avance se mide por COBERTURA DE PREGUNTAS:
-    avance_OA = min(100, preguntas_del_OA / meta_por_OA * 100)
 
 Uso:
     python scripts/generar-tablero.py
 
-CONTRASENA: cambia CLAVE_ADMIN y vuelve a generar. Es un bloqueo suave para
-que los ninos no entren al panel; NO es seguridad real (sitio estatico).
+CONTRASENA: cambia CLAVE_ADMIN y vuelve a generar. Bloqueo suave, NO seguridad
+real (sitio estatico).
 """
 
 import json
@@ -66,11 +65,12 @@ def etiqueta_estado(pct):
     return "En progreso"
 
 
-def barra(pct, alto=10):
+def barra(pct, alto=10, color=None):
     pct = max(0, min(100, pct))
+    col = color or color_avance(pct)
     return (
         f'<div class="track" style="height:{alto}px">'
-        f'<div class="fill" style="width:{pct:.0f}%;background:{color_avance(pct)}"></div>'
+        f'<div class="fill" style="width:{pct:.0f}%;background:{col}"></div>'
         f"</div>"
     )
 
@@ -95,20 +95,25 @@ def render_asignatura(oa_data, preg_data):
     preguntas = preg_data.get("preguntas", [])
 
     conteo = {}
+    revis = {}
     preg_por_oa = {}
     for p in preguntas:
         oa = p.get("oa", "")
         conteo[oa] = conteo.get(oa, 0) + 1
+        if p.get("revisada"):
+            revis[oa] = revis.get(oa, 0) + 1
         preg_por_oa.setdefault(oa, []).append(p)
 
     oa_por_codigo = {oa["codigo"]: oa for oa in oa_data["oa"]}
 
     total_oa = len(oa_data["oa"])
     total_preg = len(preguntas)
+    total_rev = sum(1 for p in preguntas if p.get("revisada"))
     oa_con_algo = sum(1 for oa in oa_data["oa"] if conteo.get(oa["codigo"], 0) > 0)
     oa_listos = sum(1 for oa in oa_data["oa"] if conteo.get(oa["codigo"], 0) >= meta)
     utiles = sum(min(conteo.get(oa["codigo"], 0), meta) for oa in oa_data["oa"])
     avance_global = (utiles / (meta * total_oa) * 100) if total_oa else 0
+    rev_global = (total_rev / total_preg * 100) if total_preg else 0
 
     partes = []
     partes.append('<section class="asig">')
@@ -117,16 +122,18 @@ def render_asignatura(oa_data, preg_data):
         f'<div><h2>{escape(oa_data["asignatura"])}</h2>'
         f'<div class="sub">{escape(oa_data["nivel"])} · meta {meta} preguntas por OA</div></div>'
         f'<div class="global"><div class="pct">{avance_global:.0f}%</div>'
-        f'<div class="pct-lbl">avance</div></div>'
+        f'<div class="pct-lbl">cobertura</div></div>'
         f"</div>"
     )
     partes.append(barra(avance_global, alto=14))
+    partes.append(f'<div class="rev-lbl" style="margin-top:8px">🔍 Revisadas por ti: {total_rev}/{total_preg} ({rev_global:.0f}%)</div>')
+    partes.append(barra(rev_global, alto=8, color="var(--pink)"))
     partes.append(
         '<div class="chips">'
         f'<span class="chip">📚 {total_preg} preguntas</span>'
         f'<span class="chip">🎯 {oa_con_algo}/{total_oa} OA con contenido</span>'
         f'<span class="chip ok">✅ {oa_listos} OA listos</span>'
-        f'<span class="chip pend">⏳ {total_oa - oa_con_algo} OA sin empezar</span>'
+        f'<span class="chip rev2">🔍 {total_rev} revisadas</span>'
         "</div>"
     )
 
@@ -150,26 +157,29 @@ def render_asignatura(oa_data, preg_data):
             if not oa:
                 continue
             n = conteo.get(c, 0)
+            r = revis.get(c, 0)
             pct = min(100, n / meta * 100) if meta else 0
+            rpct = (r / n * 100) if n else 0
             eje = oa.get("eje", "")
             col_eje = COLOR_EJE.get(eje, "var(--violet)")
 
-            # Panel de preguntas (solo enunciado + respuesta correcta)
             filas = []
             for j, q in enumerate(preg_por_oa.get(c, []), 1):
                 try:
                     resp = q["opciones"][q["correcta"]]
                 except Exception:
                     resp = "(respuesta no disponible)"
+                qid = q.get("id", "")
+                rev = "1" if q.get("revisada") else "0"
                 filas.append(
                     f'<div class="pq"><span class="pq-n">{j}.</span>'
                     f'<div class="pq-body"><div class="pq-q">{escape(q.get("pregunta",""))}</div>'
-                    f'<div class="pq-a">✔ {escape(resp)}</div></div></div>'
+                    f'<div class="pq-a">✔ {escape(resp)}</div></div>'
+                    f'<label class="pq-check" title="Marcar como revisada">'
+                    f'<input type="checkbox" data-id="{escape(qid)}" data-rev="{rev}"></label>'
+                    "</div>"
                 )
-            panel = (
-                f'<div class="oa-preguntas">{"".join(filas)}</div>'
-                if filas else ""
-            )
+            panel = f'<div class="oa-preguntas">{"".join(filas)}</div>' if filas else ""
             abrible = " abrible" if filas else ""
 
             partes.append(
@@ -183,6 +193,7 @@ def render_asignatura(oa_data, preg_data):
                 f"</div>"
                 f'<div class="oa-txt">{escape(oa["texto"])}</div>'
                 f'{barra(pct, alto=7)}'
+                f'<div class="rev-line"><span class="rev-lbl">🔍 revisadas {r}/{n}</span>{barra(rpct, alto=5, color="var(--pink)")}</div>'
                 f'{panel}'
                 "</div>"
             )
@@ -216,9 +227,12 @@ body{
 }
 .wrap{max-width:900px;margin:0 auto}
 h1,h2,.disp{font-family:'Titan One',cursive;letter-spacing:.5px}
-.topbar{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:14px}
+.topbar{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:14px;flex-wrap:wrap}
 .volver{display:inline-flex;align-items:center;gap:6px;background:var(--panel2);border:1px solid #ffffff18;
   color:var(--txt);text-decoration:none;font-weight:900;font-size:13px;padding:9px 14px;border-radius:12px}
+.tb-right{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.rev-count{color:var(--dim);font-weight:800;font-size:12px}
+.exportar{background:var(--panel2);border:1px solid #4dd8ff55;color:var(--cyan);font-weight:800;font-size:12px;padding:8px 12px;border-radius:12px;cursor:pointer}
 .salir{background:none;border:1px solid #ffffff22;color:var(--dim);font-weight:800;font-size:12px;padding:8px 12px;border-radius:12px;cursor:pointer}
 .top{text-align:center;margin-bottom:6px}
 .top h1{font-size:28px;color:var(--gold)}
@@ -235,7 +249,7 @@ h1,h2,.disp{font-family:'Titan One',cursive;letter-spacing:.5px}
 .fill{height:100%;border-radius:99px;transition:width .4s}
 .chips{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 6px}
 .chip{background:var(--panel2);border:1px solid #ffffff14;border-radius:99px;padding:6px 12px;font-weight:800;font-size:13px}
-.chip.ok{color:var(--green)} .chip.pend{color:var(--dim)}
+.chip.ok{color:var(--green)} .chip.rev2{color:var(--pink)}
 .unidad{background:var(--panel2);border-radius:14px;padding:14px 14px 6px;margin-top:16px}
 .u-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
 .u-tit{font-weight:900;font-size:15px}
@@ -253,18 +267,21 @@ h1,h2,.disp{font-family:'Titan One',cursive;letter-spacing:.5px}
 .oa-count{margin-left:auto;font-weight:900;font-size:13px;color:var(--txt)}
 .oa-estado{font-size:12px;font-weight:800}
 .oa-txt{color:var(--dim);font-size:12.5px;line-height:1.35;margin-bottom:8px}
+.rev-line{margin-top:7px}
+.rev-lbl{font-size:11px;font-weight:800;color:var(--pink);display:block;margin-bottom:3px}
 .oa-preguntas{margin-top:10px;border-top:1px dashed #ffffff1f;padding-top:8px;display:none;flex-direction:column;gap:2px}
 .oa.abierto .oa-preguntas{display:flex}
-.pq{display:flex;gap:8px;padding:7px 4px;border-bottom:1px solid #ffffff0f}
+.pq{display:flex;gap:8px;align-items:flex-start;padding:7px 4px;border-bottom:1px solid #ffffff0f}
 .pq:last-child{border:none}
 .pq-n{color:var(--dim);font-weight:900;font-size:12px;min-width:22px;text-align:right}
 .pq-body{flex:1}
 .pq-q{font-weight:800;font-size:13px;line-height:1.3}
 .pq-a{color:var(--green);font-weight:800;font-size:12.5px;margin-top:2px}
+.pq-check{display:flex;align-items:center;padding-left:6px}
+.pq-check input{width:20px;height:20px;accent-color:var(--green);cursor:pointer}
 .vacio{text-align:center;color:var(--dim);padding:40px}
 .leyenda{display:flex;gap:16px;justify-content:center;color:var(--dim);font-size:12px;font-weight:800;margin-top:6px;flex-wrap:wrap}
 .dot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:5px;vertical-align:middle}
-/* ===== Bloqueo Admin ===== */
 .gate{position:fixed;inset:0;z-index:100;display:flex;align-items:center;justify-content:center;padding:20px;
   background:radial-gradient(1000px 700px at 50% 0%, #3b2a7a 0%, transparent 60%), linear-gradient(160deg,var(--bg1),var(--bg2))}
 .gate-box{background:var(--panel);border:1px solid #ffffff1f;border-radius:20px;padding:28px 24px;max-width:340px;width:100%;text-align:center;box-shadow:0 20px 50px #0006}
@@ -298,10 +315,40 @@ h1,h2,.disp{font-family:'Titan One',cursive;letter-spacing:.5px}
   document.getElementById('gpass').addEventListener('keydown',function(e){if(e.key==='Enter')intentar();});
   var salir=document.getElementById('salir');
   if(salir)salir.onclick=function(){sessionStorage.removeItem('kimun_admin_ok');location.reload();};
-  // Acordeon de OA
+
+  // Acordeon de OA (no togglear si el clic ocurre dentro del panel de preguntas)
   document.querySelectorAll('.oa.abrible').forEach(function(oa){
-    oa.addEventListener('click',function(){ oa.classList.toggle('abierto'); });
+    oa.addEventListener('click',function(e){
+      if(e.target.closest('.oa-preguntas'))return;
+      oa.classList.toggle('abierto');
+    });
   });
+
+  // Revisadas: casillas + exportar (persisten en el navegador)
+  var LS='kimun_revisadas';
+  var ov={};
+  try{ov=JSON.parse(localStorage.getItem(LS)||'{}');}catch(e){ov={};}
+  function updateCount(){
+    var n=document.querySelectorAll('.pq-check input:checked').length;
+    var t=document.querySelectorAll('.pq-check input').length;
+    var el=document.getElementById('revCount');
+    if(el)el.textContent='🔍 '+n+'/'+t+' marcadas';
+  }
+  document.querySelectorAll('.pq-check input').forEach(function(cb){
+    var id=cb.dataset.id, jsonRev=cb.dataset.rev==='1';
+    cb.checked=(id in ov)?ov[id]:jsonRev;
+    cb.addEventListener('click',function(e){e.stopPropagation();});
+    cb.addEventListener('change',function(){ov[id]=cb.checked;localStorage.setItem(LS,JSON.stringify(ov));updateCount();});
+  });
+  var exp=document.getElementById('exportar');
+  if(exp)exp.onclick=function(){
+    var ids=[];
+    document.querySelectorAll('.pq-check input:checked').forEach(function(cb){ids.push(cb.dataset.id);});
+    var blob=new Blob([JSON.stringify({revisadas:ids},null,2)],{type:'application/json'});
+    var a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='revisadas.json';
+    document.body.appendChild(a);a.click();a.remove();
+  };
+  updateCount();
 })();
 """.replace("__HASH__", hash_clave)
 
@@ -313,7 +360,6 @@ h1,h2,.disp{font-family:'Titan One',cursive;letter-spacing:.5px}
         '<link rel="preconnect" href="https://fonts.googleapis.com">\n'
         '<link href="https://fonts.googleapis.com/css2?family=Titan+One&family=Nunito:wght@600;800;900&display=swap" rel="stylesheet">\n'
         "<style>" + css + "</style>\n</head>\n<body>\n"
-        # Bloqueo Admin
         '<div class="gate" id="gate">\n'
         '  <div class="gate-box">\n'
         '    <div class="gate-ic">🔒</div>\n'
@@ -325,11 +371,14 @@ h1,h2,.disp{font-family:'Titan One',cursive;letter-spacing:.5px}
         '    <a class="gate-volver" href="../index.html">← Volver al juego</a>\n'
         '  </div>\n'
         '</div>\n'
-        # Panel (oculto hasta desbloquear)
         '<div class="wrap" id="panel" style="display:none">\n'
         '  <div class="topbar">\n'
         '    <a class="volver" href="../index.html">← Volver al juego</a>\n'
-        '    <button class="salir" id="salir">🔒 Bloquear</button>\n'
+        '    <div class="tb-right">\n'
+        '      <span class="rev-count" id="revCount"></span>\n'
+        '      <button class="exportar" id="exportar">⬇ Exportar revisadas</button>\n'
+        '      <button class="salir" id="salir">🔒 Bloquear</button>\n'
+        '    </div>\n'
         '  </div>\n'
         '  <div class="top">\n'
         '    <h1>KIMÜN · Tablero</h1>\n'
@@ -341,8 +390,9 @@ h1,h2,.disp{font-family:'Titan One',cursive;letter-spacing:.5px}
         '    <span><span class="dot" style="background:var(--dim)"></span>Pendiente</span>\n'
         '    <span><span class="dot" style="background:var(--cyan)"></span>En progreso</span>\n'
         '    <span><span class="dot" style="background:var(--green)"></span>Listo (meta cumplida)</span>\n'
+        '    <span><span class="dot" style="background:var(--pink)"></span>Revisadas por ti</span>\n'
         '  </div>\n'
-        '  <div class="gen" style="margin-top:18px">Pincha un OA para ver sus preguntas y la respuesta correcta.</div>\n'
+        '  <div class="gen" style="margin-top:18px">Pincha un OA para ver sus preguntas. Marca la casilla de las que apruebes y usa "Exportar revisadas".</div>\n'
         '</div>\n'
         "<script>" + js + "</script>\n"
         "</body>\n</html>\n"
