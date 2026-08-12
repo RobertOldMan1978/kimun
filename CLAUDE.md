@@ -59,17 +59,18 @@ separa el motor del contenido ni existe persistencia entre sesiones.
 
 Orden tentativo, sujeto a prioridad de "verlo funcionar y atractivo" primero:
 
-1. **Duelo 1v1 en un mismo dispositivo** — dos jugadores por turnos en el
-   mismo teléfono.
-2. **Tienda de skins con monedas** — gastar las monedas ganadas en avatares
-   o personalizaciones.
-3. **Sonidos** — efectos de acierto, error, combo, subida de nivel y música
-   de fondo opcional.
-4. **Animación de subida de nivel** — celebración visual al subir de nivel.
-5. **Separar contenido del motor** — mover las preguntas a archivos
-   `JS/JSON` por asignatura, dejando el motor de juego genérico y reutilizable.
-6. **Persistencia de progreso** — guardar XP, monedas, estrellas y logros
-   (localStorage primero; backend más adelante).
+1. ✅ **Duelo 1v1 en un mismo dispositivo** (HECHO) — por turnos, misma
+   pregunta; 5 rondas, se pasa el teléfono, marcador y ganador.
+2. ✅ **Tienda de skins con monedas** (HECHO) — 8 avatares premium comprables
+   con monedas; equipado persistente.
+3. ✅ **Sonidos** (HECHO) — efectos sintetizados con Web Audio (acierto, error,
+   combo, subida de nivel, victoria/derrota) + botón de silencio. Sin archivos.
+4. ✅ **Animación de subida de nivel** (HECHO) — overlay celebratorio a pantalla
+   completa al cruzar 100 XP.
+5. ✅ **Separar contenido del motor** (HECHO) — preguntas en
+   `contenido/historia-8basico/preguntas.json`; el juego las lee con fetch.
+6. ✅ **Persistencia de progreso** (HECHO) — guarda nombre, avatar, XP,
+   monedas, estrellas, skins y logros en localStorage; continúa al reabrir.
 
 ### Más adelante (fuera del alcance inmediato)
 - Login y multiusuario.

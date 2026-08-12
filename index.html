@@ -155,6 +155,36 @@ input.nm:focus{border-color:var(--cyan)}
   font-size:12px;cursor:pointer;padding:8px;border-radius:12px}
 .nav button .i{display:block;font-size:22px;margin-bottom:2px}
 .nav button.on{color:var(--gold);background:#ffc93c1a}
+/* ===== SUBIDA DE NIVEL ===== */
+.levelup{position:fixed;inset:0;z-index:70;display:none;align-items:center;justify-content:center;pointer-events:none;
+  background:radial-gradient(circle at 50% 50%, #8f6bff55, #140f33cc 65%)}
+.levelup.show{display:flex}
+.levelup .box{text-align:center;animation:luPop .7s cubic-bezier(.2,.9,.3,1.6)}
+.levelup .ic{font-size:80px;display:block;animation:float 2s ease-in-out infinite}
+.levelup .lvl-num{font-family:'Titan One',cursive;font-size:46px;color:var(--gold);
+  text-shadow:0 0 24px #ffc93c,3px 3px 0 #b5651d;display:block;margin-top:2px}
+.levelup .lvl-sub{color:var(--cyan);font-weight:900;letter-spacing:2px;text-transform:uppercase;font-size:14px}
+@keyframes luPop{0%{transform:scale(.3);opacity:0}60%{opacity:1}100%{transform:scale(1);opacity:1}}
+/* botón de sonido */
+.sndbtn{position:fixed;top:10px;right:10px;z-index:46;width:42px;height:42px;border-radius:12px;border:1px solid #ffffff1f;
+  background:#120d2ecc;backdrop-filter:blur(6px);color:var(--txt);font-size:20px;cursor:pointer;display:grid;place-items:center}
+.sndbtn:active{transform:scale(.92)}
+/* ===== TIENDA ===== */
+.shopgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.shop-item{background:var(--panel);border:2px solid #ffffff14;border-radius:16px;padding:14px;text-align:center}
+.shop-item.equipped{border-color:var(--green)}
+.shop-item .em{font-size:44px;line-height:1}
+.shop-item .price{font-weight:900;color:var(--gold);margin:6px 0}
+.shop-item button{width:100%;padding:10px;border:none;border-radius:12px;font-family:'Nunito';font-weight:900;font-size:13px;cursor:pointer}
+.shop-item .buy{background:linear-gradient(180deg,var(--gold),#ff9d3c);color:#2a1400}
+.shop-item .equip{background:var(--panel2);color:var(--cyan);border:1px solid var(--cyan)}
+.shop-item .on{background:var(--green);color:#063a22}
+.shop-item button:disabled{filter:grayscale(.7);opacity:.5;cursor:not-allowed}
+/* ===== DUELO ===== */
+.duelo-av{grid-template-columns:repeat(6,1fr)}
+.duelo-turn{font-weight:900;font-size:14px;color:var(--gold);flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.duelo-score{text-align:center;font-weight:900;margin-top:14px;font-size:16px;color:var(--cyan)}
+.duelo-final{font-family:'Titan One';font-size:19px;margin:14px 0;line-height:1.5}
 @media (prefers-reduced-motion: reduce){*{animation:none!important;transition:none!important}}
 </style>
 </head>
@@ -162,6 +192,8 @@ input.nm:focus{border-color:var(--cyan)}
 <div class="stars" id="stars"></div>
 <div class="combo" id="combo"></div>
 <div class="toast" id="toast"><div class="ic" id="toastIc">🏅</div><div><b>¡Logro desbloqueado!</b><span id="toastTx"></span></div></div>
+<div class="levelup" id="levelup"><div class="box"><span class="ic">⭐</span><span class="lvl-num">NIVEL 2</span><span class="lvl-sub">¡Subiste de nivel!</span></div></div>
+<button class="sndbtn" id="sndBtn" title="Sonido">🔊</button>
 
 <div class="wrap">
 
@@ -175,9 +207,11 @@ input.nm:focus{border-color:var(--cyan)}
     <div class="card">
       <h3>¿Cómo quieres entrar?</h3>
       <button class="btn" id="btnJugador">🎮 JUGADOR</button>
+      <button class="btn sec" id="btnDuelo">⚔️ DUELO 1v1</button>
       <button class="btn sec" id="btnAdmin">🔧 Modo Admin</button>
     </div>
-    <p style="text-align:center;color:var(--dim);font-weight:800;font-size:12px;margin-top:14px">
+    <p style="text-align:center;margin-top:12px"><a href="#" id="btnReset" style="color:var(--dim);font-weight:800;font-size:12px;text-decoration:underline;display:none">🔄 Empezar de nuevo</a></p>
+    <p style="text-align:center;color:var(--dim);font-weight:800;font-size:12px;margin-top:6px">
       El modo Admin es para el desarrollador y pide contraseña.
     </p>
   </section>
@@ -251,10 +285,62 @@ input.nm:focus{border-color:var(--cyan)}
       <button class="btn sec" id="btnMap">VOLVER AL MAPA</button>
     </div>
   </section>
+
+  <!-- ============ TIENDA ============ -->
+  <section class="screen" id="scr-tienda">
+    <h2 class="disp" style="font-size:22px;margin:6px 0 2px">🛍️ Tienda de skins</h2>
+    <p style="color:var(--dim);font-weight:800;font-size:13px">Gasta tus monedas en avatares nuevos.</p>
+    <div class="coins" style="width:max-content;margin:12px 0">🪙 <span id="tiendaCoins">0</span></div>
+    <div class="shopgrid" id="tiendaGrid"></div>
+  </section>
+
+  <!-- ============ DUELO: CONFIGURACIÓN ============ -->
+  <section class="screen" id="scr-duelo-setup">
+    <div class="logo"><span class="badge">⚔️</span><h1 style="font-size:30px">DUELO 1v1</h1><p>Dos jugadores, un mismo teléfono</p></div>
+    <div class="card"><h3>Jugador 1</h3><input class="nm" id="d1Name" maxlength="12" placeholder="Jugador 1"><div class="avgrid duelo-av" id="d1Av"></div></div>
+    <div class="card"><h3>Jugador 2</h3><input class="nm" id="d2Name" maxlength="12" placeholder="Jugador 2"><div class="avgrid duelo-av" id="d2Av"></div></div>
+    <button class="btn" id="btnDueloStart">⚔️ ¡COMENZAR DUELO!</button>
+    <button class="btn sec" id="btnDueloBack">← Volver</button>
+  </section>
+
+  <!-- ============ DUELO: PASAR TELÉFONO ============ -->
+  <section class="screen" id="scr-duelo-pass">
+    <div class="resbox">
+      <div class="big" id="dpEm">🦁</div>
+      <h2 id="dpMsg">Turno de Jugador 1</h2>
+      <p style="color:var(--dim);font-weight:800;margin-top:8px">Pasa el teléfono al jugador y pulsa Listo.</p>
+      <button class="btn" id="btnDueloReady">LISTO ➜</button>
+    </div>
+  </section>
+
+  <!-- ============ DUELO: PREGUNTA ============ -->
+  <section class="screen" id="scr-duelo-q">
+    <div class="qtop">
+      <div class="duelo-turn" id="dTurn">🦁 Jugador 1</div>
+      <div class="qprog"><i id="dProg"></i></div>
+      <div class="timer" id="dTimer">15</div>
+    </div>
+    <div class="qcard"><div class="tag" id="dTag">Ronda 1/5</div><h2 id="dText">Pregunta…</h2></div>
+    <div class="opts" id="dOpts"></div>
+    <div class="feedback" id="dFb"></div>
+    <div class="duelo-score" id="dScore"></div>
+  </section>
+
+  <!-- ============ DUELO: RESULTADO ============ -->
+  <section class="screen" id="scr-duelo-res">
+    <div class="resbox">
+      <div class="big" id="drIc">🏆</div>
+      <h2 id="drTitle">¡Gana Jugador 1!</h2>
+      <div class="duelo-final" id="drScore"></div>
+      <button class="btn" id="btnDueloAgain">🔁 REVANCHA</button>
+      <button class="btn sec" id="btnDueloExit">SALIR</button>
+    </div>
+  </section>
 </div>
 
 <div class="nav" id="nav" style="display:none">
   <button class="on" data-go="scr-mapa"><span class="i">🗺️</span>Mapa</button>
+  <button data-go="scr-tienda"><span class="i">🛍️</span>Tienda</button>
   <button data-go="perfil"><span class="i">🎖️</span>Logros</button>
 </div>
 
@@ -308,11 +394,39 @@ const LOGROS={
 /* ================= ESTADO ================= */
 const S={nombre:"",avatar:AVATARES[0],xp:0,nivel:1,monedas:0,
  progreso:[{est:"open",estrellas:0},{est:"lock",estrellas:0},{est:"lock",estrellas:0},{est:"lock",estrellas:0},{est:"lock",estrellas:0}],
- logros:new Set()};
+ skins:[], logros:new Set()};
 let Q={lvl:0,idx:0,aciertos:0,combo:0,comboMax:0,xpGanado:0,timer:null,t:15,lock:false};
 
 const $=id=>document.getElementById(id);
 const XP_POR_NIVEL=100;
+
+/* ================= SONIDO (Web Audio, sintetizado) ================= */
+const SND={
+ ctx:null, on: localStorage.getItem('kimun_sound')!=='off',
+ init(){ try{ if(!this.ctx)this.ctx=new (window.AudioContext||window.webkitAudioContext)();
+   if(this.ctx.state==='suspended')this.ctx.resume(); }catch(e){} },
+ tone(freq,dur,type='square',vol=.18,when=0){
+   if(!this.on||!this.ctx)return;
+   const t=this.ctx.currentTime+when, o=this.ctx.createOscillator(), g=this.ctx.createGain();
+   o.type=type; o.frequency.setValueAtTime(freq,t);
+   g.gain.setValueAtTime(.0001,t); g.gain.linearRampToValueAtTime(vol,t+.012);
+   g.gain.exponentialRampToValueAtTime(.0001,t+dur);
+   o.connect(g).connect(this.ctx.destination); o.start(t); o.stop(t+dur+.02); },
+ slide(f1,f2,dur,type='sawtooth',vol=.18){
+   if(!this.on||!this.ctx)return;
+   const t=this.ctx.currentTime, o=this.ctx.createOscillator(), g=this.ctx.createGain();
+   o.type=type; o.frequency.setValueAtTime(f1,t); o.frequency.exponentialRampToValueAtTime(f2,t+dur);
+   g.gain.setValueAtTime(vol,t); g.gain.exponentialRampToValueAtTime(.0001,t+dur);
+   o.connect(g).connect(this.ctx.destination); o.start(t); o.stop(t+dur+.02); },
+ tap(){ this.tone(330,.05,'square',.10); },
+ correct(){ this.tone(660,.09,'square',.16); this.tone(880,.12,'square',.16,.09); },
+ wrong(){ this.tone(196,.18,'sawtooth',.16); this.tone(147,.24,'sawtooth',.14,.09); },
+ combo(n){ const b=520; for(let i=0;i<Math.min(n,4);i++)this.tone(b+i*150,.08,'square',.15,i*.07); },
+ levelup(){ [523,659,784,1047].forEach((f,i)=>this.tone(f,.16,'triangle',.2,i*.1)); },
+ win(){ [523,659,784,1047,1319].forEach((f,i)=>this.tone(f,.18,'triangle',.2,i*.12)); },
+ lose(){ this.slide(400,110,.6,'sawtooth',.16); },
+ star(i){ this.tone(660+i*220,.14,'square',.18); },
+};
 
 /* ================= UTIL ================= */
 function go(id){document.querySelectorAll('.screen').forEach(s=>s.classList.remove('on'));$(id).classList.add('on');window.scrollTo(0,0);}
@@ -333,28 +447,156 @@ function comboFx(n){const c=$('combo');c.textContent='COMBO x'+n+' 🔥';
 function refreshHud(){
  $('hudAv').textContent=S.avatar;$('hudName').textContent=S.nombre;
  const dentro=S.xp % XP_POR_NIVEL;
- S.nivel=Math.floor(S.xp/XP_POR_NIVEL)+1;
+ const nuevoNivel=Math.floor(S.xp/XP_POR_NIVEL)+1;
+ if(S._lastNivel!=null && nuevoNivel>S._lastNivel) levelUpFx(nuevoNivel);
+ S._lastNivel=nuevoNivel; S.nivel=nuevoNivel;
  $('hudXp').style.width=(dentro/XP_POR_NIVEL*100)+'%';
  $('hudLvl').textContent='Nivel '+S.nivel+' · '+S.xp+' XP';
  $('hudCoins').textContent=S.monedas;}
+function levelUpFx(n){
+ SND.levelup();
+ const el=$('levelup');el.querySelector('.lvl-num').textContent='NIVEL '+n;
+ el.classList.remove('show');void el.offsetWidth;el.classList.add('show');
+ particulas(window.innerWidth/2,window.innerHeight/2,['⭐','✨','🎉','💫','🌟'],30);
+ setTimeout(()=>el.classList.remove('show'),1900);}
+
+/* ================= PERSISTENCIA ================= */
+const SAVE_KEY='kimun_save';
+function guardar(){try{localStorage.setItem(SAVE_KEY,JSON.stringify({
+ nombre:S.nombre,avatar:S.avatar,xp:S.xp,monedas:S.monedas,
+ progreso:S.progreso,skins:S.skins,logros:[...S.logros]}));}catch(e){}}
+function cargar(){try{const d=JSON.parse(localStorage.getItem(SAVE_KEY)||'null');if(!d)return false;
+ S.nombre=d.nombre||"";S.avatar=d.avatar||AVATARES[0];S.xp=d.xp||0;S.monedas=d.monedas||0;
+ if(Array.isArray(d.progreso)&&d.progreso.length===EXPEDICION.length)S.progreso=d.progreso;
+ S.skins=Array.isArray(d.skins)?d.skins:[];S.logros=new Set(d.logros||[]);
+ return !!d.nombre;}catch(e){return false;}}
+function hayPartida(){try{const d=JSON.parse(localStorage.getItem(SAVE_KEY)||'null');return !!(d&&d.nombre);}catch(e){return false;}}
+function borrarPartida(){localStorage.removeItem(SAVE_KEY);}
+
+/* ================= TIENDA DE SKINS ================= */
+const SKINS=[{e:"🐲",p:60},{e:"🦄",p:70},{e:"🦖",p:80},{e:"🐙",p:50},{e:"🦉",p:40},{e:"🚀",p:90},{e:"🧙",p:100},{e:"👑",p:150}];
+function renderTienda(){
+ $('tiendaCoins').textContent=S.monedas;
+ const g=$('tiendaGrid');g.innerHTML='';
+ SKINS.forEach(sk=>{
+  const owned=S.skins.includes(sk.e), equipped=S.avatar===sk.e;
+  const it=document.createElement('div');it.className='shop-item'+(equipped?' equipped':'');
+  let btn;
+  if(equipped)btn='<button class="on" disabled>✓ Equipado</button>';
+  else if(owned)btn='<button class="equip">Equipar</button>';
+  else btn=`<button class="buy"${S.monedas<sk.p?' disabled':''}>Comprar 🪙${sk.p}</button>`;
+  it.innerHTML=`<div class="em">${sk.e}</div>`+(owned?'<div class="price" style="color:var(--green)">Tuyo</div>':`<div class="price">🪙 ${sk.p}</div>`)+btn;
+  const b=it.querySelector('button');
+  if(b&&!equipped)b.onclick=()=>{
+   if(owned){S.avatar=sk.e;SND.tap();}
+   else{if(S.monedas<sk.p){SND.wrong();return;}S.monedas-=sk.p;S.skins.push(sk.e);S.avatar=sk.e;
+    SND.correct();particulas(window.innerWidth/2,window.innerHeight/3,['🪙','✨','⭐'],16);}
+   guardar();refreshHud();renderTienda();
+  };
+  g.appendChild(it);
+ });
+}
+
+/* ================= DUELO 1v1 ================= */
+const DUELO_AV=["🦁","🐉","🦊","🐺","🦄","🐲"], DUELO_ROUNDS=5;
+let D={j:[{n:"Jugador 1",em:DUELO_AV[0],pts:0},{n:"Jugador 2",em:DUELO_AV[1],pts:0}],pr:[],ronda:0,turno:0,lock:false,t:15,timer:null};
+function poolDuelo(){let all=[];['HI08 OA 04','HI08 OA 05','HI08 OA 06','HI08 OA 07'].forEach(oa=>all=all.concat(POOL[oa]||[]));return all;}
+function initDueloSetup(){
+ $('d1Name').value='';$('d2Name').value='';
+ D.j[0].em=DUELO_AV[0];D.j[1].em=DUELO_AV[1];
+ [['d1Av',0],['d2Av',1]].forEach(par=>{const g=$(par[0]),pi=par[1];g.innerHTML='';
+  DUELO_AV.forEach(a=>{const d=document.createElement('div');d.className='av'+(a===D.j[pi].em?' sel':'');d.textContent=a;
+   d.onclick=()=>{SND.tap();D.j[pi].em=a;g.querySelectorAll('.av').forEach(x=>x.classList.remove('sel'));d.classList.add('sel');};
+   g.appendChild(d);});});
+ go('scr-duelo-setup');
+}
+function startDuelo(){
+ const pool=poolDuelo();
+ if(pool.length<DUELO_ROUNDS){alert('Cargando preguntas… intenta de nuevo en un momento.');return;}
+ D.j[0].n=$('d1Name').value.trim()||"Jugador 1";
+ D.j[1].n=$('d2Name').value.trim()||"Jugador 2";
+ nuevaRondaDuelo();
+}
+function nuevaRondaDuelo(){
+ D.j[0].pts=0;D.j[1].pts=0;D.ronda=0;D.turno=0;
+ D.pr=pickN(poolDuelo(),DUELO_ROUNDS).map(q=>({q:q.pregunta,ops:q.opciones,ok:q.correcta,tip:q.tip}));
+ dueloPass();
+}
+function dueloPass(){const jug=D.j[D.turno];$('dpEm').textContent=jug.em;$('dpMsg').textContent='Turno de '+jug.n;go('scr-duelo-pass');}
+function pintaDuelo(){
+ const P=D.pr[D.ronda],jug=D.j[D.turno];D.lock=false;
+ $('dTurn').textContent=jug.em+' '+jug.n;
+ $('dTag').textContent='Ronda '+(D.ronda+1)+'/'+DUELO_ROUNDS;
+ $('dText').textContent=P.q;$('dFb').textContent='';$('dFb').className='feedback';
+ $('dProg').style.width=(D.ronda/DUELO_ROUNDS*100)+'%';
+ $('dScore').textContent=`${D.j[0].em} ${D.j[0].pts}  —  ${D.j[1].pts} ${D.j[1].em}`;
+ const orden=P.ops.map((o,i)=>({o,i})).sort(()=>Math.random()-.5);
+ const box=$('dOpts');box.innerHTML='';
+ orden.forEach((it,k)=>{const b=document.createElement('div');b.className='opt';
+  b.innerHTML=`<span class="key">${'ABCD'[k]}</span>${it.o}`;
+  b.onclick=()=>responderDuelo(b,it.i===P.ok,P);box.appendChild(b);});
+ clearInterval(D.timer);D.t=15;$('dTimer').textContent=D.t;$('dTimer').className='timer';
+ D.timer=setInterval(()=>{D.t--;$('dTimer').textContent=D.t;if(D.t<=5)$('dTimer').classList.add('low');
+  if(D.t<=0){clearInterval(D.timer);responderDuelo(null,false,P);}},1000);
+ go('scr-duelo-q');
+}
+function responderDuelo(el,ok,P){
+ if(D.lock)return;D.lock=true;clearInterval(D.timer);
+ document.querySelectorAll('#dOpts .opt').forEach(o=>o.classList.add('off'));
+ if(ok){D.j[D.turno].pts++;if(el){el.classList.remove('off');el.classList.add('ok');}$('dFb').textContent='✓ ¡Correcto!';$('dFb').classList.add('ok');SND.correct();}
+ else{if(el){el.classList.remove('off');el.classList.add('bad');}$('dFb').textContent='✗ '+P.tip;$('dFb').classList.add('bad');SND.wrong();}
+ $('dScore').textContent=`${D.j[0].em} ${D.j[0].pts}  —  ${D.j[1].pts} ${D.j[1].em}`;
+ setTimeout(()=>{
+  if(D.turno===0){D.turno=1;dueloPass();}
+  else{D.turno=0;D.ronda++;if(D.ronda<DUELO_ROUNDS)dueloPass();else finDuelo();}
+ },ok?1100:2000);
+}
+function finDuelo(){
+ clearInterval(D.timer);const a=D.j[0],b=D.j[1];let ic,title;
+ if(a.pts===b.pts){ic='🤝';title='¡Empate!';}
+ else{const w=a.pts>b.pts?a:b;ic=w.em;title='¡Gana '+w.n+'!';}
+ SND.win();
+ $('drIc').textContent=ic;$('drTitle').textContent=title;
+ $('drScore').innerHTML=`${a.em} ${a.n}: <b style="color:var(--cyan)">${a.pts}</b> &nbsp;vs&nbsp; ${b.em} ${b.n}: <b style="color:var(--cyan)">${b.pts}</b>`;
+ go('scr-duelo-res');
+}
 
 /* ================= INICIO ================= */
 (function(){
  const st=$('stars');for(let i=0;i<40;i++){const s=document.createElement('span');
   s.style.left=Math.random()*100+'%';s.style.top=Math.random()*100+'%';
   s.style.animationDelay=Math.random()*3+'s';st.appendChild(s);}
- const g=$('avgrid');AVATARES.forEach((a,i)=>{const d=document.createElement('div');
-  d.className='av'+(i===0?' sel':'');d.textContent=a;
-  d.onclick=()=>{document.querySelectorAll('.av').forEach(x=>x.classList.remove('sel'));d.classList.add('sel');S.avatar=a;};
+ cargar();
+ if(S.nombre)$('inpName').value=S.nombre;
+ const g=$('avgrid');AVATARES.forEach((a)=>{const d=document.createElement('div');
+  d.className='av'+(S.avatar===a?' sel':'');d.textContent=a;
+  d.onclick=()=>{SND.init();SND.tap();document.querySelectorAll('.av').forEach(x=>x.classList.remove('sel'));d.classList.add('sel');S.avatar=a;};
   g.appendChild(d);});
 })();
 /* ===== Selección de modo (Jugador / Admin) ===== */
-$('btnJugador').onclick=()=>go('scr-inicio');
+$('btnJugador').onclick=()=>{SND.init();SND.tap();
+ if(hayPartida()){cargar();refreshHud();renderMapa();renderRanking();$('nav').style.display='flex';go('scr-mapa');}
+ else go('scr-inicio');};
 $('btnAdmin').onclick=()=>{window.location.href='dev/tablero.html';};
 
+/* ===== Duelo / reiniciar (eventos) ===== */
+$('btnDuelo').onclick=()=>{SND.init();SND.tap();$('nav').style.display='none';initDueloSetup();};
+$('btnDueloBack').onclick=()=>{SND.tap();go('scr-rol');};
+$('btnDueloStart').onclick=()=>{SND.init();SND.tap();startDuelo();};
+$('btnDueloReady').onclick=()=>{SND.tap();pintaDuelo();};
+$('btnDueloAgain').onclick=()=>{SND.tap();nuevaRondaDuelo();};
+$('btnDueloExit').onclick=()=>{SND.tap();go('scr-rol');};
+(function(){const r=$('btnReset');if(!r)return;r.style.display=hayPartida()?'inline':'none';
+ r.onclick=e=>{e.preventDefault();if(confirm('¿Borrar tu progreso y empezar de nuevo?')){borrarPartida();location.reload();}};})();
+
+/* Botón de silencio */
+(function(){const b=$('sndBtn');if(!b)return;const upd=()=>b.textContent=SND.on?'🔊':'🔇';upd();
+ b.onclick=()=>{SND.on=!SND.on;localStorage.setItem('kimun_sound',SND.on?'on':'off');upd();if(SND.on){SND.init();SND.tap();}};})();
+
 $('btnStart').onclick=()=>{
+ SND.init();SND.tap();
  S.nombre=$('inpName').value.trim()||"Explorador";
- refreshHud();renderMapa();renderRanking();
+ refreshHud();guardar();renderMapa();renderRanking();
  $('nav').style.display='flex';go('scr-mapa');};
 
 /* ================= MAPA ================= */
@@ -380,9 +622,12 @@ function renderRanking(){
    <div class="em">${r.em}</div><div>${r.n}${r.me?' (tú)':''}</div><div class="pts">${r.p} XP</div></div>`).join('');
 }
 document.querySelectorAll('.nav button').forEach(b=>b.onclick=()=>{
+ SND.tap();
+ const dst=b.dataset.go;
+ if(dst==='perfil'){alert('🎖️ Logros: '+(S.logros.size?[...S.logros].map(l=>LOGROS[l].ic+' '+LOGROS[l].tx).join('\n'):'Aún no tienes logros. ¡Juega un nivel!'));return;}
  document.querySelectorAll('.nav button').forEach(x=>x.classList.remove('on'));b.classList.add('on');
- if(b.dataset.go==='scr-mapa'){go('scr-mapa');}
- else{alert('🎖️ Logros: '+(S.logros.size?[...S.logros].map(l=>LOGROS[l].ic+' '+LOGROS[l].tx).join('\n'):'Aún no tienes logros. ¡Juega un nivel!'));}
+ if(dst==='scr-tienda'){renderTienda();go('scr-tienda');}
+ else{renderMapa();renderRanking();go('scr-mapa');}
 });
 
 /* ================= QUIZ ================= */
@@ -422,12 +667,14 @@ function responder(el,ok,P,e){
   $('qFb').textContent=`✓ ¡Correcto! +${pts} XP`;$('qFb').classList.add('ok');
   const r=el.getBoundingClientRect();
   particulas(r.left+r.width/2,r.top,['✨','⭐','🪙','💥']);
-  if(Q.combo>=2)comboFx(Q.combo);
+  SND.correct();
+  if(Q.combo>=2){comboFx(Q.combo);SND.combo(Q.combo);}
   if(Q.combo>=3)toast('combo3');
  }else{
   Q.combo=0;
   if(el){el.classList.remove('off');el.classList.add('bad');}
   $('qFb').textContent='✗ '+P.tip;$('qFb').classList.add('bad');
+  SND.wrong();
   if(navigator.vibrate)navigator.vibrate(120);
  }
  refreshHud();
@@ -451,6 +698,8 @@ function terminarNivel(){
   if(esJefe)toast('jefe');
   S.monedas+=estrellas*10;
  }
+ if(paso)SND.win();else SND.lose();
+ [1,2,3].forEach(i=>{if(i<=estrellas)setTimeout(()=>SND.star(i),350+i*260);});
  $('resIc').textContent=paso?(esJefe?'👑':'🎉'):'😵';
  $('resTitle').textContent=paso?(esJefe?'¡EXPEDICIÓN COMPLETA!':'¡Nivel superado!'):'¡Casi! Necesitas 66% para pasar';
  $('resStars').innerHTML=[1,2,3].map(i=>i<=estrellas?'<span class="g">★</span>':'<span class="w">★</span>').join('');
@@ -467,7 +716,7 @@ function terminarNivel(){
   $('btnNext').onclick=()=>startQuiz(Q.lvl);
  }
  $('btnMap').onclick=()=>{renderMapa();renderRanking();go('scr-mapa');};
- refreshHud();
+ refreshHud();guardar();
  if(paso)particulas(window.innerWidth/2,window.innerHeight/3,['🎉','⭐','✨','🎊'],24);
  go('scr-res');
 }
