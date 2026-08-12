@@ -1,0 +1,202 @@
+{
+  "asignatura": "Historia, Geografía y Ciencias Sociales",
+  "nivel": "8° básico",
+  "codigo_asignatura": "HI08",
+  "fuente": "Bases Curriculares 7° básico a 2° medio — MINEDUC Chile (curriculumnacional.cl)",
+  "url_fuente": "https://www.curriculumnacional.cl/curriculum/7o-basico-2o-medio/historia-geografia-ciencias-sociales/8-basico",
+  "nota_fidelidad": "Texto de OA05, OA06 y OA07 transcrito de forma literal (piloto). El resto está redactado con alta fidelidad a las Bases Curriculares vigentes; validar contra el PDF oficial antes de usos formales.",
+  "habilidades_generales": [
+    "Pensamiento temporal y espacial",
+    "Análisis y trabajo con fuentes de información",
+    "Pensamiento crítico",
+    "Comunicación"
+  ],
+  "actitudes": [
+    "Respetar y valorar la diversidad cultural, étnica y de género.",
+    "Trabajar de forma colaborativa y responsable.",
+    "Participar de manera activa y responsable en la comunidad.",
+    "Demostrar interés y curiosidad por conocer el pasado."
+  ],
+  "unidades": [
+    {
+      "id": "U1",
+      "titulo": "Los inicios de la modernidad",
+      "descripcion": "En la Época Moderna se configura una nueva visión del ser humano (humanismo) y se produce la ruptura de la unidad espiritual europea. Surgen el Estado moderno y una economía de alcance mundial.",
+      "oa": ["HI08 OA 01", "HI08 OA 02", "HI08 OA 03", "HI08 OA 04"]
+    },
+    {
+      "id": "U2",
+      "titulo": "Formación de la sociedad americana y del Chile colonial",
+      "descripcion": "El encuentro entre europeos y pueblos americanos, la conquista y la formación de la sociedad colonial: imperio, evangelización, mestizaje, sociedad de castas, comercio atlántico y el mundo colonial en Chile. Aquí vive el piloto 'Los europeos llegan a América'.",
+      "oa": ["HI08 OA 05", "HI08 OA 06", "HI08 OA 07", "HI08 OA 08", "HI08 OA 09", "HI08 OA 10", "HI08 OA 11", "HI08 OA 12", "HI08 OA 13", "HI08 OA 17"]
+    },
+    {
+      "id": "U3",
+      "titulo": "Nuevos principios occidentales: Ilustración e Independencia",
+      "descripcion": "El pensamiento ilustrado cuestiona el orden social y político, e inspira los procesos revolucionarios de fines del siglo XVIII y la independencia hispanoamericana.",
+      "oa": ["HI08 OA 14", "HI08 OA 15", "HI08 OA 16", "HI08 OA 18", "HI08 OA 19"]
+    },
+    {
+      "id": "U4",
+      "titulo": "Sociedad y territorio: la región",
+      "descripcion": "Reconocer los factores físicos y humanos que definen una región, los desafíos regionales de Chile y el concepto de desarrollo, incluido el desarrollo sustentable.",
+      "oa": ["HI08 OA 20", "HI08 OA 21", "HI08 OA 22"]
+    }
+  ],
+  "oa": [
+    {
+      "codigo": "HI08 OA 01",
+      "eje": "Historia",
+      "unidad": "U1",
+      "texto": "Analizar, apoyándose en diversas fuentes, la centralidad del ser humano y su capacidad de transformar el mundo, considerando las ideas del Humanismo y la nueva visión antropocéntrica que caracterizó al Renacimiento.",
+      "conceptos_clave": ["humanismo", "antropocentrismo", "Renacimiento", "dignidad humana", "cultura grecolatina", "mecenazgo", "Leonardo da Vinci", "Miguel Ángel"]
+    },
+    {
+      "codigo": "HI08 OA 02",
+      "eje": "Historia",
+      "unidad": "U1",
+      "texto": "Analizar las transformaciones que se producen en la transición entre la sociedad medieval y la moderna, considerando la ruptura de la unidad religiosa de Europa (Reforma y Contrarreforma), el impacto de la imprenta en la difusión del conocimiento, la revolución científica y el nacimiento de la ciencia moderna.",
+      "conceptos_clave": ["Reforma protestante", "Martín Lutero", "Contrarreforma", "unidad religiosa", "imprenta", "Gutenberg", "revolución científica", "Copérnico", "Galileo", "método científico"]
+    },
+    {
+      "codigo": "HI08 OA 03",
+      "eje": "Historia",
+      "unidad": "U1",
+      "texto": "Caracterizar el Estado moderno considerando sus principales rasgos, como la concentración del poder en la figura del rey, el desarrollo de la burocracia y de un sistema fiscal centralizado, la creación de ejércitos profesionales y el monopolio del comercio, y contrastar con la fragmentación del poder que caracterizó a la Edad Media.",
+      "conceptos_clave": ["Estado moderno", "monarquía absoluta", "concentración del poder", "burocracia", "sistema fiscal", "ejércitos profesionales", "soberanía", "feudalismo"]
+    },
+    {
+      "codigo": "HI08 OA 04",
+      "eje": "Historia",
+      "unidad": "U1",
+      "texto": "Caracterizar la economía mercantilista del siglo XVI, considerando la acumulación y circulación de metales preciosos, la ampliación de las rutas comerciales, la expansión mundial de la economía europea, la revolución de los precios y el aumento de la competencia.",
+      "conceptos_clave": ["mercantilismo", "metales preciosos", "oro y plata", "acumulación de riqueza", "rutas comerciales", "revolución de los precios", "expansión económica", "competencia"]
+    },
+    {
+      "codigo": "HI08 OA 05",
+      "eje": "Historia",
+      "unidad": "U2",
+      "texto": "Argumentar por qué la llegada de los europeos a América implicó un enfrentamiento entre culturas, considerando aspectos como la profundidad de las diferencias culturales, la magnitud del escenario natural americano, y la desarticulación de la cosmovisión de las sociedades indígenas.",
+      "conceptos_clave": ["encuentro de dos mundos", "choque cultural", "cosmovisión indígena", "diferencias culturales", "escenario natural americano", "desarticulación cultural"]
+    },
+    {
+      "codigo": "HI08 OA 06",
+      "eje": "Historia",
+      "unidad": "U2",
+      "texto": "Analizar los factores que explican la rapidez de la conquista y la caída de los grandes imperios americanos, considerando aspectos como la organización política, las diferencias en la forma de hacer la guerra, los intereses de los conquistadores y la catástrofe demográfica.",
+      "conceptos_clave": ["conquista", "imperio azteca (mexica)", "imperio inca", "organización política", "formas de guerra", "alianzas indígenas", "armas y caballos", "catástrofe demográfica", "epidemias", "viruela"]
+    },
+    {
+      "codigo": "HI08 OA 07",
+      "eje": "Historia",
+      "unidad": "U2",
+      "texto": "Analizar y evaluar el impacto de la conquista de América en la cultura europea, considerando la ampliación del mundo conocido, el desafío de representar una nueva realidad y los debates morales relacionados con la condición humana de los indígenas.",
+      "conceptos_clave": ["ampliación del mundo conocido", "intercambio colombino", "debate de Valladolid", "Bartolomé de las Casas", "Ginés de Sepúlveda", "condición humana de los indígenas", "nuevas representaciones del mundo"]
+    },
+    {
+      "codigo": "HI08 OA 08",
+      "eje": "Historia",
+      "unidad": "U2",
+      "texto": "Analizar el rol de las ciudades en la administración del territorio del Imperio español, considerando las instituciones que en ellas se concentraban, la relación con la metrópoli, el monopolio comercial y la consolidación del poder local de las elites criollas.",
+      "conceptos_clave": ["ciudad colonial", "trazado en damero", "cabildo", "Real Audiencia", "virreinato", "gobernación", "metrópoli", "monopolio comercial", "elites criollas"]
+    },
+    {
+      "codigo": "HI08 OA 09",
+      "eje": "Historia",
+      "unidad": "U2",
+      "texto": "Caracterizar el barroco a través de distintas expresiones culturales de la sociedad colonial, como el arte, la arquitectura, la música, el teatro y las ceremonias, entre otras.",
+      "conceptos_clave": ["barroco colonial", "arte", "arquitectura religiosa", "música", "teatro", "sincretismo", "religiosidad popular", "fiestas y ceremonias"]
+    },
+    {
+      "codigo": "HI08 OA 10",
+      "eje": "Historia",
+      "unidad": "U2",
+      "texto": "Explicar la importancia de los mercados americanos en el comercio atlántico de los siglos XVII y XVIII, considerando el monopolio comercial, la exportación de materias primas, las distintas regiones productivas, el tráfico masivo y el empleo de mano de obra esclava, y el desarrollo de rutas comerciales.",
+      "conceptos_clave": ["comercio atlántico", "monopolio comercial", "Casa de Contratación", "flotas y galeones", "materias primas", "mano de obra esclava", "rutas comerciales"]
+    },
+    {
+      "codigo": "HI08 OA 11",
+      "eje": "Historia",
+      "unidad": "U2",
+      "texto": "Analizar el proceso de formación de la sociedad colonial americana considerando elementos como la evangelización, la esclavitud y otras formas de trabajo no remunerado (por ejemplo, encomienda y mita), los roles de género, el mestizaje, la transculturación y la sociedad de castas, entre otros.",
+      "conceptos_clave": ["evangelización", "encomienda", "mita", "esclavitud", "trabajo no remunerado", "mestizaje", "transculturación", "sociedad de castas", "roles de género"]
+    },
+    {
+      "codigo": "HI08 OA 12",
+      "eje": "Historia",
+      "unidad": "U2",
+      "texto": "Analizar la convivencia y los conflictos entre españoles, mestizos y mapuches durante la conquista y colonización de Arauco, considerando la resistencia mapuche, la Guerra de Arauco y el establecimiento de la frontera.",
+      "conceptos_clave": ["pueblo mapuche", "Guerra de Arauco", "frontera del Biobío", "parlamentos", "malones y malocas", "resistencia indígena", "convivencia y conflicto"]
+    },
+    {
+      "codigo": "HI08 OA 13",
+      "eje": "Historia",
+      "unidad": "U2",
+      "texto": "Analizar el rol de la hacienda en la conformación de la sociedad del Chile colonial y sus proyecciones históricas, considerando su organización, el trabajo del inquilino y del peón, y su influencia en el mundo rural.",
+      "conceptos_clave": ["hacienda", "inquilinaje", "peonaje", "latifundio", "economía agraria", "mestizaje rural", "mundo rural chileno"]
+    },
+    {
+      "codigo": "HI08 OA 14",
+      "eje": "Historia",
+      "unidad": "U3",
+      "texto": "Caracterizar la Ilustración como corriente de pensamiento basada en la razón, considerando sus principales ideas, como el ordenamiento constitucional, la separación de los poderes del Estado y la soberanía popular.",
+      "conceptos_clave": ["Ilustración", "razón", "enciclopedistas", "Voltaire", "Rousseau", "Montesquieu", "soberanía popular", "separación de poderes", "constitución"]
+    },
+    {
+      "codigo": "HI08 OA 15",
+      "eje": "Historia",
+      "unidad": "U3",
+      "texto": "Analizar cómo las ideas ilustradas se manifestaron en los procesos revolucionarios de fines del siglo XVIII, como la Independencia de Estados Unidos y la Revolución francesa.",
+      "conceptos_clave": ["procesos revolucionarios", "Revolución francesa", "Independencia de Estados Unidos", "liberalismo", "república", "ciudadanía", "derechos"]
+    },
+    {
+      "codigo": "HI08 OA 16",
+      "eje": "Historia",
+      "unidad": "U3",
+      "texto": "Explicar el proceso de independencia de las colonias hispanoamericanas como un proceso continental, marcado por la crisis del sistema colonial y la influencia de las ideas ilustradas.",
+      "conceptos_clave": ["independencia hispanoamericana", "crisis de la monarquía española", "juntas de gobierno", "criollos", "proceso continental", "próceres de la independencia"]
+    },
+    {
+      "codigo": "HI08 OA 17",
+      "eje": "Formación ciudadana",
+      "unidad": "U2",
+      "texto": "Contrastar distintas posturas sobre la legitimidad de la conquista de América en el siglo XVI, reflexionando sobre su relevancia para el debate actual acerca de los derechos de los pueblos indígenas.",
+      "conceptos_clave": ["legitimidad de la conquista", "debate moral", "derechos de los pueblos indígenas", "justicia", "perspectivas históricas", "relevancia actual"]
+    },
+    {
+      "codigo": "HI08 OA 18",
+      "eje": "Formación ciudadana",
+      "unidad": "U3",
+      "texto": "Explicar el concepto de derechos del hombre difundido durante la Ilustración y la Revolución francesa, y su importancia para la organización política y social contemporánea.",
+      "conceptos_clave": ["derechos del hombre", "Declaración de Derechos del Hombre y del Ciudadano", "derechos naturales", "libertad", "igualdad", "Revolución francesa"]
+    },
+    {
+      "codigo": "HI08 OA 19",
+      "eje": "Formación ciudadana",
+      "unidad": "U3",
+      "texto": "Evaluar las transformaciones que generó el proceso de independencia de Chile en el orden republicano y en la conformación de la ciudadanía.",
+      "conceptos_clave": ["independencia de Chile", "orden republicano", "ciudadanía", "soberanía", "constituciones", "transformaciones políticas"]
+    },
+    {
+      "codigo": "HI08 OA 20",
+      "eje": "Geografía",
+      "unidad": "U4",
+      "texto": "Explicar los criterios que definen a una región, considerando factores físicos y humanos que la constituyen (por ejemplo, vegetación, suelo, clima, lengua común, religión, historia, entre otros), y dar ejemplos de distintos tipos de regiones en Chile y en América.",
+      "conceptos_clave": ["región", "factores físicos", "factores humanos", "tipos de regiones", "región natural", "región cultural", "región administrativa", "Chile y América"]
+    },
+    {
+      "codigo": "HI08 OA 21",
+      "eje": "Geografía",
+      "unidad": "U4",
+      "texto": "Analizar diversos problemas que afectan a las regiones de Chile, como el aislamiento, la conectividad y las migraciones, y proponer posibles soluciones.",
+      "conceptos_clave": ["aislamiento", "conectividad", "migraciones", "centralización", "desafíos regionales", "ordenamiento territorial"]
+    },
+    {
+      "codigo": "HI08 OA 22",
+      "eje": "Geografía",
+      "unidad": "U4",
+      "texto": "Aplicar el concepto de desarrollo para analizar diversos aspectos de las regiones de Chile, incorporando la noción de desarrollo sustentable y el cuidado del medioambiente.",
+      "conceptos_clave": ["desarrollo", "subdesarrollo", "indicadores de desarrollo", "desarrollo sustentable", "medioambiente", "regiones de Chile"]
+    }
+  ]
+}

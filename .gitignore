@@ -9,3 +9,6 @@ Desktop.ini
 # Editores
 .vscode/
 .idea/
+
+# Log del respaldo automático
+scripts/auto-commit.log

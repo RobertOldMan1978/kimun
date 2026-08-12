@@ -84,6 +84,18 @@ Orden tentativo, sujeto a prioridad de "verlo funcionar y atractivo" primero:
 - **Cierre de sesión:** al pedirlo, actualizar este `CLAUDE.md` con lo avanzado
   y lo pendiente, luego commit y push.
 
+### Regla de commits (importante)
+
+- **Durante las sesiones NO se hace commit ni push** hasta que Roberto lo pida
+  explícitamente. Claude debe esperar la orden.
+- **Respaldo automático a las 18:00:** cualquier día en que haya cambios sin
+  guardar, una Tarea Programada de Windows ejecuta `scripts/auto-commit.ps1`,
+  que hace commit y push solo si detecta cambios. Así no se pierde trabajo
+  entre oficina y casa.
+- Para activar el respaldo en otro PC, ejecutar una vez
+  `scripts/registrar-tarea.ps1`.
+- El registro de ejecuciones queda en `scripts/auto-commit.log` (ignorado por git).
+
 ## Bitácora de sesiones
 
 ### Sesión 1 (2026-08-12)
