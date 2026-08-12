@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 230" width="512" height="535">
+  <defs>
+    <radialGradient id="kHead" cx="40%" cy="30%" r="78%"><stop offset="0" stop-color="#e0975a"/><stop offset="55%" stop-color="#b8632e"/><stop offset="100%" stop-color="#8a481f"/></radialGradient>
+    <linearGradient id="kEar" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#c76f34"/><stop offset="1" stop-color="#7f4520"/></linearGradient>
+    <radialGradient id="kMuz" cx="50%" cy="32%" r="72%"><stop offset="0" stop-color="#f3efe7"/><stop offset="100%" stop-color="#d3ccbf"/></radialGradient>
+    <radialGradient id="kEye" cx="38%" cy="30%" r="80%"><stop offset="0" stop-color="#3a2b52"/><stop offset="100%" stop-color="#140f22"/></radialGradient>
+  </defs>
+  <ellipse cx="110" cy="210" rx="54" ry="12" fill="#00000030"/>
+  <path d="M52 66 L92 102 L60 118 Z" fill="url(#kEar)"/>
+  <path d="M168 66 L128 102 L160 118 Z" fill="url(#kEar)"/>
+  <path d="M60 74 L86 100 L67 110 Z" fill="#5e3320"/>
+  <path d="M160 74 L134 100 L153 110 Z" fill="#5e3320"/>
+  <path d="M64 108 C50 134 58 158 80 156 C70 136 70 122 76 108 Z" fill="#a89e93"/>
+  <path d="M156 108 C170 134 162 158 140 156 C150 136 150 122 144 108 Z" fill="#a89e93"/>
+  <path d="M110 64 C166 64 174 124 152 154 C134 178 110 186 110 186 C110 186 86 178 68 154 C46 124 54 64 110 64 Z" fill="url(#kHead)"/>
+  <path d="M110 122 C141 122 151 144 139 160 C127 174 110 180 110 180 C110 180 93 174 81 160 C69 144 79 122 110 122 Z" fill="url(#kMuz)"/>
+  <ellipse cx="86" cy="110" rx="12" ry="13" fill="url(#kEye)"/>
+  <ellipse cx="134" cy="110" rx="12" ry="13" fill="url(#kEye)"/>
+  <circle cx="90" cy="105" r="4" fill="#fff"/><circle cx="138" cy="105" r="4" fill="#fff"/>
+  <circle cx="83" cy="114" r="1.7" fill="#fff" opacity=".55"/><circle cx="131" cy="114" r="1.7" fill="#fff" opacity=".55"/>
+  <path d="M110 138 l9 9 -18 0 Z" fill="#241326"/>
+  <ellipse cx="106" cy="141" rx="2.4" ry="1.5" fill="#fff" opacity=".5"/>
+  <path d="M110 147 q-11 13 -22 6 M110 147 q11 13 22 6" fill="none" stroke="#7f5236" stroke-width="3.5" stroke-linecap="round"/>
+  <path d="M110 64 C150 64 165 104 156 136 C158 104 150 78 110 74 C86 72 70 82 66 96 C74 74 90 64 110 64 Z" fill="#ffffff" opacity=".22"/>
+  <circle cx="110" cy="84" r="6" fill="#4dd8ff"/>
+</svg>

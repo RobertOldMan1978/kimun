@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 330" width="480" height="528">
+  <defs>
+    <radialGradient id="face" cx="50%" cy="34%" r="72%"><stop offset="0" stop-color="#f2a552"/><stop offset="52%" stop-color="#db7423"/><stop offset="100%" stop-color="#a4511b"/></radialGradient>
+    <linearGradient id="earback" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#d97b2c"/><stop offset="1" stop-color="#9a4a18"/></linearGradient>
+    <radialGradient id="iris" cx="42%" cy="32%" r="72%"><stop offset="0" stop-color="#e8c06a"/><stop offset="52%" stop-color="#b87a1e"/><stop offset="100%" stop-color="#7c4d12"/></radialGradient>
+    <radialGradient id="nose2" cx="40%" cy="28%" r="82%"><stop offset="0" stop-color="#4a3830"/><stop offset="100%" stop-color="#120a08"/></radialGradient>
+    <linearGradient id="chest" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f3ecdf"/><stop offset="1" stop-color="#d3c8b6"/></linearGradient>
+  </defs>
+
+  <!-- pecho/gola clara -->
+  <path d="M60 250 Q46 305 78 326 L120 330 Q150 320 180 330 L222 326 Q254 305 240 250 Q205 300 150 300 Q95 300 60 250 Z" fill="url(#chest)"/>
+  <g stroke="#c7bba6" stroke-width="1.4" stroke-linecap="round" opacity=".6" fill="none">
+    <path d="M92 270 q-6 26 -10 44 M108 276 q-4 26 -6 46 M126 280 q-2 24 -2 44 M150 282 v46 M174 280 q2 24 2 44 M192 276 q4 26 6 46 M208 270 q6 26 10 44"/>
+  </g>
+
+  <!-- orejas: dorso rufo -->
+  <path d="M88 148 Q64 62 82 28 Q122 74 134 126 Z" fill="url(#earback)"/>
+  <path d="M212 148 Q236 62 218 28 Q178 74 166 126 Z" fill="url(#earback)"/>
+  <!-- borde oscuro exterior -->
+  <path d="M88 148 Q64 62 82 28 Q80 66 90 118 Z" fill="#3a2213" opacity=".55"/>
+  <path d="M212 148 Q236 62 218 28 Q220 66 210 118 Z" fill="#3a2213" opacity=".55"/>
+  <!-- interior oscuro con pelo blanco -->
+  <path d="M98 140 Q84 78 98 50 Q126 88 130 124 Z" fill="#241611"/>
+  <path d="M202 140 Q216 78 202 50 Q174 88 170 124 Z" fill="#241611"/>
+  <g stroke="#f1e9db" stroke-width="2.2" stroke-linecap="round" opacity=".85" fill="none">
+    <path d="M104 132 Q95 90 104 64 M113 130 Q107 94 115 72 M122 126 Q120 100 125 82"/>
+    <path d="M196 132 Q205 90 196 64 M187 130 Q193 94 185 72 M178 126 Q180 100 175 82"/>
+  </g>
+
+  <!-- cara (rojiza) -->
+  <path d="M150 88 Q102 90 80 126 Q60 162 72 204 Q88 246 122 266 Q150 280 150 280 Q150 280 178 266 Q212 246 228 204 Q240 162 220 126 Q198 90 150 88 Z" fill="url(#face)"/>
+
+  <!-- textura de pelo cara -->
+  <g stroke-linecap="round" fill="none" opacity=".5">
+    <g stroke="#f6b56a" stroke-width="1.6">
+      <path d="M150 96 l-6 30 M150 96 l6 30 M132 100 l-8 28 M168 100 l8 28 M116 116 l-10 26 M184 116 l10 26"/>
+      <path d="M98 150 l-12 20 M202 150 l12 20 M92 176 l-14 16 M208 176 l14 16"/>
+    </g>
+    <g stroke="#a4511b" stroke-width="1.4" opacity=".6">
+      <path d="M124 130 l-6 26 M176 130 l6 26 M108 150 l-10 22 M192 150 l10 22 M100 190 l-12 18 M200 190 l12 18 M120 210 l-8 22 M180 210 l8 22"/>
+    </g>
+  </g>
+
+  <!-- entrecejo claro / máscara -->
+  <path d="M150 108 Q140 138 146 172 Q150 150 150 150 Q150 150 154 172 Q160 138 150 108 Z" fill="#f2ddc0" opacity=".55"/>
+
+  <!-- ojos -->
+  <path d="M100 152 Q117 139 136 150 Q121 165 100 160 Z" fill="#43301c"/>
+  <path d="M200 152 Q183 139 164 150 Q179 165 200 160 Z" fill="#43301c"/>
+  <ellipse cx="118" cy="154" rx="14.5" ry="10.5" fill="url(#iris)"/>
+  <ellipse cx="182" cy="154" rx="14.5" ry="10.5" fill="url(#iris)"/>
+  <ellipse cx="118" cy="154" rx="5.2" ry="7.6" fill="#150c05"/>
+  <ellipse cx="182" cy="154" rx="5.2" ry="7.6" fill="#150c05"/>
+  <circle cx="122" cy="150" r="2.7" fill="#fff" opacity=".95"/>
+  <circle cx="186" cy="150" r="2.7" fill="#fff" opacity=".95"/>
+  <path d="M100 151 Q117 137 137 149" fill="none" stroke="#241608" stroke-width="2.6" stroke-linecap="round"/>
+  <path d="M200 151 Q183 137 163 149" fill="none" stroke="#241608" stroke-width="2.6" stroke-linecap="round"/>
+  <path d="M102 162 Q118 168 134 162 M198 162 Q182 168 166 162" fill="none" stroke="#f3e7d2" stroke-width="1.5" stroke-linecap="round" opacity=".6"/>
+
+  <!-- puente nasal claro -->
+  <path d="M150 168 Q141 206 150 236 Q159 206 150 168 Z" fill="#f0e6d3" opacity=".7"/>
+  <!-- hocico blanco -->
+  <path d="M150 200 Q122 204 128 230 Q136 252 150 258 Q164 252 172 230 Q178 204 150 200 Z" fill="#f5efe3"/>
+  <g stroke="#d8cdb9" stroke-width="1.2" stroke-linecap="round" opacity=".6" fill="none">
+    <path d="M138 218 q-2 16 -2 28 M150 220 v30 M162 218 q2 16 2 28"/>
+  </g>
+
+  <!-- nariz -->
+  <path d="M150 220 Q134 222 137 236 Q142 248 150 250 Q158 248 163 236 Q166 222 150 220 Z" fill="url(#nose2)"/>
+  <ellipse cx="144" cy="228" rx="3" ry="2" fill="#7a635a" opacity=".7"/>
+  <!-- boca -->
+  <path d="M150 250 L150 260 M150 260 Q135 270 122 263 M150 260 Q165 270 178 263" fill="none" stroke="#2e2018" stroke-width="2.4" stroke-linecap="round"/>
+
+  <!-- bigotes -->
+  <g stroke="#f5efe3" stroke-width="1.4" stroke-linecap="round" opacity=".85" fill="none">
+    <path d="M130 232 Q92 230 60 220 M131 239 Q95 244 66 244 M132 246 Q100 256 76 262"/>
+    <path d="M170 232 Q208 230 240 220 M169 239 Q205 244 234 244 M168 246 Q200 256 224 262"/>
+  </g>
+</svg>

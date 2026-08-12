@@ -3,7 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-<title>Expedición Historia — 8° Básico</title>
+<title>KIMÜN · Aprende jugando — 8° Básico</title>
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="512x512" href="assets/kimun-512.png">
+<link rel="apple-touch-icon" href="assets/kimun-180.png">
+<meta name="theme-color" content="#1e1747">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Titan+One&family=Nunito:wght@600;800;900&display=swap" rel="stylesheet">
 <style>
@@ -45,6 +49,8 @@ h1,h2,.disp{font-family:'Titan One',cursive;letter-spacing:.5px}
 /* ===== INICIO ===== */
 .logo{text-align:center;margin:26px 0 8px}
 .logo .badge{font-size:56px;display:inline-block;animation:float 3s ease-in-out infinite}
+.logo .badge-img{width:150px;height:150px;border-radius:50%;object-fit:cover;object-position:center 42%;
+  border:4px solid var(--gold);box-shadow:0 0 30px #ffc93c66,0 12px 26px #0006;animation:float 3s ease-in-out infinite}
 @keyframes float{0%,100%{transform:translateY(0) rotate(-4deg)}50%{transform:translateY(-10px) rotate(4deg)}}
 .logo h1{font-size:34px;line-height:1.05;margin-top:6px;
   background:linear-gradient(90deg,var(--gold),#ff9d3c,var(--pink));-webkit-background-clip:text;background-clip:text;color:transparent}
@@ -165,6 +171,11 @@ input.nm:focus{border-color:var(--cyan)}
   text-shadow:0 0 24px #ffc93c,3px 3px 0 #b5651d;display:block;margin-top:2px}
 .levelup .lvl-sub{color:var(--cyan);font-weight:900;letter-spacing:2px;text-transform:uppercase;font-size:14px}
 @keyframes luPop{0%{transform:scale(.3);opacity:0}60%{opacity:1}100%{transform:scale(1);opacity:1}}
+.levelup .kim{width:136px;height:136px;display:block;margin:0 auto 6px;border-radius:50%;object-fit:cover;object-position:center 42%;
+  border:4px solid var(--gold);box-shadow:0 0 28px #ffc93c88;transform-box:fill-box;transform-origin:50% 100%}
+.levelup.show .kim{animation:kimCelebrate 1.4s ease}
+@keyframes kimBlink{0%,90%,100%{transform:scaleY(1)}94%{transform:scaleY(.1)}}
+@keyframes kimCelebrate{0%{transform:translateY(0) rotate(0)}20%{transform:translateY(-28px) rotate(-12deg)}42%{transform:translateY(0) rotate(0)}58%{transform:translateY(-34px) rotate(360deg)}82%{transform:translateY(0) rotate(360deg)}100%{transform:translateY(0) rotate(360deg)}}
 /* botón de sonido */
 .sndbtn{position:fixed;top:10px;right:10px;z-index:46;width:42px;height:42px;border-radius:12px;border:1px solid #ffffff1f;
   background:#120d2ecc;backdrop-filter:blur(6px);color:var(--txt);font-size:20px;cursor:pointer;display:grid;place-items:center}
@@ -192,7 +203,10 @@ input.nm:focus{border-color:var(--cyan)}
 <div class="stars" id="stars"></div>
 <div class="combo" id="combo"></div>
 <div class="toast" id="toast"><div class="ic" id="toastIc">🏅</div><div><b>¡Logro desbloqueado!</b><span id="toastTx"></span></div></div>
-<div class="levelup" id="levelup"><div class="box"><span class="ic">⭐</span><span class="lvl-num">NIVEL 2</span><span class="lvl-sub">¡Subiste de nivel!</span></div></div>
+<div class="levelup" id="levelup"><div class="box">
+  <img class="kim" src="assets/kimun-512.png" alt="Kimün">
+  <span class="lvl-num">NIVEL 2</span><span class="lvl-sub">¡Subiste de nivel!</span>
+</div></div>
 <button class="sndbtn" id="sndBtn" title="Sonido">🔊</button>
 
 <div class="wrap">
@@ -200,7 +214,7 @@ input.nm:focus{border-color:var(--cyan)}
   <!-- ============ SELECCIÓN DE MODO ============ -->
   <section class="screen on" id="scr-rol">
     <div class="logo">
-      <span class="badge">🧭</span>
+      <img class="badge-img" src="assets/kimun-512.png" alt="Kimün, la mascota" width="150" height="150">
       <h1>KIMÜN</h1>
       <p>Aprende jugando · 8° Básico</p>
     </div>
