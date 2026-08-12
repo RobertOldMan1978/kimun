@@ -165,8 +165,25 @@ input.nm:focus{border-color:var(--cyan)}
 
 <div class="wrap">
 
+  <!-- ============ SELECCIÓN DE MODO ============ -->
+  <section class="screen on" id="scr-rol">
+    <div class="logo">
+      <span class="badge">🧭</span>
+      <h1>KIMÜN</h1>
+      <p>Aprende jugando · 8° Básico</p>
+    </div>
+    <div class="card">
+      <h3>¿Cómo quieres entrar?</h3>
+      <button class="btn" id="btnJugador">🎮 JUGADOR</button>
+      <button class="btn sec" id="btnAdmin">🔧 Modo Admin</button>
+    </div>
+    <p style="text-align:center;color:var(--dim);font-weight:800;font-size:12px;margin-top:14px">
+      El modo Admin es para el desarrollador y pide contraseña.
+    </p>
+  </section>
+
   <!-- ============ INICIO ============ -->
-  <section class="screen on" id="scr-inicio">
+  <section class="screen" id="scr-inicio">
     <div class="logo">
       <span class="badge">🗺️</span>
       <h1>EXPEDICIÓN<br>HISTORIA</h1>
@@ -322,6 +339,10 @@ function refreshHud(){
   d.onclick=()=>{document.querySelectorAll('.av').forEach(x=>x.classList.remove('sel'));d.classList.add('sel');S.avatar=a;};
   g.appendChild(d);});
 })();
+/* ===== Selección de modo (Jugador / Admin) ===== */
+$('btnJugador').onclick=()=>go('scr-inicio');
+$('btnAdmin').onclick=()=>{window.location.href='dev/tablero.html';};
+
 $('btnStart').onclick=()=>{
  S.nombre=$('inpName').value.trim()||"Explorador";
  refreshHud();renderMapa();renderRanking();

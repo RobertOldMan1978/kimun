@@ -96,6 +96,45 @@ Orden tentativo, sujeto a prioridad de "verlo funcionar y atractivo" primero:
   `scripts/registrar-tarea.ps1`.
 - El registro de ejecuciones queda en `scripts/auto-commit.log` (ignorado por git).
 
+## Herramientas de desarrollo
+
+### Tablero de avance (`dev/tablero.html`)
+
+Pantalla para el desarrollador (no para estudiantes) que muestra, por asignatura,
+qué OA se están trabajando y el **% de avance por cobertura de preguntas**:
+
+    avance_OA = min(100, preguntas_del_OA / meta_por_OA) · meta por defecto: 8
+
+Se genera a partir de los datos con:
+
+    python scripts/generar-tablero.py
+
+Lee `contenido/<asignatura>/oa.json` y `preguntas.json`, y escribe
+`dev/tablero.html` (estático y autocontenido, se abre con doble clic). Regenerar
+cada vez que se agreguen o etiqueten preguntas. Está preparado para varias
+asignaturas: basta con crear otra carpeta en `contenido/` con esos dos archivos.
+
+**Acceso integrado (Jugador / Admin):** la pantalla de inicio de `index.html`
+ofrece dos modos. "Jugador" abre el juego (lo que ven los niños). "Modo Admin"
+lleva al tablero, protegido por contraseña. La contraseña se define en la
+constante `CLAVE_ADMIN` dentro de `scripts/generar-tablero.py`; al cambiarla hay
+que volver a generar el tablero.
+
+> Nota: es un **bloqueo suave** para que los niños no entren al panel, NO
+> seguridad real (es un sitio estático; quien sepa mirar el código puede
+> saltárselo).
+
+**En el tablero:** al pinchar un OA se despliegan sus preguntas (solo el
+enunciado y la respuesta correcta).
+
+**Para probar en local** (el navegador necesita servidor, no `file://` para el
+JavaScript): `python -m http.server 8765` y abrir `http://localhost:8765/`.
+
+### Consolidar el pool de preguntas (`scripts/consolidar-pool.py`)
+
+Une los archivos verificados, elimina duplicados, **baraja las opciones** (evita
+el sesgo de posición), asigna IDs por OA y escribe `preguntas.json`.
+
 ## Bitácora de sesiones
 
 ### Sesión 1 (2026-08-12)
