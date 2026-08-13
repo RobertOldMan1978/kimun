@@ -9,8 +9,10 @@ desafiante y que genere comunidad entre compañeros.
 **Expedición Historia — 8° básico**, unidad "Los europeos llegan a América".
 
 Un juego tipo aventura con mapa de niveles, quiz con temporizador, combos, XP,
-monedas, estrellas, logros y ranking de curso. Todo en un solo archivo
-`index.html`, pensado para jugar desde el celular.
+monedas, estrellas, logros y ranking de curso. **Kimün**, el zorro mascota,
+acompaña y reacciona a cada respuesta. Incluye **Modo Difícil** desbloqueable y una
+pantalla de **expediciones** por asignatura (Historia jugable; Matemáticas, Ciencias
+y Lenguaje próximamente). Todo en un solo archivo `index.html`, pensado para el celular.
 
 ## Cómo probarlo
 

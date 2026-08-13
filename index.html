@@ -216,6 +216,33 @@ input.nm:focus{border-color:var(--cyan)}
 .kim-res{width:164px;height:164px;border-radius:50%;object-fit:cover;object-position:center 30%;
  background:radial-gradient(circle at 50% 34%,#fff,#efe6d2);
  border:5px solid var(--gold);box-shadow:0 0 26px #ffc93c88,0 10px 16px #0007}
+/* Kimün vestido (ambientación de expedición) */
+.badge-conq{width:168px;height:168px;object-fit:contain;
+ filter:drop-shadow(0 8px 16px #0007) drop-shadow(0 0 16px #ffc93c55);animation:float 3s ease-in-out infinite}
+.mapa-head{display:flex;align-items:center;gap:12px;margin:6px 0 8px}
+.mapa-head img{width:66px;height:66px;object-fit:contain;filter:drop-shadow(0 4px 8px #0006);flex-shrink:0}
+.mapa-head h2{font-size:22px;margin:0}
+.mapa-head p{color:var(--dim);font-weight:800;font-size:13px;margin:0}
+/* selector Normal / Difícil */
+.modo-sel{display:flex;gap:8px;margin:0 0 12px}
+.modo-sel button{flex:1;padding:10px;border:2px solid #ffffff1f;border-radius:13px;cursor:pointer;
+ background:#00000030;color:var(--dim);font-family:'Nunito';font-weight:900;font-size:13px;transition:.15s}
+.modo-sel button.on{border-color:var(--cyan);color:var(--txt);background:#4dd8ff1f}
+.modo-sel button.dif.on{border-color:var(--pink);color:#fff;background:#ff4d8d22}
+/* selección de expediciones (asignaturas) */
+.exp-grid{display:grid;gap:12px;margin-top:16px}
+.exp-card{display:flex;align-items:center;gap:14px;background:var(--panel);border:2px solid #ffffff14;
+ border-radius:16px;padding:12px;cursor:pointer;transition:.15s;box-shadow:0 8px 22px #00000038}
+.exp-card:active{transform:scale(.99)}
+.exp-card img{width:66px;height:66px;border-radius:12px;object-fit:cover;flex-shrink:0}
+.exp-card .exp-info{flex:1;min-width:0}
+.exp-card .exp-info b{display:block;font-size:16px}
+.exp-card .exp-info small{color:var(--dim);font-weight:800;font-size:12px}
+.exp-card .exp-go{font-size:22px;color:var(--green)}
+.exp-card .exp-lock{font-size:11px;font-weight:900;color:var(--dim);white-space:nowrap}
+.exp-card:not(.soon){border-color:var(--gold)}
+.exp-card.soon{opacity:.62}
+.exp-card.soon img{filter:grayscale(.55)}
 @media (prefers-reduced-motion: reduce){*{animation:none!important;transition:none!important}}
 </style>
 </head>
@@ -250,10 +277,21 @@ input.nm:focus{border-color:var(--cyan)}
     </p>
   </section>
 
+  <!-- ============ ELEGIR EXPEDICIÓN ============ -->
+  <section class="screen" id="scr-expediciones">
+    <div class="logo" style="margin:20px 0 4px">
+      <span class="badge">🧭</span>
+      <h1 style="font-size:28px">EXPEDICIONES</h1>
+      <p>Elige tu aventura de aprendizaje</p>
+    </div>
+    <div class="exp-grid" id="expGrid"></div>
+    <button class="btn sec" id="btnExpBack" style="margin-top:18px">← Volver</button>
+  </section>
+
   <!-- ============ INICIO ============ -->
   <section class="screen" id="scr-inicio">
     <div class="logo">
-      <span class="badge">🗺️</span>
+      <img class="badge-conq" src="assets/kimun-conquistador.png" alt="Kimün explorador">
       <h1>EXPEDICIÓN<br>HISTORIA</h1>
       <p>8° Básico · Descubre, conquista y sube de nivel</p>
     </div>
@@ -279,8 +317,14 @@ input.nm:focus{border-color:var(--cyan)}
       </div>
       <div class="coins">🪙 <span id="hudCoins">0</span></div>
     </div>
-    <h2 class="disp" style="font-size:22px;margin:6px 0 2px">Ruta de la Expedición</h2>
-    <p style="color:var(--dim);font-weight:800;font-size:13px">Unidad: Los europeos llegan a América</p>
+    <div class="mapa-head">
+      <img src="assets/kimun-conquistador.png" alt="Kimün explorador">
+      <div>
+        <h2 class="disp">Ruta de la Expedición</h2>
+        <p>Unidad: Los europeos llegan a América</p>
+      </div>
+    </div>
+    <div class="modo-sel" id="modoSel" style="display:none"></div>
     <div class="mapbox" id="mapbox"></div>
 
     <div class="card">
@@ -408,11 +452,11 @@ function pickN(arr,n){
  return a.slice(0,n);
 }
 function buildPreguntas(lvl){
- const c=EXPEDICION[lvl];let sel;
- if(c.oas){const per=Math.max(1,Math.floor(c.n/c.oas.length));
+ const c=EXPEDICION[lvl];const N=nPreguntas(lvl);let sel;
+ if(c.oas){const per=Math.ceil(N/c.oas.length);
   sel=[];c.oas.forEach(oa=>{sel=sel.concat(pickN(POOL[oa],per));});
-  sel=pickN(sel,c.n);
- }else{sel=pickN(POOL[c.oa],c.n);}
+  sel=pickN(sel,N);
+ }else{sel=pickN(POOL[c.oa],N);}
  return sel.map(q=>({q:q.pregunta,ops:q.opciones,ok:q.correcta,tip:q.tip}));
 }
 function poolListo(lvl){
@@ -424,13 +468,22 @@ const LOGROS={
  combo3:{ic:"🔥",tx:"Combo x3 — ¡Imparable!"},
  perfecto:{ic:"💎",tx:"Nivel perfecto"},
  jefe:{ic:"👑",tx:"¡Venciste al Jefe Final!"},
+ dificil:{ic:"🔥",tx:"¡Modo Difícil desbloqueado!"},
 };
 
 /* ================= ESTADO ================= */
+function nuevoProgreso(){return [{est:"open",estrellas:0},{est:"lock",estrellas:0},{est:"lock",estrellas:0},{est:"lock",estrellas:0},{est:"lock",estrellas:0}];}
 const S={nombre:"",avatar:AVATARES[0],xp:0,nivel:1,monedas:0,
- progreso:[{est:"open",estrellas:0},{est:"lock",estrellas:0},{est:"lock",estrellas:0},{est:"lock",estrellas:0},{est:"lock",estrellas:0}],
+ progreso:nuevoProgreso(), progresoDificil:nuevoProgreso(), dificilDesbloqueado:false,
  skins:[], logros:new Set()};
 let Q={lvl:0,idx:0,aciertos:0,combo:0,comboMax:0,xpGanado:0,timer:null,t:15,lock:false};
+
+/* Modo de juego: 'normal' | 'dificil' */
+let MODO='normal';
+function esJefeLvl(lvl){return lvl===N_ETAPAS-1;}
+function progAct(){return MODO==='dificil'?S.progresoDificil:S.progreso;}
+function nPreguntas(lvl){if(MODO==='dificil')return esJefeLvl(lvl)?10:8;return EXPEDICION[lvl].n;}
+function tiempoInicial(){return MODO==='dificil'?10:15;}
 
 const $=id=>document.getElementById(id);
 const XP_POR_NIVEL=100;
@@ -499,10 +552,13 @@ function levelUpFx(n){
 const SAVE_KEY='kimun_save';
 function guardar(){try{localStorage.setItem(SAVE_KEY,JSON.stringify({
  nombre:S.nombre,avatar:S.avatar,xp:S.xp,monedas:S.monedas,
- progreso:S.progreso,skins:S.skins,logros:[...S.logros]}));}catch(e){}}
+ progreso:S.progreso,progresoDificil:S.progresoDificil,dificilDesbloqueado:S.dificilDesbloqueado,
+ skins:S.skins,logros:[...S.logros]}));}catch(e){}}
 function cargar(){try{const d=JSON.parse(localStorage.getItem(SAVE_KEY)||'null');if(!d)return false;
  S.nombre=d.nombre||"";S.avatar=d.avatar||AVATARES[0];S.xp=d.xp||0;S.monedas=d.monedas||0;
  if(Array.isArray(d.progreso)&&d.progreso.length===EXPEDICION.length)S.progreso=d.progreso;
+ if(Array.isArray(d.progresoDificil)&&d.progresoDificil.length===EXPEDICION.length)S.progresoDificil=d.progresoDificil;
+ S.dificilDesbloqueado=!!d.dificilDesbloqueado;
  S.skins=Array.isArray(d.skins)?d.skins:[];S.logros=new Set(d.logros||[]);
  return !!d.nombre;}catch(e){return false;}}
 function hayPartida(){try{const d=JSON.parse(localStorage.getItem(SAVE_KEY)||'null');return !!(d&&d.nombre);}catch(e){return false;}}
@@ -618,9 +674,31 @@ function finDuelo(){
   g.appendChild(d);});
 })();
 /* ===== Selección de modo (Jugador / Admin) ===== */
-$('btnJugador').onclick=()=>{SND.init();SND.tap();
+/* Asignaturas (preparado para varias expediciones; hoy solo Historia tiene contenido) */
+const ASIGNATURAS=[
+ {id:'historia',nombre:'Historia',nivel:'8° Básico · Los europeos llegan a América',portada:'assets/portada-historia.png',activa:true},
+ {id:'matematicas',nombre:'Matemáticas',nivel:'Próximamente',portada:'assets/portada-matematicas.png',activa:false},
+ {id:'ciencias',nombre:'Ciencias',nivel:'Próximamente',portada:'assets/portada-ciencias.png',activa:false},
+ {id:'lenguaje',nombre:'Lenguaje',nivel:'Próximamente',portada:'assets/portada-lenguaje.png',activa:false},
+];
+function renderExpediciones(){
+ const g=$('expGrid');g.innerHTML='';
+ ASIGNATURAS.forEach(a=>{
+  const c=document.createElement('div');c.className='exp-card'+(a.activa?'':' soon');
+  c.innerHTML=`<img src="${a.portada}" alt="${a.nombre}"><div class="exp-info"><b>${a.nombre}</b><small>${a.nivel}</small></div>`+
+   (a.activa?'<span class="exp-go">▶</span>':'<span class="exp-lock">🔒 Pronto</span>');
+  c.onclick=()=>{SND.tap();
+   if(a.activa)entrarHistoria();
+   else alert('🚀 La expedición de '+a.nombre+' viene pronto. ¡Sigue explorando Historia!');};
+  g.appendChild(c);
+ });
+}
+function entrarHistoria(){
  if(hayPartida()){cargar();refreshHud();renderMapa();renderRanking();$('nav').style.display='flex';go('scr-mapa');}
- else go('scr-inicio');};
+ else go('scr-inicio');
+}
+$('btnJugador').onclick=()=>{SND.init();SND.tap();$('nav').style.display='none';renderExpediciones();go('scr-expediciones');};
+$('btnExpBack').onclick=()=>{SND.tap();go('scr-rol');};
 $('btnAdmin').onclick=()=>{window.location.href='dev/tablero.html';};
 
 /* ===== Duelo / reiniciar (eventos) ===== */
@@ -645,9 +723,10 @@ $('btnStart').onclick=()=>{
 
 /* ================= MAPA ================= */
 function renderMapa(){
+ renderModoSel();
  const box=$('mapbox');box.innerHTML='';
  EXPEDICION.forEach((n,i)=>{
-  const p=S.progreso[i];
+  const p=progAct()[i];
   const d=document.createElement('div');d.className='node '+p.est;
   const est=p.est==='done'?'✓ Completado':(p.est==='open'?'▶ ¡Jugar ahora!':'🔒 Bloqueado');
   const stars=p.estrellas?'★'.repeat(p.estrellas)+'☆'.repeat(3-p.estrellas):'';
@@ -656,6 +735,14 @@ function renderMapa(){
    <div class="stars-mini">${stars}</div></div>`;
   d.querySelector('.orb').onclick=()=>{if(p.est!=='lock')startQuiz(i);};
   box.appendChild(d);});
+}
+function renderModoSel(){
+ const el=$('modoSel');if(!el)return;
+ if(!S.dificilDesbloqueado){el.style.display='none';el.innerHTML='';return;}
+ el.style.display='flex';
+ el.innerHTML=`<button class="${MODO==='normal'?'on':''}" data-m="normal">🗺️ Normal</button>`+
+  `<button class="dif ${MODO==='dificil'?'on':''}" data-m="dificil">🔥 Difícil</button>`;
+ el.querySelectorAll('button').forEach(b=>b.onclick=()=>{SND.tap();MODO=b.dataset.m;renderMapa();});
 }
 function renderRanking(){
  const base=[{em:"🐯",n:"Vale",p:340},{em:"🐼",n:"Nico",p:295},{em:"🦄",n:"Fran",p:180},{em:"🐸",n:"Diego",p:120}];
@@ -697,7 +784,7 @@ $('btnBack').onclick=()=>{clearInterval(Q.timer);go('scr-mapa');};
 function pintaPregunta(){
  const N=EXPEDICION[Q.lvl],P=Q.preguntas[Q.idx];Q.lock=false;
  kimReact('neutral');
- $('qTag').textContent=`${N.icono} ${N.nombre} · Pregunta ${Q.idx+1}/${Q.preguntas.length}`;
+ $('qTag').textContent=`${MODO==='dificil'?'🔥 ':''}${N.icono} ${N.nombre} · Pregunta ${Q.idx+1}/${Q.preguntas.length}`;
  $('qText').textContent=P.q;$('qFb').textContent='';$('qFb').className='feedback';
  $('qProg').style.width=(Q.idx/Q.preguntas.length*100)+'%';
  // barajar opciones
@@ -709,7 +796,7 @@ function pintaPregunta(){
   b.onclick=e=>responder(b,it.i===P.ok,P,e);
   $('qOpts').appendChild(b);});
  // timer
- clearInterval(Q.timer);Q.t=15;$('qTimer').textContent=Q.t;$('qTimer').className='timer';
+ clearInterval(Q.timer);Q.t=tiempoInicial();$('qTimer').textContent=Q.t;$('qTimer').className='timer';
  Q.timer=setInterval(()=>{Q.t--;$('qTimer').textContent=Q.t;
   if(Q.t<=5)$('qTimer').classList.add('low');
   if(Q.t<=0){clearInterval(Q.timer);responder(null,false,P);}},1000);
@@ -746,16 +833,20 @@ function responder(el,ok,P,e){
 function terminarNivel(){
  const tot=Q.preguntas.length;
  const ratio=Q.aciertos/tot;
- const estrellas=ratio>=1?3:(ratio>=0.80?2:(ratio>=0.66?1:0));
- const paso=estrellas>=1;               // pasa con >=66% de aciertos
+ const dif=MODO==='dificil';
+ const estrellas=dif?(ratio>=1?3:(ratio>=0.90?2:(ratio>=0.80?1:0)))
+                    :(ratio>=1?3:(ratio>=0.80?2:(ratio>=0.66?1:0)));
+ const paso=dif?ratio>=0.80:ratio>=0.66;   // Difícil pasa con 80%, Normal con 66%
  const esJefe=Q.lvl===N_ETAPAS-1;
- const p=S.progreso[Q.lvl];
+ const prog=progAct();
+ const p=prog[Q.lvl];
  if(paso){p.est='done';p.estrellas=Math.max(p.estrellas,estrellas);
-  if(S.progreso[Q.lvl+1]&&S.progreso[Q.lvl+1].est==='lock')S.progreso[Q.lvl+1].est='open';
+  if(prog[Q.lvl+1]&&prog[Q.lvl+1].est==='lock')prog[Q.lvl+1].est='open';
   toast('primera');
   if(estrellas===3)toast('perfecto');
   if(esJefe)toast('jefe');
   S.monedas+=estrellas*10;
+  if(esJefe&&!dif&&!S.dificilDesbloqueado){S.dificilDesbloqueado=true;setTimeout(()=>toast('dificil'),700);}
  }
  if(paso)SND.win();else SND.lose();
  [1,2,3].forEach(i=>{if(i<=estrellas)setTimeout(()=>SND.star(i),350+i*260);});
@@ -763,7 +854,7 @@ function terminarNivel(){
    : esJefe ? 'fiesta'
    : (estrellas===3?'oro':estrellas===2?'plata':'bronce');
  $('resKim').src='assets/kimun-'+kimImg+'.png';
- $('resTitle').textContent=paso?(esJefe?'¡EXPEDICIÓN COMPLETA!':'¡Nivel superado!'):'¡Casi! Necesitas 66% para pasar';
+ $('resTitle').textContent=paso?(esJefe?'¡EXPEDICIÓN COMPLETA!':'¡Nivel superado!'):('¡Casi! Necesitas '+(dif?'80%':'66%')+' para pasar');
  $('resStars').innerHTML=[1,2,3].map(i=>i<=estrellas?'<span class="g">★</span>':'<span class="w">★</span>').join('');
  $('resXp').textContent='+'+Q.xpGanado;
  $('resCoins').textContent='+'+(estrellas*10+Q.aciertos*5);

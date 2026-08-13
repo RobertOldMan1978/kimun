@@ -75,7 +75,10 @@ Orden tentativo, sujeto a prioridad de "verlo funcionar y atractivo" primero:
 ### Más adelante (fuera del alcance inmediato)
 - Login y multiusuario.
 - Modelo de negocio.
-- Múltiples asignaturas y niveles como expediciones independientes.
+- Múltiples asignaturas y niveles como expediciones independientes. **Iniciado:**
+  ya existe la pantalla "Elige tu expedición" con Historia jugable y Matemáticas /
+  Ciencias / Lenguaje como "Próximamente"; falta generar el contenido (pool de
+  preguntas + OA) de esas asignaturas para activarlas.
 
 ## Reglas de trabajo
 
@@ -160,6 +163,13 @@ el sesgo de posición), asigna IDs por OA y escribe `preguntas.json`.
 - Expedición piloto "Los europeos llegan a América": etapas OA04, OA05, OA06,
   OA07 + jefe final. El juego lee las preguntas de `preguntas.json` (fetch).
 
+### Modo Difícil (desbloqueable)
+- Se **desbloquea** al vencer al Jefe Final en Normal.
+- Mismo mapa, pero: **8 preguntas** por etapa (jefe **10**), **10 s** por pregunta,
+  se pasa con **≥80%**. Estrellas: 3★ = 100%, 2★ ≥ 90%, 1★ ≥ 80%.
+- Progreso y estrellas **separados** del Normal (`S.progresoDificil`); se elige con
+  el selector Normal/Difícil del mapa (variable global `MODO`).
+
 ### Del tablero (producción)
 - Cobertura: `preguntas / 25` por OA.
 - Revisión: `revisadas / total` (aprobadas por un humano).
@@ -198,3 +208,18 @@ el sesgo de posición), asigna IDs por OA y escribe `preguntas.json`.
   3. Aprovechar las portadas de asignatura como expediciones futuras.
 - **Nota técnica:** el remoto cambió de mayúsculas; URL actualizada a
   `https://github.com/RobertOldMan1978/kimun.git`.
+
+### Sesión 3 (2026-08-12)
+Se completaron los tres pendientes que quedaron de la Sesión 2:
+- **Vestuario de época:** Kimün conquistador (casco con pluma, capa, armadura) como
+  ambientación de la Expedición Historia — en la pantalla de inicio de la expedición
+  y en la cabecera del mapa. Usa `assets/kimun-conquistador.png`.
+- **Modo Difícil desbloqueable:** se habilita al vencer al Jefe Final en Normal.
+  Selector Normal/Difícil en el mapa; etapas de 8 preguntas (jefe 10), 10 s por
+  pregunta, se pasa con **80%**. Progreso y estrellas propios del modo (3★=100%,
+  2★≥90%, 1★≥80%), separados del Normal. Indicador 🔥 y logro de desbloqueo.
+  Estado nuevo: `S.progresoDificil`, `S.dificilDesbloqueado`, variable global `MODO`.
+- **Selección de expediciones (multi-asignatura):** nueva pantalla "Elige tu
+  expedición" tras pulsar JUGADOR. Historia jugable; Matemáticas, Ciencias y
+  Lenguaje con sello "🔒 Pronto" (usan `assets/portada-*.png`). Preparada para
+  escalar con `const ASIGNATURAS`.
