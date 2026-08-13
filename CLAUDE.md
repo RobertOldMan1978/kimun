@@ -20,24 +20,31 @@ mismo motor de juego.
 - Uso principal desde teléfono móvil (diseño mobile-first).
 - Contenido en español latino neutro, alineado al currículum chileno.
 
-## Estado actual (v0)
+## Estado actual
 
-Prototipo funcional en un solo archivo `index.html` (antes
-`aventura-historia.html`), sin dependencias externas salvo Google Fonts.
-Incluye:
+Publicado en GitHub Pages y en prueba real. Un `index.html` mobile-first +
+contenido en JSON (`contenido/<asignatura>/`) + backend Supabase para el duelo
+en línea. Historia de v0 al detalle en la Bitácora (abajo).
 
-- Selección de nombre y avatar.
-- Mapa de 5 niveles desbloqueables (4 etapas + jefe final).
-- Quiz con temporizador, opciones barajadas, partículas al acertar,
-  combos x2/x3, vibración en error y retroalimentación educativa al fallar.
-- Sistema de XP, subida de nivel, monedas y 1-3 estrellas por etapa.
-- Logros con notificaciones (toasts) animadas y ranking de curso simulado.
-- 16 preguntas reales de Historia de 8° básico.
-- Estética de videojuego: fondo oscuro violeta; acentos dorado, cian, verde
-  y rosa; fuentes Titan One + Nunito; diseño mobile-first.
+**Jugable hoy:**
+- Inicio con selección **Jugador / Duelo 1v1 / Admin** y el rostro de la mascota
+  **Kimün** (zorro; `assets/kimun.png`, con expresiones por respuesta).
+- **Expediciones data-driven** (arreglo `EXPEDICIONES`, progreso por ruta):
+  Historia "Los europeos llegan a América" (OA04-07) y Ciencias "La célula"
+  (CN08 OA01-04). Regla: **4 etapas + 1 jefe (5 nodos)**.
+- Quiz: 6 preguntas al azar/etapa, timer 15 s, pasa con 66%, 3 estrellas. Al
+  fallar revela la respuesta correcta + explicación y botón "Continuar". Kimün
+  comenta un dato al iniciar la ruta.
+- **Modo Difícil** desbloqueable (8 preguntas, 10 s, 80%, tema oscuro/carmesí).
+- Persistencia (localStorage), tienda de skins, sonidos (Web Audio), animación
+  de subida de nivel, logros, ranking (aún simulado).
+- **Duelo 1v1:** en el mismo teléfono y **en línea asíncrono (Supabase)** con
+  código de amigo, lista de jugadores, bots de práctica y reto de 24h.
 
-**Nota:** todo el contenido y la lógica están embebidos en el HTML. Aún no se
-separa el motor del contenido ni existe persistencia entre sesiones.
+**Contenido:** Historia **663 preguntas (revisadas 663/663)** + Ciencias **144
+(sin revisar)**. **Herramientas dev:** tablero con clave (`dev/tablero.html`) y
+scripts (`consolidar-pool`, `aplicar-revisadas`, `generar-pdf-preguntas`,
+`generar-tablero`).
 
 ## Decisiones de diseño
 
