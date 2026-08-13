@@ -110,6 +110,9 @@ Orden tentativo, sujeto a prioridad de "verlo funcionar y atractivo" primero:
 
 ### Regla de commits (importante)
 
+- **"orden 99" = hacer `git pull`** de la rama `main` para traer lo último de
+  GitHub. Se usa al empezar a trabajar desde otro PC (típicamente al llegar a casa
+  o a la oficina), para sincronizar antes de tocar nada.
 - **Durante las sesiones NO se hace commit ni push** hasta que Roberto lo pida
   explícitamente con la orden **"orden 66"**. Claude debe esperar la orden.
 - **La "orden 66" SIEMPRE deja todo actualizado antes del commit+push.** Como parte
@@ -410,6 +413,8 @@ Se completaron los tres pendientes que quedaron de la Sesión 2:
   glifos ausentes en la fuente del PDF (subíndices químicos, ∛) sin tocar el JSON.
 - Todo sigue **`revisada:false`**. El motor NO se tocó (solo datos + `EXPEDICIONES`).
   Las 4 expediciones jugables se verificaron en el navegador (5 nodos con pool listo).
+- **Documentada la "orden 99" (= `git pull`)** en la sección "Regla de commits",
+  para que cualquier sesión (p. ej. el PC de casa) la entienda sin explicarla.
 - **Pendientes:** revisión pedagógica humana de los bancos; armar nuevas expediciones
   aprovechando los OA de reserva; Kimün "científico"; duelo en 2 celulares; push y
   ranking real; limpiar perfiles de prueba en Supabase.
