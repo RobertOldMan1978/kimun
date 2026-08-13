@@ -1,0 +1,2026 @@
+{
+  "asignatura": "Ciencias Naturales",
+  "nivel": "8° básico",
+  "meta_preguntas_por_oa": 25,
+  "total_preguntas": 144,
+  "revisadas": 0,
+  "nota": "Expedición La célula (CN08 OA 01-04). Generadas y verificadas por agentes; opciones barajadas.",
+  "preguntas": [
+    {
+      "id": "cien8-oa01-001",
+      "oa": "CN08 OA 01",
+      "pregunta": "¿Qué instrumento permitió a los científicos observar las células por primera vez?",
+      "opciones": [
+        "La lupa de mano",
+        "El telescopio",
+        "La balanza",
+        "El microscopio"
+      ],
+      "correcta": 3,
+      "tip": "El microscopio amplía objetos diminutos, invisibles a simple vista, como las células.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa01-002",
+      "oa": "CN08 OA 01",
+      "pregunta": "¿Quién observó por primera vez pequeñas 'celdas' al mirar un trozo de corcho al microscopio?",
+      "opciones": [
+        "Louis Pasteur",
+        "Isaac Newton",
+        "Robert Hooke",
+        "Charles Darwin"
+      ],
+      "correcta": 2,
+      "tip": "Robert Hooke, en 1665, llamó 'celdas' (cells) a los espacios que vio en el corcho.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa01-003",
+      "oa": "CN08 OA 01",
+      "pregunta": "La palabra 'célula' proviene del término 'celda' que usó Robert Hooke. ¿Por qué las llamó así?",
+      "opciones": [
+        "Porque tenían color rojo",
+        "Porque eran muy grandes",
+        "Porque se movían rápidamente",
+        "Porque le recordaron a las pequeñas celdas de un panal o de un monasterio"
+      ],
+      "correcta": 3,
+      "tip": "Los compartimentos vacíos del corcho le recordaron pequeñas celdas.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa01-004",
+      "oa": "CN08 OA 01",
+      "pregunta": "¿Qué observó realmente Robert Hooke en el corcho?",
+      "opciones": [
+        "Bacterias vivas nadando",
+        "Glóbulos rojos de la sangre",
+        "Las paredes de células vegetales muertas, sin vida en su interior",
+        "Cristales de sal"
+      ],
+      "correcta": 2,
+      "tip": "El corcho es tejido muerto; Hooke vio solo las paredes celulares vacías.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa01-005",
+      "oa": "CN08 OA 01",
+      "pregunta": "¿Quién fue el primero en observar microorganismos vivos, como bacterias y protozoos, con sus microscopios?",
+      "opciones": [
+        "Robert Hooke",
+        "Gregor Mendel",
+        "Alexander Fleming",
+        "Anton van Leeuwenhoek"
+      ],
+      "correcta": 3,
+      "tip": "Van Leeuwenhoek los llamó 'animálculos' y fue el primero en verlos vivos.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa01-006",
+      "oa": "CN08 OA 01",
+      "pregunta": "Anton van Leeuwenhoek llamó 'animálculos' a los pequeños seres que observaba. ¿Qué eran esos animálculos?",
+      "opciones": [
+        "Insectos muy pequeños",
+        "Granos de arena",
+        "Semillas de plantas",
+        "Microorganismos vivos, como bacterias y protozoos"
+      ],
+      "correcta": 3,
+      "tip": "Eran microorganismos vivos, invisibles a simple vista.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa01-007",
+      "oa": "CN08 OA 01",
+      "pregunta": "¿Cuál de estos postulados forma parte de la teoría celular?",
+      "opciones": [
+        "Las células no pueden reproducirse",
+        "Las células solo existen en los animales",
+        "Todos los seres vivos están formados por una o más células",
+        "Los minerales están formados por células"
+      ],
+      "correcta": 2,
+      "tip": "Un postulado central: todo ser vivo está formado por células.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa01-008",
+      "oa": "CN08 OA 01",
+      "pregunta": "Según la teoría celular, ¿cuál es la unidad básica de la vida?",
+      "opciones": [
+        "El átomo",
+        "La molécula de agua",
+        "La célula",
+        "El órgano"
+      ],
+      "correcta": 2,
+      "tip": "La célula es la unidad estructural y funcional básica de los seres vivos.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa01-009",
+      "oa": "CN08 OA 01",
+      "pregunta": "Uno de los postulados de la teoría celular afirma que toda célula proviene de...",
+      "opciones": [
+        "Otra célula preexistente",
+        "El aire",
+        "La materia sin vida",
+        "La energía solar"
+      ],
+      "correcta": 0,
+      "tip": "Toda célula proviene de otra célula por división. Lo planteó Virchow.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa01-010",
+      "oa": "CN08 OA 01",
+      "pregunta": "¿Por qué los modelos de la célula han cambiado a lo largo del tiempo?",
+      "opciones": [
+        "Porque las células cambian su forma cada año",
+        "Porque las leyes lo obligan",
+        "Porque aparecen nuevas evidencias y mejores instrumentos de observación",
+        "Porque los científicos cambian de opinión sin razón"
+      ],
+      "correcta": 2,
+      "tip": "El conocimiento científico se actualiza con nuevas evidencias y tecnología.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa01-011",
+      "oa": "CN08 OA 01",
+      "pregunta": "¿Qué científicos son reconocidos por proponer que todas las plantas y animales están formados por células?",
+      "opciones": [
+        "Darwin y Mendel",
+        "Hooke y Newton",
+        "Pasteur y Koch",
+        "Schleiden y Schwann"
+      ],
+      "correcta": 3,
+      "tip": "Schleiden (plantas) y Schwann (animales) formularon la teoría celular.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa01-012",
+      "oa": "CN08 OA 01",
+      "pregunta": "El científico Matthias Schleiden estudió principalmente células de...",
+      "opciones": [
+        "Estrellas",
+        "Rocas",
+        "Animales",
+        "Plantas"
+      ],
+      "correcta": 3,
+      "tip": "Schleiden concluyó que las plantas están formadas por células.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa01-013",
+      "oa": "CN08 OA 01",
+      "pregunta": "El científico Theodor Schwann propuso que también están formados por células los...",
+      "opciones": [
+        "Ríos",
+        "Planetas",
+        "Animales",
+        "Metales"
+      ],
+      "correcta": 2,
+      "tip": "Schwann extendió la idea de las células a los animales.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa01-014",
+      "oa": "CN08 OA 01",
+      "pregunta": "La frase 'toda célula proviene de otra célula' se asocia principalmente al científico...",
+      "opciones": [
+        "Isaac Newton",
+        "Anton van Leeuwenhoek",
+        "Robert Hooke",
+        "Rudolf Virchow"
+      ],
+      "correcta": 3,
+      "tip": "Virchow aportó que las células se originan a partir de células ya existentes.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa01-015",
+      "oa": "CN08 OA 01",
+      "pregunta": "¿Cuál de las siguientes NO es una afirmación de la teoría celular?",
+      "opciones": [
+        "Los seres vivos están hechos de fuego, aire, agua y tierra",
+        "La célula es la unidad básica de la vida",
+        "Toda célula proviene de otra célula",
+        "Todos los seres vivos están formados por células"
+      ],
+      "correcta": 0,
+      "tip": "La idea de los cuatro elementos es antigua y no forma parte de la teoría celular.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa01-016",
+      "oa": "CN08 OA 01",
+      "pregunta": "¿Qué es un 'modelo científico' de la célula?",
+      "opciones": [
+        "Una célula real muy grande",
+        "Una representación que explica cómo es y cómo funciona la célula, según la evidencia disponible",
+        "Una célula de plástico sin ninguna utilidad",
+        "Una fotografía exacta y definitiva de una célula"
+      ],
+      "correcta": 1,
+      "tip": "Un modelo representa la realidad y se mejora al surgir nueva evidencia.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa01-017",
+      "oa": "CN08 OA 01",
+      "pregunta": "Antes de que existiera el microscopio, ¿por qué nadie había descrito las células?",
+      "opciones": [
+        "Porque las células no existían aún",
+        "Porque nadie tenía interés en la ciencia",
+        "Porque estaban prohibidas",
+        "Porque son demasiado pequeñas para verse a simple vista"
+      ],
+      "correcta": 3,
+      "tip": "Las células son microscópicas; se necesitaba un instrumento para verlas.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa01-018",
+      "oa": "CN08 OA 01",
+      "pregunta": "El desarrollo de mejores microscopios fue clave para la teoría celular porque...",
+      "opciones": [
+        "Hizo desaparecer a las células",
+        "Solo sirvió para mirar las estrellas",
+        "Permitió observar detalles de las células que antes no se podían ver",
+        "Reemplazó por completo a los científicos"
+      ],
+      "correcta": 2,
+      "tip": "Mejores instrumentos entregaron nuevas evidencias sobre las células.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa01-019",
+      "oa": "CN08 OA 01",
+      "pregunta": "Robert Hooke realizó sus famosas observaciones del corcho aproximadamente en el año...",
+      "opciones": [
+        "2000",
+        "1500",
+        "1900",
+        "1665"
+      ],
+      "correcta": 3,
+      "tip": "En 1665 publicó sus observaciones en el libro 'Micrographia'.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa01-020",
+      "oa": "CN08 OA 01",
+      "pregunta": "¿Cuál de estas es una diferencia entre lo que observaron Hooke y van Leeuwenhoek?",
+      "opciones": [
+        "Hooke vio paredes de células muertas; van Leeuwenhoek vio microorganismos vivos",
+        "Ambos vieron exactamente lo mismo",
+        "Hooke vio planetas y van Leeuwenhoek vio rocas",
+        "Ninguno usó un microscopio"
+      ],
+      "correcta": 0,
+      "tip": "Hooke vio estructuras vacías; van Leeuwenhoek observó seres vivos.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa01-021",
+      "oa": "CN08 OA 01",
+      "pregunta": "Que la teoría celular haya sido construida por varios científicos a lo largo del tiempo muestra que la ciencia es...",
+      "opciones": [
+        "Un trabajo colectivo que avanza acumulando evidencias",
+        "Algo que nunca cambia",
+        "Un conjunto de opiniones sin pruebas",
+        "Obra de una sola persona"
+      ],
+      "correcta": 0,
+      "tip": "El conocimiento científico se construye entre muchos y se actualiza.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa01-022",
+      "oa": "CN08 OA 01",
+      "pregunta": "Si un ser vivo está formado por una sola célula, se dice que es...",
+      "opciones": [
+        "Unicelular",
+        "Mineral",
+        "Inorgánico",
+        "Pluricelular"
+      ],
+      "correcta": 0,
+      "tip": "'Uni' significa uno: un organismo de una sola célula es unicelular.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa01-023",
+      "oa": "CN08 OA 01",
+      "pregunta": "Un ser humano está formado por muchísimas células. Por eso decimos que es un organismo...",
+      "opciones": [
+        "Unicelular",
+        "Sin vida",
+        "Acelular",
+        "Pluricelular"
+      ],
+      "correcta": 3,
+      "tip": "'Pluri' significa muchos: los organismos con muchas células son pluricelulares.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa01-024",
+      "oa": "CN08 OA 01",
+      "pregunta": "Según la teoría celular, ¿qué tienen en común una bacteria, un árbol y un perro?",
+      "opciones": [
+        "Todos hacen fotosíntesis",
+        "Todos son unicelulares",
+        "Todos están formados por células",
+        "Todos tienen huesos"
+      ],
+      "correcta": 2,
+      "tip": "Aunque son muy distintos, todos comparten estar hechos de células.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa01-025",
+      "oa": "CN08 OA 01",
+      "pregunta": "¿Cuál de estos NO está formado por células?",
+      "opciones": [
+        "Un pez",
+        "Una roca",
+        "Una hoja de árbol",
+        "Una bacteria"
+      ],
+      "correcta": 1,
+      "tip": "Las rocas son materia sin vida; no están formadas por células.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa01-026",
+      "oa": "CN08 OA 01",
+      "pregunta": "Un compañero afirma: 'las células aparecen solas a partir del agua sucia'. Según la teoría celular, esto es...",
+      "opciones": [
+        "Correcto, así nacen las células",
+        "Imposible de saber",
+        "Incorrecto, porque toda célula proviene de otra célula",
+        "Correcto solo en verano"
+      ],
+      "correcta": 2,
+      "tip": "La teoría celular descarta la generación espontánea: célula viene de célula.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa01-027",
+      "oa": "CN08 OA 01",
+      "pregunta": "¿Qué avance tecnológico fue indispensable para poder formular la teoría celular?",
+      "opciones": [
+        "La construcción de barcos",
+        "El descubrimiento del fuego",
+        "La invención de la rueda",
+        "La invención y mejora del microscopio"
+      ],
+      "correcta": 3,
+      "tip": "Sin microscopio no se habrían podido observar las células.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa01-028",
+      "oa": "CN08 OA 01",
+      "pregunta": "Cuando un científico descubre nueva evidencia que contradice un modelo antiguo, lo correcto es...",
+      "opciones": [
+        "Ignorar la evidencia para no cambiar nada",
+        "Eliminar el microscopio",
+        "Revisar y mejorar el modelo según la nueva evidencia",
+        "Ocultar el descubrimiento"
+      ],
+      "correcta": 2,
+      "tip": "La ciencia corrige sus modelos cuando aparece mejor evidencia.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa01-029",
+      "oa": "CN08 OA 01",
+      "pregunta": "La teoría celular se considera una 'teoría científica' porque...",
+      "opciones": [
+        "Nunca ha sido comprobada",
+        "Es solo una suposición sin pruebas",
+        "Está respaldada por muchas observaciones y evidencias",
+        "La inventó una sola persona"
+      ],
+      "correcta": 2,
+      "tip": "Una teoría científica está bien fundamentada en evidencia.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa01-030",
+      "oa": "CN08 OA 01",
+      "pregunta": "¿Cuál de las siguientes ordena mejor el aporte histórico a la teoría celular?",
+      "opciones": [
+        "Hooke observó celdas, luego van Leeuwenhoek vio microorganismos, y después Schleiden y Schwann formularon la teoría",
+        "Schwann primero, luego se inventó el microscopio",
+        "Virchow vivió antes que Hooke",
+        "Nadie usó microscopio en esta historia"
+      ],
+      "correcta": 0,
+      "tip": "El orden muestra cómo se acumuló la evidencia hasta la teoría celular.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa01-031",
+      "oa": "CN08 OA 01",
+      "pregunta": "Una función importante de la teoría celular en la biología es...",
+      "opciones": [
+        "Medir la distancia entre planetas",
+        "Explicar qué tienen en común todos los seres vivos",
+        "Clasificar los minerales",
+        "Predecir el clima"
+      ],
+      "correcta": 1,
+      "tip": "La teoría celular unifica el estudio de la vida: todo ser vivo tiene células.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa01-032",
+      "oa": "CN08 OA 01",
+      "pregunta": "El hecho de que hoy usemos microscopios electrónicos que ven más detalle que los de Hooke demuestra que...",
+      "opciones": [
+        "La tecnología mejora y con ella nuestro conocimiento de la célula",
+        "Ya no hay nada nuevo por descubrir",
+        "Las células cambiaron de tamaño",
+        "Los microscopios antiguos eran falsos"
+      ],
+      "correcta": 0,
+      "tip": "Mejores instrumentos entregan nuevas evidencias y mejores modelos.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa01-033",
+      "oa": "CN08 OA 01",
+      "pregunta": "Robert Hooke publicó sus dibujos de las 'celdas' del corcho en un famoso libro llamado...",
+      "opciones": [
+        "Micrographia",
+        "El origen de las especies",
+        "Principia Mathematica",
+        "Historia natural"
+      ],
+      "correcta": 0,
+      "tip": "En 'Micrographia' (1665) Hooke publicó sus observaciones con el microscopio.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa01-034",
+      "oa": "CN08 OA 01",
+      "pregunta": "¿Cuál de las siguientes afirmaciones sobre la célula es correcta según la teoría celular?",
+      "opciones": [
+        "La célula solo se encuentra en organismos grandes",
+        "La célula no cumple ninguna función",
+        "La célula es la unidad más pequeña capaz de realizar las funciones de la vida",
+        "La célula es más pequeña que un átomo"
+      ],
+      "correcta": 2,
+      "tip": "La célula es la unidad estructural y funcional de todos los seres vivos.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa02-001",
+      "oa": "CN08 OA 02",
+      "pregunta": "¿Cuál es la unidad estructural y funcional básica de todos los seres vivos?",
+      "opciones": [
+        "El átomo",
+        "El tejido",
+        "El órgano",
+        "La célula"
+      ],
+      "correcta": 3,
+      "tip": "La teoría celular establece que la célula es la unidad básica de estructura y función de la vida.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa02-002",
+      "oa": "CN08 OA 02",
+      "pregunta": "Según la teoría celular, ¿de dónde proviene toda célula?",
+      "opciones": [
+        "Directamente del agua",
+        "De otra célula preexistente",
+        "De materia sin vida que se organiza sola",
+        "De minerales del suelo"
+      ],
+      "correcta": 1,
+      "tip": "La teoría celular afirma que toda célula se origina a partir de otra célula ya existente.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa02-003",
+      "oa": "CN08 OA 02",
+      "pregunta": "¿Qué organelo controla las actividades de la célula y contiene el material genético?",
+      "opciones": [
+        "La membrana celular",
+        "La mitocondria",
+        "La vacuola",
+        "El núcleo"
+      ],
+      "correcta": 3,
+      "tip": "El núcleo dirige la actividad celular y guarda el material genético (ADN).",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa02-004",
+      "oa": "CN08 OA 02",
+      "pregunta": "¿Cuál es la principal diferencia entre una célula eucarionte y una procarionte?",
+      "opciones": [
+        "La procarionte es más grande que la eucarionte",
+        "La eucarionte tiene núcleo definido y la procarionte no",
+        "Solo la procarionte tiene membrana celular",
+        "Solo la eucarionte tiene material genético"
+      ],
+      "correcta": 1,
+      "tip": "Las eucariontes poseen núcleo rodeado por membrana; las procariontes tienen su material genético libre en el citoplasma.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa02-005",
+      "oa": "CN08 OA 02",
+      "pregunta": "¿Qué estructura da soporte y rigidez a la célula vegetal y no está presente en la célula animal?",
+      "opciones": [
+        "El citoplasma",
+        "La membrana celular",
+        "La pared celular",
+        "El núcleo"
+      ],
+      "correcta": 2,
+      "tip": "La pared celular, hecha de celulosa, rodea a la célula vegetal y le da rigidez; la célula animal no la tiene.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa02-006",
+      "oa": "CN08 OA 02",
+      "pregunta": "¿En qué organelo se realiza la fotosíntesis?",
+      "opciones": [
+        "El cloroplasto",
+        "La vacuola",
+        "El núcleo",
+        "La mitocondria"
+      ],
+      "correcta": 0,
+      "tip": "El cloroplasto contiene clorofila y allí ocurre la fotosíntesis, que produce alimento a partir de luz.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa02-007",
+      "oa": "CN08 OA 02",
+      "pregunta": "¿Qué organelo es responsable de la respiración celular y de obtener energía para la célula?",
+      "opciones": [
+        "La pared celular",
+        "El cloroplasto",
+        "El ribosoma",
+        "La mitocondria"
+      ],
+      "correcta": 3,
+      "tip": "La mitocondria realiza la respiración celular, liberando la energía que la célula necesita.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa02-008",
+      "oa": "CN08 OA 02",
+      "pregunta": "¿Cuál es la función principal de la membrana celular?",
+      "opciones": [
+        "Regular la entrada y salida de sustancias",
+        "Almacenar el material genético",
+        "Producir energía para la célula",
+        "Realizar la fotosíntesis"
+      ],
+      "correcta": 0,
+      "tip": "La membrana celular controla qué sustancias entran y salen, actuando como una barrera selectiva.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa02-009",
+      "oa": "CN08 OA 02",
+      "pregunta": "¿Qué es el citoplasma?",
+      "opciones": [
+        "El pigmento verde de las plantas",
+        "El organelo que produce energía",
+        "La capa rígida externa de la célula vegetal",
+        "El material gelatinoso donde se ubican los organelos"
+      ],
+      "correcta": 3,
+      "tip": "El citoplasma es el medio gelatinoso interno donde se encuentran suspendidos los organelos.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa02-010",
+      "oa": "CN08 OA 02",
+      "pregunta": "En la célula vegetal, ¿qué estructura suele ser grande y almacena agua y sustancias?",
+      "opciones": [
+        "La mitocondria",
+        "El ribosoma",
+        "La vacuola",
+        "El cloroplasto"
+      ],
+      "correcta": 2,
+      "tip": "La vacuola central de la célula vegetal almacena agua, nutrientes y desechos, y ayuda a mantener su forma.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa02-011",
+      "oa": "CN08 OA 02",
+      "pregunta": "¿En qué organelos se fabrican las proteínas?",
+      "opciones": [
+        "Las mitocondrias",
+        "Las vacuolas",
+        "Los ribosomas",
+        "Los cloroplastos"
+      ],
+      "correcta": 2,
+      "tip": "Los ribosomas son las estructuras encargadas de sintetizar (fabricar) las proteínas.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa02-012",
+      "oa": "CN08 OA 02",
+      "pregunta": "¿Cuál de estos organelos está presente en la célula vegetal pero NO en la célula animal?",
+      "opciones": [
+        "La mitocondria",
+        "El ribosoma",
+        "El cloroplasto",
+        "El núcleo"
+      ],
+      "correcta": 2,
+      "tip": "Los cloroplastos son exclusivos de células que realizan fotosíntesis, como las vegetales.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa02-013",
+      "oa": "CN08 OA 02",
+      "pregunta": "Una bacteria es un ejemplo de célula:",
+      "opciones": [
+        "Eucarionte vegetal",
+        "Eucarionte animal",
+        "Procarionte",
+        "Sin membrana"
+      ],
+      "correcta": 2,
+      "tip": "Las bacterias son organismos procariontes: no tienen núcleo definido ni organelos rodeados por membrana.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa02-014",
+      "oa": "CN08 OA 02",
+      "pregunta": "¿Por qué la mitocondria se relaciona con células muy activas como las musculares?",
+      "opciones": [
+        "Porque fabrica la pared celular",
+        "Porque produce el color de los músculos",
+        "Porque almacena agua para el movimiento",
+        "Porque libera la energía que las células activas necesitan"
+      ],
+      "correcta": 3,
+      "tip": "Las células que gastan mucha energía, como las musculares, tienen muchas mitocondrias para producirla.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa02-015",
+      "oa": "CN08 OA 02",
+      "pregunta": "Si una célula necesita producir su propio alimento usando luz solar, ¿qué organelo debe tener?",
+      "opciones": [
+        "Ribosoma",
+        "Cloroplasto",
+        "Mitocondria",
+        "Vacuola"
+      ],
+      "correcta": 1,
+      "tip": "El cloroplasto capta la luz solar y produce alimento mediante la fotosíntesis.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa02-016",
+      "oa": "CN08 OA 02",
+      "pregunta": "¿Cuál de las siguientes estructuras comparten las células animales y vegetales?",
+      "opciones": [
+        "El núcleo",
+        "La pared celular",
+        "El cloroplasto",
+        "La vacuola central grande"
+      ],
+      "correcta": 0,
+      "tip": "Tanto la célula animal como la vegetal son eucariontes y poseen núcleo definido.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa02-017",
+      "oa": "CN08 OA 02",
+      "pregunta": "La membrana celular se describe como \"selectivamente permeable\". Esto significa que:",
+      "opciones": [
+        "Deja pasar algunas sustancias y a otras no",
+        "Solo deja salir sustancias, nunca entrar",
+        "No permite el paso de ninguna sustancia",
+        "Deja pasar cualquier sustancia sin control"
+      ],
+      "correcta": 0,
+      "tip": "Permeabilidad selectiva significa que la membrana elige qué sustancias pueden atravesarla.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa02-018",
+      "oa": "CN08 OA 02",
+      "pregunta": "¿Qué característica define a las células procariontes?",
+      "opciones": [
+        "Tienen cloroplastos y mitocondrias",
+        "Solo existen en plantas",
+        "No tienen núcleo definido ni organelos rodeados por membrana",
+        "Tienen un núcleo muy grande"
+      ],
+      "correcta": 2,
+      "tip": "En las procariontes el material genético está libre en el citoplasma, sin membrana nuclear.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa02-019",
+      "oa": "CN08 OA 02",
+      "pregunta": "Un modelo de célula muestra un pigmento verde en su interior. ¿Qué tipo de célula representa?",
+      "opciones": [
+        "Un glóbulo rojo",
+        "Vegetal",
+        "Animal",
+        "Procarionte bacteriana"
+      ],
+      "correcta": 1,
+      "tip": "El pigmento verde es la clorofila de los cloroplastos, característicos de las células vegetales.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa02-020",
+      "oa": "CN08 OA 02",
+      "pregunta": "¿Cuál es una función de la pared celular en las plantas?",
+      "opciones": [
+        "Proteger y dar forma y sostén a la célula",
+        "Controlar el material genético",
+        "Realizar la fotosíntesis",
+        "Producir energía mediante respiración"
+      ],
+      "correcta": 0,
+      "tip": "La pared celular rígida protege la célula vegetal y le da forma y soporte estructural.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa02-021",
+      "oa": "CN08 OA 02",
+      "pregunta": "¿Qué relación estructura-función es correcta?",
+      "opciones": [
+        "Cloroplasto - respiración celular",
+        "Mitocondria - obtención de energía",
+        "Vacuola - control genético",
+        "Núcleo - fabricación de proteínas"
+      ],
+      "correcta": 1,
+      "tip": "La mitocondria realiza la respiración celular para obtener energía; su estructura interna aumenta esa capacidad.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa02-022",
+      "oa": "CN08 OA 02",
+      "pregunta": "¿Cuál de estas estructuras está presente en TODAS las células, sean procariontes o eucariontes?",
+      "opciones": [
+        "La membrana celular",
+        "El núcleo definido",
+        "La mitocondria",
+        "El cloroplasto"
+      ],
+      "correcta": 0,
+      "tip": "Toda célula, sin importar su tipo, está rodeada por una membrana celular que la delimita.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa02-023",
+      "oa": "CN08 OA 02",
+      "pregunta": "Las células que forman las hojas de una planta suelen tener muchos cloroplastos. ¿Por qué?",
+      "opciones": [
+        "Porque las hojas necesitan almacenar mucha agua",
+        "Porque las hojas fabrican pared celular constantemente",
+        "Porque las hojas no tienen mitocondrias",
+        "Porque en las hojas ocurre gran parte de la fotosíntesis"
+      ],
+      "correcta": 3,
+      "tip": "Las hojas reciben mucha luz, por lo que sus células tienen abundantes cloroplastos para hacer fotosíntesis.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa02-024",
+      "oa": "CN08 OA 02",
+      "pregunta": "¿Qué organelo puedes comparar con una \"central de energía\" de la célula?",
+      "opciones": [
+        "El ribosoma",
+        "La mitocondria",
+        "El núcleo",
+        "La vacuola"
+      ],
+      "correcta": 1,
+      "tip": "La mitocondria genera la energía celular, por eso se la compara con una central o planta de energía.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa02-025",
+      "oa": "CN08 OA 02",
+      "pregunta": "¿Qué contiene el núcleo de una célula eucarionte?",
+      "opciones": [
+        "La clorofila",
+        "Las proteínas ya fabricadas",
+        "El material genético (ADN)",
+        "El agua de reserva"
+      ],
+      "correcta": 2,
+      "tip": "El núcleo alberga el material genético que contiene las instrucciones para la célula.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa02-026",
+      "oa": "CN08 OA 02",
+      "pregunta": "Un modelo de célula animal NO debería incluir:",
+      "opciones": [
+        "Citoplasma y mitocondrias",
+        "Núcleo y membrana celular",
+        "Pared celular y cloroplastos",
+        "Ribosomas"
+      ],
+      "correcta": 2,
+      "tip": "La célula animal carece de pared celular y de cloroplastos; esos son propios de la célula vegetal.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa02-027",
+      "oa": "CN08 OA 02",
+      "pregunta": "¿Cuál es una diferencia entre la vacuola de una célula vegetal y la de una animal?",
+      "opciones": [
+        "Solo la animal tiene vacuolas",
+        "La animal siempre tiene una vacuola gigante",
+        "En la vegetal suele haber una vacuola grande y central",
+        "La vacuola vegetal produce energía"
+      ],
+      "correcta": 2,
+      "tip": "La célula vegetal típicamente tiene una vacuola central grande; las animales tienen vacuolas pequeñas o ninguna.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa02-028",
+      "oa": "CN08 OA 02",
+      "pregunta": "¿Por qué se dice que la estructura de un organelo está relacionada con su función?",
+      "opciones": [
+        "Porque la función no depende de la estructura",
+        "Porque su forma le permite cumplir una tarea específica",
+        "Porque todos los organelos tienen la misma forma",
+        "Porque los organelos cambian de función cada día"
+      ],
+      "correcta": 1,
+      "tip": "Cada organelo tiene una estructura adaptada a la tarea que realiza dentro de la célula.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa02-029",
+      "oa": "CN08 OA 02",
+      "pregunta": "¿Qué tienen en común una célula de tu piel y una célula de una hoja de lechuga?",
+      "opciones": [
+        "Ambas tienen cloroplastos",
+        "Ambas tienen pared celular",
+        "Ninguna tiene membrana",
+        "Ambas son eucariontes y tienen núcleo"
+      ],
+      "correcta": 3,
+      "tip": "Ambas son células eucariontes con núcleo definido, aunque la vegetal tenga además pared y cloroplastos.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa02-030",
+      "oa": "CN08 OA 02",
+      "pregunta": "En la respiración celular de la mitocondria, ¿qué obtiene principalmente la célula?",
+      "opciones": [
+        "Energía",
+        "Luz",
+        "Material genético",
+        "Pared celular"
+      ],
+      "correcta": 0,
+      "tip": "La respiración celular transforma nutrientes en energía utilizable para la célula.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa02-031",
+      "oa": "CN08 OA 02",
+      "pregunta": "¿Cuál de estos NO es un organelo, sino el medio donde flotan los organelos?",
+      "opciones": [
+        "La mitocondria",
+        "El cloroplasto",
+        "El ribosoma",
+        "El citoplasma"
+      ],
+      "correcta": 3,
+      "tip": "El citoplasma no es un organelo, sino el medio gelatinoso que rodea y sostiene a los organelos.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa02-032",
+      "oa": "CN08 OA 02",
+      "pregunta": "Un científico observa una célula sin núcleo definido, muy pequeña y sin organelos rodeados por membrana. ¿Qué tipo de célula es?",
+      "opciones": [
+        "Eucarionte animal",
+        "Una célula muerta",
+        "Procarionte",
+        "Eucarionte vegetal"
+      ],
+      "correcta": 2,
+      "tip": "Sin núcleo definido ni organelos con membrana, se trata de una célula procarionte, como una bacteria.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa02-033",
+      "oa": "CN08 OA 02",
+      "pregunta": "Si comparas una célula con una fábrica, ¿qué parte cumpliría el rol de \"jefatura\" que da las órdenes?",
+      "opciones": [
+        "La membrana celular",
+        "La mitocondria",
+        "El núcleo",
+        "La vacuola"
+      ],
+      "correcta": 2,
+      "tip": "El núcleo dirige y controla las actividades celulares, como una jefatura que da instrucciones.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa02-034",
+      "oa": "CN08 OA 02",
+      "pregunta": "¿Por qué tanto células animales como vegetales necesitan mitocondrias?",
+      "opciones": [
+        "Porque las mitocondrias fabrican la pared celular",
+        "Porque las mitocondrias almacenan agua",
+        "Porque ambas requieren obtener energía mediante respiración celular",
+        "Porque ambas hacen fotosíntesis"
+      ],
+      "correcta": 2,
+      "tip": "Todas las células eucariontes necesitan energía, por eso animales y vegetales poseen mitocondrias.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa02-035",
+      "oa": "CN08 OA 02",
+      "pregunta": "¿Qué organelo funciona como un sistema de transporte interno que distribuye sustancias dentro de la célula?",
+      "opciones": [
+        "La pared celular",
+        "El nucléolo únicamente",
+        "La clorofila",
+        "El retículo endoplasmático"
+      ],
+      "correcta": 3,
+      "tip": "El retículo endoplasmático es una red de canales que transporta y procesa sustancias dentro de la célula.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa02-036",
+      "oa": "CN08 OA 02",
+      "pregunta": "¿Cuál de estos niveles de organización es MÁS pequeño que un tejido?",
+      "opciones": [
+        "El sistema",
+        "El órgano",
+        "El organismo completo",
+        "La célula"
+      ],
+      "correcta": 3,
+      "tip": "El orden va de menor a mayor: célula, tejido, órgano, sistema y organismo. La célula es la más pequeña.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa03-001",
+      "oa": "CN08 OA 03",
+      "pregunta": "¿Qué es la difusión?",
+      "opciones": [
+        "El paso de agua a través de una membrana usando energía",
+        "El movimiento de partículas desde donde hay menos concentración hacia donde hay más",
+        "La ruptura de la membrana celular por exceso de partículas",
+        "El movimiento de partículas desde donde hay más concentración hacia donde hay menos"
+      ],
+      "correcta": 3,
+      "tip": "En la difusión las partículas se mueven a favor del gradiente: de mayor a menor concentración.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa03-002",
+      "oa": "CN08 OA 03",
+      "pregunta": "¿Qué es la osmosis?",
+      "opciones": [
+        "La difusión del agua a través de una membrana semipermeable",
+        "La producción de agua dentro de la célula",
+        "El movimiento de sales a través de la membrana",
+        "El transporte de partículas grandes con gasto de energía"
+      ],
+      "correcta": 0,
+      "tip": "La osmosis es un caso especial de difusión: el que se mueve es el agua, y lo hace por una membrana semipermeable.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa03-003",
+      "oa": "CN08 OA 03",
+      "pregunta": "La difusión y la osmosis son ejemplos de transporte pasivo porque:",
+      "opciones": [
+        "No requieren gasto de energía por parte de la célula",
+        "Necesitan proteínas que empujan las partículas",
+        "La célula gasta energía para realizarlos",
+        "Ocurren solo en células muertas"
+      ],
+      "correcta": 0,
+      "tip": "El transporte pasivo ocurre a favor del gradiente y no consume energía de la célula.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa03-004",
+      "oa": "CN08 OA 03",
+      "pregunta": "En la difusión, las partículas se mueven hasta que:",
+      "opciones": [
+        "Se agota el agua disponible",
+        "Toda la sustancia se acumula en un solo lado",
+        "La membrana se cierra por completo",
+        "La concentración queda igual en todo el espacio (equilibrio)"
+      ],
+      "correcta": 3,
+      "tip": "La difusión continúa hasta alcanzar el equilibrio, cuando la concentración se iguala en todas partes.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa03-005",
+      "oa": "CN08 OA 03",
+      "pregunta": "Se llama gradiente de concentración a:",
+      "opciones": [
+        "La cantidad total de agua del cuerpo",
+        "La diferencia de concentración entre dos zonas",
+        "La temperatura de la célula",
+        "El grosor de la membrana celular"
+      ],
+      "correcta": 1,
+      "tip": "El gradiente es la diferencia de concentración; las partículas se mueven a favor de él en la difusión.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa03-006",
+      "oa": "CN08 OA 03",
+      "pregunta": "Se dice que la membrana celular es semipermeable (selectiva) porque:",
+      "opciones": [
+        "Permite el paso de algunas sustancias y a otras las bloquea o controla",
+        "Solo deja salir sustancias, nunca entrar",
+        "No deja pasar ninguna sustancia",
+        "Deja pasar cualquier sustancia sin excepción"
+      ],
+      "correcta": 0,
+      "tip": "Semipermeable significa que controla el paso: algunas sustancias entran o salen y otras no.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa03-007",
+      "oa": "CN08 OA 03",
+      "pregunta": "Cuando echas una gota de colorante en un vaso con agua quieta y poco a poco el color se reparte por todo el vaso, estás observando:",
+      "opciones": [
+        "Difusión",
+        "Plasmólisis",
+        "Transporte activo",
+        "Osmosis"
+      ],
+      "correcta": 0,
+      "tip": "El colorante se mueve de donde hay más hacia donde hay menos: es difusión.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa03-008",
+      "oa": "CN08 OA 03",
+      "pregunta": "Sentir el aroma de una comida desde otra habitación es un ejemplo cotidiano de:",
+      "opciones": [
+        "Osmosis del agua",
+        "Transporte activo de gases",
+        "Turgencia celular",
+        "Difusión de partículas de olor en el aire"
+      ],
+      "correcta": 3,
+      "tip": "Las partículas olorosas se difunden en el aire desde donde están concentradas hacia donde hay menos.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa03-009",
+      "oa": "CN08 OA 03",
+      "pregunta": "¿Cuál es la principal diferencia entre difusión y osmosis?",
+      "opciones": [
+        "La difusión gasta energía y la osmosis no",
+        "La osmosis mueve partículas grandes y la difusión solo gases",
+        "En la osmosis lo que se mueve es el agua a través de una membrana semipermeable",
+        "No existe ninguna diferencia entre ambas"
+      ],
+      "correcta": 2,
+      "tip": "La osmosis es difusión pero específicamente del agua a través de una membrana semipermeable.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa03-010",
+      "oa": "CN08 OA 03",
+      "pregunta": "Un medio hipertónico es aquel que, respecto al interior de la célula, tiene:",
+      "opciones": [
+        "Mayor concentración de solutos (menos agua)",
+        "Menor concentración de solutos (más agua)",
+        "Ninguna sustancia disuelta",
+        "Igual concentración de solutos"
+      ],
+      "correcta": 0,
+      "tip": "Hiper = más. El medio hipertónico tiene más solutos que la célula, por eso el agua tiende a salir.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa03-011",
+      "oa": "CN08 OA 03",
+      "pregunta": "Un medio hipotónico es aquel que, respecto al interior de la célula, tiene:",
+      "opciones": [
+        "Igual concentración de solutos",
+        "Menor concentración de solutos (más agua)",
+        "Solo sales y nada de agua",
+        "Mayor concentración de solutos (menos agua)"
+      ],
+      "correcta": 1,
+      "tip": "Hipo = menos. El medio hipotónico tiene menos solutos y más agua, por eso el agua tiende a entrar a la célula.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa03-012",
+      "oa": "CN08 OA 03",
+      "pregunta": "Un medio isotónico es aquel que, respecto a la célula, tiene:",
+      "opciones": [
+        "Mayor concentración de solutos",
+        "Igual concentración de solutos, por lo que no hay cambio neto de agua",
+        "Menor concentración de solutos",
+        "Nada de agua disponible"
+      ],
+      "correcta": 1,
+      "tip": "Iso = igual. En un medio isotónico entra y sale la misma cantidad de agua: la célula no cambia de tamaño.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa03-013",
+      "oa": "CN08 OA 03",
+      "pregunta": "Si colocas una célula animal en un medio hipertónico, el agua:",
+      "opciones": [
+        "Entra a la célula y esta se hincha",
+        "Se transforma en sales",
+        "Sale de la célula y esta se arruga",
+        "No se mueve en ninguna dirección"
+      ],
+      "correcta": 2,
+      "tip": "En medio hipertónico hay más solutos afuera, así que el agua sale y la célula se arruga (se deshidrata).",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa03-014",
+      "oa": "CN08 OA 03",
+      "pregunta": "Si colocas una célula animal en un medio hipotónico, el agua:",
+      "opciones": [
+        "No se mueve",
+        "Sale y entra en igual cantidad",
+        "Sale de la célula y esta se arruga",
+        "Entra a la célula y esta se hincha (puede incluso reventar)"
+      ],
+      "correcta": 3,
+      "tip": "En medio hipotónico hay más agua afuera; el agua entra y la célula animal se hincha y puede reventar.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa03-015",
+      "oa": "CN08 OA 03",
+      "pregunta": "Un glóbulo rojo colocado en agua destilada (medio muy hipotónico) tiende a:",
+      "opciones": [
+        "Fabricar una pared celular",
+        "Quedar exactamente igual",
+        "Arrugarse por pérdida de agua",
+        "Hincharse y reventar por entrada de agua"
+      ],
+      "correcta": 3,
+      "tip": "El agua destilada casi no tiene solutos; el agua entra al glóbulo rojo, lo hincha y puede hacerlo estallar.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa03-016",
+      "oa": "CN08 OA 03",
+      "pregunta": "¿Por qué una célula vegetal en un medio hipotónico NO revienta como la animal?",
+      "opciones": [
+        "Porque su pared celular rígida resiste la presión del agua que entra",
+        "Porque no tiene membrana",
+        "Porque no deja entrar agua nunca",
+        "Porque expulsa el agua con energía"
+      ],
+      "correcta": 0,
+      "tip": "La pared celular de las plantas resiste la presión, así la célula se pone turgente pero no estalla.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa03-017",
+      "oa": "CN08 OA 03",
+      "pregunta": "La turgencia en una célula vegetal ocurre cuando:",
+      "opciones": [
+        "Sale agua y la célula se encoge",
+        "Entra agua y la célula se pone firme y llena, empujando contra la pared",
+        "La célula pierde su núcleo",
+        "La pared celular se disuelve"
+      ],
+      "correcta": 1,
+      "tip": "En medio hipotónico entra agua a la célula vegetal, que se pone turgente (firme) contra su pared.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa03-018",
+      "oa": "CN08 OA 03",
+      "pregunta": "La plasmólisis en una célula vegetal ocurre cuando:",
+      "opciones": [
+        "Sale agua y el contenido de la célula se encoge separándose de la pared",
+        "La membrana se vuelve impermeable",
+        "La célula fabrica más pared",
+        "Entra agua y la célula se hincha"
+      ],
+      "correcta": 0,
+      "tip": "En medio hipertónico sale agua de la célula vegetal; el contenido se contrae y se despega de la pared: plasmólisis.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa03-019",
+      "oa": "CN08 OA 03",
+      "pregunta": "Cuando las plantas se marchitan por falta de riego, sus células han sufrido:",
+      "opciones": [
+        "Aumento de tamaño del núcleo",
+        "Entrada de agua en exceso",
+        "Turgencia",
+        "Pérdida de agua (plasmólisis), por eso pierden firmeza"
+      ],
+      "correcta": 3,
+      "tip": "Sin agua, las células pierden turgencia y se plasmolizan; por eso la planta se ve floja y marchita.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa03-020",
+      "oa": "CN08 OA 03",
+      "pregunta": "Si echas sal sobre trozos de lechuga y al rato sueltan agua y quedan flácidos, esto se explica porque:",
+      "opciones": [
+        "La sal aportó agua a las células",
+        "El medio se volvió hipertónico y el agua salió de las células",
+        "La sal rompió la difusión",
+        "El medio se volvió hipotónico y entró agua"
+      ],
+      "correcta": 1,
+      "tip": "La sal crea un medio hipertónico afuera; por osmosis el agua sale de las células de la lechuga.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa03-021",
+      "oa": "CN08 OA 03",
+      "pregunta": "Al dejar pasas (uvas secas) en un vaso con agua, se hinchan porque:",
+      "opciones": [
+        "La pasa fabrica agua nueva",
+        "El agua sale de la pasa hacia el vaso",
+        "La sal del agua entra a la pasa",
+        "El agua entra a la pasa por osmosis, ya que el medio es hipotónico"
+      ],
+      "correcta": 3,
+      "tip": "El agua está menos concentrada afuera; por osmosis entra a la pasa (más solutos adentro) y esta se hincha.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa03-022",
+      "oa": "CN08 OA 03",
+      "pregunta": "El intercambio de gases en los pulmones, donde el oxígeno pasa del aire a la sangre, es un ejemplo de:",
+      "opciones": [
+        "Plasmólisis",
+        "Transporte activo con gasto de energía",
+        "Difusión de un gas a favor de su gradiente de concentración",
+        "Osmosis del agua"
+      ],
+      "correcta": 2,
+      "tip": "El oxígeno se difunde desde donde hay más (aire de los pulmones) hacia donde hay menos (sangre).",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa03-023",
+      "oa": "CN08 OA 03",
+      "pregunta": "En una célula, ¿a través de qué estructura ocurren la difusión y la osmosis?",
+      "opciones": [
+        "Los ribosomas",
+        "La membrana celular",
+        "El núcleo",
+        "El citoplasma sólido"
+      ],
+      "correcta": 1,
+      "tip": "La membrana celular semipermeable es la que regula la entrada y salida de partículas y de agua.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa03-024",
+      "oa": "CN08 OA 03",
+      "pregunta": "En la osmosis, el agua se mueve hacia el lado donde hay:",
+      "opciones": [
+        "Menor concentración de solutos",
+        "Igual concentración de solutos",
+        "Mayor temperatura solamente",
+        "Mayor concentración de solutos (menos agua libre)"
+      ],
+      "correcta": 3,
+      "tip": "El agua va hacia donde hay más solutos, buscando igualar las concentraciones a ambos lados.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa03-025",
+      "oa": "CN08 OA 03",
+      "pregunta": "Si una célula ni se hincha ni se arruga al estar en un líquido, ese medio probablemente es:",
+      "opciones": [
+        "Hipertónico",
+        "Semipermeable",
+        "Isotónico",
+        "Hipotónico"
+      ],
+      "correcta": 2,
+      "tip": "En un medio isotónico la concentración es igual dentro y fuera, así que no hay cambio neto de agua.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa03-026",
+      "oa": "CN08 OA 03",
+      "pregunta": "El suero fisiológico que se usa en medicina es isotónico respecto a las células de la sangre para:",
+      "opciones": [
+        "Que las células pierdan toda su agua",
+        "Que las células absorban muchísima agua y crezcan",
+        "Que las células no se hinchen ni se arruguen (se mantengan estables)",
+        "Detener por completo la difusión"
+      ],
+      "correcta": 2,
+      "tip": "Al ser isotónico, el suero no provoca entrada ni salida neta de agua, y las células conservan su forma.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa03-027",
+      "oa": "CN08 OA 03",
+      "pregunta": "¿En cuál de estas situaciones se mueve el agua y NO otro tipo de partícula?",
+      "opciones": [
+        "La difusión de colorante en agua",
+        "La difusión de oxígeno en la sangre",
+        "La osmosis a través de una membrana semipermeable",
+        "La difusión de un perfume en el aire"
+      ],
+      "correcta": 2,
+      "tip": "La osmosis es específicamente el movimiento del agua; los demás casos son difusión de otras partículas.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa03-028",
+      "oa": "CN08 OA 03",
+      "pregunta": "¿Por qué la difusión ocurre más rápido si hay una gran diferencia de concentración entre dos zonas?",
+      "opciones": [
+        "Porque la membrana desaparece",
+        "Porque no hay gradiente",
+        "Porque las partículas dejan de moverse",
+        "Porque un gradiente mayor impulsa el movimiento con más fuerza"
+      ],
+      "correcta": 3,
+      "tip": "Mientras mayor es el gradiente (la diferencia), más rápido se difunden las partículas hacia el equilibrio.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa03-029",
+      "oa": "CN08 OA 03",
+      "pregunta": "En un experimento echas azúcar en un extremo de un vaso con agua y esperas sin revolver. Con el tiempo el agua queda dulce en todo el vaso porque:",
+      "opciones": [
+        "Ocurrió plasmólisis en el agua",
+        "El azúcar se hundió y quedó solo en el fondo",
+        "El azúcar se difundió hasta repartirse de forma pareja",
+        "El agua fabricó más azúcar"
+      ],
+      "correcta": 2,
+      "tip": "Las partículas de azúcar se difunden desde donde hay más hacia donde hay menos, hasta el equilibrio.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa03-030",
+      "oa": "CN08 OA 03",
+      "pregunta": "Colocas una papa cortada en agua con mucha sal (medio hipertónico). Al rato la papa se ve más blanda y encogida porque:",
+      "opciones": [
+        "La sal fabricó agua dentro de la papa",
+        "El agua salió de las células de la papa por osmosis",
+        "La papa no tiene membranas",
+        "El agua entró a las células de la papa"
+      ],
+      "correcta": 1,
+      "tip": "El medio salado es hipertónico; por osmosis el agua sale de las células y la papa pierde firmeza.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa03-031",
+      "oa": "CN08 OA 03",
+      "pregunta": "En un montaje experimental, una membrana semipermeable separa agua pura de una solución con azúcar. ¿Qué se espera observar?",
+      "opciones": [
+        "El agua pasa hacia el lado que ya era agua pura",
+        "El agua pasa hacia el lado con azúcar, subiendo su nivel (osmosis)",
+        "El azúcar cruza rápido hacia el agua pura",
+        "No ocurre ningún movimiento"
+      ],
+      "correcta": 1,
+      "tip": "El agua se mueve hacia el lado más concentrado (con azúcar) y ese nivel sube: es osmosis.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa03-032",
+      "oa": "CN08 OA 03",
+      "pregunta": "¿Cuál de las siguientes afirmaciones sobre el transporte pasivo es correcta?",
+      "opciones": [
+        "Mueve partículas en contra del gradiente",
+        "Siempre necesita energía de la célula",
+        "Solo ocurre en células vegetales",
+        "Incluye la difusión y la osmosis, y ocurre a favor del gradiente sin gastar energía"
+      ],
+      "correcta": 3,
+      "tip": "La difusión y la osmosis son transporte pasivo: van a favor del gradiente y no gastan energía.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa03-033",
+      "oa": "CN08 OA 03",
+      "pregunta": "Al regar una planta marchita, sus hojas recuperan firmeza. A nivel celular esto se debe a que:",
+      "opciones": [
+        "El agua sale de las células y se plasmolizan",
+        "El agua entra a las células por osmosis y recuperan la turgencia",
+        "Las células dejan de intercambiar partículas",
+        "Las células pierden su pared celular"
+      ],
+      "correcta": 1,
+      "tip": "El riego crea un medio hipotónico; el agua entra a las células, que se ponen turgentes y firmes.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa03-034",
+      "oa": "CN08 OA 03",
+      "pregunta": "¿Cuál de estos NO es un ejemplo de difusión u osmosis?",
+      "opciones": [
+        "Un músculo que se contrae para levantar una pesa",
+        "Un perfume que se esparce por la sala",
+        "El oxígeno que pasa del aire a la sangre en los pulmones",
+        "El agua que entra a una pasa dejada en agua"
+      ],
+      "correcta": 0,
+      "tip": "La contracción muscular no es difusión ni osmosis; los otros casos sí son movimiento de partículas o de agua.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa03-035",
+      "oa": "CN08 OA 03",
+      "pregunta": "Una bacteria que vive en agua dulce (medio hipotónico) enfrenta el problema de que:",
+      "opciones": [
+        "El agua tiende a entrar por osmosis y podría hincharla",
+        "Los solutos entran sin control",
+        "No hay intercambio de agua",
+        "El agua tiende a salir y la deshidrata"
+      ],
+      "correcta": 0,
+      "tip": "En agua dulce el medio es hipotónico; el agua tiende a entrar a la célula por osmosis.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa03-036",
+      "oa": "CN08 OA 03",
+      "pregunta": "En la difusión facilitada, algunas sustancias cruzan la membrana con ayuda de proteínas de transporte, pero sin gastar energía. Por eso se considera:",
+      "opciones": [
+        "Un tipo de plasmólisis",
+        "Transporte activo, porque usa proteínas",
+        "Transporte pasivo, porque va a favor del gradiente y no consume energía",
+        "Osmosis, porque siempre mueve agua"
+      ],
+      "correcta": 2,
+      "tip": "La difusión facilitada usa proteínas como canal, pero sigue el gradiente y no gasta energía: es transporte pasivo.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa03-037",
+      "oa": "CN08 OA 03",
+      "pregunta": "Si el interior de una célula tiene 10% de sal y el líquido de afuera tiene 2% de sal, respecto a la célula el medio externo es:",
+      "opciones": [
+        "Semipermeable, así que nada se mueve",
+        "Hipotónico, así que el agua tiende a entrar a la célula",
+        "Hipertónico, así que el agua sale de la célula",
+        "Isotónico, así que no hay movimiento de agua"
+      ],
+      "correcta": 1,
+      "tip": "Afuera hay menos solutos (2% frente a 10%): el medio es hipotónico y el agua entra hacia donde hay más solutos.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa03-038",
+      "oa": "CN08 OA 03",
+      "pregunta": "¿Cuál de estas afirmaciones sobre la osmosis es la correcta?",
+      "opciones": [
+        "El agua se mueve solo si la célula gasta energía",
+        "El agua se mueve de donde hay más solutos hacia donde hay menos",
+        "El agua se mueve de donde hay menos solutos hacia donde hay más solutos",
+        "El agua nunca atraviesa la membrana celular"
+      ],
+      "correcta": 2,
+      "tip": "En la osmosis el agua va desde el lado con menos solutos (más agua libre) hacia el lado con más solutos.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa04-001",
+      "oa": "CN08 OA 04",
+      "pregunta": "¿Cuál es la función principal de los estomas de la hoja?",
+      "opciones": [
+        "Anclar la planta al suelo",
+        "Transportar agua desde la raíz",
+        "Producir azúcares durante la noche",
+        "Permitir el intercambio de gases y la transpiración"
+      ],
+      "correcta": 3,
+      "tip": "Los estomas son poros de la hoja por donde entran y salen gases (CO2, O2) y sale vapor de agua.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa04-002",
+      "oa": "CN08 OA 04",
+      "pregunta": "¿Qué tejido conduce el agua y las sales minerales desde la raíz hacia las hojas?",
+      "opciones": [
+        "El floema",
+        "Los estomas",
+        "El xilema",
+        "La epidermis"
+      ],
+      "correcta": 2,
+      "tip": "El xilema transporta agua y sales minerales en sentido ascendente, desde la raíz hacia las hojas.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa04-003",
+      "oa": "CN08 OA 04",
+      "pregunta": "¿Qué tejido transporta la savia elaborada (azúcares) producida en la fotosíntesis?",
+      "opciones": [
+        "La cutícula",
+        "El xilema",
+        "El floema",
+        "La raíz"
+      ],
+      "correcta": 2,
+      "tip": "El floema distribuye la savia elaborada, rica en azúcares, hacia toda la planta.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa04-004",
+      "oa": "CN08 OA 04",
+      "pregunta": "¿Cuál es una de las funciones principales de la raíz?",
+      "opciones": [
+        "Absorber agua y sales minerales del suelo",
+        "Abrir y cerrar los estomas",
+        "Producir el vapor de agua",
+        "Realizar la fotosíntesis"
+      ],
+      "correcta": 0,
+      "tip": "La raíz absorbe agua y sales minerales del suelo y ancla la planta.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa04-005",
+      "oa": "CN08 OA 04",
+      "pregunta": "¿Cuál es la principal función del tallo en una planta?",
+      "opciones": [
+        "Absorber agua directamente del aire",
+        "Dar sostén y transportar sustancias entre raíz y hojas",
+        "Producir semillas",
+        "Realizar toda la fotosíntesis"
+      ],
+      "correcta": 1,
+      "tip": "El tallo sostiene a la planta y conecta el transporte entre la raíz y las hojas.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa04-006",
+      "oa": "CN08 OA 04",
+      "pregunta": "¿En qué estructura de la planta ocurre principalmente la fotosíntesis?",
+      "opciones": [
+        "En la raíz",
+        "En las semillas",
+        "En los pelos absorbentes",
+        "En la hoja"
+      ],
+      "correcta": 3,
+      "tip": "La hoja concentra los cloroplastos, por eso es el principal órgano de la fotosíntesis.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa04-007",
+      "oa": "CN08 OA 04",
+      "pregunta": "¿Cómo se llama la pérdida de agua en forma de vapor a través de los estomas?",
+      "opciones": [
+        "Germinación",
+        "Polinización",
+        "Respiración",
+        "Transpiración"
+      ],
+      "correcta": 3,
+      "tip": "La transpiración es la salida de vapor de agua por los estomas de las hojas.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa04-008",
+      "oa": "CN08 OA 04",
+      "pregunta": "¿Cómo se llama el crecimiento de una planta en respuesta a la luz?",
+      "opciones": [
+        "Gravitropismo",
+        "Fotosíntesis",
+        "Fototropismo",
+        "Transpiración"
+      ],
+      "correcta": 2,
+      "tip": "El fototropismo es la respuesta de crecimiento de la planta hacia la fuente de luz.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa04-009",
+      "oa": "CN08 OA 04",
+      "pregunta": "¿Cómo se llama la respuesta de crecimiento de la planta frente a la gravedad?",
+      "opciones": [
+        "Fotosíntesis",
+        "Gravitropismo",
+        "Fototropismo",
+        "Transpiración"
+      ],
+      "correcta": 1,
+      "tip": "El gravitropismo hace que las raíces crezcan hacia abajo y los tallos hacia arriba.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa04-010",
+      "oa": "CN08 OA 04",
+      "pregunta": "El xilema y el floema son ejemplos de tejidos encargados de:",
+      "opciones": [
+        "La reproducción de la planta",
+        "La absorción de luz",
+        "El transporte de sustancias en la planta",
+        "El intercambio de gases"
+      ],
+      "correcta": 2,
+      "tip": "Xilema y floema forman el sistema de conducción o transporte de la planta.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa04-011",
+      "oa": "CN08 OA 04",
+      "pregunta": "¿Qué gas entra principalmente por los estomas para realizar la fotosíntesis?",
+      "opciones": [
+        "Helio (He)",
+        "Nitrógeno (N2)",
+        "Oxígeno (O2)",
+        "Dióxido de carbono (CO2)"
+      ],
+      "correcta": 3,
+      "tip": "La fotosíntesis necesita dióxido de carbono, que entra por los estomas.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa04-012",
+      "oa": "CN08 OA 04",
+      "pregunta": "Durante la fotosíntesis, ¿qué gas libera la planta hacia el ambiente?",
+      "opciones": [
+        "Ozono (O3)",
+        "Metano (CH4)",
+        "Oxígeno (O2)",
+        "Dióxido de carbono (CO2)"
+      ],
+      "correcta": 2,
+      "tip": "La fotosíntesis produce oxígeno, que sale por los estomas.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa04-013",
+      "oa": "CN08 OA 04",
+      "pregunta": "El transporte de agua por el xilema ocurre principalmente en sentido:",
+      "opciones": [
+        "Solo dentro de la hoja",
+        "Ascendente, desde la raíz hacia las hojas",
+        "Solo dentro de la raíz",
+        "Descendente, desde las hojas hacia la raíz"
+      ],
+      "correcta": 1,
+      "tip": "El agua sube por el xilema desde la raíz hasta las hojas.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa04-014",
+      "oa": "CN08 OA 04",
+      "pregunta": "La savia elaborada que transporta el floema se produce principalmente en:",
+      "opciones": [
+        "Las hojas, durante la fotosíntesis",
+        "Las flores, al abrirse",
+        "El tallo, durante la noche",
+        "La raíz, al absorber agua"
+      ],
+      "correcta": 0,
+      "tip": "Los azúcares del floema provienen de la fotosíntesis realizada en las hojas.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa04-015",
+      "oa": "CN08 OA 04",
+      "pregunta": "¿Qué estructuras de la raíz aumentan la superficie para absorber agua y sales?",
+      "opciones": [
+        "Los estomas",
+        "Los pelos absorbentes",
+        "Los cloroplastos",
+        "Las flores"
+      ],
+      "correcta": 1,
+      "tip": "Los pelos absorbentes de la raíz aumentan la superficie de contacto con el suelo.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa04-016",
+      "oa": "CN08 OA 04",
+      "pregunta": "Si una planta cierra sus estomas en un día muy caluroso, principalmente logra:",
+      "opciones": [
+        "Aumentar su fotosíntesis",
+        "Crecer hacia la gravedad",
+        "Reducir la pérdida de agua por transpiración",
+        "Absorber más sales por la hoja"
+      ],
+      "correcta": 2,
+      "tip": "Al cerrar los estomas, la planta pierde menos agua y evita deshidratarse.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa04-017",
+      "oa": "CN08 OA 04",
+      "pregunta": "¿Cuál de estas estructuras NO participa directamente en el transporte de sustancias?",
+      "opciones": [
+        "El floema",
+        "El xilema",
+        "Los cloroplastos",
+        "El tallo"
+      ],
+      "correcta": 2,
+      "tip": "Los cloroplastos realizan fotosíntesis; el transporte lo hacen xilema, floema y el tallo.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa04-018",
+      "oa": "CN08 OA 04",
+      "pregunta": "Un modelo que representa el recorrido del agua en la planta debería mostrar el flujo:",
+      "opciones": [
+        "Flor → raíz → tallo",
+        "Estoma → raíz → suelo",
+        "Raíz → tallo → hoja",
+        "Hoja → raíz → semilla"
+      ],
+      "correcta": 2,
+      "tip": "El agua entra por la raíz, sube por el tallo y llega a la hoja.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa04-019",
+      "oa": "CN08 OA 04",
+      "pregunta": "El intercambio de gases entre la planta y el ambiente ocurre principalmente a través de:",
+      "opciones": [
+        "Las raíces",
+        "Los estomas",
+        "El xilema",
+        "Los pelos absorbentes"
+      ],
+      "correcta": 1,
+      "tip": "Los estomas son las aberturas por donde entran y salen los gases.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa04-020",
+      "oa": "CN08 OA 04",
+      "pregunta": "Que la raíz de una planta crezca hacia abajo, siguiendo la gravedad, es un ejemplo de:",
+      "opciones": [
+        "Fotosíntesis",
+        "Transpiración",
+        "Gravitropismo positivo",
+        "Fototropismo negativo"
+      ],
+      "correcta": 2,
+      "tip": "La raíz muestra gravitropismo positivo: crece en el sentido de la gravedad.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa04-021",
+      "oa": "CN08 OA 04",
+      "pregunta": "Que el tallo de una planta crezca hacia la luz de una ventana es un ejemplo de:",
+      "opciones": [
+        "Fototropismo positivo",
+        "Transpiración",
+        "Gravitropismo positivo",
+        "Respiración celular"
+      ],
+      "correcta": 0,
+      "tip": "El tallo muestra fototropismo positivo: crece hacia la fuente de luz.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa04-022",
+      "oa": "CN08 OA 04",
+      "pregunta": "¿Por qué las hojas suelen ser anchas y planas?",
+      "opciones": [
+        "Para producir semillas",
+        "Para anclar la planta",
+        "Para absorber agua del suelo",
+        "Para captar más luz y facilitar la fotosíntesis"
+      ],
+      "correcta": 3,
+      "tip": "La forma ancha y plana de la hoja aumenta la captación de luz para la fotosíntesis.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa04-023",
+      "oa": "CN08 OA 04",
+      "pregunta": "Las células que rodean a cada estoma y controlan su apertura se llaman:",
+      "opciones": [
+        "Células oclusivas o de guarda",
+        "Células de la raíz",
+        "Cloroplastos",
+        "Pelos absorbentes"
+      ],
+      "correcta": 0,
+      "tip": "Las células oclusivas (de guarda) abren y cierran el poro del estoma.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa04-024",
+      "oa": "CN08 OA 04",
+      "pregunta": "¿Qué le ocurriría a una planta si se dañaran todos sus vasos de xilema?",
+      "opciones": [
+        "Aumentaría su transpiración",
+        "Produciría más azúcares",
+        "Crecería más rápido hacia la luz",
+        "No podría transportar agua hacia las hojas"
+      ],
+      "correcta": 3,
+      "tip": "Sin xilema, el agua no llega a las hojas y la planta se marchita.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa04-025",
+      "oa": "CN08 OA 04",
+      "pregunta": "La transpiración en las hojas ayuda a que el agua:",
+      "opciones": [
+        "Ascienda desde la raíz hacia arriba por el xilema",
+        "Salga por los pelos absorbentes",
+        "Se acumule en las semillas",
+        "Baje desde las hojas hacia la raíz"
+      ],
+      "correcta": 0,
+      "tip": "Al perder vapor por transpiración, se genera una fuerza que ayuda al agua a subir por el xilema.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa04-026",
+      "oa": "CN08 OA 04",
+      "pregunta": "¿Cuál de las siguientes es una respuesta de la planta a un estímulo del ambiente?",
+      "opciones": [
+        "Que la hoja tenga color verde",
+        "Que la raíz absorba agua",
+        "Que el floema transporte azúcares",
+        "Que el tallo se doble hacia la luz"
+      ],
+      "correcta": 3,
+      "tip": "Doblarse hacia la luz (fototropismo) es una respuesta a un estímulo: la luz.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa04-027",
+      "oa": "CN08 OA 04",
+      "pregunta": "El agua y las sales minerales que suben por el xilema se conocen como:",
+      "opciones": [
+        "Savia bruta",
+        "Savia elaborada",
+        "Almidón",
+        "Clorofila"
+      ],
+      "correcta": 0,
+      "tip": "La savia bruta es agua con sales minerales que viaja por el xilema.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa04-028",
+      "oa": "CN08 OA 04",
+      "pregunta": "En un modelo de la planta, ¿qué estructura representarías como el órgano de sostén y transporte central?",
+      "opciones": [
+        "El estoma",
+        "El tallo",
+        "El cloroplasto",
+        "El pelo absorbente"
+      ],
+      "correcta": 1,
+      "tip": "El tallo sostiene la planta y conecta el transporte entre raíz y hojas.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa04-029",
+      "oa": "CN08 OA 04",
+      "pregunta": "¿Qué materias primas necesita la hoja para realizar la fotosíntesis?",
+      "opciones": [
+        "Oxígeno, azúcar y oscuridad",
+        "Agua, dióxido de carbono y luz",
+        "Sales, savia elaborada y calor",
+        "Nitrógeno, vapor y viento"
+      ],
+      "correcta": 1,
+      "tip": "La fotosíntesis usa agua, CO2 y luz para producir azúcares y oxígeno.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa04-030",
+      "oa": "CN08 OA 04",
+      "pregunta": "Los estomas se ubican principalmente en:",
+      "opciones": [
+        "Las semillas",
+        "El interior de la raíz",
+        "La epidermis de las hojas",
+        "El centro del tallo leñoso"
+      ],
+      "correcta": 2,
+      "tip": "Los estomas están en la epidermis de las hojas, sobre todo en la cara inferior.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa04-031",
+      "oa": "CN08 OA 04",
+      "pregunta": "¿Cuál de estas parejas relaciona correctamente estructura y función?",
+      "opciones": [
+        "Xilema: intercambio de gases",
+        "Raíz: fotosíntesis",
+        "Estoma: absorción de agua del suelo",
+        "Floema: transporte de azúcares"
+      ],
+      "correcta": 3,
+      "tip": "El floema conduce la savia elaborada, rica en azúcares de la fotosíntesis.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa04-032",
+      "oa": "CN08 OA 04",
+      "pregunta": "Si colocas una planta en una caja con una sola abertura de luz, ¿qué esperarías observar?",
+      "opciones": [
+        "La planta deja de crecer por completo",
+        "El tallo crece inclinándose hacia la abertura de luz",
+        "La raíz sale por la abertura de luz",
+        "Las hojas se cierran para no ver la luz"
+      ],
+      "correcta": 1,
+      "tip": "Por fototropismo, el tallo se inclina hacia la única fuente de luz disponible.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa04-033",
+      "oa": "CN08 OA 04",
+      "pregunta": "El conjunto de xilema y floema forma el llamado tejido:",
+      "opciones": [
+        "Conductor o vascular",
+        "Epidérmico",
+        "Fotosintético",
+        "Reproductor"
+      ],
+      "correcta": 0,
+      "tip": "Xilema y floema forman el tejido conductor (vascular) que transporta sustancias.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa04-034",
+      "oa": "CN08 OA 04",
+      "pregunta": "¿Por qué muchas plantas tienen más estomas en la cara inferior de la hoja?",
+      "opciones": [
+        "Porque allí crece la raíz",
+        "Para captar más luz por debajo",
+        "Porque allí ocurre la absorción de sales",
+        "Para reducir la pérdida de agua, ya que recibe menos sol directo"
+      ],
+      "correcta": 3,
+      "tip": "La cara inferior recibe menos sol, así se pierde menos agua por transpiración.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa04-035",
+      "oa": "CN08 OA 04",
+      "pregunta": "¿Cuál de estas estructuras contiene los cloroplastos donde se capta la luz para la fotosíntesis?",
+      "opciones": [
+        "Las células de la hoja",
+        "El xilema de la raíz",
+        "El pelo absorbente",
+        "El poro del estoma"
+      ],
+      "correcta": 0,
+      "tip": "Los cloroplastos se concentran en las células de la hoja, donde ocurre la fotosíntesis.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa04-036",
+      "oa": "CN08 OA 04",
+      "pregunta": "Una planta de interior inclina sus hojas hacia la ventana con el paso de los días. ¿Qué explica mejor esta observación?",
+      "opciones": [
+        "El fototropismo: la planta responde a la dirección de la luz",
+        "La absorción de sales por la raíz",
+        "La transpiración: pierde agua por las hojas",
+        "El gravitropismo: responde a la gravedad"
+      ],
+      "correcta": 0,
+      "tip": "La inclinación hacia la luz es fototropismo, una respuesta al estímulo luminoso.",
+      "revisada": false
+    }
+  ]
+}

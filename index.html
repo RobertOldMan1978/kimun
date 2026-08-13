@@ -357,10 +357,10 @@ body.en-dificil .nav button.on{color:#ff6b6b;background:#ff2d551a}
       <div class="coins">🪙 <span id="hudCoins">0</span></div>
     </div>
     <div class="mapa-head">
-      <img src="assets/kimun-conquistador.png" alt="Kimün explorador">
+      <img id="mapaImg" src="assets/kimun-conquistador.png" alt="Expedición">
       <div>
         <h2 class="disp">Ruta de la Expedición</h2>
-        <p>Unidad: Los europeos llegan a América</p>
+        <p id="mapaSub">Unidad: Los europeos llegan a América</p>
       </div>
     </div>
     <div class="kim-dato" id="kimDato" hidden>
@@ -481,7 +481,7 @@ const AVATARES=["🦁","🐉","🦅","🐺","🦊","🤖","👽","🥷"];
    El motor NO cambia: lee todo desde estos datos, con progreso independiente por ruta. */
 const EXPEDICIONES=[
  { id:'hist-europeos', asignatura:'Historia', nivel:'8° Básico · Los europeos llegan a América',
-   portada:'assets/portada-historia.png', contenido:'contenido/historia-8basico/preguntas.json', activa:true,
+   portada:'assets/portada-historia.png', mapaImg:'assets/kimun-conquistador.png', contenido:'contenido/historia-8basico/preguntas.json', activa:true,
    etapas:[
      {oa:"HI08 OA 04",nombre:"Los grandes viajes",icono:"⛵",n:6},
      {oa:"HI08 OA 05",nombre:"El encuentro de dos mundos",icono:"🌎",n:6},
@@ -490,7 +490,15 @@ const EXPEDICIONES=[
      {oa:"BOSS",nombre:"⚡ JEFE FINAL",icono:"🐲",n:8,oas:["HI08 OA 04","HI08 OA 05","HI08 OA 06","HI08 OA 07"]},
    ]},
  { id:'mate-8b', asignatura:'Matemáticas', nivel:'Próximamente', portada:'assets/portada-matematicas.png', contenido:'', activa:false, etapas:[] },
- { id:'cien-8b', asignatura:'Ciencias',    nivel:'Próximamente', portada:'assets/portada-ciencias.png',    contenido:'', activa:false, etapas:[] },
+ { id:'cien-celula', asignatura:'Ciencias', nivel:'8° Básico · La célula',
+   portada:'assets/portada-ciencias.png', contenido:'contenido/ciencias-8basico/preguntas.json', activa:true,
+   etapas:[
+     {oa:"CN08 OA 01", nombre:"La teoría celular", icono:"🔬", n:6},
+     {oa:"CN08 OA 02", nombre:"Estructura de la célula", icono:"🧫", n:6},
+     {oa:"CN08 OA 03", nombre:"Difusión y osmosis", icono:"💧", n:6},
+     {oa:"CN08 OA 04", nombre:"Las plantas", icono:"🌱", n:6},
+     {oa:"BOSS", nombre:"⚡ JEFE: La célula", icono:"🧬", n:8, oas:["CN08 OA 01","CN08 OA 02","CN08 OA 03","CN08 OA 04"]},
+   ]},
  { id:'leng-8b', asignatura:'Lenguaje',    nivel:'Próximamente', portada:'assets/portada-lenguaje.png',    contenido:'', activa:false, etapas:[] },
 ];
 let EXP_ACT=EXPEDICIONES[0];          // expedición activa
@@ -804,6 +812,8 @@ $('btnStart').onclick=()=>{
 /* ================= MAPA ================= */
 function renderMapa(){
  renderModoSel();
+ if($('mapaSub'))$('mapaSub').textContent=EXP_ACT.nivel;
+ if($('mapaImg'))$('mapaImg').src=EXP_ACT.mapaImg||EXP_ACT.portada;
  const box=$('mapbox');box.innerHTML='';
  EXPEDICION.forEach((n,i)=>{
   const p=progAct()[i];

@@ -158,6 +158,9 @@ el sesgo de posición), asigna IDs por OA y escribe `preguntas.json`.
 ## Reglas de avance (acordadas)
 
 ### Del jugador (juego)
+- **Estructura estándar de una expedición: 4 etapas + 1 jefe final (5 nodos).**
+  Cada etapa mapea un OA; el jefe mezcla los 4 OA de la ruta. Regla para todas
+  las asignaturas (Historia, Ciencias, y las próximas Matemáticas y Lenguaje).
 - Cada etapa saca **6 preguntas al azar** del pool (jefe final: 8, mezcla de OA).
 - **Pasa con ≥66%** de aciertos (4 de 6). Si no, repite la etapa con preguntas
   nuevas. Estrellas: 3★ = 100%, 2★ ≥ 80%, 1★ ≥ 66%.
@@ -268,3 +271,21 @@ Se completaron los tres pendientes que quedaron de la Sesión 2:
   sola a los ~10 s. Función `datoKimun()` disparada al entrar al mapa.
 - **Pendientes:** generar el contenido (OA + pool) de la primera expedición nueva
   y activarla; ideas gráficas de la Sesión 3 (mapa pergamino, ambientación por etapa).
+
+### Sesión 5 (2026-08-13)
+- **Regla de estructura fijada:** toda expedición = **4 etapas (1 OA c/u) + 1 jefe
+  final (5 nodos)**. Historia y Ciencias la cumplen; Matemáticas y Lenguaje seguirán.
+- **Segunda expedición (Ciencias) — estrena la plantilla:** unidad "La célula"
+  (`contenido/ciencias-8basico/`), con `oa.json` (los 15 OA de Ciencias 8°) y
+  `preguntas.json` con **144 preguntas** de CN08 OA 01–04, generadas y verificadas
+  por agentes (opciones barajadas, `revisada:false`). Expedición activa y jugable.
+  **Confirmado:** agregarla fue solo datos + contenido, sin tocar el motor.
+- **Encabezado del mapa data-driven:** antes el título/imagen del mapa estaban
+  fijos en Historia; ahora reflejan la expedición activa (`mapaSub`, `mapaImg` en
+  `renderMapa`). Campo opcional `mapaImg` por expedición (Historia mantiene su
+  Kimün conquistador; el resto usa su portada).
+- **Exportar preguntas a PDF:** `scripts/generar-pdf-preguntas.py` (usa fpdf2)
+  genera un PDF por asignatura, agrupado por OA, con la respuesta correcta y la
+  explicación, y casilla "Revisada" para revisión pedagógica en papel.
+- **Pendientes:** revisión pedagógica de los bancos (Historia y Ciencias); un
+  Kimün "científico" para el header de Ciencias; contenido de Matemáticas y Lenguaje.

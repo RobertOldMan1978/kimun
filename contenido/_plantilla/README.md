@@ -40,6 +40,11 @@ En `index.html`, dentro del arreglo **`EXPEDICIONES`**, agrega un objeto:
 propio **progreso independiente** (normal y difícil), la misma mecánica (6
 preguntas al azar por etapa, 66% para pasar, Modo Difícil, etc.).
 
+## Regla de estructura (acordada)
+Toda expedición tiene **4 etapas + 1 jefe final** (5 nodos). Cada etapa mapea
+**un OA**; el jefe mezcla los 4 OA de la ruta. (Historia y Ciencias siguen esta
+regla.)
+
 ## Notas
 - Cada etapa mapea **un OA**; el **jefe final** mezcla varios OA (campo `oas`).
 - El campo `n` es cuántas preguntas saca la etapa en modo Normal (el Difícil usa 8, jefe 10).
