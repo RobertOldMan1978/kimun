@@ -10,6 +10,7 @@
 <meta name="theme-color" content="#1e1747">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Titan+One&family=Nunito:wght@600;800;900&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <style>
 :root{
   --bg1:#140f33; --bg2:#2a1b5e; --panel:#1e1747; --panel2:#271f56;
@@ -216,6 +217,28 @@ input.nm:focus{border-color:var(--cyan)}
 .duelo-turn{font-weight:900;font-size:14px;color:var(--gold);flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .duelo-score{text-align:center;font-weight:900;margin-top:14px;font-size:16px;color:var(--cyan)}
 .duelo-final{font-family:'Titan One';font-size:19px;margin:14px 0;line-height:1.5}
+/* ===== DUELO ONLINE ===== */
+.mi-codigo{font-family:'Titan One';font-size:30px;color:var(--gold);letter-spacing:2px;text-align:center;
+  background:#00000033;border:1px dashed #ffc93c66;border-radius:12px;padding:12px;margin-top:6px}
+.od-exp{display:flex;flex-direction:column;gap:8px}
+.od-exp button{padding:12px;border:2px solid #ffffff1f;border-radius:12px;background:#00000030;color:var(--txt);
+  font-family:'Nunito';font-weight:900;font-size:14px;cursor:pointer;text-align:left;display:flex;align-items:center;gap:10px}
+.od-exp button.sel{border-color:var(--cyan);background:#4dd8ff1f}
+.od-exp button img{width:38px;height:38px;border-radius:9px;object-fit:cover}
+.od-reloj{text-align:center;font-weight:900;color:var(--pink);font-size:14px;margin-bottom:8px}
+.od-jugadores{display:flex;flex-direction:column;gap:8px;max-height:230px;overflow-y:auto}
+.od-jugadores button{padding:10px 12px;border:2px solid #ffffff1f;border-radius:12px;background:#00000030;color:var(--txt);
+  font-family:'Nunito';font-weight:900;font-size:14px;cursor:pointer;text-align:left;display:flex;align-items:center;gap:10px}
+.od-jugadores button.sel{border-color:var(--cyan);background:#4dd8ff1f}
+.od-jugadores .jb-bot{margin-left:auto;font-size:11px;color:var(--dim);font-weight:800}
+.pend-item{display:flex;align-items:center;gap:10px;padding:10px;border-radius:12px;background:var(--panel2);
+  border:1px solid #ffffff14;margin-bottom:8px;cursor:pointer}
+.pend-item:active{transform:scale(.99)}
+.pend-item .em{font-size:26px}
+.pend-item .pi-body{flex:1;min-width:0}
+.pend-item .pi-n{font-weight:900;font-size:14px}
+.pend-item .pi-t{color:var(--pink);font-weight:800;font-size:12px}
+.pend-item .pi-go{color:var(--green);font-weight:900}
 /* ===== COMPAÑERO KIMÜN ===== */
 .kim-stage{display:flex;justify-content:center;margin:2px 0 10px}
 .kim-buddy{width:88px;height:88px;border-radius:50%;object-fit:cover;object-position:center 30%;
@@ -461,6 +484,57 @@ body.en-dificil .nav button.on{color:#ff6b6b;background:#ff2d551a}
       <button class="btn sec" id="btnDueloExit">SALIR</button>
     </div>
   </section>
+
+  <!-- ============ DUELO ONLINE: HUB ============ -->
+  <section class="screen" id="scr-duelo-online">
+    <div class="logo"><span class="badge">⚔️</span><h1 style="font-size:26px">DUELO EN LÍNEA</h1><p>Asíncrono · 24 horas</p></div>
+    <div class="card">
+      <h3>Tu código de amigo</h3>
+      <div class="mi-codigo" id="miCodigo">KIM-…</div>
+      <p style="color:var(--dim);font-weight:800;font-size:12px;margin-top:8px">Compártelo para que te desafíen.</p>
+    </div>
+    <button class="btn" id="btnDesafiar">⚔️ Desafiar a un amigo</button>
+    <div class="card">
+      <h3>📥 Desafíos para ti</h3>
+      <div id="pendList"><p style="color:var(--dim);font-weight:800;font-size:13px">Cargando…</p></div>
+    </div>
+    <button class="btn sec" id="btnDueloLocal">🤝 Duelo en este teléfono</button>
+    <button class="btn sec" id="btnDOBack">← Volver</button>
+  </section>
+
+  <!-- ============ DUELO ONLINE: CREAR DESAFÍO ============ -->
+  <section class="screen" id="scr-od-setup">
+    <div class="logo"><span class="badge">⚔️</span><h1 style="font-size:26px">Desafiar</h1><p>Juega tu ronda; tu rival tendrá 24h</p></div>
+    <div class="card"><h3>¿A quién desafías?</h3><div class="od-jugadores" id="odJugadores"></div></div>
+    <div class="card"><h3>…o por código</h3><input class="nm" id="odCodigo" maxlength="8" placeholder="KIM-XXXX" autocomplete="off"></div>
+    <div class="card"><h3>Elige la expedición</h3><div class="od-exp" id="odExpSel"></div></div>
+    <div class="feedback bad" id="odSetupErr"></div>
+    <button class="btn" id="btnODStart">Jugar mi ronda ➜</button>
+    <button class="btn sec" id="btnODBack">← Volver</button>
+  </section>
+
+  <!-- ============ DUELO ONLINE: QUIZ ============ -->
+  <section class="screen" id="scr-od-quiz">
+    <div class="qtop">
+      <div class="duelo-turn" id="odTurn">Tu ronda</div>
+      <div class="qprog"><i id="odProg"></i></div>
+      <div class="timer" id="odTimer">15</div>
+    </div>
+    <div class="od-reloj" id="odReloj" hidden></div>
+    <div class="qcard"><div class="tag" id="odTag">Pregunta 1/8</div><h2 id="odText">…</h2></div>
+    <div class="opts" id="odOpts"></div>
+    <div class="feedback" id="odFb"></div>
+  </section>
+
+  <!-- ============ DUELO ONLINE: RESULTADO ============ -->
+  <section class="screen" id="scr-od-res">
+    <div class="resbox">
+      <div class="big" id="odResIc">🏆</div>
+      <h2 id="odResTitle">…</h2>
+      <div class="duelo-final" id="odResScore"></div>
+      <button class="btn" id="btnODExit">VOLVER A DUELOS</button>
+    </div>
+  </section>
 </div>
 
 <div class="nav" id="nav" style="display:none">
@@ -655,6 +729,23 @@ function cargar(){try{const d=JSON.parse(localStorage.getItem(SAVE_KEY)||'null')
 function hayPartida(){try{const d=JSON.parse(localStorage.getItem(SAVE_KEY)||'null');return !!(d&&d.nombre);}catch(e){return false;}}
 function borrarPartida(){localStorage.removeItem(SAVE_KEY);}
 
+/* ================= SUPABASE (duelo online asíncrono) ================= */
+const SUPA_URL='https://bdgzpjzlqidcexdkjhzy.supabase.co';
+const SUPA_KEY='sb_publishable_I3FWEIOQf-_7ni_46PGSSQ_PLD3mQpM';
+const SB=(window.supabase&&window.supabase.createClient)?window.supabase.createClient(SUPA_URL,SUPA_KEY):null;
+let MI_PERFIL=null;   // {id, nombre, avatar, codigo}
+async function conectarKimun(){
+ if(!SB)return null;
+ try{
+  const {data:{session}}=await SB.auth.getSession();
+  if(!session){const {error}=await SB.auth.signInAnonymously();if(error)throw error;}
+  const {data,error}=await SB.rpc('kimun_perfil',{p_nombre:S.nombre||'Jugador',p_avatar:S.avatar||'🦊'});
+  if(error)throw error;
+  MI_PERFIL=Array.isArray(data)?data[0]:data;
+  return MI_PERFIL;
+ }catch(e){console.error('Supabase:',e.message||e);return null;}
+}
+
 /* ================= TIENDA DE SKINS ================= */
 const SKINS=[{e:"🐲",p:60},{e:"🦄",p:70},{e:"🦖",p:80},{e:"🐙",p:50},{e:"🦉",p:40},{e:"🚀",p:90},{e:"🧙",p:100},{e:"👑",p:150}];
 function renderTienda(){
@@ -790,12 +881,130 @@ $('btnExpBack').onclick=()=>{SND.tap();go('scr-rol');};
 $('btnAdmin').onclick=()=>{window.location.href='dev/tablero.html';};
 
 /* ===== Duelo / reiniciar (eventos) ===== */
-$('btnDuelo').onclick=()=>{SND.init();SND.tap();$('nav').style.display='none';initDueloSetup();};
+$('btnDuelo').onclick=()=>{SND.init();SND.tap();$('nav').style.display='none';abrirDueloOnline();};
 $('btnDueloBack').onclick=()=>{SND.tap();go('scr-rol');};
 $('btnDueloStart').onclick=()=>{SND.init();SND.tap();startDuelo();};
 $('btnDueloReady').onclick=()=>{SND.tap();pintaDuelo();};
 $('btnDueloAgain').onclick=()=>{SND.tap();nuevaRondaDuelo();};
 $('btnDueloExit').onclick=()=>{SND.tap();go('scr-rol');};
+
+/* ================= DUELO ONLINE (Supabase) ================= */
+let OD={preguntas:[],idx:0,aciertos:0,tiempo:0,t:15,timer:null,lock:false,modo:'crear',rivalCodigo:'',expedicion:null,dueloId:null,rivalNombre:'',expira:null};
+let OD_EXP_SEL=null;
+async function abrirDueloOnline(){
+ if(!SB){alert('El duelo en línea necesita conexión a internet.');go('scr-rol');return;}
+ go('scr-duelo-online');
+ $('miCodigo').textContent='KIM-…';
+ $('pendList').innerHTML='<p style="color:var(--dim);font-weight:800;font-size:13px">Cargando…</p>';
+ const perfil=await conectarKimun();
+ $('miCodigo').textContent=perfil?perfil.codigo:'(sin conexión)';
+ cargarPendientes();
+}
+async function cargarPendientes(){
+ const cont=$('pendList');
+ try{
+  const {data,error}=await SB.rpc('kimun_pendientes');if(error)throw error;
+  if(!data||!data.length){cont.innerHTML='<p style="color:var(--dim);font-weight:800;font-size:13px">No tienes desafíos pendientes.</p>';return;}
+  cont.innerHTML='';
+  data.forEach(d=>{const it=document.createElement('div');it.className='pend-item';
+   it.innerHTML=`<div class="em">${d.retador_avatar}</div><div class="pi-body"><div class="pi-n">${d.retador_nombre} te desafió</div><div class="pi-t">⏳ ${restante(d.expira)}</div></div><div class="pi-go">▶</div>`;
+   it.onclick=()=>{SND.tap();responderDesafio(d);};cont.appendChild(it);});
+ }catch(e){cont.innerHTML='<p style="color:var(--pink);font-weight:800;font-size:13px">No se pudo cargar.</p>';}
+}
+function restante(expira){const ms=new Date(expira)-new Date();if(ms<=0)return 'expira pronto';
+ const h=Math.floor(ms/3600000),m=Math.floor((ms%3600000)/60000);return h+'h '+m+'m';}
+function odPreguntas(exp){let all=[],seen=new Set();
+ exp.etapas.forEach(e=>{const oas=e.oas||(e.oa&&e.oa!=='BOSS'?[e.oa]:[]);oas.forEach(oa=>(POOL[oa]||[]).forEach(q=>{if(!seen.has(q.pregunta)){seen.add(q.pregunta);all.push(q);}}));});
+ return pickN(all,8).map(q=>({pregunta:q.pregunta,opciones:q.opciones,correcta:q.correcta,tip:q.tip}));}
+function renderODExp(){const cont=$('odExpSel');cont.innerHTML='';OD_EXP_SEL=null;
+ EXPEDICIONES.filter(e=>e.activa).forEach((e,i)=>{const b=document.createElement('button');
+  b.innerHTML=`<img src="${e.portada}" alt=""> ${e.asignatura}`;
+  b.onclick=()=>{SND.tap();cont.querySelectorAll('button').forEach(x=>x.classList.remove('sel'));b.classList.add('sel');OD_EXP_SEL=e;};
+  if(i===0){b.classList.add('sel');OD_EXP_SEL=e;}cont.appendChild(b);});}
+function abrirCrearDesafio(){renderODExp();$('odCodigo').value='';$('odSetupErr').textContent='';cargarJugadores();go('scr-od-setup');}
+async function cargarJugadores(){
+ const cont=$('odJugadores');cont.innerHTML='<p style="color:var(--dim);font-weight:800;font-size:13px">Cargando…</p>';
+ try{
+  const {data,error}=await SB.rpc('kimun_jugadores');if(error)throw error;
+  if(!data||!data.length){cont.innerHTML='<p style="color:var(--dim);font-weight:800;font-size:13px">Aún no hay otros jugadores.</p>';return;}
+  cont.innerHTML='';
+  data.forEach(j=>{const b=document.createElement('button');
+   b.innerHTML=`<span style="font-size:22px">${j.avatar}</span> ${j.nombre}`+(j.es_bot?'<span class="jb-bot">🤖 práctica</span>':'<span class="jb-bot">👤 jugador</span>');
+   b.onclick=()=>{SND.tap();$('odCodigo').value=j.codigo;cont.querySelectorAll('button').forEach(x=>x.classList.remove('sel'));b.classList.add('sel');$('odSetupErr').textContent='';};
+   cont.appendChild(b);});
+ }catch(e){cont.innerHTML='<p style="color:var(--pink);font-weight:800;font-size:13px">No se pudo cargar la lista.</p>';}
+}
+async function iniciarDesafio(){
+ const codigo=$('odCodigo').value.trim().toUpperCase();$('odSetupErr').textContent='';
+ if(!/^KIM-[A-Z0-9]{4}$/.test(codigo)){$('odSetupErr').textContent='Código inválido (ej: KIM-AB12).';return;}
+ try{const {data,error}=await SB.rpc('kimun_buscar',{p_codigo:codigo});if(error)throw error;
+  if(!data||!data.length){$('odSetupErr').textContent='No existe un jugador con ese código.';return;}
+ }catch(e){$('odSetupErr').textContent='No se pudo validar el código.';return;}
+ await cargarPool(OD_EXP_SEL);
+ const pregs=odPreguntas(OD_EXP_SEL);
+ if(pregs.length<8){$('odSetupErr').textContent='Esa expedición no tiene suficientes preguntas.';return;}
+ OD={preguntas:pregs,idx:0,aciertos:0,tiempo:0,t:15,timer:null,lock:false,modo:'crear',rivalCodigo:codigo,expedicion:OD_EXP_SEL.id,dueloId:null,rivalNombre:'',expira:null};
+ SND.init();odPinta();
+}
+function responderDesafio(d){
+ OD={preguntas:d.preguntas,idx:0,aciertos:0,tiempo:0,t:15,timer:null,lock:false,modo:'responder',rivalCodigo:'',expedicion:d.expedicion,dueloId:d.id,rivalNombre:d.retador_nombre,expira:d.expira};
+ SND.init();odPinta();
+}
+function odPinta(){
+ const P=OD.preguntas[OD.idx];OD.lock=false;
+ $('odTurn').textContent=OD.modo==='crear'?'Tu ronda':('Responde a '+OD.rivalNombre);
+ $('odTag').textContent='Pregunta '+(OD.idx+1)+'/8';
+ $('odText').textContent=P.pregunta;$('odFb').textContent='';$('odFb').className='feedback';
+ $('odProg').style.width=(OD.idx/8*100)+'%';
+ if(OD.modo==='responder'&&OD.expira){$('odReloj').hidden=false;$('odReloj').textContent='⏳ Te quedan '+restante(OD.expira);}else $('odReloj').hidden=true;
+ const orden=P.opciones.map((o,i)=>({o,i})).sort(()=>Math.random()-.5);
+ const box=$('odOpts');box.innerHTML='';
+ orden.forEach((it,k)=>{const b=document.createElement('div');b.className='opt';
+  b.innerHTML=`<span class="key">${'ABCD'[k]}</span>${it.o}`;b.onclick=()=>odResponder(b,it.i===P.correcta);box.appendChild(b);});
+ clearInterval(OD.timer);OD.t=15;$('odTimer').textContent=OD.t;$('odTimer').className='timer';
+ OD.timer=setInterval(()=>{OD.t--;$('odTimer').textContent=OD.t;if(OD.t<=5)$('odTimer').classList.add('low');
+  if(OD.t<=0){clearInterval(OD.timer);odResponder(null,false);}},1000);
+ go('scr-od-quiz');
+}
+function odResponder(el,ok){
+ if(OD.lock)return;OD.lock=true;clearInterval(OD.timer);OD.tiempo+=(15-OD.t);
+ document.querySelectorAll('#odOpts .opt').forEach(o=>o.classList.add('off'));
+ if(ok){OD.aciertos++;if(el){el.classList.remove('off');el.classList.add('ok');}$('odFb').textContent='✓ ¡Correcto!';$('odFb').classList.add('ok');SND.correct();}
+ else{if(el){el.classList.remove('off');el.classList.add('bad');}$('odFb').textContent='✗ Incorrecto';$('odFb').classList.add('bad');SND.wrong();}
+ setTimeout(()=>{OD.idx++;if(OD.idx<8)odPinta();else odFin();},ok?900:1400);
+}
+async function odFin(){
+ clearInterval(OD.timer);
+ try{
+  if(OD.modo==='crear'){
+   const {data,error}=await SB.rpc('kimun_crear_duelo',{p_retado_codigo:OD.rivalCodigo,p_expedicion:OD.expedicion,p_preguntas:OD.preguntas,p_aciertos:OD.aciertos,p_tiempo:OD.tiempo});
+   if(error)throw error;const res=data||{};
+   if(res.tipo==='bot'){
+    const gano=res.ganador==='yo',emp=res.ganador==='empate';
+    $('odResIc').textContent=emp?'🤝':(gano?'🏆':'😿');
+    $('odResTitle').textContent=emp?'¡Empate!':(gano?'¡Ganaste!':'Perdiste');
+    $('odResScore').innerHTML=`Tú: <b style="color:var(--cyan)">${res.mis_aciertos}/${res.total}</b> &nbsp;vs&nbsp; ${res.rival_avatar} ${res.rival_nombre}: <b style="color:var(--cyan)">${res.rival_aciertos}/${res.total}</b>`;
+   }else{
+    $('odResIc').textContent='📨';$('odResTitle').textContent='¡Desafío enviado!';
+    $('odResScore').innerHTML=`Retaste a <b>${OD.rivalCodigo}</b>.<br>Hiciste <b style="color:var(--cyan)">${OD.aciertos}/8</b>.<br>Tiene 24 horas para responder.`;
+   }
+  }else{
+   const {data,error}=await SB.rpc('kimun_responder',{p_id:OD.dueloId,p_aciertos:OD.aciertos,p_tiempo:OD.tiempo});
+   if(error)throw error;const r=Array.isArray(data)?data[0]:data;
+   const gano=r.ganador==='yo',emp=r.ganador==='empate';
+   $('odResIc').textContent=emp?'🤝':(gano?'🏆':'😿');
+   $('odResTitle').textContent=emp?'¡Empate!':(gano?'¡Ganaste!':'Perdiste');
+   $('odResScore').innerHTML=`Tú: <b style="color:var(--cyan)">${r.mis_aciertos}/8</b> &nbsp;vs&nbsp; ${r.retador_avatar} ${r.retador_nombre}: <b style="color:var(--cyan)">${r.retador_aciertos}/8</b>`;
+  }
+ }catch(e){$('odResIc').textContent='⚠️';$('odResTitle').textContent='Ups, algo falló';$('odResScore').textContent=(e.message||'Error');}
+ SND.win();go('scr-od-res');
+}
+$('btnDesafiar').onclick=()=>{SND.tap();abrirCrearDesafio();};
+$('btnODBack').onclick=()=>{SND.tap();go('scr-duelo-online');};
+$('btnODStart').onclick=()=>{SND.tap();iniciarDesafio();};
+$('btnDOBack').onclick=()=>{SND.tap();go('scr-rol');};
+$('btnDueloLocal').onclick=()=>{SND.tap();initDueloSetup();};
+$('btnODExit').onclick=()=>{SND.tap();abrirDueloOnline();};
 (function(){const r=$('btnReset');if(!r)return;r.style.display=hayPartida()?'inline':'none';
  r.onclick=e=>{e.preventDefault();if(confirm('¿Borrar tu progreso y empezar de nuevo?')){borrarPartida();location.reload();}};})();
 

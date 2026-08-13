@@ -179,6 +179,22 @@ el sesgo de posición), asigna IDs por OA y escribe `preguntas.json`.
 - Cobertura: `preguntas / 25` por OA.
 - Revisión: `revisadas / total` (aprobadas por un humano).
 
+## Backend (Supabase)
+
+El **duelo 1v1 en línea** usa Supabase (proyecto en São Paulo). Esquema y funciones
+en `supabase/schema.sql` (pegar en el SQL Editor). Requiere activar el **login
+anónimo** en Authentication → Sign In / Providers.
+
+- **Identidad sin contraseñas:** login anónimo → cada dispositivo es un usuario;
+  perfil con `nombre`, `avatar` y **código de amigo** (`KIM-XXXX`).
+- **Duelos:** se desafía desde una **lista de jugadores** (o por código). Contra
+  **bots** (Vale/Nico/Fran/Diego) el resultado es **instantáneo**; contra
+  **jugadores reales** es **asíncrono (24h)** y el puntaje del retador queda
+  **oculto** hasta que el rival juega (funciones `SECURITY DEFINER`).
+- **Seguridad:** RLS activo; a `duelos` solo se accede vía funciones RPC. La
+  publishable key va en `index.html` (es pública por diseño; no es secreta).
+- **Pendiente:** notificaciones push y ranking real (los datos ya se guardan).
+
 ## Bitácora de sesiones
 
 ### Sesión 1 (2026-08-12)
@@ -289,3 +305,19 @@ Se completaron los tres pendientes que quedaron de la Sesión 2:
   explicación, y casilla "Revisada" para revisión pedagógica en papel.
 - **Pendientes:** revisión pedagógica de los bancos (Historia y Ciencias); un
   Kimün "científico" para el header de Ciencias; contenido de Matemáticas y Lenguaje.
+
+### Sesión 6 (2026-08-13)
+- **Duelo 1v1 EN LÍNEA (backend Supabase) — primer backend del proyecto:** se
+  montó Supabase (proyecto en São Paulo) con login anónimo, perfiles con código
+  de amigo y duelos asíncronos de 24h. Ver `supabase/schema.sql`.
+  - **Asíncrono real:** A desafía, B tiene 24h; el puntaje de A queda **oculto**
+    hasta que B juega (funciones `SECURITY DEFINER`, verificado). 8 preguntas, 15 s.
+  - **Sin fricción de WhatsApp:** se desafía desde una **lista de jugadores**
+    (o por código), no compartiendo enlaces.
+  - **Bots de práctica:** rivales dummy (Vale/Nico/Fran/Diego) que **responden al
+    instante** según su nivel, para poder jugar sin esperar a nadie.
+  - El duelo "en este mismo teléfono" (pásame el celular) sigue disponible.
+  - `index.html` carga `@supabase/supabase-js` (CDN) e incluye la publishable key
+    (pública). Esto deja puesto el cimiento de **login/multiusuario** del roadmap.
+- **Pendientes:** notificaciones push, ranking real (datos ya disponibles);
+  revisión pedagógica de las preguntas; Matemáticas y Lenguaje.
