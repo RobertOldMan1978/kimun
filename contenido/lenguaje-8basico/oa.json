@@ -1,0 +1,57 @@
+{
+  "asignatura": "Lenguaje y Comunicación",
+  "nivel": "8° básico",
+  "codigo_asignatura": "LE08",
+  "fuente": "Bases Curriculares 7° básico a 2° medio — MINEDUC Chile (curriculumnacional.cl)",
+  "url_fuente": "https://www.curriculumnacional.cl/curriculum/7o-basico-2o-medio/lengua-y-literatura/8-basico",
+  "nota_fidelidad": "Códigos y redacción a validar contra el PDF oficial de las Bases Curriculares. Los códigos internos LE08 OA 01-04 son la convención de este proyecto para la expedición 'Tipos de texto y medios'; la redacción literal de los OA oficiales de Lengua y Literatura de 8° básico debe verificarse contra el documento del MINEDUC.",
+  "habilidades_generales": [
+    "Leer comprensivamente",
+    "Localizar, interpretar y reflexionar",
+    "Escribir para comunicar",
+    "Comunicación oral"
+  ],
+  "actitudes": [
+    "Valorar la lectura como fuente de aprendizaje.",
+    "Reflexionar sobre los textos y los medios con actitud crítica.",
+    "Respetar la diversidad de opiniones."
+  ],
+  "unidades": [
+    {
+      "id": "U1",
+      "titulo": "Tipos de texto y medios",
+      "descripcion": "Del texto narrativo a los medios de comunicación y la argumentación.",
+      "oa": ["LE08 OA 01", "LE08 OA 02", "LE08 OA 03", "LE08 OA 04"]
+    }
+  ],
+  "oa": [
+    {
+      "codigo": "LE08 OA 01",
+      "eje": "Lectura",
+      "unidad": "U1",
+      "texto": "Leer y comprender textos narrativos (cuento, novela, mito, leyenda), reconociendo su estructura (inicio, desarrollo y desenlace), los tipos de narrador (omnisciente, protagonista y testigo), los personajes, el ambiente y el propósito del relato.",
+      "conceptos_clave": ["texto narrativo", "cuento", "novela", "mito", "leyenda", "estructura narrativa", "narrador omnisciente", "narrador protagonista", "narrador testigo", "personajes", "ambiente", "propósito del relato"]
+    },
+    {
+      "codigo": "LE08 OA 02",
+      "eje": "Lectura",
+      "unidad": "U1",
+      "texto": "Leer y comprender textos no literarios e informativos (noticia, reportaje, artículo, texto expositivo), identificando su propósito comunicativo de informar, su estructura, la distinción entre hecho y opinión, y elementos como el titular, la entrada (bajada) y el cuerpo.",
+      "conceptos_clave": ["texto no literario", "texto informativo", "noticia", "reportaje", "artículo", "texto expositivo", "propósito de informar", "hecho", "opinión", "titular", "entrada", "cuerpo"]
+    },
+    {
+      "codigo": "LE08 OA 03",
+      "eje": "Lectura",
+      "unidad": "U1",
+      "texto": "Analizar críticamente los medios de comunicación y los mensajes publicitarios y propagandísticos, reconociendo su intención de persuadir, sus recursos persuasivos (eslogan, imagen, apelación emocional) y la diferencia entre publicidad, que promueve un producto, y propaganda, que promueve ideas.",
+      "conceptos_clave": ["medios de comunicación", "publicidad", "propaganda", "persuasión", "intención comunicativa", "eslogan", "apelación emocional", "imagen", "receptor", "lectura crítica"]
+    },
+    {
+      "codigo": "LE08 OA 04",
+      "eje": "Lectura",
+      "unidad": "U1",
+      "texto": "Leer y comprender textos argumentativos y de opinión (columna, carta al director, editorial), identificando la tesis o punto de vista, los argumentos y contraargumentos, los conectores propios de la argumentación y el propósito de convencer al lector.",
+      "conceptos_clave": ["texto argumentativo", "texto de opinión", "columna", "carta al director", "editorial", "tesis", "argumento", "contraargumento", "conectores", "propósito de convencer"]
+    }
+  ]
+}

@@ -2,7 +2,7 @@
   "asignatura": "Ciencias Naturales",
   "nivel": "8° básico",
   "meta_preguntas_por_oa": 25,
-  "total_preguntas": 144,
+  "total_preguntas": 184,
   "revisadas": 0,
   "nota": "Expedición La célula (CN08 OA 01-04). Generadas y verificadas por agentes; opciones barajadas.",
   "preguntas": [
@@ -647,7 +647,7 @@
         "El núcleo"
       ],
       "correcta": 2,
-      "tip": "Los cloroplastos son exclusivos de células que realizan fotosíntesis, como las vegetales.",
+      "tip": "Los cloroplastos aparecen en células vegetales y de algas; la célula animal no los tiene.",
       "revisada": false
     },
     {
@@ -751,15 +751,15 @@
     {
       "id": "cien8-oa02-020",
       "oa": "CN08 OA 02",
-      "pregunta": "¿Cuál es una función de la pared celular en las plantas?",
+      "pregunta": "¿Qué le ocurriría a una célula vegetal si perdiera su pared celular?",
       "opciones": [
-        "Proteger y dar forma y sostén a la célula",
-        "Controlar el material genético",
-        "Realizar la fotosíntesis",
-        "Producir energía mediante respiración"
+        "Perdería rigidez y sostén, quedando más frágil ante los cambios de forma",
+        "Se transformaría en una célula procarionte",
+        "Produciría muchos más cloroplastos",
+        "Dejaría de tener núcleo"
       ],
       "correcta": 0,
-      "tip": "La pared celular rígida protege la célula vegetal y le da forma y soporte estructural.",
+      "tip": "La pared celular da forma y sostén; sin ella, la célula vegetal perdería rigidez y sería más frágil, parecida a una animal.",
       "revisada": false
     },
     {
@@ -891,15 +891,15 @@
     {
       "id": "cien8-oa02-030",
       "oa": "CN08 OA 02",
-      "pregunta": "En la respiración celular de la mitocondria, ¿qué obtiene principalmente la célula?",
+      "pregunta": "¿Cuál es la diferencia entre la respiración celular y la fotosíntesis en una célula vegetal?",
       "opciones": [
-        "Energía",
-        "Luz",
-        "Material genético",
-        "Pared celular"
+        "La respiración celular libera energía en la mitocondria; la fotosíntesis produce alimento con luz en el cloroplasto",
+        "Son exactamente el mismo proceso",
+        "La fotosíntesis ocurre en la mitocondria y la respiración en el cloroplasto",
+        "La respiración celular solo ocurre de noche y no entrega energía"
       ],
       "correcta": 0,
-      "tip": "La respiración celular transforma nutrientes en energía utilizable para la célula.",
+      "tip": "La célula vegetal realiza ambos: fotosíntesis (cloroplasto, produce alimento con luz) y respiración celular (mitocondria, libera energía).",
       "revisada": false
     },
     {
@@ -955,7 +955,7 @@
         "Porque ambas hacen fotosíntesis"
       ],
       "correcta": 2,
-      "tip": "Todas las células eucariontes necesitan energía, por eso animales y vegetales poseen mitocondrias.",
+      "tip": "Las células animales y vegetales necesitan energía, por eso ambas poseen mitocondrias.",
       "revisada": false
     },
     {
@@ -2011,15 +2011,575 @@
     {
       "id": "cien8-oa04-036",
       "oa": "CN08 OA 04",
-      "pregunta": "Una planta de interior inclina sus hojas hacia la ventana con el paso de los días. ¿Qué explica mejor esta observación?",
+      "pregunta": "En una misma planta, el tallo crece hacia la luz y la raíz crece hacia abajo. ¿Cómo se explican estas dos respuestas?",
       "opciones": [
-        "El fototropismo: la planta responde a la dirección de la luz",
-        "La absorción de sales por la raíz",
-        "La transpiración: pierde agua por las hojas",
-        "El gravitropismo: responde a la gravedad"
+        "El tallo por fototropismo (hacia la luz) y la raíz por gravitropismo (hacia la gravedad)",
+        "Ambas se deben al fototropismo",
+        "Ambas se deben al gravitropismo",
+        "Ninguna es una respuesta a un estímulo del ambiente"
       ],
       "correcta": 0,
-      "tip": "La inclinación hacia la luz es fototropismo, una respuesta al estímulo luminoso.",
+      "tip": "Son dos respuestas a estímulos distintos: el tallo responde a la luz (fototropismo positivo) y la raíz a la gravedad (gravitropismo positivo).",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa01-035",
+      "oa": "CN08 OA 01",
+      "pregunta": "Un estudiante mira una gota de agua de charco al microscopio y ve diminutos seres que se mueven. ¿Las observaciones de qué científico está repitiendo?",
+      "opciones": [
+        "Las de van Leeuwenhoek, que observó microorganismos vivos",
+        "Las de Hooke, que observó celdas vacías en el corcho",
+        "Las de Newton, sobre la luz y los colores",
+        "Las de Darwin, sobre la evolución de las especies"
+      ],
+      "correcta": 0,
+      "tip": "Van Leeuwenhoek fue el primero en observar microorganismos vivos ('animálculos') con sus microscopios.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa01-036",
+      "oa": "CN08 OA 01",
+      "pregunta": "¿Qué diferencia hay entre un microscopio de la época de Hooke y un microscopio electrónico actual?",
+      "opciones": [
+        "Ambos muestran exactamente el mismo nivel de detalle",
+        "El de la época de Hooke ya mostraba los organelos internos",
+        "El microscopio electrónico revela estructuras internas que el de Hooke no podía mostrar",
+        "El microscopio moderno ve menos detalle que el de Hooke"
+      ],
+      "correcta": 2,
+      "tip": "Mejores instrumentos entregan nuevas evidencias; el microscopio electrónico muestra detalles invisibles para los primeros microscopios.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa01-037",
+      "oa": "CN08 OA 01",
+      "pregunta": "¿Por qué la teoría celular solo pudo formularse después de la invención del microscopio?",
+      "opciones": [
+        "Porque las células se hicieron más grandes con el tiempo",
+        "Porque se necesitaba un instrumento que ampliara lo invisible para reunir evidencia",
+        "Porque antes los científicos no tenían interés en la vida",
+        "Porque las leyes prohibían observar seres vivos"
+      ],
+      "correcta": 1,
+      "tip": "Las células son microscópicas; sin un instrumento que las ampliara no había evidencia para proponer la teoría.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa01-038",
+      "oa": "CN08 OA 01",
+      "pregunta": "Si mañana apareciera una evidencia nueva que muestra un detalle de las células nunca antes visto, ¿qué debería ocurrir con el modelo celular actual?",
+      "opciones": [
+        "Se debe ignorar la evidencia para no cambiar el modelo",
+        "El modelo antiguo se convierte en una ley imposible de modificar",
+        "Las células cambiarían para ajustarse al modelo",
+        "El modelo se revisa y se actualiza para incluir la nueva evidencia"
+      ],
+      "correcta": 3,
+      "tip": "La ciencia corrige y mejora sus modelos cuando aparece evidencia nueva y confiable.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa01-039",
+      "oa": "CN08 OA 01",
+      "pregunta": "¿Cuál de estas parejas relaciona correctamente al científico con su aporte a la teoría celular?",
+      "opciones": [
+        "Virchow: toda célula proviene de otra célula",
+        "Hooke: descubrió los microorganismos vivos",
+        "Van Leeuwenhoek: propuso que las plantas están hechas de células",
+        "Schwann: inventó el primer microscopio"
+      ],
+      "correcta": 0,
+      "tip": "Virchow aportó que las células se originan a partir de células ya existentes.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa01-040",
+      "oa": "CN08 OA 01",
+      "pregunta": "Un estudiante dibuja un modelo de célula y, tras aprender algo nuevo, borra una parte para agregar otra estructura. Esto se parece a cómo la ciencia...",
+      "opciones": [
+        "Nunca cambia sus ideas una vez escritas",
+        "Copia modelos sin razonar",
+        "Mejora sus modelos cuando aparece nueva evidencia",
+        "Inventa datos sin observar"
+      ],
+      "correcta": 2,
+      "tip": "Los modelos científicos se ajustan y perfeccionan a medida que surge nueva información.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa01-041",
+      "oa": "CN08 OA 01",
+      "pregunta": "Dos estudiantes discuten si una roca está viva. Usando la teoría celular, ¿qué argumento resuelve la duda?",
+      "opciones": [
+        "La roca está viva porque es dura y resistente",
+        "La roca no está formada por células, por eso no es un ser vivo",
+        "Toda la materia del planeta es un ser vivo",
+        "Con la teoría celular no se puede saber"
+      ],
+      "correcta": 1,
+      "tip": "Según la teoría celular, todo ser vivo está formado por células; la roca no las tiene.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa01-042",
+      "oa": "CN08 OA 01",
+      "pregunta": "Bajo el microscopio observas un organismo de una sola célula que se divide en dos. Esta observación apoya directamente el postulado de que...",
+      "opciones": [
+        "Los seres vivos surgen del agua sucia",
+        "Las células no pueden reproducirse",
+        "Solo los animales tienen células",
+        "Toda célula proviene de otra célula preexistente"
+      ],
+      "correcta": 3,
+      "tip": "Ver una célula dividirse en dos es evidencia de que toda célula proviene de otra célula.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa01-043",
+      "oa": "CN08 OA 01",
+      "pregunta": "¿Por qué es correcto afirmar que la teoría celular NO fue obra de una sola persona?",
+      "opciones": [
+        "Porque varios científicos aportaron evidencias en distintas épocas",
+        "Porque la escribió Hooke completa en un solo día",
+        "Porque nunca se usó ninguna evidencia",
+        "Porque las mismas células la redactaron"
+      ],
+      "correcta": 0,
+      "tip": "La teoría celular se construyó como un trabajo colectivo que fue acumulando evidencias con el tiempo.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa01-044",
+      "oa": "CN08 OA 01",
+      "pregunta": "Un microscopio con mejores lentes revela una estructura dentro de las células que nunca se había visto. ¿Cuál es la mejor respuesta científica?",
+      "opciones": [
+        "Negar lo observado porque no estaba en los libros",
+        "Dejar de usar el microscopio",
+        "Incorporar el hallazgo y mejorar el modelo de la célula",
+        "Afirmar que las células desaparecieron"
+      ],
+      "correcta": 2,
+      "tip": "Nueva evidencia confiable se incorpora al modelo para hacerlo más completo y preciso.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa02-037",
+      "oa": "CN08 OA 02",
+      "pregunta": "Una célula debe fabricar grandes cantidades de una proteína. ¿Qué organelo estará especialmente activo?",
+      "opciones": [
+        "Los cloroplastos",
+        "Los ribosomas",
+        "La pared celular",
+        "La vacuola"
+      ],
+      "correcta": 1,
+      "tip": "Los ribosomas son los encargados de sintetizar (fabricar) las proteínas de la célula.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa02-038",
+      "oa": "CN08 OA 02",
+      "pregunta": "Al observar una célula muscular notas que tiene una cantidad muy alta de mitocondrias. ¿Qué te indica esto?",
+      "opciones": [
+        "Que realiza fotosíntesis",
+        "Que no necesita energía",
+        "Que requiere mucha energía para funcionar",
+        "Que su función es almacenar agua"
+      ],
+      "correcta": 2,
+      "tip": "Muchas mitocondrias indican una célula que gasta mucha energía, como las musculares.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa02-039",
+      "oa": "CN08 OA 02",
+      "pregunta": "Observas dos células: una tiene pared celular, cloroplastos y una gran vacuola central; la otra no. ¿Cuál es cuál?",
+      "opciones": [
+        "La primera es vegetal y la segunda es animal",
+        "La primera es animal y la segunda es vegetal",
+        "Ambas son procariontes",
+        "Ambas son bacterias"
+      ],
+      "correcta": 0,
+      "tip": "Pared celular, cloroplastos y vacuola central grande son características de la célula vegetal.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa02-040",
+      "oa": "CN08 OA 02",
+      "pregunta": "Un investigador encuentra una célula sin núcleo definido y sin organelos rodeados por membrana. Comparada con una célula humana, esta célula es...",
+      "opciones": [
+        "Eucarionte, con núcleo definido",
+        "Idéntica a una célula animal",
+        "Una célula vegetal con cloroplastos",
+        "Procarionte, con su material genético libre en el citoplasma"
+      ],
+      "correcta": 3,
+      "tip": "Sin núcleo definido ni organelos con membrana, es una célula procarionte, más simple que la humana (eucarionte).",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa02-041",
+      "oa": "CN08 OA 02",
+      "pregunta": "Si las mitocondrias de una célula dejaran de funcionar, ¿qué ocurriría de manera más directa?",
+      "opciones": [
+        "Produciría más clorofila",
+        "Le faltaría energía para realizar sus funciones",
+        "Fabricaría una pared celular",
+        "Aumentaría su fotosíntesis"
+      ],
+      "correcta": 1,
+      "tip": "La mitocondria produce la energía celular; sin ella, la célula no tendría suficiente energía para funcionar.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa02-042",
+      "oa": "CN08 OA 02",
+      "pregunta": "Quieres construir el modelo de una célula capaz de producir su propio alimento a partir de la luz. ¿Qué estructura no puede faltar?",
+      "opciones": [
+        "Solo mitocondrias, sin cloroplastos",
+        "Ninguna estructura especial",
+        "Cloroplastos, para captar la luz y producir alimento",
+        "Únicamente ribosomas"
+      ],
+      "correcta": 2,
+      "tip": "Los cloroplastos captan la luz y realizan la fotosíntesis, que produce el alimento de la célula vegetal.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa02-043",
+      "oa": "CN08 OA 02",
+      "pregunta": "Un esquema de célula muestra: membrana, citoplasma y material genético libre, sin núcleo. ¿A qué organismo podría corresponder?",
+      "opciones": [
+        "A una bacteria (procarionte)",
+        "A una célula de una hoja",
+        "A una célula muscular humana",
+        "A un glóbulo blanco"
+      ],
+      "correcta": 0,
+      "tip": "El material genético libre y la ausencia de núcleo definido son propios de una célula procarionte, como una bacteria.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa02-044",
+      "oa": "CN08 OA 02",
+      "pregunta": "¿Cuál de estas relaciones entre estructura y función es correcta?",
+      "opciones": [
+        "Vacuola: dirige toda la célula",
+        "Ribosoma: realiza la fotosíntesis",
+        "Cloroplasto: almacena el ADN",
+        "Membrana celular: controla la entrada y salida de sustancias"
+      ],
+      "correcta": 3,
+      "tip": "La membrana celular es una barrera selectiva que regula qué sustancias entran y salen.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa02-045",
+      "oa": "CN08 OA 02",
+      "pregunta": "Si el núcleo de una célula dejara de funcionar, ¿qué se vería más afectado?",
+      "opciones": [
+        "La producción de pared celular en los animales",
+        "El control de las actividades celulares y la información genética",
+        "La entrada de luz a la célula",
+        "El color verde de la célula"
+      ],
+      "correcta": 1,
+      "tip": "El núcleo dirige las actividades de la célula y guarda el material genético; sin él, la célula pierde su centro de control.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa02-046",
+      "oa": "CN08 OA 02",
+      "pregunta": "Un producto bloquea todos los ribosomas de una célula. ¿Qué proceso se detiene principalmente?",
+      "opciones": [
+        "La entrada de agua a la célula",
+        "El almacenamiento en las vacuolas",
+        "La fabricación de proteínas",
+        "La captación de luz"
+      ],
+      "correcta": 2,
+      "tip": "Si se bloquean los ribosomas, la célula no puede sintetizar proteínas.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa03-039",
+      "oa": "CN08 OA 03",
+      "pregunta": "Colocas un trozo de papa en agua dulce y otro trozo igual en agua muy salada. ¿Qué esperas observar al cabo de un rato?",
+      "opciones": [
+        "Ambos trozos quedan exactamente igual",
+        "El de agua salada se hincha y el de agua dulce se arruga",
+        "El de agua salada se arruga y el de agua dulce se mantiene firme o se hincha",
+        "Ambos trozos se disuelven en el agua"
+      ],
+      "correcta": 2,
+      "tip": "El agua salada es hipertónica (sale agua, la papa se arruga); el agua dulce es hipotónica (entra agua, la papa queda firme).",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa03-040",
+      "oa": "CN08 OA 03",
+      "pregunta": "Como modelo de célula, se llena una bolsa con agua salada y se sumerge en un vaso con agua pura. ¿Qué se espera que ocurra?",
+      "opciones": [
+        "El agua sale de la bolsa y esta se arruga",
+        "El agua entra a la bolsa y esta se hincha",
+        "No ocurre ningún cambio",
+        "La sal sale de la bolsa y desaparece"
+      ],
+      "correcta": 1,
+      "tip": "El agua pura es hipotónica respecto al interior salado; por osmosis el agua entra a la bolsa y la hincha.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa03-041",
+      "oa": "CN08 OA 03",
+      "pregunta": "¿En qué se diferencia lo que le ocurre a una célula en un medio hipertónico frente a un medio hipotónico?",
+      "opciones": [
+        "En ambos casos el agua entra a la célula",
+        "En ambos casos el agua sale de la célula",
+        "En el hipertónico entra agua y en el hipotónico sale agua",
+        "En el hipertónico sale agua (se arruga) y en el hipotónico entra agua (se hincha)"
+      ],
+      "correcta": 3,
+      "tip": "Hipertónico: más solutos afuera, el agua sale. Hipotónico: menos solutos afuera, el agua entra.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa03-042",
+      "oa": "CN08 OA 03",
+      "pregunta": "Al echar sal sobre trozos de verdura, al rato sueltan agua y quedan flácidos. ¿Por qué ocurre esto?",
+      "opciones": [
+        "Porque el exterior salado se vuelve hipertónico y el agua sale de las células por osmosis",
+        "Porque la sal fabrica agua nueva dentro de las células",
+        "Porque el exterior se vuelve hipotónico y entra agua",
+        "Porque la sal rompe el núcleo de las células"
+      ],
+      "correcta": 0,
+      "tip": "La sal crea un medio hipertónico; por osmosis el agua sale de las células y la verdura pierde firmeza.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa03-043",
+      "oa": "CN08 OA 03",
+      "pregunta": "Una membrana semipermeable separa una solución de azúcar al 5% (izquierda) de otra al 20% (derecha). ¿Hacia dónde se moverá el agua?",
+      "opciones": [
+        "Hacia el lado del 5%",
+        "El agua no se mueve",
+        "Hacia el lado del 20%, que tiene más solutos",
+        "El azúcar cruza de inmediato hacia el 5%"
+      ],
+      "correcta": 2,
+      "tip": "En la osmosis el agua se mueve hacia el lado más concentrado en solutos (el 20%).",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa03-044",
+      "oa": "CN08 OA 03",
+      "pregunta": "En un medio muy hipotónico, ¿qué diferencia hay entre una célula animal y una vegetal?",
+      "opciones": [
+        "Ambas revientan de la misma forma",
+        "La animal puede reventar; la vegetal se pone turgente pero su pared la protege",
+        "Ambas se arrugan por pérdida de agua",
+        "La vegetal revienta y la animal no cambia"
+      ],
+      "correcta": 1,
+      "tip": "Sin pared, la célula animal puede estallar; la pared celular rígida evita que la vegetal reviente.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa03-045",
+      "oa": "CN08 OA 03",
+      "pregunta": "Dejas pasas (uvas secas) en un vaso con agua pura toda la noche. ¿Qué esperas observar y por qué?",
+      "opciones": [
+        "Se arrugan más, porque pierden agua",
+        "No cambian en nada",
+        "Se disuelven por completo en el agua",
+        "Se hinchan, porque el agua entra por osmosis"
+      ],
+      "correcta": 3,
+      "tip": "El interior de la pasa está más concentrado; por osmosis el agua entra y la pasa se hincha.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa03-046",
+      "oa": "CN08 OA 03",
+      "pregunta": "¿Por qué el suero que se inyecta por vía intravenosa se prepara isotónico respecto a las células de la sangre?",
+      "opciones": [
+        "Para que las células no se hinchen ni se arruguen",
+        "Para que las células revienten rápidamente",
+        "Para que las células pierdan toda su agua",
+        "Para detener la difusión para siempre"
+      ],
+      "correcta": 0,
+      "tip": "Al ser isotónico, no hay movimiento neto de agua y las células conservan su forma y tamaño.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa03-047",
+      "oa": "CN08 OA 03",
+      "pregunta": "El interior de una célula tiene 8% de solutos y el líquido de afuera también tiene 8%. ¿Qué movimiento neto de agua se espera?",
+      "opciones": [
+        "El agua entra y la célula se hincha",
+        "El agua sale y la célula se arruga",
+        "No hay movimiento neto de agua; la célula no cambia de tamaño",
+        "La célula fabrica más solutos para compensar"
+      ],
+      "correcta": 2,
+      "tip": "Concentraciones iguales dentro y fuera: medio isotónico, sin cambio neto de agua.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa03-048",
+      "oa": "CN08 OA 03",
+      "pregunta": "Dejas caer un cubo de azúcar en un vaso con agua quieta y no revuelves. Después de varias horas, ¿cómo estará el sabor del agua?",
+      "opciones": [
+        "Dulce solo en el fondo del vaso",
+        "Dulce de forma pareja en todo el vaso, por difusión",
+        "Sin sabor, porque el azúcar desaparece",
+        "Dulce solo en la superficie"
+      ],
+      "correcta": 1,
+      "tip": "Las partículas de azúcar se difunden desde donde hay más hacia donde hay menos, hasta repartirse de forma pareja.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa04-037",
+      "oa": "CN08 OA 04",
+      "pregunta": "Colocas un tallo de apio blanco (o una flor blanca) en agua con colorante. Al cabo de unas horas, la parte de arriba se ve teñida. ¿Qué demuestra este experimento?",
+      "opciones": [
+        "Que el floema baja los azúcares hacia la raíz",
+        "Que los estomas absorben el colorante del aire",
+        "Que el xilema transporta el agua hacia arriba, desde la base hacia las hojas",
+        "Que la raíz realiza la fotosíntesis"
+      ],
+      "correcta": 2,
+      "tip": "El agua con colorante sube por el xilema desde la base hasta las hojas, tiñendo el recorrido.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa04-038",
+      "oa": "CN08 OA 04",
+      "pregunta": "En un día muy caluroso y seco, una planta cierra sus estomas. ¿Qué consecuencia tiene esto?",
+      "opciones": [
+        "Pierde más agua y aumenta su fotosíntesis",
+        "Absorbe más sales minerales por la hoja",
+        "No cambia nada en la planta",
+        "Pierde menos agua, pero entra menos CO2 y disminuye la fotosíntesis"
+      ],
+      "correcta": 3,
+      "tip": "Al cerrar los estomas la planta se protege de la deshidratación, pero también entra menos CO2 y baja la fotosíntesis.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa04-039",
+      "oa": "CN08 OA 04",
+      "pregunta": "Pones una plántula dentro de una caja cerrada con un solo orificio por donde entra luz. ¿Qué esperas que ocurra con su crecimiento?",
+      "opciones": [
+        "El tallo crece inclinándose hacia el orificio de luz",
+        "La raíz crece saliendo hacia la luz",
+        "La planta deja de crecer por completo",
+        "El tallo crece alejándose de la luz"
+      ],
+      "correcta": 0,
+      "tip": "Por fototropismo positivo, el tallo se inclina hacia la única fuente de luz disponible.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa04-040",
+      "oa": "CN08 OA 04",
+      "pregunta": "¿Cuál de estas afirmaciones compara correctamente el xilema y el floema?",
+      "opciones": [
+        "El xilema lleva azúcares y el floema lleva agua",
+        "El xilema sube agua y sales; el floema reparte los azúcares de la fotosíntesis",
+        "Ambos transportan solamente agua",
+        "El floema absorbe la luz y el xilema hace la fotosíntesis"
+      ],
+      "correcta": 1,
+      "tip": "El xilema conduce savia bruta (agua y sales) hacia arriba; el floema reparte savia elaborada (azúcares).",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa04-041",
+      "oa": "CN08 OA 04",
+      "pregunta": "Si se bloquean los vasos de xilema de una planta, ¿qué les ocurre a las hojas?",
+      "opciones": [
+        "Reciben más agua que antes",
+        "Producen muchas más semillas",
+        "No reciben agua y se marchitan",
+        "Aumentan su transpiración"
+      ],
+      "correcta": 2,
+      "tip": "Sin xilema el agua no llega a las hojas, por eso la planta se marchita.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa04-042",
+      "oa": "CN08 OA 04",
+      "pregunta": "Cubres una planta con hojas usando una bolsa plástica transparente. Al cabo de un rato aparecen gotas de agua en el interior de la bolsa. ¿A qué se debe?",
+      "opciones": [
+        "A la fotosíntesis, que produce agua líquida",
+        "Al floema, que expulsa agua por las hojas",
+        "A la raíz, que empuja agua fuera de la hoja",
+        "A la transpiración: la hoja libera vapor de agua por los estomas y luego se condensa"
+      ],
+      "correcta": 3,
+      "tip": "El vapor de agua que sale por los estomas (transpiración) se condensa en la bolsa formando gotas.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa04-043",
+      "oa": "CN08 OA 04",
+      "pregunta": "Acuestas una maceta de lado. Con los días, ¿cómo crecen la raíz y el tallo?",
+      "opciones": [
+        "La raíz crece hacia abajo y el tallo hacia arriba",
+        "Ambos crecen hacia abajo",
+        "Ambos crecen de lado, sin ninguna dirección",
+        "La raíz crece hacia arriba y el tallo hacia abajo"
+      ],
+      "correcta": 0,
+      "tip": "Por gravitropismo, la raíz crece a favor de la gravedad (hacia abajo) y el tallo en contra (hacia arriba).",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa04-044",
+      "oa": "CN08 OA 04",
+      "pregunta": "¿Por qué muchas hojas son anchas y planas y además tienen abundantes cloroplastos?",
+      "opciones": [
+        "Para anclar la planta al suelo",
+        "Para captar más luz y realizar la fotosíntesis",
+        "Para absorber agua directamente del aire",
+        "Para almacenar las semillas"
+      ],
+      "correcta": 1,
+      "tip": "La forma ancha y plana y la abundancia de cloroplastos aumentan la captación de luz para la fotosíntesis.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa04-045",
+      "oa": "CN08 OA 04",
+      "pregunta": "Una planta adaptada a un desierto muy seco probablemente tendría...",
+      "opciones": [
+        "Muchísimos estomas abiertos durante todo el día",
+        "Estomas solo en la cara superior, muy expuesta al sol",
+        "Pocos estomas o cerrados gran parte del día, para perder menos agua",
+        "Ningún estoma y aun así mucha fotosíntesis"
+      ],
+      "correcta": 2,
+      "tip": "En ambientes secos conviene reducir la transpiración, por eso las plantas limitan la apertura de estomas.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa04-046",
+      "oa": "CN08 OA 04",
+      "pregunta": "Se mantiene una planta bien regada, pero en total oscuridad. ¿Qué ocurre con su fotosíntesis?",
+      "opciones": [
+        "Aumenta porque tiene mucha agua disponible",
+        "Sigue igual, sin ningún problema",
+        "Produce más oxígeno que nunca",
+        "Se detiene o disminuye, porque falta la luz necesaria"
+      ],
+      "correcta": 3,
+      "tip": "La luz es una materia prima indispensable de la fotosíntesis; sin ella el proceso no puede realizarse.",
       "revisada": false
     }
   ]

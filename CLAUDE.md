@@ -29,9 +29,11 @@ en línea. Historia de v0 al detalle en la Bitácora (abajo).
 **Jugable hoy:**
 - Inicio con selección **Jugador / Duelo 1v1 / Admin** y el rostro de la mascota
   **Kimün** (zorro; `assets/kimun.png`, con expresiones por respuesta).
-- **Expediciones data-driven** (arreglo `EXPEDICIONES`, progreso por ruta):
-  Historia "Los europeos llegan a América" (OA04-07) y Ciencias "La célula"
-  (CN08 OA01-04). Regla: **4 etapas + 1 jefe (5 nodos)**.
+- **Expediciones data-driven** (arreglo `EXPEDICIONES`, progreso por ruta),
+  **4 jugables**: Historia "Los europeos llegan a América" (OA04-07),
+  Matemáticas "Álgebra y ecuaciones" (MA08 OA06-09), Ciencias "La célula"
+  (CN08 OA01-04) y Lenguaje "Tipos de texto y medios" (LE08 OA01-04). Regla:
+  **4 etapas + 1 jefe (5 nodos)**.
 - Quiz: 6 preguntas al azar/etapa, timer 15 s, pasa con 66%, 3 estrellas. Al
   fallar revela la respuesta correcta + explicación y botón "Continuar". Kimün
   comenta un dato al iniciar la ruta.
@@ -41,9 +43,12 @@ en línea. Historia de v0 al detalle en la Bitácora (abajo).
 - **Duelo 1v1:** en el mismo teléfono y **en línea asíncrono (Supabase)** con
   código de amigo, lista de jugadores, bots de práctica y reto de 24h.
 
-**Contenido:** Historia **663 preguntas (revisadas 663/663)** + Ciencias **144
-(sin revisar)**. **Herramientas dev:** tablero con clave (`dev/tablero.html`) y
-scripts (`consolidar-pool`, `aplicar-revisadas`, `generar-pdf-preguntas`,
+**Contenido:** Historia **663 (revisadas 663/663)** · Matemáticas **168 (sin
+revisar)** · Ciencias **184 (sin revisar)** · Lenguaje **168 (sin revisar)**.
+Los tres bancos nuevos incorporaron ítems de mayor orden a partir de una revisión
+pedagógica externa (ver Sesión 8). **Herramientas dev:** tablero con clave
+(`dev/tablero.html`) y scripts (`consolidar-pool`, `aplicar-revisadas`,
+`generar-pdf-preguntas` —ahora por asignatura y con `--sin-revisar`—,
 `generar-tablero`).
 
 ## Decisiones de diseño
@@ -85,9 +90,10 @@ Orden tentativo, sujeto a prioridad de "verlo funcionar y atractivo" primero:
 - Múltiples asignaturas y niveles como expediciones independientes. **Motor
   data-driven listo:** el arreglo `EXPEDICIONES` (en `index.html`) define cada
   ruta (etapas → OA + contenido + portada) con progreso independiente por ruta;
-  hay una **plantilla** en `contenido/_plantilla/` para clonar la siguiente. Falta
-  generar el contenido (OA + pool de preguntas) de Matemáticas / Ciencias /
-  Lenguaje y activarlas.
+  hay una **plantilla** en `contenido/_plantilla/` para clonar la siguiente.
+  **Hecho:** Historia, Matemáticas, Ciencias y Lenguaje ya están generadas y
+  activas. Falta sumar más unidades/niveles y completar la revisión pedagógica
+  de los tres bancos nuevos.
 
 ## Reglas de trabajo
 
@@ -340,3 +346,35 @@ Se completaron los tres pendientes que quedaron de la Sesión 2:
   ya no aparece como asignatura).
 - **Pendientes:** revisión pedagógica de Ciencias; Matemáticas y Lenguaje;
   notificaciones push y ranking real del duelo.
+
+### Sesión 8 (2026-08-13)
+- **Dos expediciones nuevas (clonando la plantilla, solo datos):**
+  - **Matemáticas · "Álgebra y ecuaciones"** (`contenido/matematicas-8basico/`):
+    OA MA08 06-09 (lenguaje algebraico, expresiones, ecuaciones, inecuaciones).
+  - **Lenguaje · "Tipos de texto y medios"** (`contenido/lenguaje-8basico/`):
+    OA LE08 01-04 (texto narrativo, textos informativos, medios/publicidad,
+    argumentación).
+  - Generadas por agentes en paralelo (120 preguntas c/u), activadas en
+    `EXPEDICIONES` (`index.html`). El motor NO se tocó. Ya hay **4 expediciones
+    jugables** (20 nodos). Probadas en el navegador (pool + mapa OK).
+- **Revisión pedagógica externa aplicada a los 3 bancos sin revisar** (Matemáticas,
+  Ciencias y Lenguaje). Los documentos (`Recomendaciones_*_8Basico.docx`) NO
+  reportaron claves erróneas: pidieron mejoras de composición. Criterio elegido:
+  mantener el banco, corregir lo puntual y **agregar ítems de mayor orden**.
+  - **Matemáticas → 168:** corregida la representación en recta numérica
+    (círculo abierto/cerrado + intervalo); +48 ítems (razonamiento, análisis de
+    errores, aplicación con contexto, representación).
+  - **Ciencias → 184:** suavizadas formulaciones demasiado absolutas y reducida la
+    repetición; +40 ítems (aplicación experimental, análisis, comparación).
+  - **Lenguaje → 168:** eliminadas ambigüedades y varias preguntas de memoria
+    convertidas a aplicación; +48 ítems (comprensión con fragmento breve,
+    inferencia, análisis de publicidad).
+  - Los tres siguen **sin revisión humana** (`revisada:false`); la aprobación se
+    hace luego con el tablero → `aplicar-revisadas.py`.
+- **`scripts/generar-pdf-preguntas.py` generalizado:** funciona por asignatura
+  (`python scripts/generar-pdf-preguntas.py <carpeta>`) y con `--sin-revisar`
+  exporta un PDF por asignatura con solo lo pendiente. Los PDF quedan en `dev/`
+  (ignorados por git; son regenerables).
+- **Pendientes:** revisión pedagógica humana de Matemáticas, Ciencias y Lenguaje;
+  un Kimün "científico" para el header de Ciencias; probar el duelo en 2 celulares;
+  notificaciones push y ranking real; limpiar perfiles de prueba en Supabase.

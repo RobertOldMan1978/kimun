@@ -15,3 +15,6 @@ scripts/auto-commit.log
 
 # Banco de pruebas temporal del compañero (no se publica)
 demo-companero.html
+
+# PDF de preguntas generados (regenerables con generar-pdf-preguntas.py)
+dev/*.pdf

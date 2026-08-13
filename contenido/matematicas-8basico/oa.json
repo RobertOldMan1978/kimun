@@ -1,0 +1,93 @@
+{
+  "asignatura": "Matemática",
+  "nivel": "8° básico",
+  "codigo_asignatura": "MA08",
+  "fuente": "Bases Curriculares 7° básico a 2° medio — MINEDUC Chile (curriculumnacional.cl)",
+  "url_fuente": "https://www.curriculumnacional.cl/curriculum/7o-basico-2o-medio/matematica/8-basico",
+  "nota_fidelidad": "Códigos y redacción a validar contra el PDF oficial de las Bases Curriculares. Expedición: Álgebra y ecuaciones (MA08 OA 06-09). Los números de código (06-09) son la convención interna de este proyecto para esta expedición; la redacción literal de los OA debe verificarse contra el documento oficial del MINEDUC.",
+  "habilidades_generales": [
+    "Resolver problemas",
+    "Modelar",
+    "Representar",
+    "Argumentar y comunicar"
+  ],
+  "actitudes": [
+    "Abordar de manera flexible y creativa la búsqueda de soluciones.",
+    "Demostrar interés y perseverancia.",
+    "Trabajar en equipo con responsabilidad."
+  ],
+  "unidades": [
+    {
+      "id": "U1",
+      "titulo": "Álgebra y ecuaciones",
+      "descripcion": "Del lenguaje algebraico a la resolución de ecuaciones e inecuaciones lineales.",
+      "oa": ["MA08 OA 06", "MA08 OA 07", "MA08 OA 08", "MA08 OA 09"]
+    }
+  ],
+  "oa": [
+    {
+      "codigo": "MA08 OA 06",
+      "eje": "Álgebra y funciones",
+      "unidad": "U1",
+      "texto": "Utilizar lenguaje algebraico para traducir enunciados verbales a expresiones algebraicas, generalizar patrones numéricos y valorizar expresiones reemplazando las variables por números dados.",
+      "conceptos_clave": [
+        "lenguaje algebraico",
+        "variable o incógnita",
+        "expresión algebraica",
+        "traducción de enunciados",
+        "generalización de patrones",
+        "valorización de expresiones",
+        "término y coeficiente",
+        "el doble, el triple, la mitad"
+      ]
+    },
+    {
+      "codigo": "MA08 OA 07",
+      "eje": "Álgebra y funciones",
+      "unidad": "U1",
+      "texto": "Operar con expresiones algebraicas: reducir términos semejantes, sumar y restar expresiones, y multiplicar una expresión por un término aplicando la propiedad distributiva.",
+      "conceptos_clave": [
+        "términos semejantes",
+        "reducción de términos",
+        "adición de expresiones",
+        "sustracción de expresiones",
+        "propiedad distributiva",
+        "multiplicación por un término",
+        "coeficiente y parte literal",
+        "eliminar paréntesis"
+      ]
+    },
+    {
+      "codigo": "MA08 OA 08",
+      "eje": "Álgebra y funciones",
+      "unidad": "U1",
+      "texto": "Resolver ecuaciones lineales de primer grado con una incógnita, de la forma ax + b = c y con la incógnita en ambos lados, y aplicarlas a la resolución de problemas de la vida cotidiana.",
+      "conceptos_clave": [
+        "ecuación lineal",
+        "incógnita",
+        "primer grado",
+        "términos a ambos lados",
+        "operaciones inversas",
+        "transposición de términos",
+        "solución de una ecuación",
+        "planteo de problemas"
+      ]
+    },
+    {
+      "codigo": "MA08 OA 09",
+      "eje": "Álgebra y funciones",
+      "unidad": "U1",
+      "texto": "Resolver inecuaciones lineales de primer grado con una incógnita, representar el conjunto solución en la recta numérica e interpretar la solución en el contexto de un problema.",
+      "conceptos_clave": [
+        "inecuación lineal",
+        "desigualdad",
+        "signos < , > , ≤ , ≥",
+        "conjunto solución",
+        "recta numérica",
+        "invertir el signo al dividir por negativo",
+        "interpretación del resultado",
+        "restricciones de un problema"
+      ]
+    }
+  ]
+}

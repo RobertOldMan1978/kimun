@@ -6,7 +6,15 @@ Agrupa por OA, muestra cada pregunta con sus 4 opciones (marca la correcta),
 la explicación (tip) y una casilla "Revisada: [   ]" para aprobar en papel.
 
 Uso:
-    python scripts/generar-pdf-preguntas.py [ruta_salida.pdf]
+    # Una asignatura (banco completo):
+    python scripts/generar-pdf-preguntas.py <carpeta-asignatura> [salida.pdf]
+    #   ej: python scripts/generar-pdf-preguntas.py ciencias-8basico
+
+    # Todas las asignaturas con preguntas SIN revisar (un PDF por asignatura):
+    python scripts/generar-pdf-preguntas.py --sin-revisar
+
+    # Sin argumentos: banco completo de Historia (compatibilidad).
+    python scripts/generar-pdf-preguntas.py [salida.pdf]
 
 Requiere:  pip install fpdf2
 """
@@ -16,8 +24,7 @@ from collections import OrderedDict
 from fpdf import FPDF, XPos, YPos
 
 RAIZ = Path(__file__).resolve().parent.parent
-PREG = RAIZ / "contenido" / "historia-8basico" / "preguntas.json"
-OA   = RAIZ / "contenido" / "historia-8basico" / "oa.json"
+CONTENIDO = RAIZ / "contenido"
 
 
 def fuente():
@@ -34,12 +41,27 @@ def oa_num(c):
     except Exception: return 999
 
 
-def main():
-    preg = json.load(open(PREG, encoding="utf-8"))
-    oa   = json.load(open(OA, encoding="utf-8"))
-    oa_map = {o["codigo"]: o for o in oa["oa"]}
-    reg, bold = fuente()
+def carpetas_asignaturas():
+    """Carpetas de contenido/ (ignora las que empiezan con '_')."""
+    return sorted(d.name for d in CONTENIDO.iterdir()
+                  if d.is_dir() and not d.name.startswith("_")
+                  and (d / "preguntas.json").exists())
 
+
+def generar_pdf(carpeta, salida, solo_sin_revisar=False):
+    base = CONTENIDO / carpeta
+    preg = json.load(open(base / "preguntas.json", encoding="utf-8"))
+    oa_path = base / "oa.json"
+    oa = json.load(open(oa_path, encoding="utf-8")) if oa_path.exists() else {"oa": []}
+    oa_map = {o["codigo"]: o for o in oa.get("oa", [])}
+
+    preguntas = preg["preguntas"]
+    if solo_sin_revisar:
+        preguntas = [q for q in preguntas if not q.get("revisada", False)]
+    if not preguntas:
+        return None  # nada que exportar
+
+    reg, bold = fuente()
     pdf = FPDF(format="A4")
     pdf.set_auto_page_break(True, margin=15)
     pdf.add_font("U", "", reg)
@@ -50,16 +72,20 @@ def main():
         pdf.set_font("U", style, size); pdf.set_text_color(*rgb)
         pdf.multi_cell(0, h, txt, new_x=XPos.LMARGIN, new_y=YPos.NEXT)
 
+    asignatura = preg.get("asignatura", oa.get("asignatura", carpeta))
+    nivel = preg.get("nivel", oa.get("nivel", ""))
+
     # Portada
     mc(10, "KIMÜN — Banco de preguntas", "B", 20)
-    mc(8, "Historia, Geografía y Ciencias Sociales · 8° básico", "", 13)
-    mc(8, f"Total: {len(preg['preguntas'])} preguntas · meta {preg.get('meta_preguntas_por_oa', 25)} por OA", "", 11)
+    mc(8, f"{asignatura} · {nivel}", "", 13)
+    etiqueta = "SIN REVISAR" if solo_sin_revisar else "banco completo"
+    mc(8, f"Total: {len(preguntas)} preguntas ({etiqueta}) · meta {preg.get('meta_preguntas_por_oa', 25)} por OA", "", 11)
     pdf.ln(2)
     mc(6, "Revisa cada pregunta y marca la casilla [ X ] de las que apruebes. "
           "La opción correcta va en negrita y con '(correcta)'.", "", 10, (80, 80, 80))
 
     grupos = OrderedDict()
-    for q in preg["preguntas"]:
+    for q in preguntas:
         grupos.setdefault(q["oa"], []).append(q)
 
     letras = "ABCD"
@@ -78,10 +104,39 @@ def main():
             mc(5, f"    Explicación: {q.get('tip','')}", "", 9, (70, 70, 70))
             mc(5, "    Revisada: [   ]", "", 9, (120, 120, 120))
 
-    salida = Path(sys.argv[1]) if len(sys.argv) > 1 else (RAIZ / "dev" / "preguntas-historia-8basico.pdf")
     salida.parent.mkdir(parents=True, exist_ok=True)
     pdf.output(str(salida))
-    print("PDF generado:", salida)
+    return len(preguntas)
+
+
+def main():
+    args = sys.argv[1:]
+
+    # Modo: todas las asignaturas con preguntas SIN revisar
+    if args and args[0] == "--sin-revisar":
+        generados = []
+        for carpeta in carpetas_asignaturas():
+            salida = RAIZ / "dev" / f"preguntas-sin-revisar-{carpeta}.pdf"
+            n = generar_pdf(carpeta, salida, solo_sin_revisar=True)
+            if n:
+                generados.append((carpeta, n, salida))
+        if not generados:
+            print("No hay preguntas sin revisar en ninguna asignatura.")
+            return
+        for carpeta, n, salida in generados:
+            print(f"PDF generado: {salida}  ({n} preguntas sin revisar)")
+        return
+
+    # Modo: una asignatura concreta (o Historia por compatibilidad)
+    if args and (CONTENIDO / args[0]).is_dir():
+        carpeta = args[0]
+        salida = Path(args[1]) if len(args) > 1 else (RAIZ / "dev" / f"preguntas-{carpeta}.pdf")
+    else:
+        carpeta = "historia-8basico"
+        salida = Path(args[0]) if args else (RAIZ / "dev" / "preguntas-historia-8basico.pdf")
+
+    n = generar_pdf(carpeta, salida)
+    print("PDF generado:", salida, f"({n} preguntas)")
 
 
 if __name__ == "__main__":

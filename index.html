@@ -563,7 +563,15 @@ const EXPEDICIONES=[
      {oa:"HI08 OA 07",nombre:"Un mundo nuevo",icono:"🌍",n:6},
      {oa:"BOSS",nombre:"⚡ JEFE FINAL",icono:"🐲",n:8,oas:["HI08 OA 04","HI08 OA 05","HI08 OA 06","HI08 OA 07"]},
    ]},
- { id:'mate-8b', asignatura:'Matemáticas', nivel:'Próximamente', portada:'assets/portada-matematicas.png', contenido:'', activa:false, etapas:[] },
+ { id:'mate-algebra', asignatura:'Matemáticas', nivel:'8° Básico · Álgebra y ecuaciones',
+   portada:'assets/portada-matematicas.png', contenido:'contenido/matematicas-8basico/preguntas.json', activa:true,
+   etapas:[
+     {oa:"MA08 OA 06", nombre:"Lenguaje algebraico", icono:"🔤", n:6},
+     {oa:"MA08 OA 07", nombre:"Expresiones algebraicas", icono:"➕", n:6},
+     {oa:"MA08 OA 08", nombre:"Ecuaciones lineales", icono:"⚖️", n:6},
+     {oa:"MA08 OA 09", nombre:"Inecuaciones", icono:"📉", n:6},
+     {oa:"BOSS", nombre:"⚡ JEFE: Álgebra", icono:"🧮", n:8, oas:["MA08 OA 06","MA08 OA 07","MA08 OA 08","MA08 OA 09"]},
+   ]},
  { id:'cien-celula', asignatura:'Ciencias', nivel:'8° Básico · La célula',
    portada:'assets/portada-ciencias.png', contenido:'contenido/ciencias-8basico/preguntas.json', activa:true,
    etapas:[
@@ -573,7 +581,15 @@ const EXPEDICIONES=[
      {oa:"CN08 OA 04", nombre:"Las plantas", icono:"🌱", n:6},
      {oa:"BOSS", nombre:"⚡ JEFE: La célula", icono:"🧬", n:8, oas:["CN08 OA 01","CN08 OA 02","CN08 OA 03","CN08 OA 04"]},
    ]},
- { id:'leng-8b', asignatura:'Lenguaje',    nivel:'Próximamente', portada:'assets/portada-lenguaje.png',    contenido:'', activa:false, etapas:[] },
+ { id:'leng-textos', asignatura:'Lenguaje', nivel:'8° Básico · Tipos de texto y medios',
+   portada:'assets/portada-lenguaje.png', contenido:'contenido/lenguaje-8basico/preguntas.json', activa:true,
+   etapas:[
+     {oa:"LE08 OA 01", nombre:"El texto narrativo", icono:"📖", n:6},
+     {oa:"LE08 OA 02", nombre:"Textos informativos", icono:"📰", n:6},
+     {oa:"LE08 OA 03", nombre:"Medios y publicidad", icono:"📣", n:6},
+     {oa:"LE08 OA 04", nombre:"Argumentar y opinar", icono:"💬", n:6},
+     {oa:"BOSS", nombre:"⚡ JEFE: Textos y medios", icono:"🎭", n:8, oas:["LE08 OA 01","LE08 OA 02","LE08 OA 03","LE08 OA 04"]},
+   ]},
 ];
 let EXP_ACT=EXPEDICIONES[0];          // expedición activa
 let EXPEDICION=EXP_ACT.etapas;         // etapas de la expedición activa

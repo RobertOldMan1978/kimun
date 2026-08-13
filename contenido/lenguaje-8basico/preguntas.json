@@ -1,0 +1,1522 @@
+{
+  "asignatura": "Lenguaje y Comunicación",
+  "nivel": "8° básico",
+  "meta_preguntas_por_oa": 25,
+  "total_preguntas": 168,
+  "revisadas": 0,
+  "nota": "Expedición Tipos de texto y medios (LE08 OA 01-04). Generadas por agente; opciones barajadas. Sin revisión pedagógica humana.",
+  "preguntas": [
+    {
+      "id": "leng8-oa01-001",
+      "oa": "LE08 OA 01",
+      "pregunta": "¿Cuáles son las tres partes de la estructura de un texto narrativo?",
+      "opciones": ["Inicio, desarrollo y desenlace", "Titular, entrada y cuerpo", "Introducción, nudo y opinión", "Tesis, argumentos y conclusión"],
+      "correcta": 0,
+      "tip": "La narración se organiza en inicio (presentación), desarrollo (conflicto) y desenlace (resolución).",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa01-002",
+      "oa": "LE08 OA 01",
+      "pregunta": "¿Qué tipo de narrador cuenta la historia en primera persona ('yo') porque es el personaje principal que vive los hechos?",
+      "opciones": ["Narrador omnisciente", "Narrador protagonista", "Narrador testigo", "Narrador secundario"],
+      "correcta": 1,
+      "tip": "El narrador protagonista es el personaje principal y relata en primera persona lo que vive; el testigo, en cambio, solo observa a otros.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa01-003",
+      "oa": "LE08 OA 01",
+      "pregunta": "¿Qué narrador lo sabe todo, incluso los pensamientos y sentimientos de los personajes?",
+      "opciones": ["Narrador testigo", "Narrador protagonista", "Narrador omnisciente", "Narrador en segunda persona"],
+      "correcta": 2,
+      "tip": "'Omnisciente' significa 'que lo sabe todo': conoce el interior de cada personaje y todos los hechos.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa01-004",
+      "oa": "LE08 OA 01",
+      "pregunta": "Un narrador que observa los hechos desde afuera, como un espectador, y cuenta solo lo que ve, es un narrador:",
+      "opciones": ["omnisciente", "protagonista", "principal", "testigo"],
+      "correcta": 3,
+      "tip": "El narrador testigo relata como observador externo; no conoce el interior de los personajes.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa01-005",
+      "oa": "LE08 OA 01",
+      "pregunta": "En un relato, el lugar y el tiempo donde ocurren los hechos se llaman:",
+      "opciones": ["ambiente", "desenlace", "narrador", "argumento"],
+      "correcta": 0,
+      "tip": "El ambiente es el espacio y el tiempo en que se desarrolla la historia.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa01-006",
+      "oa": "LE08 OA 01",
+      "pregunta": "'Los antiguos contaban que un dios separó el cielo de la tierra y creó a los primeros seres humanos.' Este relato tradicional que explica el origen del mundo es un:",
+      "opciones": ["mito", "leyenda", "noticia", "fábula"],
+      "correcta": 0,
+      "tip": "El mito narra orígenes del mundo o de la humanidad con dioses y seres sobrenaturales.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa01-007",
+      "oa": "LE08 OA 01",
+      "pregunta": "¿Qué tipo de relato tradicional mezcla hechos reales con elementos fantásticos y suele situarse en un lugar concreto?",
+      "opciones": ["mito", "novela", "leyenda", "crónica"],
+      "correcta": 2,
+      "tip": "La leyenda combina realidad y fantasía, y se ancla en un lugar o época determinados.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa01-008",
+      "oa": "LE08 OA 01",
+      "pregunta": "En la estructura narrativa, ¿en qué parte se presenta a los personajes y el ambiente antes del conflicto?",
+      "opciones": ["desenlace", "desarrollo", "clímax", "inicio"],
+      "correcta": 3,
+      "tip": "El inicio presenta a los personajes, el ambiente y la situación previa al conflicto.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa01-009",
+      "oa": "LE08 OA 01",
+      "pregunta": "En la estructura narrativa, el momento en que se resuelve el conflicto se llama:",
+      "opciones": ["desenlace", "inicio", "planteamiento", "presentación"],
+      "correcta": 0,
+      "tip": "El desenlace cierra la historia y resuelve el conflicto planteado.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa01-010",
+      "oa": "LE08 OA 01",
+      "pregunta": "En una historia, todos los hechos giran en torno a Ana, que busca a su perro perdido. Ana cumple el rol de:",
+      "opciones": ["antagonista", "protagonista", "narradora testigo", "personaje secundario"],
+      "correcta": 1,
+      "tip": "El protagonista es el personaje central en torno al cual gira la historia; el antagonista se le opone.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa01-011",
+      "oa": "LE08 OA 01",
+      "pregunta": "En un relato, un hechicero malvado intenta impedir que la heroína alcance su meta. El hechicero cumple el rol de:",
+      "opciones": ["narrador", "protagonista", "antagonista", "testigo"],
+      "correcta": 2,
+      "tip": "El antagonista es quien enfrenta o dificulta la meta del protagonista.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa01-012",
+      "oa": "LE08 OA 01",
+      "pregunta": "¿Cuál de estos es un texto narrativo?",
+      "opciones": ["La noticia", "El afiche publicitario", "La editorial", "El cuento"],
+      "correcta": 3,
+      "tip": "El cuento narra hechos protagonizados por personajes; los demás informan, persuaden u opinan.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa01-013",
+      "oa": "LE08 OA 01",
+      "pregunta": "'Yo caminaba solo cuando escuché un grito a mis espaldas.' ¿Qué tipo de narrador se reconoce en esta oración?",
+      "opciones": ["Narrador protagonista", "Narrador omnisciente", "Narrador testigo", "Narrador de tercera persona"],
+      "correcta": 0,
+      "tip": "El uso de 'yo' y el hecho de vivir la acción indican un narrador protagonista.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa01-014",
+      "oa": "LE08 OA 01",
+      "pregunta": "'María no sabía que, a esa misma hora, su hermano pensaba en ella con nostalgia.' ¿Qué narrador permite conocer los pensamientos de ambos personajes?",
+      "opciones": ["protagonista", "omnisciente", "testigo", "secundario"],
+      "correcta": 1,
+      "tip": "Solo el narrador omnisciente conoce el interior de todos los personajes a la vez.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa01-015",
+      "oa": "LE08 OA 01",
+      "pregunta": "¿Cuál es el propósito principal de un texto narrativo?",
+      "opciones": ["Informar un hecho", "Convencer al lector", "Contar una historia", "Vender un producto"],
+      "correcta": 2,
+      "tip": "El texto narrativo busca relatar hechos, reales o ficticios, protagonizados por personajes.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa01-016",
+      "oa": "LE08 OA 01",
+      "pregunta": "En un cuento, la parte donde el conflicto crece y ocurren los principales acontecimientos se llama:",
+      "opciones": ["inicio", "desenlace", "entrada", "desarrollo"],
+      "correcta": 3,
+      "tip": "El desarrollo (o nudo) presenta y hace crecer el conflicto de la historia.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa01-017",
+      "oa": "LE08 OA 01",
+      "pregunta": "¿Qué diferencia principal hay entre un cuento y una novela?",
+      "opciones": ["La novela es más extensa y compleja que el cuento", "El cuento no tiene personajes", "La novela no tiene narrador", "El cuento siempre relata hechos reales"],
+      "correcta": 0,
+      "tip": "Ambos son narrativos; la novela es más larga, con más personajes y tramas que el cuento.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa01-018",
+      "oa": "LE08 OA 01",
+      "pregunta": "Los seres que realizan las acciones en un relato se llaman:",
+      "opciones": ["ambientes", "personajes", "narradores", "conflictos"],
+      "correcta": 1,
+      "tip": "Los personajes son quienes ejecutan las acciones dentro de la historia.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa01-019",
+      "oa": "LE08 OA 01",
+      "pregunta": "'Vi cómo el anciano entregaba la carta, aunque nunca supe qué decía.' El narrador cuenta lo que observa sin conocer el interior de los personajes. Es un narrador:",
+      "opciones": ["omnisciente", "protagonista", "testigo", "principal"],
+      "correcta": 2,
+      "tip": "El narrador testigo relata como observador y no accede a los pensamientos ajenos.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa01-020",
+      "oa": "LE08 OA 01",
+      "pregunta": "¿Cuál de estos relatos suele protagonizar dioses y explicar el origen del universo?",
+      "opciones": ["La novela policial", "El reportaje", "La carta al director", "El mito"],
+      "correcta": 3,
+      "tip": "El mito es un relato sagrado tradicional que explica orígenes mediante dioses.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa01-021",
+      "oa": "LE08 OA 01",
+      "pregunta": "El conjunto de acontecimientos que se cuentan en un relato se conoce como:",
+      "opciones": ["la trama o argumento", "el ambiente", "el narrador", "el eslogan"],
+      "correcta": 0,
+      "tip": "La trama o argumento es la sucesión de hechos que forman la historia.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa01-022",
+      "oa": "LE08 OA 01",
+      "pregunta": "¿Qué personaje aparece de forma ocasional y apoya la acción principal sin ser el centro?",
+      "opciones": ["El protagonista", "El personaje secundario", "El narrador omnisciente", "El antagonista principal"],
+      "correcta": 1,
+      "tip": "Los personajes secundarios acompañan la acción, pero no son el eje del relato.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa01-023",
+      "oa": "LE08 OA 01",
+      "pregunta": "Si una historia ocurre 'en un bosque, durante una noche de invierno', esa información corresponde al:",
+      "opciones": ["narrador", "desenlace", "ambiente", "conflicto"],
+      "correcta": 2,
+      "tip": "El lugar (bosque) y el tiempo (noche de invierno) forman el ambiente del relato.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa01-024",
+      "oa": "LE08 OA 01",
+      "pregunta": "¿Qué elemento del relato genera la tensión que el protagonista debe enfrentar?",
+      "opciones": ["el titular", "el eslogan", "el narrador testigo", "el conflicto"],
+      "correcta": 3,
+      "tip": "El conflicto es el problema o tensión central que impulsa la historia.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa01-025",
+      "oa": "LE08 OA 01",
+      "pregunta": "¿En qué persona gramatical narra habitualmente el narrador omnisciente?",
+      "opciones": ["Tercera persona", "Primera persona", "Segunda persona", "Primera persona del plural"],
+      "correcta": 0,
+      "tip": "El narrador omnisciente suele usar la tercera persona (él, ella, ellos) y lo sabe todo.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa01-026",
+      "oa": "LE08 OA 01",
+      "pregunta": "La leyenda de La Calchona o del Trauco corresponde al tipo de texto:",
+      "opciones": ["informativo", "narrativo (leyenda)", "argumentativo", "publicitario"],
+      "correcta": 1,
+      "tip": "Las leyendas son relatos tradicionales; pertenecen al texto narrativo.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa01-027",
+      "oa": "LE08 OA 01",
+      "pregunta": "¿Cuál de estas afirmaciones sobre el narrador es correcta?",
+      "opciones": ["El narrador siempre es el autor del libro", "El narrador es siempre una persona real", "El narrador es la voz que cuenta la historia, no necesariamente el autor", "El narrador nunca participa en la historia"],
+      "correcta": 2,
+      "tip": "El narrador es una voz creada para contar; puede o no participar y no equivale al autor real.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa01-028",
+      "oa": "LE08 OA 01",
+      "pregunta": "En 'Había una vez una niña que vivía junto al río', ¿qué parte del relato se está presentando?",
+      "opciones": ["el desenlace", "el clímax", "el desarrollo", "el inicio"],
+      "correcta": 3,
+      "tip": "La presentación del personaje y su situación inicial corresponde al inicio.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa01-029",
+      "oa": "LE08 OA 01",
+      "pregunta": "¿Qué caracteriza a un narrador en primera persona?",
+      "opciones": ["Usa 'yo' y forma parte de la historia", "Lo sabe todo sobre todos los personajes", "Habla directamente al lector como 'tú'", "Nunca aparece en el relato"],
+      "correcta": 0,
+      "tip": "El narrador en primera persona (protagonista o testigo) usa 'yo' y participa en la historia.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa01-030",
+      "oa": "LE08 OA 01",
+      "pregunta": "¿Cuál es el propósito de una leyenda dentro de la tradición de un pueblo?",
+      "opciones": ["Vender un producto al lector", "Transmitir creencias y explicar hechos mezclando realidad y fantasía", "Informar noticias del día", "Convencer con argumentos lógicos"],
+      "correcta": 1,
+      "tip": "La leyenda transmite la cultura y las creencias de un pueblo combinando realidad y fantasía.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa02-001",
+      "oa": "LE08 OA 02",
+      "pregunta": "¿Cuál es el propósito principal de una noticia?",
+      "opciones": ["Entretener con una historia", "Informar sobre un hecho de actualidad", "Convencer con opiniones", "Vender un producto"],
+      "correcta": 1,
+      "tip": "La noticia informa de manera objetiva sobre un hecho reciente de interés público.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa02-002",
+      "oa": "LE08 OA 02",
+      "pregunta": "En un diario se destaca en grande: 'Rescatan a excursionistas perdidos en la montaña.' Esa frase breve que encabeza y resume la noticia es:",
+      "opciones": ["el cuerpo", "la firma", "el titular", "el epígrafe"],
+      "correcta": 2,
+      "tip": "El titular es el título breve y llamativo que sintetiza lo esencial de la noticia.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa02-003",
+      "oa": "LE08 OA 02",
+      "pregunta": "En la noticia, ¿qué parte amplía el titular con una breve síntesis antes del cuerpo?",
+      "opciones": ["el desenlace", "el eslogan", "la moraleja", "la entrada o bajada"],
+      "correcta": 3,
+      "tip": "La entrada (o bajada) es el párrafo breve que amplía el titular y adelanta lo principal.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa02-004",
+      "oa": "LE08 OA 02",
+      "pregunta": "En la noticia, ¿cómo se llama la parte que desarrolla en detalle la información?",
+      "opciones": ["el cuerpo", "el titular", "la entrada", "el eslogan"],
+      "correcta": 0,
+      "tip": "El cuerpo desarrolla la información con los detalles del hecho noticioso.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa02-005",
+      "oa": "LE08 OA 02",
+      "pregunta": "¿Cuál de estas frases es un HECHO?",
+      "opciones": ["El río Mapocho es el más hermoso del país", "El río Mapocho cruza la ciudad de Santiago", "Deberían limpiar más el río Mapocho", "Es triste ver el río Mapocho contaminado"],
+      "correcta": 1,
+      "tip": "Un hecho es verificable y objetivo; las opiniones expresan gustos o juicios personales.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa02-006",
+      "oa": "LE08 OA 02",
+      "pregunta": "¿Cuál de estas frases es una OPINIÓN?",
+      "opciones": ["La película dura dos horas", "La película se estrenó el viernes", "La nueva película es la mejor del año", "La película se filmó en Chile"],
+      "correcta": 2,
+      "tip": "'La mejor' expresa una valoración personal; por eso es opinión, no un dato verificable.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa02-007",
+      "oa": "LE08 OA 02",
+      "pregunta": "Un texto cuyo propósito es explicar un tema de manera objetiva para que el lector lo comprenda es un texto:",
+      "opciones": ["narrativo", "publicitario", "argumentativo", "expositivo"],
+      "correcta": 3,
+      "tip": "El texto expositivo informa y explica un tema de forma clara y objetiva.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa02-008",
+      "oa": "LE08 OA 02",
+      "pregunta": "¿Cuál de los siguientes es un texto NO literario?",
+      "opciones": ["La noticia", "El cuento", "La leyenda", "La novela"],
+      "correcta": 0,
+      "tip": "La noticia informa sobre la realidad; los demás son relatos de ficción (literarios).",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa02-009",
+      "oa": "LE08 OA 02",
+      "pregunta": "¿Qué diferencia a un hecho de una opinión?",
+      "opciones": ["El hecho es inventado y la opinión es real", "El hecho se puede verificar; la opinión expresa un juicio personal", "No hay diferencia entre ambos", "La opinión siempre es verdadera"],
+      "correcta": 1,
+      "tip": "El hecho es comprobable y objetivo; la opinión refleja la postura o el gusto de quien la emite.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa02-010",
+      "oa": "LE08 OA 02",
+      "pregunta": "¿Cuál es el propósito comunicativo predominante de un texto informativo?",
+      "opciones": ["Entretener", "Persuadir", "Informar", "Emocionar"],
+      "correcta": 2,
+      "tip": "El texto informativo busca dar a conocer información de manera clara y objetiva.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa02-011",
+      "oa": "LE08 OA 02",
+      "pregunta": "¿Qué texto periodístico investiga un tema en profundidad, con más extensión y detalle que la noticia?",
+      "opciones": ["el mito", "la fábula", "la carta al director", "el reportaje"],
+      "correcta": 3,
+      "tip": "El reportaje profundiza en un tema con investigación, testimonios y mayor extensión.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa02-012",
+      "oa": "LE08 OA 02",
+      "pregunta": "'El terremoto ocurrió a las 3 de la tarde y tuvo magnitud 6,2.' Esta afirmación es:",
+      "opciones": ["un hecho", "una opinión", "un eslogan", "una tesis"],
+      "correcta": 0,
+      "tip": "Es un dato objetivo y verificable, por lo tanto un hecho.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa02-013",
+      "oa": "LE08 OA 02",
+      "pregunta": "'Creo que el país debería invertir más en educación.' Esta afirmación es:",
+      "opciones": ["un hecho", "una opinión", "una noticia objetiva", "un dato estadístico"],
+      "correcta": 1,
+      "tip": "Comienza con 'creo que' y expresa un juicio personal: es una opinión.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa02-014",
+      "oa": "LE08 OA 02",
+      "pregunta": "Las preguntas clásicas que responde una noticia son qué, quién, cuándo, dónde, por qué y:",
+      "opciones": ["cuánto vale", "para vender", "cómo", "a quién convencer"],
+      "correcta": 2,
+      "tip": "Las 'seis preguntas' de la noticia son qué, quién, cuándo, dónde, por qué y cómo.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa02-015",
+      "oa": "LE08 OA 02",
+      "pregunta": "¿Qué característica debe tener el lenguaje de una noticia?",
+      "opciones": ["Ser poético y figurado", "Ser persuasivo y emocional", "Ser fantástico e imaginario", "Ser claro y objetivo"],
+      "correcta": 3,
+      "tip": "La noticia usa un lenguaje claro, objetivo e impersonal para informar con precisión.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa02-016",
+      "oa": "LE08 OA 02",
+      "pregunta": "Un artículo de enciclopedia que explica qué es la fotosíntesis es principalmente un texto:",
+      "opciones": ["expositivo", "narrativo", "argumentativo", "publicitario"],
+      "correcta": 0,
+      "tip": "Explica un tema de forma objetiva para que se comprenda: es expositivo.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa02-017",
+      "oa": "LE08 OA 02",
+      "pregunta": "¿Cuál de estas afirmaciones corresponde a un dato objetivo?",
+      "opciones": ["Chile es el país más lindo de América", "Chile limita al oeste con el océano Pacífico", "Todos deberían visitar Chile", "Chile tiene los mejores paisajes del mundo"],
+      "correcta": 1,
+      "tip": "El límite geográfico es verificable en un mapa; los demás son juicios personales.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa02-018",
+      "oa": "LE08 OA 02",
+      "pregunta": "En un diario, la sección de opinión se diferencia de la noticia porque:",
+      "opciones": ["nunca usa titulares", "solo contiene imágenes", "expresa puntos de vista, no solo hechos", "cuenta historias inventadas"],
+      "correcta": 2,
+      "tip": "La noticia informa hechos; la sección de opinión presenta valoraciones y puntos de vista.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa02-019",
+      "oa": "LE08 OA 02",
+      "pregunta": "¿Cuál es una función típica del titular de una noticia?",
+      "opciones": ["Contar el final de un cuento", "Vender un producto", "Dar una moraleja", "Captar la atención y resumir lo esencial"],
+      "correcta": 3,
+      "tip": "El titular atrae al lector y sintetiza en pocas palabras el contenido principal.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa02-020",
+      "oa": "LE08 OA 02",
+      "pregunta": "¿Qué elemento NO forma parte de la estructura típica de una noticia?",
+      "opciones": ["La moraleja", "El titular", "La entrada", "El cuerpo"],
+      "correcta": 0,
+      "tip": "La moraleja pertenece a la fábula (texto narrativo), no a la noticia.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa02-021",
+      "oa": "LE08 OA 02",
+      "pregunta": "Un texto que entrega instrucciones para armar un mueble es un texto:",
+      "opciones": ["narrativo", "instructivo (no literario)", "argumentativo", "poético"],
+      "correcta": 1,
+      "tip": "Los textos instructivos guían acciones paso a paso; son no literarios.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa02-022",
+      "oa": "LE08 OA 02",
+      "pregunta": "¿Cuál es la principal diferencia entre un texto literario y uno no literario?",
+      "opciones": ["El literario nunca usa palabras", "El no literario no tiene autor", "El literario crea mundos de ficción; el no literario se refiere a la realidad", "No existe ninguna diferencia"],
+      "correcta": 2,
+      "tip": "La literatura recrea mundos imaginarios; el texto no literario informa sobre la realidad.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa02-023",
+      "oa": "LE08 OA 02",
+      "pregunta": "'Según el informe, las lluvias aumentaron un 20% este año.' Esta información es principalmente:",
+      "opciones": ["una opinión personal", "un eslogan publicitario", "una tesis discutible", "un hecho respaldado por datos"],
+      "correcta": 3,
+      "tip": "Presenta un dato verificable respaldado por una fuente: es un hecho.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa02-024",
+      "oa": "LE08 OA 02",
+      "pregunta": "Un periodista publica sus preguntas junto con las respuestas textuales de una científica. Ese texto periodístico es:",
+      "opciones": ["la entrevista", "la leyenda", "la editorial", "el cuento"],
+      "correcta": 0,
+      "tip": "La entrevista recoge las respuestas de una persona a las preguntas del periodista.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa02-025",
+      "oa": "LE08 OA 02",
+      "pregunta": "El lenguaje objetivo de un texto informativo se caracteriza por:",
+      "opciones": ["usar muchas metáforas", "evitar juicios personales y opiniones", "incluir la opinión del autor", "exagerar los hechos"],
+      "correcta": 1,
+      "tip": "El lenguaje objetivo presenta los hechos sin opiniones ni valoraciones del autor.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa02-026",
+      "oa": "LE08 OA 02",
+      "pregunta": "¿Cuál de estos es el propósito de un texto expositivo escolar?",
+      "opciones": ["Vender un producto", "Contar una aventura", "Dar a conocer y explicar información", "Convencer de una postura política"],
+      "correcta": 2,
+      "tip": "El texto expositivo transmite y explica conocimiento de manera clara y ordenada.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa02-027",
+      "oa": "LE08 OA 02",
+      "pregunta": "'El agua hierve a 100 °C a nivel del mar.' Esta afirmación es:",
+      "opciones": ["una opinión discutible", "una exageración", "un punto de vista", "un hecho científico verificable"],
+      "correcta": 3,
+      "tip": "Es un dato comprobable experimentalmente: un hecho.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa02-028",
+      "oa": "LE08 OA 02",
+      "pregunta": "En una noticia, la información más importante suele ubicarse:",
+      "opciones": ["al comienzo (titular y entrada)", "solo al final", "escondida en el cuerpo", "en la moraleja"],
+      "correcta": 0,
+      "tip": "La noticia usa la 'pirámide invertida': lo más importante va primero.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa02-029",
+      "oa": "LE08 OA 02",
+      "pregunta": "¿Qué indica que una afirmación es una opinión y no un hecho?",
+      "opciones": ["Contiene fechas y cifras", "Incluye valoraciones como 'mejor', 'debería' o 'creo'", "Se puede verificar en una fuente", "Describe un lugar geográfico"],
+      "correcta": 1,
+      "tip": "Palabras como 'mejor', 'debería' o 'creo' revelan un juicio personal: opinión.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa02-030",
+      "oa": "LE08 OA 02",
+      "pregunta": "El propósito de informar se reconoce cuando el texto busca:",
+      "opciones": ["que el lector compre algo", "que el lector se emocione con una historia", "que el lector conozca hechos de la realidad", "que el lector cambie de opinión política"],
+      "correcta": 2,
+      "tip": "Informar consiste en dar a conocer hechos reales de manera clara y objetiva.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa03-001",
+      "oa": "LE08 OA 03",
+      "pregunta": "¿Cuál es la intención comunicativa principal de la publicidad?",
+      "opciones": ["Informar objetivamente", "Contar una historia", "Persuadir para vender un producto", "Explicar un tema científico"],
+      "correcta": 2,
+      "tip": "La publicidad busca convencer al público de comprar o consumir un producto o servicio.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa03-002",
+      "oa": "LE08 OA 03",
+      "pregunta": "¿Qué diferencia principal existe entre publicidad y propaganda?",
+      "opciones": ["La propaganda vende productos y la publicidad ideas", "Son exactamente lo mismo", "La publicidad nunca usa imágenes", "La publicidad promueve un producto y la propaganda promueve ideas"],
+      "correcta": 3,
+      "tip": "La publicidad vende bienes o servicios; la propaganda difunde ideas, creencias o conductas.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa03-003",
+      "oa": "LE08 OA 03",
+      "pregunta": "'Frescura que se siente.' En un aviso, esta frase breve y fácil de recordar corresponde al recurso llamado:",
+      "opciones": ["el eslogan", "el titular", "la moraleja", "la tesis"],
+      "correcta": 0,
+      "tip": "El eslogan es una frase corta y pegajosa que sintetiza y refuerza el mensaje publicitario.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa03-004",
+      "oa": "LE08 OA 03",
+      "pregunta": "'¡Vive la aventura, atrévete a más!' En este aviso, la frase busca principalmente:",
+      "opciones": ["informar un hecho", "persuadir apelando a las emociones", "narrar una historia", "explicar un proceso"],
+      "correcta": 1,
+      "tip": "Apela a emociones (aventura, atreverse) para convencer: es un recurso persuasivo.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa03-005",
+      "oa": "LE08 OA 03",
+      "pregunta": "Una campaña que invita a 'cuidar el agua y no desperdiciarla' es un ejemplo de:",
+      "opciones": ["publicidad comercial", "noticia", "propaganda", "cuento"],
+      "correcta": 2,
+      "tip": "Promueve una idea o conducta social (cuidar el agua), no un producto: es propaganda.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa03-006",
+      "oa": "LE08 OA 03",
+      "pregunta": "Un aviso que promueve una marca de zapatillas para que las compres es un ejemplo de:",
+      "opciones": ["propaganda política", "texto expositivo", "leyenda", "publicidad"],
+      "correcta": 3,
+      "tip": "Promueve un producto comercial para venderlo: es publicidad.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa03-007",
+      "oa": "LE08 OA 03",
+      "pregunta": "¿Qué recurso persuasivo usa un anuncio cuando muestra a una familia feliz para vender un producto?",
+      "opciones": ["La apelación emocional", "La cita de fuentes", "El dato estadístico", "La definición científica"],
+      "correcta": 0,
+      "tip": "Asociar el producto a emociones positivas (felicidad) es una apelación emocional.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa03-008",
+      "oa": "LE08 OA 03",
+      "pregunta": "Leer críticamente la publicidad significa:",
+      "opciones": ["creer todo lo que dice", "cuestionar el mensaje y reconocer su intención de persuadir", "memorizar el eslogan", "comprar el producto de inmediato"],
+      "correcta": 1,
+      "tip": "La lectura crítica examina la intención del mensaje y no lo acepta sin reflexión.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa03-009",
+      "oa": "LE08 OA 03",
+      "pregunta": "En un afiche publicitario, la imagen cumple la función de:",
+      "opciones": ["informar datos exactos", "narrar un cuento", "atraer la atención y reforzar el mensaje persuasivo", "explicar un experimento"],
+      "correcta": 2,
+      "tip": "La imagen capta la mirada y refuerza emocionalmente el mensaje que se quiere transmitir.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa03-010",
+      "oa": "LE08 OA 03",
+      "pregunta": "¿Cuál de estos es un ejemplo de propaganda?",
+      "opciones": ["Un aviso de una bebida", "Un comercial de un celular", "Un anuncio de una tienda de ropa", "Una campaña que promueve el reciclaje"],
+      "correcta": 3,
+      "tip": "Promueve una idea o conducta beneficiosa (reciclar), no un producto: es propaganda.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa03-011",
+      "oa": "LE08 OA 03",
+      "pregunta": "Una empresa de bebidas paga un comercial para que las personas compren su producto. En ese mensaje publicitario, la empresa cumple el rol de:",
+      "opciones": ["emisor que busca vender", "consumidor que compra", "periodista que informa", "narrador del cuento"],
+      "correcta": 0,
+      "tip": "El emisor de la publicidad es quien busca vender: la empresa, marca o anunciante.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa03-012",
+      "oa": "LE08 OA 03",
+      "pregunta": "Cuando un aviso usa la frase '9 de cada 10 especialistas lo recomiendan', intenta persuadir mediante:",
+      "opciones": ["una moraleja", "la apariencia de autoridad o respaldo", "un narrador testigo", "una rima infantil"],
+      "correcta": 1,
+      "tip": "Apelar a expertos o cifras busca dar credibilidad y persuadir: recurso de autoridad.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa03-013",
+      "oa": "LE08 OA 03",
+      "pregunta": "¿Cuál es un rasgo típico del eslogan publicitario?",
+      "opciones": ["Es largo y detallado", "Explica datos científicos", "Es breve, atractivo y fácil de recordar", "Narra una historia completa"],
+      "correcta": 2,
+      "tip": "El eslogan funciona porque es corto, llamativo y se queda en la memoria del público.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa03-014",
+      "oa": "LE08 OA 03",
+      "pregunta": "La principal diferencia de intención entre una noticia y un aviso publicitario es que la noticia busca informar y el aviso busca:",
+      "opciones": ["entretener", "narrar", "explicar", "persuadir"],
+      "correcta": 3,
+      "tip": "La noticia informa hechos; la publicidad persuade para lograr una acción del receptor.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa03-015",
+      "oa": "LE08 OA 03",
+      "pregunta": "'Únete al cambio, cuida tu ciudad.' Este mensaje corresponde a:",
+      "opciones": ["propaganda (promueve una idea o conducta)", "publicidad (vende un producto)", "una noticia", "un cuento"],
+      "correcta": 0,
+      "tip": "Invita a adoptar una conducta cívica, no a comprar algo: es propaganda.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa03-016",
+      "oa": "LE08 OA 03",
+      "pregunta": "¿Qué debe hacer un lector crítico frente a un anuncio que promete resultados 'milagrosos'?",
+      "opciones": ["Creerlo sin pensar", "Dudar y buscar información confiable", "Compartirlo de inmediato", "Comprar el producto enseguida"],
+      "correcta": 1,
+      "tip": "Ante promesas exageradas, el lector crítico cuestiona y verifica la información.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa03-017",
+      "oa": "LE08 OA 03",
+      "pregunta": "El público al que se dirige un mensaje publicitario se llama:",
+      "opciones": ["emisor", "eslogan", "público objetivo o receptor", "narrador"],
+      "correcta": 2,
+      "tip": "El público objetivo (receptor) es el grupo de personas al que apunta el mensaje.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa03-018",
+      "oa": "LE08 OA 03",
+      "pregunta": "¿Por qué los avisos publicitarios suelen usar colores llamativos y música pegajosa?",
+      "opciones": ["Para informar con exactitud", "Para explicar un tema difícil", "Para narrar una leyenda", "Para captar la atención y persuadir con mayor fuerza"],
+      "correcta": 3,
+      "tip": "Los recursos audiovisuales llamativos refuerzan el impacto persuasivo del mensaje.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa03-019",
+      "oa": "LE08 OA 03",
+      "pregunta": "¿Cuál de estas afirmaciones sobre la publicidad es correcta?",
+      "opciones": ["Muestra el producto de la forma más atractiva posible", "Siempre entrega información neutral", "No tiene ninguna intención", "Su objetivo es explicar ciencia"],
+      "correcta": 0,
+      "tip": "La publicidad destaca lo positivo del producto para hacerlo deseable y venderlo.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa03-020",
+      "oa": "LE08 OA 03",
+      "pregunta": "Una campaña de salud que dice 'Vacúnate, protege a tu familia' es:",
+      "opciones": ["publicidad", "propaganda", "una noticia", "un reportaje"],
+      "correcta": 1,
+      "tip": "Promueve una conducta de bien social (vacunarse), no un producto: es propaganda.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa03-021",
+      "oa": "LE08 OA 03",
+      "pregunta": "¿Qué recurso persuasivo emplea un aviso que muestra a un deportista admirado usando un producto?",
+      "opciones": ["Un dato histórico", "Una definición", "El testimonio de una figura reconocida", "Una moraleja"],
+      "correcta": 2,
+      "tip": "Asociar el producto a una figura admirada busca persuadir por imitación y prestigio.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa03-022",
+      "oa": "LE08 OA 03",
+      "pregunta": "La lectura crítica de los medios ayuda a las personas a:",
+      "opciones": ["creer todos los mensajes", "memorizar eslóganes", "comprar más productos", "no dejarse manipular y formar su propia opinión"],
+      "correcta": 3,
+      "tip": "Leer críticamente permite reconocer intenciones ocultas y decidir con autonomía.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa03-023",
+      "oa": "LE08 OA 03",
+      "pregunta": "¿Cuál es la intención comunicativa de la propaganda?",
+      "opciones": ["Promover ideas, valores o conductas", "Vender un producto comercial", "Informar hechos objetivos", "Contar una historia de ficción"],
+      "correcta": 0,
+      "tip": "La propaganda difunde ideas o conductas (políticas, sociales, ambientales), no productos.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa03-024",
+      "oa": "LE08 OA 03",
+      "pregunta": "Un comercial de televisión de una marca de galletas corresponde a:",
+      "opciones": ["propaganda", "publicidad", "una editorial", "un mito"],
+      "correcta": 1,
+      "tip": "Promueve un producto para venderlo: es publicidad.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa03-025",
+      "oa": "LE08 OA 03",
+      "pregunta": "¿Qué elemento del aviso apela directamente a los sentimientos del público?",
+      "opciones": ["La ficha técnica", "El índice", "La apelación emocional", "La bibliografía"],
+      "correcta": 2,
+      "tip": "La apelación emocional conecta con los sentimientos (alegría, miedo, nostalgia) para persuadir.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa03-026",
+      "oa": "LE08 OA 03",
+      "pregunta": "Si un afiche invita a 'decir no al acoso escolar', se trata de:",
+      "opciones": ["publicidad comercial", "una noticia", "un cuento", "propaganda"],
+      "correcta": 3,
+      "tip": "Promueve un valor y una conducta social positiva, no un producto: es propaganda.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa03-027",
+      "oa": "LE08 OA 03",
+      "pregunta": "¿Cuál es una señal de que un mensaje intenta persuadirte?",
+      "opciones": ["Usa frases atractivas para que hagas o compres algo", "Solo entrega datos neutros", "Nunca usa imágenes", "Cuenta una historia sin intención"],
+      "correcta": 0,
+      "tip": "La persuasión se reconoce cuando el mensaje busca influir en tu conducta o decisión.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa03-028",
+      "oa": "LE08 OA 03",
+      "pregunta": "En publicidad, la repetición de una marca o eslogan busca:",
+      "opciones": ["confundir al lector", "que el público lo recuerde y lo prefiera", "informar datos precisos", "explicar un proceso"],
+      "correcta": 1,
+      "tip": "Repetir la marca fija el mensaje en la memoria y favorece su elección.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa03-029",
+      "oa": "LE08 OA 03",
+      "pregunta": "¿Cuál de estos NO es un recurso persuasivo propio de la publicidad?",
+      "opciones": ["El eslogan pegajoso", "La apelación emocional", "La numeración de las páginas de un catálogo", "La imagen atractiva"],
+      "correcta": 2,
+      "tip": "Los recursos persuasivos buscan convencer; numerar las páginas es solo un dato de formato.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa03-030",
+      "oa": "LE08 OA 03",
+      "pregunta": "¿Por qué es importante analizar críticamente la publicidad dirigida a niños?",
+      "opciones": ["Porque siempre dice la verdad", "Porque nunca tiene intención", "Porque es igual a una noticia", "Porque busca influir en sus decisiones y puede exagerar beneficios"],
+      "correcta": 3,
+      "tip": "La publicidad puede exagerar para persuadir; el análisis crítico protege de la manipulación.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa04-001",
+      "oa": "LE08 OA 04",
+      "pregunta": "¿Cuál es el propósito principal de un texto argumentativo?",
+      "opciones": ["Contar una historia", "Informar un hecho", "Vender un producto", "Convencer al lector de un punto de vista"],
+      "correcta": 3,
+      "tip": "El texto argumentativo busca convencer o persuadir defendiendo una postura con razones.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa04-002",
+      "oa": "LE08 OA 04",
+      "pregunta": "En el texto 'Los animales no deberían usarse en circos, pues sufren maltrato', la parte 'Los animales no deberían usarse en circos' es:",
+      "opciones": ["la tesis", "el titular", "el desenlace", "el eslogan"],
+      "correcta": 0,
+      "tip": "La tesis es la idea central o punto de vista que el autor sostiene y defiende.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa04-003",
+      "oa": "LE08 OA 04",
+      "pregunta": "¿Cómo se llaman las razones que se entregan para sostener la tesis?",
+      "opciones": ["los personajes", "los argumentos", "los titulares", "los ambientes"],
+      "correcta": 1,
+      "tip": "Los argumentos son las razones o pruebas que respaldan y justifican la tesis.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa04-004",
+      "oa": "LE08 OA 04",
+      "pregunta": "En un texto que defiende el deporte escolar se lee: 'Es cierto que a veces cansa; no obstante, mejora la salud.' La parte 'a veces cansa' es:",
+      "opciones": ["la moraleja", "el eslogan", "el contraargumento", "el narrador"],
+      "correcta": 2,
+      "tip": "El contraargumento presenta una razón contraria a la tesis para debatirla o rebatirla.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa04-005",
+      "oa": "LE08 OA 04",
+      "pregunta": "¿Cuál de estos textos tiene principalmente un propósito argumentativo?",
+      "opciones": ["El cuento", "La noticia", "El instructivo", "La carta al director"],
+      "correcta": 3,
+      "tip": "La carta al director expresa una opinión y la defiende: es argumentativa.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa04-006",
+      "oa": "LE08 OA 04",
+      "pregunta": "'Pienso que se debe prohibir la basura en las playas porque contamina el mar.' En esta frase, 'se debe prohibir la basura en las playas' es:",
+      "opciones": ["la tesis", "el argumento", "el contraargumento", "el ambiente"],
+      "correcta": 0,
+      "tip": "Es la postura que se defiende; la razón ('porque contamina') es el argumento.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa04-007",
+      "oa": "LE08 OA 04",
+      "pregunta": "En la frase 'se debe prohibir la basura en las playas porque contamina el mar', la parte 'porque contamina el mar' corresponde a:",
+      "opciones": ["una tesis", "un argumento", "un titular", "un eslogan"],
+      "correcta": 1,
+      "tip": "Entrega la razón que sostiene la postura, por lo tanto es un argumento.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa04-008",
+      "oa": "LE08 OA 04",
+      "pregunta": "¿Cuál de estos conectores es propio de la argumentación para introducir una causa?",
+      "opciones": ["había una vez", "de repente", "porque", "mientras tanto"],
+      "correcta": 2,
+      "tip": "'Porque' introduce la causa o razón que apoya un argumento.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa04-009",
+      "oa": "LE08 OA 04",
+      "pregunta": "¿Qué conector sirve para introducir una conclusión en un texto argumentativo?",
+      "opciones": ["érase una vez", "de pronto", "al día siguiente", "por lo tanto"],
+      "correcta": 3,
+      "tip": "'Por lo tanto' introduce la conclusión que se deriva de los argumentos.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa04-010",
+      "oa": "LE08 OA 04",
+      "pregunta": "¿Qué texto de opinión refleja la postura del diario y no lleva la firma de un autor individual?",
+      "opciones": ["la editorial", "el cuento", "la noticia objetiva", "el reportaje"],
+      "correcta": 0,
+      "tip": "La editorial expresa la opinión institucional del medio, sin firma de un autor individual.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa04-011",
+      "oa": "LE08 OA 04",
+      "pregunta": "¿Qué texto de opinión firma un autor que expresa regularmente su punto de vista en un medio?",
+      "opciones": ["la leyenda", "la columna de opinión", "la entrevista", "el afiche"],
+      "correcta": 1,
+      "tip": "La columna la firma un columnista que expone y defiende su opinión personal.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa04-012",
+      "oa": "LE08 OA 04",
+      "pregunta": "¿Cuál de estas frases es una TESIS (postura defendible)?",
+      "opciones": ["El celular es un aparato electrónico", "El celular tiene una pantalla", "Se debería reducir el uso del celular en clases", "El celular funciona con batería"],
+      "correcta": 2,
+      "tip": "Una tesis es una postura discutible que puede defenderse; las demás son solo datos.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa04-013",
+      "oa": "LE08 OA 04",
+      "pregunta": "¿Para qué sirve incluir un contraargumento en un texto argumentativo?",
+      "opciones": ["Para contar una historia", "Para informar datos", "Para vender un producto", "Para reconocer otra postura y rebatirla, dando más fuerza a la tesis"],
+      "correcta": 3,
+      "tip": "Considerar y rebatir la postura contraria fortalece y hace más convincente la propia tesis.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa04-014",
+      "oa": "LE08 OA 04",
+      "pregunta": "'Sin embargo' es un conector que en la argumentación sirve para:",
+      "opciones": ["introducir una idea opuesta o una objeción", "ordenar los hechos en el tiempo", "iniciar un cuento", "cerrar una carta formal"],
+      "correcta": 0,
+      "tip": "'Sin embargo' marca contraste u oposición, útil para introducir contraargumentos.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa04-015",
+      "oa": "LE08 OA 04",
+      "pregunta": "¿Cuál es una característica del texto argumentativo?",
+      "opciones": ["Solo narra hechos imaginarios", "Defiende una postura con razones para convencer", "Únicamente informa sin opinar", "Vende productos con eslóganes"],
+      "correcta": 1,
+      "tip": "El texto argumentativo sostiene una tesis mediante razones con el fin de convencer.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa04-016",
+      "oa": "LE08 OA 04",
+      "pregunta": "Una carta al director de un diario se escribe principalmente para:",
+      "opciones": ["narrar una aventura", "explicar un experimento", "expresar una opinión sobre un tema de interés público", "vender un producto"],
+      "correcta": 2,
+      "tip": "La carta al director comunica la opinión de un lector sobre un asunto de actualidad.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa04-017",
+      "oa": "LE08 OA 04",
+      "pregunta": "¿Cuál de estos conectores sirve para AGREGAR un nuevo argumento?",
+      "opciones": ["por el contrario", "no obstante", "sin embargo", "además"],
+      "correcta": 3,
+      "tip": "'Además' suma información o refuerza con un nuevo argumento a favor de la tesis.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa04-018",
+      "oa": "LE08 OA 04",
+      "pregunta": "¿Qué distingue a un texto argumentativo de uno expositivo?",
+      "opciones": ["El argumentativo defiende una postura; el expositivo solo explica", "El argumentativo nunca usa razones", "El expositivo siempre convence", "No hay ninguna diferencia"],
+      "correcta": 0,
+      "tip": "El expositivo informa de forma neutral; el argumentativo toma partido y busca convencer.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa04-019",
+      "oa": "LE08 OA 04",
+      "pregunta": "'Los niños deberían leer más' es un ejemplo de:",
+      "opciones": ["un hecho objetivo", "una tesis u opinión", "una noticia", "un dato estadístico"],
+      "correcta": 1,
+      "tip": "'Deberían' expresa una postura defendible: es una tesis u opinión, no un hecho.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa04-020",
+      "oa": "LE08 OA 04",
+      "pregunta": "En un debate, para convencer es más eficaz un argumento que se apoya en:",
+      "opciones": ["insultos", "rimas", "hechos, datos o ejemplos", "dibujos"],
+      "correcta": 2,
+      "tip": "Un buen argumento se sostiene en evidencias: hechos, datos o ejemplos verificables.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa04-021",
+      "oa": "LE08 OA 04",
+      "pregunta": "El conector 'en conclusión' se utiliza para:",
+      "opciones": ["comenzar un relato", "presentar un personaje", "describir un lugar", "cerrar el texto resumiendo la postura"],
+      "correcta": 3,
+      "tip": "'En conclusión' introduce el cierre que sintetiza la postura defendida.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa04-022",
+      "oa": "LE08 OA 04",
+      "pregunta": "¿Cuál de estos es un texto de opinión?",
+      "opciones": ["La editorial de un diario", "La noticia policial", "El cuento infantil", "El instructivo de una receta"],
+      "correcta": 0,
+      "tip": "La editorial expresa la opinión del medio: es un texto de opinión argumentativo.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa04-023",
+      "oa": "LE08 OA 04",
+      "pregunta": "Un buen argumento debe ser:",
+      "opciones": ["confuso y sin pruebas", "claro y respaldado por razones o evidencias", "solo una emoción", "una simple repetición"],
+      "correcta": 1,
+      "tip": "Los argumentos convincentes son claros y se apoyan en razones o evidencias sólidas.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa04-024",
+      "oa": "LE08 OA 04",
+      "pregunta": "'Algunos creen que el deporte quita tiempo de estudio; no obstante, mejora la concentración.' La parte 'algunos creen que el deporte quita tiempo de estudio' funciona como:",
+      "opciones": ["la tesis principal", "un ejemplo", "un contraargumento", "un titular"],
+      "correcta": 2,
+      "tip": "Presenta la postura contraria que luego se rebate: es un contraargumento.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa04-025",
+      "oa": "LE08 OA 04",
+      "pregunta": "¿Qué se espera que haga el lector después de leer un buen texto argumentativo?",
+      "opciones": ["Memorizar personajes", "Aprender a cocinar", "Reírse de un chiste", "Reflexionar y, quizás, cambiar o reforzar su opinión"],
+      "correcta": 3,
+      "tip": "El texto argumentativo busca influir en el pensamiento del lector sobre un tema.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa04-026",
+      "oa": "LE08 OA 04",
+      "pregunta": "¿Cuál de estas expresiones introduce una opinión?",
+      "opciones": ["En mi opinión...", "Según el mapa...", "El experimento demostró...", "La fecha exacta fue..."],
+      "correcta": 0,
+      "tip": "'En mi opinión' anuncia claramente un punto de vista personal.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa04-027",
+      "oa": "LE08 OA 04",
+      "pregunta": "La estructura básica de un texto argumentativo incluye tesis, argumentos y:",
+      "opciones": ["moraleja", "conclusión", "desenlace", "eslogan"],
+      "correcta": 1,
+      "tip": "El texto argumentativo suele cerrar con una conclusión que refuerza la tesis.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa04-028",
+      "oa": "LE08 OA 04",
+      "pregunta": "¿Por qué se usan conectores en un texto argumentativo?",
+      "opciones": ["Para adornar sin sentido", "Para confundir al lector", "Para relacionar las ideas y ordenar el razonamiento", "Para vender productos"],
+      "correcta": 2,
+      "tip": "Los conectores enlazan tesis, argumentos y conclusión, dando coherencia al razonamiento.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa04-029",
+      "oa": "LE08 OA 04",
+      "pregunta": "'No obstante' y 'por el contrario' son conectores que sirven para:",
+      "opciones": ["ordenar hechos en el tiempo", "sumar argumentos iguales", "dar ejemplos", "expresar oposición o contraste entre ideas"],
+      "correcta": 3,
+      "tip": "Estos conectores marcan contraste, útiles para introducir objeciones o contraargumentos.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa04-030",
+      "oa": "LE08 OA 04",
+      "pregunta": "¿Cuál es la diferencia entre una tesis y un argumento?",
+      "opciones": ["La tesis es la postura defendida; el argumento es la razón que la apoya", "La tesis narra y el argumento describe", "Son exactamente lo mismo", "El argumento es el título y la tesis el final"],
+      "correcta": 0,
+      "tip": "La tesis es lo que se sostiene; los argumentos son las razones que la respaldan.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa01-031",
+      "oa": "LE08 OA 01",
+      "pregunta": "'Cuando abrí la puerta, el frío me golpeó la cara y supe que algo había cambiado.' ¿Qué tipo de narrador cuenta este fragmento?",
+      "opciones": ["Narrador protagonista", "Narrador omnisciente", "Narrador testigo", "Narrador de tercera persona"],
+      "correcta": 0,
+      "tip": "El narrador usa 'yo' y vive los hechos como personaje central: es protagonista.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa01-032",
+      "oa": "LE08 OA 01",
+      "pregunta": "'La aldea quedaba en lo alto de la montaña, rodeada de niebla y silencio.' ¿Qué elemento del relato se describe principalmente en este fragmento?",
+      "opciones": ["el conflicto", "el ambiente", "el narrador", "el desenlace"],
+      "correcta": 1,
+      "tip": "Se describe el lugar donde ocurren los hechos: el ambiente.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa01-033",
+      "oa": "LE08 OA 01",
+      "pregunta": "'Pedro sonreía, pero por dentro temía que descubrieran su secreto.' ¿Qué tipo de narrador permite conocer lo que Pedro siente por dentro?",
+      "opciones": ["Narrador testigo", "Narrador protagonista", "Narrador omnisciente", "Narrador de primera persona"],
+      "correcta": 2,
+      "tip": "Solo el narrador omnisciente accede a los pensamientos y sentimientos de los personajes.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa01-034",
+      "oa": "LE08 OA 01",
+      "pregunta": "'Finalmente, el dragón fue vencido y el reino volvió a vivir en paz.' ¿A qué parte de la estructura narrativa corresponde este fragmento?",
+      "opciones": ["el inicio", "el desarrollo", "el conflicto", "el desenlace"],
+      "correcta": 3,
+      "tip": "Se resuelve el conflicto y se cierra la historia: es el desenlace.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa01-035",
+      "oa": "LE08 OA 01",
+      "pregunta": "'María guardó el paraguas en su mochila antes de salir de casa.' ¿Qué se puede inferir de esta oración?",
+      "opciones": ["María cree que podría llover", "María va a nadar a la playa", "A María no le gusta caminar", "María perdió su mochila"],
+      "correcta": 0,
+      "tip": "Llevar paraguas permite inferir que espera lluvia, aunque no se diga directamente.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa01-036",
+      "oa": "LE08 OA 01",
+      "pregunta": "'El niño miró el plato vacío y suspiró mientras su estómago sonaba.' ¿Qué se puede concluir?",
+      "opciones": ["El niño acaba de comer", "El niño tiene hambre", "Al niño no le gusta la comida", "El niño está durmiendo"],
+      "correcta": 1,
+      "tip": "El plato vacío y el estómago sonando permiten inferir que el niño tiene hambre.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa01-037",
+      "oa": "LE08 OA 01",
+      "pregunta": "'Al entrar ella, todos guardaron silencio y bajaron la mirada.' ¿Qué se puede inferir sobre esa persona?",
+      "opciones": ["Es invisible para los demás", "Acaba de despertar", "Provoca respeto o temor en los demás", "Nadie la conoce"],
+      "correcta": 2,
+      "tip": "El silencio y las miradas bajas sugieren que su presencia impone respeto o temor.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa01-038",
+      "oa": "LE08 OA 01",
+      "pregunta": "'Las maletas estaban junto a la puerta y el taxi esperaba afuera.' ¿Qué se puede inferir?",
+      "opciones": ["Alguien acaba de llegar de compras", "Se celebra un cumpleaños", "La casa está en venta", "Alguien está por salir de viaje"],
+      "correcta": 3,
+      "tip": "Las maletas y el taxi esperando permiten inferir un viaje próximo.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa01-039",
+      "oa": "LE08 OA 01",
+      "pregunta": "'Había una vez una princesa que vivía en un castillo encantado...' ¿A qué tipo de texto corresponde este comienzo?",
+      "opciones": ["narrativo", "informativo", "argumentativo", "publicitario"],
+      "correcta": 0,
+      "tip": "Presenta personajes y una historia: es un texto narrativo.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa01-040",
+      "oa": "LE08 OA 01",
+      "pregunta": "Un autor inventa personajes y un conflicto para entretener al lector. ¿Cuál es el propósito de su texto?",
+      "opciones": ["informar un hecho real", "contar una historia", "convencer de una idea", "vender un producto"],
+      "correcta": 1,
+      "tip": "El propósito del texto narrativo es contar una historia, real o ficticia.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa01-041",
+      "oa": "LE08 OA 01",
+      "pregunta": "'Vi cómo el capitán daba la orden, aunque nunca supe qué pensaba.' ¿Qué tipo de narrador es?",
+      "opciones": ["Narrador omnisciente", "Narrador protagonista", "Narrador testigo", "Narrador secundario"],
+      "correcta": 2,
+      "tip": "El narrador observa los hechos y no conoce los pensamientos ajenos: es testigo.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa01-042",
+      "oa": "LE08 OA 01",
+      "pregunta": "'Cuentan que en ese lago vive un espíritu que castiga a quien ensucia sus aguas; muchos dicen haberlo visto.' Este relato tradicional, situado en un lugar concreto y con elementos fantásticos, es:",
+      "opciones": ["una noticia", "un reportaje", "un mito", "una leyenda"],
+      "correcta": 3,
+      "tip": "Mezcla realidad y fantasía anclada en un lugar determinado: es una leyenda.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa02-031",
+      "oa": "LE08 OA 02",
+      "pregunta": "'El nuevo puente mide 2 kilómetros y se inauguró en marzo.' Esta afirmación es:",
+      "opciones": ["un hecho", "una opinión", "un eslogan", "una tesis"],
+      "correcta": 0,
+      "tip": "Presenta datos verificables (medida y fecha): es un hecho.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa02-032",
+      "oa": "LE08 OA 02",
+      "pregunta": "'Sin duda, este es el mejor puente que se ha construido en el país.' Esta afirmación es:",
+      "opciones": ["un hecho", "una opinión", "un titular", "un dato verificable"],
+      "correcta": 1,
+      "tip": "'El mejor' expresa una valoración personal: es una opinión.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa02-033",
+      "oa": "LE08 OA 02",
+      "pregunta": "'El reciclaje consiste en transformar residuos en nuevos productos para reducir la basura.' ¿Cuál es el propósito de este texto?",
+      "opciones": ["entretener con una historia", "convencer de una postura", "informar y explicar un tema", "vender un producto"],
+      "correcta": 2,
+      "tip": "Explica un tema de forma objetiva: su propósito es informar.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa02-034",
+      "oa": "LE08 OA 02",
+      "pregunta": "'El agua es esencial para la vida: la beben las personas y los animales, y la necesitan las plantas.' ¿Cuál es la idea principal?",
+      "opciones": ["Las plantas son bonitas", "Los animales beben poca agua", "El agua es aburrida", "El agua es esencial para la vida"],
+      "correcta": 3,
+      "tip": "La idea principal es que el agua es esencial para la vida; lo demás son ejemplos.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa02-035",
+      "oa": "LE08 OA 02",
+      "pregunta": "Una noticia informa: 'Se suspendieron las clases por la intensa lluvia.' ¿Qué se puede inferir?",
+      "opciones": ["El clima afectó la rutina escolar", "Los estudiantes reprobaron", "La escuela cerró para siempre", "Comenzó el verano"],
+      "correcta": 0,
+      "tip": "Si la lluvia suspende las clases, se infiere que el clima alteró la rutina escolar.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa02-036",
+      "oa": "LE08 OA 02",
+      "pregunta": "'El supermercado agotó el agua y las velas antes de la tormenta.' ¿Qué se puede concluir?",
+      "opciones": ["El supermercado quebró", "La gente se preparó ante la tormenta", "Nadie compró nada", "Era un día común"],
+      "correcta": 1,
+      "tip": "Comprar agua y velas antes de la tormenta indica que la gente se preparó.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa02-037",
+      "oa": "LE08 OA 02",
+      "pregunta": "Un reportaje señala: 'Cada vez más jóvenes leen en sus celulares.' ¿Qué se puede inferir?",
+      "opciones": ["Los libros de papel desaparecieron", "Los jóvenes ya no leen", "Los hábitos de lectura están cambiando", "Los celulares no sirven para leer"],
+      "correcta": 2,
+      "tip": "Que aumente la lectura en celulares permite inferir un cambio en los hábitos de lectura.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa02-038",
+      "oa": "LE08 OA 02",
+      "pregunta": "Un diario titula: 'Científicos chilenos descubren una nueva especie de rana.' ¿Cuál es la función de este titular?",
+      "opciones": ["Vender un producto", "Dar una moraleja", "Expresar una opinión personal", "Resumir el hecho y captar la atención"],
+      "correcta": 3,
+      "tip": "El titular resume lo esencial de la noticia y atrae la atención del lector.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa02-039",
+      "oa": "LE08 OA 02",
+      "pregunta": "En un diario se lee: 'A mi juicio, el gobierno debería invertir más en ciencia.' ¿A qué parte del diario corresponde?",
+      "opciones": ["a la sección de opinión", "a la noticia objetiva", "a un aviso publicitario", "a la cartelera de cine"],
+      "correcta": 0,
+      "tip": "'A mi juicio' revela una valoración personal: corresponde a la sección de opinión.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa02-040",
+      "oa": "LE08 OA 02",
+      "pregunta": "Un texto explica, con lenguaje claro y objetivo, paso a paso cómo se forma un arcoíris. ¿Qué tipo de texto es?",
+      "opciones": ["narrativo", "expositivo", "argumentativo", "publicitario"],
+      "correcta": 1,
+      "tip": "Explica un fenómeno de forma objetiva y ordenada: es un texto expositivo.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa02-041",
+      "oa": "LE08 OA 02",
+      "pregunta": "¿Cuál de estas frases podría aparecer en la parte objetiva (de hechos) de una noticia?",
+      "opciones": ["'Fue el accidente más triste de la historia.'", "'Deberían manejar con más cuidado.'", "'El accidente ocurrió en la ruta 5 a las 8:00.'", "'Qué pena que ocurran estas cosas.'"],
+      "correcta": 2,
+      "tip": "Solo la frase con datos verificables (lugar y hora) es un hecho objetivo.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa02-042",
+      "oa": "LE08 OA 02",
+      "pregunta": "Un afiche del colegio anuncia la fecha, la hora y el lugar de la reunión de apoderados. ¿Cuál es su propósito comunicativo?",
+      "opciones": ["persuadir para comprar", "narrar una aventura", "convencer de una idea política", "informar"],
+      "correcta": 3,
+      "tip": "Da a conocer datos útiles de forma objetiva: su propósito es informar.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa03-031",
+      "oa": "LE08 OA 03",
+      "pregunta": "'Con TecnoPlus, el futuro está en tus manos.' ¿Cuál es el propósito de este aviso?",
+      "opciones": ["persuadir para vender un producto", "informar un hecho objetivo", "narrar una historia", "explicar un proceso científico"],
+      "correcta": 0,
+      "tip": "Un aviso comercial busca persuadir para vender el producto.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa03-032",
+      "oa": "LE08 OA 03",
+      "pregunta": "'Los niños más felices eligen jugos Solcito.' ¿Qué recurso persuasivo se emplea en este aviso?",
+      "opciones": ["la cita de una fuente científica", "la apelación emocional", "un dato estadístico verificable", "una definición técnica"],
+      "correcta": 1,
+      "tip": "Asocia el producto con la felicidad para convencer: es una apelación emocional.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa03-033",
+      "oa": "LE08 OA 03",
+      "pregunta": "'Recomendado por 9 de cada 10 dentistas.' ¿Qué recurso persuasivo usa este aviso?",
+      "opciones": ["una moraleja", "una rima infantil", "la apariencia de autoridad o respaldo experto", "un narrador testigo"],
+      "correcta": 2,
+      "tip": "Apelar a expertos busca dar credibilidad y persuadir: es un recurso de autoridad.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa03-034",
+      "oa": "LE08 OA 03",
+      "pregunta": "'Cuida el agua: ciérrala mientras te cepillas.' Este mensaje corresponde a:",
+      "opciones": ["publicidad (vende un producto)", "una noticia", "un cuento", "propaganda (promueve una conducta)"],
+      "correcta": 3,
+      "tip": "Promueve una conducta de bien común, no un producto: es propaganda.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa03-035",
+      "oa": "LE08 OA 03",
+      "pregunta": "'Zapatillas Veloz: corre más rápido que nunca.' Este mensaje corresponde a:",
+      "opciones": ["publicidad (promueve un producto)", "propaganda (promueve una idea)", "una editorial", "un mito"],
+      "correcta": 0,
+      "tip": "Promueve un producto comercial para venderlo: es publicidad.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa03-036",
+      "oa": "LE08 OA 03",
+      "pregunta": "Un aviso muestra a una familia riendo mientras comparte un producto. ¿Qué efecto busca principalmente esa imagen?",
+      "opciones": ["explicar cómo se fabrica el producto", "asociar el producto con emociones positivas", "informar su precio exacto", "narrar la vida de la familia"],
+      "correcta": 1,
+      "tip": "La imagen liga el producto a emociones positivas para persuadir al público.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa03-037",
+      "oa": "LE08 OA 03",
+      "pregunta": "Un aviso de cereal usa dibujos animados, colores brillantes y un juguete de regalo. ¿A qué público está dirigido principalmente?",
+      "opciones": ["a personas mayores", "a médicos especialistas", "a niños y niñas", "a deportistas profesionales"],
+      "correcta": 2,
+      "tip": "Los dibujos, los colores y el regalo indican que el público objetivo son los niños.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa03-038",
+      "oa": "LE08 OA 03",
+      "pregunta": "Un comercial repite muchas veces el nombre de una bebida y su melodía. ¿Qué se puede inferir sobre su intención?",
+      "opciones": ["Quiere informarte datos científicos", "Quiere contarte un cuento", "No tiene ninguna intención", "Quiere que recuerdes y prefieras la marca"],
+      "correcta": 3,
+      "tip": "La repetición busca fijar la marca en la memoria para que la prefieras.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa03-039",
+      "oa": "LE08 OA 03",
+      "pregunta": "Un afiche promete 'resultados milagrosos en solo 3 días'. ¿Qué debería concluir un lector crítico?",
+      "opciones": ["La promesa es exagerada y conviene dudar", "Es una verdad comprobada", "Hay que comprarlo de inmediato", "Es una noticia objetiva"],
+      "correcta": 0,
+      "tip": "Ante promesas milagrosas, el lector crítico duda y busca información confiable.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa03-040",
+      "oa": "LE08 OA 03",
+      "pregunta": "Una campaña dice: 'Apaga la luz que no estás usando.' ¿Qué busca lograr en el receptor?",
+      "opciones": ["que compres una ampolleta cara", "que adoptes una conducta de ahorro", "que leas un cuento", "que memorices una fecha"],
+      "correcta": 1,
+      "tip": "Promueve una conducta de ahorro de energía: es propaganda.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa03-041",
+      "oa": "LE08 OA 03",
+      "pregunta": "El Ministerio de Salud difunde: 'Lávate las manos para evitar contagios.' Esto es un ejemplo de:",
+      "opciones": ["publicidad", "una noticia", "propaganda", "un reportaje"],
+      "correcta": 2,
+      "tip": "Promueve una conducta saludable, no un producto: es propaganda.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa03-042",
+      "oa": "LE08 OA 03",
+      "pregunta": "Un aviso de una tienda dice: 'Grandes ofertas, solo por hoy.' ¿Qué intención comunicativa tiene?",
+      "opciones": ["informar de forma neutral", "narrar una historia", "explicar un tema", "persuadir para que compres pronto"],
+      "correcta": 3,
+      "tip": "La frase 'solo por hoy' crea urgencia para persuadirte de comprar pronto.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa04-031",
+      "oa": "LE08 OA 04",
+      "pregunta": "'Debería prohibirse el celular en clases, ya que distrae a los estudiantes.' ¿Cuál es la tesis?",
+      "opciones": ["'Debería prohibirse el celular en clases'", "'ya que distrae a los estudiantes'", "'los estudiantes usan celular'", "'las clases duran 90 minutos'"],
+      "correcta": 0,
+      "tip": "La tesis es la postura defendida; la razón ('ya que distrae') es el argumento.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa04-032",
+      "oa": "LE08 OA 04",
+      "pregunta": "En 'Hay que cuidar los bosques, porque producen el oxígeno que respiramos', la parte 'porque producen el oxígeno que respiramos' es:",
+      "opciones": ["la tesis", "un argumento", "un titular", "un contraargumento"],
+      "correcta": 1,
+      "tip": "Entrega la razón que sostiene la postura: es un argumento.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa04-033",
+      "oa": "LE08 OA 04",
+      "pregunta": "'Algunos piensan que los videojuegos son una pérdida de tiempo; sin embargo, pueden desarrollar habilidades.' La primera parte funciona como:",
+      "opciones": ["la tesis defendida", "un ejemplo", "un contraargumento", "una conclusión"],
+      "correcta": 2,
+      "tip": "Presenta la postura contraria que luego se rebate: es un contraargumento.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa04-034",
+      "oa": "LE08 OA 04",
+      "pregunta": "'El deporte escolar debería ser obligatorio.' Esta afirmación es:",
+      "opciones": ["un hecho verificable", "una noticia", "un dato estadístico", "una tesis (postura defendible)"],
+      "correcta": 3,
+      "tip": "'Debería' expresa una postura discutible que puede defenderse: es una tesis.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa04-035",
+      "oa": "LE08 OA 04",
+      "pregunta": "'Si seguimos talando árboles a este ritmo, no quedará bosque para las próximas generaciones.' ¿Qué postura defiende implícitamente el autor?",
+      "opciones": ["Hay que frenar la tala de árboles", "Hay que talar más rápido", "Los bosques no importan", "Las generaciones futuras no existen"],
+      "correcta": 0,
+      "tip": "La advertencia implica la postura de que se debe frenar la tala de árboles.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa04-036",
+      "oa": "LE08 OA 04",
+      "pregunta": "'Cada vez más estudiantes llegan cansados por dormir tarde usando el celular.' ¿Qué conclusión apoya esta idea?",
+      "opciones": ["Hay que dormir menos", "Convendría limitar el uso nocturno del celular", "El celular mejora el sueño", "Los estudiantes deben acostarse más tarde"],
+      "correcta": 1,
+      "tip": "El dato respalda la conclusión de limitar el uso del celular durante la noche.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa04-037",
+      "oa": "LE08 OA 04",
+      "pregunta": "'Estudió mucho; por lo tanto, aprobó el examen.' ¿Qué relación expresa el conector 'por lo tanto'?",
+      "opciones": ["una oposición", "un orden temporal", "una conclusión o consecuencia", "un ejemplo"],
+      "correcta": 2,
+      "tip": "'Por lo tanto' introduce la conclusión o consecuencia que se deriva de lo anterior.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa04-038",
+      "oa": "LE08 OA 04",
+      "pregunta": "Un diario publica, sin firma individual, un texto que defiende la postura del medio sobre la educación. Ese texto es:",
+      "opciones": ["una noticia", "un cuento", "un aviso publicitario", "una editorial"],
+      "correcta": 3,
+      "tip": "El texto de opinión del medio, sin firma individual, es la editorial.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa04-039",
+      "oa": "LE08 OA 04",
+      "pregunta": "Un lector envía al periódico un texto donde opina sobre el transporte público y pide mejoras. Ese texto es:",
+      "opciones": ["una carta al director", "una noticia objetiva", "una leyenda", "un instructivo"],
+      "correcta": 0,
+      "tip": "Un lector que opina en el diario sobre un tema público escribe una carta al director.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa04-040",
+      "oa": "LE08 OA 04",
+      "pregunta": "En 'La lectura entretiene; ___, mejora el vocabulario', ¿qué conector suma un nuevo argumento a favor?",
+      "opciones": ["sin embargo", "además", "no obstante", "por el contrario"],
+      "correcta": 1,
+      "tip": "'Además' agrega un nuevo argumento a favor de la misma postura.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa04-041",
+      "oa": "LE08 OA 04",
+      "pregunta": "Para introducir una objeción a la tesis dentro de un texto argumentativo, ¿cuál de estos conectores usarías?",
+      "opciones": ["porque", "además", "sin embargo", "en conclusión"],
+      "correcta": 2,
+      "tip": "'Sin embargo' marca contraste, útil para introducir una objeción o contraargumento.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa04-042",
+      "oa": "LE08 OA 04",
+      "pregunta": "Un texto sostiene 'Los recreos deberían ser más largos' y entrega razones para convencer al lector. ¿Qué tipo de texto es?",
+      "opciones": ["narrativo", "expositivo", "publicitario", "argumentativo"],
+      "correcta": 3,
+      "tip": "Defiende una postura con razones para convencer: es un texto argumentativo.",
+      "revisada": false
+    }
+  ]
+}

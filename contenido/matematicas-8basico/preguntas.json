@@ -1,0 +1,2362 @@
+{
+  "asignatura": "Matemática",
+  "nivel": "8° básico",
+  "meta_preguntas_por_oa": 25,
+  "total_preguntas": 168,
+  "revisadas": 0,
+  "nota": "Expedición Álgebra y ecuaciones (MA08 OA 06-09). Generadas por agente; opciones barajadas. Sin revisión pedagógica humana.",
+  "preguntas": [
+    {
+      "id": "mate8-oa06-001",
+      "oa": "MA08 OA 06",
+      "pregunta": "¿Cuál expresión representa 'el doble de un número, más 5'?",
+      "opciones": [
+        "2x + 5",
+        "2(x + 5)",
+        "x/2 + 5",
+        "2 + x + 5"
+      ],
+      "correcta": 0,
+      "tip": "'El doble de un número' es 2x; luego se suma 5, entonces 2x + 5.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa06-002",
+      "oa": "MA08 OA 06",
+      "pregunta": "Traduce a lenguaje algebraico: 'el triple de un número, menos 4'.",
+      "opciones": [
+        "3(x − 4)",
+        "3x − 4",
+        "3 + x − 4",
+        "x/3 − 4"
+      ],
+      "correcta": 1,
+      "tip": "El triple de un número es 3x; al restarle 4 queda 3x − 4.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa06-003",
+      "oa": "MA08 OA 06",
+      "pregunta": "¿Cuál expresión representa 'la mitad de un número, más 7'?",
+      "opciones": [
+        "2x + 7",
+        "(x + 7)/2",
+        "x/2 + 7",
+        "x − 7/2"
+      ],
+      "correcta": 2,
+      "tip": "La mitad de un número es x/2; luego se suma 7, entonces x/2 + 7.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa06-004",
+      "oa": "MA08 OA 06",
+      "pregunta": "Si un número es n, ¿cómo se escribe su sucesor (el número que sigue)?",
+      "opciones": [
+        "n − 1",
+        "2n",
+        "n/2",
+        "n + 1"
+      ],
+      "correcta": 3,
+      "tip": "El sucesor es el número siguiente, es decir n + 1.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa06-005",
+      "oa": "MA08 OA 06",
+      "pregunta": "Valoriza la expresión 3x + 2 para x = 4.",
+      "opciones": [
+        "14",
+        "9",
+        "18",
+        "10"
+      ],
+      "correcta": 0,
+      "tip": "Reemplaza x por 4: 3·4 + 2 = 12 + 2 = 14.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa06-006",
+      "oa": "MA08 OA 06",
+      "pregunta": "Valoriza la expresión 5x − 3 para x = 2.",
+      "opciones": [
+        "13",
+        "7",
+        "10",
+        "4"
+      ],
+      "correcta": 1,
+      "tip": "Reemplaza x por 2: 5·2 − 3 = 10 − 3 = 7.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa06-007",
+      "oa": "MA08 OA 06",
+      "pregunta": "Valoriza 2a + 3b para a = 3 y b = 1.",
+      "opciones": [
+        "12",
+        "15",
+        "9",
+        "6"
+      ],
+      "correcta": 2,
+      "tip": "2·3 + 3·1 = 6 + 3 = 9.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa06-008",
+      "oa": "MA08 OA 06",
+      "pregunta": "Valoriza x² + 1 para x = 3.",
+      "opciones": [
+        "7",
+        "9",
+        "6",
+        "10"
+      ],
+      "correcta": 3,
+      "tip": "3² + 1 = 9 + 1 = 10.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa06-009",
+      "oa": "MA08 OA 06",
+      "pregunta": "¿Qué expresión representa 'un número más su triple'?",
+      "opciones": [
+        "x + 3x",
+        "3x",
+        "x + 3",
+        "x · 3x"
+      ],
+      "correcta": 0,
+      "tip": "El número es x y su triple es 3x, de modo que la suma es x + 3x (equivale a 4x).",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa06-010",
+      "oa": "MA08 OA 06",
+      "pregunta": "¿Cuál expresión representa el perímetro de un cuadrado de lado L?",
+      "opciones": [
+        "L²",
+        "4L",
+        "2L",
+        "L + 4"
+      ],
+      "correcta": 1,
+      "tip": "El perímetro suma los 4 lados iguales: L + L + L + L = 4L.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa06-011",
+      "oa": "MA08 OA 06",
+      "pregunta": "En el patrón 3, 6, 9, 12, … ¿cuál es el término que ocupa el lugar n?",
+      "opciones": [
+        "n + 3",
+        "2n + 1",
+        "3n",
+        "3n − 1"
+      ],
+      "correcta": 2,
+      "tip": "Cada término es 3 veces su posición: para n = 1 da 3, para n = 2 da 6. Es 3n.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa06-012",
+      "oa": "MA08 OA 06",
+      "pregunta": "En el patrón 5, 7, 9, 11, … ¿cuál es el término que ocupa el lugar n?",
+      "opciones": [
+        "5n",
+        "n + 2",
+        "2n + 5",
+        "2n + 3"
+      ],
+      "correcta": 3,
+      "tip": "Aumenta de 2 en 2 partiendo de 5: para n = 1 da 2·1 + 3 = 5. Es 2n + 3.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa06-013",
+      "oa": "MA08 OA 06",
+      "pregunta": "¿Qué expresión representa 'el cuádruple de un número, disminuido en 2'?",
+      "opciones": [
+        "4x − 2",
+        "4(x − 2)",
+        "4 − 2x",
+        "x/4 − 2"
+      ],
+      "correcta": 0,
+      "tip": "El cuádruple es 4x; al disminuirlo en 2 queda 4x − 2.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa06-014",
+      "oa": "MA08 OA 06",
+      "pregunta": "Si un lápiz cuesta $p, ¿cuánto cuestan 6 lápices?",
+      "opciones": [
+        "p + 6",
+        "6p",
+        "p/6",
+        "p − 6"
+      ],
+      "correcta": 1,
+      "tip": "Seis lápices al mismo precio cuestan 6 veces p, es decir 6p.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa06-015",
+      "oa": "MA08 OA 06",
+      "pregunta": "¿Cuál expresión representa el área de un rectángulo de base b y altura h?",
+      "opciones": [
+        "b + h",
+        "2(b + h)",
+        "b · h",
+        "b/h"
+      ],
+      "correcta": 2,
+      "tip": "El área de un rectángulo es base por altura: b · h.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa06-016",
+      "oa": "MA08 OA 06",
+      "pregunta": "Tres números consecutivos, si el primero es n. ¿Cómo se expresa el tercero?",
+      "opciones": [
+        "n",
+        "3n",
+        "n + 3",
+        "n + 2"
+      ],
+      "correcta": 3,
+      "tip": "El segundo es n + 1 y el tercero n + 2.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa06-017",
+      "oa": "MA08 OA 06",
+      "pregunta": "Ana tiene x años. ¿Cómo se expresa 'el doble de la edad que tendrá dentro de 3 años'?",
+      "opciones": [
+        "2(x + 3)",
+        "2x + 3",
+        "2x − 3",
+        "x + 3"
+      ],
+      "correcta": 0,
+      "tip": "Dentro de 3 años tendrá x + 3; el doble de esa edad es 2(x + 3).",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa06-018",
+      "oa": "MA08 OA 06",
+      "pregunta": "Valoriza la expresión (x + y)/2 para x = 6 e y = 4.",
+      "opciones": [
+        "10",
+        "5",
+        "2",
+        "8"
+      ],
+      "correcta": 1,
+      "tip": "(6 + 4)/2 = 10/2 = 5.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa06-019",
+      "oa": "MA08 OA 06",
+      "pregunta": "Valoriza la expresión 4 − 2x para x = 5.",
+      "opciones": [
+        "6",
+        "14",
+        "−6",
+        "−14"
+      ],
+      "correcta": 2,
+      "tip": "4 − 2·5 = 4 − 10 = −6.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa06-020",
+      "oa": "MA08 OA 06",
+      "pregunta": "¿Qué expresión representa 'la suma de un número y su cuadrado'?",
+      "opciones": [
+        "2x",
+        "x · x²",
+        "(2x)²",
+        "x + x²"
+      ],
+      "correcta": 3,
+      "tip": "El número es x y su cuadrado es x², así que la suma es x + x².",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa06-021",
+      "oa": "MA08 OA 06",
+      "pregunta": "El costo total de n entradas al cine, si cada una cuesta $2500, es:",
+      "opciones": [
+        "2500n",
+        "2500 + n",
+        "2500/n",
+        "n − 2500"
+      ],
+      "correcta": 0,
+      "tip": "Cada entrada cuesta 2500 y son n entradas: 2500 · n = 2500n.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa06-022",
+      "oa": "MA08 OA 06",
+      "pregunta": "¿Qué expresión representa 'un número disminuido en 8'?",
+      "opciones": [
+        "8 − x",
+        "x − 8",
+        "x/8",
+        "8x"
+      ],
+      "correcta": 1,
+      "tip": "'Disminuido en 8' significa restarle 8 al número: x − 8.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa06-023",
+      "oa": "MA08 OA 06",
+      "pregunta": "Si un número es m, ¿cómo se escribe su antecesor (el número anterior)?",
+      "opciones": [
+        "m + 1",
+        "2m",
+        "m − 1",
+        "m/2"
+      ],
+      "correcta": 2,
+      "tip": "El antecesor es el número anterior, es decir m − 1.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa06-024",
+      "oa": "MA08 OA 06",
+      "pregunta": "En el patrón 2, 4, 8, 16, … ¿cuál es el término que ocupa el lugar n?",
+      "opciones": [
+        "2n",
+        "n²",
+        "2n + 2",
+        "2ⁿ"
+      ],
+      "correcta": 3,
+      "tip": "Cada término duplica al anterior: para n = 1 da 2¹ = 2, para n = 3 da 2³ = 8. Es 2ⁿ.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa06-025",
+      "oa": "MA08 OA 06",
+      "pregunta": "Valoriza la expresión 3(x + 2) para x = 4.",
+      "opciones": [
+        "18",
+        "14",
+        "20",
+        "10"
+      ],
+      "correcta": 0,
+      "tip": "3·(4 + 2) = 3·6 = 18.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa06-026",
+      "oa": "MA08 OA 06",
+      "pregunta": "Si hoy tengo $a y gasto $150, ¿cuánto dinero me queda?",
+      "opciones": [
+        "a + 150",
+        "a − 150",
+        "150 − a",
+        "150a"
+      ],
+      "correcta": 1,
+      "tip": "Al gastar se resta: queda a − 150.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa06-027",
+      "oa": "MA08 OA 06",
+      "pregunta": "¿Qué expresión representa 'el doble de la suma de dos números x e y'?",
+      "opciones": [
+        "2x + y",
+        "x + 2y",
+        "2(x + y)",
+        "2xy"
+      ],
+      "correcta": 2,
+      "tip": "Primero se suma x + y y luego se duplica: 2(x + y).",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa06-028",
+      "oa": "MA08 OA 06",
+      "pregunta": "Valoriza la expresión a² − b para a = 4 y b = 6.",
+      "opciones": [
+        "2",
+        "−2",
+        "20",
+        "10"
+      ],
+      "correcta": 3,
+      "tip": "4² − 6 = 16 − 6 = 10.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa06-029",
+      "oa": "MA08 OA 06",
+      "pregunta": "¿Cuál expresión representa el número de ruedas de b bicicletas?",
+      "opciones": [
+        "2b",
+        "b + 2",
+        "b/2",
+        "4b"
+      ],
+      "correcta": 0,
+      "tip": "Cada bicicleta tiene 2 ruedas, así que b bicicletas tienen 2b ruedas.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa06-030",
+      "oa": "MA08 OA 06",
+      "pregunta": "¿Qué expresión representa 'un número al cuadrado, aumentado en 9'?",
+      "opciones": [
+        "(x + 9)²",
+        "x² + 9",
+        "2x + 9",
+        "9x²"
+      ],
+      "correcta": 1,
+      "tip": "El cuadrado del número es x² y luego se suma 9: x² + 9.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa07-001",
+      "oa": "MA08 OA 07",
+      "pregunta": "Reduce los términos semejantes: 3x + 5x",
+      "opciones": [
+        "8x",
+        "15x",
+        "8x²",
+        "2x"
+      ],
+      "correcta": 0,
+      "tip": "Se suman los coeficientes de la misma parte literal: 3 + 5 = 8, queda 8x.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa07-002",
+      "oa": "MA08 OA 07",
+      "pregunta": "Reduce los términos semejantes: 7a − 2a",
+      "opciones": [
+        "9a",
+        "5a",
+        "14a",
+        "5"
+      ],
+      "correcta": 1,
+      "tip": "Se restan los coeficientes: 7 − 2 = 5, queda 5a.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa07-003",
+      "oa": "MA08 OA 07",
+      "pregunta": "Reduce: 4x + 3 + 2x",
+      "opciones": [
+        "9x",
+        "6x + 5",
+        "6x + 3",
+        "5x + 3"
+      ],
+      "correcta": 2,
+      "tip": "Se juntan solo los términos con x: 4x + 2x = 6x, y el 3 queda igual: 6x + 3.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa07-004",
+      "oa": "MA08 OA 07",
+      "pregunta": "Reduce: 5y + 2 − y + 4",
+      "opciones": [
+        "6y + 6",
+        "5y + 6",
+        "4y + 2",
+        "4y + 6"
+      ],
+      "correcta": 3,
+      "tip": "5y − y = 4y y 2 + 4 = 6, entonces 4y + 6.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa07-005",
+      "oa": "MA08 OA 07",
+      "pregunta": "Reduce: 3a + 2b + a",
+      "opciones": [
+        "4a + 2b",
+        "5ab",
+        "6ab",
+        "3a + 3b"
+      ],
+      "correcta": 0,
+      "tip": "Solo son semejantes 3a y a: 3a + a = 4a; el 2b no cambia: 4a + 2b.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa07-006",
+      "oa": "MA08 OA 07",
+      "pregunta": "Suma las expresiones: (2x + 3) + (5x + 1)",
+      "opciones": [
+        "7x + 3",
+        "7x + 4",
+        "10x + 4",
+        "7x + 2"
+      ],
+      "correcta": 1,
+      "tip": "2x + 5x = 7x y 3 + 1 = 4, entonces 7x + 4.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa07-007",
+      "oa": "MA08 OA 07",
+      "pregunta": "Resta las expresiones: (8x + 6) − (3x + 2)",
+      "opciones": [
+        "5x + 8",
+        "11x + 4",
+        "5x + 4",
+        "5x + 2"
+      ],
+      "correcta": 2,
+      "tip": "8x − 3x = 5x y 6 − 2 = 4, entonces 5x + 4.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa07-008",
+      "oa": "MA08 OA 07",
+      "pregunta": "Resta las expresiones: (6a − 4) − (2a − 7)",
+      "opciones": [
+        "4a − 11",
+        "4a − 3",
+        "8a + 3",
+        "4a + 3"
+      ],
+      "correcta": 3,
+      "tip": "Cambia el signo del segundo paréntesis: 6a − 4 − 2a + 7 = 4a + 3.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa07-009",
+      "oa": "MA08 OA 07",
+      "pregunta": "Multiplica aplicando la distributividad: 3(x + 4)",
+      "opciones": [
+        "3x + 12",
+        "3x + 4",
+        "x + 12",
+        "3x + 7"
+      ],
+      "correcta": 0,
+      "tip": "Se multiplica el 3 por cada término: 3·x + 3·4 = 3x + 12.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa07-010",
+      "oa": "MA08 OA 07",
+      "pregunta": "Multiplica: 5(2a − 3)",
+      "opciones": [
+        "10a − 3",
+        "10a − 15",
+        "7a − 15",
+        "10a + 15"
+      ],
+      "correcta": 1,
+      "tip": "5·2a = 10a y 5·(−3) = −15, entonces 10a − 15.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa07-011",
+      "oa": "MA08 OA 07",
+      "pregunta": "Multiplica: 2x(x + 3)",
+      "opciones": [
+        "2x² + 3",
+        "2x + 6x",
+        "2x² + 6x",
+        "2x² + 6"
+      ],
+      "correcta": 2,
+      "tip": "2x·x = 2x² y 2x·3 = 6x, entonces 2x² + 6x.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa07-012",
+      "oa": "MA08 OA 07",
+      "pregunta": "Multiplica: −2(x − 5)",
+      "opciones": [
+        "−2x − 10",
+        "2x − 10",
+        "−2x − 5",
+        "−2x + 10"
+      ],
+      "correcta": 3,
+      "tip": "−2·x = −2x y −2·(−5) = +10, entonces −2x + 10.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa07-013",
+      "oa": "MA08 OA 07",
+      "pregunta": "Reduce: 9m − 4m − m",
+      "opciones": [
+        "4m",
+        "5m",
+        "4m²",
+        "6m"
+      ],
+      "correcta": 0,
+      "tip": "9 − 4 − 1 = 4, entonces 4m.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa07-014",
+      "oa": "MA08 OA 07",
+      "pregunta": "Reduce: 2x² + 3x + x²",
+      "opciones": [
+        "6x⁴",
+        "3x² + 3x",
+        "5x²",
+        "2x² + 4x"
+      ],
+      "correcta": 1,
+      "tip": "Solo se suman los términos con x²: 2x² + x² = 3x²; el 3x no es semejante: 3x² + 3x.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa07-015",
+      "oa": "MA08 OA 07",
+      "pregunta": "Suma: (x + 2y) + (3x − y)",
+      "opciones": [
+        "4x − y",
+        "2x + y",
+        "4x + y",
+        "4x + 3y"
+      ],
+      "correcta": 2,
+      "tip": "x + 3x = 4x y 2y − y = y, entonces 4x + y.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa07-016",
+      "oa": "MA08 OA 07",
+      "pregunta": "Multiplica: 4(a + b − 2)",
+      "opciones": [
+        "4a + b − 2",
+        "4a + 4b − 2",
+        "a + b − 8",
+        "4a + 4b − 8"
+      ],
+      "correcta": 3,
+      "tip": "El 4 multiplica a cada término: 4a + 4b − 8.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa07-017",
+      "oa": "MA08 OA 07",
+      "pregunta": "Reduce: 6x + 4 − 6x",
+      "opciones": [
+        "4",
+        "12x + 4",
+        "4x",
+        "0"
+      ],
+      "correcta": 0,
+      "tip": "6x − 6x = 0 y queda el 4.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa07-018",
+      "oa": "MA08 OA 07",
+      "pregunta": "Resta: (5a + 3) − (a + 3)",
+      "opciones": [
+        "4a + 6",
+        "4a",
+        "6a",
+        "5a"
+      ],
+      "correcta": 1,
+      "tip": "5a − a = 4a y 3 − 3 = 0, entonces 4a.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa07-019",
+      "oa": "MA08 OA 07",
+      "pregunta": "Multiplica: 3a(2a + 1)",
+      "opciones": [
+        "6a + 3",
+        "6a² + 1",
+        "6a² + 3a",
+        "5a² + 3a"
+      ],
+      "correcta": 2,
+      "tip": "3a·2a = 6a² y 3a·1 = 3a, entonces 6a² + 3a.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa07-020",
+      "oa": "MA08 OA 07",
+      "pregunta": "Reduce: 8 − 3x + 2x − 5",
+      "opciones": [
+        "−5x + 3",
+        "x + 3",
+        "−x − 3",
+        "−x + 3"
+      ],
+      "correcta": 3,
+      "tip": "−3x + 2x = −x y 8 − 5 = 3, entonces −x + 3.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa07-021",
+      "oa": "MA08 OA 07",
+      "pregunta": "Multiplica: 7(x + 1)",
+      "opciones": [
+        "7x + 7",
+        "7x + 1",
+        "8x",
+        "7x + 8"
+      ],
+      "correcta": 0,
+      "tip": "7·x + 7·1 = 7x + 7.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa07-022",
+      "oa": "MA08 OA 07",
+      "pregunta": "Reduce: 10y − 15y",
+      "opciones": [
+        "5y",
+        "−5y",
+        "25y",
+        "−25y"
+      ],
+      "correcta": 1,
+      "tip": "10 − 15 = −5, entonces −5y.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa07-023",
+      "oa": "MA08 OA 07",
+      "pregunta": "Suma: (3x² + 2x) + (x² − 2x)",
+      "opciones": [
+        "4x² + 4x",
+        "2x²",
+        "4x²",
+        "4x⁴"
+      ],
+      "correcta": 2,
+      "tip": "3x² + x² = 4x² y 2x − 2x = 0, entonces 4x².",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa07-024",
+      "oa": "MA08 OA 07",
+      "pregunta": "Multiplica: −3(2x + 4)",
+      "opciones": [
+        "−6x + 12",
+        "6x − 12",
+        "−6x − 4",
+        "−6x − 12"
+      ],
+      "correcta": 3,
+      "tip": "−3·2x = −6x y −3·4 = −12, entonces −6x − 12.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa07-025",
+      "oa": "MA08 OA 07",
+      "pregunta": "Reduce: 4a + 7b − 2a − 3b",
+      "opciones": [
+        "2a + 4b",
+        "6a + 4b",
+        "2a + 10b",
+        "2ab"
+      ],
+      "correcta": 0,
+      "tip": "4a − 2a = 2a y 7b − 3b = 4b, entonces 2a + 4b.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa07-026",
+      "oa": "MA08 OA 07",
+      "pregunta": "Multiplica: x(x − 6)",
+      "opciones": [
+        "x² − 6",
+        "x² − 6x",
+        "x − 6x",
+        "x² + 6x"
+      ],
+      "correcta": 1,
+      "tip": "x·x = x² y x·(−6) = −6x, entonces x² − 6x.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa07-027",
+      "oa": "MA08 OA 07",
+      "pregunta": "Resta: (9x + 2) − (4x − 5)",
+      "opciones": [
+        "5x − 3",
+        "13x + 7",
+        "5x + 7",
+        "5x − 7"
+      ],
+      "correcta": 2,
+      "tip": "Cambia el signo del segundo paréntesis: 9x + 2 − 4x + 5 = 5x + 7.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa07-028",
+      "oa": "MA08 OA 07",
+      "pregunta": "Reduce: 3(x + 2) + 2x",
+      "opciones": [
+        "3x + 6",
+        "5x + 2",
+        "6x + 6",
+        "5x + 6"
+      ],
+      "correcta": 3,
+      "tip": "Primero distribuye: 3x + 6; luego suma 2x: 3x + 2x = 5x, queda 5x + 6.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa07-029",
+      "oa": "MA08 OA 07",
+      "pregunta": "Reduce: −x + 4x",
+      "opciones": [
+        "3x",
+        "−3x",
+        "5x",
+        "−5x"
+      ],
+      "correcta": 0,
+      "tip": "−1 + 4 = 3, entonces 3x.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa07-030",
+      "oa": "MA08 OA 07",
+      "pregunta": "Multiplica: 6(a − b)",
+      "opciones": [
+        "6a − b",
+        "6a − 6b",
+        "6a + 6b",
+        "a − b"
+      ],
+      "correcta": 1,
+      "tip": "6·a = 6a y 6·(−b) = −6b, entonces 6a − 6b.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa08-001",
+      "oa": "MA08 OA 08",
+      "pregunta": "Resuelve la ecuación: x + 7 = 12",
+      "opciones": [
+        "5",
+        "19",
+        "−5",
+        "7"
+      ],
+      "correcta": 0,
+      "tip": "Se resta 7 a ambos lados: x = 12 − 7 = 5.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa08-002",
+      "oa": "MA08 OA 08",
+      "pregunta": "Resuelve la ecuación: x − 4 = 9",
+      "opciones": [
+        "5",
+        "13",
+        "−13",
+        "36"
+      ],
+      "correcta": 1,
+      "tip": "Se suma 4 a ambos lados: x = 9 + 4 = 13.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa08-003",
+      "oa": "MA08 OA 08",
+      "pregunta": "Resuelve la ecuación: 3x = 21",
+      "opciones": [
+        "18",
+        "24",
+        "7",
+        "63"
+      ],
+      "correcta": 2,
+      "tip": "Se divide por 3: x = 21 / 3 = 7.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa08-004",
+      "oa": "MA08 OA 08",
+      "pregunta": "Resuelve la ecuación: x/4 = 5",
+      "opciones": [
+        "9",
+        "1,25",
+        "5/4",
+        "20"
+      ],
+      "correcta": 3,
+      "tip": "Se multiplica por 4: x = 5 · 4 = 20.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa08-005",
+      "oa": "MA08 OA 08",
+      "pregunta": "Resuelve la ecuación: 2x + 3 = 11",
+      "opciones": [
+        "4",
+        "7",
+        "8",
+        "−4"
+      ],
+      "correcta": 0,
+      "tip": "2x = 11 − 3 = 8, luego x = 8 / 2 = 4.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa08-006",
+      "oa": "MA08 OA 08",
+      "pregunta": "Resuelve la ecuación: 5x − 2 = 13",
+      "opciones": [
+        "2,2",
+        "3",
+        "15",
+        "−3"
+      ],
+      "correcta": 1,
+      "tip": "5x = 13 + 2 = 15, luego x = 15 / 5 = 3.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa08-007",
+      "oa": "MA08 OA 08",
+      "pregunta": "Resuelve la ecuación: 4x + 1 = 9",
+      "opciones": [
+        "2,5",
+        "10",
+        "2",
+        "−2"
+      ],
+      "correcta": 2,
+      "tip": "4x = 9 − 1 = 8, luego x = 8 / 4 = 2.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa08-008",
+      "oa": "MA08 OA 08",
+      "pregunta": "Resuelve la ecuación: 3x − 5 = 7",
+      "opciones": [
+        "2",
+        "−4",
+        "0,66",
+        "4"
+      ],
+      "correcta": 3,
+      "tip": "3x = 7 + 5 = 12, luego x = 12 / 3 = 4.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa08-009",
+      "oa": "MA08 OA 08",
+      "pregunta": "Resuelve la ecuación: 2x + 4 = 10",
+      "opciones": [
+        "3",
+        "7",
+        "2",
+        "5"
+      ],
+      "correcta": 0,
+      "tip": "2x = 10 − 4 = 6, luego x = 6 / 2 = 3.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa08-010",
+      "oa": "MA08 OA 08",
+      "pregunta": "Resuelve la ecuación: 6x = 2x + 12",
+      "opciones": [
+        "6",
+        "3",
+        "1,5",
+        "12"
+      ],
+      "correcta": 1,
+      "tip": "Se pasan las x a un lado: 6x − 2x = 12, es decir 4x = 12, luego x = 3.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa08-011",
+      "oa": "MA08 OA 08",
+      "pregunta": "Resuelve la ecuación: 5x = 3x + 8",
+      "opciones": [
+        "1",
+        "2",
+        "4",
+        "8"
+      ],
+      "correcta": 2,
+      "tip": "5x − 3x = 8, es decir 2x = 8, luego x = 4.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa08-012",
+      "oa": "MA08 OA 08",
+      "pregunta": "Resuelve la ecuación: 7x − 3 = 4x + 9",
+      "opciones": [
+        "2",
+        "6",
+        "−4",
+        "4"
+      ],
+      "correcta": 3,
+      "tip": "7x − 4x = 9 + 3, es decir 3x = 12, luego x = 4.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa08-013",
+      "oa": "MA08 OA 08",
+      "pregunta": "Resuelve la ecuación: 2x + 5 = x + 9",
+      "opciones": [
+        "4",
+        "14",
+        "−4",
+        "2"
+      ],
+      "correcta": 0,
+      "tip": "2x − x = 9 − 5, es decir x = 4.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa08-014",
+      "oa": "MA08 OA 08",
+      "pregunta": "Resuelve la ecuación: 3x + 2 = x + 10",
+      "opciones": [
+        "6",
+        "4",
+        "3",
+        "8"
+      ],
+      "correcta": 1,
+      "tip": "3x − x = 10 − 2, es decir 2x = 8, luego x = 4.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa08-015",
+      "oa": "MA08 OA 08",
+      "pregunta": "Resuelve la ecuación: 4x − 1 = 2x + 7",
+      "opciones": [
+        "3",
+        "2",
+        "4",
+        "8"
+      ],
+      "correcta": 2,
+      "tip": "4x − 2x = 7 + 1, es decir 2x = 8, luego x = 4.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa08-016",
+      "oa": "MA08 OA 08",
+      "pregunta": "Resuelve la ecuación: x + x + 6 = 20",
+      "opciones": [
+        "10",
+        "13",
+        "26",
+        "7"
+      ],
+      "correcta": 3,
+      "tip": "2x + 6 = 20, luego 2x = 14 y x = 7.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa08-017",
+      "oa": "MA08 OA 08",
+      "pregunta": "Resuelve la ecuación: 10 = 2x + 4",
+      "opciones": [
+        "3",
+        "7",
+        "−3",
+        "28"
+      ],
+      "correcta": 0,
+      "tip": "2x = 10 − 4 = 6, luego x = 3.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa08-018",
+      "oa": "MA08 OA 08",
+      "pregunta": "Resuelve la ecuación: 8 − x = 3",
+      "opciones": [
+        "11",
+        "5",
+        "−5",
+        "24"
+      ],
+      "correcta": 1,
+      "tip": "−x = 3 − 8 = −5, luego x = 5.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa08-019",
+      "oa": "MA08 OA 08",
+      "pregunta": "Resuelve la ecuación: 3(x + 2) = 15",
+      "opciones": [
+        "5",
+        "7",
+        "3",
+        "4"
+      ],
+      "correcta": 2,
+      "tip": "3x + 6 = 15, luego 3x = 9 y x = 3.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa08-020",
+      "oa": "MA08 OA 08",
+      "pregunta": "Resuelve la ecuación: 2(x − 1) = 8",
+      "opciones": [
+        "4",
+        "3,5",
+        "9",
+        "5"
+      ],
+      "correcta": 3,
+      "tip": "2x − 2 = 8, luego 2x = 10 y x = 5.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa08-021",
+      "oa": "MA08 OA 08",
+      "pregunta": "El doble de un número, más 6, es igual a 20. ¿Cuál es el número?",
+      "opciones": [
+        "7",
+        "13",
+        "10",
+        "14"
+      ],
+      "correcta": 0,
+      "tip": "Se plantea 2x + 6 = 20; entonces 2x = 14 y x = 7.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa08-022",
+      "oa": "MA08 OA 08",
+      "pregunta": "Un número más 12 es igual al triple del número. ¿Cuál es el número?",
+      "opciones": [
+        "4",
+        "6",
+        "12",
+        "18"
+      ],
+      "correcta": 1,
+      "tip": "Se plantea x + 12 = 3x; entonces 12 = 2x y x = 6.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa08-023",
+      "oa": "MA08 OA 08",
+      "pregunta": "Pedro tiene x años. En 5 años más tendrá 18. ¿Cuántos años tiene hoy?",
+      "opciones": [
+        "23",
+        "18",
+        "13",
+        "10"
+      ],
+      "correcta": 2,
+      "tip": "Se plantea x + 5 = 18; entonces x = 13.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa08-024",
+      "oa": "MA08 OA 08",
+      "pregunta": "Resuelve la ecuación: x/2 + 3 = 7",
+      "opciones": [
+        "5",
+        "2",
+        "20",
+        "8"
+      ],
+      "correcta": 3,
+      "tip": "x/2 = 7 − 3 = 4, luego x = 4 · 2 = 8.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa08-025",
+      "oa": "MA08 OA 08",
+      "pregunta": "Resuelve la ecuación: 5x + 2 = 3x + 10",
+      "opciones": [
+        "4",
+        "6",
+        "3",
+        "8"
+      ],
+      "correcta": 0,
+      "tip": "5x − 3x = 10 − 2, es decir 2x = 8, luego x = 4.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa08-026",
+      "oa": "MA08 OA 08",
+      "pregunta": "Tres cuadernos iguales cuestan $4500 en total. ¿Cuánto cuesta cada uno?",
+      "opciones": [
+        "$4497",
+        "$1500",
+        "$13500",
+        "$1350"
+      ],
+      "correcta": 1,
+      "tip": "Se plantea 3x = 4500; entonces x = 4500 / 3 = 1500.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa08-027",
+      "oa": "MA08 OA 08",
+      "pregunta": "Resuelve la ecuación: 4x + 7 = 3x + 10",
+      "opciones": [
+        "17",
+        "1",
+        "3",
+        "−3"
+      ],
+      "correcta": 2,
+      "tip": "4x − 3x = 10 − 7, es decir x = 3.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa08-028",
+      "oa": "MA08 OA 08",
+      "pregunta": "La suma de un número y el número siguiente es 25. ¿Cuál es el menor?",
+      "opciones": [
+        "13",
+        "11",
+        "24",
+        "12"
+      ],
+      "correcta": 3,
+      "tip": "Se plantea x + (x + 1) = 25; entonces 2x + 1 = 25, 2x = 24 y x = 12.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa08-029",
+      "oa": "MA08 OA 08",
+      "pregunta": "Resuelve la ecuación: 6x − 4 = 2x + 12",
+      "opciones": [
+        "4",
+        "2",
+        "−4",
+        "8"
+      ],
+      "correcta": 0,
+      "tip": "6x − 2x = 12 + 4, es decir 4x = 16, luego x = 4.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa08-030",
+      "oa": "MA08 OA 08",
+      "pregunta": "Resuelve la ecuación: 9 − 2x = 1",
+      "opciones": [
+        "5",
+        "4",
+        "−4",
+        "0,5"
+      ],
+      "correcta": 1,
+      "tip": "−2x = 1 − 9 = −8, luego x = −8 / −2 = 4.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa09-001",
+      "oa": "MA08 OA 09",
+      "pregunta": "Resuelve la inecuación: x + 3 > 7",
+      "opciones": [
+        "x > 4",
+        "x < 4",
+        "x > 10",
+        "x < 10"
+      ],
+      "correcta": 0,
+      "tip": "Se resta 3 a ambos lados: x > 7 − 3, es decir x > 4.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa09-002",
+      "oa": "MA08 OA 09",
+      "pregunta": "Resuelve la inecuación: x − 5 < 2",
+      "opciones": [
+        "x > 7",
+        "x < 7",
+        "x < −3",
+        "x > −3"
+      ],
+      "correcta": 1,
+      "tip": "Se suma 5 a ambos lados: x < 2 + 5, es decir x < 7.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa09-003",
+      "oa": "MA08 OA 09",
+      "pregunta": "Resuelve la inecuación: 2x > 10",
+      "opciones": [
+        "x > 20",
+        "x < 5",
+        "x > 5",
+        "x < 20"
+      ],
+      "correcta": 2,
+      "tip": "Se divide por 2 (positivo, no cambia el signo): x > 5.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa09-004",
+      "oa": "MA08 OA 09",
+      "pregunta": "Resuelve la inecuación: x/3 ≤ 2",
+      "opciones": [
+        "x ≥ 6",
+        "x ≤ 5",
+        "x ≤ 2/3",
+        "x ≤ 6"
+      ],
+      "correcta": 3,
+      "tip": "Se multiplica por 3: x ≤ 2 · 3, es decir x ≤ 6.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa09-005",
+      "oa": "MA08 OA 09",
+      "pregunta": "Resuelve la inecuación: 3x + 1 < 10",
+      "opciones": [
+        "x < 3",
+        "x > 3",
+        "x < 11/3",
+        "x < 9"
+      ],
+      "correcta": 0,
+      "tip": "3x < 10 − 1 = 9, luego x < 9 / 3 = 3.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa09-006",
+      "oa": "MA08 OA 09",
+      "pregunta": "Resuelve la inecuación: 2x − 4 ≥ 6",
+      "opciones": [
+        "x ≤ 5",
+        "x ≥ 5",
+        "x ≥ 1",
+        "x ≥ 10"
+      ],
+      "correcta": 1,
+      "tip": "2x ≥ 6 + 4 = 10, luego x ≥ 10 / 2 = 5.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa09-007",
+      "oa": "MA08 OA 09",
+      "pregunta": "Resuelve la inecuación: 5x ≤ 20",
+      "opciones": [
+        "x ≥ 4",
+        "x ≤ 15",
+        "x ≤ 4",
+        "x ≤ 25"
+      ],
+      "correcta": 2,
+      "tip": "Se divide por 5 (positivo): x ≤ 4.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa09-008",
+      "oa": "MA08 OA 09",
+      "pregunta": "Resuelve la inecuación: −x < 3",
+      "opciones": [
+        "x < −3",
+        "x < 3",
+        "x > 3",
+        "x > −3"
+      ],
+      "correcta": 3,
+      "tip": "Al multiplicar por −1 se invierte el signo: x > −3.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa09-009",
+      "oa": "MA08 OA 09",
+      "pregunta": "Resuelve la inecuación: −2x > 8",
+      "opciones": [
+        "x < −4",
+        "x > −4",
+        "x > 4",
+        "x < 4"
+      ],
+      "correcta": 0,
+      "tip": "Se divide por −2 (negativo), por lo que el signo se invierte: x < −4.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa09-010",
+      "oa": "MA08 OA 09",
+      "pregunta": "Resuelve la inecuación: −3x ≤ 9",
+      "opciones": [
+        "x ≤ −3",
+        "x ≥ −3",
+        "x ≥ 3",
+        "x ≤ 3"
+      ],
+      "correcta": 1,
+      "tip": "Se divide por −3 (negativo) y el signo se invierte: x ≥ −3.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa09-011",
+      "oa": "MA08 OA 09",
+      "pregunta": "Resuelve la inecuación: x + 4 ≥ 4",
+      "opciones": [
+        "x ≤ 0",
+        "x ≥ 8",
+        "x ≥ 0",
+        "x > 0"
+      ],
+      "correcta": 2,
+      "tip": "Se resta 4 a ambos lados: x ≥ 0.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa09-012",
+      "oa": "MA08 OA 09",
+      "pregunta": "Resuelve la inecuación: 4x + 2 > 14",
+      "opciones": [
+        "x < 3",
+        "x > 4",
+        "x > 16",
+        "x > 3"
+      ],
+      "correcta": 3,
+      "tip": "4x > 14 − 2 = 12, luego x > 12 / 4 = 3.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa09-013",
+      "oa": "MA08 OA 09",
+      "pregunta": "Resuelve la inecuación: 3x − 6 ≤ 0",
+      "opciones": [
+        "x ≤ 2",
+        "x ≥ 2",
+        "x ≤ −2",
+        "x ≤ 6"
+      ],
+      "correcta": 0,
+      "tip": "3x ≤ 6, luego x ≤ 6 / 3 = 2.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa09-014",
+      "oa": "MA08 OA 09",
+      "pregunta": "Resuelve la inecuación: 2x + 5 < x + 9",
+      "opciones": [
+        "x > 4",
+        "x < 4",
+        "x < 14",
+        "x < 2"
+      ],
+      "correcta": 1,
+      "tip": "2x − x < 9 − 5, es decir x < 4.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa09-015",
+      "oa": "MA08 OA 09",
+      "pregunta": "Resuelve la inecuación: 5x > 2x + 9",
+      "opciones": [
+        "x < 3",
+        "x > 9",
+        "x > 3",
+        "x > 11"
+      ],
+      "correcta": 2,
+      "tip": "5x − 2x > 9, es decir 3x > 9, luego x > 3.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa09-016",
+      "oa": "MA08 OA 09",
+      "pregunta": "Resuelve la inecuación: x/2 > 3",
+      "opciones": [
+        "x < 6",
+        "x > 1,5",
+        "x > 5",
+        "x > 6"
+      ],
+      "correcta": 3,
+      "tip": "Se multiplica por 2: x > 3 · 2 = 6.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa09-017",
+      "oa": "MA08 OA 09",
+      "pregunta": "¿Cuál es el menor número entero que cumple x > 4?",
+      "opciones": [
+        "5",
+        "4",
+        "6",
+        "3"
+      ],
+      "correcta": 0,
+      "tip": "El 4 no cumple porque no es mayor que 4; el menor entero que sí cumple es 5.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa09-018",
+      "oa": "MA08 OA 09",
+      "pregunta": "¿Cuál es el mayor número entero que cumple x < 7?",
+      "opciones": [
+        "7",
+        "6",
+        "8",
+        "5"
+      ],
+      "correcta": 1,
+      "tip": "El 7 no cumple porque no es menor que 7; el mayor entero que sí cumple es 6.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa09-019",
+      "oa": "MA08 OA 09",
+      "pregunta": "Resuelve la inecuación: 10 − x > 4",
+      "opciones": [
+        "x > 6",
+        "x > 14",
+        "x < 6",
+        "x < 14"
+      ],
+      "correcta": 2,
+      "tip": "−x > 4 − 10 = −6; al multiplicar por −1 se invierte el signo: x < 6.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa09-020",
+      "oa": "MA08 OA 09",
+      "pregunta": "Resuelve la inecuación: 6 − 2x ≥ 0",
+      "opciones": [
+        "x ≥ 3",
+        "x ≤ −3",
+        "x ≥ −3",
+        "x ≤ 3"
+      ],
+      "correcta": 3,
+      "tip": "−2x ≥ −6; al dividir por −2 se invierte el signo: x ≤ 3.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa09-021",
+      "oa": "MA08 OA 09",
+      "pregunta": "Resuelve la inecuación: 3(x − 1) < 9",
+      "opciones": [
+        "x < 4",
+        "x > 4",
+        "x < 3",
+        "x < 10"
+      ],
+      "correcta": 0,
+      "tip": "3x − 3 < 9, luego 3x < 12 y x < 4.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa09-022",
+      "oa": "MA08 OA 09",
+      "pregunta": "En la inecuación x ≥ 2, ¿cuál de estos valores NO es solución?",
+      "opciones": [
+        "2",
+        "1",
+        "3",
+        "5"
+      ],
+      "correcta": 1,
+      "tip": "Deben cumplir x ≥ 2. El 1 es menor que 2, por lo que no es solución.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa09-023",
+      "oa": "MA08 OA 09",
+      "pregunta": "Resuelve la inecuación: x + 8 ≤ 5",
+      "opciones": [
+        "x ≤ 13",
+        "x ≥ −3",
+        "x ≤ −3",
+        "x ≤ 3"
+      ],
+      "correcta": 2,
+      "tip": "Se resta 8 a ambos lados: x ≤ 5 − 8, es decir x ≤ −3.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa09-024",
+      "oa": "MA08 OA 09",
+      "pregunta": "La solución x > 0 se representa en la recta numérica con un:",
+      "opciones": [
+        "círculo cerrado (relleno) en 0 y una flecha hacia la derecha",
+        "círculo abierto en 0 y una flecha hacia la derecha",
+        "círculo abierto en 0 y una flecha hacia la izquierda",
+        "círculo cerrado (relleno) en 0 y una flecha hacia la izquierda"
+      ],
+      "correcta": 1,
+      "tip": "Como el signo es > (estricto), el 0 NO se incluye: se marca con un círculo abierto en 0. 'Mayor que' apunta hacia la derecha.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa09-025",
+      "oa": "MA08 OA 09",
+      "pregunta": "Resuelve la inecuación: 4x ≤ 12",
+      "opciones": [
+        "x ≤ 3",
+        "x ≥ 3",
+        "x ≤ 8",
+        "x ≤ 48"
+      ],
+      "correcta": 0,
+      "tip": "Se divide por 4 (positivo): x ≤ 3.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa09-026",
+      "oa": "MA08 OA 09",
+      "pregunta": "'El triple de un número no supera a 15.' ¿Qué inecuación modela la frase?",
+      "opciones": [
+        "x ≥ 5",
+        "3x ≤ 15",
+        "3x ≥ 15",
+        "x + 3 ≤ 15"
+      ],
+      "correcta": 1,
+      "tip": "'El triple' es 3x y 'no supera' significa ser menor o igual: 3x ≤ 15.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa09-027",
+      "oa": "MA08 OA 09",
+      "pregunta": "Resuelve la inecuación: 7x − 2 > 3x + 10",
+      "opciones": [
+        "x < 3",
+        "x > 12",
+        "x > 3",
+        "x > 2"
+      ],
+      "correcta": 2,
+      "tip": "7x − 3x > 10 + 2, es decir 4x > 12, luego x > 3.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa09-028",
+      "oa": "MA08 OA 09",
+      "pregunta": "Con $5000 quiero comprar lápices de $1000 cada uno. ¿Cuántos puedo comprar como máximo?",
+      "opciones": [
+        "6",
+        "4",
+        "10",
+        "5"
+      ],
+      "correcta": 3,
+      "tip": "Se plantea 1000x ≤ 5000, luego x ≤ 5. El máximo es 5 lápices.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa09-029",
+      "oa": "MA08 OA 09",
+      "pregunta": "Resuelve la inecuación: −5x ≥ 15",
+      "opciones": [
+        "x ≤ −3",
+        "x ≥ −3",
+        "x ≤ 3",
+        "x ≥ 3"
+      ],
+      "correcta": 0,
+      "tip": "Se divide por −5 (negativo) y el signo se invierte: x ≤ −3.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa09-030",
+      "oa": "MA08 OA 09",
+      "pregunta": "Al multiplicar o dividir una inecuación por un número negativo, el signo de desigualdad:",
+      "opciones": [
+        "se mantiene igual",
+        "se invierte",
+        "desaparece",
+        "se convierte en ="
+      ],
+      "correcta": 1,
+      "tip": "Regla clave: al multiplicar o dividir por un negativo, la desigualdad cambia de sentido (por ejemplo, < pasa a >).",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa06-031",
+      "oa": "MA08 OA 06",
+      "pregunta": "Para traducir 'el doble de la suma de un número y 5', ¿cuál es el primer paso correcto?",
+      "opciones": [
+        "Sumar primero x + 5 y luego multiplicar el resultado por 2",
+        "Multiplicar x por 2 y luego sumar 5",
+        "Multiplicar 2 por 5 y después sumar x",
+        "Elevar x al cuadrado y sumar 5"
+      ],
+      "correcta": 0,
+      "tip": "La palabra 'suma' va entre paréntesis: primero (x + 5) y luego el doble, es decir 2(x + 5).",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa06-032",
+      "oa": "MA08 OA 06",
+      "pregunta": "Para generalizar el patrón 4, 8, 12, 16, … con una expresión en n, ¿qué conviene observar primero?",
+      "opciones": [
+        "Que cada término es 4 unidades mayor que el anterior solamente",
+        "Que cada término es 4 veces su posición (posición 1 → 4, posición 2 → 8)",
+        "Que los términos son todos números impares",
+        "Que el patrón se detiene en 16"
+      ],
+      "correcta": 1,
+      "tip": "Al relacionar cada término con su posición se ve que término = 4·n, entonces la expresión es 4n.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa06-033",
+      "oa": "MA08 OA 06",
+      "pregunta": "La frase es 'el triple de (un número aumentado en 2)'. Ana la escribe 3x + 2 y Beto la escribe 3(x + 2). ¿Quién tiene razón?",
+      "opciones": [
+        "Ana, porque el triple va primero",
+        "Los dos son equivalentes",
+        "Beto, porque primero se aumenta en 2 y ese resultado se triplica",
+        "Ninguno, se escribe x + 2 + 3"
+      ],
+      "correcta": 2,
+      "tip": "El paréntesis indica que primero se aumenta en 2 (x + 2) y luego se triplica todo: 3(x + 2).",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa06-034",
+      "oa": "MA08 OA 06",
+      "pregunta": "Para valorizar 3x² con x = 2, un estudiante calculó (3·2)² = 36. ¿Cuál es el error?",
+      "opciones": [
+        "Debió sumar en vez de multiplicar",
+        "Debió usar x = 3",
+        "No hay error, 36 es correcto",
+        "Elevó al cuadrado después de multiplicar; primero se calcula x² = 4 y luego 3·4 = 12"
+      ],
+      "correcta": 3,
+      "tip": "En 3x² solo x está elevada al cuadrado: 3·(2²) = 3·4 = 12.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa06-035",
+      "oa": "MA08 OA 06",
+      "pregunta": "Un estudiante tradujo 'un número disminuido en 5' como 5 − x. ¿Por qué está mal?",
+      "opciones": [
+        "Disminuir el número en 5 es x − 5, no 5 − x",
+        "Debió escribir 5x",
+        "Debió escribir x/5",
+        "Está bien, 5 − x es lo mismo que x − 5"
+      ],
+      "correcta": 0,
+      "tip": "Se disminuye el número, así que al número x se le resta 5: x − 5. El orden importa.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa06-036",
+      "oa": "MA08 OA 06",
+      "pregunta": "Para valorizar 2 + 3x con x = 4, un estudiante hizo (2 + 3)·4 = 20. ¿Cuál es el error?",
+      "opciones": [
+        "Debió usar x = 2",
+        "Sumó 2 + 3 antes de multiplicar; primero se calcula 3·4 = 12 y luego 2 + 12 = 14",
+        "El resultado correcto es 20",
+        "Debió elevar al cuadrado"
+      ],
+      "correcta": 1,
+      "tip": "La multiplicación se resuelve antes que la suma: 3·4 = 12, luego 2 + 12 = 14.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa06-037",
+      "oa": "MA08 OA 06",
+      "pregunta": "Un cuaderno cuesta $c y una goma cuesta $500. ¿Qué expresión representa el costo de 2 cuadernos y una goma?",
+      "opciones": [
+        "2c · 500",
+        "c + 500",
+        "2c + 500",
+        "2(c + 500)"
+      ],
+      "correcta": 2,
+      "tip": "Dos cuadernos cuestan 2c y se suma la goma de 500: 2c + 500.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa06-038",
+      "oa": "MA08 OA 06",
+      "pregunta": "María tiene el triple de la edad de su hijo. Si el hijo tiene h años, ¿qué expresión representa la edad de María?",
+      "opciones": [
+        "h + 3",
+        "h/3",
+        "3 + h",
+        "3h"
+      ],
+      "correcta": 3,
+      "tip": "'El triple' de la edad del hijo es 3 veces h, es decir 3h.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa06-039",
+      "oa": "MA08 OA 06",
+      "pregunta": "En un comedor hay m mesas y cada mesa tiene 6 sillas. ¿Qué expresión representa el total de sillas?",
+      "opciones": [
+        "6m",
+        "m + 6",
+        "m/6",
+        "6 − m"
+      ],
+      "correcta": 0,
+      "tip": "Cada mesa aporta 6 sillas y hay m mesas: 6·m = 6m.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa06-040",
+      "oa": "MA08 OA 06",
+      "pregunta": "Un taxi cobra $300 de base más $500 por cada kilómetro. ¿Qué expresión representa el costo de un viaje de k kilómetros?",
+      "opciones": [
+        "800k",
+        "300 + 500k",
+        "500 + 300k",
+        "300 · 500 · k"
+      ],
+      "correcta": 1,
+      "tip": "El costo fijo es 300 y por los k kilómetros se cobra 500k: total 300 + 500k.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa06-041",
+      "oa": "MA08 OA 06",
+      "pregunta": "Con palitos se arman figuras: la 1ª usa 4 palitos, la 2ª usa 7 y la 3ª usa 10 (aumenta de 3 en 3). ¿Qué expresión da los palitos de la figura n?",
+      "opciones": [
+        "4n",
+        "n + 3",
+        "3n + 1",
+        "3n − 1"
+      ],
+      "correcta": 2,
+      "tip": "Aumenta de 3 en 3, así que aparece 3n; ajustando para n = 1 → 4, la expresión es 3n + 1.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa06-042",
+      "oa": "MA08 OA 06",
+      "pregunta": "Valoriza la expresión 5x − 2y para x = 3 e y = 4.",
+      "opciones": [
+        "23",
+        "13",
+        "−7",
+        "7"
+      ],
+      "correcta": 3,
+      "tip": "5·3 − 2·4 = 15 − 8 = 7.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa07-031",
+      "oa": "MA08 OA 07",
+      "pregunta": "¿Cuál es el primer paso correcto para simplificar 2(x + 3) + 4x?",
+      "opciones": [
+        "Aplicar la distributiva en 2(x + 3), obteniendo 2x + 6, y luego reducir",
+        "Sumar 2 + 4 porque acompañan a la x",
+        "Sumar x + 3 + 4x directamente",
+        "Multiplicar 2 por 4x primero"
+      ],
+      "correcta": 0,
+      "tip": "Primero se elimina el paréntesis con la distributiva: 2x + 6 + 4x, y luego se reducen los términos con x.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa07-032",
+      "oa": "MA08 OA 07",
+      "pregunta": "En la expresión 3x² + 5x + 2x² − x, ¿cuáles términos son semejantes entre sí?",
+      "opciones": [
+        "Todos los términos son semejantes",
+        "3x² con 2x², y 5x con −x",
+        "3x² con 5x, y 2x² con −x",
+        "Ninguno es semejante"
+      ],
+      "correcta": 1,
+      "tip": "Son semejantes los que tienen la misma parte literal: los x² entre sí (3x² y 2x²) y los x entre sí (5x y −x).",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa07-033",
+      "oa": "MA08 OA 07",
+      "pregunta": "Para restar (2x + 5) − (x − 3), ¿qué se debe hacer primero?",
+      "opciones": [
+        "Sumar todos los términos sin cambiar signos",
+        "Multiplicar los dos paréntesis",
+        "Cambiar el signo de cada término del segundo paréntesis: 2x + 5 − x + 3",
+        "Restar 2x − x y dejar el resto igual"
+      ],
+      "correcta": 2,
+      "tip": "El signo menos delante del paréntesis cambia el signo de todos sus términos: −(x − 3) = −x + 3.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa07-034",
+      "oa": "MA08 OA 07",
+      "pregunta": "Un estudiante redujo 3x + 2 y escribió 5x. ¿Cuál es el error?",
+      "opciones": [
+        "Debió obtener 6x",
+        "Debió obtener 5",
+        "No hay error",
+        "3x y 2 no son términos semejantes, así que no se pueden sumar: queda 3x + 2"
+      ],
+      "correcta": 3,
+      "tip": "Solo se suman términos semejantes. 3x tiene la letra x y 2 no; la expresión ya está reducida.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa07-035",
+      "oa": "MA08 OA 07",
+      "pregunta": "Un estudiante calculó 2(x − 4) = 2x − 4. ¿Cuál es el error?",
+      "opciones": [
+        "No multiplicó el 2 por el −4; el resultado correcto es 2x − 8",
+        "Debió dejar x − 4 sin el 2",
+        "El resultado correcto es 2x + 4",
+        "No hay error"
+      ],
+      "correcta": 0,
+      "tip": "La distributiva multiplica el 2 por cada término: 2·x = 2x y 2·(−4) = −8, entonces 2x − 8.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa07-036",
+      "oa": "MA08 OA 07",
+      "pregunta": "Un estudiante hizo −3(x − 2) = −3x − 6. ¿Cuál es el error?",
+      "opciones": [
+        "Debió obtener −3x − 2",
+        "−3 por −2 es +6, así que el resultado es −3x + 6",
+        "Debió obtener 3x − 6",
+        "No hay error"
+      ],
+      "correcta": 1,
+      "tip": "Al multiplicar dos negativos el resultado es positivo: −3·(−2) = +6, entonces −3x + 6.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa07-037",
+      "oa": "MA08 OA 07",
+      "pregunta": "El perímetro de un rectángulo de base (x + 2) y altura x se calcula como 2·[(x + 2) + x]. ¿Cuál es la expresión reducida?",
+      "opciones": [
+        "2x + 2",
+        "x + 4",
+        "4x + 4",
+        "4x + 2"
+      ],
+      "correcta": 2,
+      "tip": "(x + 2) + x = 2x + 2; al multiplicar por 2 queda 4x + 4.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa07-038",
+      "oa": "MA08 OA 07",
+      "pregunta": "Un triángulo tiene lados que miden x, 2x y (x + 5). ¿Cuál es la expresión reducida de su perímetro?",
+      "opciones": [
+        "3x + 5",
+        "2x² + 5",
+        "4x + 5x",
+        "4x + 5"
+      ],
+      "correcta": 3,
+      "tip": "Se suman los tres lados: x + 2x + (x + 5) = 4x + 5.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa07-039",
+      "oa": "MA08 OA 07",
+      "pregunta": "Ana compra 3 cuadernos de $x y 2 lápices de $y, y además paga $200 por la bolsa. ¿Qué expresión reducida representa su gasto total?",
+      "opciones": [
+        "3x + 2y + 200",
+        "5xy + 200",
+        "6xy + 200",
+        "3x + 2y − 200"
+      ],
+      "correcta": 0,
+      "tip": "Tres cuadernos son 3x, dos lápices son 2y y se suma la bolsa: 3x + 2y + 200.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa07-040",
+      "oa": "MA08 OA 07",
+      "pregunta": "El área de un rectángulo de base x y altura (x + 3) se escribe como x(x + 3). ¿Cuál es su forma desarrollada?",
+      "opciones": [
+        "x² + 3",
+        "x² + 3x",
+        "2x + 3",
+        "x² · 3x"
+      ],
+      "correcta": 1,
+      "tip": "Se aplica la distributiva: x·x = x² y x·3 = 3x, entonces x² + 3x.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa07-041",
+      "oa": "MA08 OA 07",
+      "pregunta": "¿Cuál de estas expresiones NO es equivalente a 4x?",
+      "opciones": [
+        "x + x + x + x",
+        "2·(2x)",
+        "4 + x",
+        "2(x + x)"
+      ],
+      "correcta": 2,
+      "tip": "4 + x es una suma, no una multiplicación; las otras tres sí valen 4x.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa07-042",
+      "oa": "MA08 OA 07",
+      "pregunta": "Reduce: 5(x + 2) − 3(x − 1)",
+      "opciones": [
+        "2x + 7",
+        "8x + 7",
+        "2x + 13",
+        "2x − 13"
+      ],
+      "correcta": 2,
+      "tip": "Distribuye: 5x + 10 − 3x + 3; reduce: (5x − 3x) + (10 + 3) = 2x + 13.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa08-031",
+      "oa": "MA08 OA 08",
+      "pregunta": "¿Cuál es un primer paso correcto para resolver 3(x − 2) = 9?",
+      "opciones": [
+        "Dividir ambos lados por 3, obteniendo x − 2 = 3",
+        "Restar 2 a ambos lados",
+        "Sumar 9 a ambos lados",
+        "Dividir solo el 9 por 3 y dejar el paréntesis igual"
+      ],
+      "correcta": 0,
+      "tip": "Como el paréntesis está multiplicado por 3, un paso válido es dividir todo por 3: x − 2 = 3 (también sirve distribuir primero).",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa08-032",
+      "oa": "MA08 OA 08",
+      "pregunta": "Para resolver 2x + 5 = 13, ¿qué operación conviene hacer primero?",
+      "opciones": [
+        "Dividir por 2 ambos lados",
+        "Restar 5 a ambos lados",
+        "Sumar 5 a ambos lados",
+        "Multiplicar por 2 ambos lados"
+      ],
+      "correcta": 1,
+      "tip": "Primero se deja sola la parte con x: se resta 5, quedando 2x = 8, y recién después se divide por 2.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa08-033",
+      "oa": "MA08 OA 08",
+      "pregunta": "Para resolver 5x = 3x + 8, Ana resta 3x a ambos lados y Beto divide todo por 5 de inmediato. ¿Qué procedimiento sirve para despejar x?",
+      "opciones": [
+        "El de Beto, porque siempre se divide primero",
+        "Ninguno de los dos sirve",
+        "El de Ana, porque restar 3x junta las x: 2x = 8",
+        "Los dos llevan directamente a x = 8"
+      ],
+      "correcta": 2,
+      "tip": "Conviene reunir las x en un lado: 5x − 3x = 8, es decir 2x = 8, y luego x = 4.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa08-034",
+      "oa": "MA08 OA 08",
+      "pregunta": "Al resolver 2x + 3 = 11, un estudiante escribió 2x = 11 + 3 = 14. ¿Cuál es el error?",
+      "opciones": [
+        "Debió multiplicar por 3",
+        "Debió dividir 11 por 3",
+        "No hay error, x = 7",
+        "Debió restar 3 (no sumarlo): 2x = 11 − 3 = 8, luego x = 4"
+      ],
+      "correcta": 3,
+      "tip": "El 3 está sumando, así que pasa restando al otro lado: 2x = 11 − 3 = 8 y x = 4.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa08-035",
+      "oa": "MA08 OA 08",
+      "pregunta": "Al resolver 3x = 12, un estudiante hizo x = 12 · 3 = 36. ¿Cuál es el error?",
+      "opciones": [
+        "Debió dividir por 3, no multiplicar: x = 12 / 3 = 4",
+        "Debió restar 3: x = 9",
+        "No hay error, x = 36",
+        "Debió sumar 3: x = 15"
+      ],
+      "correcta": 0,
+      "tip": "El 3 está multiplicando a la x, así que se deshace dividiendo: x = 12 / 3 = 4.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa08-036",
+      "oa": "MA08 OA 08",
+      "pregunta": "Al resolver 5x − 2 = 3x + 6, un estudiante escribió 5x + 3x = 6 + 2. ¿Cuál es el error?",
+      "opciones": [
+        "Debió multiplicar en vez de sumar",
+        "Al pasar 3x al otro lado debe restarse: 5x − 3x = 6 + 2",
+        "Debió dejar el −2 en su lugar",
+        "No hay error"
+      ],
+      "correcta": 1,
+      "tip": "El término 3x está sumando a la derecha; al pasarlo a la izquierda cambia de signo: 5x − 3x = 8, luego 2x = 8 y x = 4.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa08-037",
+      "oa": "MA08 OA 08",
+      "pregunta": "'El doble de un número, más 4, es igual a 16.' ¿Qué ecuación plantea el problema?",
+      "opciones": [
+        "2 + 4x = 16",
+        "2(x + 4) = 16",
+        "2x + 4 = 16",
+        "4x + 2 = 16"
+      ],
+      "correcta": 2,
+      "tip": "'El doble de un número' es 2x, 'más 4' agrega +4 y 'es igual a 16' da 2x + 4 = 16.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa08-038",
+      "oa": "MA08 OA 08",
+      "pregunta": "Camila compró 4 entradas iguales y pagó $12000 en total. ¿Qué ecuación permite hallar el precio x de cada entrada?",
+      "opciones": [
+        "x + 4 = 12000",
+        "x / 4 = 12000",
+        "4 + x = 12000",
+        "4x = 12000"
+      ],
+      "correcta": 3,
+      "tip": "Cuatro entradas al mismo precio x suman 4x, y ese total es 12000: 4x = 12000 (cada una $3000).",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa08-039",
+      "oa": "MA08 OA 08",
+      "pregunta": "'Un número aumentado en 7 es igual al doble del mismo número.' ¿Qué ecuación lo modela?",
+      "opciones": [
+        "x + 7 = 2x",
+        "x + 7 = x + 2",
+        "7x = 2x",
+        "x − 7 = 2x"
+      ],
+      "correcta": 0,
+      "tip": "'Aumentado en 7' es x + 7 y 'el doble' es 2x, por lo que x + 7 = 2x (de donde x = 7).",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa08-040",
+      "oa": "MA08 OA 08",
+      "pregunta": "Hoy Pedro tiene x años y su papá tiene 30 años más que él. Entre los dos suman 50 años. ¿Qué ecuación modela la situación?",
+      "opciones": [
+        "x − (x + 30) = 50",
+        "x + (x + 30) = 50",
+        "x + 30 = 50",
+        "30x = 50"
+      ],
+      "correcta": 1,
+      "tip": "La edad del papá es x + 30; la suma de ambos es x + (x + 30) = 50 (de donde x = 10).",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa08-041",
+      "oa": "MA08 OA 08",
+      "pregunta": "La solución de la ecuación x = 4 se representa en la recta numérica como:",
+      "opciones": [
+        "una flecha hacia la derecha a partir del 4",
+        "un círculo abierto en el 4",
+        "un solo punto marcado (círculo relleno) sobre el 4",
+        "todos los puntos menores que 4"
+      ],
+      "correcta": 2,
+      "tip": "Una ecuación tiene una solución exacta, así que se marca un único punto sobre el 4, no un tramo.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa08-042",
+      "oa": "MA08 OA 08",
+      "pregunta": "¿Cómo se comprueba que x = 5 es la solución de 2x − 3 = 7?",
+      "opciones": [
+        "Sumando 2 + 3 + 7",
+        "Cambiando el 5 por otro número",
+        "Dividiendo 7 entre 5",
+        "Reemplazando x por 5: 2·5 − 3 = 7, y se verifica la igualdad"
+      ],
+      "correcta": 3,
+      "tip": "Para comprobar una solución se reemplaza en la ecuación: 2·5 − 3 = 10 − 3 = 7, que es lo pedido.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa09-031",
+      "oa": "MA08 OA 09",
+      "pregunta": "Para resolver −2x < 6, ¿qué hay que recordar al dividir ambos lados por −2?",
+      "opciones": [
+        "Invertir el sentido de la desigualdad, quedando x > −3",
+        "Mantener el signo igual, quedando x < −3",
+        "Que el resultado siempre es positivo",
+        "Que no se puede dividir por un negativo"
+      ],
+      "correcta": 0,
+      "tip": "Al dividir (o multiplicar) por un número negativo, la desigualdad cambia de sentido: x > −3.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa09-032",
+      "oa": "MA08 OA 09",
+      "pregunta": "¿Cuál es un primer paso correcto para resolver 2(x − 1) ≤ 8?",
+      "opciones": [
+        "Restar 1 a ambos lados",
+        "Dividir ambos lados por 2, obteniendo x − 1 ≤ 4",
+        "Invertir el signo porque hay un paréntesis",
+        "Sumar 8 a ambos lados"
+      ],
+      "correcta": 1,
+      "tip": "Dividir por 2 (positivo) no cambia el signo: x − 1 ≤ 4, y luego x ≤ 5. También se podría distribuir primero.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa09-033",
+      "oa": "MA08 OA 09",
+      "pregunta": "Para resolver 3x > 9, Ana divide por 3 y deja x > 3; Beto invierte el signo y deja x < 3. ¿Quién procede bien?",
+      "opciones": [
+        "Beto, siempre se invierte al dividir",
+        "Los dos están correctos",
+        "Ana, porque al dividir por un positivo el signo no cambia: x > 3",
+        "Ninguno, la solución es x = 3"
+      ],
+      "correcta": 2,
+      "tip": "El signo solo se invierte al dividir por un negativo. Aquí se divide por 3 (positivo), así que x > 3.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa09-034",
+      "oa": "MA08 OA 09",
+      "pregunta": "Al resolver −x > 5, un estudiante dejó x > −5. ¿Cuál es el error?",
+      "opciones": [
+        "Debió sumar 5 a ambos lados",
+        "El resultado correcto es x > 5",
+        "No hay error",
+        "Al multiplicar por −1 debe invertir el signo: x < −5"
+      ],
+      "correcta": 3,
+      "tip": "Para despejar x se multiplica por −1, y eso invierte la desigualdad: x < −5.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa09-035",
+      "oa": "MA08 OA 09",
+      "pregunta": "Al resolver −3x ≤ 9, un estudiante dejó x ≤ −3. ¿Cuál es el error?",
+      "opciones": [
+        "Al dividir por −3 (negativo) debe invertir el signo: x ≥ −3",
+        "Debió obtener x ≤ 3",
+        "Debió sumar 3 en vez de dividir",
+        "No hay error"
+      ],
+      "correcta": 0,
+      "tip": "Al dividir por −3 la desigualdad cambia de sentido: x ≥ −3.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa09-036",
+      "oa": "MA08 OA 09",
+      "pregunta": "Al resolver 2x + 4 > 10, un estudiante escribió 2x > 10 + 4. ¿Cuál es el error?",
+      "opciones": [
+        "Debió invertir el signo de la desigualdad",
+        "Debió restar 4 (no sumarlo): 2x > 10 − 4 = 6, luego x > 3",
+        "Debió dividir por 4",
+        "No hay error, x > 7"
+      ],
+      "correcta": 1,
+      "tip": "El 4 está sumando, así que pasa restando: 2x > 6 y luego x > 3.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa09-037",
+      "oa": "MA08 OA 09",
+      "pregunta": "Con $6000 quiero comprar cuadernos de $2000 cada uno. ¿Qué inecuación modela cuántos cuadernos (x) puedo comprar?",
+      "opciones": [
+        "2000 + x ≤ 6000",
+        "2000x ≥ 6000",
+        "2000x ≤ 6000",
+        "6000x ≤ 2000"
+      ],
+      "correcta": 2,
+      "tip": "El gasto 2000x no puede pasar de 6000: 2000x ≤ 6000, de donde x ≤ 3.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa09-038",
+      "oa": "MA08 OA 09",
+      "pregunta": "Para aprobar, Sofía necesita un promedio de al menos 4,0. Si su promedio es p, ¿qué inecuación representa esa condición?",
+      "opciones": [
+        "p < 4,0",
+        "p ≤ 4,0",
+        "p > 4,0",
+        "p ≥ 4,0"
+      ],
+      "correcta": 3,
+      "tip": "'Al menos 4,0' incluye el 4,0 y todo lo mayor: p ≥ 4,0.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa09-039",
+      "oa": "MA08 OA 09",
+      "pregunta": "Un ascensor soporta como máximo 400 kg. Si cada persona pesa 50 kg, ¿qué inecuación da el número (x) de personas que pueden subir?",
+      "opciones": [
+        "50x ≤ 400",
+        "50x ≥ 400",
+        "50 + x ≤ 400",
+        "400x ≤ 50"
+      ],
+      "correcta": 0,
+      "tip": "El peso total 50x no puede pasar del máximo: 50x ≤ 400, de donde x ≤ 8.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa09-040",
+      "oa": "MA08 OA 09",
+      "pregunta": "'El triple de un número es mayor que 12.' ¿Qué inecuación lo modela y cuál es su solución?",
+      "opciones": [
+        "3 + x > 12, es decir x > 9",
+        "3x > 12, es decir x > 4",
+        "3x < 12, es decir x < 4",
+        "x/3 > 12, es decir x > 36"
+      ],
+      "correcta": 1,
+      "tip": "'El triple' es 3x y 'mayor que 12' es > 12: 3x > 12, luego x > 4.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa09-041",
+      "oa": "MA08 OA 09",
+      "pregunta": "La solución x ≥ 2 se representa en la recta numérica con un:",
+      "opciones": [
+        "círculo abierto en 2 y una flecha hacia la derecha",
+        "círculo cerrado (relleno) en 2 y una flecha hacia la izquierda",
+        "círculo cerrado (relleno) en 2 y una flecha hacia la derecha",
+        "círculo abierto en 2 y una flecha hacia la izquierda"
+      ],
+      "correcta": 2,
+      "tip": "Como el signo es ≥, el 2 SÍ se incluye: círculo cerrado (relleno) en 2; 'mayor o igual' apunta a la derecha.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa09-042",
+      "oa": "MA08 OA 09",
+      "pregunta": "La solución x < 5 se representa en la recta numérica con un:",
+      "opciones": [
+        "círculo cerrado (relleno) en 5 y una flecha hacia la izquierda",
+        "círculo abierto en 5 y una flecha hacia la derecha",
+        "círculo cerrado (relleno) en 5 y una flecha hacia la derecha",
+        "círculo abierto en 5 y una flecha hacia la izquierda"
+      ],
+      "correcta": 3,
+      "tip": "Como el signo es < (estricto), el 5 NO se incluye: círculo abierto en 5; 'menor que' apunta a la izquierda.",
+      "revisada": false
+    }
+  ]
+}

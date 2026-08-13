@@ -11,8 +11,10 @@ desafiante y que genere comunidad entre compañeros.
 Un juego tipo aventura con mapa de niveles, quiz con temporizador, combos, XP,
 monedas, estrellas, logros y ranking de curso. **Kimün**, el zorro mascota,
 acompaña y reacciona a cada respuesta. Incluye **Modo Difícil** desbloqueable y una
-pantalla de **expediciones** por asignatura (Historia jugable; Matemáticas, Ciencias
-y Lenguaje próximamente). Todo en un solo archivo `index.html`, pensado para el celular.
+pantalla de **expediciones** por asignatura: **Historia**, **Matemáticas** (Álgebra
+y ecuaciones), **Ciencias** (La célula) y **Lenguaje** (Tipos de texto y medios), las
+cuatro jugables. También hay **Duelo 1v1** en el mismo teléfono y en línea (Supabase).
+Todo en un solo archivo `index.html`, pensado para el celular.
 
 ## Cómo probarlo
 
@@ -30,8 +32,9 @@ roadmap.
 
 ## Tecnología
 
-HTML + CSS + JavaScript puro, sin dependencias (salvo Google Fonts).
-Mobile-first.
+HTML + CSS + JavaScript puro, sin framework. Dependencias externas por CDN:
+Google Fonts y `@supabase/supabase-js` (para el duelo 1v1 en línea).
+Contenido de cada expedición en `contenido/<asignatura>/` (JSON). Mobile-first.
 
 ---
 
