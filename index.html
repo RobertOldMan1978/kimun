@@ -28,6 +28,12 @@ body{
 .stars{position:fixed;inset:0;pointer-events:none;z-index:0}
 .stars span{position:absolute;width:3px;height:3px;border-radius:50%;background:#fff;opacity:.5;animation:tw 3s infinite alternate}
 @keyframes tw{from{opacity:.15}to{opacity:.7}}
+/* estrella fugaz ocasional */
+.shoot{position:fixed;z-index:0;width:3px;height:3px;border-radius:50%;pointer-events:none;
+  background:#fff;box-shadow:0 0 6px 2px #fff,0 0 14px 5px #8f6bff88;animation:shootFall 1.3s ease-in forwards}
+.shoot::after{content:"";position:absolute;left:1px;top:1px;width:78px;height:2px;transform-origin:left center;
+  transform:rotate(-48deg);border-radius:2px;background:linear-gradient(90deg,#ffffffdd,#8f6bff33,transparent)}
+@keyframes shootFall{0%{opacity:0;transform:translate(0,0)}12%{opacity:1}100%{opacity:0;transform:translate(var(--sx),var(--sy))}}
 .wrap{position:relative;z-index:1;max-width:480px;margin:0 auto;padding:16px 16px 90px;min-height:100dvh}
 h1,h2,.disp{font-family:'Titan One',cursive;letter-spacing:.5px}
 .screen{display:none;animation:pop .35s ease}
@@ -196,6 +202,20 @@ input.nm:focus{border-color:var(--cyan)}
 .duelo-turn{font-weight:900;font-size:14px;color:var(--gold);flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .duelo-score{text-align:center;font-weight:900;margin-top:14px;font-size:16px;color:var(--cyan)}
 .duelo-final{font-family:'Titan One';font-size:19px;margin:14px 0;line-height:1.5}
+/* ===== COMPAÑERO KIMÜN ===== */
+.kim-stage{display:flex;justify-content:center;margin:2px 0 10px}
+.kim-buddy{width:88px;height:88px;border-radius:50%;object-fit:cover;object-position:center 30%;
+ background:radial-gradient(circle at 50% 34%,#fff,#efe6d2);
+ border:4px solid var(--gold);box-shadow:0 0 16px #ffc93c66,0 6px 12px #0006;will-change:transform}
+.kim-buddy.happy{animation:kimBounce .6s ease}
+.kim-buddy.sad{animation:kimShake .5s ease}
+.kim-buddy.wow{animation:kimPop .7s ease}
+@keyframes kimBounce{0%,100%{transform:translateY(0) scale(1)}30%{transform:translateY(-18px) scale(1.08,.92)}55%{transform:translateY(0) scale(.94,1.08)}75%{transform:translateY(-7px) scale(1)}}
+@keyframes kimShake{10%,90%{transform:translateX(-3px) rotate(-4deg)}30%,70%{transform:translateX(5px) rotate(4deg)}50%{transform:translateX(-5px) rotate(-2deg)}}
+@keyframes kimPop{0%{transform:scale(1) rotate(0)}40%{transform:scale(1.28) rotate(-13deg)}70%{transform:scale(1.08) rotate(10deg)}100%{transform:scale(1) rotate(0)}}
+.kim-res{width:164px;height:164px;border-radius:50%;object-fit:cover;object-position:center 30%;
+ background:radial-gradient(circle at 50% 34%,#fff,#efe6d2);
+ border:5px solid var(--gold);box-shadow:0 0 26px #ffc93c88,0 10px 16px #0007}
 @media (prefers-reduced-motion: reduce){*{animation:none!important;transition:none!important}}
 </style>
 </head>
@@ -276,6 +296,7 @@ input.nm:focus{border-color:var(--cyan)}
       <div class="qprog"><i id="qProg"></i></div>
       <div class="timer" id="qTimer">15</div>
     </div>
+    <div class="kim-stage"><img class="kim-buddy" id="kimBuddy" src="assets/kimun-neutral.png" alt="Kimün"></div>
     <div class="qcard">
       <div class="tag" id="qTag">Nivel 1</div>
       <h2 id="qText">Pregunta…</h2>
@@ -287,7 +308,7 @@ input.nm:focus{border-color:var(--cyan)}
   <!-- ============ RESULTADO ============ -->
   <section class="screen" id="scr-res">
     <div class="resbox">
-      <div class="big" id="resIc">🎉</div>
+      <img class="big kim-res" id="resKim" src="assets/kimun-oro.png" alt="Kimün">
       <h2 id="resTitle">¡Nivel superado!</h2>
       <div class="starline" id="resStars"></div>
       <div class="statgrid">
@@ -580,6 +601,15 @@ function finDuelo(){
  const st=$('stars');for(let i=0;i<40;i++){const s=document.createElement('span');
   s.style.left=Math.random()*100+'%';s.style.top=Math.random()*100+'%';
   s.style.animationDelay=Math.random()*3+'s';st.appendChild(s);}
+ /* estrella fugaz de vez en cuando */
+ function estrellaFugaz(){const s=document.createElement('div');s.className='shoot';
+  s.style.left=(window.innerWidth*(0.35+Math.random()*0.6))+'px';
+  s.style.top=(window.innerHeight*Math.random()*0.35)+'px';
+  const d=220+Math.random()*180;
+  s.style.setProperty('--sx',(-d)+'px');s.style.setProperty('--sy',(d*1.1)+'px');
+  document.body.appendChild(s);setTimeout(()=>s.remove(),1400);}
+ (function agenda(){setTimeout(()=>{estrellaFugaz();agenda();},8000+Math.random()*14000);})();
+ window.estrellaFugaz=estrellaFugaz;
  cargar();
  if(S.nombre)$('inpName').value=S.nombre;
  const g=$('avgrid');AVATARES.forEach((a)=>{const d=document.createElement('div');
@@ -644,6 +674,19 @@ document.querySelectorAll('.nav button').forEach(b=>b.onclick=()=>{
  else{renderMapa();renderRanking();go('scr-mapa');}
 });
 
+/* ================= COMPAÑERO KIMÜN ================= */
+/* Precarga para evitar parpadeo al cambiar de expresión */
+['neutral','feliz','triste','sorprendido','oro','plata','bronce','fiesta','desanimado']
+ .forEach(n=>{const i=new Image();i.src='assets/kimun-'+n+'.png';});
+const KIM_REACT={neutral:['neutral',''],feliz:['feliz','happy'],triste:['triste','sad'],wow:['sorprendido','wow']};
+function kimReact(estado){
+ const el=$('kimBuddy');if(!el)return;
+ const [img,cls]=KIM_REACT[estado]||KIM_REACT.neutral;
+ el.src='assets/kimun-'+img+'.png';
+ el.className='kim-buddy';void el.offsetWidth;
+ if(cls)el.classList.add(cls);
+}
+
 /* ================= QUIZ ================= */
 function startQuiz(lvl){
  if(!poolListo(lvl)){alert('Cargando preguntas… intenta de nuevo en un momento.');return;}
@@ -653,6 +696,7 @@ $('btnBack').onclick=()=>{clearInterval(Q.timer);go('scr-mapa');};
 
 function pintaPregunta(){
  const N=EXPEDICION[Q.lvl],P=Q.preguntas[Q.idx];Q.lock=false;
+ kimReact('neutral');
  $('qTag').textContent=`${N.icono} ${N.nombre} · Pregunta ${Q.idx+1}/${Q.preguntas.length}`;
  $('qText').textContent=P.q;$('qFb').textContent='';$('qFb').className='feedback';
  $('qProg').style.width=(Q.idx/Q.preguntas.length*100)+'%';
@@ -682,13 +726,14 @@ function responder(el,ok,P,e){
   const r=el.getBoundingClientRect();
   particulas(r.left+r.width/2,r.top,['✨','⭐','🪙','💥']);
   SND.correct();
-  if(Q.combo>=2){comboFx(Q.combo);SND.combo(Q.combo);}
+  if(Q.combo>=2){comboFx(Q.combo);SND.combo(Q.combo);kimReact('wow');}
+  else kimReact('feliz');
   if(Q.combo>=3)toast('combo3');
  }else{
   Q.combo=0;
   if(el){el.classList.remove('off');el.classList.add('bad');}
   $('qFb').textContent='✗ '+P.tip;$('qFb').classList.add('bad');
-  SND.wrong();
+  SND.wrong();kimReact('triste');
   if(navigator.vibrate)navigator.vibrate(120);
  }
  refreshHud();
@@ -714,7 +759,10 @@ function terminarNivel(){
  }
  if(paso)SND.win();else SND.lose();
  [1,2,3].forEach(i=>{if(i<=estrellas)setTimeout(()=>SND.star(i),350+i*260);});
- $('resIc').textContent=paso?(esJefe?'👑':'🎉'):'😵';
+ let kimImg = !paso ? 'desanimado'
+   : esJefe ? 'fiesta'
+   : (estrellas===3?'oro':estrellas===2?'plata':'bronce');
+ $('resKim').src='assets/kimun-'+kimImg+'.png';
  $('resTitle').textContent=paso?(esJefe?'¡EXPEDICIÓN COMPLETA!':'¡Nivel superado!'):'¡Casi! Necesitas 66% para pasar';
  $('resStars').innerHTML=[1,2,3].map(i=>i<=estrellas?'<span class="g">★</span>':'<span class="w">★</span>').join('');
  $('resXp').textContent='+'+Q.xpGanado;

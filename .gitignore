@@ -12,3 +12,6 @@ Desktop.ini
 
 # Log del respaldo automático
 scripts/auto-commit.log
+
+# Banco de pruebas temporal del compañero (no se publica)
+demo-companero.html
