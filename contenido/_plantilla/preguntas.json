@@ -1,0 +1,28 @@
+{
+  "asignatura": "NOMBRE DE LA ASIGNATURA",
+  "nivel": "8° básico",
+  "meta_preguntas_por_oa": 25,
+  "total_preguntas": 2,
+  "revisadas": 0,
+  "nota": "Reemplaza estas preguntas de ejemplo por el pool real. 'correcta' es el índice (base 0) de la opción correcta. 'revisada' arranca en false.",
+  "preguntas": [
+    {
+      "id": "xx8-oa01-001",
+      "oa": "XX08 OA 01",
+      "pregunta": "¿Enunciado de la pregunta de ejemplo?",
+      "opciones": ["Opción correcta", "Distractor 1", "Distractor 2", "Distractor 3"],
+      "correcta": 0,
+      "tip": "Explicación breve de por qué la respuesta es correcta.",
+      "revisada": false
+    },
+    {
+      "id": "xx8-oa01-002",
+      "oa": "XX08 OA 01",
+      "pregunta": "¿Otra pregunta de ejemplo?",
+      "opciones": ["Distractor 1", "Opción correcta", "Distractor 2", "Distractor 3"],
+      "correcta": 1,
+      "tip": "Explicación breve.",
+      "revisada": false
+    }
+  ]
+}

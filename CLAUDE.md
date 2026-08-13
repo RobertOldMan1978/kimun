@@ -75,10 +75,12 @@ Orden tentativo, sujeto a prioridad de "verlo funcionar y atractivo" primero:
 ### Más adelante (fuera del alcance inmediato)
 - Login y multiusuario.
 - Modelo de negocio.
-- Múltiples asignaturas y niveles como expediciones independientes. **Iniciado:**
-  ya existe la pantalla "Elige tu expedición" con Historia jugable y Matemáticas /
-  Ciencias / Lenguaje como "Próximamente"; falta generar el contenido (pool de
-  preguntas + OA) de esas asignaturas para activarlas.
+- Múltiples asignaturas y niveles como expediciones independientes. **Motor
+  data-driven listo:** el arreglo `EXPEDICIONES` (en `index.html`) define cada
+  ruta (etapas → OA + contenido + portada) con progreso independiente por ruta;
+  hay una **plantilla** en `contenido/_plantilla/` para clonar la siguiente. Falta
+  generar el contenido (OA + pool de preguntas) de Matemáticas / Ciencias /
+  Lenguaje y activarlas.
 
 ## Reglas de trabajo
 
@@ -240,3 +242,21 @@ Se completaron los tres pendientes que quedaron de la Sesión 2:
   (pueblos originarios) y alineación al currículum chileno.
 - Recomendación de partida: ilustración de ambientación por etapa, o el mapa
   tipo pergamino.
+
+### Sesión 4 (2026-08-13)
+- **Modo Difícil con look propio (oscuro/intenso):** clase `en-dificil` en el
+  `<body>` (se sincroniza en `go()` y en el selector). CSS nuevo: fondo casi negro
+  con tinte carmesí, viñeta, orbes color brasa con pulso rojo, estrellas rojizas,
+  quiz/HUD/barra inferior tintados en rojo-fuego. En Normal no cambia nada.
+- **Motor data-driven — PLANTILLA BASE (importante):** se sacó la ruta y el
+  contenido a datos. Antes `const EXPEDICION` + `const ASIGNATURAS` estaban fijos
+  en el código; ahora hay un solo arreglo **`EXPEDICIONES`** donde cada expedición
+  trae sus `etapas` (OA→etapa), su `contenido` (ruta al `preguntas.json`), portada
+  y `activa`. El motor lee la ruta activa desde datos (`activarExpedicion`,
+  `cargarPool`). **Progreso independiente por ruta**: se guarda en `S.rutas[<id>]`
+  (con migración automática de las partidas antiguas de Historia). Historia juega
+  igual que antes, pero clonar la siguiente ruta/asignatura es solo cambiar datos.
+- **Plantilla lista:** `contenido/_plantilla/` con `README.md` (receta de 3 pasos),
+  `oa.json` y `preguntas.json` de ejemplo con el formato correcto.
+- **Pendientes:** generar el contenido (OA + pool) de la primera expedición nueva
+  y activarla; ideas gráficas de la Sesión 3 (mapa pergamino, ambientación por etapa).

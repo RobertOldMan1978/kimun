@@ -229,6 +229,31 @@ input.nm:focus{border-color:var(--cyan)}
  background:#00000030;color:var(--dim);font-family:'Nunito';font-weight:900;font-size:13px;transition:.15s}
 .modo-sel button.on{border-color:var(--cyan);color:var(--txt);background:#4dd8ff1f}
 .modo-sel button.dif.on{border-color:var(--pink);color:#fff;background:#ff4d8d22}
+
+/* ===== TEMA MODO DIFÍCIL (oscuro / intenso) ===== */
+body.en-dificil{
+  background:radial-gradient(900px 620px at 50% -12%, #5a0f1f 0%, transparent 55%),
+             linear-gradient(160deg,#0b0509,#180912) !important;
+}
+body.en-dificil::after{content:"";position:fixed;inset:0;z-index:1;pointer-events:none;
+  background:radial-gradient(circle at 50% 42%, transparent 46%, #000000cc 100%)}
+body.en-dificil .wrap{position:relative;z-index:2}
+body.en-dificil .stars span{background:#ff7a7a;opacity:.3}
+body.en-dificil .hud .avatar{background:linear-gradient(145deg,#b3122f,#7a0f22);box-shadow:0 4px 14px #ff2d5566}
+body.en-dificil .xpbar i{background:linear-gradient(90deg,#ff6b6b,#b3122f)}
+body.en-dificil .orb{background:radial-gradient(circle at 32% 28%,#8a1f33,#3d0a16)}
+body.en-dificil .node.done .orb{background:radial-gradient(circle at 32% 28%,#c0392b,#6a1420);border-color:#ff6b6b}
+body.en-dificil .node.open .orb{border-color:#ff4d6a;animation:pulseDif 1.4s infinite}
+@keyframes pulseDif{0%,100%{box-shadow:0 0 0 0 #ff2d55aa,0 8px 22px #000a}50%{box-shadow:0 0 0 14px #ff2d5500,0 8px 22px #000a}}
+body.en-dificil .card,body.en-dificil .qcard{background:#16070f;border-color:#ff4d6a33}
+body.en-dificil .qcard{box-shadow:0 0 26px #ff2d5522,0 10px 30px #000a}
+body.en-dificil .qcard .tag{color:#ff6b6b}
+body.en-dificil .opt{background:#1c0a14;border-color:#ffffff14}
+body.en-dificil .qprog i{background:linear-gradient(90deg,#ff6b6b,#b3122f)}
+body.en-dificil .timer{color:#ff6b6b}
+body.en-dificil .disp{color:#ff9d9d;text-shadow:0 0 16px #ff2d5555}
+body.en-dificil .nav{background:#0c0510ee;border-top-color:#ff4d6a22}
+body.en-dificil .nav button.on{color:#ff6b6b;background:#ff2d551a}
 /* selección de expediciones (asignaturas) */
 .exp-grid{display:grid;gap:12px;margin-top:16px}
 .exp-card{display:flex;align-items:center;gap:14px;background:var(--panel);border:2px solid #ffffff14;
@@ -427,24 +452,40 @@ input.nm:focus{border-color:var(--cyan)}
 /* ================= DATOS ================= */
 const AVATARES=["🦁","🐉","🦅","🐺","🦊","🤖","👽","🥷"];
 
-/* Expedición piloto: "Los europeos llegan a América".
-   Cada etapa saca preguntas al azar del pool (contenido/historia-8basico/preguntas.json).
-   El jefe final mezcla preguntas de todos los OA de la expedición. */
-const EXPEDICION=[
- {oa:"HI08 OA 04",nombre:"Los grandes viajes",icono:"⛵",n:6},
- {oa:"HI08 OA 05",nombre:"El encuentro de dos mundos",icono:"🌎",n:6},
- {oa:"HI08 OA 06",nombre:"La conquista",icono:"⚔️",n:6},
- {oa:"HI08 OA 07",nombre:"Un mundo nuevo",icono:"🌍",n:6},
- {oa:"BOSS",nombre:"⚡ JEFE FINAL",icono:"🐲",n:8,oas:["HI08 OA 04","HI08 OA 05","HI08 OA 06","HI08 OA 07"]},
+/* ===== EXPEDICIONES (data-driven · PLANTILLA BASE) =====
+   Para agregar una expedición nueva (otra asignatura u otra ruta):
+     1) crea contenido/<carpeta>/preguntas.json (y oa.json) con el pool de preguntas,
+     2) agrega su portada en assets/,
+     3) añade aquí un objeto con sus etapas (cada etapa mapea un OA; el jefe mezcla varios).
+   El motor NO cambia: lee todo desde estos datos, con progreso independiente por ruta. */
+const EXPEDICIONES=[
+ { id:'hist-europeos', asignatura:'Historia', nivel:'8° Básico · Los europeos llegan a América',
+   portada:'assets/portada-historia.png', contenido:'contenido/historia-8basico/preguntas.json', activa:true,
+   etapas:[
+     {oa:"HI08 OA 04",nombre:"Los grandes viajes",icono:"⛵",n:6},
+     {oa:"HI08 OA 05",nombre:"El encuentro de dos mundos",icono:"🌎",n:6},
+     {oa:"HI08 OA 06",nombre:"La conquista",icono:"⚔️",n:6},
+     {oa:"HI08 OA 07",nombre:"Un mundo nuevo",icono:"🌍",n:6},
+     {oa:"BOSS",nombre:"⚡ JEFE FINAL",icono:"🐲",n:8,oas:["HI08 OA 04","HI08 OA 05","HI08 OA 06","HI08 OA 07"]},
+   ]},
+ { id:'mate-8b', asignatura:'Matemáticas', nivel:'Próximamente', portada:'assets/portada-matematicas.png', contenido:'', activa:false, etapas:[] },
+ { id:'cien-8b', asignatura:'Ciencias',    nivel:'Próximamente', portada:'assets/portada-ciencias.png',    contenido:'', activa:false, etapas:[] },
+ { id:'leng-8b', asignatura:'Lenguaje',    nivel:'Próximamente', portada:'assets/portada-lenguaje.png',    contenido:'', activa:false, etapas:[] },
 ];
-const N_ETAPAS=EXPEDICION.length;
+let EXP_ACT=EXPEDICIONES[0];          // expedición activa
+let EXPEDICION=EXP_ACT.etapas;         // etapas de la expedición activa
+let N_ETAPAS=EXPEDICION.length;
 
-/* Pool de preguntas cargado desde el JSON (oa -> [preguntas]) */
+/* Pool de preguntas de la expedición activa (oa -> [preguntas]) */
 let POOL={};
-fetch('contenido/historia-8basico/preguntas.json')
- .then(r=>r.json())
- .then(d=>{(d.preguntas||[]).forEach(q=>{(POOL[q.oa]=POOL[q.oa]||[]).push(q);});})
- .catch(e=>{console.error('No se pudo cargar el pool de preguntas',e);});
+function cargarPool(exp){
+ POOL={};
+ if(!exp||!exp.contenido)return Promise.resolve();
+ return fetch(exp.contenido).then(r=>r.json())
+  .then(d=>{(d.preguntas||[]).forEach(q=>{(POOL[q.oa]=POOL[q.oa]||[]).push(q);});})
+  .catch(e=>{console.error('No se pudo cargar el pool',e);});
+}
+cargarPool(EXP_ACT); // carga inicial (Historia) para el Duelo y el arranque
 
 function pickN(arr,n){
  const a=(arr||[]).slice();
@@ -472,10 +513,11 @@ const LOGROS={
 };
 
 /* ================= ESTADO ================= */
-function nuevoProgreso(){return [{est:"open",estrellas:0},{est:"lock",estrellas:0},{est:"lock",estrellas:0},{est:"lock",estrellas:0},{est:"lock",estrellas:0}];}
+function nuevoProgreso(n){n=n||(EXPEDICION?EXPEDICION.length:5);
+ return Array.from({length:n},(_,i)=>({est:i===0?"open":"lock",estrellas:0}));}
 const S={nombre:"",avatar:AVATARES[0],xp:0,nivel:1,monedas:0,
  progreso:nuevoProgreso(), progresoDificil:nuevoProgreso(), dificilDesbloqueado:false,
- skins:[], logros:new Set()};
+ skins:[], logros:new Set(), rutas:{}};
 let Q={lvl:0,idx:0,aciertos:0,combo:0,comboMax:0,xpGanado:0,timer:null,t:15,lock:false};
 
 /* Modo de juego: 'normal' | 'dificil' */
@@ -517,7 +559,9 @@ const SND={
 };
 
 /* ================= UTIL ================= */
-function go(id){document.querySelectorAll('.screen').forEach(s=>s.classList.remove('on'));$(id).classList.add('on');window.scrollTo(0,0);}
+function go(id){document.querySelectorAll('.screen').forEach(s=>s.classList.remove('on'));$(id).classList.add('on');window.scrollTo(0,0);
+ var enJuego=(id==='scr-mapa'||id==='scr-quiz'||id==='scr-res');
+ document.body.classList.toggle('en-dificil', enJuego && MODO==='dificil');}
 function toast(l){if(S.logros.has(l))return;S.logros.add(l);
  $('toastIc').textContent=LOGROS[l].ic;$('toastTx').textContent=LOGROS[l].tx;
  $('toast').classList.add('show');setTimeout(()=>$('toast').classList.remove('show'),2600);}
@@ -550,16 +594,34 @@ function levelUpFx(n){
 
 /* ================= PERSISTENCIA ================= */
 const SAVE_KEY='kimun_save';
-function guardar(){try{localStorage.setItem(SAVE_KEY,JSON.stringify({
- nombre:S.nombre,avatar:S.avatar,xp:S.xp,monedas:S.monedas,
- progreso:S.progreso,progresoDificil:S.progresoDificil,dificilDesbloqueado:S.dificilDesbloqueado,
- skins:S.skins,logros:[...S.logros]}));}catch(e){}}
+/* Almacén de progreso por ruta (id de expedición -> {progreso, progresoDificil, dificilDesbloqueado}) */
+function estadoRuta(exp){
+ if(!S.rutas[exp.id]) S.rutas[exp.id]={progreso:nuevoProgreso(exp.etapas.length),progresoDificil:nuevoProgreso(exp.etapas.length),dificilDesbloqueado:false};
+ return S.rutas[exp.id];
+}
+/* Activa una expedición: fija etapas, carga su pool y apunta el progreso a esa ruta */
+function activarExpedicion(exp){
+ EXP_ACT=exp; EXPEDICION=exp.etapas; N_ETAPAS=EXPEDICION.length; MODO='normal';
+ const st=estadoRuta(exp);
+ S.progreso=st.progreso; S.progresoDificil=st.progresoDificil; S.dificilDesbloqueado=st.dificilDesbloqueado;
+ return cargarPool(exp);
+}
+function guardar(){try{
+ if(EXP_ACT) S.rutas[EXP_ACT.id]={progreso:S.progreso,progresoDificil:S.progresoDificil,dificilDesbloqueado:S.dificilDesbloqueado};
+ localStorage.setItem(SAVE_KEY,JSON.stringify({
+  nombre:S.nombre,avatar:S.avatar,xp:S.xp,monedas:S.monedas,
+  skins:S.skins,logros:[...S.logros], rutaActual:EXP_ACT?EXP_ACT.id:null, rutas:S.rutas}));}catch(e){}}
 function cargar(){try{const d=JSON.parse(localStorage.getItem(SAVE_KEY)||'null');if(!d)return false;
  S.nombre=d.nombre||"";S.avatar=d.avatar||AVATARES[0];S.xp=d.xp||0;S.monedas=d.monedas||0;
- if(Array.isArray(d.progreso)&&d.progreso.length===EXPEDICION.length)S.progreso=d.progreso;
- if(Array.isArray(d.progresoDificil)&&d.progresoDificil.length===EXPEDICION.length)S.progresoDificil=d.progresoDificil;
- S.dificilDesbloqueado=!!d.dificilDesbloqueado;
  S.skins=Array.isArray(d.skins)?d.skins:[];S.logros=new Set(d.logros||[]);
+ S.rutas=(d.rutas&&typeof d.rutas==='object')?d.rutas:{};
+ if(!d.rutas && Array.isArray(d.progreso)){ // migrar partidas antiguas (Historia)
+  S.rutas['hist-europeos']={progreso:d.progreso,
+   progresoDificil:Array.isArray(d.progresoDificil)?d.progresoDificil:nuevoProgreso(d.progreso.length),
+   dificilDesbloqueado:!!d.dificilDesbloqueado};
+ }
+ const st=estadoRuta(EXP_ACT); // reflejar la ruta activa
+ S.progreso=st.progreso;S.progresoDificil=st.progresoDificil;S.dificilDesbloqueado=st.dificilDesbloqueado;
  return !!d.nombre;}catch(e){return false;}}
 function hayPartida(){try{const d=JSON.parse(localStorage.getItem(SAVE_KEY)||'null');return !!(d&&d.nombre);}catch(e){return false;}}
 function borrarPartida(){localStorage.removeItem(SAVE_KEY);}
@@ -674,28 +736,25 @@ function finDuelo(){
   g.appendChild(d);});
 })();
 /* ===== Selección de modo (Jugador / Admin) ===== */
-/* Asignaturas (preparado para varias expediciones; hoy solo Historia tiene contenido) */
-const ASIGNATURAS=[
- {id:'historia',nombre:'Historia',nivel:'8° Básico · Los europeos llegan a América',portada:'assets/portada-historia.png',activa:true},
- {id:'matematicas',nombre:'Matemáticas',nivel:'Próximamente',portada:'assets/portada-matematicas.png',activa:false},
- {id:'ciencias',nombre:'Ciencias',nivel:'Próximamente',portada:'assets/portada-ciencias.png',activa:false},
- {id:'lenguaje',nombre:'Lenguaje',nivel:'Próximamente',portada:'assets/portada-lenguaje.png',activa:false},
-];
+/* Pantalla de expediciones: generada desde EXPEDICIONES (data-driven) */
 function renderExpediciones(){
  const g=$('expGrid');g.innerHTML='';
- ASIGNATURAS.forEach(a=>{
-  const c=document.createElement('div');c.className='exp-card'+(a.activa?'':' soon');
-  c.innerHTML=`<img src="${a.portada}" alt="${a.nombre}"><div class="exp-info"><b>${a.nombre}</b><small>${a.nivel}</small></div>`+
-   (a.activa?'<span class="exp-go">▶</span>':'<span class="exp-lock">🔒 Pronto</span>');
-  c.onclick=()=>{SND.tap();
-   if(a.activa)entrarHistoria();
-   else alert('🚀 La expedición de '+a.nombre+' viene pronto. ¡Sigue explorando Historia!');};
+ EXPEDICIONES.forEach(exp=>{
+  const c=document.createElement('div');c.className='exp-card'+(exp.activa?'':' soon');
+  c.innerHTML=`<img src="${exp.portada}" alt="${exp.asignatura}"><div class="exp-info"><b>${exp.asignatura}</b><small>${exp.nivel}</small></div>`+
+   (exp.activa?'<span class="exp-go">▶</span>':'<span class="exp-lock">🔒 Pronto</span>');
+  c.onclick=()=>{SND.tap();entrarExpedicion(exp);};
   g.appendChild(c);
  });
 }
-function entrarHistoria(){
- if(hayPartida()){cargar();refreshHud();renderMapa();renderRanking();$('nav').style.display='flex';go('scr-mapa');}
- else go('scr-inicio');
+function entrarExpedicion(exp){
+ if(!exp.activa){alert('🚀 La expedición de '+exp.asignatura+' viene pronto. ¡Sigue explorando Historia!');return;}
+ const tienePartida=hayPartida();
+ if(tienePartida) cargar();
+ activarExpedicion(exp).then(()=>{
+  if(tienePartida){refreshHud();renderMapa();renderRanking();$('nav').style.display='flex';go('scr-mapa');}
+  else go('scr-inicio');
+ });
 }
 $('btnJugador').onclick=()=>{SND.init();SND.tap();$('nav').style.display='none';renderExpediciones();go('scr-expediciones');};
 $('btnExpBack').onclick=()=>{SND.tap();go('scr-rol');};
@@ -742,7 +801,8 @@ function renderModoSel(){
  el.style.display='flex';
  el.innerHTML=`<button class="${MODO==='normal'?'on':''}" data-m="normal">🗺️ Normal</button>`+
   `<button class="dif ${MODO==='dificil'?'on':''}" data-m="dificil">🔥 Difícil</button>`;
- el.querySelectorAll('button').forEach(b=>b.onclick=()=>{SND.tap();MODO=b.dataset.m;renderMapa();});
+ el.querySelectorAll('button').forEach(b=>b.onclick=()=>{SND.tap();MODO=b.dataset.m;
+  document.body.classList.toggle('en-dificil', MODO==='dificil');renderMapa();});
 }
 function renderRanking(){
  const base=[{em:"🐯",n:"Vale",p:340},{em:"🐼",n:"Nico",p:295},{em:"🦄",n:"Fran",p:180},{em:"🐸",n:"Diego",p:120}];

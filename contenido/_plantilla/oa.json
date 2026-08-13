@@ -1,0 +1,26 @@
+{
+  "asignatura": "NOMBRE DE LA ASIGNATURA",
+  "nivel": "8° básico",
+  "codigo_asignatura": "XX08",
+  "fuente": "Bases Curriculares — MINEDUC Chile",
+  "url_fuente": "https://www.curriculumnacional.cl/",
+  "habilidades_generales": [],
+  "actitudes": [],
+  "unidades": [
+    {
+      "id": "U1",
+      "titulo": "Título de la unidad",
+      "descripcion": "Descripción breve de la unidad.",
+      "oa": ["XX08 OA 01", "XX08 OA 02"]
+    }
+  ],
+  "oa": [
+    {
+      "codigo": "XX08 OA 01",
+      "eje": "Eje",
+      "unidad": "U1",
+      "texto": "Texto literal del Objetivo de Aprendizaje.",
+      "conceptos_clave": ["concepto 1", "concepto 2", "concepto 3"]
+    }
+  ]
+}
