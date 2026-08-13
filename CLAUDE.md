@@ -88,7 +88,11 @@ Orden tentativo, sujeto a prioridad de "verlo funcionar y atractivo" primero:
 ### Regla de commits (importante)
 
 - **Durante las sesiones NO se hace commit ni push** hasta que Roberto lo pida
-  explícitamente. Claude debe esperar la orden.
+  explícitamente con la orden **"orden 66"**. Claude debe esperar la orden.
+- **La "orden 66" SIEMPRE deja todo actualizado antes del commit+push.** Como parte
+  del procedimiento, antes de subir hay que: (1) agregar a la bitácora de abajo lo
+  avanzado y lo pendiente de la sesión, y (2) revisar que `CLAUDE.md` y `README.md`
+  reflejen el estado real (estado, roadmap, decisiones). Recién entonces commit + push.
 - **Respaldo automático a las 18:00:** cualquier día en que haya cambios sin
   guardar, una Tarea Programada de Windows ejecuta `scripts/auto-commit.ps1`,
   que hace commit y push solo si detecta cambios. Así no se pierde trabajo
@@ -168,3 +172,29 @@ el sesgo de posición), asigna IDs por OA y escribe `preguntas.json`.
 - Inicializado git y primer commit; conexión con repositorio GitHub y push a `main`.
 - Configuración de GitHub Pages para obtener la URL pública.
 - **Pendiente:** avanzar el roadmap desde el punto 1 (duelo 1v1).
+
+### Sesión 2 (2026-08-12)
+- **Recuperación:** el repo local `C:\Proyectos\kimun` estaba vacío; se reclonó
+  desde GitHub (nada se había perdido en el remoto).
+- **Compañero Kimün (nuevo):** acompañante animado que reacciona en el quiz
+  (neutral / feliz / sorprendido en combo / triste al fallar) y en la pantalla de
+  resultado (oro / plata / bronce según estrellas, fiesta al vencer al jefe,
+  desanimado si no pasa). Animación CSS sobre el sprite real → resuelve el pendiente
+  de "animación de Kimün fiel a la marca".
+- **Medallón dorado:** todos los sprites de Kimün se muestran dentro de un círculo
+  con borde dorado (mismo sello de marca del inicio y la subida de nivel). El marco
+  unifica el estilo mixto de las ilustraciones.
+- **Estrella fugaz** ocasional cruzando el fondo del juego (cada 8–22 s).
+- **Assets:** 18 sprites procesados (expresiones, vestuario de época, podio) + 4
+  portadas de asignatura (Historia / Matemáticas / Ciencias / Lenguaje, con fondo).
+  Originales crudos de respaldo en `assets/originales/`. Scripts nuevos:
+  `scripts/procesar-expresiones.py` y `scripts/procesar-nuevas.py`.
+  Nota: `demo-companero.html` es un banco de pruebas local, ignorado por git.
+- **Pendientes acordados para próximas sesiones:**
+  1. Vestir a Kimün según la época/unidad (piloto = traje de explorador; ya existe
+     `assets/kimun-conquistador.png`).
+  2. Modo Difícil desbloqueable (mismo mapa, menos tiempo, 8 preguntas/etapa,
+     pasar con 80%).
+  3. Aprovechar las portadas de asignatura como expediciones futuras.
+- **Nota técnica:** el remoto cambió de mayúsculas; URL actualizada a
+  `https://github.com/RobertOldMan1978/kimun.git`.
