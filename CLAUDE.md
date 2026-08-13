@@ -321,3 +321,15 @@ Se completaron los tres pendientes que quedaron de la Sesión 2:
     (pública). Esto deja puesto el cimiento de **login/multiusuario** del roadmap.
 - **Pendientes:** notificaciones push, ranking real (datos ya disponibles);
   revisión pedagógica de las preguntas; Matemáticas y Lenguaje.
+
+### Sesión 7 (2026-08-13)
+- **Revisión pedagógica de Historia aplicada:** a partir de un documento de
+  revisión (9 observaciones AMARILLAS, 0 ROJAS — solo precisión/redacción, ninguna
+  clave errónea) se corrigieron 9 preguntas del banco de Historia (indulgencias,
+  absolutismo, cosmovisión, factores de la conquista, epidemias/inmunidad, 1492 y
+  encomienda). Todo el banco de **Historia quedó marcado como revisado** (663/663);
+  Ciencias sigue sin revisar.
+- **Tablero:** ahora ignora las carpetas que empiezan con `_` (la `_plantilla`
+  ya no aparece como asignatura).
+- **Pendientes:** revisión pedagógica de Ciencias; Matemáticas y Lenguaje;
+  notificaciones push y ranking real del duelo.

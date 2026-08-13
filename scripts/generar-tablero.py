@@ -80,6 +80,8 @@ def recolectar_asignaturas():
     if not CONTENIDO.exists():
         return asignaturas
     for carpeta in sorted(CONTENIDO.iterdir()):
+        if carpeta.name.startswith("_"):   # plantilla y auxiliares: no son asignaturas
+            continue
         oa_path = carpeta / "oa.json"
         if not oa_path.exists():
             continue

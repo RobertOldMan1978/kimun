@@ -17,7 +17,7 @@
       ],
       "correcta": 3,
       "tip": "El Humanismo puso al ser humano y su razón en el centro de la reflexión.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa01-002",
@@ -31,7 +31,7 @@
       ],
       "correcta": 0,
       "tip": "Antropocentrismo viene de 'ánthropos' (ser humano) y 'centro'.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa01-003",
@@ -45,7 +45,7 @@
       ],
       "correcta": 1,
       "tip": "El Renacimiento surgió en las ciudades italianas como Florencia.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa01-004",
@@ -59,7 +59,7 @@
       ],
       "correcta": 0,
       "tip": "Los humanistas recuperaron el saber de la antigüedad clásica grecolatina.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa01-005",
@@ -73,7 +73,7 @@
       ],
       "correcta": 3,
       "tip": "El mecenazgo permitía a los artistas crear obras financiadas por patrocinadores.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa01-006",
@@ -87,7 +87,7 @@
       ],
       "correcta": 2,
       "tip": "El 'hombre renacentista' cultivaba muchas disciplinas a la vez.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa01-007",
@@ -101,7 +101,7 @@
       ],
       "correcta": 0,
       "tip": "Miguel Ángel fue uno de los grandes artistas del Renacimiento.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa01-008",
@@ -115,7 +115,7 @@
       ],
       "correcta": 3,
       "tip": "Erasmo fue un pensador humanista, autor de 'Elogio de la locura'.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa01-009",
@@ -129,7 +129,7 @@
       ],
       "correcta": 1,
       "tip": "El Humanismo exaltó el valor y el potencial del ser humano.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa01-010",
@@ -143,7 +143,7 @@
       ],
       "correcta": 0,
       "tip": "Renacimiento significa el 'renacer' del saber antiguo.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa01-011",
@@ -157,7 +157,7 @@
       ],
       "correcta": 3,
       "tip": "Se pasó de centrarse en Dios (teocentrismo) a centrarse en el ser humano.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa01-012",
@@ -171,7 +171,7 @@
       ],
       "correcta": 2,
       "tip": "El Humanismo destacó la capacidad humana de transformar la realidad.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa01-013",
@@ -185,7 +185,7 @@
       ],
       "correcta": 2,
       "tip": "Las studia humanitatis abarcaban letras, historia y filosofía moral.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa01-014",
@@ -199,7 +199,7 @@
       ],
       "correcta": 1,
       "tip": "Los Médici financiaron artistas y sabios en Florencia.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa01-015",
@@ -213,7 +213,7 @@
       ],
       "correcta": 3,
       "tip": "La Gioconda o Mona Lisa es una obra célebre de Leonardo.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa01-016",
@@ -227,7 +227,7 @@
       ],
       "correcta": 3,
       "tip": "Los humanistas buscaban los textos antiguos en griego y latín originales.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa01-017",
@@ -241,7 +241,7 @@
       ],
       "correcta": 1,
       "tip": "Se admiraba a quien dominaba muchas artes y ciencias.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa01-018",
@@ -255,7 +255,7 @@
       ],
       "correcta": 0,
       "tip": "En la Edad Media Dios era el centro de todo (teocentrismo).",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa01-019",
@@ -269,7 +269,7 @@
       ],
       "correcta": 2,
       "tip": "El arte renacentista rescató la proporción y el realismo clásicos.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa01-020",
@@ -283,7 +283,7 @@
       ],
       "correcta": 0,
       "tip": "El Humanismo renovó la educación centrándola en las humanidades.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa01-021",
@@ -297,7 +297,7 @@
       ],
       "correcta": 0,
       "tip": "Erasmo escribió esta obra que critica con ironía los vicios de su época.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa01-022",
@@ -311,7 +311,7 @@
       ],
       "correcta": 0,
       "tip": "El Renacimiento impulsó la curiosidad y el pensamiento crítico.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa01-023",
@@ -325,7 +325,7 @@
       ],
       "correcta": 1,
       "tip": "El mecenas aportaba dinero y protección para que se crearan obras.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa01-024",
@@ -339,7 +339,7 @@
       ],
       "correcta": 1,
       "tip": "El Renacimiento floreció en los siglos XV y XVI.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa01-025",
@@ -353,7 +353,7 @@
       ],
       "correcta": 1,
       "tip": "El Humanismo cambió el foco hacia el ser humano y su capacidad de acción.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa01-026",
@@ -367,7 +367,7 @@
       ],
       "correcta": 2,
       "tip": "La imprenta ayudó a difundir las ideas humanistas ampliamente.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa01-027",
@@ -381,7 +381,7 @@
       ],
       "correcta": 0,
       "tip": "Colón fue un navegante, no un artista renacentista.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa01-028",
@@ -395,7 +395,7 @@
       ],
       "correcta": 3,
       "tip": "Esa frase clásica expresa la centralidad del ser humano (antropocentrismo).",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa01-029",
@@ -409,7 +409,7 @@
       ],
       "correcta": 1,
       "tip": "El Humanismo confiaba en el poder creador y transformador del ser humano.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa02-001",
@@ -423,7 +423,7 @@
       ],
       "correcta": 3,
       "tip": "Martín Lutero clavó las 95 tesis en Wittenberg en 1517.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa02-002",
@@ -436,8 +436,8 @@
         "La venta de indulgencias"
       ],
       "correcta": 3,
-      "tip": "Lutero denunció la venta de indulgencias para 'perdonar' pecados.",
-      "revisada": false
+      "tip": "Lutero critico especialmente la comercializacion de las indulgencias y las practicas asociadas a su obtencion, mas que la idea de perdon en si.",
+      "revisada": true
     },
     {
       "id": "hist8-oa02-003",
@@ -451,7 +451,7 @@
       ],
       "correcta": 1,
       "tip": "La Iglesia católica reaccionó ante la Reforma con la Contrarreforma.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa02-004",
@@ -465,7 +465,7 @@
       ],
       "correcta": 2,
       "tip": "El Concilio de Trento (1545-1563) definió la Contrarreforma.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa02-005",
@@ -479,7 +479,7 @@
       ],
       "correcta": 3,
       "tip": "Gutenberg desarrolló la imprenta de tipos móviles.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa02-006",
@@ -493,7 +493,7 @@
       ],
       "correcta": 1,
       "tip": "La Biblia de Gutenberg fue una de las primeras obras impresas.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa02-007",
@@ -507,7 +507,7 @@
       ],
       "correcta": 0,
       "tip": "Heliocentrismo: el Sol (helios) está en el centro del sistema.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa02-008",
@@ -521,7 +521,7 @@
       ],
       "correcta": 3,
       "tip": "El modelo geocéntrico ponía a la Tierra en el centro del universo.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa02-009",
@@ -535,7 +535,7 @@
       ],
       "correcta": 3,
       "tip": "Galileo perfeccionó el telescopio para observar el cielo.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa02-010",
@@ -549,7 +549,7 @@
       ],
       "correcta": 3,
       "tip": "El método científico usa observación y experimentación para comprobar hipótesis.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa02-011",
@@ -563,7 +563,7 @@
       ],
       "correcta": 2,
       "tip": "La Reforma quebró la unidad religiosa: surgieron iglesias protestantes.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa02-012",
@@ -577,7 +577,7 @@
       ],
       "correcta": 1,
       "tip": "En 1517 Lutero difundió sus 95 tesis, inicio de la Reforma.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa02-013",
@@ -591,7 +591,7 @@
       ],
       "correcta": 0,
       "tip": "Lutero sostenía la justificación por la fe, no por indulgencias.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa02-014",
@@ -605,7 +605,7 @@
       ],
       "correcta": 2,
       "tip": "La imprenta multiplicó la difusión de libros e ideas religiosas.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa02-015",
@@ -619,7 +619,7 @@
       ],
       "correcta": 3,
       "tip": "Enrique VIII fundó la Iglesia anglicana en Inglaterra.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa02-016",
@@ -633,7 +633,7 @@
       ],
       "correcta": 3,
       "tip": "Calvino desarrolló su reforma en Ginebra.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa02-017",
@@ -647,7 +647,7 @@
       ],
       "correcta": 2,
       "tip": "La Contrarreforma buscó reformar la Iglesia y defender su doctrina.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa02-018",
@@ -661,7 +661,7 @@
       ],
       "correcta": 0,
       "tip": "Los jesuitas fueron una orden destacada en la Contrarreforma.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa02-019",
@@ -675,7 +675,7 @@
       ],
       "correcta": 0,
       "tip": "La ciencia moderna se basó en la razón y la comprobación.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa02-020",
@@ -689,7 +689,7 @@
       ],
       "correcta": 3,
       "tip": "Galileo fue procesado por la Inquisición por apoyar el heliocentrismo.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa02-021",
@@ -703,7 +703,7 @@
       ],
       "correcta": 1,
       "tip": "La Reforma quebró la unidad religiosa que caracterizaba a la Edad Media.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa02-022",
@@ -717,7 +717,7 @@
       ],
       "correcta": 2,
       "tip": "Las indulgencias prometían reducir el castigo por los pecados a cambio de pago.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa02-023",
@@ -731,7 +731,7 @@
       ],
       "correcta": 3,
       "tip": "Los monjes copistas reproducían los libros a mano, lo que era lento y caro.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa02-024",
@@ -745,7 +745,7 @@
       ],
       "correcta": 2,
       "tip": "Las iglesias reformadas se conocen como protestantes.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa02-025",
@@ -759,7 +759,7 @@
       ],
       "correcta": 1,
       "tip": "Copérnico propuso que el Sol, y no la Tierra, era el centro.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa02-026",
@@ -773,7 +773,7 @@
       ],
       "correcta": 1,
       "tip": "La imprenta amplió el acceso al conocimiento en la sociedad.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa02-027",
@@ -787,7 +787,7 @@
       ],
       "correcta": 0,
       "tip": "Lutero las habría fijado en la puerta de la iglesia de Wittenberg.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa02-028",
@@ -801,7 +801,7 @@
       ],
       "correcta": 2,
       "tip": "La ciencia moderna exige comprobar las hipótesis con experimentos.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa03-001",
@@ -815,7 +815,7 @@
       ],
       "correcta": 1,
       "tip": "El Estado moderno concentró el poder en la figura del monarca.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa03-002",
@@ -824,12 +824,12 @@
       "opciones": [
         "Dependía de los señores feudales",
         "Estaba limitado por un parlamento fuerte",
-        "No tenía límites y concentraba todas las funciones",
+        "Concentraba gran parte del poder politico y reducia la autonomia de otros grupos e instituciones.",
         "Lo compartía por igual con los campesinos"
       ],
       "correcta": 2,
       "tip": "En el absolutismo el rey concentraba el poder sin límites efectivos.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa03-003",
@@ -843,7 +843,7 @@
       ],
       "correcta": 2,
       "tip": "La burocracia son los funcionarios que ejecutan las tareas del Estado.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa03-004",
@@ -857,7 +857,7 @@
       ],
       "correcta": 0,
       "tip": "El Estado moderno centralizó la recaudación de impuestos.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa03-005",
@@ -871,7 +871,7 @@
       ],
       "correcta": 3,
       "tip": "El Estado moderno creó ejércitos profesionales pagados y permanentes.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa03-006",
@@ -885,7 +885,7 @@
       ],
       "correcta": 2,
       "tip": "El feudalismo se caracterizó por la fragmentación del poder.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa03-007",
@@ -899,7 +899,7 @@
       ],
       "correcta": 1,
       "tip": "En el Estado moderno absolutista la soberanía se concentró en el rey.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa03-008",
@@ -913,7 +913,7 @@
       ],
       "correcta": 1,
       "tip": "El Estado moderno centralizó lo que en el feudalismo estaba disperso.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa03-009",
@@ -927,7 +927,7 @@
       ],
       "correcta": 0,
       "tip": "Luis XIV representó el modelo de monarquía absoluta.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa03-010",
@@ -941,7 +941,7 @@
       ],
       "correcta": 2,
       "tip": "Refleja la idea del rey como única fuente de poder en el absolutismo.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa03-011",
@@ -955,7 +955,7 @@
       ],
       "correcta": 2,
       "tip": "El Estado moderno controló el comercio para aumentar su riqueza y poder.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa03-012",
@@ -969,7 +969,7 @@
       ],
       "correcta": 2,
       "tip": "Cada señor feudal tenía poder sobre su propio feudo.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa03-013",
@@ -983,7 +983,7 @@
       ],
       "correcta": 2,
       "tip": "Centralizar es reunir el poder de decisión en un solo centro.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa03-014",
@@ -997,7 +997,7 @@
       ],
       "correcta": 1,
       "tip": "Los impuestos financiaban la administración y los ejércitos del Estado.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa03-015",
@@ -1011,7 +1011,7 @@
       ],
       "correcta": 3,
       "tip": "El Estado moderno mantenía ejércitos estables y remunerados.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa03-016",
@@ -1025,7 +1025,7 @@
       ],
       "correcta": 3,
       "tip": "El Estado moderno se consolidó entre los siglos XV y XVIII.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa03-017",
@@ -1039,7 +1039,7 @@
       ],
       "correcta": 1,
       "tip": "Los funcionarios aplicaban las órdenes del rey en todo el territorio.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa03-018",
@@ -1053,7 +1053,7 @@
       ],
       "correcta": 3,
       "tip": "Los reyes centralizaron el poder para unificar y fortalecer el reino.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa03-019",
@@ -1067,7 +1067,7 @@
       ],
       "correcta": 3,
       "tip": "Se sostenía que el poder del rey venía directamente de Dios.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa03-020",
@@ -1081,7 +1081,7 @@
       ],
       "correcta": 2,
       "tip": "El Estado moderno intervino y dirigió la economía nacional.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa03-021",
@@ -1095,7 +1095,7 @@
       ],
       "correcta": 1,
       "tip": "La fragmentación del poder es propia del feudalismo, no del Estado moderno.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa03-022",
@@ -1109,7 +1109,7 @@
       ],
       "correcta": 0,
       "tip": "La soberanía es la autoridad máxima sobre un territorio y su población.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa03-023",
@@ -1123,7 +1123,7 @@
       ],
       "correcta": 2,
       "tip": "El Estado centralizó la justicia bajo la autoridad del rey.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa03-024",
@@ -1137,7 +1137,7 @@
       ],
       "correcta": 3,
       "tip": "La nobleza feudal perdió autonomía frente al poder centralizado del rey.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa03-025",
@@ -1147,11 +1147,11 @@
         "Compartido con el pueblo",
         "Limitado por leyes",
         "Temporal y electo",
-        "Absoluto, sin límites ni divisiones"
+        "Concentrado principalmente en la figura del monarca y con escasos mecanismos efectivos de control politico."
       ],
       "correcta": 3,
       "tip": "Absolutismo alude al poder total y sin límites del monarca.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa03-026",
@@ -1165,7 +1165,7 @@
       ],
       "correcta": 2,
       "tip": "Un ejército propio permitía al rey controlar mejor el reino.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa03-027",
@@ -1179,7 +1179,7 @@
       ],
       "correcta": 3,
       "tip": "El proceso fue desde la dispersión feudal hacia la centralización moderna.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa03-028",
@@ -1193,7 +1193,7 @@
       ],
       "correcta": 2,
       "tip": "Los recursos fiscales estables sostenían al aparato estatal.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa04-001",
@@ -1207,7 +1207,7 @@
       ],
       "correcta": 2,
       "tip": "Querían llegar a Asia sin pasar por rutas controladas por otros.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa04-002",
@@ -1221,7 +1221,7 @@
       ],
       "correcta": 1,
       "tip": "El mercantilismo asociaba la riqueza de un país a su reserva de oro y plata.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa04-003",
@@ -1235,7 +1235,7 @@
       ],
       "correcta": 1,
       "tip": "Se creía que mientras más oro y plata tuviera un país, más rico y poderoso era.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa04-004",
@@ -1249,7 +1249,7 @@
       ],
       "correcta": 1,
       "tip": "Una balanza comercial favorable permitía acumular metales preciosos.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa04-005",
@@ -1263,7 +1263,7 @@
       ],
       "correcta": 3,
       "tip": "Tanto metal precioso circulando hizo subir los precios de forma sostenida.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa04-006",
@@ -1277,7 +1277,7 @@
       ],
       "correcta": 1,
       "tip": "Al haber más dinero circulando, cada moneda valía menos y los precios subieron.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa04-007",
@@ -1291,7 +1291,7 @@
       ],
       "correcta": 2,
       "tip": "España, Portugal, Inglaterra, Francia y Holanda competían por dominar el comercio mundial.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa04-008",
@@ -1305,7 +1305,7 @@
       ],
       "correcta": 1,
       "tip": "El cerro rico de Potosí, en el actual territorio de Bolivia, fue una de las mayores minas de plata.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa04-009",
@@ -1319,7 +1319,7 @@
       ],
       "correcta": 3,
       "tip": "El Estado protegía su producción y controlaba las exportaciones e importaciones.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa04-010",
@@ -1333,7 +1333,7 @@
       ],
       "correcta": 2,
       "tip": "Se formó una economía a escala mundial que unió América, Europa, África y Asia.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa04-011",
@@ -1347,7 +1347,7 @@
       ],
       "correcta": 2,
       "tip": "Los metales y productos americanos impulsaron la economía europea.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa04-012",
@@ -1361,7 +1361,7 @@
       ],
       "correcta": 0,
       "tip": "La relación colonial buscaba beneficiar económicamente a la metrópoli.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa04-013",
@@ -1375,7 +1375,7 @@
       ],
       "correcta": 1,
       "tip": "Al subir los precios, quienes tenían sueldos o rentas fijas perdieron poder de compra.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa04-014",
@@ -1389,7 +1389,7 @@
       ],
       "correcta": 3,
       "tip": "Ambos reinos abrieron rutas oceánicas y establecieron imperios coloniales.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa04-015",
@@ -1403,7 +1403,7 @@
       ],
       "correcta": 3,
       "tip": "Por eso cada país intentaba acumular la mayor cantidad posible de metales preciosos.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa04-016",
@@ -1417,7 +1417,7 @@
       ],
       "correcta": 2,
       "tip": "El comercio intercontinental hizo circular más dinero y bienes que nunca antes.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa04-017",
@@ -1431,7 +1431,7 @@
       ],
       "correcta": 1,
       "tip": "Más colonias significaban más recursos, más comercio y más metales preciosos.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa04-018",
@@ -1445,7 +1445,7 @@
       ],
       "correcta": 2,
       "tip": "Así entraba más oro y plata del que salía del país.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa04-019",
@@ -1459,7 +1459,7 @@
       ],
       "correcta": 3,
       "tip": "Por primera vez los mercados de varios continentes quedaron conectados.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa04-020",
@@ -1473,7 +1473,7 @@
       ],
       "correcta": 2,
       "tip": "El monopolio aseguraba que las riquezas coloniales beneficiaran solo a la metrópoli.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa04-021",
@@ -1487,7 +1487,7 @@
       ],
       "correcta": 1,
       "tip": "Las especias y otros bienes asiáticos eran muy valiosos y su comercio, muy rentable.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa04-022",
@@ -1501,7 +1501,7 @@
       ],
       "correcta": 0,
       "tip": "Predominó en Europa durante la Edad Moderna temprana.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa04-023",
@@ -1515,7 +1515,7 @@
       ],
       "correcta": 1,
       "tip": "El oro y la plata permitían financiar ejércitos, guerras y comercio.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa04-024",
@@ -1529,7 +1529,7 @@
       ],
       "correcta": 2,
       "tip": "Vender productos elaborados dejaba más ganancia y traía metales al país.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa04-025",
@@ -1543,7 +1543,7 @@
       ],
       "correcta": 2,
       "tip": "España recibió enormes cantidades de oro y plata desde sus colonias americanas.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa04-026",
@@ -1557,7 +1557,7 @@
       ],
       "correcta": 2,
       "tip": "Es la lógica de la inflación: más dinero disponible reduce su valor.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa04-027",
@@ -1571,7 +1571,7 @@
       ],
       "correcta": 1,
       "tip": "Era el objetivo central de la economía mercantilista.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa04-028",
@@ -1585,7 +1585,7 @@
       ],
       "correcta": 2,
       "tip": "Las minas de oro y plata americanas transformaron la economía europea.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa04-029",
@@ -1599,7 +1599,7 @@
       ],
       "correcta": 0,
       "tip": "El deseo de dominar rutas y colonias provocó rivalidades y guerras.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa04-030",
@@ -1613,7 +1613,7 @@
       ],
       "correcta": 3,
       "tip": "A diferencia del liberalismo posterior, el mercantilismo daba un rol activo al Estado.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa04-031",
@@ -1627,7 +1627,7 @@
       ],
       "correcta": 0,
       "tip": "Los aranceles protegían la producción propia y evitaban la salida de metales.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa05-001",
@@ -1641,7 +1641,7 @@
       ],
       "correcta": 3,
       "tip": "Colón zarpó de España y llegó el 12 de octubre de 1492.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa05-002",
@@ -1655,7 +1655,7 @@
       ],
       "correcta": 3,
       "tip": "Antes de 1492, ambos mundos no tenían contacto entre sí.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa05-003",
@@ -1669,7 +1669,7 @@
       ],
       "correcta": 0,
       "tip": "Religión, lengua, economía y visión del mundo eran muy distintas.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa05-004",
@@ -1679,11 +1679,11 @@
         "Una moneda americana",
         "Un tipo de arma",
         "Una ruta comercial",
-        "Su manera propia de entender el mundo, la naturaleza y lo sagrado"
+        "La manera en que un pueblo interpreta la realidad, la naturaleza, la sociedad y lo sagrado."
       ],
       "correcta": 3,
       "tip": "La cosmovisión abarca las creencias y valores con que un pueblo interpreta la realidad.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa05-005",
@@ -1697,7 +1697,7 @@
       ],
       "correcta": 0,
       "tip": "La conquista destruyó gran parte del orden simbólico y social indígena.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa05-006",
@@ -1711,7 +1711,7 @@
       ],
       "correcta": 1,
       "tip": "La magnitud y variedad de la geografía americana sorprendió a los europeos.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa05-007",
@@ -1725,7 +1725,7 @@
       ],
       "correcta": 1,
       "tip": "Los europeos adoraban a un solo Dios, mientras muchos pueblos americanos eran politeístas.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa05-008",
@@ -1739,7 +1739,7 @@
       ],
       "correcta": 2,
       "tip": "Adoraban dioses del sol, la lluvia, la tierra y otros elementos naturales.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa05-009",
@@ -1753,7 +1753,7 @@
       ],
       "correcta": 3,
       "tip": "Esta visión chocaba con la idea europea de propiedad privada de la tierra.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa05-010",
@@ -1767,7 +1767,7 @@
       ],
       "correcta": 1,
       "tip": "La conquista buscó dominar e imponer, no convivir en igualdad.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa05-011",
@@ -1781,7 +1781,7 @@
       ],
       "correcta": 0,
       "tip": "La Corona justificó la conquista, en parte, con la difusión del cristianismo.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa05-012",
@@ -1795,7 +1795,7 @@
       ],
       "correcta": 3,
       "tip": "Las diferencias eran tan profundas que el contacto generó conflicto.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa05-013",
@@ -1809,7 +1809,7 @@
       ],
       "correcta": 0,
       "tip": "Por ejemplo, los incas usaban quipus, cuerdas con nudos, para registrar datos.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa05-014",
@@ -1823,7 +1823,7 @@
       ],
       "correcta": 0,
       "tip": "Los nudos y colores del quipu permitían llevar cuentas y registros.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa05-015",
@@ -1837,7 +1837,7 @@
       ],
       "correcta": 2,
       "tip": "Selvas, cordilleras y grandes distancias fueron un enorme desafío para los europeos.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa05-016",
@@ -1851,7 +1851,7 @@
       ],
       "correcta": 1,
       "tip": "Para muchos pueblos americanos, el oro tenía valor ritual, no monetario.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa05-017",
@@ -1865,7 +1865,7 @@
       ],
       "correcta": 1,
       "tip": "Lo usaban en objetos ceremoniales y ofrendas a sus dioses.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa05-018",
@@ -1879,7 +1879,7 @@
       ],
       "correcta": 1,
       "tip": "La conquista trastocó por completo el modo de vida de los pueblos americanos.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa05-019",
@@ -1893,7 +1893,7 @@
       ],
       "correcta": 0,
       "tip": "Muchas culturas americanas entendían el tiempo de manera cíclica y ligada a la naturaleza.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa05-020",
@@ -1907,7 +1907,7 @@
       ],
       "correcta": 0,
       "tip": "Muchos elementos culturales originarios se perdieron o se transformaron.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa05-021",
@@ -1921,7 +1921,7 @@
       ],
       "correcta": 0,
       "tip": "El contacto de 1492 unió dos partes del planeta antes incomunicadas.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa05-022",
@@ -1935,7 +1935,7 @@
       ],
       "correcta": 1,
       "tip": "Las prácticas religiosas eran uno de los puntos de mayor choque cultural.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa05-023",
@@ -1949,7 +1949,7 @@
       ],
       "correcta": 0,
       "tip": "El idioma es parte esencial de la identidad y cosmovisión de un pueblo.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa05-024",
@@ -1963,7 +1963,7 @@
       ],
       "correcta": 3,
       "tip": "Diferían en religión, economía, política, lengua y visión del mundo.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa05-025",
@@ -1977,7 +1977,7 @@
       ],
       "correcta": 2,
       "tip": "América estaba poblada por numerosos pueblos muy distintos entre sí.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa05-026",
@@ -1991,7 +1991,7 @@
       ],
       "correcta": 3,
       "tip": "La naturaleza ocupaba un lugar central en su cosmovisión.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa05-027",
@@ -2005,7 +2005,7 @@
       ],
       "correcta": 1,
       "tip": "Ninguno comprendía plenamente la cultura del otro.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa05-028",
@@ -2019,7 +2019,7 @@
       ],
       "correcta": 1,
       "tip": "Estos elementos reemplazaron o transformaron los propios de cada pueblo.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa05-029",
@@ -2033,7 +2033,7 @@
       ],
       "correcta": 0,
       "tip": "Al desarticularse, la cultura pierde su orden y sentido interno.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa05-030",
@@ -2047,7 +2047,7 @@
       ],
       "correcta": 2,
       "tip": "Esta idea de superioridad justificó la imposición y el dominio.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa05-031",
@@ -2061,7 +2061,7 @@
       ],
       "correcta": 3,
       "tip": "La profundidad de las diferencias hizo que el contacto derivara en conflicto.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa06-001",
@@ -2075,7 +2075,7 @@
       ],
       "correcta": 2,
       "tip": "Estaba construida sobre un lago, donde hoy está Ciudad de México.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa06-002",
@@ -2089,7 +2089,7 @@
       ],
       "correcta": 3,
       "tip": "Su capital era Cusco y su red de caminos se llamaba Qhapaq Ñan.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa06-003",
@@ -2103,12 +2103,12 @@
       ],
       "correcta": 2,
       "tip": "Cortés llegó a México en 1519.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa06-004",
       "oa": "HI08 OA 06",
-      "pregunta": "¿Qué factor ayudó MÁS a los conquistadores frente a los grandes imperios?",
+      "pregunta": "¿Cuáles fueron algunos de los factores que favorecieron a los conquistadores frente a los grandes imperios?",
       "opciones": [
         "Enfermedades, alianzas y armas nuevas",
         "Conocer mejor el territorio",
@@ -2117,7 +2117,7 @@
       ],
       "correcta": 0,
       "tip": "Las enfermedades europeas causaron millones de muertes.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa06-005",
@@ -2131,7 +2131,7 @@
       ],
       "correcta": 2,
       "tip": "1492 → 1522 → 1533 → 1541.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa06-006",
@@ -2145,7 +2145,7 @@
       ],
       "correcta": 0,
       "tip": "Moctezuma gobernaba Tenochtitlán cuando llegaron los españoles.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa06-007",
@@ -2159,7 +2159,7 @@
       ],
       "correcta": 3,
       "tip": "Pizarro capturó al inca Atahualpa en Cajamarca en 1532.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa06-008",
@@ -2173,7 +2173,7 @@
       ],
       "correcta": 3,
       "tip": "Cusco era el centro político y religioso del Tahuantinsuyo.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa06-009",
@@ -2187,7 +2187,7 @@
       ],
       "correcta": 0,
       "tip": "Atahualpa fue capturado en Cajamarca y luego ejecutado.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa06-010",
@@ -2201,7 +2201,7 @@
       ],
       "correcta": 0,
       "tip": "Los indígenas no tenían defensas contra estas enfermedades y murieron por millones.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa06-011",
@@ -2215,7 +2215,7 @@
       ],
       "correcta": 2,
       "tip": "Guerras, trabajo forzado y sobre todo las epidemias diezmaron a los pueblos originarios.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa06-012",
@@ -2229,7 +2229,7 @@
       ],
       "correcta": 1,
       "tip": "La viruela se propagó rápidamente entre poblaciones sin inmunidad.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa06-013",
@@ -2243,7 +2243,7 @@
       ],
       "correcta": 0,
       "tip": "Los indígenas no conocían la pólvora ni los caballos, lo que causó gran impacto.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa06-014",
@@ -2257,7 +2257,7 @@
       ],
       "correcta": 0,
       "tip": "Los pueblos americanos nunca habían visto caballos y los temían en combate.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa06-015",
@@ -2271,7 +2271,7 @@
       ],
       "correcta": 3,
       "tip": "Cortés y Pizarro aprovecharon rivalidades y guerras internas.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa06-016",
@@ -2285,7 +2285,7 @@
       ],
       "correcta": 0,
       "tip": "Muchos pueblos rechazaban el dominio azteca y se unieron a los españoles.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa06-017",
@@ -2299,7 +2299,7 @@
       ],
       "correcta": 1,
       "tip": "El imperio inca estaba dividido por una guerra de sucesión.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa06-018",
@@ -2313,7 +2313,7 @@
       ],
       "correcta": 2,
       "tip": "El oro y la posibilidad de ascender socialmente los motivaban.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa06-019",
@@ -2327,7 +2327,7 @@
       ],
       "correcta": 1,
       "tip": "Tras un largo sitio, Cortés tomó la ciudad azteca en 1521.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa06-020",
@@ -2341,7 +2341,7 @@
       ],
       "correcta": 2,
       "tip": "Ocurrió en Cajamarca; el imperio inca cayó poco después.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa06-021",
@@ -2355,7 +2355,7 @@
       ],
       "correcta": 0,
       "tip": "Varios factores actuaron juntos para explicar la rapidez de la conquista.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa06-022",
@@ -2369,7 +2369,7 @@
       ],
       "correcta": 2,
       "tip": "Al capturar al emperador, los españoles desorganizaron todo el imperio.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa06-023",
@@ -2383,7 +2383,7 @@
       ],
       "correcta": 1,
       "tip": "Al ser gobiernos centralizados, perder al líder los dejaba sin dirección.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa06-024",
@@ -2397,7 +2397,7 @@
       ],
       "correcta": 1,
       "tip": "Los españoles, en cambio, buscaban vencer de manera definitiva.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa06-025",
@@ -2411,7 +2411,7 @@
       ],
       "correcta": 0,
       "tip": "No conocían el hierro ni la pólvora, a diferencia de los europeos.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa06-026",
@@ -2425,7 +2425,7 @@
       ],
       "correcta": 1,
       "tip": "El acero era mucho más resistente y letal que las armas indígenas.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa06-027",
@@ -2439,7 +2439,7 @@
       ],
       "correcta": 2,
       "tip": "Hoy Ciudad de México se levanta sobre las ruinas de Tenochtitlán.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa06-028",
@@ -2453,7 +2453,7 @@
       ],
       "correcta": 1,
       "tip": "Se llamaba Tahuantinsuyo y su red de caminos unía todo el imperio.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa06-029",
@@ -2467,7 +2467,7 @@
       ],
       "correcta": 0,
       "tip": "Cortés venció a los aztecas años antes de que Pizarro venciera a los incas.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa06-030",
@@ -2481,21 +2481,21 @@
       ],
       "correcta": 1,
       "tip": "Sin esos aliados, los pocos españoles no habrían vencido a los imperios.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa06-031",
       "oa": "HI08 OA 06",
-      "pregunta": "¿Por qué las epidemias afectaron tanto a los indígenas y no tanto a los europeos?",
+      "pregunta": "¿Por qué muchas enfermedades del Viejo Mundo tuvieron efectos especialmente graves entre las poblaciones americanas?",
       "opciones": [
         "Los europeos no se enfermaban nunca",
         "Las enfermedades venían de América",
         "Los indígenas eran más débiles físicamente",
-        "Los europeos ya habían desarrollado defensas ante esas enfermedades"
+        "Porque muchas de esas poblaciones no habían estado expuestas previamente y carecían de inmunidad frente a ellas."
       ],
       "correcta": 3,
       "tip": "Las enfermedades eran del Viejo Mundo; los americanos no tenían inmunidad.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa06-032",
@@ -2509,7 +2509,7 @@
       ],
       "correcta": 3,
       "tip": "Fue el último emperador azteca y defendió Tenochtitlán hasta su caída.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa06-033",
@@ -2523,7 +2523,7 @@
       ],
       "correcta": 1,
       "tip": "Las enfermedades fueron el factor biológico decisivo de la conquista.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa07-001",
@@ -2537,7 +2537,7 @@
       ],
       "correcta": 3,
       "tip": "Partió en 1519; Elcano completó la vuelta en 1522.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa07-002",
@@ -2551,7 +2551,7 @@
       ],
       "correcta": 3,
       "tip": "Se inició el intercambio de personas, plantas, animales e ideas.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa07-003",
@@ -2565,7 +2565,7 @@
       ],
       "correcta": 0,
       "tip": "La papa es originaria de los Andes; el maíz, de Mesoamérica.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa07-004",
@@ -2578,8 +2578,8 @@
         "La ampliación del mundo conocido hasta entonces"
       ],
       "correcta": 3,
-      "tip": "La llegada a América amplió enormemente el mundo conocido por los europeos, que ignoraban la existencia de ese continente.",
-      "revisada": false
+      "tip": "Para la mayoria de los europeos, America era desconocida, y su incorporacion a los conocimientos geograficos amplio enormemente el mundo conocido.",
+      "revisada": true
     },
     {
       "id": "hist8-oa07-005",
@@ -2593,7 +2593,7 @@
       ],
       "correcta": 2,
       "tip": "El intercambio colombino describe el traspaso de especies y enfermedades entre ambos continentes tras el contacto de 1492.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa07-006",
@@ -2607,7 +2607,7 @@
       ],
       "correcta": 0,
       "tip": "La papa es un cultivo americano que llegó a Europa y se transformó en un alimento fundamental.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa07-007",
@@ -2621,7 +2621,7 @@
       ],
       "correcta": 0,
       "tip": "El trigo provino de Europa; el maíz, el tomate y el cacao eran cultivos americanos.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa07-008",
@@ -2635,7 +2635,7 @@
       ],
       "correcta": 3,
       "tip": "En Valladolid se debatió si los indígenas eran plenamente humanos y cómo debían ser tratados.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa07-009",
@@ -2649,7 +2649,7 @@
       ],
       "correcta": 3,
       "tip": "Bartolomé de las Casas defendió la dignidad y los derechos de los indígenas frente a los abusos.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa07-010",
@@ -2663,7 +2663,7 @@
       ],
       "correcta": 3,
       "tip": "Sepúlveda justificaba la guerra contra los indígenas al considerarlos inferiores por naturaleza.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa07-011",
@@ -2677,7 +2677,7 @@
       ],
       "correcta": 3,
       "tip": "Se le conoce como Defensor de los indios por su lucha contra los abusos de la conquista.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa07-012",
@@ -2691,7 +2691,7 @@
       ],
       "correcta": 3,
       "tip": "Europa debió representar en mapas, crónicas y arte una realidad americana totalmente nueva para ellos.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa07-013",
@@ -2705,7 +2705,7 @@
       ],
       "correcta": 2,
       "tip": "Los cartógrafos debieron rehacer sus mapas para incorporar el nuevo continente.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa07-014",
@@ -2719,7 +2719,7 @@
       ],
       "correcta": 3,
       "tip": "Del cacao americano los europeos aprendieron a elaborar el chocolate.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa07-015",
@@ -2733,7 +2733,7 @@
       ],
       "correcta": 0,
       "tip": "El caballo fue traído por los europeos; la llama, el guanaco y el pavo ya existían en América.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa07-016",
@@ -2747,7 +2747,7 @@
       ],
       "correcta": 2,
       "tip": "Los indígenas no tenían defensas contra estas enfermedades, lo que causó una gran mortandad.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa07-017",
@@ -2761,7 +2761,7 @@
       ],
       "correcta": 1,
       "tip": "Se llama colombino en alusión a Cristóbal Colón, cuyo viaje inició el contacto entre continentes.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa07-018",
@@ -2775,7 +2775,7 @@
       ],
       "correcta": 3,
       "tip": "La papa se adaptó bien al clima europeo y ayudó a combatir las hambrunas.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa07-019",
@@ -2789,7 +2789,7 @@
       ],
       "correcta": 1,
       "tip": "El debate giraba en torno a si los indígenas eran seres humanos plenos, con alma y razón.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa07-020",
@@ -2803,7 +2803,7 @@
       ],
       "correcta": 3,
       "tip": "Las crónicas de Indias fueron relatos que describían la naturaleza, los pueblos y los hechos de América.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa07-021",
@@ -2817,7 +2817,7 @@
       ],
       "correcta": 3,
       "tip": "El oro y la plata americanos transformaron la economía europea y aumentaron la circulación de dinero.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa07-022",
@@ -2831,7 +2831,7 @@
       ],
       "correcta": 3,
       "tip": "Se debatía si era moralmente legítimo conquistar y dominar a los pueblos indígenas.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa07-023",
@@ -2845,7 +2845,7 @@
       ],
       "correcta": 0,
       "tip": "En esa obra, Las Casas denunció los abusos cometidos contra los indígenas.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa07-024",
@@ -2859,7 +2859,7 @@
       ],
       "correcta": 2,
       "tip": "El maíz era un cereal americano que enriqueció la dieta y la agricultura europeas.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa07-025",
@@ -2873,7 +2873,7 @@
       ],
       "correcta": 3,
       "tip": "América debe su nombre a Américo Vespucio, quien planteó que se trataba de un nuevo continente.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa07-026",
@@ -2887,7 +2887,7 @@
       ],
       "correcta": 3,
       "tip": "Los europeos ignoraban la existencia de América, por lo que la consideraron un mundo nuevo.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa07-027",
@@ -2901,7 +2901,7 @@
       ],
       "correcta": 1,
       "tip": "El tomate americano se integró profundamente en la cocina mediterránea, especialmente la italiana.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa07-028",
@@ -2915,7 +2915,7 @@
       ],
       "correcta": 2,
       "tip": "Las Leyes Nuevas intentaron proteger a los indígenas y regular el sistema de encomiendas.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa07-029",
@@ -2929,7 +2929,7 @@
       ],
       "correcta": 0,
       "tip": "La historia natural debió ampliarse para clasificar y describir las nuevas especies americanas.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa07-030",
@@ -2943,7 +2943,7 @@
       ],
       "correcta": 1,
       "tip": "El contacto conectó a ambos continentes e impulsó el intercambio de productos, ideas y saberes.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa07-031",
@@ -2957,7 +2957,7 @@
       ],
       "correcta": 3,
       "tip": "Las Casas defendía a los indígenas, mientras Sepúlveda justificaba su sometimiento: posturas opuestas.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa07-032",
@@ -2971,7 +2971,7 @@
       ],
       "correcta": 0,
       "tip": "Estos cultivos aumentaron la producción de alimentos y favorecieron el crecimiento de la población europea.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa07-033",
@@ -2985,7 +2985,7 @@
       ],
       "correcta": 2,
       "tip": "El debate de Valladolid demuestra que había opiniones enfrentadas sobre la conquista y el trato a los indígenas.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa08-001",
@@ -2999,7 +2999,7 @@
       ],
       "correcta": 2,
       "tip": "La fundó el 12 de febrero de 1541 a los pies del cerro Huelén.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa08-002",
@@ -3013,7 +3013,7 @@
       ],
       "correcta": 3,
       "tip": "Chile era una Capitanía General dependiente del Virreinato del Perú.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa08-003",
@@ -3027,7 +3027,7 @@
       ],
       "correcta": 2,
       "tip": "La ciudad colonial era el centro desde el cual se administraba y organizaba el territorio.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa08-004",
@@ -3041,7 +3041,7 @@
       ],
       "correcta": 0,
       "tip": "Las ciudades coloniales se ordenaban en damero, con calles rectas que formaban manzanas cuadradas.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa08-005",
@@ -3055,7 +3055,7 @@
       ],
       "correcta": 0,
       "tip": "La plaza de armas era el centro de la ciudad, rodeada por la iglesia, el cabildo y las casas de las autoridades.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa08-006",
@@ -3069,7 +3069,7 @@
       ],
       "correcta": 3,
       "tip": "El cabildo administraba los asuntos locales de la ciudad, como el abastecimiento y el orden público.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa08-007",
@@ -3083,7 +3083,7 @@
       ],
       "correcta": 3,
       "tip": "La Real Audiencia era el principal tribunal de justicia en el territorio colonial.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa08-008",
@@ -3097,7 +3097,7 @@
       ],
       "correcta": 1,
       "tip": "Los virreinatos eran las grandes unidades administrativas dirigidas por un virrey en nombre del rey.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa08-009",
@@ -3111,7 +3111,7 @@
       ],
       "correcta": 0,
       "tip": "Los primeros virreinatos fueron el del Perú y el de Nueva España; los otros se crearon mucho después.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa08-010",
@@ -3125,7 +3125,7 @@
       ],
       "correcta": 2,
       "tip": "México correspondía al Virreinato de Nueva España, con capital en la Ciudad de México.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa08-011",
@@ -3139,7 +3139,7 @@
       ],
       "correcta": 2,
       "tip": "La metrópoli era España, el país que gobernaba y controlaba sus colonias americanas.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa08-012",
@@ -3153,7 +3153,7 @@
       ],
       "correcta": 0,
       "tip": "El monopolio comercial obligaba a las colonias a comerciar únicamente con la metrópoli española.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa08-013",
@@ -3167,7 +3167,7 @@
       ],
       "correcta": 0,
       "tip": "Los criollos eran descendientes de españoles, pero nacidos en el continente americano.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa08-014",
@@ -3181,7 +3181,7 @@
       ],
       "correcta": 0,
       "tip": "Las elites criollas ejercían poder a nivel local, sobre todo mediante su participación en los cabildos.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa08-015",
@@ -3195,7 +3195,7 @@
       ],
       "correcta": 0,
       "tip": "El virrey gobernaba el virreinato en nombre del rey, con amplias atribuciones.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa08-016",
@@ -3209,7 +3209,7 @@
       ],
       "correcta": 0,
       "tip": "Chile fue una gobernación y luego capitanía general, dependiente del Virreinato del Perú.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa08-017",
@@ -3223,7 +3223,7 @@
       ],
       "correcta": 2,
       "tip": "El cabildo, sede del gobierno de la ciudad, se ubicaba junto a la plaza de armas.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa08-018",
@@ -3237,7 +3237,7 @@
       ],
       "correcta": 2,
       "tip": "Las restricciones del monopolio favorecieron el contrabando como forma de comercio alternativo.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa08-019",
@@ -3251,7 +3251,7 @@
       ],
       "correcta": 2,
       "tip": "La Casa de Contratación, con sede en Sevilla, controlaba y organizaba el comercio con las Indias.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa08-020",
@@ -3265,7 +3265,7 @@
       ],
       "correcta": 0,
       "tip": "Limitar el comercio a pocos puertos permitía a la Corona controlar y proteger su monopolio.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa08-021",
@@ -3279,7 +3279,7 @@
       ],
       "correcta": 3,
       "tip": "El Consejo de Indias asesoraba al rey y elaboraba leyes para administrar las colonias.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa08-022",
@@ -3293,7 +3293,7 @@
       ],
       "correcta": 1,
       "tip": "El damero se organizaba tomando como centro la plaza de armas, desde la cual se trazaban las calles.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa08-023",
@@ -3307,7 +3307,7 @@
       ],
       "correcta": 2,
       "tip": "Fundar ciudades permitía consolidar el control español y administrar los nuevos territorios.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa08-024",
@@ -3321,7 +3321,7 @@
       ],
       "correcta": 2,
       "tip": "Los alcaldes del cabildo administraban justicia en primera instancia dentro de la ciudad.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa08-025",
@@ -3335,7 +3335,7 @@
       ],
       "correcta": 1,
       "tip": "Los peninsulares nacían en la península ibérica; los criollos, hijos de españoles, nacían en América.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa08-026",
@@ -3349,7 +3349,7 @@
       ],
       "correcta": 2,
       "tip": "La Corona reservaba los principales cargos a los peninsulares, lo que generaba descontento entre los criollos.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa08-027",
@@ -3363,7 +3363,7 @@
       ],
       "correcta": 0,
       "tip": "Las colonias dependían política y económicamente de la metrópoli, que las controlaba.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa08-028",
@@ -3377,7 +3377,7 @@
       ],
       "correcta": 1,
       "tip": "Lima, la Ciudad de los Reyes, fue la capital del Virreinato del Perú y centro del poder en Sudamérica.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa08-029",
@@ -3391,7 +3391,7 @@
       ],
       "correcta": 3,
       "tip": "El sistema de flotas protegía el traslado de las riquezas americanas hacia la metrópoli frente a piratas.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa08-030",
@@ -3405,7 +3405,7 @@
       ],
       "correcta": 3,
       "tip": "Las ciudades concentraban las instituciones de gobierno, justicia y comercio del imperio.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa08-031",
@@ -3419,7 +3419,7 @@
       ],
       "correcta": 2,
       "tip": "El monopolio obligaba a las colonias a comprar y vender exclusivamente a la metrópoli española.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa08-032",
@@ -3433,7 +3433,7 @@
       ],
       "correcta": 2,
       "tip": "Las elites criollas eran dueñas de tierras y controlaban el comercio local, fuente de su riqueza y poder.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa09-001",
@@ -3447,7 +3447,7 @@
       ],
       "correcta": 3,
       "tip": "El barroco colonial se desarrolló principalmente durante los siglos XVII y XVIII.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa09-002",
@@ -3461,7 +3461,7 @@
       ],
       "correcta": 1,
       "tip": "El barroco se caracteriza por su recargada ornamentación, dramatismo y sensación de movimiento.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa09-003",
@@ -3475,7 +3475,7 @@
       ],
       "correcta": 0,
       "tip": "El arte barroco colonial estaba mayormente ligado a la religión y a la difusión del catolicismo.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa09-004",
@@ -3489,7 +3489,7 @@
       ],
       "correcta": 0,
       "tip": "Los retablos eran grandes estructuras decoradas, ubicadas tras el altar de las iglesias.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa09-005",
@@ -3503,7 +3503,7 @@
       ],
       "correcta": 1,
       "tip": "El sincretismo es la fusión de rasgos culturales y religiosos europeos e indígenas en la cultura colonial.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa09-006",
@@ -3517,7 +3517,7 @@
       ],
       "correcta": 3,
       "tip": "La pintura religiosa, con imágenes de santos y vírgenes, fue una expresión característica del barroco colonial.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa09-007",
@@ -3531,7 +3531,7 @@
       ],
       "correcta": 1,
       "tip": "El barroco buscaba impresionar con fachadas y altares recargados de ornamentos y detalles.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa09-008",
@@ -3545,7 +3545,7 @@
       ],
       "correcta": 2,
       "tip": "Las fiestas y ceremonias religiosas fortalecían la fe y congregaban a la comunidad colonial.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa09-009",
@@ -3559,7 +3559,7 @@
       ],
       "correcta": 3,
       "tip": "La escuela cusqueña fue una destacada tradición de pintura barroca en América colonial.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa09-010",
@@ -3573,7 +3573,7 @@
       ],
       "correcta": 0,
       "tip": "El sincretismo mezclaba tradiciones indígenas con el culto católico impuesto por los españoles.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa09-011",
@@ -3587,7 +3587,7 @@
       ],
       "correcta": 2,
       "tip": "Los retablos barrocos solían recubrirse con pan de oro para dar sensación de esplendor.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa09-012",
@@ -3601,7 +3601,7 @@
       ],
       "correcta": 0,
       "tip": "El teatro colonial servía frecuentemente para difundir mensajes religiosos y morales entre la población.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa09-013",
@@ -3615,7 +3615,7 @@
       ],
       "correcta": 2,
       "tip": "La música colonial acompañaba misas, procesiones y fiestas religiosas.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa09-014",
@@ -3629,7 +3629,7 @@
       ],
       "correcta": 1,
       "tip": "El barroco buscaba conmover al espectador y despertar su devoción mediante el impacto visual y emocional.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa09-015",
@@ -3643,7 +3643,7 @@
       ],
       "correcta": 2,
       "tip": "La religiosidad popular se expresaba en procesiones, fiestas de santos patronos y devociones populares.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa09-016",
@@ -3657,7 +3657,7 @@
       ],
       "correcta": 1,
       "tip": "Las iglesias se ubicaban frente a la plaza de armas, el centro de la vida urbana colonial.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa09-017",
@@ -3671,7 +3671,7 @@
       ],
       "correcta": 3,
       "tip": "La escuela cusqueña fusionaba la temática religiosa europea con elementos propios del mundo andino.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa09-018",
@@ -3685,7 +3685,7 @@
       ],
       "correcta": 0,
       "tip": "Las fiestas religiosas con procesiones, música y ornamentos eran expresiones típicas del barroco colonial.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa09-019",
@@ -3699,7 +3699,7 @@
       ],
       "correcta": 2,
       "tip": "El barroco se originó en Europa y llegó a América a través de España durante la Colonia.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa09-020",
@@ -3713,7 +3713,7 @@
       ],
       "correcta": 0,
       "tip": "Las imágenes y decoraciones ayudaban a transmitir la fe a personas que no sabían leer.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa09-021",
@@ -3727,7 +3727,7 @@
       ],
       "correcta": 0,
       "tip": "La escultura barroca resaltaba el dramatismo y la emoción de las figuras religiosas.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa09-022",
@@ -3741,7 +3741,7 @@
       ],
       "correcta": 2,
       "tip": "Las ceremonias mezclaban lo religioso con lo festivo y popular, reflejando el sincretismo colonial.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa09-023",
@@ -3755,7 +3755,7 @@
       ],
       "correcta": 0,
       "tip": "El arte barroco, impactante y emotivo, era útil para evangelizar y fortalecer la fe católica.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa09-024",
@@ -3769,7 +3769,7 @@
       ],
       "correcta": 2,
       "tip": "El barroco empleaba colores intensos y fuertes contrastes de luz y sombra para lograr dramatismo.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa09-025",
@@ -3783,7 +3783,7 @@
       ],
       "correcta": 1,
       "tip": "La música religiosa colonial se interpretaba con coros e instrumentos en iglesias y catedrales.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa09-026",
@@ -3797,7 +3797,7 @@
       ],
       "correcta": 1,
       "tip": "El barroco colonial fusionó aportes europeos, indígenas y africanos, mostrando el mestizaje cultural.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa09-027",
@@ -3811,7 +3811,7 @@
       ],
       "correcta": 0,
       "tip": "Iglesias y conventos concentraban gran parte de la vida religiosa, artística y cultural de la Colonia.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa09-028",
@@ -3825,7 +3825,7 @@
       ],
       "correcta": 2,
       "tip": "Las procesiones eran ceremonias públicas donde se manifestaba la religiosidad popular colonial.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa09-029",
@@ -3839,7 +3839,7 @@
       ],
       "correcta": 2,
       "tip": "Estas imágenes muestran el sincretismo, al fusionar la fe católica con elementos de las culturas indígenas.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa09-030",
@@ -3853,7 +3853,7 @@
       ],
       "correcta": 0,
       "tip": "El barroco colonial reforzaba la fe católica y contribuía a mantener el orden social de la época.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa10-001",
@@ -3867,7 +3867,7 @@
       ],
       "correcta": 1,
       "tip": "El monopolio significaba que solo España podía comerciar con sus colonias.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa10-002",
@@ -3881,7 +3881,7 @@
       ],
       "correcta": 0,
       "tip": "La Casa de Contratación, fundada en 1503, organizaba y fiscalizaba todo el comercio colonial.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa10-003",
@@ -3895,7 +3895,7 @@
       ],
       "correcta": 0,
       "tip": "La plata y el oro fueron las exportaciones más valiosas de América hacia Europa.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa10-004",
@@ -3909,7 +3909,7 @@
       ],
       "correcta": 3,
       "tip": "Potosí fue el mayor centro productor de plata de la América colonial.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa10-005",
@@ -3923,7 +3923,7 @@
       ],
       "correcta": 0,
       "tip": "Los barcos viajaban agrupados y protegidos para defenderse de piratas y corsarios.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa10-006",
@@ -3937,7 +3937,7 @@
       ],
       "correcta": 3,
       "tip": "La escolta militar defendía los cargamentos de plata frente a los ataques enemigos.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa10-007",
@@ -3951,7 +3951,7 @@
       ],
       "correcta": 1,
       "tip": "El comercio atlántico conectaba tres continentes a través del océano Atlántico.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa10-008",
@@ -3965,7 +3965,7 @@
       ],
       "correcta": 0,
       "tip": "El tráfico de personas esclavizadas desde África proveyó gran parte de la fuerza de trabajo colonial.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa10-009",
@@ -3979,7 +3979,7 @@
       ],
       "correcta": 0,
       "tip": "La trata trasladó forzadamente a millones de africanos para trabajar en América.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa10-010",
@@ -3993,7 +3993,7 @@
       ],
       "correcta": 3,
       "tip": "El contrabando burlaba el monopolio comercial para comerciar sin pagar impuestos.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa10-011",
@@ -4007,7 +4007,7 @@
       ],
       "correcta": 0,
       "tip": "El monopolio encarecía los productos y estimulaba el comercio ilegal.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa10-012",
@@ -4021,7 +4021,7 @@
       ],
       "correcta": 2,
       "tip": "Sevilla concentró el comercio colonial por su ubicación y la Casa de Contratación.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa10-013",
@@ -4035,7 +4035,7 @@
       ],
       "correcta": 1,
       "tip": "La abundante plata americana enriqueció la Corona española.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa10-014",
@@ -4049,7 +4049,7 @@
       ],
       "correcta": 1,
       "tip": "Las personas esclavizadas eran capturadas y trasladadas desde África.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa10-015",
@@ -4063,7 +4063,7 @@
       ],
       "correcta": 2,
       "tip": "Productos agrícolas como azúcar, tabaco y cacao también cruzaban el Atlántico.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa10-016",
@@ -4077,7 +4077,7 @@
       ],
       "correcta": 3,
       "tip": "El circuito unía Europa, África y América formando un triángulo comercial.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa10-017",
@@ -4091,7 +4091,7 @@
       ],
       "correcta": 0,
       "tip": "Europa enviaba manufacturas a África para intercambiarlas por personas esclavizadas.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa10-018",
@@ -4105,7 +4105,7 @@
       ],
       "correcta": 0,
       "tip": "El tramo africano-americano transportaba a las personas esclavizadas.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa10-019",
@@ -4119,7 +4119,7 @@
       ],
       "correcta": 2,
       "tip": "El Alto Perú, donde estaba Potosí, fue la gran región minera de la plata.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa10-020",
@@ -4133,7 +4133,7 @@
       ],
       "correcta": 1,
       "tip": "Ingleses, franceses y holandeses atacaban los barcos españoles cargados de riquezas.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa10-021",
@@ -4147,7 +4147,7 @@
       ],
       "correcta": 2,
       "tip": "Al restringir el comercio legal, el monopolio fomentó el contrabando.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa10-022",
@@ -4161,7 +4161,7 @@
       ],
       "correcta": 0,
       "tip": "Solo ciertos puertos podían comerciar legalmente, reforzando el monopolio.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa10-023",
@@ -4175,7 +4175,7 @@
       ],
       "correcta": 3,
       "tip": "La gran cantidad de plata elevó los precios y activó la economía europea.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa10-024",
@@ -4189,7 +4189,7 @@
       ],
       "correcta": 2,
       "tip": "La Corona buscaba concentrar en España las riquezas del comercio colonial.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa10-025",
@@ -4203,7 +4203,7 @@
       ],
       "correcta": 0,
       "tip": "Las colonias exportaban materias primas e importaban productos elaborados de España.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa10-026",
@@ -4217,7 +4217,7 @@
       ],
       "correcta": 0,
       "tip": "Las reformas borbónicas flexibilizaron el monopolio con el comercio libre entre puertos.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa10-027",
@@ -4231,7 +4231,7 @@
       ],
       "correcta": 1,
       "tip": "Millones de africanos fueron transportados forzadamente a América como esclavos.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa10-028",
@@ -4245,7 +4245,7 @@
       ],
       "correcta": 2,
       "tip": "Nueva España (México) y Perú albergaban los grandes centros mineros de plata.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa10-029",
@@ -4259,7 +4259,7 @@
       ],
       "correcta": 3,
       "tip": "La travesía atlántica se realizaba en condiciones terribles, con enorme mortalidad.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa10-030",
@@ -4273,7 +4273,7 @@
       ],
       "correcta": 1,
       "tip": "Los metales y productos americanos impulsaron la economía y el poder europeo.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa11-001",
@@ -4282,12 +4282,12 @@
       "opciones": [
         "Una carta del rey",
         "Un mercado colonial",
-        "Un grupo de indígenas asignados a un español para trabajar",
+        "Una institución colonial que permitía al encomendero recibir tributo y trabajo de indígenas, con obligaciones de protección y evangelización.",
         "Un tipo de barco"
       ],
       "correcta": 2,
       "tip": "A cambio, el encomendero debía protegerlos y evangelizarlos.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa11-002",
@@ -4301,7 +4301,7 @@
       ],
       "correcta": 3,
       "tip": "Dio origen a gran parte de la sociedad chilena actual.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa11-003",
@@ -4314,8 +4314,8 @@
         "Un tipo de impuesto pagado a los indígenas"
       ],
       "correcta": 2,
-      "tip": "La encomienda entregaba indígenas a un español que exigía trabajo y tributo sin pagar salario.",
-      "revisada": false
+      "tip": "Los indigenas encomendados no eran propiedad del encomendero: el sistema implicaba tributo y trabajo con obligaciones de proteccion y evangelizacion, y fue objeto de abusos.",
+      "revisada": true
     },
     {
       "id": "hist8-oa11-004",
@@ -4329,7 +4329,7 @@
       ],
       "correcta": 2,
       "tip": "La mita obligaba a los indígenas a trabajar por turnos, sobre todo en minas como Potosí.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa11-005",
@@ -4343,7 +4343,7 @@
       ],
       "correcta": 3,
       "tip": "El mestizaje fue la mezcla de indígenas, europeos y africanos que originó nuevas identidades.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa11-006",
@@ -4357,7 +4357,7 @@
       ],
       "correcta": 3,
       "tip": "La evangelización buscó convertir a los indígenas al catolicismo.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa11-007",
@@ -4371,7 +4371,7 @@
       ],
       "correcta": 1,
       "tip": "La sociedad de castas ordenaba a las personas según su ascendencia y mezcla étnica.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa11-008",
@@ -4385,7 +4385,7 @@
       ],
       "correcta": 3,
       "tip": "La transculturación combina elementos de varias culturas dando origen a algo nuevo.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa11-009",
@@ -4399,7 +4399,7 @@
       ],
       "correcta": 0,
       "tip": "Los peninsulares, nacidos en España, ocupaban el lugar más alto de la jerarquía.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa11-010",
@@ -4413,7 +4413,7 @@
       ],
       "correcta": 3,
       "tip": "Los criollos eran descendientes de españoles pero nacidos en territorio americano.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa11-011",
@@ -4427,7 +4427,7 @@
       ],
       "correcta": 0,
       "tip": "El mestizo era hijo de la unión entre indígena y europeo.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa11-012",
@@ -4441,7 +4441,7 @@
       ],
       "correcta": 3,
       "tip": "El mulato era descendiente de la unión entre europeo y africano.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa11-013",
@@ -4455,7 +4455,7 @@
       ],
       "correcta": 0,
       "tip": "El zambo era descendiente de la unión entre indígena y africano.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa11-014",
@@ -4469,7 +4469,7 @@
       ],
       "correcta": 1,
       "tip": "La Iglesia católica, con frailes y misioneros, encabezó la evangelización.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa11-015",
@@ -4483,7 +4483,7 @@
       ],
       "correcta": 2,
       "tip": "El sincretismo fusionó el cristianismo con creencias indígenas y africanas.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa11-016",
@@ -4497,7 +4497,7 @@
       ],
       "correcta": 2,
       "tip": "La esclavitud implicaba trabajo forzado, sin pago y sin libertad.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa11-017",
@@ -4511,7 +4511,7 @@
       ],
       "correcta": 3,
       "tip": "Las tres eran formas de explotación laboral sin remuneración justa.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa11-018",
@@ -4525,7 +4525,7 @@
       ],
       "correcta": 3,
       "tip": "En la sociedad colonial las mujeres cumplían roles domésticos y familiares.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa11-019",
@@ -4539,7 +4539,7 @@
       ],
       "correcta": 1,
       "tip": "Junto con el catolicismo, la evangelización extendió el idioma español.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa11-020",
@@ -4553,7 +4553,7 @@
       ],
       "correcta": 0,
       "tip": "Los indígenas eran obligados a cumplir la mita en las minas.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa11-021",
@@ -4567,7 +4567,7 @@
       ],
       "correcta": 2,
       "tip": "La transculturación combinó lengua, religión, alimentación y tradiciones de los tres grupos.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa11-022",
@@ -4581,7 +4581,7 @@
       ],
       "correcta": 3,
       "tip": "La sociedad de castas asignaba derechos y posición según el origen racial.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa11-023",
@@ -4595,7 +4595,7 @@
       ],
       "correcta": 1,
       "tip": "La evangelización sirvió también para legitimar la conquista y el dominio español.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa11-024",
@@ -4609,7 +4609,7 @@
       ],
       "correcta": 0,
       "tip": "El encomendado seguía siendo persona libre en teoría; el esclavo era considerado propiedad.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa11-025",
@@ -4623,7 +4623,7 @@
       ],
       "correcta": 1,
       "tip": "Las culturas africanas influyeron fuertemente en la música y religiosidad americana.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa11-026",
@@ -4637,7 +4637,7 @@
       ],
       "correcta": 1,
       "tip": "El mestizaje generó una sociedad diversa con identidades culturales nuevas.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa11-027",
@@ -4651,7 +4651,7 @@
       ],
       "correcta": 3,
       "tip": "En una sociedad estamental la posición se heredaba y era difícil de modificar.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa11-028",
@@ -4665,7 +4665,7 @@
       ],
       "correcta": 0,
       "tip": "Las misiones buscaban convertir y agrupar a los indígenas bajo el control religioso.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa11-029",
@@ -4679,7 +4679,7 @@
       ],
       "correcta": 0,
       "tip": "La mezcla de ingredientes de los tres continentes creó nuevas tradiciones culinarias.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa11-030",
@@ -4693,7 +4693,7 @@
       ],
       "correcta": 0,
       "tip": "Aunque descendían de españoles, los criollos eran relegados frente a los peninsulares.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa11-031",
@@ -4707,7 +4707,7 @@
       ],
       "correcta": 3,
       "tip": "La encomienda y la mita eran formas de trabajo forzado sin salario justo.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa11-032",
@@ -4721,7 +4721,7 @@
       ],
       "correcta": 0,
       "tip": "El sistema de castas organizaba la sociedad otorgando distintos derechos según el origen.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa12-001",
@@ -4735,7 +4735,7 @@
       ],
       "correcta": 3,
       "tip": "La resistencia mapuche mantuvo la frontera en el río Biobío.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa12-002",
@@ -4749,7 +4749,7 @@
       ],
       "correcta": 1,
       "tip": "Los parlamentos eran reuniones de negociación entre ambas partes.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa12-003",
@@ -4763,7 +4763,7 @@
       ],
       "correcta": 2,
       "tip": "El Biobío marcó por siglos la frontera entre el dominio español y el territorio mapuche libre.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa12-004",
@@ -4777,7 +4777,7 @@
       ],
       "correcta": 2,
       "tip": "La Guerra de Arauco fue el largo conflicto que enfrentó a los españoles con la resistencia mapuche.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa12-005",
@@ -4791,7 +4791,7 @@
       ],
       "correcta": 1,
       "tip": "Lautaro conoció las tácticas españolas al servir a Valdivia y luego lideró la resistencia mapuche.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa12-006",
@@ -4805,7 +4805,7 @@
       ],
       "correcta": 2,
       "tip": "En Tucapel (1553) las fuerzas mapuches vencieron a los españoles y dieron muerte a Valdivia.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa12-007",
@@ -4819,7 +4819,7 @@
       ],
       "correcta": 1,
       "tip": "Tras Curalaba se perdieron las ciudades del sur y se consolidó la frontera en el Biobío.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa12-008",
@@ -4833,7 +4833,7 @@
       ],
       "correcta": 3,
       "tip": "Los parlamentos eran grandes reuniones donde se negociaban acuerdos de paz y convivencia fronteriza.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa12-009",
@@ -4847,7 +4847,7 @@
       ],
       "correcta": 1,
       "tip": "El Parlamento de Quilín (1641) reconoció oficialmente la autonomía mapuche al sur del Biobío.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa12-010",
@@ -4861,7 +4861,7 @@
       ],
       "correcta": 1,
       "tip": "El malón era una incursión sorpresiva, generalmente mapuche, para obtener ganado o cautivos.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa12-011",
@@ -4875,7 +4875,7 @@
       ],
       "correcta": 3,
       "tip": "La maloca era la incursión española en territorio mapuche para tomar cautivos o botín.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa12-012",
@@ -4889,7 +4889,7 @@
       ],
       "correcta": 2,
       "tip": "Caupolicán fue un toqui destacado de la resistencia, capturado y ejecutado por los españoles.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa12-013",
@@ -4903,7 +4903,7 @@
       ],
       "correcta": 0,
       "tip": "El toqui era el líder militar mapuche elegido para conducir la guerra.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa12-014",
@@ -4917,7 +4917,7 @@
       ],
       "correcta": 2,
       "tip": "La frontera no fue solo guerra: hubo comercio, mestizaje y contacto cultural permanente.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa12-015",
@@ -4931,7 +4931,7 @@
       ],
       "correcta": 0,
       "tip": "Los mapuches ocupaban el centro-sur, especialmente entre el Biobío y el Toltén.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa12-016",
@@ -4945,7 +4945,7 @@
       ],
       "correcta": 3,
       "tip": "Lautaro incorporó el caballo a la táctica mapuche, neutralizando una ventaja española.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa12-017",
@@ -4959,7 +4959,7 @@
       ],
       "correcta": 2,
       "tip": "La frontera fue un espacio dinámico de guerra, comercio y mestizaje entre ambos mundos.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa12-018",
@@ -4973,7 +4973,7 @@
       ],
       "correcta": 2,
       "tip": "Pedro de Valdivia fundó Santiago en 1541 y murió en Tucapel en 1553.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa12-019",
@@ -4987,7 +4987,7 @@
       ],
       "correcta": 3,
       "tip": "Alonso de Ercilla escribió 'La Araucana', que ensalza la valentía mapuche y española.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa12-020",
@@ -5001,7 +5001,7 @@
       ],
       "correcta": 0,
       "tip": "Mediante el comercio e incursiones, los mapuches incorporaron ganado y objetos metálicos europeos.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa12-021",
@@ -5015,7 +5015,7 @@
       ],
       "correcta": 0,
       "tip": "El pueblo mapuche conservó su independencia al sur del Biobío por casi tres siglos.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa12-022",
@@ -5029,7 +5029,7 @@
       ],
       "correcta": 3,
       "tip": "El mestizaje entre españoles e indígenas dio origen a la población mestiza.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa12-023",
@@ -5043,7 +5043,7 @@
       ],
       "correcta": 2,
       "tip": "Negociar parlamentos implicaba reconocer al pueblo mapuche como una fuerza con la que pactar.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa12-024",
@@ -5057,7 +5057,7 @@
       ],
       "correcta": 1,
       "tip": "Los capitanes de amigos eran intermediarios que facilitaban el trato entre ambos mundos fronterizos.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa12-025",
@@ -5071,7 +5071,7 @@
       ],
       "correcta": 0,
       "tip": "La estructura descentralizada mapuche impidió que una sola derrota o captura los sometiera.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa12-026",
@@ -5085,7 +5085,7 @@
       ],
       "correcta": 2,
       "tip": "Tras Curalaba se perdieron ciudades como Villarrica, Valdivia y Osorno al sur del Biobío.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa12-027",
@@ -5099,7 +5099,7 @@
       ],
       "correcta": 3,
       "tip": "La ganadería, sobre todo del caballo, transformó la economía y la guerra mapuche.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa12-028",
@@ -5113,7 +5113,7 @@
       ],
       "correcta": 2,
       "tip": "La frontera combinó etapas de guerra con periodos de paz, comercio y convivencia.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa12-029",
@@ -5127,7 +5127,7 @@
       ],
       "correcta": 1,
       "tip": "Tanto malones como malocas incluían la captura de personas, evidenciando violencia recíproca.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa12-030",
@@ -5141,7 +5141,7 @@
       ],
       "correcta": 0,
       "tip": "El caudal del Biobío ofrecía una barrera natural útil para defender la frontera.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa12-031",
@@ -5155,7 +5155,7 @@
       ],
       "correcta": 1,
       "tip": "El contacto fronterizo aportó al mestizaje que define buena parte de la identidad chilena.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa12-032",
@@ -5169,7 +5169,7 @@
       ],
       "correcta": 1,
       "tip": "La guerra fronteriza obligó a mantener un ejército profesional financiado por el Real Situado.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa12-033",
@@ -5183,7 +5183,7 @@
       ],
       "correcta": 0,
       "tip": "El lof era la agrupación de familias mapuches encabezada por un lonko o jefe.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa13-001",
@@ -5197,7 +5197,7 @@
       ],
       "correcta": 2,
       "tip": "La hacienda fue una extensa propiedad rural que organizó la economía y sociedad coloniales.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa13-002",
@@ -5211,7 +5211,7 @@
       ],
       "correcta": 0,
       "tip": "El latifundio es la posesión de enormes extensiones de tierra por unos pocos propietarios.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa13-003",
@@ -5225,7 +5225,7 @@
       ],
       "correcta": 1,
       "tip": "El inquilino residía en la hacienda y la trabajaba a cambio de un pedazo de tierra para su sustento.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa13-004",
@@ -5239,7 +5239,7 @@
       ],
       "correcta": 0,
       "tip": "El peón era un trabajador móvil y ocasional, sin tierra propia ni residencia fija.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa13-005",
@@ -5253,7 +5253,7 @@
       ],
       "correcta": 3,
       "tip": "El hacendado o patrón era el propietario que dirigía la hacienda y su gente.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa13-006",
@@ -5267,7 +5267,7 @@
       ],
       "correcta": 2,
       "tip": "La hacienda buscaba producir internamente casi todo lo necesario, siendo bastante autosuficiente.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa13-007",
@@ -5281,7 +5281,7 @@
       ],
       "correcta": 3,
       "tip": "El inquilinaje intercambiaba trabajo por el uso de la tierra y la protección del patrón.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa13-008",
@@ -5295,7 +5295,7 @@
       ],
       "correcta": 3,
       "tip": "La relación era paternalista: el patrón daba tierra y protección a cambio de lealtad y trabajo.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa13-009",
@@ -5309,7 +5309,7 @@
       ],
       "correcta": 2,
       "tip": "En la hacienda convivieron y se mezclaron españoles, indígenas y mestizos del mundo rural.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa13-010",
@@ -5323,7 +5323,7 @@
       ],
       "correcta": 3,
       "tip": "Las haciendas centrales producían trigo, ganado y derivados como el sebo.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa13-011",
@@ -5337,7 +5337,7 @@
       ],
       "correcta": 2,
       "tip": "La hacienda organizó la economía, la sociedad y la cultura del campo chileno colonial.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa13-012",
@@ -5351,7 +5351,7 @@
       ],
       "correcta": 1,
       "tip": "La estructura de la hacienda y el latifundio se proyectó en el campo chileno hasta la reforma agraria del siglo XX.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa13-013",
@@ -5365,7 +5365,7 @@
       ],
       "correcta": 2,
       "tip": "El inquilino tenía arraigo y vivienda en la hacienda; el peón trabajaba de forma itinerante.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa13-014",
@@ -5379,7 +5379,7 @@
       ],
       "correcta": 2,
       "tip": "La demanda peruana de trigo, tras un terremoto de 1687, impulsó la expansión triguera de las haciendas chilenas.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa13-015",
@@ -5393,7 +5393,7 @@
       ],
       "correcta": 3,
       "tip": "La creciente población mestiza sin tierra proveyó la mano de obra de inquilinos y peones.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa13-016",
@@ -5407,7 +5407,7 @@
       ],
       "correcta": 2,
       "tip": "La casa patronal era el núcleo desde donde el hacendado ejercía autoridad sobre su gente.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa13-017",
@@ -5421,7 +5421,7 @@
       ],
       "correcta": 3,
       "tip": "El valle central, de suelos fértiles y clima templado, fue el corazón del sistema de haciendas.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa13-018",
@@ -5435,7 +5435,7 @@
       ],
       "correcta": 3,
       "tip": "El inquilino debía trabajar para el patrón y, en ocasiones, entregarle parte de lo producido.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa13-019",
@@ -5449,7 +5449,7 @@
       ],
       "correcta": 3,
       "tip": "La hacienda expresaba las profundas jerarquías y desigualdades de la sociedad colonial.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa13-020",
@@ -5463,7 +5463,7 @@
       ],
       "correcta": 0,
       "tip": "Al declinar la encomienda, la hacienda pasó a organizar el trabajo agrícola en el campo.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa13-021",
@@ -5477,7 +5477,7 @@
       ],
       "correcta": 3,
       "tip": "El inquilinaje ató a generaciones de campesinos a la hacienda en relación de dependencia.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa13-022",
@@ -5491,7 +5491,7 @@
       ],
       "correcta": 3,
       "tip": "La vida de la hacienda proyectó tradiciones campesinas y la figura del huaso en la cultura chilena.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa13-023",
@@ -5505,7 +5505,7 @@
       ],
       "correcta": 1,
       "tip": "La hacienda abastecía el consumo local y mercados cercanos, principalmente el peruano.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa13-024",
@@ -5519,7 +5519,7 @@
       ],
       "correcta": 3,
       "tip": "La hacienda era rural y no contaba con puertos internacionales propios; sí tenía casa patronal, campos y viviendas.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa13-025",
@@ -5533,7 +5533,7 @@
       ],
       "correcta": 1,
       "tip": "El hacendado era una autoridad social y hasta política en su zona, no solo un empleador.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa13-026",
@@ -5547,7 +5547,7 @@
       ],
       "correcta": 0,
       "tip": "La hacienda elaboraba internamente gran parte de lo que consumía, reduciendo su dependencia externa.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa13-027",
@@ -5561,7 +5561,7 @@
       ],
       "correcta": 3,
       "tip": "Las mercedes de tierra otorgadas por la Corona sentaron la base del latifundio colonial.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa13-028",
@@ -5575,7 +5575,7 @@
       ],
       "correcta": 2,
       "tip": "La hacienda tenía una pirámide social clara, con el hacendado en la cima y peones e inquilinos en la base.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa14-001",
@@ -5589,7 +5589,7 @@
       ],
       "correcta": 1,
       "tip": "La Ilustración confió en la razón humana como herramienta para conocer y mejorar la sociedad.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa14-002",
@@ -5603,7 +5603,7 @@
       ],
       "correcta": 0,
       "tip": "Montesquieu planteó dividir el poder en ejecutivo, legislativo y judicial en 'El espíritu de las leyes'.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa14-003",
@@ -5617,7 +5617,7 @@
       ],
       "correcta": 1,
       "tip": "En 'El contrato social', Rousseau sostuvo que la soberanía reside en el pueblo.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa14-004",
@@ -5631,7 +5631,7 @@
       ],
       "correcta": 2,
       "tip": "La separación de poderes busca evitar la concentración del poder en una sola persona.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa14-005",
@@ -5645,7 +5645,7 @@
       ],
       "correcta": 2,
       "tip": "La Ilustración cuestionó el poder absoluto del rey y defendió límites al gobierno.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa14-006",
@@ -5659,7 +5659,7 @@
       ],
       "correcta": 2,
       "tip": "La Enciclopedia, dirigida por Diderot y D'Alembert, buscó recopilar y difundir el saber.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa14-007",
@@ -5673,7 +5673,7 @@
       ],
       "correcta": 2,
       "tip": "Los enciclopedistas difundieron el conocimiento racional y crítico de la Ilustración.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa14-008",
@@ -5687,7 +5687,7 @@
       ],
       "correcta": 2,
       "tip": "La soberanía popular sostiene que el poder emana del pueblo y no del monarca.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa14-009",
@@ -5701,7 +5701,7 @@
       ],
       "correcta": 2,
       "tip": "Voltaire fue un firme defensor de la tolerancia y la libertad de pensamiento.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa14-010",
@@ -5715,7 +5715,7 @@
       ],
       "correcta": 1,
       "tip": "El ordenamiento constitucional establece reglas que organizan y limitan el poder político.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa14-011",
@@ -5729,7 +5729,7 @@
       ],
       "correcta": 0,
       "tip": "La Ilustración se desarrolló en el siglo XVIII, conocido como 'el siglo de las luces'.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa14-012",
@@ -5743,7 +5743,7 @@
       ],
       "correcta": 3,
       "tip": "La 'luz' simboliza la razón que disipa la ignorancia y la superstición.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa14-013",
@@ -5757,7 +5757,7 @@
       ],
       "correcta": 2,
       "tip": "El control mutuo entre poderes evita los abusos y protege la libertad.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa14-014",
@@ -5771,7 +5771,7 @@
       ],
       "correcta": 2,
       "tip": "Los ilustrados creían que la educación y el conocimiento mejoraban la sociedad.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa14-015",
@@ -5785,7 +5785,7 @@
       ],
       "correcta": 3,
       "tip": "En el absolutismo el monarca gobernaba sin límites y sin rendir cuentas.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa14-016",
@@ -5799,7 +5799,7 @@
       ],
       "correcta": 3,
       "tip": "El contrato social es un acuerdo entre los miembros de la sociedad para vivir juntos bajo leyes comunes.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa14-017",
@@ -5813,7 +5813,7 @@
       ],
       "correcta": 1,
       "tip": "Napoleón fue un líder militar y político posterior, no un filósofo ilustrado.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa14-018",
@@ -5827,7 +5827,7 @@
       ],
       "correcta": 2,
       "tip": "La Ilustración promovió la igualdad de todos ante la ley, sin privilegios de nacimiento.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa14-019",
@@ -5841,7 +5841,7 @@
       ],
       "correcta": 2,
       "tip": "El espíritu crítico invita a cuestionar y analizar las ideas mediante la razón.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa14-020",
@@ -5855,7 +5855,7 @@
       ],
       "correcta": 1,
       "tip": "La constitución fija derechos de los ciudadanos y límites al poder del Estado.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa14-021",
@@ -5869,7 +5869,7 @@
       ],
       "correcta": 2,
       "tip": "La burguesía culta fue clave en la difusión de las ideas ilustradas.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa14-022",
@@ -5883,7 +5883,7 @@
       ],
       "correcta": 3,
       "tip": "Los ilustrados buscaban sustituir la superstición por el conocimiento racional.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa14-023",
@@ -5897,7 +5897,7 @@
       ],
       "correcta": 0,
       "tip": "La soberanía popular sostiene que el poder proviene del pueblo, no de Dios ni de la herencia.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa14-024",
@@ -5911,7 +5911,7 @@
       ],
       "correcta": 3,
       "tip": "Un ordenamiento constitucional organiza el Estado con normas que limitan el poder.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa14-025",
@@ -5925,7 +5925,7 @@
       ],
       "correcta": 3,
       "tip": "El poder legislativo elabora las leyes; el ejecutivo las aplica y el judicial las hace cumplir.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa14-026",
@@ -5939,7 +5939,7 @@
       ],
       "correcta": 2,
       "tip": "El poder ejecutivo gobierna y aplica las leyes aprobadas por el legislativo.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa14-027",
@@ -5953,7 +5953,7 @@
       ],
       "correcta": 2,
       "tip": "El poder judicial administra justicia aplicando las leyes a los casos concretos.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa14-028",
@@ -5967,7 +5967,7 @@
       ],
       "correcta": 3,
       "tip": "El ordenamiento constitucional y la división del poder limitaron el absolutismo.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa14-029",
@@ -5981,7 +5981,7 @@
       ],
       "correcta": 0,
       "tip": "Los tres fueron filósofos ilustrados que defendieron la razón y criticaron el absolutismo.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa14-030",
@@ -5995,7 +5995,7 @@
       ],
       "correcta": 2,
       "tip": "La Ilustración defendió los derechos y libertades individuales frente al poder absoluto.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa15-001",
@@ -6009,7 +6009,7 @@
       ],
       "correcta": 3,
       "tip": "La Declaración de Independencia de Estados Unidos fue firmada el 4 de julio de 1776.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa15-002",
@@ -6023,7 +6023,7 @@
       ],
       "correcta": 3,
       "tip": "La Revolución francesa comenzó en 1789 con la toma de la Bastilla.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa15-003",
@@ -6037,7 +6037,7 @@
       ],
       "correcta": 3,
       "tip": "La toma de la Bastilla, el 14 de julio de 1789, simboliza el inicio de la Revolución francesa.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa15-004",
@@ -6051,7 +6051,7 @@
       ],
       "correcta": 1,
       "tip": "La Declaración de Independencia recogió la idea ilustrada de igualdad y derechos naturales.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa15-005",
@@ -6065,7 +6065,7 @@
       ],
       "correcta": 3,
       "tip": "Las Trece Colonias se independizaron del dominio de Gran Bretaña.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa15-006",
@@ -6079,7 +6079,7 @@
       ],
       "correcta": 1,
       "tip": "La Declaración de los Derechos del Hombre y del Ciudadano recogió libertad e igualdad ante la ley.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa15-007",
@@ -6093,7 +6093,7 @@
       ],
       "correcta": 0,
       "tip": "'Libertad, igualdad y fraternidad' resume los ideales revolucionarios franceses.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa15-008",
@@ -6107,7 +6107,7 @@
       ],
       "correcta": 0,
       "tip": "Ambos procesos avanzaron hacia repúblicas basadas en la soberanía del pueblo.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa15-009",
@@ -6121,7 +6121,7 @@
       ],
       "correcta": 1,
       "tip": "La soberanía popular sostiene que el poder emana del pueblo, principio central de ambas revoluciones.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa15-010",
@@ -6135,7 +6135,7 @@
       ],
       "correcta": 0,
       "tip": "El Antiguo Régimen se basaba en la monarquía absoluta y en privilegios estamentales.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa15-011",
@@ -6149,7 +6149,7 @@
       ],
       "correcta": 3,
       "tip": "La burguesía impulsó los cambios frente a los privilegios de la nobleza y el clero.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa15-012",
@@ -6163,7 +6163,7 @@
       ],
       "correcta": 0,
       "tip": "La sociedad se dividía en tres estamentos: clero, nobleza y tercer estado.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa15-013",
@@ -6177,7 +6177,7 @@
       ],
       "correcta": 0,
       "tip": "El tercer estado reunía a la mayoría del pueblo y soportaba la carga de los impuestos.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa15-014",
@@ -6191,7 +6191,7 @@
       ],
       "correcta": 1,
       "tip": "El liberalismo, que defiende las libertades individuales, se difundió con estas revoluciones.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa15-015",
@@ -6205,7 +6205,7 @@
       ],
       "correcta": 1,
       "tip": "Luis XVI fue derrocado y ejecutado durante la Revolución francesa.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa15-016",
@@ -6219,7 +6219,7 @@
       ],
       "correcta": 2,
       "tip": "La Constitución de 1787 organizó Estados Unidos aplicando la separación de poderes.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa15-017",
@@ -6233,7 +6233,7 @@
       ],
       "correcta": 3,
       "tip": "Las ideas ilustradas de razón, libertad e igualdad inspiraron estas revoluciones.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa15-018",
@@ -6247,7 +6247,7 @@
       ],
       "correcta": 2,
       "tip": "La Constitución de EE.UU. aplicó la separación de poderes planteada por Montesquieu.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa15-019",
@@ -6261,7 +6261,7 @@
       ],
       "correcta": 2,
       "tip": "La Revolución abolió los privilegios estamentales y proclamó la igualdad ante la ley.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa15-020",
@@ -6275,7 +6275,7 @@
       ],
       "correcta": 0,
       "tip": "Francia apoyó a las Trece Colonias en su guerra contra Gran Bretaña.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa15-021",
@@ -6289,7 +6289,7 @@
       ],
       "correcta": 0,
       "tip": "Se buscó reemplazar el absolutismo por gobiernos con constitución y soberanía popular.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa15-022",
@@ -6303,7 +6303,7 @@
       ],
       "correcta": 3,
       "tip": "La idea de derechos naturales sostiene que las personas poseen derechos que el gobierno debe respetar.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa15-023",
@@ -6317,7 +6317,7 @@
       ],
       "correcta": 3,
       "tip": "La Declaración de Independencia de 1776 explicó las razones de la ruptura con Gran Bretaña.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa15-024",
@@ -6331,7 +6331,7 @@
       ],
       "correcta": 0,
       "tip": "Las revoluciones aplicaron ideas ilustradas como soberanía popular y separación de poderes.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa15-025",
@@ -6345,7 +6345,7 @@
       ],
       "correcta": 1,
       "tip": "La soberanía popular indica que el poder legítimo nace del pueblo.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa15-026",
@@ -6359,7 +6359,7 @@
       ],
       "correcta": 0,
       "tip": "La monarquía constitucional limita el poder del rey mediante una constitución.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa15-027",
@@ -6373,7 +6373,7 @@
       ],
       "correcta": 2,
       "tip": "Sus ideas de libertad e igualdad influyeron en procesos posteriores, como las independencias americanas.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa15-028",
@@ -6387,7 +6387,7 @@
       ],
       "correcta": 0,
       "tip": "Los dos procesos se inspiraron en ideas ilustradas y limitaron el poder absoluto.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa15-029",
@@ -6401,7 +6401,7 @@
       ],
       "correcta": 2,
       "tip": "El fin del Antiguo Régimen terminó con el absolutismo y los privilegios de nacimiento.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa16-001",
@@ -6415,7 +6415,7 @@
       ],
       "correcta": 0,
       "tip": "La invasión de Napoleón a España en 1808 desató la crisis que abrió paso a las independencias.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa16-002",
@@ -6429,7 +6429,7 @@
       ],
       "correcta": 3,
       "tip": "Fernando VII fue obligado a abdicar, dejando un vacío de poder en las colonias.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa16-003",
@@ -6443,7 +6443,7 @@
       ],
       "correcta": 2,
       "tip": "Ante el vacío de poder, se crearon juntas de gobierno para administrar en nombre del rey cautivo.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa16-004",
@@ -6457,7 +6457,7 @@
       ],
       "correcta": 2,
       "tip": "Los criollos, americanos descendientes de españoles, encabezaron los movimientos de independencia.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa16-005",
@@ -6471,7 +6471,7 @@
       ],
       "correcta": 2,
       "tip": "Los criollos eran hijos de españoles pero nacidos en América, muchas veces con poder económico.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa16-006",
@@ -6485,7 +6485,7 @@
       ],
       "correcta": 2,
       "tip": "Fue un proceso extendido por casi todo el continente, con causas e ideas compartidas.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa16-007",
@@ -6499,7 +6499,7 @@
       ],
       "correcta": 1,
       "tip": "Simón Bolívar lideró la independencia de Venezuela, Colombia, Ecuador, Perú y Bolivia.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa16-008",
@@ -6513,7 +6513,7 @@
       ],
       "correcta": 2,
       "tip": "José de San Martín cruzó los Andes con el Ejército Libertador hacia Chile y luego Perú.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa16-009",
@@ -6527,7 +6527,7 @@
       ],
       "correcta": 1,
       "tip": "Bernardo O'Higgins es reconocido como el Padre de la Patria por su rol en la independencia de Chile.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa16-010",
@@ -6541,7 +6541,7 @@
       ],
       "correcta": 2,
       "tip": "Las ideas ilustradas de soberanía popular y libertad inspiraron a los líderes independentistas.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa16-011",
@@ -6555,7 +6555,7 @@
       ],
       "correcta": 1,
       "tip": "La invasión de Napoleón a España fue una causa externa que precipitó el proceso.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa16-012",
@@ -6569,7 +6569,7 @@
       ],
       "correcta": 0,
       "tip": "El malestar de los criollos, excluidos de los altos cargos, fue una causa interna clave.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa16-013",
@@ -6583,7 +6583,7 @@
       ],
       "correcta": 2,
       "tip": "El monopolio comercial obligaba a comerciar solo con España, generando malestar económico.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa16-014",
@@ -6597,7 +6597,7 @@
       ],
       "correcta": 1,
       "tip": "La Primera Junta Nacional de Gobierno de Chile se formó el 18 de septiembre de 1810.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa16-015",
@@ -6611,7 +6611,7 @@
       ],
       "correcta": 0,
       "tip": "Las juntas decían gobernar en nombre de Fernando VII, cautivo de Napoleón.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa16-016",
@@ -6625,7 +6625,7 @@
       ],
       "correcta": 0,
       "tip": "La independencia de EE.UU. mostró que las colonias podían liberarse y formar repúblicas.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa16-017",
@@ -6639,7 +6639,7 @@
       ],
       "correcta": 2,
       "tip": "El sacerdote Miguel Hidalgo inició la insurgencia mexicana con el Grito de Dolores en 1810.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa16-018",
@@ -6653,7 +6653,7 @@
       ],
       "correcta": 1,
       "tip": "Los peninsulares nacían en España y ocupaban los altos cargos; los criollos nacían en América.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa16-019",
@@ -6667,7 +6667,7 @@
       ],
       "correcta": 1,
       "tip": "La soberanía popular sostenía que el poder debía residir en el pueblo, no en el rey ausente.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa16-020",
@@ -6681,7 +6681,7 @@
       ],
       "correcta": 3,
       "tip": "Bolívar impulsó la Gran Colombia, que reunió a Venezuela, Colombia, Ecuador y Panamá.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa16-021",
@@ -6695,7 +6695,7 @@
       ],
       "correcta": 0,
       "tip": "El Ejército de los Andes cruzó la cordillera para apoyar la independencia de Chile.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa16-022",
@@ -6709,7 +6709,7 @@
       ],
       "correcta": 1,
       "tip": "La Patria Vieja fue la primera etapa de gobiernos autónomos en Chile, iniciada en 1810.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa16-023",
@@ -6723,7 +6723,7 @@
       ],
       "correcta": 0,
       "tip": "La Batalla de Maipú, en 1818, aseguró la independencia de Chile.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa16-024",
@@ -6737,7 +6737,7 @@
       ],
       "correcta": 3,
       "tip": "La Batalla de Ayacucho, en 1824, selló el fin del dominio español en Sudamérica.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa16-025",
@@ -6751,7 +6751,7 @@
       ],
       "correcta": 0,
       "tip": "Se combinaron el descontento interno de los criollos con hechos externos como la crisis española.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa16-026",
@@ -6765,7 +6765,7 @@
       ],
       "correcta": 1,
       "tip": "El objetivo final fue crear naciones independientes del dominio español.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa16-027",
@@ -6779,7 +6779,7 @@
       ],
       "correcta": 2,
       "tip": "El monopolio comercial limitaba a las colonias y alimentó el deseo de gobernarse por sí mismas.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa16-028",
@@ -6793,7 +6793,7 @@
       ],
       "correcta": 2,
       "tip": "Las independencias se conectaron por causas comunes, ideas ilustradas y apoyo entre líderes.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa16-029",
@@ -6807,7 +6807,7 @@
       ],
       "correcta": 2,
       "tip": "Manuel Rodríguez fue un guerrillero que mantuvo viva la causa patriota durante la Reconquista.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa17-001",
@@ -6821,7 +6821,7 @@
       ],
       "correcta": 0,
       "tip": "El debate giraba en torno a la justicia y legitimidad del dominio español sobre los indígenas.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa17-002",
@@ -6835,7 +6835,7 @@
       ],
       "correcta": 0,
       "tip": "Bartolomé de las Casas denunció los abusos y defendió los derechos de los pueblos indígenas.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa17-003",
@@ -6849,7 +6849,7 @@
       ],
       "correcta": 0,
       "tip": "Las Casas afirmaba la plena humanidad y los derechos de los indígenas frente a los abusos.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa17-004",
@@ -6863,7 +6863,7 @@
       ],
       "correcta": 3,
       "tip": "Sepúlveda justificaba la guerra y el sometimiento de los indígenas, opuesto a Las Casas.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa17-005",
@@ -6877,7 +6877,7 @@
       ],
       "correcta": 0,
       "tip": "La controversia de Valladolid (1550-1551) enfrentó las posturas de Las Casas y Sepúlveda.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa17-006",
@@ -6891,7 +6891,7 @@
       ],
       "correcta": 0,
       "tip": "Los justos títulos eran las razones jurídicas y morales para legitimar la conquista.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa17-007",
@@ -6905,7 +6905,7 @@
       ],
       "correcta": 0,
       "tip": "El sermón de Antonio de Montesinos en 1511 fue una de las primeras denuncias de los abusos.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa17-008",
@@ -6919,7 +6919,7 @@
       ],
       "correcta": 3,
       "tip": "La evangelización fue uno de los principales argumentos usados para justificar la conquista.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa17-009",
@@ -6933,7 +6933,7 @@
       ],
       "correcta": 0,
       "tip": "Los críticos defendían el derecho de los indígenas a su libertad, tierras y organización propia.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa17-010",
@@ -6947,7 +6947,7 @@
       ],
       "correcta": 2,
       "tip": "Las Leyes Nuevas intentaron proteger a los indígenas y restringir los abusos de las encomiendas.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa17-011",
@@ -6961,7 +6961,7 @@
       ],
       "correcta": 3,
       "tip": "Aquella discusión moral conecta con los debates actuales sobre derechos y respeto a los pueblos originarios.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa17-012",
@@ -6975,7 +6975,7 @@
       ],
       "correcta": 3,
       "tip": "Sepúlveda usó la idea de la 'servidumbre natural' para justificar el sometimiento indígena.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa17-013",
@@ -6989,7 +6989,7 @@
       ],
       "correcta": 2,
       "tip": "Comparar visiones enfrentadas desarrolla el pensamiento crítico y la comprensión de la complejidad histórica.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa17-014",
@@ -7003,7 +7003,7 @@
       ],
       "correcta": 1,
       "tip": "A Las Casas se le conoce como el 'Defensor de los indios' por su labor a favor de ellos.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa17-015",
@@ -7017,7 +7017,7 @@
       ],
       "correcta": 0,
       "tip": "El Requerimiento exigía a los indígenas aceptar el dominio español y la religión, o enfrentar la guerra.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa17-016",
@@ -7031,7 +7031,7 @@
       ],
       "correcta": 3,
       "tip": "El respeto a la diversidad reconoce el valor de las culturas indígenas y sus derechos.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa17-017",
@@ -7045,7 +7045,7 @@
       ],
       "correcta": 2,
       "tip": "Las Casas denunció que la encomienda derivaba en trabajos forzados y maltrato de los indígenas.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa17-018",
@@ -7059,7 +7059,7 @@
       ],
       "correcta": 0,
       "tip": "Vitoria reflexionó sobre el derecho de gentes y cuestionó los títulos de la conquista.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa17-019",
@@ -7073,7 +7073,7 @@
       ],
       "correcta": 2,
       "tip": "Ya en el siglo XVI hubo voces que cuestionaron moralmente la legitimidad de la conquista.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa17-020",
@@ -7087,7 +7087,7 @@
       ],
       "correcta": 2,
       "tip": "El debate histórico nos motiva a defender la dignidad y los derechos de los pueblos indígenas de hoy.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa17-021",
@@ -7101,7 +7101,7 @@
       ],
       "correcta": 1,
       "tip": "Quienes justificaban la conquista alegaban llevar la religión y la 'civilización' europea.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa17-022",
@@ -7115,7 +7115,7 @@
       ],
       "correcta": 2,
       "tip": "En esa obra, Las Casas denunció los abusos cometidos contra los indígenas durante la conquista.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa17-023",
@@ -7129,7 +7129,7 @@
       ],
       "correcta": 0,
       "tip": "Hoy se reconoce el derecho de los pueblos originarios a conservar su cultura, lengua y territorio.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa17-024",
@@ -7143,7 +7143,7 @@
       ],
       "correcta": 1,
       "tip": "Las Casas, siendo español y religioso, criticó los abusos desde el interior del sistema colonial.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa17-025",
@@ -7157,7 +7157,7 @@
       ],
       "correcta": 2,
       "tip": "Ese debate muestra el valor de cuestionar la injusticia y defender los derechos de las personas.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa17-026",
@@ -7171,7 +7171,7 @@
       ],
       "correcta": 3,
       "tip": "Comprender el pasado exige examinar los argumentos y el contexto de cada postura enfrentada.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa17-027",
@@ -7185,7 +7185,7 @@
       ],
       "correcta": 3,
       "tip": "El debate se proyecta hoy en la lucha por el reconocimiento legal y los derechos de los pueblos indígenas.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa17-028",
@@ -7199,7 +7199,7 @@
       ],
       "correcta": 0,
       "tip": "La postura crítica sostiene que la conquista fue injusta y vulneró los derechos de los indígenas.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa17-029",
@@ -7213,7 +7213,7 @@
       ],
       "correcta": 2,
       "tip": "Estudiar el debate fortalece valores ciudadanos como el respeto, la tolerancia y los derechos humanos.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa18-001",
@@ -7227,7 +7227,7 @@
       ],
       "correcta": 1,
       "tip": "La Declaración fue aprobada por la Asamblea Nacional francesa en agosto de 1789, al inicio de la Revolución francesa.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa18-002",
@@ -7241,7 +7241,7 @@
       ],
       "correcta": 1,
       "tip": "La Ilustración promovió el uso de la razón y defendió que las personas poseen derechos naturales por su condición humana.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa18-003",
@@ -7255,7 +7255,7 @@
       ],
       "correcta": 3,
       "tip": "Libertad, Igualdad y Fraternidad resume los valores centrales que promovió la Revolución francesa.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa18-004",
@@ -7269,7 +7269,7 @@
       ],
       "correcta": 2,
       "tip": "Los derechos naturales se consideran inherentes a la persona y anteriores a cualquier gobierno.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa18-005",
@@ -7283,7 +7283,7 @@
       ],
       "correcta": 3,
       "tip": "La libertad es uno de los derechos naturales fundamentales proclamados por la Ilustración.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa18-006",
@@ -7297,7 +7297,7 @@
       ],
       "correcta": 2,
       "tip": "La soberanía popular sostiene que la autoridad emana del pueblo y no de un rey por voluntad divina.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa18-007",
@@ -7311,7 +7311,7 @@
       ],
       "correcta": 0,
       "tip": "Montesquieu, en 'El espíritu de las leyes', planteó la separación de poderes para evitar el abuso de autoridad.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa18-008",
@@ -7325,7 +7325,7 @@
       ],
       "correcta": 3,
       "tip": "La Declaración cuestionó el poder absoluto del rey y los privilegios del Antiguo Régimen.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa18-009",
@@ -7339,7 +7339,7 @@
       ],
       "correcta": 3,
       "tip": "Rousseau, en 'El contrato social', sostuvo que la soberanía pertenece al pueblo.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa18-010",
@@ -7353,7 +7353,7 @@
       ],
       "correcta": 0,
       "tip": "La igualdad ante la ley implica que ninguna persona está por encima de las normas, sin privilegios de nacimiento.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa18-011",
@@ -7367,7 +7367,7 @@
       ],
       "correcta": 3,
       "tip": "En el Antiguo Régimen la nobleza y el clero gozaban de privilegios frente al resto de la población.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa18-012",
@@ -7381,7 +7381,7 @@
       ],
       "correcta": 0,
       "tip": "Los principios ilustrados sirven de base a las constituciones modernas y a la defensa de los derechos humanos.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa18-013",
@@ -7395,7 +7395,7 @@
       ],
       "correcta": 1,
       "tip": "La Declaración eliminó los privilegios; reconoció libertad, propiedad, seguridad y resistencia a la opresión.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa18-014",
@@ -7409,7 +7409,7 @@
       ],
       "correcta": 2,
       "tip": "Los ilustrados confiaban en la razón como guía para reformar la sociedad y el gobierno.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa18-015",
@@ -7423,7 +7423,7 @@
       ],
       "correcta": 1,
       "tip": "La Declaración de 1789 fue un antecedente clave de las modernas declaraciones de derechos humanos.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa18-016",
@@ -7437,7 +7437,7 @@
       ],
       "correcta": 0,
       "tip": "El pensamiento ilustrado sostenía que la legitimidad del poder nace del acuerdo entre los ciudadanos.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa18-017",
@@ -7451,7 +7451,7 @@
       ],
       "correcta": 3,
       "tip": "La fraternidad apela a la solidaridad y al sentido de comunidad entre los miembros de la nación.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa18-018",
@@ -7465,7 +7465,7 @@
       ],
       "correcta": 2,
       "tip": "La Declaración señala que la ley representa la voluntad general del pueblo, idea inspirada en Rousseau.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa18-019",
@@ -7479,7 +7479,7 @@
       ],
       "correcta": 2,
       "tip": "La noción de derechos inviolables sustenta hoy la protección de las libertades individuales.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa18-020",
@@ -7493,7 +7493,7 @@
       ],
       "correcta": 0,
       "tip": "La libertad de expresión fue una de las libertades reclamadas por los ilustrados y recogida en la Declaración.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa18-021",
@@ -7507,7 +7507,7 @@
       ],
       "correcta": 0,
       "tip": "La toma de la Bastilla, el 14 de julio de 1789, simboliza el estallido de la Revolución francesa.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa18-022",
@@ -7521,7 +7521,7 @@
       ],
       "correcta": 1,
       "tip": "El constitucionalismo busca limitar el poder mediante una ley fundamental que garantice derechos.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa18-023",
@@ -7535,7 +7535,7 @@
       ],
       "correcta": 2,
       "tip": "La independencia de Estados Unidos (1776) proclamó derechos y libertades que influyeron en la Revolución francesa.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa18-024",
@@ -7549,7 +7549,7 @@
       ],
       "correcta": 3,
       "tip": "La Revolución transformó a los súbditos en ciudadanos, titulares de derechos y deberes.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa18-025",
@@ -7563,7 +7563,7 @@
       ],
       "correcta": 3,
       "tip": "La función del gobierno, según la Ilustración, es garantizar y proteger los derechos naturales.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa18-026",
@@ -7577,7 +7577,7 @@
       ],
       "correcta": 0,
       "tip": "Las ideas de libertad e igualdad de la Revolución francesa inspiraron los procesos de independencia americanos.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa18-027",
@@ -7591,7 +7591,7 @@
       ],
       "correcta": 1,
       "tip": "La Declaración es un antecedente directo de los derechos humanos reconocidos hoy en el mundo.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa18-028",
@@ -7605,7 +7605,7 @@
       ],
       "correcta": 0,
       "tip": "Frente al derecho divino, los ilustrados afirmaban que la autoridad legítima proviene del pueblo.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa18-029",
@@ -7619,7 +7619,7 @@
       ],
       "correcta": 3,
       "tip": "La igualdad revolucionaria apuntaba a suprimir los privilegios heredados del Antiguo Régimen.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa18-030",
@@ -7633,7 +7633,7 @@
       ],
       "correcta": 2,
       "tip": "Muchos principios de las democracias contemporáneas provienen del pensamiento ilustrado.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa19-001",
@@ -7647,7 +7647,7 @@
       ],
       "correcta": 0,
       "tip": "Con la independencia, Chile dejó atrás el dominio monárquico español y organizó un gobierno republicano.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa19-002",
@@ -7661,7 +7661,7 @@
       ],
       "correcta": 1,
       "tip": "Chile era parte del Imperio español; la independencia terminó con ese dominio colonial.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa19-003",
@@ -7675,7 +7675,7 @@
       ],
       "correcta": 0,
       "tip": "El orden republicano se basa en que el poder reside en el pueblo y no en un monarca.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa19-004",
@@ -7689,7 +7689,7 @@
       ],
       "correcta": 0,
       "tip": "Las constituciones fueron clave para dar forma al nuevo orden republicano en Chile.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa19-005",
@@ -7703,7 +7703,7 @@
       ],
       "correcta": 3,
       "tip": "La república adoptó la separación de poderes para evitar la concentración de la autoridad.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa19-006",
@@ -7717,7 +7717,7 @@
       ],
       "correcta": 3,
       "tip": "Tras la independencia, Chile vivió un período de ensayos constitucionales para organizar la nueva república.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa19-007",
@@ -7731,7 +7731,7 @@
       ],
       "correcta": 1,
       "tip": "El nuevo orden republicano transformó a los súbditos del rey en ciudadanos con derechos y deberes.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa19-008",
@@ -7745,7 +7745,7 @@
       ],
       "correcta": 3,
       "tip": "La ciudadanía inicial fue restringida: excluía a mujeres y exigía requisitos de riqueza o instrucción.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa19-009",
@@ -7759,7 +7759,7 @@
       ],
       "correcta": 0,
       "tip": "En la república, la soberanía pertenece al pueblo, que elige a sus autoridades.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa19-010",
@@ -7773,7 +7773,7 @@
       ],
       "correcta": 0,
       "tip": "La república sustituyó a las autoridades designadas por la Corona por cargos de origen nacional.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa19-011",
@@ -7787,7 +7787,7 @@
       ],
       "correcta": 1,
       "tip": "En la república, los ciudadanos tienen deberes como respetar las leyes y participar de la vida pública.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa19-012",
@@ -7801,7 +7801,7 @@
       ],
       "correcta": 0,
       "tip": "La independencia puso término al orden colonial impuesto por España en América.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa19-013",
@@ -7815,7 +7815,7 @@
       ],
       "correcta": 1,
       "tip": "Las constituciones definieron la estructura del Estado y los límites del poder en la nueva república.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa19-014",
@@ -7829,7 +7829,7 @@
       ],
       "correcta": 3,
       "tip": "En la monarquía el rey hereda el poder de por vida; en la república las autoridades son temporales.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa19-015",
@@ -7843,7 +7843,7 @@
       ],
       "correcta": 1,
       "tip": "Las ideas ilustradas de soberanía popular y derechos inspiraron a los patriotas chilenos.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa19-016",
@@ -7857,7 +7857,7 @@
       ],
       "correcta": 3,
       "tip": "El poder Legislativo, representado por el Congreso, elabora y aprueba las leyes.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa19-017",
@@ -7871,7 +7871,7 @@
       ],
       "correcta": 3,
       "tip": "El poder Ejecutivo, encabezado por el presidente, dirige el gobierno y ejecuta las leyes.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa19-018",
@@ -7885,7 +7885,7 @@
       ],
       "correcta": 0,
       "tip": "El poder Judicial administra justicia e interpreta y aplica las leyes.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa19-019",
@@ -7899,7 +7899,7 @@
       ],
       "correcta": 1,
       "tip": "El nuevo orden republicano cuestionó los privilegios heredados del período colonial.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa19-020",
@@ -7913,7 +7913,7 @@
       ],
       "correcta": 0,
       "tip": "La ciudadanía comenzó siendo restringida y se amplió progresivamente a lo largo del tiempo.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa19-021",
@@ -7927,7 +7927,7 @@
       ],
       "correcta": 0,
       "tip": "Un derecho ciudadano central del orden republicano es participar eligiendo a las autoridades.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa19-022",
@@ -7941,7 +7941,7 @@
       ],
       "correcta": 3,
       "tip": "Durante la Colonia la autoridad emanaba del rey de España, no del pueblo.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa19-023",
@@ -7955,7 +7955,7 @@
       ],
       "correcta": 0,
       "tip": "La igualdad ante la ley reemplazó los privilegios estamentales de la época colonial.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa19-024",
@@ -7969,7 +7969,7 @@
       ],
       "correcta": 2,
       "tip": "La constitución fue el instrumento para organizar el poder y los derechos en la república.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa19-025",
@@ -7983,7 +7983,7 @@
       ],
       "correcta": 3,
       "tip": "En la república las autoridades son elegidas y temporales, no herederas del poder.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa19-026",
@@ -7997,7 +7997,7 @@
       ],
       "correcta": 0,
       "tip": "La independencia impulsó la idea de nación como comunidad soberana con identidad propia.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa19-027",
@@ -8011,7 +8011,7 @@
       ],
       "correcta": 3,
       "tip": "Los desacuerdos entre grupos generaron varios ensayos constitucionales antes de estabilizar la república.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa19-028",
@@ -8025,7 +8025,7 @@
       ],
       "correcta": 2,
       "tip": "El ciudadano republicano es titular de derechos y participa en la vida política, a diferencia del súbdito colonial.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa19-029",
@@ -8039,7 +8039,7 @@
       ],
       "correcta": 2,
       "tip": "La separación de poderes distribuye la autoridad para evitar abusos y concentración del mando.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa19-030",
@@ -8053,7 +8053,7 @@
       ],
       "correcta": 2,
       "tip": "El orden republicano surgido de la independencia sentó las bases de la institucionalidad chilena actual.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa20-001",
@@ -8067,7 +8067,7 @@
       ],
       "correcta": 0,
       "tip": "Una región es una porción del territorio que presenta rasgos comunes, ya sean físicos o humanos.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa20-002",
@@ -8081,7 +8081,7 @@
       ],
       "correcta": 2,
       "tip": "El clima y el relieve son factores físicos o naturales del territorio.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa20-003",
@@ -8095,7 +8095,7 @@
       ],
       "correcta": 2,
       "tip": "La lengua y la cultura son elementos propios de los factores humanos.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa20-004",
@@ -8109,7 +8109,7 @@
       ],
       "correcta": 2,
       "tip": "La región natural se define por factores físicos como clima, relieve o vegetación.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa20-005",
@@ -8123,7 +8123,7 @@
       ],
       "correcta": 0,
       "tip": "La región administrativa responde a una decisión política del Estado para gobernar el territorio.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa20-006",
@@ -8137,7 +8137,7 @@
       ],
       "correcta": 3,
       "tip": "La región cultural agrupa territorios que comparten rasgos humanos como cultura e identidad.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa20-007",
@@ -8151,7 +8151,7 @@
       ],
       "correcta": 3,
       "tip": "El desierto se define por su clima árido y su relieve, que son factores físicos.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa20-008",
@@ -8165,7 +8165,7 @@
       ],
       "correcta": 3,
       "tip": "América Latina comparte factores humanos como lengua, historia y cultura de raíz latina.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa20-009",
@@ -8179,7 +8179,7 @@
       ],
       "correcta": 2,
       "tip": "La religión es un factor humano, no físico.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa20-010",
@@ -8193,7 +8193,7 @@
       ],
       "correcta": 1,
       "tip": "Las 16 regiones de Chile son una división administrativa creada por el Estado.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa20-011",
@@ -8207,7 +8207,7 @@
       ],
       "correcta": 1,
       "tip": "La hidrografía estudia las aguas superficiales de un territorio.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa20-012",
@@ -8221,7 +8221,7 @@
       ],
       "correcta": 2,
       "tip": "La Patagonia se identifica por factores físicos comunes como su clima frío y su relieve.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa20-013",
@@ -8235,7 +8235,7 @@
       ],
       "correcta": 1,
       "tip": "La región cultural se basa en factores humanos compartidos como identidad y tradiciones.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa20-014",
@@ -8249,7 +8249,7 @@
       ],
       "correcta": 2,
       "tip": "El altiplano se identifica por factores físicos como la altitud y el clima de montaña.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa20-015",
@@ -8263,7 +8263,7 @@
       ],
       "correcta": 3,
       "tip": "La economía es una actividad humana y por eso es un factor humano.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa20-016",
@@ -8277,7 +8277,7 @@
       ],
       "correcta": 0,
       "tip": "Se define por factores humanos como la lengua mapudungun y la cultura mapuche.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa20-017",
@@ -8291,7 +8291,7 @@
       ],
       "correcta": 0,
       "tip": "Un territorio puede ser región natural, cultural o administrativa según el criterio que se use.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa20-018",
@@ -8305,7 +8305,7 @@
       ],
       "correcta": 2,
       "tip": "El relieve corresponde a las formas de la superficie terrestre: montañas, valles y llanuras.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa20-019",
@@ -8319,7 +8319,7 @@
       ],
       "correcta": 0,
       "tip": "La Amazonía se define por factores físicos como su clima tropical y su vegetación selvática.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa20-020",
@@ -8333,7 +8333,7 @@
       ],
       "correcta": 1,
       "tip": "La Región Metropolitana es una división creada por el Estado para administrar el territorio.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa20-021",
@@ -8347,7 +8347,7 @@
       ],
       "correcta": 2,
       "tip": "La vegetación forma parte de las características naturales o físicas del territorio.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa20-022",
@@ -8361,7 +8361,7 @@
       ],
       "correcta": 1,
       "tip": "Regionalizar ayuda a estudiar, organizar y comprender el espacio geográfico.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa20-023",
@@ -8375,7 +8375,7 @@
       ],
       "correcta": 0,
       "tip": "La historia común es parte de los factores humanos que dan identidad a una región.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa20-024",
@@ -8389,7 +8389,7 @@
       ],
       "correcta": 2,
       "tip": "La zona central se caracteriza por su clima mediterráneo y sus fértiles valles.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa20-025",
@@ -8403,7 +8403,7 @@
       ],
       "correcta": 3,
       "tip": "Los factores físicos son naturales: clima, relieve, vegetación, suelo e hidrografía.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa20-026",
@@ -8417,7 +8417,7 @@
       ],
       "correcta": 1,
       "tip": "Se distinguen por factores humanos como lengua, historia y cultura.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa20-027",
@@ -8431,7 +8431,7 @@
       ],
       "correcta": 2,
       "tip": "El tipo de suelo determina qué cultivos y actividades agrícolas se pueden desarrollar.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa20-028",
@@ -8445,7 +8445,7 @@
       ],
       "correcta": 2,
       "tip": "Las regiones pueden definirse combinando factores físicos y humanos, y existen distintos tipos.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa20-029",
@@ -8459,7 +8459,7 @@
       ],
       "correcta": 2,
       "tip": "La religión es un rasgo cultural, por lo tanto es un factor humano.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa20-030",
@@ -8473,7 +8473,7 @@
       ],
       "correcta": 2,
       "tip": "Aysén es una de las divisiones administrativas del Estado de Chile.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa21-001",
@@ -8487,7 +8487,7 @@
       ],
       "correcta": 0,
       "tip": "El aislamiento implica poca conexión y comunicación con otros territorios.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa21-002",
@@ -8501,7 +8501,7 @@
       ],
       "correcta": 3,
       "tip": "La conectividad es la posibilidad de comunicarse y desplazarse mediante vías y transporte.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa21-003",
@@ -8515,7 +8515,7 @@
       ],
       "correcta": 2,
       "tip": "La migración campo-ciudad va desde el campo hacia los centros urbanos en busca de oportunidades.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa21-004",
@@ -8529,7 +8529,7 @@
       ],
       "correcta": 1,
       "tip": "Las personas migran a la ciudad buscando empleo, educación y mejores servicios.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa21-005",
@@ -8543,7 +8543,7 @@
       ],
       "correcta": 1,
       "tip": "La centralización concentra población, poder y servicios en la capital o zona central.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa21-006",
@@ -8557,7 +8557,7 @@
       ],
       "correcta": 2,
       "tip": "Magallanes, en el extremo sur, es una zona extrema por su lejanía del centro del país.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa21-007",
@@ -8571,7 +8571,7 @@
       ],
       "correcta": 0,
       "tip": "Mejorar caminos, transporte y comunicaciones aumenta la conectividad y reduce el aislamiento.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa21-008",
@@ -8585,7 +8585,7 @@
       ],
       "correcta": 1,
       "tip": "La centralización genera desigualdad entre el centro y las regiones más alejadas.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa21-009",
@@ -8599,7 +8599,7 @@
       ],
       "correcta": 2,
       "tip": "La descentralización distribuye el poder y los recursos hacia las regiones.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa21-010",
@@ -8613,7 +8613,7 @@
       ],
       "correcta": 3,
       "tip": "Las largas distancias y obstáculos naturales dificultan la conexión de las zonas extremas.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa21-011",
@@ -8627,7 +8627,7 @@
       ],
       "correcta": 3,
       "tip": "El ordenamiento territorial organiza el uso del espacio para un desarrollo más equilibrado.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa21-012",
@@ -8641,7 +8641,7 @@
       ],
       "correcta": 2,
       "tip": "La migración campo-ciudad provoca el despoblamiento y envejecimiento del campo.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa21-013",
@@ -8655,7 +8655,7 @@
       ],
       "correcta": 1,
       "tip": "La llegada masiva a las ciudades presiona la vivienda, los servicios y el transporte.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa21-014",
@@ -8669,7 +8669,7 @@
       ],
       "correcta": 2,
       "tip": "Internet y las telecomunicaciones acercan a las zonas aisladas al resto del país.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa21-015",
@@ -8683,7 +8683,7 @@
       ],
       "correcta": 1,
       "tip": "La zona central concentra la mayor población y actividad económica del país.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa21-016",
@@ -8697,7 +8697,7 @@
       ],
       "correcta": 0,
       "tip": "Una mejor conectividad facilita el acceso a servicios, empleo, comercio y educación.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa21-017",
@@ -8711,7 +8711,7 @@
       ],
       "correcta": 1,
       "tip": "La Carretera Austral conecta zonas antes aisladas del sur de Chile.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa21-018",
@@ -8725,7 +8725,7 @@
       ],
       "correcta": 3,
       "tip": "Las zonas extremas enfrentan aislamiento, difícil acceso y menos servicios.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa21-019",
@@ -8739,7 +8739,7 @@
       ],
       "correcta": 1,
       "tip": "Generar empleo y mejorar servicios ayuda a retener población en las regiones.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa21-020",
@@ -8753,7 +8753,7 @@
       ],
       "correcta": 1,
       "tip": "En zonas insulares o extremas, el avión y el barco son claves para conectarlas.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa21-021",
@@ -8767,7 +8767,7 @@
       ],
       "correcta": 0,
       "tip": "Al migrar los jóvenes a la ciudad, en el campo queda una población más envejecida.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa21-022",
@@ -8781,7 +8781,7 @@
       ],
       "correcta": 2,
       "tip": "Rapa Nui está a miles de kilómetros del continente, lo que la mantiene aislada.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa21-023",
@@ -8795,7 +8795,7 @@
       ],
       "correcta": 1,
       "tip": "La conectividad digital es el acceso a internet y a las tecnologías de comunicación.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa21-024",
@@ -8809,7 +8809,7 @@
       ],
       "correcta": 2,
       "tip": "La centralización hace que muchas decisiones importantes se tomen en la capital.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa21-025",
@@ -8823,7 +8823,7 @@
       ],
       "correcta": 0,
       "tip": "Descentralizar y fortalecer los gobiernos regionales equilibra el desarrollo del país.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa21-026",
@@ -8837,7 +8837,7 @@
       ],
       "correcta": 1,
       "tip": "El relieve y los accidentes geográficos dificultan conectar el territorio chileno.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa21-027",
@@ -8851,7 +8851,7 @@
       ],
       "correcta": 3,
       "tip": "El aislamiento dificulta el acceso a salud, educación y oportunidades laborales.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa21-028",
@@ -8865,7 +8865,7 @@
       ],
       "correcta": 0,
       "tip": "Al migrar al centro, se refuerza la concentración de población en la zona central.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa21-029",
@@ -8879,7 +8879,7 @@
       ],
       "correcta": 3,
       "tip": "La conectividad integra a las zonas aisladas y mejora la vida de sus habitantes.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa22-001",
@@ -8893,7 +8893,7 @@
       ],
       "correcta": 2,
       "tip": "El desarrollo mide el bienestar y la calidad de vida de la población, no solo la economía.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa22-002",
@@ -8907,7 +8907,7 @@
       ],
       "correcta": 3,
       "tip": "El IDH combina esperanza de vida (salud), educación e ingresos de la población.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa22-003",
@@ -8921,7 +8921,7 @@
       ],
       "correcta": 3,
       "tip": "El desarrollo sustentable satisface hoy sin comprometer a las generaciones futuras.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa22-004",
@@ -8935,7 +8935,7 @@
       ],
       "correcta": 3,
       "tip": "La educación es uno de los indicadores clave del desarrollo de una sociedad.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa22-005",
@@ -8949,7 +8949,7 @@
       ],
       "correcta": 1,
       "tip": "El subdesarrollo se asocia a bajos niveles de ingreso, salud y educación.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa22-006",
@@ -8963,7 +8963,7 @@
       ],
       "correcta": 1,
       "tip": "El desarrollo sustentable equilibra lo económico, lo social y lo ambiental.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa22-007",
@@ -8977,7 +8977,7 @@
       ],
       "correcta": 1,
       "tip": "El desarrollo sustentable exige usar los recursos naturales de manera responsable.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa22-008",
@@ -8991,7 +8991,7 @@
       ],
       "correcta": 3,
       "tip": "La esperanza de vida refleja las condiciones de salud de una población.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa22-009",
@@ -9005,7 +9005,7 @@
       ],
       "correcta": 0,
       "tip": "La equidad regional apunta a un desarrollo equilibrado entre todas las regiones.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa22-010",
@@ -9019,7 +9019,7 @@
       ],
       "correcta": 3,
       "tip": "La energía solar es renovable porque no se agota con su uso.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa22-011",
@@ -9033,7 +9033,7 @@
       ],
       "correcta": 3,
       "tip": "El petróleo es no renovable porque tarda millones de años en formarse y se agota.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa22-012",
@@ -9047,7 +9047,7 @@
       ],
       "correcta": 0,
       "tip": "El acceso a servicios básicos como agua potable refleja el nivel de desarrollo.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa22-013",
@@ -9061,7 +9061,7 @@
       ],
       "correcta": 3,
       "tip": "Reciclar y reducir la contaminación protege el medioambiente y favorece la sustentabilidad.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa22-014",
@@ -9075,7 +9075,7 @@
       ],
       "correcta": 1,
       "tip": "El ingreso per cápita es el promedio de ingreso por habitante de un país.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa22-015",
@@ -9089,7 +9089,7 @@
       ],
       "correcta": 1,
       "tip": "La contaminación daña el medioambiente y pone en riesgo a las futuras generaciones.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa22-016",
@@ -9103,7 +9103,7 @@
       ],
       "correcta": 3,
       "tip": "Las diferencias de desarrollo entre regiones se llaman desigualdad o inequidad regional.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa22-017",
@@ -9117,7 +9117,7 @@
       ],
       "correcta": 3,
       "tip": "Las energías renovables reducen la contaminación y favorecen la sustentabilidad.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa22-018",
@@ -9131,7 +9131,7 @@
       ],
       "correcta": 2,
       "tip": "Explotar los recursos sin control agota el medioambiente y contradice la sustentabilidad.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa22-019",
@@ -9145,7 +9145,7 @@
       ],
       "correcta": 3,
       "tip": "La alfabetización es parte del indicador de educación de una población.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa22-020",
@@ -9159,7 +9159,7 @@
       ],
       "correcta": 1,
       "tip": "Los países desarrollados presentan alta calidad de vida, buena salud y educación.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa22-021",
@@ -9173,7 +9173,7 @@
       ],
       "correcta": 0,
       "tip": "Extraer más peces de los que se reponen agota el recurso y daña el ecosistema.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa22-022",
@@ -9187,7 +9187,7 @@
       ],
       "correcta": 1,
       "tip": "La sustentabilidad busca crecer económicamente cuidando el medioambiente.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa22-023",
@@ -9201,7 +9201,7 @@
       ],
       "correcta": 3,
       "tip": "Disminuir las brechas entre regiones favorece un desarrollo más equitativo.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa22-024",
@@ -9215,7 +9215,7 @@
       ],
       "correcta": 3,
       "tip": "Los recursos naturales provienen de la naturaleza y se usan para satisfacer necesidades.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa22-025",
@@ -9229,7 +9229,7 @@
       ],
       "correcta": 1,
       "tip": "Reforestar permite usar el recurso forestal sin agotarlo, lo que es sustentable.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa22-026",
@@ -9243,7 +9243,7 @@
       ],
       "correcta": 2,
       "tip": "La pobreza se refleja en bajos ingresos y menor acceso a salud y educación.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa22-027",
@@ -9257,7 +9257,7 @@
       ],
       "correcta": 0,
       "tip": "Cuidar el medioambiente garantiza recursos y bienestar para el futuro.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa22-028",
@@ -9271,7 +9271,7 @@
       ],
       "correcta": 1,
       "tip": "El desarrollo sustentable busca aprovechar la minería cuidando el entorno y a las personas.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "hist8-oa22-029",
@@ -9285,8 +9285,8 @@
       ],
       "correcta": 3,
       "tip": "La sustentabilidad exige un uso responsable de los recursos pensando en el largo plazo.",
-      "revisada": false
+      "revisada": true
     }
   ],
-  "revisadas": 0
+  "revisadas": 663
 }

@@ -893,6 +893,7 @@ let OD={preguntas:[],idx:0,aciertos:0,tiempo:0,t:15,timer:null,lock:false,modo:'
 let OD_EXP_SEL=null;
 async function abrirDueloOnline(){
  if(!SB){alert('El duelo en línea necesita conexión a internet.');go('scr-rol');return;}
+ if(!S.nombre){const n=prompt('¿Cómo te llamas? (así te verán en el duelo)');S.nombre=(n&&n.trim())||'Jugador';guardar();}
  go('scr-duelo-online');
  $('miCodigo').textContent='KIM-…';
  $('pendList').innerHTML='<p style="color:var(--dim);font-weight:800;font-size:13px">Cargando…</p>';
