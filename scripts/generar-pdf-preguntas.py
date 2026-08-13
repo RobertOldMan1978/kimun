@@ -41,6 +41,15 @@ def oa_num(c):
     except Exception: return 999
 
 
+# Glifos que la fuente Arial no trae; se sustituyen SOLO para el PDF de revisión.
+# En el juego (navegador) se muestran correctamente, así que el JSON no se toca.
+_SUBS = {ord(a): b for a, b in zip("₀₁₂₃₄₅₆₇₈₉", "0123456789")}
+
+
+def _pdf_safe(s):
+    return (s or "").translate(_SUBS).replace("∛", "raíz cúbica de ")
+
+
 def carpetas_asignaturas():
     """Carpetas de contenido/ (ignora las que empiezan con '_')."""
     return sorted(d.name for d in CONTENIDO.iterdir()
@@ -96,12 +105,12 @@ def generar_pdf(carpeta, salida, solo_sin_revisar=False):
         mc(5, o.get("texto", ""), "", 9, (90, 90, 90))
         for i, q in enumerate(grupos[code], 1):
             pdf.ln(1.5)
-            mc(5.5, f"{i}. {q['pregunta']}", "B", 10.5)
+            mc(5.5, f"{i}. {_pdf_safe(q['pregunta'])}", "B", 10.5)
             for k, op in enumerate(q["opciones"]):
                 correcta = (k == q["correcta"])
-                mc(5, f"    {letras[k]}) {op}{'  (correcta)' if correcta else ''}",
+                mc(5, f"    {letras[k]}) {_pdf_safe(op)}{'  (correcta)' if correcta else ''}",
                    "B" if correcta else "", 10)
-            mc(5, f"    Explicación: {q.get('tip','')}", "", 9, (70, 70, 70))
+            mc(5, f"    Explicación: {_pdf_safe(q.get('tip',''))}", "", 9, (70, 70, 70))
             mc(5, "    Revisada: [   ]", "", 9, (120, 120, 120))
 
     salida.parent.mkdir(parents=True, exist_ok=True)

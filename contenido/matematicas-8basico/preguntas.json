@@ -2,9 +2,9 @@
   "asignatura": "Matemática",
   "nivel": "8° básico",
   "meta_preguntas_por_oa": 25,
-  "total_preguntas": 168,
+  "total_preguntas": 518,
   "revisadas": 0,
-  "nota": "Expedición Álgebra y ecuaciones (MA08 OA 06-09). Generadas por agente; opciones barajadas. Sin revisión pedagógica humana.",
+  "nota": "Matemática 8° básico — año completo (MA08 OA 01-17). Generadas por agentes; opciones barajadas. Sin revisión pedagógica humana.",
   "preguntas": [
     {
       "id": "mate8-oa06-001",
@@ -427,8 +427,176 @@
       "revisada": false
     },
     {
-      "id": "mate8-oa07-001",
-      "oa": "MA08 OA 07",
+      "id": "mate8-oa06-031",
+      "oa": "MA08 OA 06",
+      "pregunta": "Para traducir 'el doble de la suma de un número y 5', ¿cuál es el primer paso correcto?",
+      "opciones": [
+        "Sumar primero x + 5 y luego multiplicar el resultado por 2",
+        "Multiplicar x por 2 y luego sumar 5",
+        "Multiplicar 2 por 5 y después sumar x",
+        "Elevar x al cuadrado y sumar 5"
+      ],
+      "correcta": 0,
+      "tip": "La palabra 'suma' va entre paréntesis: primero (x + 5) y luego el doble, es decir 2(x + 5).",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa06-032",
+      "oa": "MA08 OA 06",
+      "pregunta": "Para generalizar el patrón 4, 8, 12, 16, … con una expresión en n, ¿qué conviene observar primero?",
+      "opciones": [
+        "Que cada término es 4 unidades mayor que el anterior solamente",
+        "Que cada término es 4 veces su posición (posición 1 → 4, posición 2 → 8)",
+        "Que los términos son todos números impares",
+        "Que el patrón se detiene en 16"
+      ],
+      "correcta": 1,
+      "tip": "Al relacionar cada término con su posición se ve que término = 4·n, entonces la expresión es 4n.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa06-033",
+      "oa": "MA08 OA 06",
+      "pregunta": "La frase es 'el triple de (un número aumentado en 2)'. Ana la escribe 3x + 2 y Beto la escribe 3(x + 2). ¿Quién tiene razón?",
+      "opciones": [
+        "Ana, porque el triple va primero",
+        "Los dos son equivalentes",
+        "Beto, porque primero se aumenta en 2 y ese resultado se triplica",
+        "Ninguno, se escribe x + 2 + 3"
+      ],
+      "correcta": 2,
+      "tip": "El paréntesis indica que primero se aumenta en 2 (x + 2) y luego se triplica todo: 3(x + 2).",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa06-034",
+      "oa": "MA08 OA 06",
+      "pregunta": "Para valorizar 3x² con x = 2, un estudiante calculó (3·2)² = 36. ¿Cuál es el error?",
+      "opciones": [
+        "Debió sumar en vez de multiplicar",
+        "Debió usar x = 3",
+        "No hay error, 36 es correcto",
+        "Elevó al cuadrado después de multiplicar; primero se calcula x² = 4 y luego 3·4 = 12"
+      ],
+      "correcta": 3,
+      "tip": "En 3x² solo x está elevada al cuadrado: 3·(2²) = 3·4 = 12.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa06-035",
+      "oa": "MA08 OA 06",
+      "pregunta": "Un estudiante tradujo 'un número disminuido en 5' como 5 − x. ¿Por qué está mal?",
+      "opciones": [
+        "Disminuir el número en 5 es x − 5, no 5 − x",
+        "Debió escribir 5x",
+        "Debió escribir x/5",
+        "Está bien, 5 − x es lo mismo que x − 5"
+      ],
+      "correcta": 0,
+      "tip": "Se disminuye el número, así que al número x se le resta 5: x − 5. El orden importa.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa06-036",
+      "oa": "MA08 OA 06",
+      "pregunta": "Para valorizar 2 + 3x con x = 4, un estudiante hizo (2 + 3)·4 = 20. ¿Cuál es el error?",
+      "opciones": [
+        "Debió usar x = 2",
+        "Sumó 2 + 3 antes de multiplicar; primero se calcula 3·4 = 12 y luego 2 + 12 = 14",
+        "El resultado correcto es 20",
+        "Debió elevar al cuadrado"
+      ],
+      "correcta": 1,
+      "tip": "La multiplicación se resuelve antes que la suma: 3·4 = 12, luego 2 + 12 = 14.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa06-037",
+      "oa": "MA08 OA 06",
+      "pregunta": "Un cuaderno cuesta $c y una goma cuesta $500. ¿Qué expresión representa el costo de 2 cuadernos y una goma?",
+      "opciones": [
+        "2c · 500",
+        "c + 500",
+        "2c + 500",
+        "2(c + 500)"
+      ],
+      "correcta": 2,
+      "tip": "Dos cuadernos cuestan 2c y se suma la goma de 500: 2c + 500.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa06-038",
+      "oa": "MA08 OA 06",
+      "pregunta": "María tiene el triple de la edad de su hijo. Si el hijo tiene h años, ¿qué expresión representa la edad de María?",
+      "opciones": [
+        "h + 3",
+        "h/3",
+        "3 + h",
+        "3h"
+      ],
+      "correcta": 3,
+      "tip": "'El triple' de la edad del hijo es 3 veces h, es decir 3h.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa06-039",
+      "oa": "MA08 OA 06",
+      "pregunta": "En un comedor hay m mesas y cada mesa tiene 6 sillas. ¿Qué expresión representa el total de sillas?",
+      "opciones": [
+        "6m",
+        "m + 6",
+        "m/6",
+        "6 − m"
+      ],
+      "correcta": 0,
+      "tip": "Cada mesa aporta 6 sillas y hay m mesas: 6·m = 6m.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa06-040",
+      "oa": "MA08 OA 06",
+      "pregunta": "Un taxi cobra $300 de base más $500 por cada kilómetro. ¿Qué expresión representa el costo de un viaje de k kilómetros?",
+      "opciones": [
+        "800k",
+        "300 + 500k",
+        "500 + 300k",
+        "300 · 500 · k"
+      ],
+      "correcta": 1,
+      "tip": "El costo fijo es 300 y por los k kilómetros se cobra 500k: total 300 + 500k.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa06-041",
+      "oa": "MA08 OA 06",
+      "pregunta": "Con palitos se arman figuras: la 1ª usa 4 palitos, la 2ª usa 7 y la 3ª usa 10 (aumenta de 3 en 3). ¿Qué expresión da los palitos de la figura n?",
+      "opciones": [
+        "4n",
+        "n + 3",
+        "3n + 1",
+        "3n − 1"
+      ],
+      "correcta": 2,
+      "tip": "Aumenta de 3 en 3, así que aparece 3n; ajustando para n = 1 → 4, la expresión es 3n + 1.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa06-042",
+      "oa": "MA08 OA 06",
+      "pregunta": "Valoriza la expresión 5x − 2y para x = 3 e y = 4.",
+      "opciones": [
+        "23",
+        "13",
+        "−7",
+        "7"
+      ],
+      "correcta": 3,
+      "tip": "5·3 − 2·4 = 15 − 8 = 7.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa06-043",
+      "oa": "MA08 OA 06",
       "pregunta": "Reduce los términos semejantes: 3x + 5x",
       "opciones": [
         "8x",
@@ -441,8 +609,8 @@
       "revisada": false
     },
     {
-      "id": "mate8-oa07-002",
-      "oa": "MA08 OA 07",
+      "id": "mate8-oa06-044",
+      "oa": "MA08 OA 06",
       "pregunta": "Reduce los términos semejantes: 7a − 2a",
       "opciones": [
         "9a",
@@ -455,8 +623,8 @@
       "revisada": false
     },
     {
-      "id": "mate8-oa07-003",
-      "oa": "MA08 OA 07",
+      "id": "mate8-oa06-045",
+      "oa": "MA08 OA 06",
       "pregunta": "Reduce: 4x + 3 + 2x",
       "opciones": [
         "9x",
@@ -469,8 +637,8 @@
       "revisada": false
     },
     {
-      "id": "mate8-oa07-004",
-      "oa": "MA08 OA 07",
+      "id": "mate8-oa06-046",
+      "oa": "MA08 OA 06",
       "pregunta": "Reduce: 5y + 2 − y + 4",
       "opciones": [
         "6y + 6",
@@ -483,8 +651,8 @@
       "revisada": false
     },
     {
-      "id": "mate8-oa07-005",
-      "oa": "MA08 OA 07",
+      "id": "mate8-oa06-047",
+      "oa": "MA08 OA 06",
       "pregunta": "Reduce: 3a + 2b + a",
       "opciones": [
         "4a + 2b",
@@ -497,8 +665,8 @@
       "revisada": false
     },
     {
-      "id": "mate8-oa07-006",
-      "oa": "MA08 OA 07",
+      "id": "mate8-oa06-048",
+      "oa": "MA08 OA 06",
       "pregunta": "Suma las expresiones: (2x + 3) + (5x + 1)",
       "opciones": [
         "7x + 3",
@@ -511,8 +679,8 @@
       "revisada": false
     },
     {
-      "id": "mate8-oa07-007",
-      "oa": "MA08 OA 07",
+      "id": "mate8-oa06-049",
+      "oa": "MA08 OA 06",
       "pregunta": "Resta las expresiones: (8x + 6) − (3x + 2)",
       "opciones": [
         "5x + 8",
@@ -525,8 +693,8 @@
       "revisada": false
     },
     {
-      "id": "mate8-oa07-008",
-      "oa": "MA08 OA 07",
+      "id": "mate8-oa06-050",
+      "oa": "MA08 OA 06",
       "pregunta": "Resta las expresiones: (6a − 4) − (2a − 7)",
       "opciones": [
         "4a − 11",
@@ -539,8 +707,8 @@
       "revisada": false
     },
     {
-      "id": "mate8-oa07-009",
-      "oa": "MA08 OA 07",
+      "id": "mate8-oa06-051",
+      "oa": "MA08 OA 06",
       "pregunta": "Multiplica aplicando la distributividad: 3(x + 4)",
       "opciones": [
         "3x + 12",
@@ -553,8 +721,8 @@
       "revisada": false
     },
     {
-      "id": "mate8-oa07-010",
-      "oa": "MA08 OA 07",
+      "id": "mate8-oa06-052",
+      "oa": "MA08 OA 06",
       "pregunta": "Multiplica: 5(2a − 3)",
       "opciones": [
         "10a − 3",
@@ -567,8 +735,8 @@
       "revisada": false
     },
     {
-      "id": "mate8-oa07-011",
-      "oa": "MA08 OA 07",
+      "id": "mate8-oa06-053",
+      "oa": "MA08 OA 06",
       "pregunta": "Multiplica: 2x(x + 3)",
       "opciones": [
         "2x² + 3",
@@ -581,8 +749,8 @@
       "revisada": false
     },
     {
-      "id": "mate8-oa07-012",
-      "oa": "MA08 OA 07",
+      "id": "mate8-oa06-054",
+      "oa": "MA08 OA 06",
       "pregunta": "Multiplica: −2(x − 5)",
       "opciones": [
         "−2x − 10",
@@ -595,8 +763,8 @@
       "revisada": false
     },
     {
-      "id": "mate8-oa07-013",
-      "oa": "MA08 OA 07",
+      "id": "mate8-oa06-055",
+      "oa": "MA08 OA 06",
       "pregunta": "Reduce: 9m − 4m − m",
       "opciones": [
         "4m",
@@ -609,8 +777,8 @@
       "revisada": false
     },
     {
-      "id": "mate8-oa07-014",
-      "oa": "MA08 OA 07",
+      "id": "mate8-oa06-056",
+      "oa": "MA08 OA 06",
       "pregunta": "Reduce: 2x² + 3x + x²",
       "opciones": [
         "6x⁴",
@@ -623,8 +791,8 @@
       "revisada": false
     },
     {
-      "id": "mate8-oa07-015",
-      "oa": "MA08 OA 07",
+      "id": "mate8-oa06-057",
+      "oa": "MA08 OA 06",
       "pregunta": "Suma: (x + 2y) + (3x − y)",
       "opciones": [
         "4x − y",
@@ -637,8 +805,8 @@
       "revisada": false
     },
     {
-      "id": "mate8-oa07-016",
-      "oa": "MA08 OA 07",
+      "id": "mate8-oa06-058",
+      "oa": "MA08 OA 06",
       "pregunta": "Multiplica: 4(a + b − 2)",
       "opciones": [
         "4a + b − 2",
@@ -651,8 +819,8 @@
       "revisada": false
     },
     {
-      "id": "mate8-oa07-017",
-      "oa": "MA08 OA 07",
+      "id": "mate8-oa06-059",
+      "oa": "MA08 OA 06",
       "pregunta": "Reduce: 6x + 4 − 6x",
       "opciones": [
         "4",
@@ -665,8 +833,8 @@
       "revisada": false
     },
     {
-      "id": "mate8-oa07-018",
-      "oa": "MA08 OA 07",
+      "id": "mate8-oa06-060",
+      "oa": "MA08 OA 06",
       "pregunta": "Resta: (5a + 3) − (a + 3)",
       "opciones": [
         "4a + 6",
@@ -679,8 +847,8 @@
       "revisada": false
     },
     {
-      "id": "mate8-oa07-019",
-      "oa": "MA08 OA 07",
+      "id": "mate8-oa06-061",
+      "oa": "MA08 OA 06",
       "pregunta": "Multiplica: 3a(2a + 1)",
       "opciones": [
         "6a + 3",
@@ -693,8 +861,8 @@
       "revisada": false
     },
     {
-      "id": "mate8-oa07-020",
-      "oa": "MA08 OA 07",
+      "id": "mate8-oa06-062",
+      "oa": "MA08 OA 06",
       "pregunta": "Reduce: 8 − 3x + 2x − 5",
       "opciones": [
         "−5x + 3",
@@ -707,8 +875,8 @@
       "revisada": false
     },
     {
-      "id": "mate8-oa07-021",
-      "oa": "MA08 OA 07",
+      "id": "mate8-oa06-063",
+      "oa": "MA08 OA 06",
       "pregunta": "Multiplica: 7(x + 1)",
       "opciones": [
         "7x + 7",
@@ -721,8 +889,8 @@
       "revisada": false
     },
     {
-      "id": "mate8-oa07-022",
-      "oa": "MA08 OA 07",
+      "id": "mate8-oa06-064",
+      "oa": "MA08 OA 06",
       "pregunta": "Reduce: 10y − 15y",
       "opciones": [
         "5y",
@@ -735,8 +903,8 @@
       "revisada": false
     },
     {
-      "id": "mate8-oa07-023",
-      "oa": "MA08 OA 07",
+      "id": "mate8-oa06-065",
+      "oa": "MA08 OA 06",
       "pregunta": "Suma: (3x² + 2x) + (x² − 2x)",
       "opciones": [
         "4x² + 4x",
@@ -749,8 +917,8 @@
       "revisada": false
     },
     {
-      "id": "mate8-oa07-024",
-      "oa": "MA08 OA 07",
+      "id": "mate8-oa06-066",
+      "oa": "MA08 OA 06",
       "pregunta": "Multiplica: −3(2x + 4)",
       "opciones": [
         "−6x + 12",
@@ -763,8 +931,8 @@
       "revisada": false
     },
     {
-      "id": "mate8-oa07-025",
-      "oa": "MA08 OA 07",
+      "id": "mate8-oa06-067",
+      "oa": "MA08 OA 06",
       "pregunta": "Reduce: 4a + 7b − 2a − 3b",
       "opciones": [
         "2a + 4b",
@@ -777,8 +945,8 @@
       "revisada": false
     },
     {
-      "id": "mate8-oa07-026",
-      "oa": "MA08 OA 07",
+      "id": "mate8-oa06-068",
+      "oa": "MA08 OA 06",
       "pregunta": "Multiplica: x(x − 6)",
       "opciones": [
         "x² − 6",
@@ -791,8 +959,8 @@
       "revisada": false
     },
     {
-      "id": "mate8-oa07-027",
-      "oa": "MA08 OA 07",
+      "id": "mate8-oa06-069",
+      "oa": "MA08 OA 06",
       "pregunta": "Resta: (9x + 2) − (4x − 5)",
       "opciones": [
         "5x − 3",
@@ -805,8 +973,8 @@
       "revisada": false
     },
     {
-      "id": "mate8-oa07-028",
-      "oa": "MA08 OA 07",
+      "id": "mate8-oa06-070",
+      "oa": "MA08 OA 06",
       "pregunta": "Reduce: 3(x + 2) + 2x",
       "opciones": [
         "3x + 6",
@@ -819,8 +987,8 @@
       "revisada": false
     },
     {
-      "id": "mate8-oa07-029",
-      "oa": "MA08 OA 07",
+      "id": "mate8-oa06-071",
+      "oa": "MA08 OA 06",
       "pregunta": "Reduce: −x + 4x",
       "opciones": [
         "3x",
@@ -833,8 +1001,8 @@
       "revisada": false
     },
     {
-      "id": "mate8-oa07-030",
-      "oa": "MA08 OA 07",
+      "id": "mate8-oa06-072",
+      "oa": "MA08 OA 06",
       "pregunta": "Multiplica: 6(a − b)",
       "opciones": [
         "6a − b",
@@ -844,6 +1012,174 @@
       ],
       "correcta": 1,
       "tip": "6·a = 6a y 6·(−b) = −6b, entonces 6a − 6b.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa06-073",
+      "oa": "MA08 OA 06",
+      "pregunta": "¿Cuál es el primer paso correcto para simplificar 2(x + 3) + 4x?",
+      "opciones": [
+        "Aplicar la distributiva en 2(x + 3), obteniendo 2x + 6, y luego reducir",
+        "Sumar 2 + 4 porque acompañan a la x",
+        "Sumar x + 3 + 4x directamente",
+        "Multiplicar 2 por 4x primero"
+      ],
+      "correcta": 0,
+      "tip": "Primero se elimina el paréntesis con la distributiva: 2x + 6 + 4x, y luego se reducen los términos con x.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa06-074",
+      "oa": "MA08 OA 06",
+      "pregunta": "En la expresión 3x² + 5x + 2x² − x, ¿cuáles términos son semejantes entre sí?",
+      "opciones": [
+        "Todos los términos son semejantes",
+        "3x² con 2x², y 5x con −x",
+        "3x² con 5x, y 2x² con −x",
+        "Ninguno es semejante"
+      ],
+      "correcta": 1,
+      "tip": "Son semejantes los que tienen la misma parte literal: los x² entre sí (3x² y 2x²) y los x entre sí (5x y −x).",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa06-075",
+      "oa": "MA08 OA 06",
+      "pregunta": "Para restar (2x + 5) − (x − 3), ¿qué se debe hacer primero?",
+      "opciones": [
+        "Sumar todos los términos sin cambiar signos",
+        "Multiplicar los dos paréntesis",
+        "Cambiar el signo de cada término del segundo paréntesis: 2x + 5 − x + 3",
+        "Restar 2x − x y dejar el resto igual"
+      ],
+      "correcta": 2,
+      "tip": "El signo menos delante del paréntesis cambia el signo de todos sus términos: −(x − 3) = −x + 3.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa06-076",
+      "oa": "MA08 OA 06",
+      "pregunta": "Un estudiante redujo 3x + 2 y escribió 5x. ¿Cuál es el error?",
+      "opciones": [
+        "Debió obtener 6x",
+        "Debió obtener 5",
+        "No hay error",
+        "3x y 2 no son términos semejantes, así que no se pueden sumar: queda 3x + 2"
+      ],
+      "correcta": 3,
+      "tip": "Solo se suman términos semejantes. 3x tiene la letra x y 2 no; la expresión ya está reducida.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa06-077",
+      "oa": "MA08 OA 06",
+      "pregunta": "Un estudiante calculó 2(x − 4) = 2x − 4. ¿Cuál es el error?",
+      "opciones": [
+        "No multiplicó el 2 por el −4; el resultado correcto es 2x − 8",
+        "Debió dejar x − 4 sin el 2",
+        "El resultado correcto es 2x + 4",
+        "No hay error"
+      ],
+      "correcta": 0,
+      "tip": "La distributiva multiplica el 2 por cada término: 2·x = 2x y 2·(−4) = −8, entonces 2x − 8.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa06-078",
+      "oa": "MA08 OA 06",
+      "pregunta": "Un estudiante hizo −3(x − 2) = −3x − 6. ¿Cuál es el error?",
+      "opciones": [
+        "Debió obtener −3x − 2",
+        "−3 por −2 es +6, así que el resultado es −3x + 6",
+        "Debió obtener 3x − 6",
+        "No hay error"
+      ],
+      "correcta": 1,
+      "tip": "Al multiplicar dos negativos el resultado es positivo: −3·(−2) = +6, entonces −3x + 6.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa06-079",
+      "oa": "MA08 OA 06",
+      "pregunta": "El perímetro de un rectángulo de base (x + 2) y altura x se calcula como 2·[(x + 2) + x]. ¿Cuál es la expresión reducida?",
+      "opciones": [
+        "2x + 2",
+        "x + 4",
+        "4x + 4",
+        "4x + 2"
+      ],
+      "correcta": 2,
+      "tip": "(x + 2) + x = 2x + 2; al multiplicar por 2 queda 4x + 4.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa06-080",
+      "oa": "MA08 OA 06",
+      "pregunta": "Un triángulo tiene lados que miden x, 2x y (x + 5). ¿Cuál es la expresión reducida de su perímetro?",
+      "opciones": [
+        "3x + 5",
+        "2x² + 5",
+        "4x + 5x",
+        "4x + 5"
+      ],
+      "correcta": 3,
+      "tip": "Se suman los tres lados: x + 2x + (x + 5) = 4x + 5.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa06-081",
+      "oa": "MA08 OA 06",
+      "pregunta": "Ana compra 3 cuadernos de $x y 2 lápices de $y, y además paga $200 por la bolsa. ¿Qué expresión reducida representa su gasto total?",
+      "opciones": [
+        "3x + 2y + 200",
+        "5xy + 200",
+        "6xy + 200",
+        "3x + 2y − 200"
+      ],
+      "correcta": 0,
+      "tip": "Tres cuadernos son 3x, dos lápices son 2y y se suma la bolsa: 3x + 2y + 200.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa06-082",
+      "oa": "MA08 OA 06",
+      "pregunta": "El área de un rectángulo de base x y altura (x + 3) se escribe como x(x + 3). ¿Cuál es su forma desarrollada?",
+      "opciones": [
+        "x² + 3",
+        "x² + 3x",
+        "2x + 3",
+        "x² · 3x"
+      ],
+      "correcta": 1,
+      "tip": "Se aplica la distributiva: x·x = x² y x·3 = 3x, entonces x² + 3x.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa06-083",
+      "oa": "MA08 OA 06",
+      "pregunta": "¿Cuál de estas expresiones NO es equivalente a 4x?",
+      "opciones": [
+        "x + x + x + x",
+        "2·(2x)",
+        "4 + x",
+        "2(x + x)"
+      ],
+      "correcta": 2,
+      "tip": "4 + x es una suma, no una multiplicación; las otras tres sí valen 4x.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa06-084",
+      "oa": "MA08 OA 06",
+      "pregunta": "Reduce: 5(x + 2) − 3(x − 1)",
+      "opciones": [
+        "2x + 7",
+        "8x + 7",
+        "2x + 13",
+        "2x − 13"
+      ],
+      "correcta": 2,
+      "tip": "Distribuye: 5x + 10 − 3x + 3; reduce: (5x − 3x) + (10 + 3) = 2x + 13.",
       "revisada": false
     },
     {
@@ -1687,342 +2023,6 @@
       "revisada": false
     },
     {
-      "id": "mate8-oa06-031",
-      "oa": "MA08 OA 06",
-      "pregunta": "Para traducir 'el doble de la suma de un número y 5', ¿cuál es el primer paso correcto?",
-      "opciones": [
-        "Sumar primero x + 5 y luego multiplicar el resultado por 2",
-        "Multiplicar x por 2 y luego sumar 5",
-        "Multiplicar 2 por 5 y después sumar x",
-        "Elevar x al cuadrado y sumar 5"
-      ],
-      "correcta": 0,
-      "tip": "La palabra 'suma' va entre paréntesis: primero (x + 5) y luego el doble, es decir 2(x + 5).",
-      "revisada": false
-    },
-    {
-      "id": "mate8-oa06-032",
-      "oa": "MA08 OA 06",
-      "pregunta": "Para generalizar el patrón 4, 8, 12, 16, … con una expresión en n, ¿qué conviene observar primero?",
-      "opciones": [
-        "Que cada término es 4 unidades mayor que el anterior solamente",
-        "Que cada término es 4 veces su posición (posición 1 → 4, posición 2 → 8)",
-        "Que los términos son todos números impares",
-        "Que el patrón se detiene en 16"
-      ],
-      "correcta": 1,
-      "tip": "Al relacionar cada término con su posición se ve que término = 4·n, entonces la expresión es 4n.",
-      "revisada": false
-    },
-    {
-      "id": "mate8-oa06-033",
-      "oa": "MA08 OA 06",
-      "pregunta": "La frase es 'el triple de (un número aumentado en 2)'. Ana la escribe 3x + 2 y Beto la escribe 3(x + 2). ¿Quién tiene razón?",
-      "opciones": [
-        "Ana, porque el triple va primero",
-        "Los dos son equivalentes",
-        "Beto, porque primero se aumenta en 2 y ese resultado se triplica",
-        "Ninguno, se escribe x + 2 + 3"
-      ],
-      "correcta": 2,
-      "tip": "El paréntesis indica que primero se aumenta en 2 (x + 2) y luego se triplica todo: 3(x + 2).",
-      "revisada": false
-    },
-    {
-      "id": "mate8-oa06-034",
-      "oa": "MA08 OA 06",
-      "pregunta": "Para valorizar 3x² con x = 2, un estudiante calculó (3·2)² = 36. ¿Cuál es el error?",
-      "opciones": [
-        "Debió sumar en vez de multiplicar",
-        "Debió usar x = 3",
-        "No hay error, 36 es correcto",
-        "Elevó al cuadrado después de multiplicar; primero se calcula x² = 4 y luego 3·4 = 12"
-      ],
-      "correcta": 3,
-      "tip": "En 3x² solo x está elevada al cuadrado: 3·(2²) = 3·4 = 12.",
-      "revisada": false
-    },
-    {
-      "id": "mate8-oa06-035",
-      "oa": "MA08 OA 06",
-      "pregunta": "Un estudiante tradujo 'un número disminuido en 5' como 5 − x. ¿Por qué está mal?",
-      "opciones": [
-        "Disminuir el número en 5 es x − 5, no 5 − x",
-        "Debió escribir 5x",
-        "Debió escribir x/5",
-        "Está bien, 5 − x es lo mismo que x − 5"
-      ],
-      "correcta": 0,
-      "tip": "Se disminuye el número, así que al número x se le resta 5: x − 5. El orden importa.",
-      "revisada": false
-    },
-    {
-      "id": "mate8-oa06-036",
-      "oa": "MA08 OA 06",
-      "pregunta": "Para valorizar 2 + 3x con x = 4, un estudiante hizo (2 + 3)·4 = 20. ¿Cuál es el error?",
-      "opciones": [
-        "Debió usar x = 2",
-        "Sumó 2 + 3 antes de multiplicar; primero se calcula 3·4 = 12 y luego 2 + 12 = 14",
-        "El resultado correcto es 20",
-        "Debió elevar al cuadrado"
-      ],
-      "correcta": 1,
-      "tip": "La multiplicación se resuelve antes que la suma: 3·4 = 12, luego 2 + 12 = 14.",
-      "revisada": false
-    },
-    {
-      "id": "mate8-oa06-037",
-      "oa": "MA08 OA 06",
-      "pregunta": "Un cuaderno cuesta $c y una goma cuesta $500. ¿Qué expresión representa el costo de 2 cuadernos y una goma?",
-      "opciones": [
-        "2c · 500",
-        "c + 500",
-        "2c + 500",
-        "2(c + 500)"
-      ],
-      "correcta": 2,
-      "tip": "Dos cuadernos cuestan 2c y se suma la goma de 500: 2c + 500.",
-      "revisada": false
-    },
-    {
-      "id": "mate8-oa06-038",
-      "oa": "MA08 OA 06",
-      "pregunta": "María tiene el triple de la edad de su hijo. Si el hijo tiene h años, ¿qué expresión representa la edad de María?",
-      "opciones": [
-        "h + 3",
-        "h/3",
-        "3 + h",
-        "3h"
-      ],
-      "correcta": 3,
-      "tip": "'El triple' de la edad del hijo es 3 veces h, es decir 3h.",
-      "revisada": false
-    },
-    {
-      "id": "mate8-oa06-039",
-      "oa": "MA08 OA 06",
-      "pregunta": "En un comedor hay m mesas y cada mesa tiene 6 sillas. ¿Qué expresión representa el total de sillas?",
-      "opciones": [
-        "6m",
-        "m + 6",
-        "m/6",
-        "6 − m"
-      ],
-      "correcta": 0,
-      "tip": "Cada mesa aporta 6 sillas y hay m mesas: 6·m = 6m.",
-      "revisada": false
-    },
-    {
-      "id": "mate8-oa06-040",
-      "oa": "MA08 OA 06",
-      "pregunta": "Un taxi cobra $300 de base más $500 por cada kilómetro. ¿Qué expresión representa el costo de un viaje de k kilómetros?",
-      "opciones": [
-        "800k",
-        "300 + 500k",
-        "500 + 300k",
-        "300 · 500 · k"
-      ],
-      "correcta": 1,
-      "tip": "El costo fijo es 300 y por los k kilómetros se cobra 500k: total 300 + 500k.",
-      "revisada": false
-    },
-    {
-      "id": "mate8-oa06-041",
-      "oa": "MA08 OA 06",
-      "pregunta": "Con palitos se arman figuras: la 1ª usa 4 palitos, la 2ª usa 7 y la 3ª usa 10 (aumenta de 3 en 3). ¿Qué expresión da los palitos de la figura n?",
-      "opciones": [
-        "4n",
-        "n + 3",
-        "3n + 1",
-        "3n − 1"
-      ],
-      "correcta": 2,
-      "tip": "Aumenta de 3 en 3, así que aparece 3n; ajustando para n = 1 → 4, la expresión es 3n + 1.",
-      "revisada": false
-    },
-    {
-      "id": "mate8-oa06-042",
-      "oa": "MA08 OA 06",
-      "pregunta": "Valoriza la expresión 5x − 2y para x = 3 e y = 4.",
-      "opciones": [
-        "23",
-        "13",
-        "−7",
-        "7"
-      ],
-      "correcta": 3,
-      "tip": "5·3 − 2·4 = 15 − 8 = 7.",
-      "revisada": false
-    },
-    {
-      "id": "mate8-oa07-031",
-      "oa": "MA08 OA 07",
-      "pregunta": "¿Cuál es el primer paso correcto para simplificar 2(x + 3) + 4x?",
-      "opciones": [
-        "Aplicar la distributiva en 2(x + 3), obteniendo 2x + 6, y luego reducir",
-        "Sumar 2 + 4 porque acompañan a la x",
-        "Sumar x + 3 + 4x directamente",
-        "Multiplicar 2 por 4x primero"
-      ],
-      "correcta": 0,
-      "tip": "Primero se elimina el paréntesis con la distributiva: 2x + 6 + 4x, y luego se reducen los términos con x.",
-      "revisada": false
-    },
-    {
-      "id": "mate8-oa07-032",
-      "oa": "MA08 OA 07",
-      "pregunta": "En la expresión 3x² + 5x + 2x² − x, ¿cuáles términos son semejantes entre sí?",
-      "opciones": [
-        "Todos los términos son semejantes",
-        "3x² con 2x², y 5x con −x",
-        "3x² con 5x, y 2x² con −x",
-        "Ninguno es semejante"
-      ],
-      "correcta": 1,
-      "tip": "Son semejantes los que tienen la misma parte literal: los x² entre sí (3x² y 2x²) y los x entre sí (5x y −x).",
-      "revisada": false
-    },
-    {
-      "id": "mate8-oa07-033",
-      "oa": "MA08 OA 07",
-      "pregunta": "Para restar (2x + 5) − (x − 3), ¿qué se debe hacer primero?",
-      "opciones": [
-        "Sumar todos los términos sin cambiar signos",
-        "Multiplicar los dos paréntesis",
-        "Cambiar el signo de cada término del segundo paréntesis: 2x + 5 − x + 3",
-        "Restar 2x − x y dejar el resto igual"
-      ],
-      "correcta": 2,
-      "tip": "El signo menos delante del paréntesis cambia el signo de todos sus términos: −(x − 3) = −x + 3.",
-      "revisada": false
-    },
-    {
-      "id": "mate8-oa07-034",
-      "oa": "MA08 OA 07",
-      "pregunta": "Un estudiante redujo 3x + 2 y escribió 5x. ¿Cuál es el error?",
-      "opciones": [
-        "Debió obtener 6x",
-        "Debió obtener 5",
-        "No hay error",
-        "3x y 2 no son términos semejantes, así que no se pueden sumar: queda 3x + 2"
-      ],
-      "correcta": 3,
-      "tip": "Solo se suman términos semejantes. 3x tiene la letra x y 2 no; la expresión ya está reducida.",
-      "revisada": false
-    },
-    {
-      "id": "mate8-oa07-035",
-      "oa": "MA08 OA 07",
-      "pregunta": "Un estudiante calculó 2(x − 4) = 2x − 4. ¿Cuál es el error?",
-      "opciones": [
-        "No multiplicó el 2 por el −4; el resultado correcto es 2x − 8",
-        "Debió dejar x − 4 sin el 2",
-        "El resultado correcto es 2x + 4",
-        "No hay error"
-      ],
-      "correcta": 0,
-      "tip": "La distributiva multiplica el 2 por cada término: 2·x = 2x y 2·(−4) = −8, entonces 2x − 8.",
-      "revisada": false
-    },
-    {
-      "id": "mate8-oa07-036",
-      "oa": "MA08 OA 07",
-      "pregunta": "Un estudiante hizo −3(x − 2) = −3x − 6. ¿Cuál es el error?",
-      "opciones": [
-        "Debió obtener −3x − 2",
-        "−3 por −2 es +6, así que el resultado es −3x + 6",
-        "Debió obtener 3x − 6",
-        "No hay error"
-      ],
-      "correcta": 1,
-      "tip": "Al multiplicar dos negativos el resultado es positivo: −3·(−2) = +6, entonces −3x + 6.",
-      "revisada": false
-    },
-    {
-      "id": "mate8-oa07-037",
-      "oa": "MA08 OA 07",
-      "pregunta": "El perímetro de un rectángulo de base (x + 2) y altura x se calcula como 2·[(x + 2) + x]. ¿Cuál es la expresión reducida?",
-      "opciones": [
-        "2x + 2",
-        "x + 4",
-        "4x + 4",
-        "4x + 2"
-      ],
-      "correcta": 2,
-      "tip": "(x + 2) + x = 2x + 2; al multiplicar por 2 queda 4x + 4.",
-      "revisada": false
-    },
-    {
-      "id": "mate8-oa07-038",
-      "oa": "MA08 OA 07",
-      "pregunta": "Un triángulo tiene lados que miden x, 2x y (x + 5). ¿Cuál es la expresión reducida de su perímetro?",
-      "opciones": [
-        "3x + 5",
-        "2x² + 5",
-        "4x + 5x",
-        "4x + 5"
-      ],
-      "correcta": 3,
-      "tip": "Se suman los tres lados: x + 2x + (x + 5) = 4x + 5.",
-      "revisada": false
-    },
-    {
-      "id": "mate8-oa07-039",
-      "oa": "MA08 OA 07",
-      "pregunta": "Ana compra 3 cuadernos de $x y 2 lápices de $y, y además paga $200 por la bolsa. ¿Qué expresión reducida representa su gasto total?",
-      "opciones": [
-        "3x + 2y + 200",
-        "5xy + 200",
-        "6xy + 200",
-        "3x + 2y − 200"
-      ],
-      "correcta": 0,
-      "tip": "Tres cuadernos son 3x, dos lápices son 2y y se suma la bolsa: 3x + 2y + 200.",
-      "revisada": false
-    },
-    {
-      "id": "mate8-oa07-040",
-      "oa": "MA08 OA 07",
-      "pregunta": "El área de un rectángulo de base x y altura (x + 3) se escribe como x(x + 3). ¿Cuál es su forma desarrollada?",
-      "opciones": [
-        "x² + 3",
-        "x² + 3x",
-        "2x + 3",
-        "x² · 3x"
-      ],
-      "correcta": 1,
-      "tip": "Se aplica la distributiva: x·x = x² y x·3 = 3x, entonces x² + 3x.",
-      "revisada": false
-    },
-    {
-      "id": "mate8-oa07-041",
-      "oa": "MA08 OA 07",
-      "pregunta": "¿Cuál de estas expresiones NO es equivalente a 4x?",
-      "opciones": [
-        "x + x + x + x",
-        "2·(2x)",
-        "4 + x",
-        "2(x + x)"
-      ],
-      "correcta": 2,
-      "tip": "4 + x es una suma, no una multiplicación; las otras tres sí valen 4x.",
-      "revisada": false
-    },
-    {
-      "id": "mate8-oa07-042",
-      "oa": "MA08 OA 07",
-      "pregunta": "Reduce: 5(x + 2) − 3(x − 1)",
-      "opciones": [
-        "2x + 7",
-        "8x + 7",
-        "2x + 13",
-        "2x − 13"
-      ],
-      "correcta": 2,
-      "tip": "Distribuye: 5x + 10 − 3x + 3; reduce: (5x − 3x) + (10 + 3) = 2x + 13.",
-      "revisada": false
-    },
-    {
       "id": "mate8-oa08-031",
       "oa": "MA08 OA 08",
       "pregunta": "¿Cuál es un primer paso correcto para resolver 3(x − 2) = 9?",
@@ -2356,6 +2356,4906 @@
       ],
       "correcta": 3,
       "tip": "Como el signo es < (estricto), el 5 NO se incluye: círculo abierto en 5; 'menor que' apunta a la izquierda.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa01-001",
+      "oa": "MA08 OA 01",
+      "pregunta": "¿Cuánto es (-6) · (-4)?",
+      "opciones": [
+        "24",
+        "-24",
+        "-10",
+        "20"
+      ],
+      "correcta": 0,
+      "tip": "Negativo por negativo da positivo: 6 · 4 = 24, con signo +.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa01-002",
+      "oa": "MA08 OA 01",
+      "pregunta": "¿Cuánto es (-8) · 5?",
+      "opciones": [
+        "40",
+        "-40",
+        "-13",
+        "3"
+      ],
+      "correcta": 1,
+      "tip": "Negativo por positivo da negativo: 8 · 5 = 40, con signo -.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa01-003",
+      "oa": "MA08 OA 01",
+      "pregunta": "¿Cuánto es (-36) ÷ (-9)?",
+      "opciones": [
+        "-4",
+        "45",
+        "4",
+        "-45"
+      ],
+      "correcta": 2,
+      "tip": "Negativo dividido negativo da positivo: 36 ÷ 9 = 4.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa01-004",
+      "oa": "MA08 OA 01",
+      "pregunta": "¿Cuánto es 7 · (-3)?",
+      "opciones": [
+        "21",
+        "4",
+        "-4",
+        "-21"
+      ],
+      "correcta": 3,
+      "tip": "Positivo por negativo da negativo: 7 · 3 = 21, con signo -.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa01-005",
+      "oa": "MA08 OA 01",
+      "pregunta": "¿Cuánto es (-5) · (-5)?",
+      "opciones": [
+        "25",
+        "-25",
+        "-10",
+        "10"
+      ],
+      "correcta": 0,
+      "tip": "Los dos factores negativos dan producto positivo: 5 · 5 = 25.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa01-006",
+      "oa": "MA08 OA 01",
+      "pregunta": "¿Cuánto es (-48) ÷ 6?",
+      "opciones": [
+        "8",
+        "-8",
+        "-42",
+        "42"
+      ],
+      "correcta": 1,
+      "tip": "Negativo dividido positivo da negativo: 48 ÷ 6 = 8, con signo -.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa01-007",
+      "oa": "MA08 OA 01",
+      "pregunta": "¿Cuánto es (-2) · (-3) · (-4)?",
+      "opciones": [
+        "24",
+        "-9",
+        "-24",
+        "9"
+      ],
+      "correcta": 2,
+      "tip": "Tres factores negativos (cantidad impar) dan resultado negativo: 2·3·4 = 24 → -24.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa01-008",
+      "oa": "MA08 OA 01",
+      "pregunta": "¿Cuánto es 9 · (-6)?",
+      "opciones": [
+        "54",
+        "15",
+        "3",
+        "-54"
+      ],
+      "correcta": 3,
+      "tip": "Positivo por negativo da negativo: 9 · 6 = 54, con signo -.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa01-009",
+      "oa": "MA08 OA 01",
+      "pregunta": "¿Cuánto es (-63) ÷ (-7)?",
+      "opciones": [
+        "9",
+        "-9",
+        "70",
+        "-70"
+      ],
+      "correcta": 0,
+      "tip": "Negativo dividido negativo da positivo: 63 ÷ 7 = 9.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa01-010",
+      "oa": "MA08 OA 01",
+      "pregunta": "¿Cuánto es -4 · 8?",
+      "opciones": [
+        "32",
+        "-32",
+        "-12",
+        "12"
+      ],
+      "correcta": 1,
+      "tip": "Negativo por positivo da negativo: 4 · 8 = 32, con signo -.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa01-011",
+      "oa": "MA08 OA 01",
+      "pregunta": "¿Cuánto es (-10) · (-10)?",
+      "opciones": [
+        "-100",
+        "20",
+        "100",
+        "-20"
+      ],
+      "correcta": 2,
+      "tip": "Negativo por negativo da positivo: 10 · 10 = 100.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa01-012",
+      "oa": "MA08 OA 01",
+      "pregunta": "¿Cuánto es 100 ÷ (-25)?",
+      "opciones": [
+        "4",
+        "75",
+        "-75",
+        "-4"
+      ],
+      "correcta": 3,
+      "tip": "Positivo dividido negativo da negativo: 100 ÷ 25 = 4, con signo -.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa01-013",
+      "oa": "MA08 OA 01",
+      "pregunta": "La temperatura baja 3 °C cada hora durante 5 horas. ¿Cuál es el cambio total de temperatura?",
+      "opciones": [
+        "-15 °C",
+        "15 °C",
+        "-8 °C",
+        "2 °C"
+      ],
+      "correcta": 0,
+      "tip": "Una baja de 3 repetida 5 veces es (-3) · 5 = -15.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa01-014",
+      "oa": "MA08 OA 01",
+      "pregunta": "Un buzo desciende 4 m por minuto durante 7 minutos. Si bajo el nivel del mar es negativo, ¿a qué profundidad llega?",
+      "opciones": [
+        "28 m",
+        "-28 m",
+        "-11 m",
+        "11 m"
+      ],
+      "correcta": 1,
+      "tip": "Bajar 4 m durante 7 minutos es (-4) · 7 = -28 m.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa01-015",
+      "oa": "MA08 OA 01",
+      "pregunta": "¿Cuánto es (-15) ÷ 5?",
+      "opciones": [
+        "3",
+        "-10",
+        "-3",
+        "10"
+      ],
+      "correcta": 2,
+      "tip": "Negativo dividido positivo da negativo: 15 ÷ 5 = 3, con signo -.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa01-016",
+      "oa": "MA08 OA 01",
+      "pregunta": "¿Cuánto es (-1) · (-1) · (-1) · (-1)?",
+      "opciones": [
+        "-1",
+        "4",
+        "-4",
+        "1"
+      ],
+      "correcta": 3,
+      "tip": "Cuatro factores negativos (cantidad par) dan resultado positivo: 1.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa01-017",
+      "oa": "MA08 OA 01",
+      "pregunta": "Debes $2.000 a cada una de 6 personas. ¿Cuál es tu deuda total, expresada como número negativo?",
+      "opciones": [
+        "-$12.000",
+        "$12.000",
+        "-$8.000",
+        "-$2.006"
+      ],
+      "correcta": 0,
+      "tip": "Seis deudas de 2.000 es (-2.000) · 6 = -12.000.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa01-018",
+      "oa": "MA08 OA 01",
+      "pregunta": "¿Cuánto es (-72) ÷ (-8)?",
+      "opciones": [
+        "-9",
+        "9",
+        "64",
+        "-64"
+      ],
+      "correcta": 1,
+      "tip": "Negativo dividido negativo da positivo: 72 ÷ 8 = 9.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa01-019",
+      "oa": "MA08 OA 01",
+      "pregunta": "¿Cuánto es 6 · (-7)?",
+      "opciones": [
+        "42",
+        "-13",
+        "-42",
+        "13"
+      ],
+      "correcta": 2,
+      "tip": "Positivo por negativo da negativo: 6 · 7 = 42, con signo -.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa01-020",
+      "oa": "MA08 OA 01",
+      "pregunta": "¿Cuánto es (-3) · 4 · (-2)?",
+      "opciones": [
+        "-24",
+        "-9",
+        "9",
+        "24"
+      ],
+      "correcta": 3,
+      "tip": "Dos factores negativos (cantidad par) dan positivo: 3·4·2 = 24.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa01-021",
+      "oa": "MA08 OA 01",
+      "pregunta": "¿Cuál de estas multiplicaciones tiene resultado positivo?",
+      "opciones": [
+        "(-5) · (-2)",
+        "(-5) · 2",
+        "5 · (-2)",
+        "0 · (-5)"
+      ],
+      "correcta": 0,
+      "tip": "Solo negativo por negativo da positivo: (-5)·(-2) = 10.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa01-022",
+      "oa": "MA08 OA 01",
+      "pregunta": "El producto de tres números negativos siempre es...",
+      "opciones": [
+        "positivo",
+        "negativo",
+        "cero",
+        "no se puede saber"
+      ],
+      "correcta": 1,
+      "tip": "Una cantidad impar de factores negativos da un producto negativo.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa01-023",
+      "oa": "MA08 OA 01",
+      "pregunta": "¿Cuánto es (-9) · 0?",
+      "opciones": [
+        "-9",
+        "9",
+        "0",
+        "no existe"
+      ],
+      "correcta": 2,
+      "tip": "Todo número multiplicado por 0 da 0.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa01-024",
+      "oa": "MA08 OA 01",
+      "pregunta": "Al dividir dos números enteros de distinto signo, el cociente siempre es...",
+      "opciones": [
+        "positivo",
+        "cero",
+        "indefinido",
+        "negativo"
+      ],
+      "correcta": 3,
+      "tip": "Signos distintos (+ y -) dan resultado negativo.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa01-025",
+      "oa": "MA08 OA 01",
+      "pregunta": "¿Cuánto es (-12) · (-1)?",
+      "opciones": [
+        "12",
+        "-12",
+        "-13",
+        "11"
+      ],
+      "correcta": 0,
+      "tip": "Multiplicar por (-1) cambia el signo: -12 pasa a +12.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa02-001",
+      "oa": "MA08 OA 02",
+      "pregunta": "¿Cuánto es (2/3) · (3/4)?",
+      "opciones": [
+        "3/4",
+        "1/2",
+        "5/7",
+        "6/7"
+      ],
+      "correcta": 1,
+      "tip": "Multiplica numeradores y denominadores: 6/12, que se simplifica a 1/2.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa02-002",
+      "oa": "MA08 OA 02",
+      "pregunta": "¿Cuánto es (1/2) ÷ (1/4)?",
+      "opciones": [
+        "1/8",
+        "8",
+        "2",
+        "1/2"
+      ],
+      "correcta": 2,
+      "tip": "Dividir es multiplicar por el inverso: (1/2) · (4/1) = 4/2 = 2.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa02-003",
+      "oa": "MA08 OA 02",
+      "pregunta": "¿Cuánto es (-2/5) · (1/2)?",
+      "opciones": [
+        "2/5",
+        "-3/7",
+        "1/5",
+        "-1/5"
+      ],
+      "correcta": 3,
+      "tip": "Multiplica: -2/10 = -1/5. Signos distintos dan resultado negativo.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa02-004",
+      "oa": "MA08 OA 02",
+      "pregunta": "¿Cuánto es (-3/4) · (-4/3)?",
+      "opciones": [
+        "1",
+        "-1",
+        "0",
+        "7/12"
+      ],
+      "correcta": 0,
+      "tip": "Son inversos entre sí y ambos negativos: 12/12 = 1.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa02-005",
+      "oa": "MA08 OA 02",
+      "pregunta": "¿Cuánto es 0,5 · 0,4?",
+      "opciones": [
+        "0,9",
+        "0,2",
+        "0,1",
+        "0,54"
+      ],
+      "correcta": 1,
+      "tip": "5 · 4 = 20 y hay dos cifras decimales: 0,20 = 0,2.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa02-006",
+      "oa": "MA08 OA 02",
+      "pregunta": "¿Cuánto es (3/5) ÷ (2/5)?",
+      "opciones": [
+        "6/25",
+        "2/3",
+        "3/2",
+        "1"
+      ],
+      "correcta": 2,
+      "tip": "Multiplica por el inverso: (3/5) · (5/2) = 15/10 = 3/2.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa02-007",
+      "oa": "MA08 OA 02",
+      "pregunta": "¿Cuánto es (-1,2) · 3?",
+      "opciones": [
+        "3,6",
+        "-4,2",
+        "4,2",
+        "-3,6"
+      ],
+      "correcta": 3,
+      "tip": "1,2 · 3 = 3,6. Negativo por positivo da negativo: -3,6.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa02-008",
+      "oa": "MA08 OA 02",
+      "pregunta": "¿Cuánto es (7/8) · (2/7)?",
+      "opciones": [
+        "1/4",
+        "9/15",
+        "7/4",
+        "14/15"
+      ],
+      "correcta": 0,
+      "tip": "Multiplica: 14/56, que se simplifica a 1/4.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa02-009",
+      "oa": "MA08 OA 02",
+      "pregunta": "¿Cuánto es (-6) ÷ (3/2)?",
+      "opciones": [
+        "4",
+        "-4",
+        "-9",
+        "9"
+      ],
+      "correcta": 1,
+      "tip": "Multiplica por el inverso: -6 · (2/3) = -12/3 = -4.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa02-010",
+      "oa": "MA08 OA 02",
+      "pregunta": "¿Cuánto es (2/9) · (3/4)?",
+      "opciones": [
+        "5/13",
+        "6/13",
+        "1/6",
+        "8/36"
+      ],
+      "correcta": 2,
+      "tip": "Multiplica: 6/36, que se simplifica a 1/6.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa02-011",
+      "oa": "MA08 OA 02",
+      "pregunta": "¿Cuánto es 2,5 · 0,2?",
+      "opciones": [
+        "5",
+        "0,05",
+        "2,7",
+        "0,5"
+      ],
+      "correcta": 3,
+      "tip": "25 · 2 = 50 y hay dos cifras decimales: 0,50 = 0,5.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa02-012",
+      "oa": "MA08 OA 02",
+      "pregunta": "¿Cuánto es (-4/5) ÷ (-2/5)?",
+      "opciones": [
+        "2",
+        "-2",
+        "8/25",
+        "1/2"
+      ],
+      "correcta": 0,
+      "tip": "(-4/5) · (-5/2) = 20/10 = 2. Los dos negativos dan positivo.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa02-013",
+      "oa": "MA08 OA 02",
+      "pregunta": "Una receta usa 3/4 de taza de harina por porción. ¿Cuánta harina se necesita para 1/3 de una porción?",
+      "opciones": [
+        "4/7",
+        "1/4",
+        "1/12",
+        "9/4"
+      ],
+      "correcta": 1,
+      "tip": "Es (3/4) · (1/3) = 3/12 = 1/4 de taza.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa02-014",
+      "oa": "MA08 OA 02",
+      "pregunta": "Se reparten 3/4 de kg de café en 3 bolsas iguales. ¿Cuánto café lleva cada bolsa?",
+      "opciones": [
+        "9/4",
+        "3/7",
+        "1/4",
+        "4/3"
+      ],
+      "correcta": 2,
+      "tip": "Es (3/4) ÷ 3 = (3/4) · (1/3) = 1/4 de kg.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa02-015",
+      "oa": "MA08 OA 02",
+      "pregunta": "¿Cuánto es (-0,6) · (-0,5)?",
+      "opciones": [
+        "-0,3",
+        "1,1",
+        "-1,1",
+        "0,3"
+      ],
+      "correcta": 3,
+      "tip": "6 · 5 = 30 con dos decimales: 0,30 = 0,3. Los dos negativos dan positivo.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa02-016",
+      "oa": "MA08 OA 02",
+      "pregunta": "¿Cuánto es (5/6) · (3/10)?",
+      "opciones": [
+        "1/4",
+        "8/16",
+        "15/16",
+        "5/2"
+      ],
+      "correcta": 0,
+      "tip": "Multiplica: 15/60, que se simplifica a 1/4.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa02-017",
+      "oa": "MA08 OA 02",
+      "pregunta": "¿Cuánto es 0,8 ÷ 0,2?",
+      "opciones": [
+        "0,16",
+        "4",
+        "0,4",
+        "40"
+      ],
+      "correcta": 1,
+      "tip": "0,8 ÷ 0,2 equivale a 8 ÷ 2 = 4.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa02-018",
+      "oa": "MA08 OA 02",
+      "pregunta": "¿Cuánto es (-3/7) · 0?",
+      "opciones": [
+        "-3/7",
+        "3/7",
+        "0",
+        "no existe"
+      ],
+      "correcta": 2,
+      "tip": "Todo número multiplicado por 0 da 0.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa02-019",
+      "oa": "MA08 OA 02",
+      "pregunta": "¿Cuánto es (9/10) ÷ (3/5)?",
+      "opciones": [
+        "27/50",
+        "3/5",
+        "5/6",
+        "3/2"
+      ],
+      "correcta": 3,
+      "tip": "(9/10) · (5/3) = 45/30 = 3/2.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa02-020",
+      "oa": "MA08 OA 02",
+      "pregunta": "¿Cuál es el signo de (-2/3) · (4/5) · (-1/2)?",
+      "opciones": [
+        "positivo",
+        "negativo",
+        "cero",
+        "no se puede saber"
+      ],
+      "correcta": 0,
+      "tip": "Hay dos factores negativos (cantidad par), así que el resultado es positivo.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa02-021",
+      "oa": "MA08 OA 02",
+      "pregunta": "¿Cuánto es (1/2) · (1/2) · (1/2)?",
+      "opciones": [
+        "3/2",
+        "1/8",
+        "1/6",
+        "3/6"
+      ],
+      "correcta": 1,
+      "tip": "Multiplica los tres: 1/8.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa02-022",
+      "oa": "MA08 OA 02",
+      "pregunta": "¿Cuánto es (-1,5) ÷ 3?",
+      "opciones": [
+        "4,5",
+        "0,5",
+        "-0,5",
+        "-4,5"
+      ],
+      "correcta": 2,
+      "tip": "1,5 ÷ 3 = 0,5. Negativo dividido positivo da negativo: -0,5.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa02-023",
+      "oa": "MA08 OA 02",
+      "pregunta": "¿Cuánto es (2/3) · (9/8)?",
+      "opciones": [
+        "4/3",
+        "18/11",
+        "1",
+        "3/4"
+      ],
+      "correcta": 3,
+      "tip": "Multiplica: 18/24, que se simplifica a 3/4.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa02-024",
+      "oa": "MA08 OA 02",
+      "pregunta": "¿Cuánto es 0,25 · 8?",
+      "opciones": [
+        "2",
+        "0,2",
+        "20",
+        "32"
+      ],
+      "correcta": 0,
+      "tip": "0,25 equivale a 1/4, y 8 ÷ 4 = 2.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa02-025",
+      "oa": "MA08 OA 02",
+      "pregunta": "¿Cuál es el inverso multiplicativo de -3/4?",
+      "opciones": [
+        "4/3",
+        "-4/3",
+        "3/4",
+        "-3/4"
+      ],
+      "correcta": 1,
+      "tip": "El inverso invierte la fracción y conserva el signo: -4/3, porque (-3/4)·(-4/3) = 1.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa03-001",
+      "oa": "MA08 OA 03",
+      "pregunta": "¿Cuánto es 2³?",
+      "opciones": [
+        "6",
+        "9",
+        "8",
+        "23"
+      ],
+      "correcta": 2,
+      "tip": "2³ = 2 · 2 · 2 = 8. No es 2 · 3.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa03-002",
+      "oa": "MA08 OA 03",
+      "pregunta": "¿Cuánto es 5²?",
+      "opciones": [
+        "10",
+        "7",
+        "52",
+        "25"
+      ],
+      "correcta": 3,
+      "tip": "5² = 5 · 5 = 25. No es 5 · 2.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa03-003",
+      "oa": "MA08 OA 03",
+      "pregunta": "¿A qué es igual 2² · 2³?",
+      "opciones": [
+        "2⁵",
+        "2⁶",
+        "4⁵",
+        "2¹"
+      ],
+      "correcta": 0,
+      "tip": "Con la misma base, los exponentes se suman: 2 + 3 = 5, o sea 2⁵.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa03-004",
+      "oa": "MA08 OA 03",
+      "pregunta": "¿A qué es igual 3³ ÷ 3¹?",
+      "opciones": [
+        "3⁴",
+        "3²",
+        "3³",
+        "1"
+      ],
+      "correcta": 1,
+      "tip": "Con la misma base, al dividir se restan los exponentes: 3 - 1 = 2, o sea 3².",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa03-005",
+      "oa": "MA08 OA 03",
+      "pregunta": "¿A qué es igual (2²)³?",
+      "opciones": [
+        "2⁵",
+        "2⁸",
+        "2⁶",
+        "2⁹"
+      ],
+      "correcta": 2,
+      "tip": "Potencia de una potencia: los exponentes se multiplican, 2 · 3 = 6, o sea 2⁶.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa03-006",
+      "oa": "MA08 OA 03",
+      "pregunta": "¿Cuánto es 4²?",
+      "opciones": [
+        "8",
+        "6",
+        "42",
+        "16"
+      ],
+      "correcta": 3,
+      "tip": "4² = 4 · 4 = 16. No es 4 · 2.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa03-007",
+      "oa": "MA08 OA 03",
+      "pregunta": "¿Cuánto es 10³?",
+      "opciones": [
+        "1000",
+        "30",
+        "100",
+        "300"
+      ],
+      "correcta": 0,
+      "tip": "10³ = 10 · 10 · 10 = 1000.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa03-008",
+      "oa": "MA08 OA 03",
+      "pregunta": "¿A qué es igual 3² · 3²?",
+      "opciones": [
+        "3²",
+        "3⁴",
+        "9⁴",
+        "6⁴"
+      ],
+      "correcta": 1,
+      "tip": "Con la misma base los exponentes se suman: 2 + 2 = 4, o sea 3⁴. La base no cambia.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa03-009",
+      "oa": "MA08 OA 03",
+      "pregunta": "¿Cuánto es 1³?",
+      "opciones": [
+        "3",
+        "13",
+        "1",
+        "0"
+      ],
+      "correcta": 2,
+      "tip": "1 · 1 · 1 = 1. Toda potencia de 1 es 1.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa03-010",
+      "oa": "MA08 OA 03",
+      "pregunta": "¿A qué es igual 6² ÷ 6?",
+      "opciones": [
+        "36",
+        "0",
+        "1",
+        "6"
+      ],
+      "correcta": 3,
+      "tip": "6² ÷ 6¹ = 6^(2-1) = 6¹ = 6.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa03-011",
+      "oa": "MA08 OA 03",
+      "pregunta": "¿Cuánto es 2³ · 2?",
+      "opciones": [
+        "16",
+        "8",
+        "6",
+        "64"
+      ],
+      "correcta": 0,
+      "tip": "2³ · 2¹ = 2⁴ = 16.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa03-012",
+      "oa": "MA08 OA 03",
+      "pregunta": "¿Cuánto es 5³?",
+      "opciones": [
+        "15",
+        "125",
+        "25",
+        "75"
+      ],
+      "correcta": 1,
+      "tip": "5³ = 5 · 5 · 5 = 125.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa03-013",
+      "oa": "MA08 OA 03",
+      "pregunta": "¿Cuánto es (3²)²?",
+      "opciones": [
+        "36",
+        "12",
+        "81",
+        "18"
+      ],
+      "correcta": 2,
+      "tip": "(3²)² = 3⁴ = 81. Multiplica los exponentes: 2 · 2 = 4.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa03-014",
+      "oa": "MA08 OA 03",
+      "pregunta": "¿Cuánto es 7²?",
+      "opciones": [
+        "14",
+        "9",
+        "72",
+        "49"
+      ],
+      "correcta": 3,
+      "tip": "7² = 7 · 7 = 49. No es 7 · 2.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa03-015",
+      "oa": "MA08 OA 03",
+      "pregunta": "¿Cuánto es 4³?",
+      "opciones": [
+        "64",
+        "12",
+        "16",
+        "43"
+      ],
+      "correcta": 0,
+      "tip": "4³ = 4 · 4 · 4 = 64.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa03-016",
+      "oa": "MA08 OA 03",
+      "pregunta": "Al multiplicar dos potencias de igual base, los exponentes se...",
+      "opciones": [
+        "multiplican",
+        "suman",
+        "restan",
+        "dividen"
+      ],
+      "correcta": 1,
+      "tip": "Regla: misma base al multiplicar, se suman los exponentes.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa03-017",
+      "oa": "MA08 OA 03",
+      "pregunta": "Al dividir dos potencias de igual base, los exponentes se...",
+      "opciones": [
+        "suman",
+        "multiplican",
+        "restan",
+        "igualan"
+      ],
+      "correcta": 2,
+      "tip": "Regla: misma base al dividir, se restan los exponentes.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa03-018",
+      "oa": "MA08 OA 03",
+      "pregunta": "¿Cuánto es 2³ · 3²?",
+      "opciones": [
+        "6⁵",
+        "5⁵",
+        "6⁶",
+        "72"
+      ],
+      "correcta": 3,
+      "tip": "Las bases son distintas: calcula por separado 8 · 9 = 72. No se combinan los exponentes.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa03-019",
+      "oa": "MA08 OA 03",
+      "pregunta": "El cuadrado de 9 es...",
+      "opciones": [
+        "81",
+        "18",
+        "3",
+        "72"
+      ],
+      "correcta": 0,
+      "tip": "9² = 9 · 9 = 81.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa03-020",
+      "oa": "MA08 OA 03",
+      "pregunta": "El cubo de 2 es...",
+      "opciones": [
+        "6",
+        "8",
+        "9",
+        "4"
+      ],
+      "correcta": 1,
+      "tip": "2³ = 2 · 2 · 2 = 8.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa03-021",
+      "oa": "MA08 OA 03",
+      "pregunta": "¿A qué es igual 2⁵ ÷ 2²?",
+      "opciones": [
+        "2⁷",
+        "2¹⁰",
+        "2³",
+        "2⁵"
+      ],
+      "correcta": 2,
+      "tip": "Con la misma base al dividir se restan los exponentes: 5 - 2 = 3, o sea 2³.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa03-022",
+      "oa": "MA08 OA 03",
+      "pregunta": "¿Cuánto es 3³?",
+      "opciones": [
+        "9",
+        "12",
+        "33",
+        "27"
+      ],
+      "correcta": 3,
+      "tip": "3³ = 3 · 3 · 3 = 27.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa03-023",
+      "oa": "MA08 OA 03",
+      "pregunta": "Un cubo tiene arista de 3 cm. Su volumen (arista al cubo) es...",
+      "opciones": [
+        "27 cm³",
+        "9 cm³",
+        "6 cm³",
+        "12 cm³"
+      ],
+      "correcta": 0,
+      "tip": "Volumen del cubo = arista³ = 3³ = 27 cm³.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa03-024",
+      "oa": "MA08 OA 03",
+      "pregunta": "¿Cuánto es 10² · 10?",
+      "opciones": [
+        "100",
+        "1000",
+        "20",
+        "10000"
+      ],
+      "correcta": 1,
+      "tip": "10² · 10¹ = 10³ = 1000.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa03-025",
+      "oa": "MA08 OA 03",
+      "pregunta": "¿Qué número elevado al cuadrado da 36?",
+      "opciones": [
+        "18",
+        "12",
+        "6",
+        "72"
+      ],
+      "correcta": 2,
+      "tip": "6² = 36, así que el número es 6.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa04-001",
+      "oa": "MA08 OA 04",
+      "pregunta": "¿Cuánto es √64?",
+      "opciones": [
+        "32",
+        "6",
+        "16",
+        "8"
+      ],
+      "correcta": 3,
+      "tip": "Busca el número que al cuadrado da 64: 8² = 64. No es 64 ÷ 2.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa04-002",
+      "oa": "MA08 OA 04",
+      "pregunta": "¿Cuánto es √49?",
+      "opciones": [
+        "7",
+        "24",
+        "14",
+        "8"
+      ],
+      "correcta": 0,
+      "tip": "7² = 49, así que √49 = 7.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa04-003",
+      "oa": "MA08 OA 04",
+      "pregunta": "¿Cuánto es √81?",
+      "opciones": [
+        "40",
+        "9",
+        "18",
+        "8"
+      ],
+      "correcta": 1,
+      "tip": "9² = 81, así que √81 = 9.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa04-004",
+      "oa": "MA08 OA 04",
+      "pregunta": "¿Cuánto es √100?",
+      "opciones": [
+        "50",
+        "20",
+        "10",
+        "1000"
+      ],
+      "correcta": 2,
+      "tip": "10² = 100, así que √100 = 10. No es 100 ÷ 2.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa04-005",
+      "oa": "MA08 OA 04",
+      "pregunta": "¿Entre qué dos enteros está √20?",
+      "opciones": [
+        "entre 9 y 10",
+        "entre 3 y 4",
+        "entre 5 y 6",
+        "entre 4 y 5"
+      ],
+      "correcta": 3,
+      "tip": "4² = 16 y 5² = 25, y 20 está entre ellos, así que √20 está entre 4 y 5.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa04-006",
+      "oa": "MA08 OA 04",
+      "pregunta": "¿Entre qué dos enteros está √50?",
+      "opciones": [
+        "entre 7 y 8",
+        "entre 6 y 7",
+        "entre 24 y 25",
+        "entre 8 y 9"
+      ],
+      "correcta": 0,
+      "tip": "7² = 49 y 8² = 64, y 50 está entre ellos, así que √50 está entre 7 y 8.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa04-007",
+      "oa": "MA08 OA 04",
+      "pregunta": "¿Cuánto es √144?",
+      "opciones": [
+        "72",
+        "12",
+        "14",
+        "11"
+      ],
+      "correcta": 1,
+      "tip": "12² = 144, así que √144 = 12.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa04-008",
+      "oa": "MA08 OA 04",
+      "pregunta": "¿Cuánto es √9?",
+      "opciones": [
+        "81",
+        "4",
+        "3",
+        "18"
+      ],
+      "correcta": 2,
+      "tip": "3² = 9, así que √9 = 3.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa04-009",
+      "oa": "MA08 OA 04",
+      "pregunta": "¿Cuál de estos números es un cuadrado perfecto?",
+      "opciones": [
+        "30",
+        "40",
+        "50",
+        "36"
+      ],
+      "correcta": 3,
+      "tip": "36 = 6², por eso es cuadrado perfecto; los otros no tienen raíz exacta.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa04-010",
+      "oa": "MA08 OA 04",
+      "pregunta": "¿Cuánto es √25?",
+      "opciones": [
+        "5",
+        "12",
+        "625",
+        "10"
+      ],
+      "correcta": 0,
+      "tip": "5² = 25, así que √25 = 5.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa04-011",
+      "oa": "MA08 OA 04",
+      "pregunta": "Un cuadrado tiene un área de 36 cm². ¿Cuánto mide su lado?",
+      "opciones": [
+        "18 cm",
+        "6 cm",
+        "9 cm",
+        "36 cm"
+      ],
+      "correcta": 1,
+      "tip": "El lado es √área = √36 = 6 cm.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa04-012",
+      "oa": "MA08 OA 04",
+      "pregunta": "¿Cuánto es √16 + √9?",
+      "opciones": [
+        "25",
+        "5",
+        "7",
+        "12"
+      ],
+      "correcta": 2,
+      "tip": "√16 = 4 y √9 = 3, entonces 4 + 3 = 7.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa04-013",
+      "oa": "MA08 OA 04",
+      "pregunta": "¿Cuál es la mejor estimación de √10?",
+      "opciones": [
+        "2,5",
+        "4,5",
+        "5,0",
+        "3,2"
+      ],
+      "correcta": 3,
+      "tip": "3² = 9 y 4² = 16, así que √10 está apenas sobre 3; su valor aproximado es 3,2.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa04-014",
+      "oa": "MA08 OA 04",
+      "pregunta": "Un patio cuadrado se cubre con 81 baldosas cuadradas iguales, ordenadas en filas iguales. ¿Cuántas baldosas hay por fila?",
+      "opciones": [
+        "9",
+        "40",
+        "27",
+        "18"
+      ],
+      "correcta": 0,
+      "tip": "El número de filas es √81 = 9, porque 9 · 9 = 81.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa04-015",
+      "oa": "MA08 OA 04",
+      "pregunta": "¿Cuánto es √121?",
+      "opciones": [
+        "60",
+        "11",
+        "12",
+        "10"
+      ],
+      "correcta": 1,
+      "tip": "11² = 121, así que √121 = 11.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa04-016",
+      "oa": "MA08 OA 04",
+      "pregunta": "¿Entre qué dos enteros está √30?",
+      "opciones": [
+        "entre 4 y 5",
+        "entre 6 y 7",
+        "entre 5 y 6",
+        "entre 14 y 15"
+      ],
+      "correcta": 2,
+      "tip": "5² = 25 y 6² = 36, y 30 está entre ellos, así que √30 está entre 5 y 6.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa04-017",
+      "oa": "MA08 OA 04",
+      "pregunta": "¿Cuánto es √1?",
+      "opciones": [
+        "0",
+        "2",
+        "no existe",
+        "1"
+      ],
+      "correcta": 3,
+      "tip": "1² = 1, así que √1 = 1.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa04-018",
+      "oa": "MA08 OA 04",
+      "pregunta": "¿Cuál de estos números NO es un cuadrado perfecto?",
+      "opciones": [
+        "20",
+        "25",
+        "16",
+        "9"
+      ],
+      "correcta": 0,
+      "tip": "25 = 5², 16 = 4² y 9 = 3²; en cambio 20 no tiene raíz exacta.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa04-019",
+      "oa": "MA08 OA 04",
+      "pregunta": "Un terreno cuadrado tiene un área de 100 m². ¿Cuál es su perímetro?",
+      "opciones": [
+        "10 m",
+        "40 m",
+        "25 m",
+        "20 m"
+      ],
+      "correcta": 1,
+      "tip": "El lado es √100 = 10 m, y el perímetro es 4 · 10 = 40 m.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa04-020",
+      "oa": "MA08 OA 04",
+      "pregunta": "¿Cuánto es √4?",
+      "opciones": [
+        "16",
+        "8",
+        "2",
+        "1"
+      ],
+      "correcta": 2,
+      "tip": "2² = 4, así que √4 = 2.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa04-021",
+      "oa": "MA08 OA 04",
+      "pregunta": "¿Cuánto es √36?",
+      "opciones": [
+        "1296",
+        "18",
+        "12",
+        "6"
+      ],
+      "correcta": 3,
+      "tip": "6² = 36, así que √36 = 6. No es 36 ÷ 2.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa04-022",
+      "oa": "MA08 OA 04",
+      "pregunta": "¿Cuánto es √169?",
+      "opciones": [
+        "13",
+        "84",
+        "12",
+        "14"
+      ],
+      "correcta": 0,
+      "tip": "13² = 169, así que √169 = 13.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa04-023",
+      "oa": "MA08 OA 04",
+      "pregunta": "El lado de un cuadrado de 49 cm² de área mide...",
+      "opciones": [
+        "24 cm",
+        "7 cm",
+        "14 cm",
+        "9 cm"
+      ],
+      "correcta": 1,
+      "tip": "El lado es √49 = 7 cm.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa04-024",
+      "oa": "MA08 OA 04",
+      "pregunta": "¿Cuánto es √64 + √36?",
+      "opciones": [
+        "100",
+        "10",
+        "14",
+        "48"
+      ],
+      "correcta": 2,
+      "tip": "√64 = 8 y √36 = 6, entonces 8 + 6 = 14. No es √(64+36).",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa04-025",
+      "oa": "MA08 OA 04",
+      "pregunta": "¿Entre qué dos enteros está √8?",
+      "opciones": [
+        "entre 3 y 4",
+        "entre 1 y 2",
+        "entre 4 y 5",
+        "entre 2 y 3"
+      ],
+      "correcta": 3,
+      "tip": "2² = 4 y 3² = 9, y 8 está entre ellos, así que √8 está entre 2 y 3.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa05-001",
+      "oa": "MA08 OA 05",
+      "pregunta": "¿Cuánto es el 25% de 200?",
+      "opciones": [
+        "50",
+        "25",
+        "75",
+        "8"
+      ],
+      "correcta": 0,
+      "tip": "25% es la cuarta parte: 200 ÷ 4 = 50.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa05-002",
+      "oa": "MA08 OA 05",
+      "pregunta": "¿Cuánto es el 10% de 350?",
+      "opciones": [
+        "3,5",
+        "35",
+        "350",
+        "315"
+      ],
+      "correcta": 1,
+      "tip": "10% es la décima parte: 350 ÷ 10 = 35.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa05-003",
+      "oa": "MA08 OA 05",
+      "pregunta": "Un artículo cuesta $8.000 y sube un 10%. ¿Cuál es el nuevo precio?",
+      "opciones": [
+        "$800",
+        "$8.010",
+        "$8.800",
+        "$7.200"
+      ],
+      "correcta": 2,
+      "tip": "El 10% de 8.000 es 800; el nuevo precio es 8.000 + 800 = 8.800.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa05-004",
+      "oa": "MA08 OA 05",
+      "pregunta": "Una prenda de $5.000 tiene un 20% de descuento. ¿Cuál es el precio final?",
+      "opciones": [
+        "$1.000",
+        "$5.020",
+        "$3.000",
+        "$4.000"
+      ],
+      "correcta": 3,
+      "tip": "El 20% de 5.000 es 1.000; el precio final es 5.000 - 1.000 = 4.000.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa05-005",
+      "oa": "MA08 OA 05",
+      "pregunta": "¿Cuánto es el 50% de 90?",
+      "opciones": [
+        "45",
+        "40",
+        "50",
+        "180"
+      ],
+      "correcta": 0,
+      "tip": "50% es la mitad: 90 ÷ 2 = 45.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa05-006",
+      "oa": "MA08 OA 05",
+      "pregunta": "¿Qué porcentaje de 120 es 30?",
+      "opciones": [
+        "40%",
+        "25%",
+        "30%",
+        "4%"
+      ],
+      "correcta": 1,
+      "tip": "30 ÷ 120 = 0,25, o sea 25%.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa05-007",
+      "oa": "MA08 OA 05",
+      "pregunta": "Una polera de $12.000 tiene un 25% de descuento. ¿Cuánto dinero ahorras?",
+      "opciones": [
+        "$300",
+        "$9.000",
+        "$3.000",
+        "$4.800"
+      ],
+      "correcta": 2,
+      "tip": "25% es la cuarta parte: 12.000 ÷ 4 = 3.000 de ahorro.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa05-008",
+      "oa": "MA08 OA 05",
+      "pregunta": "Un sueldo de $400.000 aumenta un 15%. ¿De cuánto es el aumento en dinero?",
+      "opciones": [
+        "$15.000",
+        "$460.000",
+        "$40.000",
+        "$60.000"
+      ],
+      "correcta": 3,
+      "tip": "El 15% de 400.000: el 10% es 40.000 y el 5% es 20.000, en total 60.000.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa05-009",
+      "oa": "MA08 OA 05",
+      "pregunta": "¿Cuánto es el 15% de 60?",
+      "opciones": [
+        "9",
+        "15",
+        "6",
+        "90"
+      ],
+      "correcta": 0,
+      "tip": "El 10% de 60 es 6 y el 5% es 3, en total 9.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa05-010",
+      "oa": "MA08 OA 05",
+      "pregunta": "Un producto sube de $2.000 a $2.500. ¿En qué porcentaje aumentó?",
+      "opciones": [
+        "20%",
+        "25%",
+        "50%",
+        "5%"
+      ],
+      "correcta": 1,
+      "tip": "El aumento es 500; 500 ÷ 2.000 = 0,25, o sea 25%.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa05-011",
+      "oa": "MA08 OA 05",
+      "pregunta": "Un producto baja de $1.000 a $800. ¿En qué porcentaje bajó?",
+      "opciones": [
+        "80%",
+        "25%",
+        "20%",
+        "2%"
+      ],
+      "correcta": 2,
+      "tip": "La baja es 200; 200 ÷ 1.000 = 0,20, o sea 20%.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa05-012",
+      "oa": "MA08 OA 05",
+      "pregunta": "¿Cuánto es el 5% de 2.000?",
+      "opciones": [
+        "1.000",
+        "500",
+        "200",
+        "100"
+      ],
+      "correcta": 3,
+      "tip": "El 10% de 2.000 es 200; la mitad de eso (5%) es 100.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa05-013",
+      "oa": "MA08 OA 05",
+      "pregunta": "Un curso tiene 40 estudiantes y el 30% faltó un día. ¿Cuántos faltaron?",
+      "opciones": [
+        "12",
+        "30",
+        "10",
+        "28"
+      ],
+      "correcta": 0,
+      "tip": "El 10% de 40 es 4; el 30% es 3 · 4 = 12.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa05-014",
+      "oa": "MA08 OA 05",
+      "pregunta": "¿Cuál es el precio final tras un aumento del 10% sobre $20.000?",
+      "opciones": [
+        "$2.000",
+        "$22.000",
+        "$18.000",
+        "$30.000"
+      ],
+      "correcta": 1,
+      "tip": "El 10% de 20.000 es 2.000; el precio final es 20.000 + 2.000 = 22.000.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa05-015",
+      "oa": "MA08 OA 05",
+      "pregunta": "¿Cuánto es el 100% de 75?",
+      "opciones": [
+        "0",
+        "150",
+        "75",
+        "7,5"
+      ],
+      "correcta": 2,
+      "tip": "El 100% de un número es el número completo: 75.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa05-016",
+      "oa": "MA08 OA 05",
+      "pregunta": "Un jugo trae 200 ml y ahora incluye un 50% más de contenido. ¿Cuánto trae ahora?",
+      "opciones": [
+        "250 ml",
+        "100 ml",
+        "400 ml",
+        "300 ml"
+      ],
+      "correcta": 3,
+      "tip": "El 50% de 200 es 100; el nuevo contenido es 200 + 100 = 300 ml.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa05-017",
+      "oa": "MA08 OA 05",
+      "pregunta": "¿Cuánto es el 75% de 400?",
+      "opciones": [
+        "300",
+        "75",
+        "325",
+        "100"
+      ],
+      "correcta": 0,
+      "tip": "75% son tres cuartos: 400 ÷ 4 = 100, y 3 · 100 = 300.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa05-018",
+      "oa": "MA08 OA 05",
+      "pregunta": "Una entrada cuesta $6.000 y sube un 50%. ¿Cuál es el nuevo precio?",
+      "opciones": [
+        "$3.000",
+        "$9.000",
+        "$6.500",
+        "$12.000"
+      ],
+      "correcta": 1,
+      "tip": "El 50% de 6.000 es 3.000; el nuevo precio es 6.000 + 3.000 = 9.000.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa05-019",
+      "oa": "MA08 OA 05",
+      "pregunta": "¿Cuánto es el 40% de 250?",
+      "opciones": [
+        "40",
+        "90",
+        "100",
+        "150"
+      ],
+      "correcta": 2,
+      "tip": "El 10% de 250 es 25; el 40% es 4 · 25 = 100.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa05-020",
+      "oa": "MA08 OA 05",
+      "pregunta": "Un notebook de $300.000 tiene un 10% de descuento. ¿Cuánto cuesta al final?",
+      "opciones": [
+        "$30.000",
+        "$330.000",
+        "$290.000",
+        "$270.000"
+      ],
+      "correcta": 3,
+      "tip": "El 10% de 300.000 es 30.000; el precio final es 300.000 - 30.000 = 270.000.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa05-021",
+      "oa": "MA08 OA 05",
+      "pregunta": "Si el 20% de un número es 8, ¿cuál es ese número?",
+      "opciones": [
+        "40",
+        "16",
+        "160",
+        "1,6"
+      ],
+      "correcta": 0,
+      "tip": "Si el 20% es 8, el 100% es 5 veces más: 5 · 8 = 40.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa05-022",
+      "oa": "MA08 OA 05",
+      "pregunta": "¿Qué representa más dinero: el 20% de $10.000 o el 50% de $3.000?",
+      "opciones": [
+        "50% de $3.000",
+        "20% de $10.000",
+        "son iguales",
+        "no se puede saber"
+      ],
+      "correcta": 1,
+      "tip": "El 20% de 10.000 es 2.000 y el 50% de 3.000 es 1.500, así que 2.000 es mayor.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa05-023",
+      "oa": "MA08 OA 05",
+      "pregunta": "Un precio subió un 10% y quedó en $1.100. ¿Cuál era el precio original?",
+      "opciones": [
+        "$990",
+        "$1.210",
+        "$1.000",
+        "$1.010"
+      ],
+      "correcta": 2,
+      "tip": "El precio final es el 110% del original: 1.100 ÷ 1,1 = 1.000.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa05-024",
+      "oa": "MA08 OA 05",
+      "pregunta": "¿Cuánto es el 60% de 50?",
+      "opciones": [
+        "10",
+        "25",
+        "60",
+        "30"
+      ],
+      "correcta": 3,
+      "tip": "El 10% de 50 es 5; el 60% es 6 · 5 = 30.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa05-025",
+      "oa": "MA08 OA 05",
+      "pregunta": "Una cuenta de $15.000 incluye un 10% de propina. ¿Cuánto se paga en total?",
+      "opciones": [
+        "$16.500",
+        "$1.500",
+        "$13.500",
+        "$25.000"
+      ],
+      "correcta": 0,
+      "tip": "El 10% de 15.000 es 1.500; el total es 15.000 + 1.500 = 16.500.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa07-001",
+      "oa": "MA08 OA 07",
+      "pregunta": "Observa la tabla: cuando x vale 1, 2 y 3, la variable y vale 3, 6 y 9. ¿Cuál es la regla que relaciona ambas variables?",
+      "opciones": [
+        "y = 3x",
+        "y = x + 2",
+        "y = 3 + x",
+        "y = 2x"
+      ],
+      "correcta": 0,
+      "tip": "En cada fila, y es el triple de x (3=3·1, 6=3·2, 9=3·3). La regla de una función lineal tiene la forma y = k·x.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa07-002",
+      "oa": "MA08 OA 07",
+      "pregunta": "Una función lineal cumple f(x) = 5x. ¿Cuánto vale f(4)?",
+      "opciones": [
+        "9",
+        "20",
+        "25",
+        "54"
+      ],
+      "correcta": 1,
+      "tip": "Evaluar significa reemplazar x por 4 y multiplicar: 5·4 = 20. No se suma (9) ni se usa 5·5.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa07-003",
+      "oa": "MA08 OA 07",
+      "pregunta": "Imagina una máquina que multiplica por 2 todo lo que entra. Si ingresas el número 7, ¿qué número sale?",
+      "opciones": [
+        "9",
+        "5",
+        "14",
+        "72"
+      ],
+      "correcta": 2,
+      "tip": "La metáfora de la máquina aplica la regla y = 2x. Con x = 7: 2·7 = 14. No se suma (9) ni se resta (5).",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa07-004",
+      "oa": "MA08 OA 07",
+      "pregunta": "¿Cuál de estas relaciones es de proporcionalidad directa, es decir, su gráfico pasa por el origen (0, 0)?",
+      "opciones": [
+        "y = x + 4",
+        "y = 2x + 1",
+        "y = x - 3",
+        "y = 5x"
+      ],
+      "correcta": 3,
+      "tip": "En la proporcionalidad directa (función lineal) no hay término independiente: y = 5x pasa por (0, 0). Si se suma o resta un número, ya no pasa por el origen.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa07-005",
+      "oa": "MA08 OA 07",
+      "pregunta": "En una tabla, cuando x vale 1, 2 y 3, la variable y vale 4, 8 y 12. ¿Cuál es la constante de proporcionalidad?",
+      "opciones": [
+        "4",
+        "8",
+        "3",
+        "12"
+      ],
+      "correcta": 0,
+      "tip": "La constante es el número por el que se multiplica x: y/x = 4/1 = 8/2 = 12/3 = 4. La regla es y = 4x.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa07-006",
+      "oa": "MA08 OA 07",
+      "pregunta": "¿Cuál de estas expresiones representa una función lineal (su gráfico pasa por el origen)?",
+      "opciones": [
+        "y = x + 1",
+        "y = 6x",
+        "y = 2x - 5",
+        "y = 10"
+      ],
+      "correcta": 1,
+      "tip": "Una función lineal tiene la forma y = k·x, sin sumar ni restar constantes. Solo y = 6x pasa por (0, 0).",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa07-007",
+      "oa": "MA08 OA 07",
+      "pregunta": "Cada cuaderno cuesta 500 pesos. El costo total se modela con la regla costo = 500·x, donde x es la cantidad de cuadernos. ¿Cuánto cuestan 3 cuadernos?",
+      "opciones": [
+        "503",
+        "1503",
+        "1500",
+        "150"
+      ],
+      "correcta": 2,
+      "tip": "Se reemplaza x por 3 y se multiplica: 500·3 = 1500 pesos. El precio no se suma (503).",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa07-008",
+      "oa": "MA08 OA 07",
+      "pregunta": "En una tabla, cuando x vale 2, 4 y 6, la variable y vale 8, 16 y 24. ¿Cuál es la regla?",
+      "opciones": [
+        "y = x + 6",
+        "y = 2x",
+        "y = 8x",
+        "y = 4x"
+      ],
+      "correcta": 3,
+      "tip": "Divide y entre x: 8/2 = 4, 16/4 = 4, 24/6 = 4. La constante es 4, así que y = 4x.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa07-009",
+      "oa": "MA08 OA 07",
+      "pregunta": "Si y = 6x, ¿qué valor toma y cuando x = 5?",
+      "opciones": [
+        "30",
+        "11",
+        "6",
+        "56"
+      ],
+      "correcta": 0,
+      "tip": "Reemplaza x por 5 y multiplica: 6·5 = 30. No se suma (6+5=11).",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa07-010",
+      "oa": "MA08 OA 07",
+      "pregunta": "¿Cuál de estos puntos pertenece a la recta y = 2x?",
+      "opciones": [
+        "(2, 2)",
+        "(3, 6)",
+        "(4, 2)",
+        "(5, 7)"
+      ],
+      "correcta": 1,
+      "tip": "Un punto (x, y) pertenece a la recta si al reemplazar se cumple la regla: para (3, 6), 2·3 = 6. Correcto.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa07-011",
+      "oa": "MA08 OA 07",
+      "pregunta": "Una máquina multiplica por 3 todo lo que entra. Si a la salida obtienes 21, ¿qué número ingresaste?",
+      "opciones": [
+        "24",
+        "18",
+        "7",
+        "63"
+      ],
+      "correcta": 2,
+      "tip": "Se aplica la operación inversa: si y = 3x y y = 21, entonces x = 21 ÷ 3 = 7. Se divide, no se suma ni se multiplica.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa07-012",
+      "oa": "MA08 OA 07",
+      "pregunta": "Una función lineal y = k·x pasa por el punto (1, 7). ¿Cuál es la constante de proporcionalidad k?",
+      "opciones": [
+        "1",
+        "8",
+        "6",
+        "7"
+      ],
+      "correcta": 3,
+      "tip": "Como y = k·x y el punto es (1, 7): 7 = k·1, entonces k = 7.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa07-013",
+      "oa": "MA08 OA 07",
+      "pregunta": "Un vehículo recorre 80 km por cada hora. La distancia se modela con distancia = 80·t, donde t son las horas. ¿Cuántos km recorre en 2 horas?",
+      "opciones": [
+        "160",
+        "82",
+        "78",
+        "802"
+      ],
+      "correcta": 0,
+      "tip": "Se reemplaza t por 2 y se multiplica: 80·2 = 160 km. La rapidez no se suma al tiempo (82).",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa07-014",
+      "oa": "MA08 OA 07",
+      "pregunta": "En una tabla, cuando x vale 5 y 8, la variable y vale 5 y 8 respectivamente. ¿Cuál es la regla?",
+      "opciones": [
+        "y = x + 5",
+        "y = x",
+        "y = 5x",
+        "y = 2x"
+      ],
+      "correcta": 1,
+      "tip": "El valor de y siempre coincide con el de x, así que la constante es 1: y = 1·x = x.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa07-015",
+      "oa": "MA08 OA 07",
+      "pregunta": "El perímetro de un cuadrado se calcula con la regla P = 4·lado. ¿Cuál es el perímetro de un cuadrado de lado 5?",
+      "opciones": [
+        "9",
+        "5",
+        "20",
+        "45"
+      ],
+      "correcta": 2,
+      "tip": "Se multiplica el lado por 4: 4·5 = 20. Es una función lineal entre el lado y el perímetro. No se suma (9).",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa07-016",
+      "oa": "MA08 OA 07",
+      "pregunta": "¿Cuál regla representa 'el doble de un número x'?",
+      "opciones": [
+        "y = x + 2",
+        "y = x²",
+        "y = x + x + x",
+        "y = 2x"
+      ],
+      "correcta": 3,
+      "tip": "El doble significa multiplicar por 2: y = 2x. Sumar 2 (x+2) o sumar tres veces x (=3x) no es el doble.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa07-017",
+      "oa": "MA08 OA 07",
+      "pregunta": "Si f(x) = 10x, ¿cuánto vale f(0)?",
+      "opciones": [
+        "0",
+        "10",
+        "1",
+        "100"
+      ],
+      "correcta": 0,
+      "tip": "Reemplaza x por 0: 10·0 = 0. Toda función lineal pasa por el origen, así que f(0) siempre es 0.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa07-018",
+      "oa": "MA08 OA 07",
+      "pregunta": "Un kilo de manzanas cuesta 200 pesos. El precio total se modela con precio = 200·kilos. ¿Cuánto cuestan 4 kilos?",
+      "opciones": [
+        "204",
+        "800",
+        "240",
+        "84"
+      ],
+      "correcta": 1,
+      "tip": "Se multiplica el precio por la cantidad: 200·4 = 800 pesos. No se suma el precio a los kilos (204).",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa07-019",
+      "oa": "MA08 OA 07",
+      "pregunta": "¿Cuál de estas tablas representa una proporcionalidad directa (función lineal)?",
+      "opciones": [
+        "x: 1, 2, 3 → y: 2, 4, 7",
+        "x: 1, 2, 3 → y: 5, 6, 7",
+        "x: 1, 2, 3 → y: 3, 6, 9",
+        "x: 1, 2, 3 → y: 1, 4, 9"
+      ],
+      "correcta": 2,
+      "tip": "Hay proporcionalidad directa cuando y/x es constante: 3/1 = 6/2 = 9/3 = 3. Las otras tablas no mantienen una razón constante.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa07-020",
+      "oa": "MA08 OA 07",
+      "pregunta": "Si f(x) = 7x, ¿cuánto vale f(3)?",
+      "opciones": [
+        "10",
+        "4",
+        "73",
+        "21"
+      ],
+      "correcta": 3,
+      "tip": "Reemplaza x por 3 y multiplica: 7·3 = 21. No se suma (7+3=10) ni se restan los valores.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa07-021",
+      "oa": "MA08 OA 07",
+      "pregunta": "En la relación y = 4x, si x es la variable independiente, ¿cuál es la variable dependiente?",
+      "opciones": [
+        "y",
+        "x",
+        "4",
+        "0"
+      ],
+      "correcta": 0,
+      "tip": "La variable dependiente es la que se obtiene a partir de la otra: y depende del valor que elijas para x.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa07-022",
+      "oa": "MA08 OA 07",
+      "pregunta": "En la regla y = 3x, ¿qué valor de y corresponde a x = 5?",
+      "opciones": [
+        "8",
+        "15",
+        "35",
+        "53"
+      ],
+      "correcta": 1,
+      "tip": "Reemplaza x por 5 y multiplica: 3·5 = 15. No se suma (3+5=8).",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa07-023",
+      "oa": "MA08 OA 07",
+      "pregunta": "Un estanque se llena a razón de 6 litros por minuto. El volumen se modela con y = 6x, donde x son los minutos. ¿Cuántos litros hay a los 4 minutos?",
+      "opciones": [
+        "10",
+        "2",
+        "24",
+        "64"
+      ],
+      "correcta": 2,
+      "tip": "Se multiplica la razón por el tiempo: 6·4 = 24 litros. No se suma (6+4=10).",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa07-024",
+      "oa": "MA08 OA 07",
+      "pregunta": "El gráfico de una función lineal y = k·x siempre pasa por el punto:",
+      "opciones": [
+        "(1, 0)",
+        "(0, 1)",
+        "(1, 1)",
+        "(0, 0)"
+      ],
+      "correcta": 3,
+      "tip": "Al reemplazar x = 0 en y = k·x se obtiene y = 0, por eso la recta pasa por el origen (0, 0).",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa07-025",
+      "oa": "MA08 OA 07",
+      "pregunta": "En la máquina cuya regla es y = 2x, si ingresa el número 9, ¿qué número sale?",
+      "opciones": [
+        "11",
+        "7",
+        "29",
+        "18"
+      ],
+      "correcta": 3,
+      "tip": "Se aplica la regla multiplicando: 2·9 = 18. No se suma (9+2=11) ni se resta (7).",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa10-001",
+      "oa": "MA08 OA 10",
+      "pregunta": "Dada la función afín f(x) = 2x + 1, ¿cuánto vale f(3)?",
+      "opciones": [
+        "7",
+        "6",
+        "5",
+        "9"
+      ],
+      "correcta": 0,
+      "tip": "Reemplaza x por 3: 2·3 + 1 = 6 + 1 = 7. No olvides sumar el término independiente (+1).",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa10-002",
+      "oa": "MA08 OA 10",
+      "pregunta": "En la función y = 3x + 5, ¿cuál es la pendiente?",
+      "opciones": [
+        "5",
+        "3",
+        "8",
+        "15"
+      ],
+      "correcta": 1,
+      "tip": "En f(x) = ax + b, la pendiente es a (el número que acompaña a x). Aquí a = 3. El 5 es el intercepto.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa10-003",
+      "oa": "MA08 OA 10",
+      "pregunta": "En la función y = 4x - 2, ¿cuál es el intercepto (valor inicial)?",
+      "opciones": [
+        "4",
+        "2",
+        "-2",
+        "-4"
+      ],
+      "correcta": 2,
+      "tip": "En f(x) = ax + b, el intercepto es b, el término sin x. Aquí b = -2 (se resta 2). El 4 es la pendiente.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa10-004",
+      "oa": "MA08 OA 10",
+      "pregunta": "En la función afín f(x) = ax + b, ¿qué representa el valor de b?",
+      "opciones": [
+        "la pendiente",
+        "el valor de x",
+        "el cambio constante",
+        "el valor inicial (intercepto)"
+      ],
+      "correcta": 3,
+      "tip": "b es el valor inicial o intercepto: el valor de y cuando x = 0 (donde la recta corta el eje vertical). La pendiente es a.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa10-005",
+      "oa": "MA08 OA 10",
+      "pregunta": "¿Cuál de estas es una función afín, es decir, tiene término independiente distinto de cero (b ≠ 0)?",
+      "opciones": [
+        "y = 2x + 3",
+        "y = 5x",
+        "y = x",
+        "y = 4x"
+      ],
+      "correcta": 0,
+      "tip": "Una función afín tiene la forma ax + b con b ≠ 0. Solo y = 2x + 3 suma un término independiente; las demás son lineales (b = 0).",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa10-006",
+      "oa": "MA08 OA 10",
+      "pregunta": "Dada f(x) = 2x + 5, ¿cuánto vale f(0)?",
+      "opciones": [
+        "7",
+        "5",
+        "2",
+        "0"
+      ],
+      "correcta": 1,
+      "tip": "Reemplaza x por 0: 2·0 + 5 = 0 + 5 = 5. El valor de f(0) es siempre el intercepto b.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa10-007",
+      "oa": "MA08 OA 10",
+      "pregunta": "El costo de un servicio se modela con costo = 1000 + 500x, donde x son las horas. ¿Cuál es el costo por 2 horas?",
+      "opciones": [
+        "1500",
+        "3000",
+        "2000",
+        "2500"
+      ],
+      "correcta": 2,
+      "tip": "Reemplaza x por 2: 1000 + 500·2 = 1000 + 1000 = 2000. El 1000 es el valor inicial fijo y 500 la pendiente.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa10-008",
+      "oa": "MA08 OA 10",
+      "pregunta": "En la función y = -2x + 3, ¿cuál es la pendiente?",
+      "opciones": [
+        "3",
+        "2",
+        "-3",
+        "-2"
+      ],
+      "correcta": 3,
+      "tip": "La pendiente es el número que acompaña a x, con su signo: aquí a = -2. Una pendiente negativa indica que la recta baja.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa10-009",
+      "oa": "MA08 OA 10",
+      "pregunta": "Si trasladas la función lineal y = 2x tres unidades hacia arriba, ¿cuál es la nueva función?",
+      "opciones": [
+        "y = 2x + 3",
+        "y = 2x - 3",
+        "y = 5x",
+        "y = 3x"
+      ],
+      "correcta": 0,
+      "tip": "Trasladar hacia arriba suma al término independiente: y = 2x + 3. La pendiente no cambia; solo se mueve el intercepto.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa10-010",
+      "oa": "MA08 OA 10",
+      "pregunta": "Dada f(x) = 5x - 1, ¿cuánto vale f(2)?",
+      "opciones": [
+        "11",
+        "9",
+        "10",
+        "4"
+      ],
+      "correcta": 1,
+      "tip": "Reemplaza x por 2: 5·2 - 1 = 10 - 1 = 9. Recuerda restar el término independiente.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa10-011",
+      "oa": "MA08 OA 10",
+      "pregunta": "Una recta tiene valor inicial 2 y, por cada aumento de 1 en x, el valor de y aumenta en 3. ¿Cuál es su pendiente?",
+      "opciones": [
+        "2",
+        "1",
+        "3",
+        "5"
+      ],
+      "correcta": 2,
+      "tip": "La pendiente es el cambio constante de y por cada unidad de x: aquí y sube 3, así que la pendiente es 3. El 2 es el valor inicial.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa10-012",
+      "oa": "MA08 OA 10",
+      "pregunta": "En la función y = x + 7, ¿cuál es el intercepto?",
+      "opciones": [
+        "1",
+        "-7",
+        "0",
+        "7"
+      ],
+      "correcta": 3,
+      "tip": "El intercepto es el término independiente b: aquí es 7 (donde la recta corta el eje vertical). La pendiente es 1.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa10-013",
+      "oa": "MA08 OA 10",
+      "pregunta": "Dada f(x) = 3x + 2, ¿cuánto vale f(4)?",
+      "opciones": [
+        "14",
+        "12",
+        "20",
+        "9"
+      ],
+      "correcta": 0,
+      "tip": "Reemplaza x por 4: 3·4 + 2 = 12 + 2 = 14. Primero se multiplica y luego se suma el término independiente.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa10-014",
+      "oa": "MA08 OA 10",
+      "pregunta": "¿Cuál de estas es una función afín?",
+      "opciones": [
+        "y = 6x",
+        "y = 2x + 1",
+        "y = x",
+        "y = 4x"
+      ],
+      "correcta": 1,
+      "tip": "Una función afín tiene la forma ax + b con b ≠ 0. Solo y = 2x + 1 tiene término independiente; las demás son lineales.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa10-015",
+      "oa": "MA08 OA 10",
+      "pregunta": "En la función f(x) = ax + b, ¿a qué corresponde el 'cambio constante'?",
+      "opciones": [
+        "al intercepto",
+        "al valor inicial",
+        "a la pendiente (a)",
+        "al valor de b"
+      ],
+      "correcta": 2,
+      "tip": "El cambio constante es cuánto varía y por cada unidad de x, es decir, la pendiente a. El valor inicial (b) no cambia.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa10-016",
+      "oa": "MA08 OA 10",
+      "pregunta": "Dada f(x) = -x + 4, ¿cuánto vale f(1)?",
+      "opciones": [
+        "5",
+        "-3",
+        "4",
+        "3"
+      ],
+      "correcta": 3,
+      "tip": "Reemplaza x por 1: -1 + 4 = 3. El signo negativo acompaña a x, así que primero se calcula -1.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa10-017",
+      "oa": "MA08 OA 10",
+      "pregunta": "Un taxi cobra una bajada de bandera de 500 pesos más 300 pesos por kilómetro: costo = 500 + 300x. ¿Cuánto cuesta un viaje de 3 km?",
+      "opciones": [
+        "1400",
+        "900",
+        "800",
+        "1100"
+      ],
+      "correcta": 0,
+      "tip": "Reemplaza x por 3: 500 + 300·3 = 500 + 900 = 1400. El 500 es el valor inicial fijo y 300 la pendiente.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa10-018",
+      "oa": "MA08 OA 10",
+      "pregunta": "En la función y = 6x - 4, ¿cuál es el intercepto?",
+      "opciones": [
+        "6",
+        "-4",
+        "4",
+        "-6"
+      ],
+      "correcta": 1,
+      "tip": "El intercepto es el término independiente con su signo: aquí b = -4. El 6 es la pendiente.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa10-019",
+      "oa": "MA08 OA 10",
+      "pregunta": "En la función y = 2x + 8, ¿cuáles son la pendiente y el valor inicial?",
+      "opciones": [
+        "pendiente 8, valor inicial 2",
+        "pendiente 8, valor inicial 8",
+        "pendiente 2, valor inicial 8",
+        "pendiente 2, valor inicial 2"
+      ],
+      "correcta": 2,
+      "tip": "En f(x) = ax + b, a es la pendiente y b el valor inicial. Aquí a = 2 (acompaña a x) y b = 8.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa10-020",
+      "oa": "MA08 OA 10",
+      "pregunta": "Dada f(x) = 4x + 3, ¿cuánto vale f(0)?",
+      "opciones": [
+        "4",
+        "7",
+        "0",
+        "3"
+      ],
+      "correcta": 3,
+      "tip": "Reemplaza x por 0: 4·0 + 3 = 0 + 3 = 3. El valor de f(0) es siempre el intercepto b.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa10-021",
+      "oa": "MA08 OA 10",
+      "pregunta": "Si trasladas la función lineal y = 3x dos unidades hacia abajo, ¿cuál es la nueva función?",
+      "opciones": [
+        "y = 3x - 2",
+        "y = 3x + 2",
+        "y = x - 2",
+        "y = 3x"
+      ],
+      "correcta": 0,
+      "tip": "Trasladar hacia abajo resta al término independiente: y = 3x - 2. La pendiente 3 no cambia.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa10-022",
+      "oa": "MA08 OA 10",
+      "pregunta": "¿Cuál de estas funciones es lineal (su intercepto es 0), y no afín?",
+      "opciones": [
+        "y = 2x + 1",
+        "y = 5x",
+        "y = x - 4",
+        "y = 3x + 2"
+      ],
+      "correcta": 1,
+      "tip": "Una función lineal tiene b = 0 y pasa por el origen: y = 5x. Las demás tienen término independiente, así que son afines.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa10-023",
+      "oa": "MA08 OA 10",
+      "pregunta": "Dada f(x) = 2x - 5, ¿cuánto vale f(5)?",
+      "opciones": [
+        "10",
+        "7",
+        "5",
+        "0"
+      ],
+      "correcta": 2,
+      "tip": "Reemplaza x por 5: 2·5 - 5 = 10 - 5 = 5. No olvides restar el término independiente.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa10-024",
+      "oa": "MA08 OA 10",
+      "pregunta": "En la función afín f(x) = ax + b, el valor inicial (intercepto) se obtiene evaluando:",
+      "opciones": [
+        "f(1)",
+        "f(a)",
+        "f(b)",
+        "f(0)"
+      ],
+      "correcta": 3,
+      "tip": "El valor inicial es y cuando x = 0, es decir, f(0) = a·0 + b = b. Por eso se evalúa en 0.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa10-025",
+      "oa": "MA08 OA 10",
+      "pregunta": "El sueldo mensual se modela con sueldo = 200000 + 5000·ventas. Si se hacen 10 ventas, ¿cuál es el sueldo?",
+      "opciones": [
+        "250000",
+        "50000",
+        "205000",
+        "2050000"
+      ],
+      "correcta": 0,
+      "tip": "Reemplaza ventas por 10: 200000 + 5000·10 = 200000 + 50000 = 250000. El 200000 es el valor inicial fijo (sueldo base).",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa11-001",
+      "oa": "MA08 OA 11",
+      "pregunta": "Un cubo tiene aristas de 5 cm. ¿Cuál es su volumen?",
+      "opciones": [
+        "125 cm³",
+        "25 cm³",
+        "150 cm³",
+        "75 cm³"
+      ],
+      "correcta": 0,
+      "tip": "El volumen de un cubo es arista³: 5 × 5 × 5 = 125 cm³.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa11-002",
+      "oa": "MA08 OA 11",
+      "pregunta": "Un prisma rectangular mide 4 cm de largo, 3 cm de ancho y 2 cm de alto. ¿Cuál es su volumen?",
+      "opciones": [
+        "9 cm³",
+        "24 cm³",
+        "52 cm³",
+        "48 cm³"
+      ],
+      "correcta": 1,
+      "tip": "Volumen del prisma recto = largo × ancho × alto = 4 × 3 × 2 = 24 cm³.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa11-003",
+      "oa": "MA08 OA 11",
+      "pregunta": "¿Cuál es el área de la superficie total de un cubo de arista 5 cm?",
+      "opciones": [
+        "125 cm²",
+        "100 cm²",
+        "150 cm²",
+        "25 cm²"
+      ],
+      "correcta": 2,
+      "tip": "Área de un cubo = 6 × arista² = 6 × 25 = 150 cm² (tiene 6 caras iguales).",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa11-004",
+      "oa": "MA08 OA 11",
+      "pregunta": "Un prisma rectangular mide 6 cm × 4 cm × 5 cm. ¿Cuál es el área de su superficie?",
+      "opciones": [
+        "120 cm²",
+        "74 cm²",
+        "296 cm²",
+        "148 cm²"
+      ],
+      "correcta": 3,
+      "tip": "Área = 2(largo·ancho + largo·alto + ancho·alto) = 2(24 + 30 + 20) = 148 cm².",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa11-005",
+      "oa": "MA08 OA 11",
+      "pregunta": "Un cilindro tiene radio 3 cm y altura 10 cm. ¿Cuál es su volumen? (usa π ≈ 3,14)",
+      "opciones": [
+        "282,6 cm³",
+        "94,2 cm³",
+        "188,4 cm³",
+        "28,26 cm³"
+      ],
+      "correcta": 0,
+      "tip": "Volumen del cilindro = π · radio² · altura = 3,14 × 9 × 10 = 282,6 cm³.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa11-006",
+      "oa": "MA08 OA 11",
+      "pregunta": "Un cilindro tiene radio 5 cm y altura 4 cm. ¿Cuál es su volumen? (usa π ≈ 3,14)",
+      "opciones": [
+        "62,8 cm³",
+        "314 cm³",
+        "157 cm³",
+        "100 cm³"
+      ],
+      "correcta": 1,
+      "tip": "V = π · radio² · altura = 3,14 × 25 × 4 = 314 cm³.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa11-007",
+      "oa": "MA08 OA 11",
+      "pregunta": "¿Cuál es el área lateral de un cilindro de radio 2 cm y altura 7 cm? (usa π ≈ 3,14)",
+      "opciones": [
+        "43,96 cm²",
+        "12,56 cm²",
+        "87,92 cm²",
+        "100,48 cm²"
+      ],
+      "correcta": 2,
+      "tip": "Área lateral del cilindro = 2 · π · radio · altura = 2 × 3,14 × 2 × 7 = 87,92 cm².",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa11-008",
+      "oa": "MA08 OA 11",
+      "pregunta": "¿Cuál es el área total de un cilindro de radio 10 cm y altura 10 cm? (usa π ≈ 3,14)",
+      "opciones": [
+        "628 cm²",
+        "314 cm²",
+        "3140 cm²",
+        "1256 cm²"
+      ],
+      "correcta": 3,
+      "tip": "Área total = 2·π·radio·(radio + altura) = 2 × 3,14 × 10 × 20 = 1256 cm².",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa11-009",
+      "oa": "MA08 OA 11",
+      "pregunta": "Un prisma rectangular tiene base de 4 cm × 3 cm y volumen 24 cm³. ¿Cuál es su altura?",
+      "opciones": [
+        "2 cm",
+        "8 cm",
+        "6 cm",
+        "3 cm"
+      ],
+      "correcta": 0,
+      "tip": "Altura = volumen ÷ área de la base = 24 ÷ (4 × 3) = 24 ÷ 12 = 2 cm.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa11-010",
+      "oa": "MA08 OA 11",
+      "pregunta": "Un cubo tiene un volumen de 64 cm³. ¿Cuánto mide su arista?",
+      "opciones": [
+        "8 cm",
+        "4 cm",
+        "16 cm",
+        "32 cm"
+      ],
+      "correcta": 1,
+      "tip": "Como volumen = arista³, la arista es la raíz cúbica: ∛64 = 4 cm (porque 4³ = 64).",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa11-011",
+      "oa": "MA08 OA 11",
+      "pregunta": "Un cilindro tiene diámetro 6 cm y altura 5 cm. ¿Cuál es su volumen? (usa π ≈ 3,14)",
+      "opciones": [
+        "565,2 cm³",
+        "94,2 cm³",
+        "141,3 cm³",
+        "282,6 cm³"
+      ],
+      "correcta": 2,
+      "tip": "El radio es la mitad del diámetro: 6 ÷ 2 = 3 cm. V = 3,14 × 3² × 5 = 141,3 cm³.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa11-012",
+      "oa": "MA08 OA 11",
+      "pregunta": "Un prisma triangular tiene base con forma de triángulo rectángulo de catetos 3 cm y 4 cm, y longitud (altura del prisma) 10 cm. ¿Cuál es su volumen?",
+      "opciones": [
+        "120 cm³",
+        "30 cm³",
+        "70 cm³",
+        "60 cm³"
+      ],
+      "correcta": 3,
+      "tip": "Área del triángulo = (3 × 4) ÷ 2 = 6 cm². Volumen = área de la base × longitud = 6 × 10 = 60 cm³.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa11-013",
+      "oa": "MA08 OA 11",
+      "pregunta": "La red (desarrollo plano) de un cubo está formada por cuadrados. ¿Cuántos cuadrados tiene?",
+      "opciones": [
+        "6 caras",
+        "4 caras",
+        "8 caras",
+        "12 caras"
+      ],
+      "correcta": 0,
+      "tip": "Un cubo tiene 6 caras cuadradas; por eso su red se arma con 6 cuadrados iguales.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa11-014",
+      "oa": "MA08 OA 11",
+      "pregunta": "La red (desarrollo plano) de un prisma rectangular está formada por rectángulos. ¿Cuántos tiene?",
+      "opciones": [
+        "4 rectángulos",
+        "6 rectángulos",
+        "5 rectángulos",
+        "8 rectángulos"
+      ],
+      "correcta": 1,
+      "tip": "Un prisma rectangular tiene 6 caras, por lo que su red se compone de 6 rectángulos.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa11-015",
+      "oa": "MA08 OA 11",
+      "pregunta": "Un cubo tiene aristas de 2 m. ¿Cuál es su volumen?",
+      "opciones": [
+        "6 m³",
+        "12 m³",
+        "8 m³",
+        "4 m³"
+      ],
+      "correcta": 2,
+      "tip": "Volumen del cubo = arista³ = 2 × 2 × 2 = 8 m³.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa11-016",
+      "oa": "MA08 OA 11",
+      "pregunta": "Una caja con forma de prisma rectangular mide 10 cm × 5 cm × 2 cm. ¿Cuál es su volumen?",
+      "opciones": [
+        "17 cm³",
+        "160 cm³",
+        "34 cm³",
+        "100 cm³"
+      ],
+      "correcta": 3,
+      "tip": "Volumen = largo × ancho × alto = 10 × 5 × 2 = 100 cm³.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa11-017",
+      "oa": "MA08 OA 11",
+      "pregunta": "¿Cuál es el área del círculo de la base de un cilindro de radio 4 cm? (usa π ≈ 3,14)",
+      "opciones": [
+        "50,24 cm²",
+        "25,12 cm²",
+        "12,56 cm²",
+        "100,48 cm²"
+      ],
+      "correcta": 0,
+      "tip": "Área del círculo = π · radio² = 3,14 × 4² = 3,14 × 16 = 50,24 cm².",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa11-018",
+      "oa": "MA08 OA 11",
+      "pregunta": "Un prisma tiene una base de área 15 cm² y altura 8 cm. ¿Cuál es su volumen?",
+      "opciones": [
+        "23 cm³",
+        "120 cm³",
+        "60 cm³",
+        "240 cm³"
+      ],
+      "correcta": 1,
+      "tip": "Volumen de un prisma recto = área de la base × altura = 15 × 8 = 120 cm³.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa11-019",
+      "oa": "MA08 OA 11",
+      "pregunta": "Un cubo tiene un área de superficie total de 96 cm². ¿Cuánto mide su arista?",
+      "opciones": [
+        "16 cm",
+        "6 cm",
+        "4 cm",
+        "8 cm"
+      ],
+      "correcta": 2,
+      "tip": "Área = 6 × arista², entonces arista² = 96 ÷ 6 = 16, y la arista = √16 = 4 cm.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa11-020",
+      "oa": "MA08 OA 11",
+      "pregunta": "¿Cuál es la fórmula correcta del volumen de un cilindro?",
+      "opciones": [
+        "V = 2 · π · radio · altura",
+        "V = π · diámetro · altura",
+        "V = π · radio · altura²",
+        "V = π · radio² · altura"
+      ],
+      "correcta": 3,
+      "tip": "El volumen del cilindro es el área de la base (un círculo, π·radio²) multiplicada por la altura.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa11-021",
+      "oa": "MA08 OA 11",
+      "pregunta": "Un cilindro tiene radio 1 cm y altura 1 cm. ¿Cuál es su volumen? (usa π ≈ 3,14)",
+      "opciones": [
+        "3,14 cm³",
+        "6,28 cm³",
+        "1 cm³",
+        "9,42 cm³"
+      ],
+      "correcta": 0,
+      "tip": "V = π · radio² · altura = 3,14 × 1 × 1 = 3,14 cm³.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa11-022",
+      "oa": "MA08 OA 11",
+      "pregunta": "Un cubo de arista 2 cm tiene volumen 8 cm³. Si se duplican todas las aristas a 4 cm, ¿cuál es el nuevo volumen?",
+      "opciones": [
+        "16 cm³",
+        "64 cm³",
+        "32 cm³",
+        "24 cm³"
+      ],
+      "correcta": 1,
+      "tip": "El nuevo volumen es 4³ = 64 cm³. Al duplicar la arista, el volumen se multiplica por 2³ = 8 veces.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa11-023",
+      "oa": "MA08 OA 11",
+      "pregunta": "Una piscina con forma de prisma rectangular mide 8 m de largo, 4 m de ancho y 2 m de profundidad. ¿Cuántos m³ de agua caben?",
+      "opciones": [
+        "14 m³",
+        "32 m³",
+        "64 m³",
+        "128 m³"
+      ],
+      "correcta": 2,
+      "tip": "Volumen = largo × ancho × profundidad = 8 × 4 × 2 = 64 m³.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa11-024",
+      "oa": "MA08 OA 11",
+      "pregunta": "¿Cuál es el área total de un cilindro de radio 2 cm y altura 3 cm? (usa π ≈ 3,14)",
+      "opciones": [
+        "37,68 cm²",
+        "25,12 cm²",
+        "100 cm²",
+        "62,8 cm²"
+      ],
+      "correcta": 3,
+      "tip": "Área total = 2·π·radio·(radio + altura) = 2 × 3,14 × 2 × (2 + 3) = 12,56 × 5 = 62,8 cm².",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa11-025",
+      "oa": "MA08 OA 11",
+      "pregunta": "Un prisma hexagonal tiene base de área 20 cm² y altura 6 cm. ¿Cuál es su volumen?",
+      "opciones": [
+        "120 cm³",
+        "26 cm³",
+        "60 cm³",
+        "26 cm²"
+      ],
+      "correcta": 0,
+      "tip": "Volumen de un prisma = área de la base × altura = 20 × 6 = 120 cm³.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa12-001",
+      "oa": "MA08 OA 12",
+      "pregunta": "Un triángulo rectángulo tiene catetos de 3 cm y 4 cm. ¿Cuánto mide la hipotenusa?",
+      "opciones": [
+        "7 cm",
+        "5 cm",
+        "12 cm",
+        "6 cm"
+      ],
+      "correcta": 1,
+      "tip": "Por Pitágoras: c² = 3² + 4² = 9 + 16 = 25, entonces c = √25 = 5 cm.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa12-002",
+      "oa": "MA08 OA 12",
+      "pregunta": "Un triángulo rectángulo tiene catetos de 6 cm y 8 cm. ¿Cuánto mide la hipotenusa?",
+      "opciones": [
+        "14 cm",
+        "48 cm",
+        "10 cm",
+        "12 cm"
+      ],
+      "correcta": 2,
+      "tip": "c² = 6² + 8² = 36 + 64 = 100, entonces c = √100 = 10 cm.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa12-003",
+      "oa": "MA08 OA 12",
+      "pregunta": "Un triángulo rectángulo tiene catetos de 5 cm y 12 cm. ¿Cuánto mide la hipotenusa?",
+      "opciones": [
+        "17 cm",
+        "60 cm",
+        "15 cm",
+        "13 cm"
+      ],
+      "correcta": 3,
+      "tip": "c² = 5² + 12² = 25 + 144 = 169, entonces c = √169 = 13 cm.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa12-004",
+      "oa": "MA08 OA 12",
+      "pregunta": "En un triángulo rectángulo la hipotenusa mide 5 cm y un cateto mide 3 cm. ¿Cuánto mide el otro cateto?",
+      "opciones": [
+        "4 cm",
+        "8 cm",
+        "2 cm",
+        "√34 cm"
+      ],
+      "correcta": 0,
+      "tip": "Cateto = √(hipotenusa² − cateto²) = √(25 − 9) = √16 = 4 cm.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa12-005",
+      "oa": "MA08 OA 12",
+      "pregunta": "En un triángulo rectángulo la hipotenusa mide 13 cm y un cateto mide 5 cm. ¿Cuánto mide el otro cateto?",
+      "opciones": [
+        "18 cm",
+        "12 cm",
+        "8 cm",
+        "√194 cm"
+      ],
+      "correcta": 1,
+      "tip": "Cateto = √(13² − 5²) = √(169 − 25) = √144 = 12 cm.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa12-006",
+      "oa": "MA08 OA 12",
+      "pregunta": "En un triángulo rectángulo la hipotenusa mide 10 cm y un cateto mide 6 cm. ¿Cuánto mide el otro cateto?",
+      "opciones": [
+        "4 cm",
+        "16 cm",
+        "8 cm",
+        "√136 cm"
+      ],
+      "correcta": 2,
+      "tip": "Cateto = √(10² − 6²) = √(100 − 36) = √64 = 8 cm.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa12-007",
+      "oa": "MA08 OA 12",
+      "pregunta": "Un triángulo rectángulo tiene catetos de 8 cm y 15 cm. ¿Cuánto mide la hipotenusa?",
+      "opciones": [
+        "23 cm",
+        "120 cm",
+        "13 cm",
+        "17 cm"
+      ],
+      "correcta": 3,
+      "tip": "c² = 8² + 15² = 64 + 225 = 289, entonces c = √289 = 17 cm.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa12-008",
+      "oa": "MA08 OA 12",
+      "pregunta": "Un triángulo rectángulo tiene catetos de 9 cm y 12 cm. ¿Cuánto mide la hipotenusa?",
+      "opciones": [
+        "15 cm",
+        "21 cm",
+        "108 cm",
+        "11 cm"
+      ],
+      "correcta": 0,
+      "tip": "c² = 9² + 12² = 81 + 144 = 225, entonces c = √225 = 15 cm.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa12-009",
+      "oa": "MA08 OA 12",
+      "pregunta": "Un triángulo rectángulo tiene catetos de 7 cm y 24 cm. ¿Cuánto mide la hipotenusa?",
+      "opciones": [
+        "31 cm",
+        "25 cm",
+        "168 cm",
+        "23 cm"
+      ],
+      "correcta": 1,
+      "tip": "c² = 7² + 24² = 49 + 576 = 625, entonces c = √625 = 25 cm.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa12-010",
+      "oa": "MA08 OA 12",
+      "pregunta": "¿Cuál igualdad expresa el teorema de Pitágoras, donde c es la hipotenusa y a, b los catetos?",
+      "opciones": [
+        "a + b = c",
+        "a² − b² = c²",
+        "a² + b² = c²",
+        "a² + b² = 2c"
+      ],
+      "correcta": 2,
+      "tip": "El teorema dice que la suma de los cuadrados de los catetos es igual al cuadrado de la hipotenusa: a² + b² = c².",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa12-011",
+      "oa": "MA08 OA 12",
+      "pregunta": "Una escalera se apoya en una pared. Su base está a 3 m del muro y toca la pared a 4 m de altura. ¿Cuánto mide la escalera?",
+      "opciones": [
+        "7 m",
+        "1 m",
+        "12 m",
+        "5 m"
+      ],
+      "correcta": 3,
+      "tip": "La escalera es la hipotenusa: c = √(3² + 4²) = √25 = 5 m.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa12-012",
+      "oa": "MA08 OA 12",
+      "pregunta": "Una pantalla rectangular mide 12 cm de alto y 16 cm de ancho. ¿Cuánto mide su diagonal?",
+      "opciones": [
+        "20 cm",
+        "28 cm",
+        "192 cm",
+        "24 cm"
+      ],
+      "correcta": 0,
+      "tip": "La diagonal es la hipotenusa: √(12² + 16²) = √(144 + 256) = √400 = 20 cm.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa12-013",
+      "oa": "MA08 OA 12",
+      "pregunta": "Un rectángulo mide 8 cm de ancho y 6 cm de alto. ¿Cuánto mide su diagonal?",
+      "opciones": [
+        "14 cm",
+        "10 cm",
+        "48 cm",
+        "12 cm"
+      ],
+      "correcta": 1,
+      "tip": "Diagonal = √(8² + 6²) = √(64 + 36) = √100 = 10 cm.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa12-014",
+      "oa": "MA08 OA 12",
+      "pregunta": "En un triángulo rectángulo la hipotenusa mide 17 cm y un cateto mide 8 cm. ¿Cuánto mide el otro cateto?",
+      "opciones": [
+        "25 cm",
+        "9 cm",
+        "15 cm",
+        "23 cm"
+      ],
+      "correcta": 2,
+      "tip": "Cateto = √(17² − 8²) = √(289 − 64) = √225 = 15 cm.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa12-015",
+      "oa": "MA08 OA 12",
+      "pregunta": "Un triángulo rectángulo tiene catetos de 20 cm y 21 cm. ¿Cuánto mide la hipotenusa?",
+      "opciones": [
+        "41 cm",
+        "420 cm",
+        "50 cm",
+        "29 cm"
+      ],
+      "correcta": 3,
+      "tip": "c² = 20² + 21² = 400 + 441 = 841, entonces c = √841 = 29 cm.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa12-016",
+      "oa": "MA08 OA 12",
+      "pregunta": "En un triángulo rectángulo la hipotenusa mide 29 cm y un cateto mide 20 cm. ¿Cuánto mide el otro cateto?",
+      "opciones": [
+        "21 cm",
+        "49 cm",
+        "9 cm",
+        "24 cm"
+      ],
+      "correcta": 0,
+      "tip": "Cateto = √(29² − 20²) = √(841 − 400) = √441 = 21 cm.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa12-017",
+      "oa": "MA08 OA 12",
+      "pregunta": "En un triángulo rectángulo, ¿cómo se llama el lado opuesto al ángulo recto (el lado más largo)?",
+      "opciones": [
+        "El cateto menor",
+        "La hipotenusa",
+        "El cateto mayor",
+        "La altura"
+      ],
+      "correcta": 1,
+      "tip": "La hipotenusa es el lado opuesto al ángulo recto y siempre es el lado más largo del triángulo rectángulo.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa12-018",
+      "oa": "MA08 OA 12",
+      "pregunta": "Un triángulo rectángulo tiene catetos de 10 cm y 24 cm. ¿Cuánto mide la hipotenusa?",
+      "opciones": [
+        "34 cm",
+        "240 cm",
+        "26 cm",
+        "28 cm"
+      ],
+      "correcta": 2,
+      "tip": "c² = 10² + 24² = 100 + 576 = 676, entonces c = √676 = 26 cm.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa12-019",
+      "oa": "MA08 OA 12",
+      "pregunta": "¿Es rectángulo un triángulo cuyos lados miden 6 cm, 8 cm y 10 cm?",
+      "opciones": [
+        "No, porque 6 + 8 ≠ 10",
+        "No, le falta un lado",
+        "Sí, porque todos sus lados son pares",
+        "Sí, porque 6² + 8² = 10²"
+      ],
+      "correcta": 3,
+      "tip": "Se cumple el teorema: 6² + 8² = 36 + 64 = 100 = 10². Como la igualdad se verifica, el triángulo es rectángulo.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa12-020",
+      "oa": "MA08 OA 12",
+      "pregunta": "Un triángulo rectángulo tiene catetos de 15 cm y 20 cm. ¿Cuánto mide la hipotenusa?",
+      "opciones": [
+        "25 cm",
+        "35 cm",
+        "300 cm",
+        "30 cm"
+      ],
+      "correcta": 0,
+      "tip": "c² = 15² + 20² = 225 + 400 = 625, entonces c = √625 = 25 cm.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa12-021",
+      "oa": "MA08 OA 12",
+      "pregunta": "Ana camina 9 m hacia el este y luego 12 m hacia el norte. ¿A qué distancia en línea recta está del punto de partida?",
+      "opciones": [
+        "21 m",
+        "15 m",
+        "3 m",
+        "108 m"
+      ],
+      "correcta": 1,
+      "tip": "El recorrido forma un triángulo rectángulo: distancia = √(9² + 12²) = √(81 + 144) = √225 = 15 m.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa12-022",
+      "oa": "MA08 OA 12",
+      "pregunta": "En un triángulo rectángulo la hipotenusa mide 25 cm y un cateto mide 7 cm. ¿Cuánto mide el otro cateto?",
+      "opciones": [
+        "32 cm",
+        "18 cm",
+        "24 cm",
+        "26 cm"
+      ],
+      "correcta": 2,
+      "tip": "Cateto = √(25² − 7²) = √(625 − 49) = √576 = 24 cm.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa12-023",
+      "oa": "MA08 OA 12",
+      "pregunta": "Un poste vertical mide 8 m. Un cable va desde la punta del poste hasta un punto del suelo ubicado a 6 m de su base. ¿Cuánto mide el cable?",
+      "opciones": [
+        "14 m",
+        "2 m",
+        "48 m",
+        "10 m"
+      ],
+      "correcta": 3,
+      "tip": "El cable es la hipotenusa: √(8² + 6²) = √(64 + 36) = √100 = 10 m.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa12-024",
+      "oa": "MA08 OA 12",
+      "pregunta": "Un triángulo rectángulo tiene catetos de 12 cm y 35 cm. ¿Cuánto mide la hipotenusa?",
+      "opciones": [
+        "37 cm",
+        "47 cm",
+        "420 cm",
+        "49 cm"
+      ],
+      "correcta": 0,
+      "tip": "c² = 12² + 35² = 144 + 1225 = 1369, entonces c = √1369 = 37 cm.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa12-025",
+      "oa": "MA08 OA 12",
+      "pregunta": "En un triángulo rectángulo la hipotenusa mide 26 cm y un cateto mide 10 cm. ¿Cuánto mide el otro cateto?",
+      "opciones": [
+        "36 cm",
+        "24 cm",
+        "16 cm",
+        "25 cm"
+      ],
+      "correcta": 1,
+      "tip": "Cateto = √(26² − 10²) = √(676 − 100) = √576 = 24 cm.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa13-001",
+      "oa": "MA08 OA 13",
+      "pregunta": "El punto A(2, 3) se traslada según el vector (4, 0). ¿Cuáles son las coordenadas de su imagen?",
+      "opciones": [
+        "(2, 7)",
+        "(-2, 3)",
+        "(6, 3)",
+        "(6, -3)"
+      ],
+      "correcta": 2,
+      "tip": "En una traslación se suma el vector a las coordenadas: (2 + 4, 3 + 0) = (6, 3).",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa13-002",
+      "oa": "MA08 OA 13",
+      "pregunta": "El punto A(1, 2) se traslada según el vector (3, 4). ¿Cuál es su imagen?",
+      "opciones": [
+        "(4, 2)",
+        "(-2, -2)",
+        "(3, 8)",
+        "(4, 6)"
+      ],
+      "correcta": 3,
+      "tip": "Se suma el vector: (1 + 3, 2 + 4) = (4, 6).",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa13-003",
+      "oa": "MA08 OA 13",
+      "pregunta": "El punto B(5, 5) se traslada según el vector (-2, -3). ¿Cuál es su imagen?",
+      "opciones": [
+        "(3, 2)",
+        "(7, 8)",
+        "(3, -2)",
+        "(-3, 2)"
+      ],
+      "correcta": 0,
+      "tip": "Se suma el vector: (5 + (-2), 5 + (-3)) = (3, 2).",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa13-004",
+      "oa": "MA08 OA 13",
+      "pregunta": "¿Cuál es la imagen del punto P(3, 4) al reflejarlo respecto al eje X?",
+      "opciones": [
+        "(-3, 4)",
+        "(3, -4)",
+        "(-3, -4)",
+        "(4, 3)"
+      ],
+      "correcta": 1,
+      "tip": "Al reflejar respecto al eje X cambia el signo de la coordenada y: (3, 4) → (3, -4).",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa13-005",
+      "oa": "MA08 OA 13",
+      "pregunta": "¿Cuál es la imagen del punto P(3, 4) al reflejarlo respecto al eje Y?",
+      "opciones": [
+        "(3, -4)",
+        "(-3, -4)",
+        "(-3, 4)",
+        "(4, 3)"
+      ],
+      "correcta": 2,
+      "tip": "Al reflejar respecto al eje Y cambia el signo de la coordenada x: (3, 4) → (-3, 4).",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa13-006",
+      "oa": "MA08 OA 13",
+      "pregunta": "¿Cuál es la imagen del punto (2, 5) al rotarlo 180° respecto al origen?",
+      "opciones": [
+        "(5, 2)",
+        "(-2, 5)",
+        "(2, -5)",
+        "(-2, -5)"
+      ],
+      "correcta": 3,
+      "tip": "En una rotación de 180° respecto al origen ambas coordenadas cambian de signo: (2, 5) → (-2, -5).",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa13-007",
+      "oa": "MA08 OA 13",
+      "pregunta": "¿Cuál es la imagen del punto (1, 0) al rotarlo 90° en sentido antihorario respecto al origen?",
+      "opciones": [
+        "(0, 1)",
+        "(-1, 0)",
+        "(0, -1)",
+        "(1, 0)"
+      ],
+      "correcta": 0,
+      "tip": "En una rotación de 90° antihoraria: (x, y) → (-y, x). Así (1, 0) → (0, 1).",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa13-008",
+      "oa": "MA08 OA 13",
+      "pregunta": "Aplicando la rotación de 90° antihoraria respecto al origen, ¿cuál es la imagen del punto (3, 2)?",
+      "opciones": [
+        "(2, -3)",
+        "(-2, 3)",
+        "(2, 3)",
+        "(-3, -2)"
+      ],
+      "correcta": 1,
+      "tip": "La regla es (x, y) → (-y, x): (3, 2) → (-2, 3).",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa13-009",
+      "oa": "MA08 OA 13",
+      "pregunta": "Aplicando la rotación de 90° en sentido horario respecto al origen, ¿cuál es la imagen del punto (3, 2)?",
+      "opciones": [
+        "(-2, 3)",
+        "(2, 3)",
+        "(2, -3)",
+        "(3, -2)"
+      ],
+      "correcta": 2,
+      "tip": "La regla para 90° horaria es (x, y) → (y, -x): (3, 2) → (2, -3).",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa13-010",
+      "oa": "MA08 OA 13",
+      "pregunta": "¿Cuál es el vector de traslación que lleva el punto A(1, 1) hasta B(5, 4)?",
+      "opciones": [
+        "(6, 5)",
+        "(4, 4)",
+        "(-4, -3)",
+        "(4, 3)"
+      ],
+      "correcta": 3,
+      "tip": "El vector se obtiene restando: (5 - 1, 4 - 1) = (4, 3).",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa13-011",
+      "oa": "MA08 OA 13",
+      "pregunta": "¿Cuál es el vector de traslación que lleva el punto A(2, 7) hasta B(2, 3)?",
+      "opciones": [
+        "(0, -4)",
+        "(0, 4)",
+        "(4, 0)",
+        "(0, -10)"
+      ],
+      "correcta": 0,
+      "tip": "El vector es (2 - 2, 3 - 7) = (0, -4).",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa13-012",
+      "oa": "MA08 OA 13",
+      "pregunta": "El punto (4, 4) se traslada según el vector (0, -3). ¿Cuál es su imagen?",
+      "opciones": [
+        "(4, 7)",
+        "(4, 1)",
+        "(1, 4)",
+        "(7, 4)"
+      ],
+      "correcta": 1,
+      "tip": "Se suma el vector: (4 + 0, 4 + (-3)) = (4, 1).",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa13-013",
+      "oa": "MA08 OA 13",
+      "pregunta": "¿Cuál es la imagen del punto (-2, 5) al reflejarlo respecto al eje Y?",
+      "opciones": [
+        "(-2, -5)",
+        "(2, -5)",
+        "(2, 5)",
+        "(5, -2)"
+      ],
+      "correcta": 2,
+      "tip": "Al reflejar respecto al eje Y cambia el signo de la x: (-2, 5) → (2, 5).",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa13-014",
+      "oa": "MA08 OA 13",
+      "pregunta": "¿Cuál es la imagen del punto (-2, -3) al reflejarlo respecto al eje X?",
+      "opciones": [
+        "(2, -3)",
+        "(2, 3)",
+        "(-3, -2)",
+        "(-2, 3)"
+      ],
+      "correcta": 3,
+      "tip": "Al reflejar respecto al eje X cambia el signo de la y: (-2, -3) → (-2, 3).",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa13-015",
+      "oa": "MA08 OA 13",
+      "pregunta": "Al aplicar una traslación a una figura, ¿cambia su tamaño?",
+      "opciones": [
+        "No, conserva su tamaño",
+        "Sí, la agranda",
+        "Sí, la achica",
+        "Sí, la deforma"
+      ],
+      "correcta": 0,
+      "tip": "La traslación es una transformación isométrica: mueve la figura sin cambiar su tamaño ni su forma.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa13-016",
+      "oa": "MA08 OA 13",
+      "pregunta": "Un triángulo con vértice C(0, 3) se traslada según el vector (1, 1). ¿Cuál es la imagen de C?",
+      "opciones": [
+        "(0, 3)",
+        "(1, 4)",
+        "(-1, 2)",
+        "(1, 1)"
+      ],
+      "correcta": 1,
+      "tip": "En una traslación cada vértice se mueve el mismo vector: (0 + 1, 3 + 1) = (1, 4).",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa13-017",
+      "oa": "MA08 OA 13",
+      "pregunta": "¿Cuál es la imagen del punto (-4, 2) al rotarlo 180° respecto al origen?",
+      "opciones": [
+        "(4, 2)",
+        "(-4, -2)",
+        "(4, -2)",
+        "(2, -4)"
+      ],
+      "correcta": 2,
+      "tip": "En una rotación de 180° ambas coordenadas cambian de signo: (-4, 2) → (4, -2).",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa13-018",
+      "oa": "MA08 OA 13",
+      "pregunta": "¿Cuál es la imagen del punto (6, 0) al reflejarlo respecto al eje X?",
+      "opciones": [
+        "(-6, 0)",
+        "(0, 6)",
+        "(0, -6)",
+        "(6, 0)"
+      ],
+      "correcta": 3,
+      "tip": "El punto está sobre el eje X, así que su reflexión respecto a ese eje es él mismo: (6, 0).",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa13-019",
+      "oa": "MA08 OA 13",
+      "pregunta": "El punto (1, 1) se traslada primero según el vector (2, 0) y luego según el vector (0, 3). ¿Cuál es su imagen final?",
+      "opciones": [
+        "(3, 4)",
+        "(3, 1)",
+        "(1, 4)",
+        "(5, 4)"
+      ],
+      "correcta": 0,
+      "tip": "Se suman ambos vectores al punto: (1 + 2 + 0, 1 + 0 + 3) = (3, 4).",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa13-020",
+      "oa": "MA08 OA 13",
+      "pregunta": "El punto A(3, -2) se traslada según el vector (-3, 2). ¿Cuál es su imagen?",
+      "opciones": [
+        "(6, -4)",
+        "(0, 0)",
+        "(0, 4)",
+        "(-6, 0)"
+      ],
+      "correcta": 1,
+      "tip": "Se suma el vector: (3 + (-3), -2 + 2) = (0, 0).",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa13-021",
+      "oa": "MA08 OA 13",
+      "pregunta": "¿Cuál es la imagen del punto (7, -1) al reflejarlo respecto al eje Y?",
+      "opciones": [
+        "(7, 1)",
+        "(-7, 1)",
+        "(-7, -1)",
+        "(-1, 7)"
+      ],
+      "correcta": 2,
+      "tip": "Al reflejar respecto al eje Y cambia el signo de la x: (7, -1) → (-7, -1).",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa13-022",
+      "oa": "MA08 OA 13",
+      "pregunta": "¿Cuál es el vector de traslación que lleva el punto (-1, -1) hasta (2, 3)?",
+      "opciones": [
+        "(1, 2)",
+        "(3, 2)",
+        "(-3, -4)",
+        "(3, 4)"
+      ],
+      "correcta": 3,
+      "tip": "El vector es (2 - (-1), 3 - (-1)) = (3, 4).",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa13-023",
+      "oa": "MA08 OA 13",
+      "pregunta": "¿Cuál es la imagen del punto (0, 4) al rotarlo 90° en sentido antihorario respecto al origen?",
+      "opciones": [
+        "(-4, 0)",
+        "(4, 0)",
+        "(0, -4)",
+        "(-4, 4)"
+      ],
+      "correcta": 0,
+      "tip": "La regla es (x, y) → (-y, x): (0, 4) → (-4, 0).",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa13-024",
+      "oa": "MA08 OA 13",
+      "pregunta": "El punto (-3, 6) se traslada según el vector (5, -2). ¿Cuál es su imagen?",
+      "opciones": [
+        "(2, 8)",
+        "(2, 4)",
+        "(-8, 4)",
+        "(8, 4)"
+      ],
+      "correcta": 1,
+      "tip": "Se suma el vector: (-3 + 5, 6 + (-2)) = (2, 4).",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa13-025",
+      "oa": "MA08 OA 13",
+      "pregunta": "Al reflejar un punto respecto al eje X, ¿qué coordenada cambia de signo?",
+      "opciones": [
+        "La coordenada x",
+        "Ambas coordenadas",
+        "La coordenada y",
+        "Ninguna coordenada"
+      ],
+      "correcta": 2,
+      "tip": "El eje X deja fija la coordenada x y cambia el signo de la coordenada y: (x, y) → (x, -y).",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa14-001",
+      "oa": "MA08 OA 14",
+      "pregunta": "Se aplican dos traslaciones seguidas al punto (0, 0): primero el vector (2, 1) y luego el vector (3, 4). ¿Cuál es su imagen final?",
+      "opciones": [
+        "(6, 4)",
+        "(5, 4)",
+        "(1, 3)",
+        "(5, 5)"
+      ],
+      "correcta": 3,
+      "tip": "Componer dos traslaciones equivale a sumar sus vectores: (2+3, 1+4) = (5, 5). Así (0,0) → (5, 5).",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa14-002",
+      "oa": "MA08 OA 14",
+      "pregunta": "¿Cuántos ejes de simetría tiene un cuadrado?",
+      "opciones": [
+        "4 ejes",
+        "2 ejes",
+        "1 eje",
+        "8 ejes"
+      ],
+      "correcta": 0,
+      "tip": "El cuadrado tiene 4 ejes de simetría: 2 por las mitades de los lados y 2 por las diagonales.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa14-003",
+      "oa": "MA08 OA 14",
+      "pregunta": "¿Cuántos ejes de simetría tiene un triángulo equilátero?",
+      "opciones": [
+        "1 eje",
+        "3 ejes",
+        "2 ejes",
+        "6 ejes"
+      ],
+      "correcta": 1,
+      "tip": "El triángulo equilátero tiene 3 ejes de simetría, uno por cada vértice hacia el lado opuesto.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa14-004",
+      "oa": "MA08 OA 14",
+      "pregunta": "¿Cuántos ejes de simetría tiene un rectángulo que no es cuadrado?",
+      "opciones": [
+        "4 ejes",
+        "1 eje",
+        "2 ejes",
+        "0 ejes"
+      ],
+      "correcta": 2,
+      "tip": "El rectángulo tiene 2 ejes de simetría, que pasan por los puntos medios de los lados opuestos.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa14-005",
+      "oa": "MA08 OA 14",
+      "pregunta": "¿Cuántos ejes de simetría tiene un pentágono regular?",
+      "opciones": [
+        "4 ejes",
+        "10 ejes",
+        "1 eje",
+        "5 ejes"
+      ],
+      "correcta": 3,
+      "tip": "Un polígono regular de n lados tiene n ejes de simetría; el pentágono regular tiene 5.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa14-006",
+      "oa": "MA08 OA 14",
+      "pregunta": "¿Cuántos ejes de simetría tiene un hexágono regular?",
+      "opciones": [
+        "6 ejes",
+        "3 ejes",
+        "12 ejes",
+        "2 ejes"
+      ],
+      "correcta": 0,
+      "tip": "Un polígono regular de n lados tiene n ejes de simetría; el hexágono regular tiene 6.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa14-007",
+      "oa": "MA08 OA 14",
+      "pregunta": "¿Cuántos ejes de simetría tiene un círculo?",
+      "opciones": [
+        "1",
+        "Infinitos",
+        "4",
+        "Ninguno"
+      ],
+      "correcta": 1,
+      "tip": "El círculo tiene infinitos ejes de simetría: cualquier recta que pase por su centro lo divide en dos mitades iguales.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa14-008",
+      "oa": "MA08 OA 14",
+      "pregunta": "¿Cuándo se dice que dos figuras son congruentes?",
+      "opciones": [
+        "Solo igual forma",
+        "Solo igual tamaño",
+        "Igual forma y igual tamaño",
+        "Distinto tamaño"
+      ],
+      "correcta": 2,
+      "tip": "Dos figuras son congruentes cuando tienen la misma forma y el mismo tamaño; una se puede llevar sobre la otra con transformaciones isométricas.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa14-009",
+      "oa": "MA08 OA 14",
+      "pregunta": "Las transformaciones isométricas (traslación, rotación y reflexión) conservan...",
+      "opciones": [
+        "Solo el color",
+        "Solo la posición",
+        "El tamaño pero no la forma",
+        "La forma y el tamaño"
+      ],
+      "correcta": 3,
+      "tip": "Una transformación isométrica mantiene la forma y el tamaño de la figura; solo cambia su posición u orientación.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa14-010",
+      "oa": "MA08 OA 14",
+      "pregunta": "En un giro completo (360°) alrededor de su centro, ¿cuántas veces coincide un triángulo equilátero consigo mismo?",
+      "opciones": [
+        "3 veces",
+        "1 vez",
+        "2 veces",
+        "6 veces"
+      ],
+      "correcta": 0,
+      "tip": "El triángulo equilátero tiene simetría rotacional de orden 3: coincide consigo mismo al girar 120°, 240° y 360°.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa14-011",
+      "oa": "MA08 OA 14",
+      "pregunta": "En un giro completo (360°) alrededor de su centro, ¿cuántas veces coincide un cuadrado consigo mismo?",
+      "opciones": [
+        "2 veces",
+        "4 veces",
+        "1 vez",
+        "8 veces"
+      ],
+      "correcta": 1,
+      "tip": "El cuadrado tiene simetría rotacional de orden 4: coincide al girar 90°, 180°, 270° y 360°.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa14-012",
+      "oa": "MA08 OA 14",
+      "pregunta": "La composición de dos reflexiones sobre dos ejes perpendiculares que se cortan equivale a...",
+      "opciones": [
+        "Una traslación",
+        "Una sola reflexión",
+        "Una rotación de 180°",
+        "Una rotación de 90°"
+      ],
+      "correcta": 2,
+      "tip": "Dos reflexiones sobre ejes perpendiculares equivalen a una rotación de 180° en torno al punto donde se cruzan los ejes.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa14-013",
+      "oa": "MA08 OA 14",
+      "pregunta": "¿Cuál de estos polígonos regulares NO puede teselar (cubrir) el plano por sí solo, sin dejar huecos?",
+      "opciones": [
+        "Triángulo equilátero",
+        "Cuadrado",
+        "Hexágono regular",
+        "Pentágono regular"
+      ],
+      "correcta": 3,
+      "tip": "El triángulo, el cuadrado y el hexágono regular teselan el plano; el pentágono regular no, porque sus ángulos no encajan sin dejar huecos.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa14-014",
+      "oa": "MA08 OA 14",
+      "pregunta": "Al punto (2, 2) se le aplica primero una traslación de vector (3, 0) y luego una reflexión respecto al eje X. ¿Cuál es su imagen final?",
+      "opciones": [
+        "(5, -2)",
+        "(5, 2)",
+        "(-1, -2)",
+        "(-5, -2)"
+      ],
+      "correcta": 0,
+      "tip": "Primero la traslación: (2+3, 2) = (5, 2). Luego la reflexión respecto al eje X cambia el signo de la y: (5, -2).",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa14-015",
+      "oa": "MA08 OA 14",
+      "pregunta": "Un triángulo tiene lados de 3, 4 y 5 cm. Si otro triángulo es congruente con él, ¿cuánto miden sus lados?",
+      "opciones": [
+        "6, 8 y 10 cm",
+        "3, 4 y 5 cm",
+        "4, 5 y 6 cm",
+        "3, 3 y 3 cm"
+      ],
+      "correcta": 1,
+      "tip": "Las figuras congruentes tienen lados iguales, por lo que el otro triángulo también mide 3, 4 y 5 cm.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa14-016",
+      "oa": "MA08 OA 14",
+      "pregunta": "¿Cuántos ejes de simetría tiene un paralelogramo común (que no es rombo ni rectángulo)?",
+      "opciones": [
+        "2 ejes",
+        "4 ejes",
+        "0 ejes",
+        "1 eje"
+      ],
+      "correcta": 2,
+      "tip": "Un paralelogramo común no tiene ejes de simetría; solo posee simetría de rotación de 180° respecto a su centro.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa14-017",
+      "oa": "MA08 OA 14",
+      "pregunta": "¿Cuántos ejes de simetría tiene un rombo (que no es cuadrado)?",
+      "opciones": [
+        "4 ejes",
+        "1 eje",
+        "0 ejes",
+        "2 ejes"
+      ],
+      "correcta": 3,
+      "tip": "El rombo tiene 2 ejes de simetría, que coinciden con sus dos diagonales.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa14-018",
+      "oa": "MA08 OA 14",
+      "pregunta": "En un giro completo (360°), ¿cuántas veces coincide consigo mismo un rectángulo que no es cuadrado?",
+      "opciones": [
+        "2 veces",
+        "4 veces",
+        "1 vez",
+        "3 veces"
+      ],
+      "correcta": 0,
+      "tip": "El rectángulo tiene simetría rotacional de orden 2: coincide al girar 180° y 360°.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa14-019",
+      "oa": "MA08 OA 14",
+      "pregunta": "Si reflejas una figura sobre un eje y luego la vuelves a reflejar sobre el mismo eje, ¿dónde queda?",
+      "opciones": [
+        "A una posición rotada",
+        "A su posición original",
+        "A una posición trasladada",
+        "A una figura más grande"
+      ],
+      "correcta": 1,
+      "tip": "Dos reflexiones sobre el mismo eje se cancelan: la figura regresa exactamente a su posición original.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa14-020",
+      "oa": "MA08 OA 14",
+      "pregunta": "Se aplican al punto (0, 0) dos traslaciones seguidas: el vector (-2, 3) y luego el vector (2, -3). ¿Cuál es su imagen final?",
+      "opciones": [
+        "(4, 6)",
+        "(0, 6)",
+        "(0, 0)",
+        "(-4, 0)"
+      ],
+      "correcta": 2,
+      "tip": "Los vectores se suman: (-2+2, 3-3) = (0, 0). La figura vuelve a su lugar de partida.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa14-021",
+      "oa": "MA08 OA 14",
+      "pregunta": "¿Cuántos ejes de simetría tiene un octágono regular?",
+      "opciones": [
+        "4 ejes",
+        "16 ejes",
+        "6 ejes",
+        "8 ejes"
+      ],
+      "correcta": 3,
+      "tip": "Un polígono regular de n lados tiene n ejes de simetría; el octágono regular tiene 8.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa14-022",
+      "oa": "MA08 OA 14",
+      "pregunta": "Si a una figura se le aplican cuatro rotaciones seguidas de 90° respecto al mismo centro, ¿a qué giro total equivale?",
+      "opciones": [
+        "360° (queda en su posición original)",
+        "180°",
+        "90°",
+        "270°"
+      ],
+      "correcta": 0,
+      "tip": "Cuatro rotaciones de 90° suman 4 × 90° = 360°, es decir, un giro completo: la figura queda en su posición original.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa14-023",
+      "oa": "MA08 OA 14",
+      "pregunta": "Al reflejar una figura respecto a un eje, ¿cómo es la imagen comparada con la figura original?",
+      "opciones": [
+        "Más grande que la original",
+        "Congruente con la original (igual forma y tamaño)",
+        "Más pequeña que la original",
+        "De distinta forma"
+      ],
+      "correcta": 1,
+      "tip": "La reflexión es una transformación isométrica: la imagen es congruente con la original, con igual forma y tamaño (cambia solo su orientación).",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa14-024",
+      "oa": "MA08 OA 14",
+      "pregunta": "La composición de dos traslaciones seguidas siempre da como resultado...",
+      "opciones": [
+        "Una rotación",
+        "Una reflexión",
+        "Una traslación",
+        "Una figura de distinto tamaño"
+      ],
+      "correcta": 2,
+      "tip": "Sumar dos vectores da otro vector, por eso componer dos traslaciones siempre resulta en una única traslación.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa14-025",
+      "oa": "MA08 OA 14",
+      "pregunta": "¿Cuál de estas letras mayúsculas tiene un eje de simetría vertical?",
+      "opciones": [
+        "F",
+        "L",
+        "P",
+        "A"
+      ],
+      "correcta": 3,
+      "tip": "La letra A es simétrica respecto a una recta vertical que pasa por su centro; F, L y P no tienen esa simetría.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa15-001",
+      "oa": "MA08 OA 15",
+      "pregunta": "Halla la mediana de estos datos ya ordenados: 3, 7, 8, 12, 20.",
+      "opciones": [
+        "8",
+        "10",
+        "7",
+        "12"
+      ],
+      "correcta": 0,
+      "tip": "Con 5 datos ordenados, la mediana es el valor central (el 3.º). No la confundas con el promedio (que aquí sería 10).",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa15-002",
+      "oa": "MA08 OA 15",
+      "pregunta": "Halla la mediana del conjunto: 4, 6, 9, 11.",
+      "opciones": [
+        "9",
+        "7,5",
+        "6",
+        "7"
+      ],
+      "correcta": 1,
+      "tip": "Con una cantidad par de datos, la mediana es el promedio de los dos valores centrales: (6+9)/2 = 7,5.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa15-003",
+      "oa": "MA08 OA 15",
+      "pregunta": "Halla la mediana de: 15, 2, 9, 4, 7.",
+      "opciones": [
+        "9",
+        "4",
+        "7",
+        "8,4"
+      ],
+      "correcta": 2,
+      "tip": "Primero ordena los datos: 2, 4, 7, 9, 15. Solo entonces toma el valor central (7). Si no ordenas, te equivocas.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa15-004",
+      "oa": "MA08 OA 15",
+      "pregunta": "El primer cuartil (Q1) de un conjunto de datos es el valor que:",
+      "opciones": [
+        "deja aproximadamente el 25% de los datos por encima de el",
+        "ocupa exactamente el centro de los datos",
+        "es el mayor de todos los datos",
+        "deja aproximadamente el 25% de los datos por debajo de el"
+      ],
+      "correcta": 3,
+      "tip": "El primer cuartil (Q1) separa el 25% menor del resto. La mediana (Q2) deja el 50% por debajo.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa15-005",
+      "oa": "MA08 OA 15",
+      "pregunta": "La mediana de un conjunto de datos coincide siempre con:",
+      "opciones": [
+        "el percentil 50",
+        "el percentil 25",
+        "el percentil 75",
+        "el percentil 100"
+      ],
+      "correcta": 0,
+      "tip": "La mediana deja la mitad de los datos por debajo, por eso equivale al percentil 50 (también llamado Q2).",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa15-006",
+      "oa": "MA08 OA 15",
+      "pregunta": "En un diagrama de cajon, ¿que representa la linea que esta dentro de la caja?",
+      "opciones": [
+        "el valor máximo",
+        "la mediana",
+        "el rango",
+        "el promedio"
+      ],
+      "correcta": 1,
+      "tip": "La linea interior de la caja marca la mediana (Q2). Los extremos de la caja son Q1 y Q3.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa15-007",
+      "oa": "MA08 OA 15",
+      "pregunta": "El rango de los datos 5, 8, 12, 20, 3 es:",
+      "opciones": [
+        "20",
+        "12",
+        "17",
+        "8"
+      ],
+      "correcta": 2,
+      "tip": "El rango es la diferencia entre el mayor y el menor: 20 - 3 = 17.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa15-008",
+      "oa": "MA08 OA 15",
+      "pregunta": "Los cuartiles dividen un conjunto de datos ordenados en:",
+      "opciones": [
+        "dos mitades iguales",
+        "tres partes iguales",
+        "diez partes iguales",
+        "cuatro grupos con aproximadamente la misma cantidad de datos"
+      ],
+      "correcta": 3,
+      "tip": "Los cuartiles (Q1, Q2, Q3) parten los datos en cuatro grupos de aproximadamente 25% cada uno.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa15-009",
+      "oa": "MA08 OA 15",
+      "pregunta": "Para el conjunto 2, 4, 6, 8, 10, 12, 14, 16, el primer cuartil (Q1) es:",
+      "opciones": [
+        "5",
+        "4",
+        "6",
+        "9"
+      ],
+      "correcta": 0,
+      "tip": "La mediana es 9 (promedio de 8 y 10). Q1 es la mediana de la mitad inferior (2,4,6,8): (4+6)/2 = 5.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa15-010",
+      "oa": "MA08 OA 15",
+      "pregunta": "Para el conjunto 2, 4, 6, 8, 10, 12, 14, 16, el tercer cuartil (Q3) es:",
+      "opciones": [
+        "14",
+        "13",
+        "12",
+        "9"
+      ],
+      "correcta": 1,
+      "tip": "Q3 es la mediana de la mitad superior (10,12,14,16): (12+14)/2 = 13.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa15-011",
+      "oa": "MA08 OA 15",
+      "pregunta": "Si en un conjunto Q1 = 5 y Q3 = 13, el rango intercuartil (Q3 - Q1) es:",
+      "opciones": [
+        "18",
+        "9",
+        "8",
+        "13"
+      ],
+      "correcta": 2,
+      "tip": "El rango intercuartil mide la dispersión del 50% central: Q3 - Q1 = 13 - 5 = 8.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa15-012",
+      "oa": "MA08 OA 15",
+      "pregunta": "El percentil 25 de un conjunto de datos corresponde a:",
+      "opciones": [
+        "el segundo cuartil (Q2)",
+        "el tercer cuartil (Q3)",
+        "el valor máximo",
+        "el primer cuartil (Q1)"
+      ],
+      "correcta": 3,
+      "tip": "El percentil 25 deja el 25% de los datos por debajo, igual que el primer cuartil (Q1).",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa15-013",
+      "oa": "MA08 OA 15",
+      "pregunta": "El percentil 75 de un conjunto de datos corresponde a:",
+      "opciones": [
+        "el tercer cuartil (Q3)",
+        "el primer cuartil (Q1)",
+        "la mediana",
+        "el rango"
+      ],
+      "correcta": 0,
+      "tip": "El percentil 75 deja el 75% de los datos por debajo, igual que el tercer cuartil (Q3).",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa15-014",
+      "oa": "MA08 OA 15",
+      "pregunta": "El curso A tiene mediana de estatura 152 cm y el curso B, 145 cm. ¿Que puedes afirmar?",
+      "opciones": [
+        "todos los estudiantes de A son más altos que los de B",
+        "las estaturas del curso A tienden a ser mayores que las del curso B",
+        "el curso B tiene más estudiantes que el A",
+        "ambos cursos tienen la misma estatura"
+      ],
+      "correcta": 1,
+      "tip": "Una mediana mayor indica que, en general, los valores tienden a ser más altos, aunque no significa que TODOS lo sean.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa15-015",
+      "oa": "MA08 OA 15",
+      "pregunta": "En una prueba, Ana quedo en el percentil 90. Esto significa que:",
+      "opciones": [
+        "obtuvo 90 puntos en la prueba",
+        "solo el 90% de las preguntas estaban bien",
+        "superó aproximadamente al 90% de quienes rindieron la prueba",
+        "el 90% obtuvo mejor puntaje que Ana"
+      ],
+      "correcta": 2,
+      "tip": "El percentil 90 indica que cerca del 90% de las personas obtuvo un puntaje igual o menor que el de Ana.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa15-016",
+      "oa": "MA08 OA 15",
+      "pregunta": "¿Que medida de posición se ve MENOS afectada por un valor extremo (muy grande o muy chico)?",
+      "opciones": [
+        "el promedio",
+        "el rango",
+        "el máximo",
+        "la mediana"
+      ],
+      "correcta": 3,
+      "tip": "La mediana solo depende de la posición central, no del tamaño de los valores extremos; por eso es más resistente que el promedio.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa15-017",
+      "oa": "MA08 OA 15",
+      "pregunta": "Halla la mediana de: 10, 20, 30, 40, 50, 60.",
+      "opciones": [
+        "35",
+        "30",
+        "40",
+        "45"
+      ],
+      "correcta": 0,
+      "tip": "Con 6 datos, la mediana es el promedio de los dos centrales (30 y 40): (30+40)/2 = 35.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa15-018",
+      "oa": "MA08 OA 15",
+      "pregunta": "En un diagrama de cajon, la caja (entre Q1 y Q3) representa:",
+      "opciones": [
+        "el 25% menor de los datos",
+        "el 50% central de los datos",
+        "todos los datos",
+        "solo la mediana"
+      ],
+      "correcta": 1,
+      "tip": "La caja va de Q1 a Q3 y contiene el 50% central de los datos (el rango intercuartil).",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa15-019",
+      "oa": "MA08 OA 15",
+      "pregunta": "Un diagrama de cajon muestra: mínimo 2, Q1 = 5, mediana 8, Q3 = 12, máximo 20. El rango es:",
+      "opciones": [
+        "7",
+        "8",
+        "18",
+        "15"
+      ],
+      "correcta": 2,
+      "tip": "El rango es máximo menos mínimo: 20 - 2 = 18. No lo confundas con el rango intercuartil (Q3 - Q1).",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa15-020",
+      "oa": "MA08 OA 15",
+      "pregunta": "Un diagrama de cajon muestra: mínimo 2, Q1 = 5, mediana 8, Q3 = 12, máximo 20. El rango intercuartil es:",
+      "opciones": [
+        "18",
+        "12",
+        "10",
+        "7"
+      ],
+      "correcta": 3,
+      "tip": "El rango intercuartil es Q3 - Q1 = 12 - 5 = 7. Mide cuan dispersos estan el 50% central de los datos.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa15-021",
+      "oa": "MA08 OA 15",
+      "pregunta": "Un diagrama de cajon muestra: mínimo 2, Q1 = 5, mediana 8, Q3 = 12, máximo 20. ¿Que porcentaje de los datos está entre Q1 y Q3?",
+      "opciones": [
+        "aproximadamente el 50%",
+        "aproximadamente el 25%",
+        "aproximadamente el 75%",
+        "el 100%"
+      ],
+      "correcta": 0,
+      "tip": "Entre Q1 y Q3 siempre esta cerca del 50% central de los datos, sin importar los valores concretos.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa15-022",
+      "oa": "MA08 OA 15",
+      "pregunta": "Dos cursos tienen la misma mediana de notas, pero el curso A tiene un rango de 2,0 y el curso B un rango de 5,0. ¿Que curso es más parejo?",
+      "opciones": [
+        "el curso B, porque tiene mayor rango",
+        "el curso A, porque sus notas estan menos dispersas",
+        "son igual de parejos porque tienen la misma mediana",
+        "no se puede saber con esa información"
+      ],
+      "correcta": 1,
+      "tip": "Un rango menor indica menos dispersión: las notas del curso A estan más juntas, o sea, es más parejo.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa15-023",
+      "oa": "MA08 OA 15",
+      "pregunta": "El valor de Q2 (segundo cuartil) de un conjunto de datos siempre es igual a:",
+      "opciones": [
+        "el promedio",
+        "el máximo",
+        "la mediana",
+        "el rango"
+      ],
+      "correcta": 2,
+      "tip": "El segundo cuartil (Q2) coincide con la mediana y con el percentil 50.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa15-024",
+      "oa": "MA08 OA 15",
+      "pregunta": "¿Cuál es el primer paso obligatorio antes de calcular la mediana de un conjunto de datos?",
+      "opciones": [
+        "sumar todos los datos",
+        "eliminar el dato mayor",
+        "multiplicar los datos por la cantidad de datos",
+        "ordenar los datos de menor a mayor"
+      ],
+      "correcta": 3,
+      "tip": "La mediana es el valor central de los datos ORDENADOS. Si no ordenas primero, obtienes un resultado incorrecto.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa15-025",
+      "oa": "MA08 OA 15",
+      "pregunta": "El percentil 50 de un conjunto de datos deja por debajo de el aproximadamente:",
+      "opciones": [
+        "la mitad de los datos",
+        "un cuarto de los datos",
+        "tres cuartos de los datos",
+        "todos los datos"
+      ],
+      "correcta": 0,
+      "tip": "El percentil 50 (la mediana) deja el 50%, es decir, la mitad de los datos por debajo.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa16-001",
+      "oa": "MA08 OA 16",
+      "pregunta": "Un gráfico de barras muestra el eje vertical comenzando en 90 en lugar de 0. ¿Por qué puede engañar?",
+      "opciones": [
+        "porque las barras quedan del mismo alto",
+        "porque exagera visualmente las diferencias entre las barras",
+        "porque muestra menos datos de los reales",
+        "porque cambia el color de las barras"
+      ],
+      "correcta": 1,
+      "tip": "Al cortar el eje (no empezar en 0), pequeñas diferencias se ven enormes. Para comparar magnitudes, el eje debería partir en 0.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa16-002",
+      "oa": "MA08 OA 16",
+      "pregunta": "Para que la comparación de las alturas de las barras sea honesta, el eje vertical debería:",
+      "opciones": [
+        "comenzar en el valor más alto",
+        "no tener números",
+        "comenzar en cero",
+        "estar invertido"
+      ],
+      "correcta": 2,
+      "tip": "Solo si el eje parte en 0 la altura de cada barra es proporcional a su valor; así la comparación visual es justa.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa16-003",
+      "oa": "MA08 OA 16",
+      "pregunta": "En un gráfico circular, la suma de los porcentajes de todos los sectores debe ser:",
+      "opciones": [
+        "50%",
+        "360%",
+        "cualquier valor",
+        "100%"
+      ],
+      "correcta": 3,
+      "tip": "El gráfico circular representa el total (100%). Si los sectores no suman 100%, hay un error en los datos.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa16-004",
+      "oa": "MA08 OA 16",
+      "pregunta": "Un pictograma usa iconos de personas de distinto tamaño para representar cantidades. Esto es un problema porque:",
+      "opciones": [
+        "el tamaño distinto distorsiona la comparación real de las cantidades",
+        "los iconos deben ser siempre de colores",
+        "los pictogramas no sirven para comparar",
+        "faltan los números exactos siempre"
+      ],
+      "correcta": 0,
+      "tip": "En un pictograma cada icono debe representar la misma cantidad y tener el mismo tamaño; si varian, engañan a la vista.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa16-005",
+      "oa": "MA08 OA 16",
+      "pregunta": "El ministerio muestra dos gráficos con los MISMOS datos, pero uno usa un eje que parte en 0 y el otro en 95. ¿Cuál representa los datos de forma más honesta?",
+      "opciones": [
+        "el que parte en 95",
+        "el que parte en 0",
+        "los dos engañan igual",
+        "el que tenga barras más altas"
+      ],
+      "correcta": 1,
+      "tip": "El gráfico con eje desde 0 muestra las proporciones reales; el que parte en 95 exagera diferencias pequeñas.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa16-006",
+      "oa": "MA08 OA 16",
+      "pregunta": "¿Que tipo de gráfico es más adecuado para mostrar como se reparte un total en partes (por ejemplo, el gasto mensual)?",
+      "opciones": [
+        "un gráfico de lineas",
+        "un diagrama de cajon",
+        "un gráfico circular",
+        "un diagrama de árbol"
+      ],
+      "correcta": 2,
+      "tip": "El gráfico circular muestra bien las partes de un todo. El de lineas sirve para evolución en el tiempo.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa16-007",
+      "oa": "MA08 OA 16",
+      "pregunta": "¿Que tipo de gráfico es más adecuado para mostrar la evolución de la temperatura durante una semana?",
+      "opciones": [
+        "un gráfico circular",
+        "un pictograma",
+        "una tabla de doble entrada",
+        "un gráfico de lineas"
+      ],
+      "correcta": 3,
+      "tip": "El gráfico de lineas muestra bien como cambia una variable a lo largo del tiempo.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa16-008",
+      "oa": "MA08 OA 16",
+      "pregunta": "Un gráfico de barras no tiene números ni título en los ejes. ¿Que problema tiene?",
+      "opciones": [
+        "no se puede saber que representa ni cuánto vale cada barra",
+        "se ve más ordenado así",
+        "las barras son más faciles de dibujar",
+        "no tiene ningun problema"
+      ],
+      "correcta": 0,
+      "tip": "Sin escala ni etiquetas, un gráfico no es confiable: no permite leer los valores ni saber que se esta comparando.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa16-009",
+      "oa": "MA08 OA 16",
+      "pregunta": "Para representar el DOBLE de una cantidad, un diseñador dibuja una figura con el doble de alto Y el doble de ancho. ¿Por qué engaña?",
+      "opciones": [
+        "porque la figura queda más pequeña",
+        "porque el área queda cuatro veces mayor, no el doble",
+        "porque el color se ve distinto",
+        "porque no se puede dibujar el doble"
+      ],
+      "correcta": 1,
+      "tip": "Al duplicar alto y ancho, el área se multiplica por 4 (2x2). La vista percibe una diferencia mucho mayor que el doble real.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa16-010",
+      "oa": "MA08 OA 16",
+      "pregunta": "¿Que gráfico es más adecuado para comparar la cantidad de estudiantes de distintos cursos?",
+      "opciones": [
+        "un gráfico de lineas",
+        "un gráfico circular con un solo sector",
+        "un gráfico de barras",
+        "un diagrama de árbol"
+      ],
+      "correcta": 2,
+      "tip": "El gráfico de barras permite comparar fácilmente categorias distintas (los cursos) segun su cantidad.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa16-011",
+      "oa": "MA08 OA 16",
+      "pregunta": "Una noticia dice 'las ventas subieron 200%' pero muestra solo el mes en que más crecieron y oculta el resto del año. Esto es:",
+      "opciones": [
+        "una forma correcta de mostrar datos",
+        "un error de cálculo del porcentaje",
+        "un gráfico circular mal pintado",
+        "una manipulación por elegir solo los datos que convienen"
+      ],
+      "correcta": 3,
+      "tip": "Mostrar solo una parte conveniente de los datos (y ocultar el resto) distorsiona la realidad; es una manipulación.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa16-012",
+      "oa": "MA08 OA 16",
+      "pregunta": "En un gráfico de barras, una barra vale 102 y otra 100, pero la primera se ve el DOBLE de alta. ¿Que explica esto?",
+      "opciones": [
+        "el eje vertical no comienza en 0, sino en un valor alto",
+        "la primera barra tiene más datos escondidos",
+        "es imposible que ocurra",
+        "las barras estan pintadas de distinto color"
+      ],
+      "correcta": 0,
+      "tip": "Si el eje parte, por ejemplo, en 99, la diferencia entre 100 y 102 se ve enorme aunque sea muy pequeña.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa16-013",
+      "oa": "MA08 OA 16",
+      "pregunta": "Un gráfico de lineas usa intervalos de tiempo desiguales en el eje horizontal (2020, 2021, 2025). ¿Que problema causa?",
+      "opciones": [
+        "hace el gráfico más exacto",
+        "distorsiona la percepción de como cambian los datos en el tiempo",
+        "no afecta la lectura",
+        "obliga a usar más colores"
+      ],
+      "correcta": 1,
+      "tip": "Si los intervalos del eje no son uniformes, la pendiente de la linea engaña sobre la rapidez real de los cambios.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa16-014",
+      "oa": "MA08 OA 16",
+      "pregunta": "Dos gráficos circulares comparan 'la mitad de un curso de 20' con 'la mitad de un curso de 40'. Ambas mitades se ven iguales (50%). ¿Que información falta para comparar cuántos estudiantes son?",
+      "opciones": [
+        "el color de cada sector",
+        "el título del gráfico",
+        "los números absolutos (10 estudiantes frente a 20 estudiantes)",
+        "nada, los porcentajes bastan"
+      ],
+      "correcta": 2,
+      "tip": "Un mismo porcentaje puede representar cantidades muy distintas. Para comparar cantidades reales se necesitan los números absolutos.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa16-015",
+      "oa": "MA08 OA 16",
+      "pregunta": "¿Cuál de estas afirmaciones describe un gráfico honesto?",
+      "opciones": [
+        "el eje comienza en un valor alto para resaltar diferencias",
+        "no muestra la escala para no confundir",
+        "usa figuras de distinto tamaño para el mismo valor",
+        "el eje comienza en 0, tiene escala uniforme y ejes rotulados"
+      ],
+      "correcta": 3,
+      "tip": "Un gráfico honesto parte del 0, usa una escala pareja y rotula sus ejes para que se pueda leer sin engaños.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa16-016",
+      "oa": "MA08 OA 16",
+      "pregunta": "En un gráfico circular, un sector rotulado '25%' ocupa visiblemente la mitad del circulo. Esto indica que:",
+      "opciones": [
+        "el gráfico esta mal construido y distorsiona los datos",
+        "el 25% siempre es la mitad",
+        "el circulo es más grande de lo normal",
+        "el sector tiene más colores"
+      ],
+      "correcta": 0,
+      "tip": "Un sector del 25% debe ocupar un cuarto del circulo. Si ocupa la mitad, el gráfico esta distorsionado.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa16-017",
+      "oa": "MA08 OA 16",
+      "pregunta": "¿Por qué es importante que un gráfico de barras incluya la linea base en 0?",
+      "opciones": [
+        "para que el gráfico tenga más color",
+        "para que la altura de cada barra sea proporcional a su valor",
+        "para que las barras sean más delgadas",
+        "porque así lo exige el tamaño del papel"
+      ],
+      "correcta": 1,
+      "tip": "Con la base en 0, la altura de la barra representa fielmente el valor. Si no, la comparación visual engaña.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa16-018",
+      "oa": "MA08 OA 16",
+      "pregunta": "Una empresa dice '9 de cada 10 recomiendan el producto', pero solo encuesto a 10 personas elegidas por ella. ¿Que problema hay?",
+      "opciones": [
+        "el porcentaje esta mal calculado",
+        "debería haber usado un gráfico de lineas",
+        "la muestra es muy pequeña y no fue elegida al azar, por lo que no es confiable",
+        "no hay ningun problema"
+      ],
+      "correcta": 2,
+      "tip": "Una conclusión basada en pocos datos elegidos convenientemente no es representativa; los datos pueden estar sesgados.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa16-019",
+      "oa": "MA08 OA 16",
+      "pregunta": "Para comparar de forma justa dos gráficos de barras de un mismo tema, ambos deben tener:",
+      "opciones": [
+        "distinto color de barras",
+        "distinta cantidad de barras",
+        "títulos diferentes",
+        "la misma escala en el eje vertical"
+      ],
+      "correcta": 3,
+      "tip": "Si las escalas verticales son distintas, dos gráficos no se pueden comparar directamente aunque muestren lo mismo.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa16-020",
+      "oa": "MA08 OA 16",
+      "pregunta": "Un gráfico afirma que un equipo 'domino el partido', mostrando solo los minutos en que iba ganando. Esto es un ejemplo de:",
+      "opciones": [
+        "seleccionar datos para reforzar una conclusión (sesgo)",
+        "un cálculo de promedio",
+        "un uso correcto del gráfico de lineas",
+        "un error en la escala del eje"
+      ],
+      "correcta": 0,
+      "tip": "Elegir solo la parte de los datos que apoya una conclusión, ocultando el resto, es una forma de manipulación.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa16-021",
+      "oa": "MA08 OA 16",
+      "pregunta": "¿Que representa mejor la proporción de estudiantes que prefieren cada color entre 4 opciones?",
+      "opciones": [
+        "un gráfico de lineas con cuatro puntos",
+        "un gráfico circular con cuatro sectores",
+        "un diagrama de cajon",
+        "una sola barra"
+      ],
+      "correcta": 1,
+      "tip": "Cuando quieres mostrar como se reparte un total entre pocas categorias, el gráfico circular es muy claro.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa16-022",
+      "oa": "MA08 OA 16",
+      "pregunta": "Un titular dice 'el doble de casos que el año pasado', pero pasa de 1 caso a 2 casos. ¿Por qué puede ser engañoso el titular?",
+      "opciones": [
+        "porque 2 no es el doble de 1",
+        "porque falta un gráfico circular",
+        "porque, aunque es el doble, se trata de números muy pequeños y poco relevantes",
+        "porque el porcentaje esta mal"
+      ],
+      "correcta": 2,
+      "tip": "Un cambio de 1 a 2 es un 100% de aumento, pero en números tan pequeños puede no ser significativo. El contexto importa.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa16-023",
+      "oa": "MA08 OA 16",
+      "pregunta": "¿Cuál es una razón válida para desconfiar de un gráfico que viste en redes sociales?",
+      "opciones": [
+        "usa el color azul",
+        "tiene un título",
+        "muestra barras verticales",
+        "no indica la fuente ni la escala de los datos"
+      ],
+      "correcta": 3,
+      "tip": "Un gráfico confiable indica su fuente, su escala y sus unidades. Si faltan, conviene desconfiar de sus conclusiones.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa16-024",
+      "oa": "MA08 OA 16",
+      "pregunta": "Si dos representaciones muestran los mismos datos pero llevan a conclusiones opuestas, lo más probable es que:",
+      "opciones": [
+        "al menos una use una escala o selección de datos que distorsiona",
+        "los datos sean falsos en ambas",
+        "las dos sean igual de correctas",
+        "la de barras siempre tenga la razón"
+      ],
+      "correcta": 0,
+      "tip": "Los mismos datos honestos no deberían dar conclusiones opuestas; la diferencia suele venir de la escala o de datos omitidos.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa16-025",
+      "oa": "MA08 OA 16",
+      "pregunta": "En un gráfico de barras que compara 4 productos, se ordena a proposito para que uno quede primero aunque no sea el mayor. La mejor forma de leerlo con sentido critico es:",
+      "opciones": [
+        "confiar en que el primero es siempre el mayor",
+        "fijarse en los valores numericos de cada barra, no solo en el orden",
+        "mirar solo el color de las barras",
+        "leer unicamente el título"
+      ],
+      "correcta": 1,
+      "tip": "El orden de las barras puede acomodarse para dar una impresión. Siempre conviene leer los valores reales de la escala.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa17-001",
+      "oa": "MA08 OA 17",
+      "pregunta": "Tienes 3 poleras y 2 pantalones. ¿Cuántas tenidas distintas (polera y pantalon) puedes armar?",
+      "opciones": [
+        "5",
+        "9",
+        "6",
+        "3"
+      ],
+      "correcta": 2,
+      "tip": "Por el principio multiplicativo: 3 x 2 = 6. Sumar (3+2=5) es el error típico; aquí debes multiplicar.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa17-002",
+      "oa": "MA08 OA 17",
+      "pregunta": "Una heladeria ofrece 4 sabores y 3 tamaños de cono. ¿Cuántas combinaciones de un sabor y un tamaño hay?",
+      "opciones": [
+        "7",
+        "9",
+        "24",
+        "12"
+      ],
+      "correcta": 3,
+      "tip": "Principio multiplicativo: 4 x 3 = 12. Cada sabor puede ir con cada tamaño.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa17-003",
+      "oa": "MA08 OA 17",
+      "pregunta": "Un menu tiene 2 entradas, 3 platos de fondo y 2 postres. ¿Cuántos menus distintos (una de cada) se pueden armar?",
+      "opciones": [
+        "12",
+        "7",
+        "8",
+        "6"
+      ],
+      "correcta": 0,
+      "tip": "Se multiplican las opciones de cada etapa: 2 x 3 x 2 = 12.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa17-004",
+      "oa": "MA08 OA 17",
+      "pregunta": "Se lanza una moneda 3 veces seguidas. ¿Cuántos resultados distintos (por ejemplo cara-sello-cara) son posibles?",
+      "opciones": [
+        "6",
+        "8",
+        "3",
+        "9"
+      ],
+      "correcta": 1,
+      "tip": "Cada lanzamiento tiene 2 resultados: 2 x 2 x 2 = 8. Un diagrama de árbol lo confirma.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa17-005",
+      "oa": "MA08 OA 17",
+      "pregunta": "Se lanza un dado (6 caras) y una moneda (2 caras) a la vez. ¿Cuántos resultados posibles hay?",
+      "opciones": [
+        "8",
+        "36",
+        "12",
+        "6"
+      ],
+      "correcta": 2,
+      "tip": "Principio multiplicativo: 6 x 2 = 12 resultados posibles.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa17-006",
+      "oa": "MA08 OA 17",
+      "pregunta": "Tienes 3 poleras, 2 pantalones y 2 pares de zapatos. ¿Cuántas tenidas completas distintas puedes armar?",
+      "opciones": [
+        "7",
+        "8",
+        "6",
+        "12"
+      ],
+      "correcta": 3,
+      "tip": "Se multiplican todas las etapas: 3 x 2 x 2 = 12.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa17-007",
+      "oa": "MA08 OA 17",
+      "pregunta": "Para ir del pueblo A al B hay 3 caminos, y del B al C hay 4 caminos. ¿De cuántas formas distintas puedes ir de A a C pasando por B?",
+      "opciones": [
+        "12",
+        "7",
+        "9",
+        "24"
+      ],
+      "correcta": 0,
+      "tip": "Por cada camino de A a B hay 4 de B a C: 3 x 4 = 12.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa17-008",
+      "oa": "MA08 OA 17",
+      "pregunta": "Una clave se forma con 2 digitos y cada digito puede ser del 0 al 9. ¿Cuántas claves distintas son posibles?",
+      "opciones": [
+        "20",
+        "100",
+        "90",
+        "99"
+      ],
+      "correcta": 1,
+      "tip": "Cada posición tiene 10 opciones (0 a 9): 10 x 10 = 100.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa17-009",
+      "oa": "MA08 OA 17",
+      "pregunta": "Un sandwich se arma eligiendo 1 de 3 tipos de pan, 1 de 4 rellenos y 1 de 2 salsas. ¿Cuántos sandwich distintos se pueden armar?",
+      "opciones": [
+        "9",
+        "12",
+        "24",
+        "14"
+      ],
+      "correcta": 2,
+      "tip": "Principio multiplicativo: 3 x 4 x 2 = 24.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa17-010",
+      "oa": "MA08 OA 17",
+      "pregunta": "¿De cuántas formas se puede elegir una polera entre 5 y un gorro entre 3?",
+      "opciones": [
+        "8",
+        "35",
+        "53",
+        "15"
+      ],
+      "correcta": 3,
+      "tip": "Se multiplican las opciones: 5 x 3 = 15. Sumar (5+3=8) es el error frecuente.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa17-011",
+      "oa": "MA08 OA 17",
+      "pregunta": "Con las letras A, B y C se forma una clave de 2 letras y se permite repetir (por ejemplo AA). ¿Cuántas claves distintas hay?",
+      "opciones": [
+        "9",
+        "6",
+        "3",
+        "12"
+      ],
+      "correcta": 0,
+      "tip": "Cada posición tiene 3 opciones y se puede repetir: 3 x 3 = 9.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa17-012",
+      "oa": "MA08 OA 17",
+      "pregunta": "Un diagrama de árbol comienza con 2 ramas, y de cada una salen 3 ramas más. ¿Cuántas ramas finales hay en total?",
+      "opciones": [
+        "5",
+        "6",
+        "9",
+        "8"
+      ],
+      "correcta": 1,
+      "tip": "Se multiplica la cantidad de ramas de cada nivel: 2 x 3 = 6 ramas finales.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa17-013",
+      "oa": "MA08 OA 17",
+      "pregunta": "Una pizza se pide eligiendo 1 de 3 tamaños y 1 de 4 ingredientes. ¿Cuántas pizzas distintas se pueden pedir?",
+      "opciones": [
+        "7",
+        "9",
+        "12",
+        "34"
+      ],
+      "correcta": 2,
+      "tip": "Principio multiplicativo: 3 x 4 = 12 combinaciones distintas.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa17-014",
+      "oa": "MA08 OA 17",
+      "pregunta": "Se lanzan 2 dados de 6 caras. ¿Cuántos resultados posibles hay al considerar el par (primer dado, segundo dado)?",
+      "opciones": [
+        "12",
+        "6",
+        "24",
+        "36"
+      ],
+      "correcta": 3,
+      "tip": "Cada dado tiene 6 caras: 6 x 6 = 36 pares posibles.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa17-015",
+      "oa": "MA08 OA 17",
+      "pregunta": "Una patente empieza con 1 letra (de 5 posibles) seguida de 1 número (del 0 al 9). ¿Cuántas patentes distintas se pueden formar?",
+      "opciones": [
+        "50",
+        "15",
+        "45",
+        "14"
+      ],
+      "correcta": 0,
+      "tip": "Principio multiplicativo: 5 x 10 = 50 combinaciones.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa17-016",
+      "oa": "MA08 OA 17",
+      "pregunta": "¿Cuántos números de 2 cifras se pueden formar usando solo los digitos 1, 2 y 3, si se permite repetir?",
+      "opciones": [
+        "6",
+        "9",
+        "3",
+        "12"
+      ],
+      "correcta": 1,
+      "tip": "Cada cifra tiene 3 opciones (1, 2 o 3) y se puede repetir: 3 x 3 = 9.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa17-017",
+      "oa": "MA08 OA 17",
+      "pregunta": "Camila tiene 4 poleras y quiere combinarlas con 3 collares. ¿Cuántas combinaciones de polera y collar puede hacer?",
+      "opciones": [
+        "7",
+        "43",
+        "12",
+        "9"
+      ],
+      "correcta": 2,
+      "tip": "Se multiplican las opciones: 4 x 3 = 12.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa17-018",
+      "oa": "MA08 OA 17",
+      "pregunta": "Para un trabajo hay que elegir una ruta de ida (2 opciones) y una de vuelta (3 opciones), pudiendo repetir camino. ¿Cuántos recorridos distintos hay?",
+      "opciones": [
+        "5",
+        "9",
+        "8",
+        "6"
+      ],
+      "correcta": 3,
+      "tip": "Principio multiplicativo: 2 x 3 = 6 recorridos posibles.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa17-019",
+      "oa": "MA08 OA 17",
+      "pregunta": "Un helado se arma con 1 de 5 sabores y 1 de 2 tipos de cono. ¿Cuántos helados distintos hay?",
+      "opciones": [
+        "10",
+        "7",
+        "52",
+        "25"
+      ],
+      "correcta": 0,
+      "tip": "Se multiplican las opciones: 5 x 2 = 10.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa17-020",
+      "oa": "MA08 OA 17",
+      "pregunta": "¿En cuál de estas situaciones se usa el principio multiplicativo para contar?",
+      "opciones": [
+        "contar cuántas personas hay en una fila",
+        "elegir una prenda de arriba y una de abajo, combinándolas de todas las formas posibles",
+        "sumar el dinero de dos alcancías",
+        "medir la altura de un edificio"
+      ],
+      "correcta": 1,
+      "tip": "El principio multiplicativo se usa cuando hay varias etapas de elección sucesivas e independientes y quieres contar todas las combinaciones.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa17-021",
+      "oa": "MA08 OA 17",
+      "pregunta": "Una tabla de doble entrada cruza 3 tipos de jugo (filas) con 4 tipos de galleta (columnas). ¿Cuántas casillas (combinaciones) tiene la tabla?",
+      "opciones": [
+        "7",
+        "34",
+        "12",
+        "9"
+      ],
+      "correcta": 2,
+      "tip": "La cantidad de casillas es filas por columnas: 3 x 4 = 12, igual que el principio multiplicativo.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa17-022",
+      "oa": "MA08 OA 17",
+      "pregunta": "Se elige un delegado entre 4 candidatos y, aparte, un color de bandera entre 3. ¿Cuántas combinaciones distintas hay?",
+      "opciones": [
+        "7",
+        "43",
+        "1",
+        "12"
+      ],
+      "correcta": 3,
+      "tip": "Son dos elecciones independientes: 4 x 3 = 12.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa17-023",
+      "oa": "MA08 OA 17",
+      "pregunta": "Un candado tiene 3 ruedas y cada una muestra un digito del 0 al 9. ¿Cuántas combinaciones distintas puede formar?",
+      "opciones": [
+        "1000",
+        "30",
+        "100",
+        "999"
+      ],
+      "correcta": 0,
+      "tip": "Cada rueda tiene 10 opciones: 10 x 10 x 10 = 1000.",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa17-024",
+      "oa": "MA08 OA 17",
+      "pregunta": "Al armar un diagrama de árbol para lanzar una moneda 2 veces, ¿cuántos resultados finales aparecen?",
+      "opciones": [
+        "2",
+        "4",
+        "3",
+        "8"
+      ],
+      "correcta": 1,
+      "tip": "Cada lanzamiento tiene 2 ramas: 2 x 2 = 4 resultados (cara-cara, cara-sello, sello-cara, sello-sello).",
+      "revisada": false
+    },
+    {
+      "id": "mate8-oa17-025",
+      "oa": "MA08 OA 17",
+      "pregunta": "Un local ofrece desayunos: 3 bebidas, 2 panes y 2 acompañamientos. ¿Cuántos desayunos distintos (uno de cada) se pueden armar?",
+      "opciones": [
+        "7",
+        "8",
+        "12",
+        "6"
+      ],
+      "correcta": 2,
+      "tip": "Se multiplican todas las etapas: 3 x 2 x 2 = 12.",
       "revisada": false
     }
   ]

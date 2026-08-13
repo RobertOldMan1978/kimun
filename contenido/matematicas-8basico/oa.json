@@ -4,7 +4,7 @@
   "codigo_asignatura": "MA08",
   "fuente": "Bases Curriculares 7° básico a 2° medio — MINEDUC Chile (curriculumnacional.cl)",
   "url_fuente": "https://www.curriculumnacional.cl/curriculum/7o-basico-2o-medio/matematica/8-basico",
-  "nota_fidelidad": "Códigos y redacción a validar contra el PDF oficial de las Bases Curriculares. Expedición: Álgebra y ecuaciones (MA08 OA 06-09). Los números de código (06-09) son la convención interna de este proyecto para esta expedición; la redacción literal de los OA debe verificarse contra el documento oficial del MINEDUC.",
+  "nota_fidelidad": "Cobertura de año completo (MA08 OA 01-17). Textos alineados a las Bases Curriculares; validar la redacción literal contra el PDF oficial del MINEDUC. La expedición 'Álgebra y funciones' usa OA06-09; el OA06 reúne lenguaje algebraico y operaciones con expresiones (representación simbólica), y el OA07 corresponde a la función lineal.",
   "habilidades_generales": [
     "Resolver problemas",
     "Modelar",
@@ -17,77 +17,62 @@
     "Trabajar en equipo con responsabilidad."
   ],
   "unidades": [
-    {
-      "id": "U1",
-      "titulo": "Álgebra y ecuaciones",
-      "descripcion": "Del lenguaje algebraico a la resolución de ecuaciones e inecuaciones lineales.",
-      "oa": ["MA08 OA 06", "MA08 OA 07", "MA08 OA 08", "MA08 OA 09"]
-    }
+    { "id": "U1", "titulo": "Números", "descripcion": "Operatoria con enteros y racionales, potencias, raíces cuadradas y variaciones porcentuales.", "oa": ["MA08 OA 01", "MA08 OA 02", "MA08 OA 03", "MA08 OA 04", "MA08 OA 05"] },
+    { "id": "U2", "titulo": "Álgebra y funciones", "descripcion": "Lenguaje y operaciones algebraicas, función lineal y afín, ecuaciones e inecuaciones lineales.", "oa": ["MA08 OA 06", "MA08 OA 07", "MA08 OA 08", "MA08 OA 09", "MA08 OA 10"] },
+    { "id": "U3", "titulo": "Geometría", "descripcion": "Área y volumen de prismas y cilindros, teorema de Pitágoras y transformaciones isométricas en el plano.", "oa": ["MA08 OA 11", "MA08 OA 12", "MA08 OA 13", "MA08 OA 14"] },
+    { "id": "U4", "titulo": "Probabilidad y estadística", "descripcion": "Medidas de posición, evaluación de representaciones de datos y principio combinatorio multiplicativo.", "oa": ["MA08 OA 15", "MA08 OA 16", "MA08 OA 17"] }
   ],
   "oa": [
-    {
-      "codigo": "MA08 OA 06",
-      "eje": "Álgebra y funciones",
-      "unidad": "U1",
-      "texto": "Utilizar lenguaje algebraico para traducir enunciados verbales a expresiones algebraicas, generalizar patrones numéricos y valorizar expresiones reemplazando las variables por números dados.",
-      "conceptos_clave": [
-        "lenguaje algebraico",
-        "variable o incógnita",
-        "expresión algebraica",
-        "traducción de enunciados",
-        "generalización de patrones",
-        "valorización de expresiones",
-        "término y coeficiente",
-        "el doble, el triple, la mitad"
-      ]
-    },
-    {
-      "codigo": "MA08 OA 07",
-      "eje": "Álgebra y funciones",
-      "unidad": "U1",
-      "texto": "Operar con expresiones algebraicas: reducir términos semejantes, sumar y restar expresiones, y multiplicar una expresión por un término aplicando la propiedad distributiva.",
-      "conceptos_clave": [
-        "términos semejantes",
-        "reducción de términos",
-        "adición de expresiones",
-        "sustracción de expresiones",
-        "propiedad distributiva",
-        "multiplicación por un término",
-        "coeficiente y parte literal",
-        "eliminar paréntesis"
-      ]
-    },
-    {
-      "codigo": "MA08 OA 08",
-      "eje": "Álgebra y funciones",
-      "unidad": "U1",
-      "texto": "Resolver ecuaciones lineales de primer grado con una incógnita, de la forma ax + b = c y con la incógnita en ambos lados, y aplicarlas a la resolución de problemas de la vida cotidiana.",
-      "conceptos_clave": [
-        "ecuación lineal",
-        "incógnita",
-        "primer grado",
-        "términos a ambos lados",
-        "operaciones inversas",
-        "transposición de términos",
-        "solución de una ecuación",
-        "planteo de problemas"
-      ]
-    },
-    {
-      "codigo": "MA08 OA 09",
-      "eje": "Álgebra y funciones",
-      "unidad": "U1",
-      "texto": "Resolver inecuaciones lineales de primer grado con una incógnita, representar el conjunto solución en la recta numérica e interpretar la solución en el contexto de un problema.",
-      "conceptos_clave": [
-        "inecuación lineal",
-        "desigualdad",
-        "signos < , > , ≤ , ≥",
-        "conjunto solución",
-        "recta numérica",
-        "invertir el signo al dividir por negativo",
-        "interpretación del resultado",
-        "restricciones de un problema"
-      ]
-    }
+    { "codigo": "MA08 OA 01", "eje": "Números", "unidad": "U1",
+      "texto": "Mostrar que comprenden la multiplicación y la división de números enteros: representándolos de manera concreta, pictórica y simbólica; aplicando la regla de los signos; resolviendo problemas.",
+      "conceptos_clave": ["número entero", "multiplicación de enteros", "división de enteros", "regla de los signos", "recta numérica", "valor absoluto", "prioridad de operaciones", "resolución de problemas"] },
+    { "codigo": "MA08 OA 02", "eje": "Números", "unidad": "U1",
+      "texto": "Utilizar las operaciones de multiplicación y división con números racionales (fracciones y decimales positivos y negativos) en el contexto de la resolución de problemas.",
+      "conceptos_clave": ["número racional", "fracción", "decimal", "multiplicación de fracciones", "división de fracciones", "inverso multiplicativo", "signo del resultado", "resolución de problemas"] },
+    { "codigo": "MA08 OA 03", "eje": "Números", "unidad": "U1",
+      "texto": "Explicar la multiplicación y la división de potencias de base natural y exponente natural (hasta 3), de manera concreta, pictórica y simbólica.",
+      "conceptos_clave": ["potencia", "base", "exponente", "multiplicación de potencias de igual base", "división de potencias de igual base", "potencia de una potencia", "notación", "cuadrado y cubo"] },
+    { "codigo": "MA08 OA 04", "eje": "Números", "unidad": "U1",
+      "texto": "Mostrar que comprenden las raíces cuadradas de números naturales: estimándolas; representándolas; aplicándolas en contextos geométricos y de la vida diaria.",
+      "conceptos_clave": ["raíz cuadrada", "cuadrado perfecto", "estimación de raíces", "número irracional", "relación con el área", "entre qué enteros está", "aproximación", "aplicación geométrica"] },
+    { "codigo": "MA08 OA 05", "eje": "Números", "unidad": "U1",
+      "texto": "Resolver problemas que involucren variaciones porcentuales, de manera pictórica y simbólica, de forma manual y/o con herramientas tecnológicas.",
+      "conceptos_clave": ["porcentaje", "variación porcentual", "aumento porcentual", "descuento", "interés", "cálculo de un porcentaje", "porcentaje inicial y final", "aplicación cotidiana"] },
+    { "codigo": "MA08 OA 06", "eje": "Álgebra y funciones", "unidad": "U2",
+      "texto": "Mostrar que comprenden las operaciones con expresiones algebraicas: usando el lenguaje algebraico para traducir enunciados y generalizar patrones; representando de forma concreta, pictórica y simbólica; reduciendo términos semejantes y aplicando la propiedad distributiva.",
+      "conceptos_clave": ["lenguaje algebraico", "variable o incógnita", "expresión algebraica", "traducción de enunciados", "generalización de patrones", "valorización de expresiones", "términos semejantes", "propiedad distributiva"] },
+    { "codigo": "MA08 OA 07", "eje": "Álgebra y funciones", "unidad": "U2",
+      "texto": "Mostrar que comprenden la función lineal: mediante tablas; usando la metáfora de máquinas; estableciendo reglas entre dos variables; representándola de manera gráfica de forma manual y/o con herramientas tecnológicas.",
+      "conceptos_clave": ["función lineal", "variable dependiente e independiente", "tabla de valores", "regla de correspondencia", "proporcionalidad directa", "constante de proporcionalidad", "gráfico de una función", "plano cartesiano"] },
+    { "codigo": "MA08 OA 08", "eje": "Álgebra y funciones", "unidad": "U2",
+      "texto": "Modelar situaciones de la vida diaria mediante ecuaciones lineales de primer grado con una incógnita (de la forma ax + b = c y con la incógnita en ambos lados) con coeficientes racionales, y resolverlas.",
+      "conceptos_clave": ["ecuación lineal", "incógnita", "primer grado", "términos a ambos lados", "operaciones inversas", "transposición de términos", "solución de una ecuación", "planteo de problemas"] },
+    { "codigo": "MA08 OA 09", "eje": "Álgebra y funciones", "unidad": "U2",
+      "texto": "Resolver inecuaciones lineales de primer grado con una incógnita y coeficientes racionales, representar el conjunto solución en la recta numérica e interpretar la solución en el contexto de un problema.",
+      "conceptos_clave": ["inecuación lineal", "desigualdad", "signos < , > , ≤ , ≥", "conjunto solución", "recta numérica", "círculo abierto y cerrado", "invertir el signo al dividir por negativo", "interpretación del resultado"] },
+    { "codigo": "MA08 OA 10", "eje": "Álgebra y funciones", "unidad": "U2",
+      "texto": "Mostrar que comprenden la función afín: generalizándola como f(x) = ax + b; trasladando funciones lineales en el plano cartesiano; determinando el cambio constante (pendiente) y el valor inicial (intercepto).",
+      "conceptos_clave": ["función afín", "f(x) = ax + b", "pendiente", "intercepto", "valor inicial", "traslación en el plano", "cambio constante", "gráfico de una recta"] },
+    { "codigo": "MA08 OA 11", "eje": "Geometría", "unidad": "U3",
+      "texto": "Desarrollar y aplicar las fórmulas para calcular el área de la superficie y el volumen de prismas rectos y cilindros, en la resolución de problemas.",
+      "conceptos_clave": ["prisma recto", "cilindro", "área de la superficie", "volumen", "red o desarrollo plano", "base y altura", "unidades de volumen", "número pi"] },
+    { "codigo": "MA08 OA 12", "eje": "Geometría", "unidad": "U3",
+      "texto": "Explicar, de manera concreta, pictórica y simbólica, la validez del teorema de Pitágoras y aplicarlo al cálculo de longitudes en problemas geométricos y de la vida diaria.",
+      "conceptos_clave": ["teorema de Pitágoras", "triángulo rectángulo", "catetos", "hipotenusa", "a² + b² = c²", "cálculo de longitudes", "cuadrado de un número", "aplicación cotidiana"] },
+    { "codigo": "MA08 OA 13", "eje": "Geometría", "unidad": "U3",
+      "texto": "Describir la posición y el movimiento (traslaciones, rotaciones y reflexiones) de figuras 2D en el plano cartesiano, de manera manual y/o con herramientas tecnológicas, usando vectores y ejes.",
+      "conceptos_clave": ["plano cartesiano", "coordenadas", "traslación", "rotación", "reflexión", "vector de traslación", "eje de simetría", "figura y su imagen"] },
+    { "codigo": "MA08 OA 14", "eje": "Geometría", "unidad": "U3",
+      "texto": "Componer y aplicar traslaciones, rotaciones y reflexiones en el plano cartesiano, y reconocer simetrías en polígonos y teselaciones.",
+      "conceptos_clave": ["composición de transformaciones", "transformación isométrica", "congruencia", "simetría", "polígono", "teselación", "punto y ángulo de rotación", "orientación"] },
+    { "codigo": "MA08 OA 15", "eje": "Probabilidad y estadística", "unidad": "U4",
+      "texto": "Mostrar que comprenden las medidas de posición (percentiles y cuartiles): identificándolas y representándolas; utilizándolas para comparar poblaciones.",
+      "conceptos_clave": ["medida de posición", "cuartil", "percentil", "mediana", "diagrama de cajón", "rango", "comparación de poblaciones", "distribución de datos"] },
+    { "codigo": "MA08 OA 16", "eje": "Probabilidad y estadística", "unidad": "U4",
+      "texto": "Evaluar la forma en que los datos están presentados: comparando distintas representaciones de los mismos datos; detectando manipulaciones o distorsiones en gráficos.",
+      "conceptos_clave": ["representación de datos", "gráfico de barras", "gráfico circular", "escala de un gráfico", "distorsión", "manipulación de datos", "lectura crítica", "interpretación de gráficos"] },
+    { "codigo": "MA08 OA 17", "eje": "Probabilidad y estadística", "unidad": "U4",
+      "texto": "Explicar el principio combinatorio multiplicativo a partir de situaciones concretas, representándolo con tablas y diagramas de árbol, y aplicándolo al conteo de posibilidades.",
+      "conceptos_clave": ["principio multiplicativo", "conteo", "diagrama de árbol", "tabla de doble entrada", "combinaciones", "casos posibles", "eventos sucesivos", "probabilidad básica"] }
   ]
 }

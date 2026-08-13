@@ -31,9 +31,11 @@ en línea. Historia de v0 al detalle en la Bitácora (abajo).
   **Kimün** (zorro; `assets/kimun.png`, con expresiones por respuesta).
 - **Expediciones data-driven** (arreglo `EXPEDICIONES`, progreso por ruta),
   **4 jugables**: Historia "Los europeos llegan a América" (OA04-07),
-  Matemáticas "Álgebra y ecuaciones" (MA08 OA06-09), Ciencias "La célula"
-  (CN08 OA01-04) y Lenguaje "Tipos de texto y medios" (LE08 OA01-04). Regla:
-  **4 etapas + 1 jefe (5 nodos)**.
+  Matemáticas "Álgebra y funciones" (MA08 OA06-09), Ciencias "La célula"
+  (CN08 OA01-04) y Lenguaje "Tipos de texto y medios" (LE08 OA03/09/10/11).
+  Regla: **4 etapas + 1 jefe (5 nodos)**. Cada asignatura tiene, además, un
+  **banco de año completo** (todos sus OA oficiales) como reserva para futuras
+  expediciones (ver Sesión 9).
 - Quiz: 6 preguntas al azar/etapa, timer 15 s, pasa con 66%, 3 estrellas. Al
   fallar revela la respuesta correcta + explicación y botón "Continuar". Kimün
   comenta un dato al iniciar la ruta.
@@ -43,13 +45,14 @@ en línea. Historia de v0 al detalle en la Bitácora (abajo).
 - **Duelo 1v1:** en el mismo teléfono y **en línea asíncrono (Supabase)** con
   código de amigo, lista de jugadores, bots de práctica y reto de 24h.
 
-**Contenido:** Historia **663 (revisadas 663/663)** · Matemáticas **168 (sin
-revisar)** · Ciencias **184 (sin revisar)** · Lenguaje **168 (sin revisar)**.
-Los tres bancos nuevos incorporaron ítems de mayor orden a partir de una revisión
-pedagógica externa (ver Sesión 8). **Herramientas dev:** tablero con clave
+**Contenido (bancos de año completo):** Historia **663 (revisadas 663/663;
+22 OA)** · Matemáticas **518 (sin revisar; 17/17 OA)** · Ciencias **459 (sin
+revisar; 15/15 OA)** · Lenguaje **443 (sin revisar; 15/15 OA)**. ~2.083 preguntas
+en total. Las 3 asignaturas nuevas se llevaron a cobertura de año completo desde
+el currículum oficial (ver Sesión 9); solo 4-5 OA de cada una están hoy en una
+expedición jugable, el resto es reserva. **Herramientas dev:** tablero con clave
 (`dev/tablero.html`) y scripts (`consolidar-pool`, `aplicar-revisadas`,
-`generar-pdf-preguntas` —ahora por asignatura y con `--sin-revisar`—,
-`generar-tablero`).
+`generar-pdf-preguntas` —por asignatura y con `--sin-revisar`—, `generar-tablero`).
 
 ## Decisiones de diseño
 
@@ -92,8 +95,10 @@ Orden tentativo, sujeto a prioridad de "verlo funcionar y atractivo" primero:
   ruta (etapas → OA + contenido + portada) con progreso independiente por ruta;
   hay una **plantilla** en `contenido/_plantilla/` para clonar la siguiente.
   **Hecho:** Historia, Matemáticas, Ciencias y Lenguaje ya están generadas y
-  activas. Falta sumar más unidades/niveles y completar la revisión pedagógica
-  de los tres bancos nuevos.
+  activas, cada una con su **banco de año completo** (todos los OA oficiales). Con
+  eso, armar nuevas expediciones de esas asignaturas es casi solo cablear
+  `EXPEDICIONES` (ya hay preguntas para los OA que faltan). Falta la revisión
+  pedagógica humana de los bancos nuevos.
 
 ## Reglas de trabajo
 
@@ -378,3 +383,33 @@ Se completaron los tres pendientes que quedaron de la Sesión 2:
 - **Pendientes:** revisión pedagógica humana de Matemáticas, Ciencias y Lenguaje;
   un Kimün "científico" para el header de Ciencias; probar el duelo en 2 celulares;
   notificaciones push y ranking real; limpiar perfiles de prueba en Supabase.
+
+### Sesión 9 (2026-08-13)
+- **Bancos de AÑO COMPLETO para las 3 asignaturas nuevas** (todos los OA oficiales),
+  alimentándose del sitio oficial (`curriculumnacional.cl`). Se hizo por fases, en
+  secuencia, con agentes en paralelo por eje y consolidación validada:
+  - **Ciencias 184 → 459** (15/15 OA): se agregaron OA05-15 (cuerpo humano y salud,
+    electricidad y calor, materia y átomo), ~25/OA. Sin conflicto de códigos.
+  - **Matemáticas 168 → 518** (17/17 OA): se agregaron Números (OA01-05), Funciones
+    (OA07 lineal, OA10 afín), Geometría (OA11-14) y Prob./Estadística (OA15-17).
+  - **Lenguaje 168 → 443** (15/15 OA): se agregaron poesía, teatro, epopeya, comedia,
+    interpretación, estrategias de comprensión y escritura (OA01,02,04-08,12-15).
+- **Re-mapeo a OA oficiales (fidelidad).** Al armar Matemáticas y Lenguaje (Sesión 8)
+  se habían usado códigos internos que chocaban con la numeración oficial. Se corrigió:
+  - **Matemáticas:** "lenguaje algebraico" + "expresiones" se fundieron en el oficial
+    **OA06 (operaciones algebraicas)** y se liberó el **OA07 para función lineal**. La
+    expedición pasó a "Álgebra y **funciones**" (OA06-09).
+  - **Lenguaje:** los 4 temas se re-etiquetaron a sus códigos reales —narrativo→**OA03**,
+    informativos→**OA11**, medios→**OA10**, argumentar→**OA09**— y se recableó la
+    expedición. IDs renumerados de forma consistente.
+- Cada `oa.json` ahora lista **todos los OA oficiales** con sus textos y `nota_fidelidad`
+  (validar redacción literal contra el PDF del MINEDUC).
+- **Calidad:** corrección verificada por muestra; se detectó y corrigió un problema
+  sistemático de tildes en un lote de Matemáticas (~98 correcciones); Ciencias y
+  Lenguaje salieron limpios; cero modismos. `generar-pdf-preguntas.py` ahora sanea
+  glifos ausentes en la fuente del PDF (subíndices químicos, ∛) sin tocar el JSON.
+- Todo sigue **`revisada:false`**. El motor NO se tocó (solo datos + `EXPEDICIONES`).
+  Las 4 expediciones jugables se verificaron en el navegador (5 nodos con pool listo).
+- **Pendientes:** revisión pedagógica humana de los bancos; armar nuevas expediciones
+  aprovechando los OA de reserva; Kimün "científico"; duelo en 2 celulares; push y
+  ranking real; limpiar perfiles de prueba en Supabase.

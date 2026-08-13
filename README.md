@@ -12,9 +12,10 @@ Un juego tipo aventura con mapa de niveles, quiz con temporizador, combos, XP,
 monedas, estrellas, logros y ranking de curso. **Kimün**, el zorro mascota,
 acompaña y reacciona a cada respuesta. Incluye **Modo Difícil** desbloqueable y una
 pantalla de **expediciones** por asignatura: **Historia**, **Matemáticas** (Álgebra
-y ecuaciones), **Ciencias** (La célula) y **Lenguaje** (Tipos de texto y medios), las
-cuatro jugables. También hay **Duelo 1v1** en el mismo teléfono y en línea (Supabase).
-Todo en un solo archivo `index.html`, pensado para el celular.
+y funciones), **Ciencias** (La célula) y **Lenguaje** (Tipos de texto y medios), las
+cuatro jugables. Cada asignatura tiene un banco de preguntas de año completo (todos
+sus OA del currículum). También hay **Duelo 1v1** en el mismo teléfono y en línea
+(Supabase). Todo en un solo archivo `index.html`, pensado para el celular.
 
 ## Cómo probarlo
 

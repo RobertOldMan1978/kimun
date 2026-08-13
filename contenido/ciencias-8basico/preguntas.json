@@ -2,9 +2,9 @@
   "asignatura": "Ciencias Naturales",
   "nivel": "8° básico",
   "meta_preguntas_por_oa": 25,
-  "total_preguntas": 184,
+  "total_preguntas": 459,
   "revisadas": 0,
-  "nota": "Expedición La célula (CN08 OA 01-04). Generadas y verificadas por agentes; opciones barajadas.",
+  "nota": "Ciencias 8° básico — año completo (CN08 OA 01-15). Generadas por agentes; opciones barajadas. Sin revisión pedagógica humana.",
   "preguntas": [
     {
       "id": "cien8-oa01-001",
@@ -2580,6 +2580,3856 @@
       ],
       "correcta": 3,
       "tip": "La luz es una materia prima indispensable de la fotosíntesis; sin ella el proceso no puede realizarse.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa05-001",
+      "oa": "CN08 OA 05",
+      "pregunta": "¿Cuál es la función principal del sistema digestivo?",
+      "opciones": [
+        "Transformar los alimentos en nutrientes que el cuerpo puede absorber",
+        "Bombear la sangre hacia todo el cuerpo",
+        "Llevar oxígeno hasta las células",
+        "Filtrar la sangre y formar la orina"
+      ],
+      "correcta": 0,
+      "tip": "El sistema digestivo descompone los alimentos en moléculas pequeñas (nutrientes) que pueden pasar a la sangre.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa05-002",
+      "oa": "CN08 OA 05",
+      "pregunta": "¿Qué sistema del cuerpo humano se encarga de incorporar oxígeno y eliminar dióxido de carbono?",
+      "opciones": [
+        "Sistema respiratorio",
+        "Sistema digestivo",
+        "Sistema excretor",
+        "Sistema circulatorio"
+      ],
+      "correcta": 0,
+      "tip": "En los pulmones ocurre el intercambio gaseoso: entra oxígeno a la sangre y sale dióxido de carbono.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa05-003",
+      "oa": "CN08 OA 05",
+      "pregunta": "El sistema circulatorio se relaciona directamente con el sistema respiratorio porque:",
+      "opciones": [
+        "El corazón produce el oxígeno que respiramos",
+        "La sangre transporta el oxígeno captado en los pulmones hacia las células",
+        "Los pulmones filtran la sangre para eliminar desechos",
+        "El estómago envía aire a los pulmones"
+      ],
+      "correcta": 1,
+      "tip": "La sangre recoge el oxígeno en los pulmones y lo reparte a todas las células del cuerpo.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa05-004",
+      "oa": "CN08 OA 05",
+      "pregunta": "¿Cuál de estos órganos forma parte del sistema excretor?",
+      "opciones": [
+        "El estómago",
+        "El corazón",
+        "Los pulmones",
+        "Los riñones"
+      ],
+      "correcta": 3,
+      "tip": "Los riñones filtran la sangre y producen la orina, que elimina desechos del cuerpo.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa05-005",
+      "oa": "CN08 OA 05",
+      "pregunta": "Después de una comida, los nutrientes absorbidos en el intestino delgado pasan principalmente a:",
+      "opciones": [
+        "La vejiga, para ser eliminados",
+        "Los pulmones, para ser exhalados",
+        "La sangre, para ser distribuidos por el sistema circulatorio",
+        "El aire dentro del estómago"
+      ],
+      "correcta": 2,
+      "tip": "El intestino delgado absorbe los nutrientes hacia la sangre, que los reparte por el cuerpo.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa05-006",
+      "oa": "CN08 OA 05",
+      "pregunta": "¿Qué relación existe entre el sistema digestivo y el circulatorio?",
+      "opciones": [
+        "El circulatorio digiere los alimentos",
+        "El digestivo bombea la sangre",
+        "El digestivo aporta nutrientes que el circulatorio transporta a las células",
+        "Ambos eliminan la orina"
+      ],
+      "correcta": 2,
+      "tip": "Los nutrientes obtenidos en la digestión viajan por la sangre hasta las células que los necesitan.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa05-007",
+      "oa": "CN08 OA 05",
+      "pregunta": "¿En qué órgano ocurre el intercambio de gases entre el aire y la sangre?",
+      "opciones": [
+        "En el hígado",
+        "En los alvéolos de los pulmones",
+        "En los riñones",
+        "En el intestino grueso"
+      ],
+      "correcta": 1,
+      "tip": "Los alvéolos son pequeños sacos de los pulmones donde el oxígeno pasa a la sangre y sale el dióxido de carbono.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa05-008",
+      "oa": "CN08 OA 05",
+      "pregunta": "Un desecho que la sangre transporta desde las células hacia los pulmones para ser eliminado es:",
+      "opciones": [
+        "El oxígeno",
+        "La glucosa",
+        "El dióxido de carbono",
+        "El agua pura"
+      ],
+      "correcta": 2,
+      "tip": "Las células producen dióxido de carbono; la sangre lo lleva a los pulmones, donde se exhala.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa05-009",
+      "oa": "CN08 OA 05",
+      "pregunta": "¿Cuál es la función principal de los riñones?",
+      "opciones": [
+        "Digerir las grasas",
+        "Absorber oxígeno del ambiente",
+        "Producir glóbulos rojos en el aire",
+        "Filtrar la sangre y eliminar desechos en la orina"
+      ],
+      "correcta": 3,
+      "tip": "Los riñones filtran la sangre, retienen lo útil y eliminan los desechos disueltos como orina.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa05-010",
+      "oa": "CN08 OA 05",
+      "pregunta": "El corazón es el órgano central del sistema circulatorio porque:",
+      "opciones": [
+        "Produce los alimentos",
+        "Bombea la sangre para que circule por todo el cuerpo",
+        "Filtra la orina",
+        "Almacena el aire respirado"
+      ],
+      "correcta": 1,
+      "tip": "El corazón funciona como una bomba que impulsa la sangre por las arterias y venas.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa05-011",
+      "oa": "CN08 OA 05",
+      "pregunta": "Si una persona corre, su respiración y sus latidos se aceleran. Esto muestra que:",
+      "opciones": [
+        "Los sistemas no se relacionan entre sí",
+        "El sistema respiratorio deja de funcionar",
+        "Solo trabaja el sistema digestivo",
+        "Los sistemas del cuerpo trabajan de forma coordinada según las necesidades"
+      ],
+      "correcta": 3,
+      "tip": "Al hacer ejercicio, las células necesitan más oxígeno y energía, y los sistemas responden juntos.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa05-012",
+      "oa": "CN08 OA 05",
+      "pregunta": "¿Qué estructura conecta la boca con el estómago y transporta el alimento?",
+      "opciones": [
+        "La tráquea",
+        "El esófago",
+        "La aorta",
+        "El uréter"
+      ],
+      "correcta": 1,
+      "tip": "El esófago es el tubo del sistema digestivo que lleva el alimento desde la boca hasta el estómago.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa05-013",
+      "oa": "CN08 OA 05",
+      "pregunta": "La homeostasis se refiere a:",
+      "opciones": [
+        "La eliminación total de todos los nutrientes",
+        "La capacidad del cuerpo de mantener condiciones internas estables",
+        "El aumento constante de la temperatura corporal",
+        "La detención del sistema circulatorio"
+      ],
+      "correcta": 1,
+      "tip": "Homeostasis es el equilibrio interno que el cuerpo mantiene, por ejemplo en temperatura y agua.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa05-014",
+      "oa": "CN08 OA 05",
+      "pregunta": "¿Por qué el sistema respiratorio necesita del sistema circulatorio?",
+      "opciones": [
+        "Porque el circulatorio respira por él",
+        "Porque el circulatorio produce el aire",
+        "Porque sin la sangre, el oxígeno captado no llegaría a las células",
+        "Porque el circulatorio digiere el oxígeno"
+      ],
+      "correcta": 2,
+      "tip": "El oxígeno entra por los pulmones, pero es la sangre la que lo distribuye a todo el cuerpo.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa05-015",
+      "oa": "CN08 OA 05",
+      "pregunta": "¿Cuál de estas afirmaciones sobre el sistema excretor es correcta?",
+      "opciones": [
+        "Produce la saliva para digerir",
+        "Bombea la sangre al cerebro",
+        "Elimina desechos del metabolismo a través de la orina",
+        "Fabrica el oxígeno del cuerpo"
+      ],
+      "correcta": 2,
+      "tip": "El sistema excretor elimina los desechos que se producen al usar los nutrientes en las células.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa05-016",
+      "oa": "CN08 OA 05",
+      "pregunta": "Una dieta con mucha grasa y colesterol puede afectar la salud del sistema circulatorio porque:",
+      "opciones": [
+        "Hace que los pulmones crezcan demasiado",
+        "Puede obstruir los vasos sanguíneos y dificultar el paso de la sangre",
+        "Aumenta la producción de saliva",
+        "Detiene la digestión por completo"
+      ],
+      "correcta": 1,
+      "tip": "El exceso de grasas puede acumularse en las arterias y dificultar la circulación de la sangre.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa05-017",
+      "oa": "CN08 OA 05",
+      "pregunta": "El oxígeno que respiramos es utilizado por las células principalmente para:",
+      "opciones": [
+        "Fabricar orina",
+        "Producir dióxido de carbono directamente sin usarlo",
+        "Obtener energía a partir de los nutrientes",
+        "Enfriar el cuerpo"
+      ],
+      "correcta": 2,
+      "tip": "Las células usan el oxígeno para liberar la energía guardada en los nutrientes (respiración celular).",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa05-018",
+      "oa": "CN08 OA 05",
+      "pregunta": "¿Qué órgano del sistema digestivo absorbe la mayor parte de los nutrientes?",
+      "opciones": [
+        "La vejiga",
+        "El esófago",
+        "La lengua",
+        "El intestino delgado"
+      ],
+      "correcta": 3,
+      "tip": "El intestino delgado tiene una gran superficie interna que permite absorber los nutrientes hacia la sangre.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa05-019",
+      "oa": "CN08 OA 05",
+      "pregunta": "Fumar afecta principalmente al sistema respiratorio porque:",
+      "opciones": [
+        "Daña los pulmones y dificulta el intercambio de gases",
+        "Mejora la capacidad de los pulmones",
+        "Aumenta la producción de orina",
+        "Fortalece los alvéolos"
+      ],
+      "correcta": 0,
+      "tip": "El humo del tabaco daña los alvéolos y reduce la capacidad de captar oxígeno.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa05-020",
+      "oa": "CN08 OA 05",
+      "pregunta": "¿Cuál es el recorrido correcto del aire al inhalar?",
+      "opciones": [
+        "Nariz, tráquea, pulmones",
+        "Boca, esófago, estómago",
+        "Riñón, vejiga, uretra",
+        "Corazón, arterias, venas"
+      ],
+      "correcta": 0,
+      "tip": "El aire entra por la nariz, baja por la tráquea y llega a los pulmones.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa05-021",
+      "oa": "CN08 OA 05",
+      "pregunta": "Beber suficiente agua ayuda al sistema excretor porque:",
+      "opciones": [
+        "Impide la digestión de los alimentos",
+        "Reemplaza al oxígeno de los pulmones",
+        "Detiene el bombeo del corazón",
+        "Facilita que los riñones filtren y eliminen desechos en la orina"
+      ],
+      "correcta": 3,
+      "tip": "El agua permite que los riñones disuelvan y eliminen los desechos a través de la orina.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa05-022",
+      "oa": "CN08 OA 05",
+      "pregunta": "¿Qué sucede con los nutrientes y el oxígeno una vez que llegan a las células?",
+      "opciones": [
+        "Se combinan en la célula para producir la energía que el cuerpo necesita",
+        "Son expulsados sin usarse",
+        "Regresan directamente al estómago",
+        "Se transforman en huesos"
+      ],
+      "correcta": 0,
+      "tip": "Las células combinan nutrientes y oxígeno para obtener energía; esto conecta digestión, respiración y circulación.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa05-023",
+      "oa": "CN08 OA 05",
+      "pregunta": "El trabajo conjunto de los sistemas digestivo, respiratorio, circulatorio y excretor permite:",
+      "opciones": [
+        "Que el cuerpo funcione y se mantenga sano",
+        "Que el cuerpo deje de necesitar alimento",
+        "Que las células dejen de respirar",
+        "Que el corazón se detenga en reposo"
+      ],
+      "correcta": 0,
+      "tip": "Los sistemas cooperan para nutrir las células, entregar oxígeno y eliminar desechos, manteniendo la salud.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa05-024",
+      "oa": "CN08 OA 05",
+      "pregunta": "Si los riñones dejaran de funcionar, ¿qué problema ocurriría?",
+      "opciones": [
+        "El aire no entraría a los pulmones",
+        "El corazón latiría más lento por falta de saliva",
+        "El alimento no llegaría al estómago",
+        "Los desechos se acumularían en la sangre, dañando el cuerpo"
+      ],
+      "correcta": 3,
+      "tip": "Sin la filtración de los riñones, los desechos se acumulan en la sangre y afectan la salud.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa05-025",
+      "oa": "CN08 OA 05",
+      "pregunta": "¿Cuál es un ejemplo de cómo el estilo de vida influye en la salud de estos sistemas?",
+      "opciones": [
+        "Hacer actividad física regular fortalece el corazón y los pulmones",
+        "Dormir no afecta a ningún sistema",
+        "Comer solo grasas mejora la circulación",
+        "Respirar humo protege los alvéolos"
+      ],
+      "correcta": 0,
+      "tip": "El ejercicio regular fortalece el sistema circulatorio y respiratorio, mejorando la salud general.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa06-001",
+      "oa": "CN08 OA 06",
+      "pregunta": "¿Cuál es la función principal de los carbohidratos en el cuerpo?",
+      "opciones": [
+        "Formar los huesos",
+        "Eliminar los desechos",
+        "Transportar el oxígeno",
+        "Ser la principal fuente de energía"
+      ],
+      "correcta": 3,
+      "tip": "Los carbohidratos, como el pan o el arroz, aportan la energía que el cuerpo usa a diario.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa06-002",
+      "oa": "CN08 OA 06",
+      "pregunta": "Las proteínas son nutrientes fundamentales porque:",
+      "opciones": [
+        "Solo sirven para dar sabor a la comida",
+        "Participan en la formación y reparación de los tejidos del cuerpo",
+        "Reemplazan al agua",
+        "Son el único combustible del cuerpo"
+      ],
+      "correcta": 1,
+      "tip": "Las proteínas de carnes, huevos y legumbres construyen y reparan músculos y otros tejidos.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa06-003",
+      "oa": "CN08 OA 06",
+      "pregunta": "¿Cuál de estos alimentos es una buena fuente de proteínas?",
+      "opciones": [
+        "Las legumbres y el huevo",
+        "El aceite",
+        "El azúcar",
+        "La sal"
+      ],
+      "correcta": 0,
+      "tip": "Las legumbres, carnes, huevos y lácteos aportan proteínas al cuerpo.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa06-004",
+      "oa": "CN08 OA 06",
+      "pregunta": "Aunque a veces se les da mala fama, las grasas son necesarias porque:",
+      "opciones": [
+        "Aportan energía de reserva y ayudan a absorber ciertas vitaminas",
+        "No cumplen ninguna función útil",
+        "Solo sirven para engordar",
+        "Reemplazan a las proteínas por completo"
+      ],
+      "correcta": 0,
+      "tip": "Las grasas almacenan energía y ayudan a absorber vitaminas como la A, D, E y K; lo importante es consumirlas con moderación.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa06-005",
+      "oa": "CN08 OA 06",
+      "pregunta": "¿Qué nutriente se necesita en pequeñas cantidades pero es esencial para funciones como la visión o la defensa del cuerpo?",
+      "opciones": [
+        "Los carbohidratos",
+        "Las vitaminas",
+        "El agua",
+        "Las grasas"
+      ],
+      "correcta": 1,
+      "tip": "Las vitaminas se necesitan en pequeñas cantidades, pero son clave para muchas funciones del cuerpo.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa06-006",
+      "oa": "CN08 OA 06",
+      "pregunta": "El calcio y el hierro son ejemplos de:",
+      "opciones": [
+        "Minerales",
+        "Carbohidratos",
+        "Proteínas",
+        "Grasas"
+      ],
+      "correcta": 0,
+      "tip": "Los minerales, como el calcio (huesos) y el hierro (sangre), cumplen funciones específicas en el cuerpo.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa06-007",
+      "oa": "CN08 OA 06",
+      "pregunta": "¿Por qué el agua se considera un nutriente esencial?",
+      "opciones": [
+        "Porque aporta muchas calorías",
+        "Porque reemplaza a las vitaminas",
+        "Porque participa en casi todas las funciones del cuerpo y transporta sustancias",
+        "Porque forma los músculos"
+      ],
+      "correcta": 2,
+      "tip": "El agua es el componente más abundante del cuerpo y participa en la digestión, el transporte y la temperatura.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa06-008",
+      "oa": "CN08 OA 06",
+      "pregunta": "El calcio es un mineral importante porque contribuye a:",
+      "opciones": [
+        "La eliminación del oxígeno",
+        "El color de los ojos",
+        "La producción de aire en los pulmones",
+        "La formación y fortaleza de los huesos y dientes"
+      ],
+      "correcta": 3,
+      "tip": "El calcio, presente en los lácteos, es clave para huesos y dientes fuertes.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa06-009",
+      "oa": "CN08 OA 06",
+      "pregunta": "Una prueba de laboratorio usa lugol y un alimento se tiñe de azul oscuro. Esto indica presencia de:",
+      "opciones": [
+        "Proteínas",
+        "Grasas",
+        "Almidón (un carbohidrato)",
+        "Vitaminas"
+      ],
+      "correcta": 2,
+      "tip": "El lugol reacciona con el almidón tiñéndose de azul oscuro; es una prueba clásica para carbohidratos.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa06-010",
+      "oa": "CN08 OA 06",
+      "pregunta": "Si al frotar un alimento sobre un papel este queda con una mancha translúcida (traslúcida), lo más probable es que contenga:",
+      "opciones": [
+        "Grasas",
+        "Agua pura",
+        "Minerales",
+        "Vitaminas"
+      ],
+      "correcta": 0,
+      "tip": "La mancha translúcida en el papel es una prueba sencilla que indica presencia de grasas.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa06-011",
+      "oa": "CN08 OA 06",
+      "pregunta": "La falta de hierro en la dieta puede provocar:",
+      "opciones": [
+        "Huesos más fuertes",
+        "Mejor visión nocturna",
+        "Anemia, con cansancio y debilidad",
+        "Aumento de la energía disponible"
+      ],
+      "correcta": 2,
+      "tip": "El hierro ayuda a transportar oxígeno en la sangre; su falta puede causar anemia y fatiga.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa06-012",
+      "oa": "CN08 OA 06",
+      "pregunta": "¿Qué grupo de alimentos aporta principalmente carbohidratos?",
+      "opciones": [
+        "Aceites y mantequilla",
+        "Cereales, pan, arroz y papas",
+        "Carnes rojas",
+        "Sal y especias"
+      ],
+      "correcta": 1,
+      "tip": "Los cereales, panes, arroz y papas son ricos en carbohidratos, la principal fuente de energía.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa06-013",
+      "oa": "CN08 OA 06",
+      "pregunta": "Las frutas y verduras son especialmente valiosas en la dieta porque aportan:",
+      "opciones": [
+        "Solo grasas",
+        "Vitaminas, minerales y fibra",
+        "Únicamente proteínas",
+        "Solamente azúcar"
+      ],
+      "correcta": 1,
+      "tip": "Frutas y verduras aportan vitaminas, minerales y fibra, importantes para la salud.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa06-014",
+      "oa": "CN08 OA 06",
+      "pregunta": "¿Cuál de los siguientes NO es un nutriente?",
+      "opciones": [
+        "Las proteínas",
+        "Los minerales",
+        "La fibra dietética como fuente de energía principal",
+        "El humo del cigarrillo"
+      ],
+      "correcta": 3,
+      "tip": "Los nutrientes son sustancias del alimento útiles para el cuerpo; el humo del cigarrillo no lo es.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa06-015",
+      "oa": "CN08 OA 06",
+      "pregunta": "Una persona que hace mucho ejercicio pierde agua al sudar. ¿Por qué debe hidratarse?",
+      "opciones": [
+        "Porque el agua no cumple ninguna función",
+        "Porque el agua reemplaza a las proteínas gastadas",
+        "Porque necesita reponer el agua para mantener el equilibrio del cuerpo",
+        "Porque el agua aporta muchas calorías"
+      ],
+      "correcta": 2,
+      "tip": "Al sudar se pierde agua; reponerla mantiene el equilibrio interno y evita la deshidratación.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa06-016",
+      "oa": "CN08 OA 06",
+      "pregunta": "¿Qué nutriente aporta la mayor cantidad de energía por gramo?",
+      "opciones": [
+        "Las grasas",
+        "El agua",
+        "Las vitaminas",
+        "Los minerales"
+      ],
+      "correcta": 0,
+      "tip": "Las grasas concentran más energía por gramo que los carbohidratos o las proteínas.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa06-017",
+      "oa": "CN08 OA 06",
+      "pregunta": "La vitamina C, presente en cítricos como la naranja, ayuda principalmente a:",
+      "opciones": [
+        "Formar los huesos",
+        "Producir grasa de reserva",
+        "Reemplazar el agua corporal",
+        "Fortalecer las defensas del cuerpo"
+      ],
+      "correcta": 3,
+      "tip": "La vitamina C contribuye al sistema de defensas y se encuentra en frutas cítricas.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa06-018",
+      "oa": "CN08 OA 06",
+      "pregunta": "En una investigación experimental, ¿cómo se puede comprobar que un alimento contiene proteínas?",
+      "opciones": [
+        "Acercándolo a un imán",
+        "Aplicando el reactivo de biuret, que se vuelve violeta",
+        "Midiendo su temperatura",
+        "Pesándolo en una balanza"
+      ],
+      "correcta": 1,
+      "tip": "El reactivo de biuret cambia a color violeta cuando hay proteínas en la muestra.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa06-019",
+      "oa": "CN08 OA 06",
+      "pregunta": "¿Por qué se recomienda una dieta variada?",
+      "opciones": [
+        "Porque distintos alimentos aportan distintos nutrientes que el cuerpo necesita",
+        "Porque un solo alimento aporta todos los nutrientes",
+        "Porque conviene comer solo carbohidratos",
+        "Porque las vitaminas no son necesarias"
+      ],
+      "correcta": 0,
+      "tip": "Ningún alimento tiene todos los nutrientes; por eso una dieta variada asegura un aporte completo.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa06-020",
+      "oa": "CN08 OA 06",
+      "pregunta": "El consumo excesivo de azúcar y carbohidratos simples puede provocar:",
+      "opciones": [
+        "Mejor salud dental garantizada",
+        "Menos necesidad de dormir",
+        "Más resistencia de los huesos",
+        "Aumento de peso y riesgo de enfermedades como la diabetes"
+      ],
+      "correcta": 3,
+      "tip": "El exceso de azúcar puede llevar a aumento de peso y a problemas de salud como la diabetes.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa06-021",
+      "oa": "CN08 OA 06",
+      "pregunta": "Las vitaminas y los minerales se diferencian de los carbohidratos y grasas en que:",
+      "opciones": [
+        "Aportan grandes cantidades de energía",
+        "Reemplazan al agua del cuerpo",
+        "Se necesitan en pequeñas cantidades y no aportan energía, pero son esenciales",
+        "Solo se encuentran en las carnes"
+      ],
+      "correcta": 2,
+      "tip": "Vitaminas y minerales no dan energía, pero regulan funciones vitales y se requieren en poca cantidad.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa06-022",
+      "oa": "CN08 OA 06",
+      "pregunta": "El yodo es un mineral importante en Chile porque su falta puede afectar:",
+      "opciones": [
+        "El color del cabello",
+        "La cantidad de saliva",
+        "El funcionamiento de la glándula tiroides",
+        "El color de la piel"
+      ],
+      "correcta": 2,
+      "tip": "El yodo es necesario para la tiroides; por eso en Chile la sal suele estar yodada.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa06-023",
+      "oa": "CN08 OA 06",
+      "pregunta": "Un deportista quiere reparar sus músculos después de entrenar. ¿Qué nutriente conviene incluir?",
+      "opciones": [
+        "Solo azúcar",
+        "Proteínas",
+        "Solo agua",
+        "Solo grasas"
+      ],
+      "correcta": 1,
+      "tip": "Las proteínas ayudan a reparar y construir tejido muscular tras el ejercicio.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa06-024",
+      "oa": "CN08 OA 06",
+      "pregunta": "La fibra dietética, presente en frutas, verduras y cereales integrales, ayuda a:",
+      "opciones": [
+        "Aumentar el nivel de oxígeno en la sangre",
+        "El buen funcionamiento del sistema digestivo",
+        "Reemplazar las vitaminas",
+        "Producir más grasa corporal"
+      ],
+      "correcta": 1,
+      "tip": "La fibra favorece la digestión y el tránsito intestinal, aunque el cuerpo no la absorbe como energía.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa06-025",
+      "oa": "CN08 OA 06",
+      "pregunta": "Al comparar un vaso de agua con una bebida azucarada, ¿cuál es la mejor opción para hidratarse?",
+      "opciones": [
+        "La bebida azucarada, por su gran aporte de vitaminas",
+        "Ninguna sirve para hidratar",
+        "Ambas son iguales para la salud",
+        "El agua, porque hidrata sin aportar azúcar ni calorías innecesarias"
+      ],
+      "correcta": 3,
+      "tip": "El agua hidrata sin azúcares añadidos; las bebidas azucaradas aportan calorías innecesarias.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa07-001",
+      "oa": "CN08 OA 07",
+      "pregunta": "¿Qué caracteriza a una alimentación balanceada?",
+      "opciones": [
+        "Incluir variedad de nutrientes en proporciones adecuadas",
+        "Comer solo un tipo de alimento",
+        "Eliminar por completo el agua",
+        "Consumir únicamente azúcar"
+      ],
+      "correcta": 0,
+      "tip": "Una alimentación balanceada combina carbohidratos, proteínas, grasas, vitaminas, minerales y agua en las proporciones adecuadas.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa07-002",
+      "oa": "CN08 OA 07",
+      "pregunta": "La actividad física regular contribuye a la salud porque:",
+      "opciones": [
+        "Debilita el corazón",
+        "Reemplaza la necesidad de dormir",
+        "Fortalece el corazón, los músculos y ayuda a mantener un peso saludable",
+        "Elimina la necesidad de comer"
+      ],
+      "correcta": 2,
+      "tip": "El ejercicio regular fortalece el sistema circulatorio y muscular y mejora el bienestar general.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa07-003",
+      "oa": "CN08 OA 07",
+      "pregunta": "¿Por qué se recomienda evitar el consumo de tabaco?",
+      "opciones": [
+        "Porque mejora la capacidad pulmonar",
+        "Porque aporta vitaminas",
+        "Porque daña los pulmones y aumenta el riesgo de enfermedades graves",
+        "Porque fortalece el corazón"
+      ],
+      "correcta": 2,
+      "tip": "El tabaco daña los pulmones y el sistema circulatorio, y aumenta el riesgo de cáncer y otras enfermedades.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa07-004",
+      "oa": "CN08 OA 07",
+      "pregunta": "El consumo de alcohol en menores de edad es especialmente riesgoso porque:",
+      "opciones": [
+        "Ayuda al crecimiento",
+        "Puede dañar el desarrollo del cerebro y otros órganos",
+        "Mejora la memoria",
+        "No tiene ningún efecto"
+      ],
+      "correcta": 1,
+      "tip": "El cerebro sigue desarrollándose en la adolescencia; el alcohol puede dañar ese desarrollo.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa07-005",
+      "oa": "CN08 OA 07",
+      "pregunta": "¿Cuál de estas acciones forma parte de un estilo de vida saludable?",
+      "opciones": [
+        "Realizar actividad física con regularidad",
+        "Dormir muy poco todas las noches",
+        "Consumir alcohol frecuentemente",
+        "Evitar tomar agua"
+      ],
+      "correcta": 0,
+      "tip": "La actividad física regular es un pilar de la vida saludable, junto a la buena alimentación y el descanso.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa07-006",
+      "oa": "CN08 OA 07",
+      "pregunta": "Un plan de vida saludable debería incluir principalmente:",
+      "opciones": [
+        "Dormir menos y comer más grasa",
+        "Solo comer dulces",
+        "Alimentación balanceada, ejercicio y evitar sustancias dañinas",
+        "Consumir tabaco de vez en cuando"
+      ],
+      "correcta": 2,
+      "tip": "La vida saludable combina buena alimentación, actividad física y evitar alcohol, tabaco y drogas.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa07-007",
+      "oa": "CN08 OA 07",
+      "pregunta": "¿Cómo ayuda el descanso adecuado a la salud?",
+      "opciones": [
+        "No influye en nada",
+        "Reemplaza a la alimentación",
+        "Aumenta el riesgo de enfermedades",
+        "Permite que el cuerpo se recupere y funcione mejor"
+      ],
+      "correcta": 3,
+      "tip": "Dormir lo suficiente permite que el cuerpo y la mente se recuperen y rindan mejor.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa07-008",
+      "oa": "CN08 OA 07",
+      "pregunta": "Una persona quiere mejorar su salud. ¿Cuál es una meta realista y saludable?",
+      "opciones": [
+        "Dejar de comer por completo",
+        "Incluir más frutas y verduras y caminar todos los días",
+        "Consumir bebidas energéticas en exceso",
+        "Fumar para relajarse"
+      ],
+      "correcta": 1,
+      "tip": "Cambios simples y sostenibles, como caminar y comer más frutas y verduras, mejoran la salud.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa07-009",
+      "oa": "CN08 OA 07",
+      "pregunta": "Las drogas afectan el cuerpo porque:",
+      "opciones": [
+        "Mejoran el funcionamiento del cerebro",
+        "Fortalecen los pulmones",
+        "Aportan nutrientes esenciales",
+        "Alteran el funcionamiento del cuerpo y pueden generar dependencia"
+      ],
+      "correcta": 3,
+      "tip": "Las drogas alteran funciones del cuerpo y del cerebro, y pueden crear dependencia y daño a la salud.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa07-010",
+      "oa": "CN08 OA 07",
+      "pregunta": "¿Por qué es importante prevenir enfermedades desde la juventud?",
+      "opciones": [
+        "Porque solo importa la salud en la vejez",
+        "Porque los jóvenes no pueden enfermarse",
+        "Porque la prevención no sirve",
+        "Porque los hábitos saludables cuidan la salud a lo largo de la vida"
+      ],
+      "correcta": 3,
+      "tip": "Los hábitos que se adquieren jóvenes influyen en la salud durante toda la vida.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa07-011",
+      "oa": "CN08 OA 07",
+      "pregunta": "El sedentarismo, es decir la falta de actividad física, se asocia con:",
+      "opciones": [
+        "Mayor riesgo de obesidad y enfermedades",
+        "Mejor salud del corazón",
+        "Huesos más fuertes",
+        "Más energía disponible"
+      ],
+      "correcta": 0,
+      "tip": "La falta de movimiento aumenta el riesgo de obesidad y de enfermedades del corazón.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa07-012",
+      "oa": "CN08 OA 07",
+      "pregunta": "¿Cuál de estos hábitos ayuda a mantener un peso saludable?",
+      "opciones": [
+        "Comer solo comida rápida",
+        "Combinar alimentación balanceada con actividad física",
+        "Pasar todo el día sentado",
+        "Saltarse todas las comidas"
+      ],
+      "correcta": 1,
+      "tip": "Equilibrar lo que se come con la energía que se gasta al moverse ayuda a mantener un peso saludable.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa07-013",
+      "oa": "CN08 OA 07",
+      "pregunta": "El humo del cigarrillo también afecta a quienes están cerca del fumador. A esto se le llama:",
+      "opciones": [
+        "Fumar activo",
+        "Respiración celular",
+        "Fumar pasivo o de segunda mano",
+        "Intercambio gaseoso"
+      ],
+      "correcta": 2,
+      "tip": "El humo de segunda mano (fumador pasivo) también daña la salud de quienes rodean al fumador.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa07-014",
+      "oa": "CN08 OA 07",
+      "pregunta": "Un estudiante analiza su rutina y nota que come muchas frituras y no hace ejercicio. ¿Qué cambio le recomendarías?",
+      "opciones": [
+        "Aumentar aún más las frituras",
+        "Dejar de tomar agua",
+        "Reducir las frituras e incorporar actividad física",
+        "Dormir menos horas"
+      ],
+      "correcta": 2,
+      "tip": "Reducir alimentos grasos y sumar movimiento son cambios clave para mejorar la salud.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa07-015",
+      "oa": "CN08 OA 07",
+      "pregunta": "¿Por qué la publicidad de comida chatarra puede afectar los hábitos saludables?",
+      "opciones": [
+        "Porque siempre da información nutricional completa",
+        "Porque obliga a hacer ejercicio",
+        "Porque puede incentivar el consumo de alimentos poco saludables",
+        "Porque no tiene ninguna influencia"
+      ],
+      "correcta": 2,
+      "tip": "La publicidad puede promover alimentos poco saludables; conviene analizarla con mirada crítica.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa07-016",
+      "oa": "CN08 OA 07",
+      "pregunta": "El agua potable y la higiene son importantes para la salud porque:",
+      "opciones": [
+        "Aumentan el consumo de tabaco",
+        "Ayudan a prevenir enfermedades",
+        "Reemplazan a la alimentación",
+        "No tienen relación con la salud"
+      ],
+      "correcta": 1,
+      "tip": "El agua limpia y la higiene previenen enfermedades y son parte de una vida saludable.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa07-017",
+      "oa": "CN08 OA 07",
+      "pregunta": "¿Cuál es una razón para limitar el consumo de bebidas azucaradas?",
+      "opciones": [
+        "Aportan muchas vitaminas necesarias",
+        "Fortalecen los dientes",
+        "Son la mejor forma de hidratarse",
+        "Su exceso de azúcar se asocia con obesidad y caries"
+      ],
+      "correcta": 3,
+      "tip": "Las bebidas azucaradas aportan mucho azúcar, que en exceso favorece la obesidad y las caries.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa07-018",
+      "oa": "CN08 OA 07",
+      "pregunta": "Una alimentación saludable en un adolescente debería basarse principalmente en:",
+      "opciones": [
+        "Frutas, verduras, cereales integrales, legumbres y agua",
+        "Solo comida rápida y bebidas azucaradas",
+        "Únicamente dulces y golosinas",
+        "Solo suplementos, sin alimentos"
+      ],
+      "correcta": 0,
+      "tip": "Una base de frutas, verduras, cereales, legumbres y agua aporta los nutrientes que un adolescente necesita.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa07-019",
+      "oa": "CN08 OA 07",
+      "pregunta": "¿Qué beneficio aporta el ejercicio a la salud mental?",
+      "opciones": [
+        "Ayuda a reducir el estrés y mejora el ánimo",
+        "No tiene ningún efecto en el ánimo",
+        "Aumenta la ansiedad siempre",
+        "Reemplaza la necesidad de dormir"
+      ],
+      "correcta": 0,
+      "tip": "Además del cuerpo, el ejercicio ayuda a la mente: reduce el estrés y mejora el estado de ánimo.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa07-020",
+      "oa": "CN08 OA 07",
+      "pregunta": "La dependencia a una sustancia como el tabaco o el alcohol significa que:",
+      "opciones": [
+        "El cuerpo y la mente sienten una fuerte necesidad de consumirla",
+        "La persona la puede dejar sin ninguna dificultad",
+        "Es un hábito saludable",
+        "Mejora el rendimiento físico"
+      ],
+      "correcta": 0,
+      "tip": "La dependencia es la necesidad física o psicológica de consumir una sustancia, y dificulta dejarla.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa07-021",
+      "oa": "CN08 OA 07",
+      "pregunta": "Al elaborar un plan de vida saludable, ¿qué es lo más recomendable?",
+      "opciones": [
+        "Hacer cambios extremos por un solo día",
+        "Proponer metas realistas y mantenerlas en el tiempo",
+        "Enfocarse únicamente en no comer",
+        "Copiar exactamente la dieta de otra persona"
+      ],
+      "correcta": 1,
+      "tip": "Los hábitos saludables funcionan mejor cuando las metas son realistas y sostenidas en el tiempo.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa07-022",
+      "oa": "CN08 OA 07",
+      "pregunta": "¿Cómo se relaciona la alimentación con el rendimiento escolar?",
+      "opciones": [
+        "No existe ninguna relación",
+        "Una buena alimentación aporta energía y ayuda a concentrarse",
+        "Comer menos siempre mejora las notas",
+        "Solo el azúcar mejora la concentración"
+      ],
+      "correcta": 1,
+      "tip": "Una alimentación adecuada aporta la energía y los nutrientes que el cerebro necesita para concentrarse.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa07-023",
+      "oa": "CN08 OA 07",
+      "pregunta": "Un compañero te ofrece un cigarrillo y dice que 'no pasa nada'. La mejor decisión para tu salud es:",
+      "opciones": [
+        "Aceptar para probar, ya que es inofensivo",
+        "Fumar solo los fines de semana",
+        "Rechazarlo, porque el tabaco daña la salud desde el primer consumo",
+        "Fumar para verte mayor"
+      ],
+      "correcta": 2,
+      "tip": "Rechazar el tabaco protege tu salud; incluso el consumo ocasional es dañino.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa07-024",
+      "oa": "CN08 OA 07",
+      "pregunta": "¿Cuál de estas combinaciones representa mejor un estilo de vida saludable?",
+      "opciones": [
+        "Alcohol moderado y sin actividad física",
+        "Comida chatarra, sedentarismo y poco sueño",
+        "Solo dieta estricta sin ejercicio",
+        "Buena alimentación, ejercicio, descanso y evitar sustancias dañinas"
+      ],
+      "correcta": 3,
+      "tip": "La salud integral combina alimentación, ejercicio, descanso y evitar alcohol, tabaco y drogas.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa07-025",
+      "oa": "CN08 OA 07",
+      "pregunta": "¿Por qué es útil analizar los factores que afectan la salud antes de proponer un plan?",
+      "opciones": [
+        "Porque solo importa la opinión de la publicidad",
+        "Porque no sirve de nada planificar",
+        "Porque la salud no depende de los hábitos",
+        "Porque permite identificar hábitos a mejorar y tomar decisiones informadas"
+      ],
+      "correcta": 3,
+      "tip": "Analizar los propios hábitos ayuda a decidir con información qué cambiar para mejorar la salud.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa08-001",
+      "oa": "CN08 OA 08",
+      "pregunta": "¿Qué es la carga eléctrica?",
+      "opciones": [
+        "Una propiedad de la materia que causa fuerzas de atracción o repulsión entre objetos",
+        "La cantidad de calor que almacena un cuerpo",
+        "La masa total de los electrones de un átomo",
+        "La velocidad con que se mueve un objeto"
+      ],
+      "correcta": 0,
+      "tip": "La carga eléctrica es una propiedad de la materia; existen dos tipos, positiva y negativa.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa08-002",
+      "oa": "CN08 OA 08",
+      "pregunta": "En la naturaleza existen dos tipos de carga eléctrica. ¿Cuáles son?",
+      "opciones": [
+        "Fuerte y débil",
+        "Positiva y negativa",
+        "Norte y sur",
+        "Grande y pequeña"
+      ],
+      "correcta": 1,
+      "tip": "Las cargas del mismo signo se repelen y las de signo distinto se atraen.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa08-003",
+      "oa": "CN08 OA 08",
+      "pregunta": "¿Qué ocurre entre dos objetos que tienen cargas eléctricas del mismo signo?",
+      "opciones": [
+        "Se atraen con fuerza",
+        "No ejercen ninguna fuerza entre sí",
+        "Se repelen",
+        "Se neutralizan al instante"
+      ],
+      "correcta": 2,
+      "tip": "Cargas iguales se repelen; cargas opuestas se atraen.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa08-004",
+      "oa": "CN08 OA 08",
+      "pregunta": "Un globo con carga negativa se acerca a un objeto con carga positiva. ¿Qué fuerza aparece entre ellos?",
+      "opciones": [
+        "Una fuerza de repulsión",
+        "Ninguna fuerza",
+        "Una fuerza que los hace girar",
+        "Una fuerza de atracción"
+      ],
+      "correcta": 3,
+      "tip": "Cargas de signo opuesto se atraen entre sí.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa08-005",
+      "oa": "CN08 OA 08",
+      "pregunta": "Al frotar una regla plástica con un paño de lana, la regla atrae pequeños trozos de papel. ¿Qué método de electrización ocurrió?",
+      "opciones": [
+        "Electrización por fricción",
+        "Electrización por contacto",
+        "Electrización por inducción",
+        "Conducción de calor"
+      ],
+      "correcta": 0,
+      "tip": "Al frotar dos materiales se transfieren electrones; esto es electrización por fricción o roce.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa08-006",
+      "oa": "CN08 OA 08",
+      "pregunta": "Cuando frotas un globo en tu pelo y el globo queda cargado, ¿qué se transfirió entre el pelo y el globo?",
+      "opciones": [
+        "Protones",
+        "Electrones",
+        "Neutrones",
+        "Átomos completos"
+      ],
+      "correcta": 1,
+      "tip": "En la electrización solo se transfieren electrones; los protones del núcleo no se mueven.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa08-007",
+      "oa": "CN08 OA 08",
+      "pregunta": "Un cuerpo cargado toca a otro cuerpo neutro y le transfiere parte de su carga, quedando ambos con carga del mismo signo. Esto es electrización por...",
+      "opciones": [
+        "fricción",
+        "inducción",
+        "contacto",
+        "convección"
+      ],
+      "correcta": 2,
+      "tip": "En la electrización por contacto, dos cuerpos se tocan y la carga se reparte; ambos quedan con el mismo signo.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa08-008",
+      "oa": "CN08 OA 08",
+      "pregunta": "Se acerca un objeto cargado a un cuerpo neutro, sin tocarlo, y las cargas de este último se reordenan. ¿Qué método de electrización es?",
+      "opciones": [
+        "Contacto",
+        "Fricción",
+        "Conducción",
+        "Inducción"
+      ],
+      "correcta": 3,
+      "tip": "En la inducción no hay contacto: la sola cercanía de un objeto cargado reordena las cargas del cuerpo neutro.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa08-009",
+      "oa": "CN08 OA 08",
+      "pregunta": "¿Cuál es la principal diferencia entre la electrización por contacto y por inducción?",
+      "opciones": [
+        "En la inducción no hay contacto físico entre los cuerpos; en el contacto sí lo hay",
+        "En la inducción se transfiere masa y en el contacto no",
+        "El contacto solo ocurre con plásticos y la inducción solo con metales",
+        "No existe ninguna diferencia entre ambas"
+      ],
+      "correcta": 0,
+      "tip": "La palabra clave de la inducción es 'sin tocar'; el contacto requiere que los cuerpos se toquen.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa08-010",
+      "oa": "CN08 OA 08",
+      "pregunta": "¿Por cuál de estos materiales se mueven fácilmente las cargas eléctricas?",
+      "opciones": [
+        "Plástico",
+        "Cobre",
+        "Vidrio",
+        "Madera seca"
+      ],
+      "correcta": 1,
+      "tip": "Los metales como el cobre son buenos conductores; el plástico y la madera seca son aislantes.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa08-011",
+      "oa": "CN08 OA 08",
+      "pregunta": "Los cables eléctricos se recubren con plástico principalmente porque el plástico...",
+      "opciones": [
+        "conduce mejor la electricidad que el metal",
+        "hace más rápido el paso de la corriente",
+        "es aislante y evita que la corriente pase a nuestras manos",
+        "aumenta la carga del cable"
+      ],
+      "correcta": 2,
+      "tip": "El plástico es aislante: impide el paso de la corriente y protege a las personas.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa08-012",
+      "oa": "CN08 OA 08",
+      "pregunta": "¿Por qué es peligroso tocar enchufes o artefactos eléctricos con las manos mojadas?",
+      "opciones": [
+        "Porque el agua apaga la electricidad",
+        "Porque el agua enfría demasiado el cable",
+        "Porque el agua no tiene ningún efecto sobre la corriente",
+        "Porque el agua con sales conduce la electricidad y facilita una descarga"
+      ],
+      "correcta": 3,
+      "tip": "El agua común, con sales minerales, conduce la electricidad; por eso aumenta el riesgo de descarga.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa08-013",
+      "oa": "CN08 OA 08",
+      "pregunta": "Un rayo durante una tormenta es un ejemplo natural de...",
+      "opciones": [
+        "una gran descarga eléctrica entre las nubes y la tierra",
+        "electrización por contacto entre dos personas",
+        "transferencia de calor por convección",
+        "una reacción química del aire"
+      ],
+      "correcta": 0,
+      "tip": "El rayo es una enorme descarga eléctrica que iguala las cargas acumuladas entre la nube y el suelo.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa08-014",
+      "oa": "CN08 OA 08",
+      "pregunta": "A veces, al tocar la manilla metálica de una puerta, sientes un pequeño chispazo. Esto se debe a que...",
+      "opciones": [
+        "la manilla estaba muy caliente",
+        "tu cuerpo se había cargado y se descarga al tocar el metal",
+        "la manilla genera calor por fricción",
+        "el metal produce luz propia"
+      ],
+      "correcta": 1,
+      "tip": "Al caminar te puedes cargar por fricción; al tocar un metal, esa carga se descarga y produce el chispazo.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa08-015",
+      "oa": "CN08 OA 08",
+      "pregunta": "¿Para qué sirve un pararrayos en un edificio?",
+      "opciones": [
+        "Para producir electricidad para el edificio",
+        "Para atraer más rayos y guardarlos",
+        "Para conducir la descarga del rayo de forma segura hacia la tierra",
+        "Para calentar el techo en invierno"
+      ],
+      "correcta": 2,
+      "tip": "El pararrayos ofrece un camino seguro para que la carga del rayo llegue a tierra sin dañar el edificio.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa08-016",
+      "oa": "CN08 OA 08",
+      "pregunta": "Un átomo se considera eléctricamente neutro cuando...",
+      "opciones": [
+        "no tiene electrones",
+        "tiene más protones que electrones",
+        "tiene más electrones que protones",
+        "tiene igual número de protones y de electrones"
+      ],
+      "correcta": 3,
+      "tip": "Si las cargas positivas (protones) y negativas (electrones) son iguales, el átomo es neutro.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa08-017",
+      "oa": "CN08 OA 08",
+      "pregunta": "Si un objeto neutro gana electrones, queda cargado...",
+      "opciones": [
+        "negativamente",
+        "positivamente",
+        "sin carga",
+        "con carga que cambia cada segundo"
+      ],
+      "correcta": 0,
+      "tip": "Ganar electrones (cargas negativas) deja al objeto con carga negativa; perderlos lo deja positivo.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa08-018",
+      "oa": "CN08 OA 08",
+      "pregunta": "Al frotar una barra de vidrio con seda, la barra pierde electrones. Entonces la barra queda cargada...",
+      "opciones": [
+        "negativamente",
+        "positivamente",
+        "neutra",
+        "sin poder atraer nada"
+      ],
+      "correcta": 1,
+      "tip": "Perder electrones deja al cuerpo con exceso de carga positiva.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa08-019",
+      "oa": "CN08 OA 08",
+      "pregunta": "Al acercar entre sí dos cuerpos cargados, la fuerza eléctrica entre ellos...",
+      "opciones": [
+        "disminuye",
+        "no cambia",
+        "aumenta",
+        "desaparece por completo"
+      ],
+      "correcta": 2,
+      "tip": "Mientras más cerca están las cargas, mayor es la fuerza eléctrica entre ellas.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa08-020",
+      "oa": "CN08 OA 08",
+      "pregunta": "Al sacarte un gorro de lana en invierno, el pelo se levanta y se separa. Esto ocurre porque...",
+      "opciones": [
+        "el pelo se calienta y se seca",
+        "el gorro empuja el pelo hacia arriba",
+        "el pelo pierde toda su masa",
+        "los pelos quedan con la misma carga y se repelen entre sí"
+      ],
+      "correcta": 3,
+      "tip": "La fricción con la lana carga los pelos con el mismo signo; al repelerse, se separan.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa08-021",
+      "oa": "CN08 OA 08",
+      "pregunta": "Un globo frotado en el pelo queda pegado a la pared por unos momentos. ¿Por qué?",
+      "opciones": [
+        "El globo cargado induce cargas opuestas en la pared y se atraen",
+        "El globo se calienta y se derrite en la pared",
+        "La pared tiene pegamento invisible",
+        "El aire empuja el globo contra la pared"
+      ],
+      "correcta": 0,
+      "tip": "El globo cargado induce en la pared una carga opuesta, y por eso se atraen (electrización por inducción).",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa08-022",
+      "oa": "CN08 OA 08",
+      "pregunta": "Una recomendación de seguridad es no volar volantines cerca de cables eléctricos porque...",
+      "opciones": [
+        "el volantín se puede ensuciar",
+        "el hilo puede conducir electricidad y provocar una descarga peligrosa",
+        "el viento sopla más fuerte en ese lugar",
+        "los cables atraen el papel del volantín"
+      ],
+      "correcta": 1,
+      "tip": "Si el hilo, sobre todo mojado o con metal, toca un cable, la electricidad puede llegar hasta la persona.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa08-023",
+      "oa": "CN08 OA 08",
+      "pregunta": "Un electroscopio es un instrumento que sirve para...",
+      "opciones": [
+        "medir la temperatura de un cuerpo",
+        "generar electricidad",
+        "detectar si un cuerpo está cargado eléctricamente",
+        "producir rayos en laboratorio"
+      ],
+      "correcta": 2,
+      "tip": "El electroscopio detecta cargas: sus láminas se separan cuando se acerca un cuerpo cargado.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa08-024",
+      "oa": "CN08 OA 08",
+      "pregunta": "¿Cuál de las siguientes opciones agrupa solo materiales aislantes?",
+      "opciones": [
+        "Cobre, aluminio y hierro",
+        "Agua salada, oro y plata",
+        "Cobre, plástico y vidrio",
+        "Plástico, vidrio y goma"
+      ],
+      "correcta": 3,
+      "tip": "Plástico, vidrio y goma son aislantes; los metales (cobre, aluminio, hierro) son conductores.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa08-025",
+      "oa": "CN08 OA 08",
+      "pregunta": "En la electrización, ¿por qué se transfieren electrones y no protones?",
+      "opciones": [
+        "Porque los electrones están en la parte externa del átomo y pueden moverse, mientras los protones están fijos en el núcleo",
+        "Porque los protones son más livianos",
+        "Porque los protones tienen carga negativa",
+        "Porque los electrones no tienen carga"
+      ],
+      "correcta": 0,
+      "tip": "Los electrones ocupan la zona externa del átomo y pueden desplazarse; los protones quedan atrapados en el núcleo.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa09-001",
+      "oa": "CN08 OA 09",
+      "pregunta": "Una pila común entrega energía eléctrica transformando energía...",
+      "opciones": [
+        "luminosa en eléctrica",
+        "química en eléctrica",
+        "eléctrica en química",
+        "sonora en eléctrica"
+      ],
+      "correcta": 1,
+      "tip": "Dentro de una pila ocurren reacciones químicas que producen energía eléctrica.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa09-002",
+      "oa": "CN08 OA 09",
+      "pregunta": "Un panel fotovoltaico (solar) transforma en electricidad la energía...",
+      "opciones": [
+        "del viento",
+        "del agua en movimiento",
+        "de la luz del Sol",
+        "del calor del interior de la Tierra"
+      ],
+      "correcta": 2,
+      "tip": "Los paneles fotovoltaicos convierten la luz solar directamente en energía eléctrica.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa09-003",
+      "oa": "CN08 OA 09",
+      "pregunta": "Un generador eléctrico produce electricidad a partir de energía...",
+      "opciones": [
+        "química",
+        "luminosa",
+        "nuclear convertida directamente en luz",
+        "de movimiento (mecánica)"
+      ],
+      "correcta": 3,
+      "tip": "Un generador transforma energía de movimiento (mecánica) en energía eléctrica mediante magnetismo.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa09-004",
+      "oa": "CN08 OA 09",
+      "pregunta": "¿Cuál de estas fuentes de energía es renovable?",
+      "opciones": [
+        "La energía solar",
+        "El carbón",
+        "El petróleo",
+        "El gas natural"
+      ],
+      "correcta": 0,
+      "tip": "El Sol, el viento y el agua son fuentes renovables; el carbón, el petróleo y el gas son combustibles fósiles.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa09-005",
+      "oa": "CN08 OA 09",
+      "pregunta": "¿Cuál de estas fuentes de energía NO es renovable?",
+      "opciones": [
+        "El viento",
+        "El petróleo",
+        "El agua de un río",
+        "La luz solar"
+      ],
+      "correcta": 1,
+      "tip": "El petróleo es un combustible fósil: se agota y no se renueva en una escala de tiempo humana.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa09-006",
+      "oa": "CN08 OA 09",
+      "pregunta": "Una ventaja de generar electricidad con paneles solares frente a quemar carbón es que los paneles...",
+      "opciones": [
+        "funcionan mejor de noche",
+        "producen más humo",
+        "no emiten gases contaminantes al generar electricidad",
+        "no necesitan luz para funcionar"
+      ],
+      "correcta": 2,
+      "tip": "Los paneles solares generan electricidad sin emitir gases contaminantes; el carbón sí los emite.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa09-007",
+      "oa": "CN08 OA 09",
+      "pregunta": "Una limitación de los paneles solares es que...",
+      "opciones": [
+        "contaminan el aire con humo",
+        "producen electricidad durante toda la noche",
+        "gastan mucho combustible",
+        "dependen de la luz del Sol, por lo que producen poco de noche o con muchas nubes"
+      ],
+      "correcta": 3,
+      "tip": "Los paneles necesitan luz solar; de noche o con mucha nubosidad su producción baja.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa09-008",
+      "oa": "CN08 OA 09",
+      "pregunta": "En una central hidroeléctrica, el agua que cae hace girar turbinas conectadas a generadores. La energía del agua en movimiento se transforma finalmente en energía...",
+      "opciones": [
+        "eléctrica",
+        "química",
+        "sonora",
+        "nuclear"
+      ],
+      "correcta": 0,
+      "tip": "El agua mueve turbinas y generadores; así la energía del movimiento se convierte en electricidad.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa09-009",
+      "oa": "CN08 OA 09",
+      "pregunta": "Los aerogeneradores (molinos de viento) generan electricidad aprovechando la energía...",
+      "opciones": [
+        "del Sol",
+        "del viento",
+        "de las mareas",
+        "de las reacciones químicas"
+      ],
+      "correcta": 1,
+      "tip": "El viento hace girar las aspas del aerogenerador, que mueven un generador y producen electricidad.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa09-010",
+      "oa": "CN08 OA 09",
+      "pregunta": "¿Qué caracteriza a una pila o batería recargable, como la de un celular?",
+      "opciones": [
+        "Se usa una sola vez y luego se bota",
+        "No almacena energía",
+        "Puede volver a almacenar energía eléctrica muchas veces",
+        "Genera electricidad con luz solar"
+      ],
+      "correcta": 2,
+      "tip": "Las baterías recargables pueden cargarse y descargarse muchas veces antes de agotarse.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa09-011",
+      "oa": "CN08 OA 09",
+      "pregunta": "Cuando conectas el celular al cargador, la energía eléctrica de la red se almacena en la batería como energía...",
+      "opciones": [
+        "luminosa",
+        "sonora",
+        "mecánica",
+        "química"
+      ],
+      "correcta": 3,
+      "tip": "Al cargar, la batería guarda energía en forma química; al usar el celular, la devuelve como eléctrica.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa09-012",
+      "oa": "CN08 OA 09",
+      "pregunta": "Una pila tiene dos polos o terminales. ¿Cómo se llaman?",
+      "opciones": [
+        "Positivo y negativo",
+        "Norte y sur",
+        "Frío y caliente",
+        "Grande y chico"
+      ],
+      "correcta": 0,
+      "tip": "Toda pila tiene un polo positivo (+) y uno negativo (−); entre ellos hay una diferencia de voltaje.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa09-013",
+      "oa": "CN08 OA 09",
+      "pregunta": "Una central termoeléctrica a carbón genera electricidad principalmente...",
+      "opciones": [
+        "usando directamente la luz del Sol",
+        "quemando carbón para calentar agua, generar vapor y mover turbinas",
+        "con reacciones dentro de pilas",
+        "aprovechando el viento"
+      ],
+      "correcta": 1,
+      "tip": "El carbón se quema para hervir agua; el vapor mueve turbinas y generadores que producen electricidad.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa09-014",
+      "oa": "CN08 OA 09",
+      "pregunta": "¿Por qué se busca reemplazar los combustibles fósiles por energías renovables?",
+      "opciones": [
+        "Porque los fósiles son gratis e ilimitados",
+        "Porque las renovables contaminan mucho más",
+        "Porque los fósiles se agotan y contaminan, mientras las renovables son más limpias y no se acaban",
+        "Porque las renovables no producen electricidad"
+      ],
+      "correcta": 2,
+      "tip": "Los fósiles son limitados y contaminan; las renovables son más limpias y prácticamente inagotables.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa09-015",
+      "oa": "CN08 OA 09",
+      "pregunta": "Chile tiene muchos volcanes. La energía que aprovecha el calor del interior de la Tierra se llama energía...",
+      "opciones": [
+        "eólica",
+        "solar",
+        "hidráulica",
+        "geotérmica"
+      ],
+      "correcta": 3,
+      "tip": "La energía geotérmica aprovecha el calor del interior de la Tierra; Chile tiene gran potencial por sus volcanes.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa09-016",
+      "oa": "CN08 OA 09",
+      "pregunta": "Una calculadora con una pequeña celda que funciona con luz usa energía...",
+      "opciones": [
+        "solar",
+        "eólica",
+        "geotérmica",
+        "química de una pila grande"
+      ],
+      "correcta": 0,
+      "tip": "La celda de la calculadora es un pequeño panel fotovoltaico que usa la luz para funcionar.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa09-017",
+      "oa": "CN08 OA 09",
+      "pregunta": "En cualquier tecnología que genera electricidad, la energía no se crea de la nada, sino que...",
+      "opciones": [
+        "aparece por sí sola",
+        "se transforma desde otra forma de energía",
+        "se destruye por completo",
+        "se multiplica sin límite"
+      ],
+      "correcta": 1,
+      "tip": "La energía se transforma de una forma a otra; las tecnologías eléctricas convierten una fuente en electricidad.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa09-018",
+      "oa": "CN08 OA 09",
+      "pregunta": "La luz de algunas bicicletas se enciende al pedalear gracias a un pequeño generador (dínamo). La energía que enciende la luz proviene...",
+      "opciones": [
+        "de una pila oculta",
+        "de la luz del Sol",
+        "del movimiento de la rueda al pedalear",
+        "del calor del ciclista"
+      ],
+      "correcta": 2,
+      "tip": "El dínamo transforma el movimiento de la rueda en electricidad para encender la luz.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa09-019",
+      "oa": "CN08 OA 09",
+      "pregunta": "En una casa aislada, en una zona desértica y muy soleada, ¿qué tecnología sería más conveniente para generar electricidad?",
+      "opciones": [
+        "Una central a carbón",
+        "Un aerogenerador en un lugar sin viento",
+        "Una central hidroeléctrica sin ríos cercanos",
+        "Paneles solares fotovoltaicos"
+      ],
+      "correcta": 3,
+      "tip": "En una zona muy soleada, los paneles solares aprovechan mejor el recurso disponible.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa09-020",
+      "oa": "CN08 OA 09",
+      "pregunta": "¿Por qué una pila no recargable deja de funcionar con el tiempo?",
+      "opciones": [
+        "Porque se agotan las sustancias químicas que producen la electricidad",
+        "Porque se queda sin luz solar",
+        "Porque pierde su color",
+        "Porque se enfría demasiado"
+      ],
+      "correcta": 0,
+      "tip": "La pila funciona por reacciones químicas; cuando esas sustancias se consumen, deja de dar energía.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa09-021",
+      "oa": "CN08 OA 09",
+      "pregunta": "La energía que se obtiene del movimiento de las mareas del mar se llama energía...",
+      "opciones": [
+        "solar",
+        "mareomotriz",
+        "geotérmica",
+        "nuclear"
+      ],
+      "correcta": 1,
+      "tip": "La energía mareomotriz aprovecha el subir y bajar de las mareas para generar electricidad.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa09-022",
+      "oa": "CN08 OA 09",
+      "pregunta": "A diferencia de una pila que se agota, un panel solar puede generar electricidad durante años porque...",
+      "opciones": [
+        "guarda mucha energía química en su interior",
+        "no necesita ninguna fuente de energía",
+        "usa la luz del Sol, que llega cada día de forma renovable",
+        "produce su propia luz interna"
+      ],
+      "correcta": 2,
+      "tip": "El panel no gasta un combustible interno: usa la luz solar, un recurso renovable que se repone a diario.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa09-023",
+      "oa": "CN08 OA 09",
+      "pregunta": "Generar electricidad quemando restos de madera o desechos agrícolas es un ejemplo de energía...",
+      "opciones": [
+        "solar",
+        "eólica",
+        "mareomotriz",
+        "de biomasa"
+      ],
+      "correcta": 3,
+      "tip": "La biomasa usa materia orgánica (madera, desechos vegetales) como combustible para generar energía.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa09-024",
+      "oa": "CN08 OA 09",
+      "pregunta": "Ahorrar electricidad en casa es importante porque...",
+      "opciones": [
+        "gran parte de la electricidad aún se genera quemando combustibles que contaminan",
+        "la electricidad se crea de la nada",
+        "la energía nunca se agota ni cuesta dinero",
+        "los paneles solares gastan carbón"
+      ],
+      "correcta": 0,
+      "tip": "Mucha electricidad todavía proviene de fuentes contaminantes; ahorrar reduce contaminación y costo.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa09-025",
+      "oa": "CN08 OA 09",
+      "pregunta": "Para que un panel solar produzca la mayor cantidad de electricidad, conviene ubicarlo...",
+      "opciones": [
+        "a la sombra de un árbol",
+        "orientado hacia donde recibe más luz solar directa",
+        "dentro de una pieza cerrada",
+        "bajo tierra"
+      ],
+      "correcta": 1,
+      "tip": "Mientras más luz solar directa recibe, más electricidad genera el panel.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa10-001",
+      "oa": "CN08 OA 10",
+      "pregunta": "¿Qué elementos básicos necesita un circuito eléctrico simple para funcionar?",
+      "opciones": [
+        "Solo cables",
+        "Solo una ampolleta",
+        "Una fuente de energía, cables conductores y un elemento que use la energía (como una ampolleta)",
+        "Solo una pila, sin cables"
+      ],
+      "correcta": 2,
+      "tip": "Un circuito necesita una fuente (pila), un camino conductor (cables) y un componente que use la energía.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa10-002",
+      "oa": "CN08 OA 10",
+      "pregunta": "Para que una ampolleta se encienda en un circuito, este debe estar...",
+      "opciones": [
+        "abierto en un punto",
+        "cortado por la mitad",
+        "sin fuente de energía",
+        "cerrado, formando un camino completo"
+      ],
+      "correcta": 3,
+      "tip": "La corriente solo circula si el camino está cerrado; si el circuito se abre, no pasa corriente.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa10-003",
+      "oa": "CN08 OA 10",
+      "pregunta": "La corriente eléctrica es...",
+      "opciones": [
+        "el movimiento o flujo de cargas eléctricas por un conductor",
+        "la cantidad de calor de un cable",
+        "el color de la luz de una ampolleta",
+        "el peso de la pila"
+      ],
+      "correcta": 0,
+      "tip": "La corriente es el flujo de cargas (electrones) que se mueven por el conductor.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa10-004",
+      "oa": "CN08 OA 10",
+      "pregunta": "El voltaje de una pila se puede entender como...",
+      "opciones": [
+        "la cantidad de cables del circuito",
+        "el 'empuje' que impulsa a las cargas a moverse por el circuito",
+        "el calor que produce la ampolleta",
+        "el tamaño físico de la pila"
+      ],
+      "correcta": 1,
+      "tip": "El voltaje es la diferencia de energía que impulsa las cargas; se mide en voltios (V).",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa10-005",
+      "oa": "CN08 OA 10",
+      "pregunta": "La resistencia eléctrica de un material indica...",
+      "opciones": [
+        "cuánta luz produce",
+        "cuánto pesa el material",
+        "qué tanto se opone al paso de la corriente",
+        "cuántas pilas tiene el circuito"
+      ],
+      "correcta": 2,
+      "tip": "La resistencia mide la oposición al paso de la corriente; se mide en ohmios (Ω).",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa10-006",
+      "oa": "CN08 OA 10",
+      "pregunta": "La corriente eléctrica se mide en...",
+      "opciones": [
+        "voltios",
+        "ohmios",
+        "watts",
+        "amperios"
+      ],
+      "correcta": 3,
+      "tip": "La corriente se mide en amperios (A); el voltaje en voltios y la resistencia en ohmios.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa10-007",
+      "oa": "CN08 OA 10",
+      "pregunta": "En un circuito en serie, los componentes están conectados...",
+      "opciones": [
+        "uno tras otro, en un solo camino para la corriente",
+        "cada uno en su propio camino independiente",
+        "sin ningún cable",
+        "solo si hay dos pilas"
+      ],
+      "correcta": 0,
+      "tip": "En serie hay un único camino: la corriente pasa por un componente y luego por el siguiente.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa10-008",
+      "oa": "CN08 OA 10",
+      "pregunta": "En un circuito en paralelo, los componentes están conectados...",
+      "opciones": [
+        "uno tras otro en un solo camino",
+        "cada uno en su propia rama o camino independiente",
+        "todos fundidos en un mismo punto",
+        "sin fuente de energía"
+      ],
+      "correcta": 1,
+      "tip": "En paralelo, cada componente tiene su propio camino; la corriente se reparte entre las ramas.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa10-009",
+      "oa": "CN08 OA 10",
+      "pregunta": "En un circuito en serie con dos ampolletas, si una se quema (se corta), la otra...",
+      "opciones": [
+        "brilla más fuerte",
+        "no cambia en nada",
+        "también se apaga, porque se interrumpe el único camino",
+        "cambia de color"
+      ],
+      "correcta": 2,
+      "tip": "En serie hay un solo camino; si se corta en un punto, toda la corriente se detiene.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa10-010",
+      "oa": "CN08 OA 10",
+      "pregunta": "En un circuito en paralelo con dos ampolletas, si una se quema, la otra...",
+      "opciones": [
+        "también se apaga",
+        "explota",
+        "queda sin voltaje",
+        "sigue encendida, porque tiene su propio camino"
+      ],
+      "correcta": 3,
+      "tip": "En paralelo cada rama es independiente; si una se corta, las demás siguen funcionando.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa10-011",
+      "oa": "CN08 OA 10",
+      "pregunta": "Las instalaciones eléctricas de las casas se conectan en paralelo principalmente porque así...",
+      "opciones": [
+        "cada artefacto funciona de forma independiente y recibe el mismo voltaje",
+        "si se apaga uno, se apagan todos",
+        "se usa un solo cable para todo",
+        "todos los artefactos comparten la misma corriente en fila"
+      ],
+      "correcta": 0,
+      "tip": "En paralelo cada artefacto es independiente y recibe el mismo voltaje; por eso se usa en las casas.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa10-012",
+      "oa": "CN08 OA 10",
+      "pregunta": "En un circuito en serie, si agregas más ampolletas (más resistencia), la corriente total...",
+      "opciones": [
+        "aumenta",
+        "disminuye",
+        "no cambia nunca",
+        "se vuelve infinita"
+      ],
+      "correcta": 1,
+      "tip": "A mayor resistencia total, menor corriente para el mismo voltaje.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa10-013",
+      "oa": "CN08 OA 10",
+      "pregunta": "Al agregar más ampolletas en serie a una misma pila, cada ampolleta generalmente...",
+      "opciones": [
+        "brilla más",
+        "brilla igual que con una sola",
+        "brilla menos, porque el voltaje se reparte entre ellas",
+        "se apaga de inmediato siempre"
+      ],
+      "correcta": 2,
+      "tip": "En serie el voltaje se reparte; con más ampolletas, a cada una le toca menos y brillan menos.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa10-014",
+      "oa": "CN08 OA 10",
+      "pregunta": "La potencia eléctrica de un artefacto indica...",
+      "opciones": [
+        "su color",
+        "su tamaño",
+        "cuántos cables tiene",
+        "la rapidez con que usa o consume energía eléctrica"
+      ],
+      "correcta": 3,
+      "tip": "La potencia, en watts, mide cuánta energía usa el artefacto por segundo; a más watts, más consumo.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa10-015",
+      "oa": "CN08 OA 10",
+      "pregunta": "La potencia eléctrica se mide en...",
+      "opciones": [
+        "watts",
+        "amperios",
+        "voltios",
+        "ohmios"
+      ],
+      "correcta": 0,
+      "tip": "La potencia se mide en watts (W); una ampolleta de 100 W consume más que una de 40 W.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa10-016",
+      "oa": "CN08 OA 10",
+      "pregunta": "¿Cuál es la función de un interruptor en un circuito?",
+      "opciones": [
+        "Aumentar el voltaje de la pila",
+        "Abrir o cerrar el circuito para cortar o permitir el paso de la corriente",
+        "Producir más calor",
+        "Cambiar el color de la luz"
+      ],
+      "correcta": 1,
+      "tip": "El interruptor abre el circuito (apaga) o lo cierra (enciende) controlando el paso de la corriente.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa10-017",
+      "oa": "CN08 OA 10",
+      "pregunta": "En algunas guirnaldas de luces antiguas, cuando una ampolleta se quema se apagan todas. Esto indica que están conectadas en...",
+      "opciones": [
+        "paralelo",
+        "dos circuitos distintos",
+        "serie",
+        "un circuito siempre abierto"
+      ],
+      "correcta": 2,
+      "tip": "Que se apaguen todas al fallar una es la marca típica de una conexión en serie.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa10-018",
+      "oa": "CN08 OA 10",
+      "pregunta": "En un circuito en paralelo, el voltaje que recibe cada rama es...",
+      "opciones": [
+        "distinto en cada una, siempre menor",
+        "cero",
+        "la suma del de todas las ramas",
+        "el mismo para todas las ramas"
+      ],
+      "correcta": 3,
+      "tip": "En paralelo, todas las ramas reciben el mismo voltaje de la fuente.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa10-019",
+      "oa": "CN08 OA 10",
+      "pregunta": "Un fusible o un interruptor automático (disyuntor) en una casa sirve para...",
+      "opciones": [
+        "cortar la corriente si hay demasiada, evitando incendios o daños",
+        "aumentar el voltaje de la casa",
+        "producir electricidad",
+        "enfriar los cables con agua"
+      ],
+      "correcta": 0,
+      "tip": "El fusible o disyuntor corta la corriente cuando es excesiva, protegiendo la instalación.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa10-020",
+      "oa": "CN08 OA 10",
+      "pregunta": "Un cortocircuito ocurre cuando...",
+      "opciones": [
+        "el circuito queda abierto y no pasa corriente",
+        "la corriente encuentra un camino de muy baja resistencia y aumenta peligrosamente",
+        "se agrega una ampolleta más",
+        "el voltaje baja a cero lentamente"
+      ],
+      "correcta": 1,
+      "tip": "En un cortocircuito la corriente se dispara por un camino de resistencia casi nula; puede calentar y quemar.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa10-021",
+      "oa": "CN08 OA 10",
+      "pregunta": "Si mantienes la misma resistencia y aumentas el voltaje de la fuente, la corriente...",
+      "opciones": [
+        "disminuye",
+        "no cambia",
+        "aumenta",
+        "se detiene por completo"
+      ],
+      "correcta": 2,
+      "tip": "Con la misma resistencia, más voltaje impulsa más corriente (relación de la ley de Ohm).",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa10-022",
+      "oa": "CN08 OA 10",
+      "pregunta": "Una estufa eléctrica consume mucha más energía que una ampolleta LED porque la estufa tiene...",
+      "opciones": [
+        "menos resistencia siempre",
+        "menos cables",
+        "un color distinto",
+        "mayor potencia (usa más energía por segundo)"
+      ],
+      "correcta": 3,
+      "tip": "A mayor potencia (watts), mayor consumo de energía por segundo; la estufa gasta mucho más que un LED.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa10-023",
+      "oa": "CN08 OA 10",
+      "pregunta": "Para medir el voltaje entre dos puntos de un circuito se usa un...",
+      "opciones": [
+        "voltímetro",
+        "termómetro",
+        "cronómetro",
+        "barómetro"
+      ],
+      "correcta": 0,
+      "tip": "El voltaje se mide con un voltímetro; la corriente, con un amperímetro.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa10-024",
+      "oa": "CN08 OA 10",
+      "pregunta": "¿Qué ventaja tiene conectar los artefactos de una casa en paralelo en lugar de en serie?",
+      "opciones": [
+        "Se gasta menos cable",
+        "Cada artefacto funciona por separado y sigue andando aunque otro se apague",
+        "Todos comparten el mismo camino y se apagan juntos",
+        "Cada artefacto recibe menos voltaje"
+      ],
+      "correcta": 1,
+      "tip": "En paralelo cada aparato es independiente; puedes apagar la televisión sin apagar el refrigerador.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa10-025",
+      "oa": "CN08 OA 10",
+      "pregunta": "¿Cuál es la diferencia clave entre un circuito en serie y uno en paralelo?",
+      "opciones": [
+        "El de serie no usa pila y el de paralelo sí",
+        "El de paralelo no conduce corriente",
+        "En serie hay un único camino para la corriente; en paralelo hay varios caminos independientes",
+        "No hay ninguna diferencia real entre ambos"
+      ],
+      "correcta": 2,
+      "tip": "Serie = un solo camino; paralelo = varios caminos. Eso explica sus diferencias de brillo, corriente y fallas.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa11-001",
+      "oa": "CN08 OA 11",
+      "pregunta": "El calor es...",
+      "opciones": [
+        "la temperatura de un cuerpo",
+        "una sustancia que contienen los objetos calientes",
+        "el frío que sale de un cuerpo",
+        "la energía que se transfiere de un cuerpo a otro por diferencia de temperatura"
+      ],
+      "correcta": 3,
+      "tip": "El calor es energía en tránsito: fluye del cuerpo de mayor temperatura al de menor temperatura.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa11-002",
+      "oa": "CN08 OA 11",
+      "pregunta": "La temperatura de un cuerpo está relacionada con...",
+      "opciones": [
+        "qué tan rápido se mueven, en promedio, las partículas que lo forman",
+        "el tamaño del cuerpo",
+        "el color del cuerpo",
+        "la cantidad total de agua que tiene"
+      ],
+      "correcta": 0,
+      "tip": "A mayor temperatura, más rápido se agitan las partículas del cuerpo.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa11-003",
+      "oa": "CN08 OA 11",
+      "pregunta": "El calor siempre se transfiere de forma espontánea desde el cuerpo...",
+      "opciones": [
+        "de menor temperatura al de mayor temperatura",
+        "de mayor temperatura al de menor temperatura",
+        "más pequeño al más grande",
+        "más liviano al más pesado"
+      ],
+      "correcta": 1,
+      "tip": "El calor fluye del cuerpo más caliente al más frío hasta alcanzar el equilibrio térmico.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa11-004",
+      "oa": "CN08 OA 11",
+      "pregunta": "¿Cuál afirmación distingue correctamente calor y temperatura?",
+      "opciones": [
+        "Son exactamente lo mismo",
+        "El calor se mide con termómetro y la temperatura no",
+        "La temperatura mide la agitación de las partículas; el calor es la energía que se transfiere entre cuerpos",
+        "La temperatura es una energía y el calor es solo un número"
+      ],
+      "correcta": 2,
+      "tip": "Temperatura y calor no son lo mismo: la temperatura es una medida; el calor es energía que se transfiere.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa11-005",
+      "oa": "CN08 OA 11",
+      "pregunta": "Cuando un cuerpo caliente y uno frío se ponen en contacto durante suficiente tiempo, llegan a...",
+      "opciones": [
+        "distinta temperatura, cada vez mayor",
+        "temperaturas cada vez más separadas",
+        "cero grados siempre",
+        "la misma temperatura (equilibrio térmico)"
+      ],
+      "correcta": 3,
+      "tip": "En el equilibrio térmico ambos cuerpos alcanzan la misma temperatura y deja de fluir calor.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa11-006",
+      "oa": "CN08 OA 11",
+      "pregunta": "La conducción es la forma de propagar el calor...",
+      "opciones": [
+        "por contacto directo, de partícula a partícula, sobre todo en los sólidos",
+        "por el movimiento de un líquido o gas que sube y baja",
+        "por ondas, sin necesidad de materia",
+        "solo en el vacío del espacio"
+      ],
+      "correcta": 0,
+      "tip": "En la conducción el calor pasa de partícula a partícula por contacto; es típica de los sólidos, como los metales.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa11-007",
+      "oa": "CN08 OA 11",
+      "pregunta": "La convección es la propagación del calor...",
+      "opciones": [
+        "por contacto directo entre sólidos",
+        "por el movimiento de un fluido (líquido o gas): lo caliente sube y lo frío baja",
+        "por ondas a través del vacío",
+        "que no requiere ninguna materia"
+      ],
+      "correcta": 1,
+      "tip": "En la convección el fluido caliente sube y el frío baja, formando corrientes que transportan el calor.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa11-008",
+      "oa": "CN08 OA 11",
+      "pregunta": "La radiación es la forma de transferir calor que...",
+      "opciones": [
+        "requiere contacto directo entre dos sólidos",
+        "solo ocurre dentro del agua",
+        "se propaga mediante ondas y puede viajar incluso por el vacío",
+        "necesita siempre un metal para producirse"
+      ],
+      "correcta": 2,
+      "tip": "La radiación viaja como ondas y no necesita materia; así el calor del Sol llega a la Tierra a través del vacío.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa11-009",
+      "oa": "CN08 OA 11",
+      "pregunta": "El calor del Sol llega hasta la Tierra atravesando el espacio vacío. ¿Por qué mecanismo se transfiere?",
+      "opciones": [
+        "Conducción",
+        "Convección",
+        "Contacto directo",
+        "Radiación"
+      ],
+      "correcta": 3,
+      "tip": "Entre el Sol y la Tierra hay vacío; solo la radiación puede transferir calor sin materia.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa11-010",
+      "oa": "CN08 OA 11",
+      "pregunta": "Dejas una cuchara metálica dentro de una sopa caliente y el mango se calienta. ¿Qué mecanismo actúa dentro del metal?",
+      "opciones": [
+        "Conducción",
+        "Convección",
+        "Radiación",
+        "Ninguno, el metal no transmite calor"
+      ],
+      "correcta": 0,
+      "tip": "En el metal, el calor viaja de partícula a partícula por conducción hasta el mango.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa11-011",
+      "oa": "CN08 OA 11",
+      "pregunta": "Al calentar agua en una olla, el agua del fondo sube y la de la superficie baja, formando corrientes. Este mecanismo es...",
+      "opciones": [
+        "conducción",
+        "convección",
+        "radiación",
+        "aislamiento térmico"
+      ],
+      "correcta": 1,
+      "tip": "El agua caliente, menos densa, sube y la fría baja: son corrientes de convección.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa11-012",
+      "oa": "CN08 OA 11",
+      "pregunta": "¿Cuál de estos materiales es un buen conductor del calor?",
+      "opciones": [
+        "Madera",
+        "Plástico",
+        "Metal, por ejemplo el aluminio",
+        "Lana"
+      ],
+      "correcta": 2,
+      "tip": "Los metales conducen bien el calor; la madera, el plástico y la lana son aislantes térmicos.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa11-013",
+      "oa": "CN08 OA 11",
+      "pregunta": "Los mangos de las ollas suelen ser de plástico o madera porque estos materiales...",
+      "opciones": [
+        "conducen muy bien el calor",
+        "se calientan más rápido que el metal",
+        "producen calor propio",
+        "son malos conductores (aislantes) y no queman la mano tan fácilmente"
+      ],
+      "correcta": 3,
+      "tip": "El plástico y la madera son aislantes: conducen poco calor, por eso protegen la mano.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa11-014",
+      "oa": "CN08 OA 11",
+      "pregunta": "La ropa de lana nos mantiene abrigados en invierno principalmente porque...",
+      "opciones": [
+        "es un aislante que reduce la pérdida de calor de nuestro cuerpo",
+        "produce calor por sí misma",
+        "enfría el cuerpo lentamente",
+        "conduce muy bien el calor hacia afuera"
+      ],
+      "correcta": 0,
+      "tip": "La lana atrapa aire y conduce mal el calor, así reduce la pérdida del calor corporal.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa11-015",
+      "oa": "CN08 OA 11",
+      "pregunta": "Un termómetro es un instrumento que mide...",
+      "opciones": [
+        "el calor total de un cuerpo",
+        "la temperatura",
+        "la cantidad de energía transferida",
+        "la masa del cuerpo"
+      ],
+      "correcta": 1,
+      "tip": "El termómetro mide temperatura (en °C, por ejemplo), no la cantidad de calor.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa11-016",
+      "oa": "CN08 OA 11",
+      "pregunta": "Para calentar hasta la misma temperatura, una olla grande de agua necesita más calor que una taza pequeña porque...",
+      "opciones": [
+        "el agua de la taza está más caliente",
+        "la temperatura depende del tamaño del recipiente",
+        "tiene más cantidad de agua (más masa) que calentar",
+        "el agua de la olla no se calienta nunca"
+      ],
+      "correcta": 2,
+      "tip": "A igual temperatura final, más masa requiere más calor: por eso el mar tarda más en calentarse que un vaso.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa11-017",
+      "oa": "CN08 OA 11",
+      "pregunta": "Al tocar un objeto de metal y otro de madera que están a la misma temperatura ambiente, el metal se siente más frío porque...",
+      "opciones": [
+        "el metal está realmente a menor temperatura",
+        "la madera produce calor",
+        "el metal contiene frío en su interior",
+        "el metal conduce el calor de tu mano más rápido, y sientes esa pérdida de calor"
+      ],
+      "correcta": 3,
+      "tip": "Aunque estén a igual temperatura, el metal quita calor a tu mano más rápido; por eso se siente frío.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa11-018",
+      "oa": "CN08 OA 11",
+      "pregunta": "Durante el día, el aire caliente sobre la arena de la playa sube y es reemplazado por aire más fresco proveniente del mar. Esto es un ejemplo de...",
+      "opciones": [
+        "convección en el aire",
+        "conducción en el metal",
+        "radiación desde la Luna",
+        "equilibrio químico"
+      ],
+      "correcta": 0,
+      "tip": "Las brisas se forman por convección: el aire caliente sube y el más frío ocupa su lugar.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa11-019",
+      "oa": "CN08 OA 11",
+      "pregunta": "Un termo mantiene el café caliente por más tiempo porque...",
+      "opciones": [
+        "produce calor con una pila interna",
+        "reduce las tres formas de transferencia de calor con sus paredes aislantes y el vacío",
+        "conduce muy bien el calor hacia afuera",
+        "enfría el café más rápido"
+      ],
+      "correcta": 1,
+      "tip": "El termo minimiza conducción, convección y radiación, así el contenido conserva su temperatura.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa11-020",
+      "oa": "CN08 OA 11",
+      "pregunta": "En un día soleado, la ropa de color negro se calienta más que la blanca porque el negro...",
+      "opciones": [
+        "produce su propio calor",
+        "refleja toda la luz que recibe",
+        "absorbe más radiación solar que el blanco",
+        "conduce peor el calor"
+      ],
+      "correcta": 2,
+      "tip": "Los colores oscuros absorben más radiación; los claros reflejan más y se calientan menos.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa11-021",
+      "oa": "CN08 OA 11",
+      "pregunta": "Muchos materiales, al recibir calor y aumentar su temperatura, tienden a...",
+      "opciones": [
+        "encogerse siempre",
+        "perder masa",
+        "cambiar de color de forma permanente",
+        "dilatarse, es decir, aumentar un poco su tamaño"
+      ],
+      "correcta": 3,
+      "tip": "Al calentarse, las partículas se agitan más y el material suele dilatarse (aumentar de volumen).",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa11-022",
+      "oa": "CN08 OA 11",
+      "pregunta": "Cuando pones un cubo de hielo en un vaso de jugo, el jugo se enfría porque...",
+      "opciones": [
+        "el calor pasa del jugo (más caliente) al hielo (más frío)",
+        "el hielo entrega frío al jugo",
+        "el frío sube desde el hielo como una sustancia",
+        "la temperatura del jugo aumenta"
+      ],
+      "correcta": 0,
+      "tip": "El frío no se transfiere: es el calor del jugo el que pasa al hielo, por eso el jugo se enfría.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa11-023",
+      "oa": "CN08 OA 11",
+      "pregunta": "Una estufa calienta toda una habitación porque el aire caliente sube y circula. Ese calentamiento del aire de la pieza es principalmente por...",
+      "opciones": [
+        "conducción",
+        "convección",
+        "contacto directo con las paredes",
+        "radiación desde el suelo"
+      ],
+      "correcta": 1,
+      "tip": "El aire caliente sube y el frío baja: corrientes de convección reparten el calor por la pieza.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa11-024",
+      "oa": "CN08 OA 11",
+      "pregunta": "Una olla está bien diseñada cuando su base es de metal y su mango de plástico porque...",
+      "opciones": [
+        "el metal aísla y el plástico conduce",
+        "ambos materiales conducen igual el calor",
+        "el metal (buen conductor) deja pasar el calor a la comida y el plástico (aislante) protege la mano",
+        "el plástico calienta la comida y el metal la enfría"
+      ],
+      "correcta": 2,
+      "tip": "Base conductora para cocinar y mango aislante para no quemarse: cada material según su función térmica.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa11-025",
+      "oa": "CN08 OA 11",
+      "pregunta": "¿Cuál de estas afirmaciones sobre la transferencia de calor es correcta?",
+      "opciones": [
+        "La conducción solo ocurre en el vacío",
+        "La convección ocurre principalmente en los sólidos",
+        "La radiación necesita siempre un medio material",
+        "La radiación puede transferir calor a través del vacío, a diferencia de la conducción y la convección"
+      ],
+      "correcta": 3,
+      "tip": "Solo la radiación viaja por el vacío; la conducción y la convección necesitan materia.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa12-001",
+      "oa": "CN08 OA 12",
+      "pregunta": "¿Cuál de los siguientes científicos propuso la primera teoría atómica moderna, según la cual la materia está formada por átomos indivisibles?",
+      "opciones": [
+        "John Dalton",
+        "J. J. Thomson",
+        "Ernest Rutherford",
+        "Niels Bohr"
+      ],
+      "correcta": 0,
+      "tip": "Dalton (inicios del siglo XIX) planteó que la materia estaba hecha de átomos indivisibles e indestructibles: fue el punto de partida de la teoría atómica moderna.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa12-002",
+      "oa": "CN08 OA 12",
+      "pregunta": "El modelo atómico de Dalton describía al átomo como:",
+      "opciones": [
+        "Una esfera con electrones incrustados",
+        "Una esfera maciza e indivisible",
+        "Un núcleo rodeado de órbitas definidas",
+        "Un espacio casi vacío con un núcleo pequeño"
+      ],
+      "correcta": 1,
+      "tip": "Para Dalton el átomo era como una pequeña esfera sólida, maciza e indivisible, sin partes internas conocidas todavía.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa12-003",
+      "oa": "CN08 OA 12",
+      "pregunta": "¿Qué partícula subatómica descubrió J. J. Thomson gracias a sus experimentos con rayos catódicos?",
+      "opciones": [
+        "El protón",
+        "El neutrón",
+        "El electrón",
+        "El fotón"
+      ],
+      "correcta": 2,
+      "tip": "Thomson identificó el electrón, una partícula muy pequeña de carga negativa, al estudiar los rayos catódicos.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa12-004",
+      "oa": "CN08 OA 12",
+      "pregunta": "El modelo atómico de Thomson es conocido popularmente como el modelo del 'budín de pasas' porque propone que:",
+      "opciones": [
+        "El átomo es una esfera indivisible sin cargas",
+        "Los electrones giran en órbitas circulares fijas",
+        "Casi toda la masa está en un núcleo central diminuto",
+        "Los electrones están incrustados en una esfera de carga positiva"
+      ],
+      "correcta": 3,
+      "tip": "Thomson imaginó una esfera de carga positiva con los electrones (las 'pasas') repartidos dentro, de modo que el átomo fuera neutro.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa12-005",
+      "oa": "CN08 OA 12",
+      "pregunta": "El experimento de la lámina de oro, en el que se lanzaban partículas contra una fina hoja de metal, fue realizado bajo la dirección de:",
+      "opciones": [
+        "Ernest Rutherford",
+        "John Dalton",
+        "Niels Bohr",
+        "J. J. Thomson"
+      ],
+      "correcta": 0,
+      "tip": "Rutherford dirigió el experimento de la lámina de oro, cuyos resultados lo llevaron a proponer la existencia de un núcleo atómico.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa12-006",
+      "oa": "CN08 OA 12",
+      "pregunta": "En el experimento de la lámina de oro se observó que la mayoría de las partículas atravesaban la lámina sin desviarse, pero unas pocas rebotaban. ¿Qué conclusión permitió obtener?",
+      "opciones": [
+        "El átomo es una esfera maciza y compacta",
+        "El átomo es casi todo espacio vacío, con la carga positiva concentrada en un núcleo pequeño",
+        "Los electrones están fijos en la superficie del átomo",
+        "Todos los átomos tienen la misma masa"
+      ],
+      "correcta": 1,
+      "tip": "Que casi todas pasaran indica mucho espacio vacío; que unas pocas rebotaran indica una zona pequeña, densa y positiva: el núcleo.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa12-007",
+      "oa": "CN08 OA 12",
+      "pregunta": "El modelo atómico de Rutherford introdujo la idea de que el átomo tiene:",
+      "opciones": [
+        "Órbitas con niveles de energía definidos",
+        "Electrones incrustados en una masa positiva",
+        "Un núcleo central con carga positiva y electrones alrededor",
+        "Solo partículas negativas distribuidas al azar"
+      ],
+      "correcta": 2,
+      "tip": "Rutherford propuso un núcleo positivo y pequeño en el centro, con los electrones moviéndose a su alrededor en una gran zona vacía.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa12-008",
+      "oa": "CN08 OA 12",
+      "pregunta": "¿Cuál fue el principal aporte del modelo atómico de Niels Bohr?",
+      "opciones": [
+        "Descubrir el electrón",
+        "Proponer que el átomo es indivisible",
+        "Demostrar que existe el núcleo",
+        "Plantear que los electrones giran en niveles de energía definidos"
+      ],
+      "correcta": 3,
+      "tip": "Bohr propuso que los electrones ocupan niveles (órbitas) de energía definidos y solo cambian de nivel al ganar o perder energía.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa12-009",
+      "oa": "CN08 OA 12",
+      "pregunta": "Según el modelo de Bohr, cuando un electrón salta de un nivel de energía más alto a uno más bajo, el átomo:",
+      "opciones": [
+        "Libera energía en forma de luz",
+        "Absorbe energía",
+        "Pierde un protón",
+        "Se transforma en otro elemento"
+      ],
+      "correcta": 0,
+      "tip": "Al bajar de nivel el electrón libera la energía sobrante, muchas veces como luz; al subir de nivel, en cambio, la absorbe.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa12-010",
+      "oa": "CN08 OA 12",
+      "pregunta": "¿Qué idea de Dalton fue posteriormente corregida por los modelos siguientes?",
+      "opciones": [
+        "Que la materia está formada por átomos",
+        "Que el átomo es indivisible y no tiene partes internas",
+        "Que los átomos se combinan para formar compuestos",
+        "Que existen distintos tipos de átomos"
+      ],
+      "correcta": 1,
+      "tip": "Los descubrimientos de electrones, protones y neutrones mostraron que el átomo sí tiene partes internas: no es indivisible como creía Dalton.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa12-011",
+      "oa": "CN08 OA 12",
+      "pregunta": "¿Por qué se dice que el conocimiento sobre el átomo ha evolucionado a lo largo del tiempo?",
+      "opciones": [
+        "Porque los científicos cambian de opinión sin razones",
+        "Porque los átomos cambian con los años",
+        "Porque cada modelo se mejoró al aparecer nuevas evidencias experimentales",
+        "Porque un solo científico descubrió todo de una vez"
+      ],
+      "correcta": 2,
+      "tip": "La ciencia avanza revisando sus modelos: cada nueva evidencia experimental permitió mejorar o corregir el modelo anterior del átomo.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa12-012",
+      "oa": "CN08 OA 12",
+      "pregunta": "Ordena cronológicamente los modelos atómicos, del más antiguo al más reciente:",
+      "opciones": [
+        "Bohr → Rutherford → Thomson → Dalton",
+        "Thomson → Dalton → Bohr → Rutherford",
+        "Rutherford → Bohr → Dalton → Thomson",
+        "Dalton → Thomson → Rutherford → Bohr"
+      ],
+      "correcta": 3,
+      "tip": "El orden histórico es Dalton (esfera maciza), Thomson (budín de pasas), Rutherford (núcleo) y Bohr (niveles de energía).",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa12-013",
+      "oa": "CN08 OA 12",
+      "pregunta": "¿Cuál de estos modelos atómicos NO incluía la existencia de un núcleo?",
+      "opciones": [
+        "El modelo de Thomson",
+        "El modelo de Bohr",
+        "El modelo de Rutherford",
+        "Ninguno incluía núcleo"
+      ],
+      "correcta": 0,
+      "tip": "El núcleo recién aparece con Rutherford. En el modelo de Thomson la carga positiva estaba repartida por toda la esfera, sin núcleo.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa12-014",
+      "oa": "CN08 OA 12",
+      "pregunta": "Una estudiante dibuja el átomo como un sistema solar en miniatura, con electrones girando en órbitas de energía bien definidas alrededor del núcleo. ¿A qué modelo corresponde su dibujo?",
+      "opciones": [
+        "Al modelo de Dalton",
+        "Al modelo de Bohr",
+        "Al modelo de Thomson",
+        "A ningún modelo conocido"
+      ],
+      "correcta": 1,
+      "tip": "Las órbitas de energía definidas, como planetas alrededor del Sol, son la imagen característica del modelo de Bohr.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa12-015",
+      "oa": "CN08 OA 12",
+      "pregunta": "La principal diferencia entre el modelo de Thomson y el de Rutherford es que:",
+      "opciones": [
+        "Thomson ubicó la carga positiva en un núcleo y Rutherford la repartió",
+        "Ambos ubicaron la carga positiva en un núcleo pequeño",
+        "Thomson repartió la carga positiva en toda la esfera y Rutherford la concentró en un núcleo",
+        "Ninguno de los dos consideró electrones"
+      ],
+      "correcta": 2,
+      "tip": "Thomson repartía la carga positiva por todo el átomo; Rutherford la concentró en un núcleo pequeño y denso en el centro.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa12-016",
+      "oa": "CN08 OA 12",
+      "pregunta": "¿Qué característica del átomo permitió explicar el modelo de Rutherford, pero no el de Thomson?",
+      "opciones": [
+        "Que el átomo es neutro",
+        "Que existen electrones",
+        "Que los átomos se combinan",
+        "Que la masa y la carga positiva se concentran en un núcleo pequeño"
+      ],
+      "correcta": 3,
+      "tip": "El rebote de algunas partículas solo se explica si la masa y la carga positiva están concentradas en un núcleo diminuto: idea de Rutherford.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa12-017",
+      "oa": "CN08 OA 12",
+      "pregunta": "En el átomo, la carga eléctrica del electrón es:",
+      "opciones": [
+        "Negativa",
+        "Positiva",
+        "Neutra",
+        "Variable según el elemento"
+      ],
+      "correcta": 0,
+      "tip": "El electrón tiene carga negativa; el protón la tiene positiva y el neutrón no tiene carga (es neutro).",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa12-018",
+      "oa": "CN08 OA 12",
+      "pregunta": "Una de las ideas del modelo de Bohr que superó al de Rutherford fue que:",
+      "opciones": [
+        "El átomo tiene un núcleo positivo",
+        "Los electrones no pueden estar en cualquier lugar, sino en niveles de energía específicos",
+        "El átomo es una esfera maciza",
+        "Los electrones tienen carga positiva"
+      ],
+      "correcta": 1,
+      "tip": "Bohr agregó que los electrones solo ocupan ciertos niveles de energía permitidos, algo que el modelo de Rutherford no explicaba.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa12-019",
+      "oa": "CN08 OA 12",
+      "pregunta": "El descubrimiento de partículas subatómicas (como el electrón) demostró que la idea de Dalton sobre el átomo indivisible debía:",
+      "opciones": [
+        "Mantenerse sin cambios",
+        "Eliminarse por completo, ya que los átomos no existen",
+        "Modificarse, porque el átomo sí tiene partes internas",
+        "Aplicarse solo a los metales"
+      ],
+      "correcta": 2,
+      "tip": "La idea general de átomos se conservó, pero hubo que corregir el 'indivisible': el átomo tiene partes internas más pequeñas.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa12-020",
+      "oa": "CN08 OA 12",
+      "pregunta": "¿Cuál de las siguientes afirmaciones sobre el modelo de Thomson es correcta?",
+      "opciones": [
+        "Proponía un núcleo central positivo",
+        "Describía electrones girando en órbitas definidas",
+        "Afirmaba que el átomo era completamente indivisible",
+        "Presentaba una esfera positiva con electrones incrustados, de modo que el átomo era neutro"
+      ],
+      "correcta": 3,
+      "tip": "En el modelo de Thomson, los electrones negativos incrustados en la esfera positiva equilibraban la carga y hacían neutro al átomo.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa12-021",
+      "oa": "CN08 OA 12",
+      "pregunta": "Que un modelo científico sea reemplazado por otro más completo indica que:",
+      "opciones": [
+        "La ciencia se corrige y mejora al obtener nuevas evidencias",
+        "El modelo anterior nunca sirvió de nada",
+        "Los científicos anteriores se equivocaron por descuido",
+        "El conocimiento científico nunca cambia"
+      ],
+      "correcta": 0,
+      "tip": "Cada modelo fue útil en su época; la llegada de nuevas evidencias permite construir modelos mejores. Así avanza la ciencia.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa12-022",
+      "oa": "CN08 OA 12",
+      "pregunta": "En el experimento de la lámina de oro, el hecho de que la mayoría de las partículas pasara sin desviarse indica que el átomo:",
+      "opciones": [
+        "Es una esfera totalmente sólida",
+        "Tiene mucho espacio vacío",
+        "Está lleno de electrones",
+        "No tiene núcleo"
+      ],
+      "correcta": 1,
+      "tip": "Si casi todas las partículas atraviesan la lámina sin chocar, es porque el átomo es en su mayor parte espacio vacío.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa12-023",
+      "oa": "CN08 OA 12",
+      "pregunta": "¿Qué tienen en común los modelos de Rutherford y de Bohr?",
+      "opciones": [
+        "Ninguno considera electrones",
+        "Ambos dicen que el átomo es indivisible",
+        "Ambos consideran un núcleo atómico central",
+        "Ambos reparten la carga positiva en toda la esfera"
+      ],
+      "correcta": 2,
+      "tip": "Bohr partió del núcleo de Rutherford y le agregó los niveles de energía; ambos coinciden en que existe un núcleo central.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa12-024",
+      "oa": "CN08 OA 12",
+      "pregunta": "Si un modelo atómico no logra explicar un nuevo resultado experimental, lo esperable en ciencia es que:",
+      "opciones": [
+        "Se ignore el resultado experimental",
+        "Se mantenga el modelo sin cambios",
+        "Se abandone el estudio del átomo",
+        "Se proponga un nuevo modelo que sí lo explique"
+      ],
+      "correcta": 3,
+      "tip": "Cuando un modelo no explica una evidencia nueva, se construye otro mejor. Así surgieron los modelos de Thomson, Rutherford y Bohr.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa12-025",
+      "oa": "CN08 OA 12",
+      "pregunta": "¿Cuál de estos aportes corresponde correctamente a su autor?",
+      "opciones": [
+        "Thomson: propuso el modelo del budín de pasas",
+        "Dalton: descubrió el electrón",
+        "Rutherford: propuso los niveles de energía",
+        "Bohr: propuso el átomo indivisible"
+      ],
+      "correcta": 0,
+      "tip": "Thomson propuso el modelo del budín de pasas. Dalton planteó el átomo indivisible, Rutherford el núcleo y Bohr los niveles de energía.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa13-001",
+      "oa": "CN08 OA 13",
+      "pregunta": "¿Qué es un átomo?",
+      "opciones": [
+        "Una mezcla de varias sustancias",
+        "La unidad más pequeña de un elemento que conserva sus propiedades",
+        "Una partícula con carga eléctrica siempre positiva",
+        "Un tipo de célula"
+      ],
+      "correcta": 1,
+      "tip": "El átomo es la unidad básica y más pequeña de la materia que aún conserva las propiedades de su elemento químico.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa13-002",
+      "oa": "CN08 OA 13",
+      "pregunta": "¿Qué es una molécula?",
+      "opciones": [
+        "Un átomo con carga eléctrica",
+        "El núcleo de un átomo",
+        "La unión de dos o más átomos enlazados",
+        "Un electrón libre"
+      ],
+      "correcta": 2,
+      "tip": "Una molécula se forma cuando dos o más átomos se unen mediante enlaces químicos, por ejemplo la molécula de agua (H₂O).",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa13-003",
+      "oa": "CN08 OA 13",
+      "pregunta": "Un ion es una partícula que se forma cuando un átomo:",
+      "opciones": [
+        "Cambia de elemento",
+        "Se une a otro átomo igual",
+        "Pierde su núcleo",
+        "Gana o pierde electrones y queda con carga eléctrica"
+      ],
+      "correcta": 3,
+      "tip": "Al ganar o perder electrones, el átomo deja de ser neutro y queda con carga: se convierte en un ion.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa13-004",
+      "oa": "CN08 OA 13",
+      "pregunta": "¿Qué es un elemento químico?",
+      "opciones": [
+        "Una sustancia formada por átomos de un mismo tipo",
+        "Una mezcla de dos metales",
+        "Una molécula con carga",
+        "Cualquier líquido puro"
+      ],
+      "correcta": 0,
+      "tip": "Un elemento está formado por un solo tipo de átomo, como el oxígeno (solo átomos de oxígeno) o el hierro (solo átomos de hierro).",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa13-005",
+      "oa": "CN08 OA 13",
+      "pregunta": "¿Qué es un compuesto?",
+      "opciones": [
+        "Una sustancia formada por un solo tipo de átomo",
+        "Una sustancia formada por dos o más elementos distintos unidos químicamente",
+        "Una mezcla que se separa fácilmente",
+        "Un átomo con carga eléctrica"
+      ],
+      "correcta": 1,
+      "tip": "Un compuesto, como el agua (H₂O), está formado por átomos de elementos diferentes unidos mediante enlaces químicos.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa13-006",
+      "oa": "CN08 OA 13",
+      "pregunta": "El agua (H₂O) es un ejemplo de:",
+      "opciones": [
+        "Un elemento químico",
+        "Un átomo aislado",
+        "Un compuesto",
+        "Un ion"
+      ],
+      "correcta": 2,
+      "tip": "El agua combina hidrógeno y oxígeno, dos elementos distintos: por eso es un compuesto, no un elemento.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa13-007",
+      "oa": "CN08 OA 13",
+      "pregunta": "¿Cuál de las siguientes sustancias es un elemento y NO un compuesto?",
+      "opciones": [
+        "Agua (H₂O)",
+        "Dióxido de carbono (CO₂)",
+        "Sal de mesa (NaCl)",
+        "Oxígeno (O₂)"
+      ],
+      "correcta": 3,
+      "tip": "El oxígeno (O₂) está formado solo por átomos de oxígeno, así que es un elemento. Los demás combinan elementos distintos.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa13-008",
+      "oa": "CN08 OA 13",
+      "pregunta": "Un enlace químico es:",
+      "opciones": [
+        "La fuerza que mantiene unidos a los átomos en una sustancia",
+        "El núcleo de un átomo",
+        "Un tipo de electrón",
+        "La carga de un ion"
+      ],
+      "correcta": 0,
+      "tip": "El enlace químico es la fuerza que une a los átomos entre sí para formar moléculas y compuestos.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa13-009",
+      "oa": "CN08 OA 13",
+      "pregunta": "Si un átomo neutro pierde un electrón, se convierte en un ion con carga:",
+      "opciones": [
+        "Negativa",
+        "Positiva",
+        "Neutra",
+        "Doble negativa"
+      ],
+      "correcta": 1,
+      "tip": "Al perder un electrón (carga negativa), quedan más protones positivos que electrones, así que el ion queda con carga positiva.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa13-010",
+      "oa": "CN08 OA 13",
+      "pregunta": "Si un átomo neutro gana un electrón, se convierte en un ion con carga:",
+      "opciones": [
+        "Positiva",
+        "Neutra",
+        "Negativa",
+        "Sin carga"
+      ],
+      "correcta": 2,
+      "tip": "Al ganar un electrón (carga negativa), el átomo tiene más electrones que protones, por lo que el ion queda con carga negativa.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa13-011",
+      "oa": "CN08 OA 13",
+      "pregunta": "¿Cuál de estas afirmaciones distingue correctamente un elemento de un compuesto?",
+      "opciones": [
+        "No existe diferencia entre ambos",
+        "El elemento siempre es líquido y el compuesto sólido",
+        "El compuesto tiene un solo tipo de átomo",
+        "El elemento tiene un solo tipo de átomo; el compuesto tiene átomos de distintos elementos unidos"
+      ],
+      "correcta": 3,
+      "tip": "La clave está en los átomos: un tipo en el elemento; dos o más tipos unidos químicamente en el compuesto.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa13-012",
+      "oa": "CN08 OA 13",
+      "pregunta": "La molécula de oxígeno (O₂) está formada por:",
+      "opciones": [
+        "Dos átomos de oxígeno unidos",
+        "Un átomo de oxígeno y uno de hidrógeno",
+        "Dos elementos distintos",
+        "Un ion positivo y uno negativo"
+      ],
+      "correcta": 0,
+      "tip": "El O₂ son dos átomos del mismo elemento (oxígeno) unidos: es una molécula, aunque siga siendo un elemento.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa13-013",
+      "oa": "CN08 OA 13",
+      "pregunta": "¿Por qué el dióxido de carbono (CO₂) se clasifica como compuesto?",
+      "opciones": [
+        "Porque tiene un solo tipo de átomo",
+        "Porque combina átomos de carbono y de oxígeno, dos elementos distintos",
+        "Porque es un gas",
+        "Porque tiene carga eléctrica"
+      ],
+      "correcta": 1,
+      "tip": "El CO₂ une carbono y oxígeno, elementos diferentes, mediante enlaces químicos: por eso es un compuesto.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa13-014",
+      "oa": "CN08 OA 13",
+      "pregunta": "La diferencia principal entre un átomo y un ion es que el ion:",
+      "opciones": [
+        "No tiene núcleo",
+        "Siempre tiene más protones que cualquier átomo",
+        "Tiene carga eléctrica por ganar o perder electrones",
+        "Es siempre más grande"
+      ],
+      "correcta": 2,
+      "tip": "El átomo neutro tiene igual número de protones y electrones; el ion ganó o perdió electrones y por eso tiene carga.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa13-015",
+      "oa": "CN08 OA 13",
+      "pregunta": "La sal de mesa (NaCl) se forma por la unión de iones de sodio y de cloro. Esto muestra que las sustancias pueden formarse cuando los átomos:",
+      "opciones": [
+        "Se mantienen siempre aislados",
+        "Se transforman en energía",
+        "Pierden su núcleo",
+        "Interactúan y se enlazan entre sí"
+      ],
+      "correcta": 3,
+      "tip": "Los átomos interactúan y forman enlaces; de esa interacción surgen partículas y sustancias como la sal común.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa13-016",
+      "oa": "CN08 OA 13",
+      "pregunta": "¿Cuál de los siguientes es un ejemplo de molécula formada por elementos distintos?",
+      "opciones": [
+        "H₂O (agua)",
+        "H₂ (hidrógeno)",
+        "O₂ (oxígeno)",
+        "N₂ (nitrógeno)"
+      ],
+      "correcta": 0,
+      "tip": "El agua (H₂O) une hidrógeno y oxígeno, elementos distintos. O₂, H₂ y N₂ son moléculas de un solo elemento.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa13-017",
+      "oa": "CN08 OA 13",
+      "pregunta": "Un átomo neutro tiene igual cantidad de:",
+      "opciones": [
+        "Protones y neutrones",
+        "Protones y electrones",
+        "Neutrones y electrones",
+        "Iones y moléculas"
+      ],
+      "correcta": 1,
+      "tip": "En un átomo neutro, la carga positiva de los protones se equilibra con la negativa de igual número de electrones.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa13-018",
+      "oa": "CN08 OA 13",
+      "pregunta": "¿Qué relación existe entre los átomos y las sustancias que observamos?",
+      "opciones": [
+        "Las sustancias no tienen relación con los átomos",
+        "Solo los metales están hechos de átomos",
+        "Toda la materia está formada por átomos que interactúan y se combinan",
+        "Los átomos existen únicamente en el laboratorio"
+      ],
+      "correcta": 2,
+      "tip": "Toda la materia, natural o fabricada, está constituida por átomos que interactúan y se combinan formando distintas sustancias.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa13-019",
+      "oa": "CN08 OA 13",
+      "pregunta": "El hierro puro (Fe) es una sustancia formada solo por átomos de hierro. Por lo tanto, el hierro es:",
+      "opciones": [
+        "Un compuesto",
+        "Un ion",
+        "Una mezcla",
+        "Un elemento"
+      ],
+      "correcta": 3,
+      "tip": "Al estar formado por un solo tipo de átomo (hierro), el hierro puro es un elemento químico.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa13-020",
+      "oa": "CN08 OA 13",
+      "pregunta": "¿Cuál de las siguientes afirmaciones sobre los iones es correcta?",
+      "opciones": [
+        "Un ion puede tener carga positiva o negativa según gane o pierda electrones",
+        "Todos los iones tienen carga positiva",
+        "Los iones no tienen carga eléctrica",
+        "Un ion es un átomo sin núcleo"
+      ],
+      "correcta": 0,
+      "tip": "Si el átomo pierde electrones, el ion es positivo; si los gana, es negativo. Depende de lo que ocurra con los electrones.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa13-021",
+      "oa": "CN08 OA 13",
+      "pregunta": "Ordena de menor a mayor complejidad estructural:",
+      "opciones": [
+        "Molécula → átomo → compuesto",
+        "Átomo → molécula → compuesto",
+        "Compuesto → molécula → átomo",
+        "Átomo → compuesto → molécula"
+      ],
+      "correcta": 1,
+      "tip": "El átomo es la unidad básica; al unirse forman moléculas, y cuando combinan elementos distintos originan compuestos.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa13-022",
+      "oa": "CN08 OA 13",
+      "pregunta": "Una estudiante afirma: 'El aire y el agua están hechos de átomos'. Esta idea es:",
+      "opciones": [
+        "Incorrecta, porque solo los sólidos tienen átomos",
+        "Incorrecta, porque los gases no tienen materia",
+        "Correcta, porque toda la materia está formada por átomos",
+        "Correcta solo para el agua"
+      ],
+      "correcta": 2,
+      "tip": "Sólidos, líquidos y gases son materia y, por lo tanto, están formados por átomos. La estudiante tiene razón.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa13-023",
+      "oa": "CN08 OA 13",
+      "pregunta": "¿En qué se diferencian una molécula de un elemento (como O₂) y la de un compuesto (como H₂O)?",
+      "opciones": [
+        "No hay ninguna diferencia",
+        "Ambas tienen átomos de elementos distintos",
+        "La del compuesto tiene un solo tipo de átomo",
+        "La del elemento tiene átomos de un mismo tipo; la del compuesto tiene átomos de elementos distintos"
+      ],
+      "correcta": 3,
+      "tip": "O₂ une átomos iguales (elemento); H₂O une átomos de elementos distintos (compuesto). Ambas son moléculas.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa13-024",
+      "oa": "CN08 OA 13",
+      "pregunta": "¿Qué se necesita para que dos átomos formen una molécula?",
+      "opciones": [
+        "Que se unan mediante un enlace químico",
+        "Que pierdan su núcleo",
+        "Que tengan la misma masa",
+        "Que se conviertan en iones siempre"
+      ],
+      "correcta": 0,
+      "tip": "Los átomos forman moléculas al unirse mediante enlaces químicos, la fuerza que los mantiene juntos.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa13-025",
+      "oa": "CN08 OA 13",
+      "pregunta": "La glucosa (C₆H₁₂O₆) contiene carbono, hidrógeno y oxígeno unidos. Según esto, la glucosa es:",
+      "opciones": [
+        "Un elemento",
+        "Un compuesto",
+        "Un átomo",
+        "Un ion"
+      ],
+      "correcta": 1,
+      "tip": "La glucosa combina tres elementos distintos (C, H y O) unidos químicamente, por lo que es un compuesto.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa14-001",
+      "oa": "CN08 OA 14",
+      "pregunta": "¿Qué es la tabla periódica?",
+      "opciones": [
+        "Una lista desordenada de sustancias",
+        "Un tipo de molécula",
+        "Un ordenamiento de los elementos químicos según sus propiedades",
+        "Una tabla de mezclas"
+      ],
+      "correcta": 2,
+      "tip": "La tabla periódica organiza todos los elementos químicos conocidos según sus propiedades y su número atómico.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa14-002",
+      "oa": "CN08 OA 14",
+      "pregunta": "El número atómico de un elemento indica la cantidad de:",
+      "opciones": [
+        "Neutrones en el núcleo",
+        "Enlaces que puede formar",
+        "Moléculas del elemento",
+        "Protones en el núcleo"
+      ],
+      "correcta": 3,
+      "tip": "El número atómico es igual a la cantidad de protones del núcleo y es lo que identifica a cada elemento.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa14-003",
+      "oa": "CN08 OA 14",
+      "pregunta": "En la tabla periódica, los elementos se ordenan de forma creciente según su:",
+      "opciones": [
+        "Número atómico",
+        "Masa atómica",
+        "Tamaño",
+        "Color"
+      ],
+      "correcta": 0,
+      "tip": "La tabla periódica moderna ordena los elementos de menor a mayor número atómico (cantidad de protones).",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa14-004",
+      "oa": "CN08 OA 14",
+      "pregunta": "Las filas horizontales de la tabla periódica se llaman:",
+      "opciones": [
+        "Grupos",
+        "Períodos",
+        "Familias",
+        "Columnas"
+      ],
+      "correcta": 1,
+      "tip": "Las filas horizontales son los períodos; las columnas verticales son los grupos o familias.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa14-005",
+      "oa": "CN08 OA 14",
+      "pregunta": "Las columnas verticales de la tabla periódica se denominan:",
+      "opciones": [
+        "Períodos",
+        "Niveles",
+        "Grupos",
+        "Órbitas"
+      ],
+      "correcta": 2,
+      "tip": "Las columnas verticales son los grupos (o familias); reúnen elementos con propiedades químicas parecidas.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa14-006",
+      "oa": "CN08 OA 14",
+      "pregunta": "¿Qué característica comparten los elementos de un mismo grupo de la tabla periódica?",
+      "opciones": [
+        "Tienen el mismo número atómico",
+        "Tienen exactamente la misma masa",
+        "Son todos gases",
+        "Tienen propiedades químicas semejantes"
+      ],
+      "correcta": 3,
+      "tip": "Los elementos de un mismo grupo (columna) tienen propiedades químicas parecidas por su estructura similar de electrones.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa14-007",
+      "oa": "CN08 OA 14",
+      "pregunta": "La masa atómica de un elemento depende principalmente de la cantidad de:",
+      "opciones": [
+        "Protones y neutrones del núcleo",
+        "Solo electrones",
+        "Solo protones",
+        "Enlaces químicos"
+      ],
+      "correcta": 0,
+      "tip": "La masa se concentra en el núcleo; por eso la masa atómica depende sobre todo de la suma de protones y neutrones.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa14-008",
+      "oa": "CN08 OA 14",
+      "pregunta": "¿Cuál de las siguientes es una propiedad típica de los metales?",
+      "opciones": [
+        "No conducen la electricidad",
+        "Son buenos conductores de electricidad y calor",
+        "Son siempre gases",
+        "Se rompen con facilidad como el vidrio"
+      ],
+      "correcta": 1,
+      "tip": "Los metales suelen ser buenos conductores del calor y la electricidad, además de brillantes y maleables.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa14-009",
+      "oa": "CN08 OA 14",
+      "pregunta": "En general, los no metales se caracterizan por:",
+      "opciones": [
+        "Conducir muy bien la electricidad",
+        "Ser todos líquidos",
+        "Ser malos conductores de la electricidad",
+        "Tener siempre brillo metálico"
+      ],
+      "correcta": 2,
+      "tip": "La mayoría de los no metales son malos conductores de la electricidad y del calor, al contrario de los metales.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa14-010",
+      "oa": "CN08 OA 14",
+      "pregunta": "Si un elemento tiene número atómico 6, ¿cuántos protones tiene en su núcleo?",
+      "opciones": [
+        "3 protones",
+        "0 protones",
+        "12 protones",
+        "6 protones"
+      ],
+      "correcta": 3,
+      "tip": "El número atómico es igual al número de protones; si es 6, el átomo tiene 6 protones (corresponde al carbono).",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa14-011",
+      "oa": "CN08 OA 14",
+      "pregunta": "La tabla periódica se considera un 'modelo' porque permite:",
+      "opciones": [
+        "Predecir propiedades de los elementos según su ubicación",
+        "Fabricar átomos nuevos",
+        "Cambiar la masa de los elementos",
+        "Eliminar elementos peligrosos"
+      ],
+      "correcta": 0,
+      "tip": "Al conocer la posición de un elemento (grupo y período), se pueden predecir muchas de sus propiedades: por eso es un modelo útil.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa14-012",
+      "oa": "CN08 OA 14",
+      "pregunta": "¿Qué tipo de enlace tiende a formarse entre un metal y un no metal?",
+      "opciones": [
+        "Enlace entre dos metales solamente",
+        "Enlace iónico",
+        "Ningún enlace",
+        "Un enlace sin transferencia de electrones"
+      ],
+      "correcta": 1,
+      "tip": "Cuando se combinan un metal y un no metal suele formarse un enlace iónico, con transferencia de electrones (por ejemplo, en NaCl).",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa14-013",
+      "oa": "CN08 OA 14",
+      "pregunta": "La mayoría de los elementos de la tabla periódica son:",
+      "opciones": [
+        "No metales",
+        "Gases nobles",
+        "Metales",
+        "Líquidos"
+      ],
+      "correcta": 2,
+      "tip": "La mayor parte de los elementos de la tabla periódica son metales, ubicados a la izquierda y al centro.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa14-014",
+      "oa": "CN08 OA 14",
+      "pregunta": "Dos elementos están en el mismo grupo. ¿Qué se puede predecir de ellos?",
+      "opciones": [
+        "Que no reaccionan nunca",
+        "Que tendrán exactamente la misma masa",
+        "Que serán el mismo elemento",
+        "Que tendrán propiedades químicas parecidas"
+      ],
+      "correcta": 3,
+      "tip": "Pertenecer al mismo grupo permite predecir propiedades químicas similares, que es una de las utilidades de la tabla.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa14-015",
+      "oa": "CN08 OA 14",
+      "pregunta": "El cobre (Cu) es muy usado en cables eléctricos porque, como buen metal:",
+      "opciones": [
+        "Conduce muy bien la electricidad",
+        "No conduce la electricidad",
+        "Es un gas a temperatura ambiente",
+        "Es un no metal aislante"
+      ],
+      "correcta": 0,
+      "tip": "El cobre es un metal excelente conductor de electricidad; por eso se emplea en cables y circuitos.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa14-016",
+      "oa": "CN08 OA 14",
+      "pregunta": "¿Cuál de las siguientes propiedades NO permite predecir directamente la tabla periódica?",
+      "opciones": [
+        "Si un elemento es metal o no metal",
+        "El precio de mercado del elemento",
+        "La conductividad eléctrica",
+        "El tipo de enlace que puede formar"
+      ],
+      "correcta": 1,
+      "tip": "La tabla predice propiedades químicas y físicas (metal/no metal, conductividad, enlaces), pero no datos económicos como el precio.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa14-017",
+      "oa": "CN08 OA 14",
+      "pregunta": "En la tabla periódica, los metales se ubican principalmente:",
+      "opciones": [
+        "A la derecha",
+        "Solo en la última fila",
+        "A la izquierda y en el centro",
+        "Solo en la primera columna"
+      ],
+      "correcta": 2,
+      "tip": "Los metales ocupan la mayor parte de la tabla, hacia la izquierda y el centro; los no metales quedan hacia la derecha.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa14-018",
+      "oa": "CN08 OA 14",
+      "pregunta": "Un elemento tiene número atómico 11 (sodio) y otro tiene número atómico 17 (cloro). ¿Qué se puede afirmar?",
+      "opciones": [
+        "Ambos tienen el mismo número de protones",
+        "Ambos son el mismo elemento",
+        "El sodio tiene más neutrones que protones siempre",
+        "El sodio tiene 11 protones y el cloro 17 protones"
+      ],
+      "correcta": 3,
+      "tip": "El número atómico indica los protones: 11 para el sodio y 17 para el cloro. Son elementos distintos.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa14-019",
+      "oa": "CN08 OA 14",
+      "pregunta": "¿Por qué el número atómico identifica de manera única a cada elemento?",
+      "opciones": [
+        "Porque cada elemento tiene un número de protones distinto",
+        "Porque todos los elementos tienen la misma masa",
+        "Porque depende del número de moléculas",
+        "Porque cambia con la temperatura"
+      ],
+      "correcta": 0,
+      "tip": "No hay dos elementos con el mismo número de protones; por eso el número atómico funciona como el 'documento de identidad' de cada elemento.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa14-020",
+      "oa": "CN08 OA 14",
+      "pregunta": "Comparados con los metales, los no metales generalmente:",
+      "opciones": [
+        "Conducen mejor la electricidad",
+        "Son peores conductores de electricidad y calor",
+        "Son mejores conductores del calor",
+        "Siempre tienen brillo metálico"
+      ],
+      "correcta": 1,
+      "tip": "Los no metales suelen ser malos conductores de electricidad y calor, a diferencia de los metales que conducen bien.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa14-021",
+      "oa": "CN08 OA 14",
+      "pregunta": "El tipo de enlace que forma un elemento puede predecirse a partir de:",
+      "opciones": [
+        "Su color",
+        "Su precio",
+        "Su ubicación en la tabla periódica (metal o no metal)",
+        "Su estado de ánimo"
+      ],
+      "correcta": 2,
+      "tip": "Saber si un elemento es metal o no metal, según su posición en la tabla, ayuda a predecir el tipo de enlace que tenderá a formar.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa14-022",
+      "oa": "CN08 OA 14",
+      "pregunta": "Dos elementos están en el mismo período (misma fila). Esto significa que:",
+      "opciones": [
+        "Tienen propiedades químicas idénticas",
+        "Ocupan la misma columna",
+        "Son el mismo elemento",
+        "Están en la misma fila horizontal de la tabla"
+      ],
+      "correcta": 3,
+      "tip": "Estar en el mismo período significa compartir la fila horizontal. Las propiedades químicas parecidas se dan más bien en un mismo grupo.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa14-023",
+      "oa": "CN08 OA 14",
+      "pregunta": "¿Cuál de estas afirmaciones sobre metales y no metales es correcta?",
+      "opciones": [
+        "Los metales suelen conducir electricidad; los no metales, generalmente no",
+        "Los no metales siempre conducen mejor la electricidad",
+        "Todos los metales son gases",
+        "No existe diferencia entre metales y no metales"
+      ],
+      "correcta": 0,
+      "tip": "La conductividad eléctrica es una diferencia clave: los metales suelen conducir bien; la mayoría de los no metales, no.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa14-024",
+      "oa": "CN08 OA 14",
+      "pregunta": "El aluminio y el hierro se encuentran entre los metales. ¿Qué comportamiento esperarías de ambos?",
+      "opciones": [
+        "Que sean aislantes eléctricos",
+        "Que conduzcan la electricidad y el calor",
+        "Que sean gases",
+        "Que se comporten como no metales"
+      ],
+      "correcta": 1,
+      "tip": "Al ser metales, tanto el aluminio como el hierro conducen electricidad y calor, una propiedad típica de este grupo.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa14-025",
+      "oa": "CN08 OA 14",
+      "pregunta": "¿Cuál es la principal utilidad de la tabla periódica como modelo científico?",
+      "opciones": [
+        "Reemplazar a los experimentos",
+        "Fabricar compuestos automáticamente",
+        "Ordenar los elementos y predecir sus propiedades",
+        "Cambiar el número atómico de los elementos"
+      ],
+      "correcta": 2,
+      "tip": "La tabla periódica organiza los elementos y, según su posición, permite predecir muchas de sus propiedades químicas y físicas.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa15-001",
+      "oa": "CN08 OA 15",
+      "pregunta": "¿Cuál de los siguientes elementos es la base de la química de los seres vivos?",
+      "opciones": [
+        "El sodio",
+        "El oro",
+        "El hierro",
+        "El carbono"
+      ],
+      "correcta": 3,
+      "tip": "El carbono forma la estructura de las moléculas de la vida (proteínas, grasas, carbohidratos, ADN): por eso es fundamental para los seres vivos.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa15-002",
+      "oa": "CN08 OA 15",
+      "pregunta": "¿Cuáles son cuatro de los elementos más frecuentes en los seres vivos?",
+      "opciones": [
+        "Carbono, hidrógeno, oxígeno y nitrógeno",
+        "Oro, plata, cobre y hierro",
+        "Sodio, cloro, calcio y potasio",
+        "Helio, neón, argón y kriptón"
+      ],
+      "correcta": 0,
+      "tip": "El carbono, el hidrógeno, el oxígeno y el nitrógeno son los elementos más abundantes en la materia viva.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa15-003",
+      "oa": "CN08 OA 15",
+      "pregunta": "El gas que los seres vivos necesitamos para la respiración celular es:",
+      "opciones": [
+        "El nitrógeno",
+        "El oxígeno",
+        "El hidrógeno",
+        "El helio"
+      ],
+      "correcta": 1,
+      "tip": "El oxígeno es esencial para la respiración celular, proceso con el que las células obtienen energía.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa15-004",
+      "oa": "CN08 OA 15",
+      "pregunta": "El elemento más abundante en la atmósfera terrestre es:",
+      "opciones": [
+        "El oxígeno",
+        "El dióxido de carbono",
+        "El nitrógeno",
+        "El hidrógeno"
+      ],
+      "correcta": 2,
+      "tip": "El nitrógeno constituye alrededor del 78% del aire de la atmósfera, siendo su componente más abundante.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa15-005",
+      "oa": "CN08 OA 15",
+      "pregunta": "El agua, tan importante para la vida, está formada por los elementos:",
+      "opciones": [
+        "Carbono y oxígeno",
+        "Carbono y nitrógeno",
+        "Nitrógeno e hidrógeno",
+        "Hidrógeno y oxígeno"
+      ],
+      "correcta": 3,
+      "tip": "El agua (H₂O) está formada por hidrógeno y oxígeno, dos de los elementos más frecuentes en los seres vivos.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa15-006",
+      "oa": "CN08 OA 15",
+      "pregunta": "¿Por qué el carbono es tan importante para la vida?",
+      "opciones": [
+        "Porque puede unirse a muchos átomos y formar moléculas complejas",
+        "Porque es un metal muy resistente",
+        "Porque es el elemento más pesado",
+        "Porque no reacciona con nada"
+      ],
+      "correcta": 0,
+      "tip": "El carbono puede formar muchos enlaces y cadenas, lo que permite construir las moléculas complejas que forman a los seres vivos.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa15-007",
+      "oa": "CN08 OA 15",
+      "pregunta": "¿Qué evidencia apoya que ciertos elementos son más frecuentes en los seres vivos?",
+      "opciones": [
+        "Que el oro abunda en las células",
+        "Que el carbono, hidrógeno, oxígeno y nitrógeno están presentes en las moléculas de la vida",
+        "Que los seres vivos están hechos de metales",
+        "Que solo contienen un elemento"
+      ],
+      "correcta": 1,
+      "tip": "Al analizar la composición de los seres vivos se encuentra que el C, H, O y N forman la mayor parte de sus moléculas.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa15-008",
+      "oa": "CN08 OA 15",
+      "pregunta": "El dióxido de carbono (CO₂), gas que las plantas usan en la fotosíntesis, contiene los elementos:",
+      "opciones": [
+        "Oxígeno y nitrógeno",
+        "Hidrógeno y nitrógeno",
+        "Carbono y oxígeno",
+        "Carbono e hidrógeno"
+      ],
+      "correcta": 2,
+      "tip": "El CO₂ está formado por carbono y oxígeno; las plantas lo utilizan durante la fotosíntesis.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa15-009",
+      "oa": "CN08 OA 15",
+      "pregunta": "¿Cuál de estos elementos forma parte de las proteínas y es clave en su estructura, además del C, H y O?",
+      "opciones": [
+        "El plomo",
+        "El oro",
+        "El neón",
+        "El nitrógeno"
+      ],
+      "correcta": 3,
+      "tip": "Las proteínas contienen nitrógeno además de carbono, hidrógeno y oxígeno; ese nitrógeno es esencial en su estructura.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa15-010",
+      "oa": "CN08 OA 15",
+      "pregunta": "El oxígeno es abundante en la Tierra. ¿En cuál de estos lugares se encuentra?",
+      "opciones": [
+        "En el aire, el agua y las rocas",
+        "Solo en el aire",
+        "Solo en los seres vivos",
+        "En ningún lado natural"
+      ],
+      "correcta": 0,
+      "tip": "El oxígeno está en el aire, disuelto en el agua y combinado en muchos minerales y rocas: es muy abundante en la Tierra.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa15-011",
+      "oa": "CN08 OA 15",
+      "pregunta": "Los carbohidratos, grasas y proteínas de nuestro cuerpo tienen en común que están formados principalmente por:",
+      "opciones": [
+        "Metales pesados",
+        "Carbono, hidrógeno y oxígeno",
+        "Solo hierro",
+        "Gases nobles"
+      ],
+      "correcta": 1,
+      "tip": "Estas moléculas biológicas se construyen sobre todo con carbono, hidrógeno y oxígeno; las proteínas suman además nitrógeno.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa15-012",
+      "oa": "CN08 OA 15",
+      "pregunta": "¿Qué tienen en común el carbono, el hidrógeno, el oxígeno y el nitrógeno?",
+      "opciones": [
+        "Son gases nobles",
+        "Son todos metales",
+        "Son los elementos más frecuentes en los seres vivos",
+        "No forman parte de la materia viva"
+      ],
+      "correcta": 2,
+      "tip": "El C, H, O y N destacan por ser los elementos más frecuentes en la composición de los seres vivos.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa15-013",
+      "oa": "CN08 OA 15",
+      "pregunta": "Una estudiante afirma que 'los seres vivos están hechos principalmente de oro y hierro'. Esta idea es:",
+      "opciones": [
+        "Correcta",
+        "Imposible de evaluar",
+        "Correcta solo para las plantas",
+        "Incorrecta, porque predominan el carbono, hidrógeno, oxígeno y nitrógeno"
+      ],
+      "correcta": 3,
+      "tip": "El oro y el hierro no son los principales; los seres vivos se componen sobre todo de carbono, hidrógeno, oxígeno y nitrógeno.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa15-014",
+      "oa": "CN08 OA 15",
+      "pregunta": "El hidrógeno es un elemento muy frecuente en los seres vivos porque forma parte de:",
+      "opciones": [
+        "El agua y las moléculas orgánicas",
+        "Los metales del cuerpo",
+        "Solo el aire que respiramos",
+        "Los huesos únicamente"
+      ],
+      "correcta": 0,
+      "tip": "El hidrógeno está en el agua y en casi todas las moléculas orgánicas (carbohidratos, grasas, proteínas), por eso es tan frecuente.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa15-015",
+      "oa": "CN08 OA 15",
+      "pregunta": "¿Cuál de las siguientes afirmaciones está mejor respaldada por evidencia?",
+      "opciones": [
+        "Todos los elementos son igual de frecuentes en la Tierra",
+        "Algunos elementos, como el oxígeno y el carbono, son más frecuentes que otros",
+        "Los seres vivos no contienen carbono",
+        "El oro es el elemento más común en el cuerpo humano"
+      ],
+      "correcta": 1,
+      "tip": "La evidencia muestra que los elementos no están repartidos por igual: algunos, como el oxígeno y el carbono, son mucho más frecuentes.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa15-016",
+      "oa": "CN08 OA 15",
+      "pregunta": "En el ciclo del nitrógeno, este elemento pasa del aire a los seres vivos. Esto muestra que el nitrógeno:",
+      "opciones": [
+        "No tiene ninguna función biológica",
+        "Solo existe en el laboratorio",
+        "Es importante para los seres vivos y circula por el ambiente",
+        "Es un metal del suelo"
+      ],
+      "correcta": 2,
+      "tip": "El nitrógeno circula entre el aire, el suelo y los seres vivos, y es indispensable para formar proteínas y otras moléculas.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa15-017",
+      "oa": "CN08 OA 15",
+      "pregunta": "Si analizas la composición de una hoja, un animal y una persona, encontrarás que en todos abundan:",
+      "opciones": [
+        "El oro y la plata",
+        "Solo el hierro",
+        "El helio y el neón",
+        "El carbono, hidrógeno, oxígeno y nitrógeno"
+      ],
+      "correcta": 3,
+      "tip": "Distintos seres vivos comparten los mismos elementos principales: carbono, hidrógeno, oxígeno y nitrógeno.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa15-018",
+      "oa": "CN08 OA 15",
+      "pregunta": "El oxígeno cumple un doble papel importante porque:",
+      "opciones": [
+        "Forma parte del agua y es necesario para la respiración",
+        "Solo sirve para oxidar metales",
+        "No participa en procesos de la vida",
+        "Es un gas noble inerte"
+      ],
+      "correcta": 0,
+      "tip": "El oxígeno forma parte del agua y, además, es indispensable en la respiración celular de muchos seres vivos.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa15-019",
+      "oa": "CN08 OA 15",
+      "pregunta": "¿Cuál de estos NO es uno de los cuatro elementos más frecuentes en los seres vivos?",
+      "opciones": [
+        "Carbono",
+        "Oro",
+        "Oxígeno",
+        "Nitrógeno"
+      ],
+      "correcta": 1,
+      "tip": "Los cuatro más frecuentes son carbono, hidrógeno, oxígeno y nitrógeno. El oro está presente en cantidades muy pequeñas o nulas.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa15-020",
+      "oa": "CN08 OA 15",
+      "pregunta": "El argumento 'el carbono es esencial para la vida' se apoya en la evidencia de que:",
+      "opciones": [
+        "El carbono es un metal brillante",
+        "El carbono no se encuentra en los seres vivos",
+        "El carbono forma el esqueleto de las moléculas orgánicas",
+        "El carbono es un gas noble"
+      ],
+      "correcta": 2,
+      "tip": "El carbono forma cadenas y estructuras que sostienen a las moléculas orgánicas; esa evidencia respalda que es esencial para la vida.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa15-021",
+      "oa": "CN08 OA 15",
+      "pregunta": "Comparando la atmósfera y los seres vivos, ¿qué elemento es abundante en ambos?",
+      "opciones": [
+        "El oro",
+        "El mercurio",
+        "El plomo",
+        "El oxígeno"
+      ],
+      "correcta": 3,
+      "tip": "El oxígeno abunda en la atmósfera y también forma parte del agua y de las moléculas de los seres vivos.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa15-022",
+      "oa": "CN08 OA 15",
+      "pregunta": "¿Por qué se dice que la vida en la Tierra está basada en el carbono?",
+      "opciones": [
+        "Porque casi todas las moléculas de los seres vivos contienen carbono",
+        "Porque el carbono es el elemento más pesado",
+        "Porque el carbono no reacciona con otros elementos",
+        "Porque el carbono es un metal"
+      ],
+      "correcta": 0,
+      "tip": "Casi todas las moléculas biológicas (proteínas, grasas, azúcares, ADN) contienen carbono; por eso se habla de una 'vida basada en el carbono'.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa15-023",
+      "oa": "CN08 OA 15",
+      "pregunta": "El nitrógeno del aire no puede ser usado directamente por casi todos los seres vivos, pero es fundamental porque:",
+      "opciones": [
+        "Es un metal necesario para los huesos",
+        "Forma parte de las proteínas y del material genético",
+        "Reemplaza al oxígeno en la respiración",
+        "No cumple ninguna función"
+      ],
+      "correcta": 1,
+      "tip": "El nitrógeno es parte esencial de las proteínas y del ADN; llega a los seres vivos tras transformarse en compuestos aprovechables.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa15-024",
+      "oa": "CN08 OA 15",
+      "pregunta": "Si un científico busca vida en otro planeta, prestará atención a la presencia de:",
+      "opciones": [
+        "Oro y plata en abundancia",
+        "Solo metales pesados",
+        "Carbono, hidrógeno, oxígeno y nitrógeno",
+        "Únicamente gases nobles"
+      ],
+      "correcta": 2,
+      "tip": "Como la vida conocida se basa en C, H, O y N, buscar estos elementos es una pista para buscar posibilidades de vida.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa15-025",
+      "oa": "CN08 OA 15",
+      "pregunta": "¿Cuál de las siguientes conclusiones se apoya en la evidencia sobre la abundancia de elementos?",
+      "opciones": [
+        "Todos los elementos son igual de importantes para la vida",
+        "El oro es indispensable para todas las células",
+        "Los seres vivos no necesitan ningún elemento",
+        "El carbono, hidrógeno, oxígeno y nitrógeno son especialmente importantes para los seres vivos"
+      ],
+      "correcta": 3,
+      "tip": "La evidencia indica que unos pocos elementos (C, H, O y N) son especialmente importantes y frecuentes en los seres vivos.",
       "revisada": false
     }
   ]
