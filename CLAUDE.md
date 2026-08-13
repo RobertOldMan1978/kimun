@@ -223,3 +223,20 @@ Se completaron los tres pendientes que quedaron de la Sesión 2:
   expedición" tras pulsar JUGADOR. Historia jugable; Matemáticas, Ciencias y
   Lenguaje con sello "🔒 Pronto" (usan `assets/portada-*.png`). Preparada para
   escalar con `const ASIGNATURAS`.
+
+**Ideas para enriquecer gráficamente la asignatura (próxima sesión):**
+- **Mapas:** rediseñar la ruta del mapa con estética de pergamino antiguo (papel
+  envejecido, brújula, "X" del tesoro; ruta que se dibuja al avanzar); mapa del
+  cruce del Atlántico con carabela.
+- **Imágenes de época:** una ilustración de ambientación por etapa/OA (viajes,
+  encuentro de dos mundos, conquista, mundo nuevo) como banner/portada del quiz;
+  refuerzo visual en la retroalimentación al fallar.
+- **Vestuarios/personajes:** más trajes de Kimün por etapa/rol; personajes
+  históricos ilustrados como guías; avatares temáticos para la tienda.
+- **Íconos y objetos:** reemplazar los emoji de etapa por íconos ilustrados;
+  objetos coleccionables (brújula, astrolabio, carabela, cofre) como insignias.
+- **A cuidar:** peso en móvil (optimizar cada imagen ~200 KB como los sprites);
+  las imágenes las genera Roberto (IA) y Claude las procesa; sensibilidad del tema
+  (pueblos originarios) y alineación al currículum chileno.
+- Recomendación de partida: ilustración de ambientación por etapa, o el mapa
+  tipo pergamino.
