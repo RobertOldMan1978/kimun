@@ -132,6 +132,20 @@ input.nm:focus{border-color:var(--cyan)}
 @keyframes shake{25%{transform:translateX(-6px)}75%{transform:translateX(6px)}}
 .feedback{min-height:22px;text-align:center;font-weight:900;margin-top:4px}
 .feedback.ok{color:var(--green)} .feedback.bad{color:var(--pink)}
+.qexpl{background:#00000033;border:1px solid var(--green);border-radius:14px;padding:12px 14px;margin-top:10px;font-weight:800;font-size:14px;line-height:1.42;animation:pop .3s ease}
+.qexpl b{color:var(--green)}
+.qexpl .expl-tip{display:block;color:var(--dim);margin-top:6px}
+.btn.seguir{margin-top:12px;background:linear-gradient(180deg,var(--cyan),#2aa8d8);color:#04222e;box-shadow:0 6px 0 #1a6d8f,0 12px 24px #00000055}
+.btn.seguir:active{box-shadow:0 2px 0 #1a6d8f}
+/* Comentario de Kimün en el mapa */
+.kim-dato{display:flex;align-items:center;gap:12px;background:var(--panel);border:1px solid #ffc93c55;border-radius:16px;padding:10px 12px;margin:0 0 12px;box-shadow:0 8px 22px #0005;opacity:0;transform:translateY(-8px);transition:.35s}
+.kim-dato.show{opacity:1;transform:translateY(0)}
+.kim-dato img{width:52px;height:52px;border-radius:50%;object-fit:cover;object-position:center 40%;border:3px solid var(--gold);flex-shrink:0}
+.kim-dato .kd-body{flex:1;min-width:0}
+.kim-dato .kd-title{font-weight:900;color:var(--gold);font-size:11px;text-transform:uppercase;letter-spacing:.5px}
+.kim-dato .kd-q{font-weight:800;font-size:13px;line-height:1.3;margin-top:2px}
+.kim-dato .kd-a{font-weight:900;font-size:13px;color:var(--green);margin-top:3px}
+.kim-dato .kd-x{background:none;border:none;color:var(--dim);font-size:16px;cursor:pointer;padding:4px;flex-shrink:0}
 
 /* ===== RESULTADO ===== */
 .resbox{text-align:center;padding-top:20px}
@@ -349,6 +363,11 @@ body.en-dificil .nav button.on{color:#ff6b6b;background:#ff2d551a}
         <p>Unidad: Los europeos llegan a América</p>
       </div>
     </div>
+    <div class="kim-dato" id="kimDato" hidden>
+      <img src="assets/kimun-feliz.png" alt="Kimün">
+      <div class="kd-body"><div class="kd-title">🦊 Kimün te cuenta…</div><div id="kimDatoTxt"></div></div>
+      <button class="kd-x" id="kimDatoX" aria-label="Cerrar">✕</button>
+    </div>
     <div class="modo-sel" id="modoSel" style="display:none"></div>
     <div class="mapbox" id="mapbox"></div>
 
@@ -372,6 +391,8 @@ body.en-dificil .nav button.on{color:#ff6b6b;background:#ff2d551a}
     </div>
     <div class="opts" id="qOpts"></div>
     <div class="feedback" id="qFb"></div>
+    <div class="qexpl" id="qExpl" hidden></div>
+    <button class="btn seguir" id="btnSeguir" hidden>Continuar ➜</button>
   </section>
 
   <!-- ============ RESULTADO ============ -->
@@ -752,7 +773,7 @@ function entrarExpedicion(exp){
  const tienePartida=hayPartida();
  if(tienePartida) cargar();
  activarExpedicion(exp).then(()=>{
-  if(tienePartida){refreshHud();renderMapa();renderRanking();$('nav').style.display='flex';go('scr-mapa');}
+  if(tienePartida){refreshHud();renderMapa();renderRanking();$('nav').style.display='flex';go('scr-mapa');datoKimun();}
   else go('scr-inicio');
  });
 }
@@ -778,7 +799,7 @@ $('btnStart').onclick=()=>{
  SND.init();SND.tap();
  S.nombre=$('inpName').value.trim()||"Explorador";
  refreshHud();guardar();renderMapa();renderRanking();
- $('nav').style.display='flex';go('scr-mapa');};
+ $('nav').style.display='flex';go('scr-mapa');datoKimun();};
 
 /* ================= MAPA ================= */
 function renderMapa(){
@@ -833,6 +854,24 @@ function kimReact(estado){
  el.className='kim-buddy';void el.offsetWidth;
  if(cls)el.classList.add(cls);
 }
+/* Comentario/dato de Kimün al iniciar la ruta: revela al azar una pregunta y su respuesta */
+function datoKimun(){
+ const bub=$('kimDato');if(!bub)return;
+ let todas=[];Object.keys(POOL).forEach(oa=>{todas=todas.concat(POOL[oa]);});
+ if(!todas.length){bub.hidden=true;return;}
+ const q=todas[Math.floor(Math.random()*todas.length)];
+ const cont=$('kimDatoTxt');cont.innerHTML='';
+ const p=document.createElement('div');p.className='kd-q';p.textContent='¿Sabías esto? '+q.pregunta;
+ const r=document.createElement('div');r.className='kd-a';r.textContent='➜ '+q.opciones[q.correcta];
+ cont.append(p,r);
+ bub.hidden=false;bub.classList.remove('show');void bub.offsetWidth;bub.classList.add('show');
+ clearTimeout(datoKimun._t);
+ datoKimun._t=setTimeout(()=>{bub.classList.remove('show');setTimeout(()=>{bub.hidden=true;},400);},10000);
+}
+(function(){
+ const x=$('kimDatoX');if(x)x.onclick=()=>{const b=$('kimDato');b.classList.remove('show');setTimeout(()=>{b.hidden=true;},300);};
+ const s=$('btnSeguir');if(s)s.onclick=()=>{SND.tap();s.hidden=true;$('qExpl').hidden=true;avanzar();};
+})();
 
 /* ================= QUIZ ================= */
 function startQuiz(lvl){
@@ -846,12 +885,14 @@ function pintaPregunta(){
  kimReact('neutral');
  $('qTag').textContent=`${MODO==='dificil'?'🔥 ':''}${N.icono} ${N.nombre} · Pregunta ${Q.idx+1}/${Q.preguntas.length}`;
  $('qText').textContent=P.q;$('qFb').textContent='';$('qFb').className='feedback';
+ $('qExpl').hidden=true;$('btnSeguir').hidden=true;
  $('qProg').style.width=(Q.idx/Q.preguntas.length*100)+'%';
  // barajar opciones
  const orden=P.ops.map((o,i)=>({o,i})).sort(()=>Math.random()-.5);
  $('qOpts').innerHTML='';
  orden.forEach((it,k)=>{
   const b=document.createElement('div');b.className='opt';
+  if(it.i===P.ok)b.dataset.correcta='1';
   b.innerHTML=`<span class="key">${'ABCD'[k]}</span>${it.o}`;
   b.onclick=e=>responder(b,it.i===P.ok,P,e);
   $('qOpts').appendChild(b);});
@@ -879,17 +920,25 @@ function responder(el,ok,P,e){
  }else{
   Q.combo=0;
   if(el){el.classList.remove('off');el.classList.add('bad');}
-  $('qFb').textContent='✗ '+P.tip;$('qFb').classList.add('bad');
+  $('qFb').textContent='✗ Incorrecto';$('qFb').classList.add('bad');
   SND.wrong();kimReact('triste');
   if(navigator.vibrate)navigator.vibrate(120);
  }
  refreshHud();
- setTimeout(()=>{
-  Q.idx++;
-  if(Q.idx<Q.preguntas.length)pintaPregunta();
-  else terminarNivel();
- }, ok?1100:2200);
+ if(ok){setTimeout(avanzar,1100);}
+ else{
+  // Revelar la respuesta correcta y una explicación más amplia; sin apuro (botón Continuar)
+  const correcta=document.querySelector('#qOpts .opt[data-correcta]');
+  if(correcta)correcta.classList.add('ok');
+  const e=$('qExpl');e.innerHTML='';
+  const b=document.createElement('b');b.textContent='Respuesta correcta: ';
+  const s1=document.createElement('span');s1.textContent=P.ops[P.ok];
+  const s2=document.createElement('span');s2.className='expl-tip';s2.textContent='💡 '+P.tip;
+  e.append(b,s1,document.createElement('br'),s2);
+  e.hidden=false;$('btnSeguir').hidden=false;
+ }
 }
+function avanzar(){Q.idx++;if(Q.idx<Q.preguntas.length)pintaPregunta();else terminarNivel();}
 function terminarNivel(){
  const tot=Q.preguntas.length;
  const ratio=Q.aciertos/tot;

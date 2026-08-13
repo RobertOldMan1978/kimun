@@ -258,5 +258,13 @@ Se completaron los tres pendientes que quedaron de la Sesión 2:
   igual que antes, pero clonar la siguiente ruta/asignatura es solo cambiar datos.
 - **Plantilla lista:** `contenido/_plantilla/` con `README.md` (receta de 3 pasos),
   `oa.json` y `preguntas.json` de ejemplo con el formato correcto.
+- **Aprendizaje al fallar (nuevo):** al equivocarse ya no se avanza solo; se
+  **revela la respuesta correcta** (opción en verde), se muestra un panel con
+  "Respuesta correcta + 💡 explicación" (usa el campo `tip`) y un botón
+  **"Continuar"** para leer sin apuro. Al acertar sigue rápido (1.1 s). Mejora a
+  futuro: campo `explicacion` (2-3 frases) por pregunta para un texto más amplio.
+- **Comentario de Kimün al iniciar la ruta (nuevo):** burbuja "🦊 Kimün te
+  cuenta…" con una pregunta y su respuesta al azar del pool; se cierra con ✕ o
+  sola a los ~10 s. Función `datoKimun()` disparada al entrar al mapa.
 - **Pendientes:** generar el contenido (OA + pool) de la primera expedición nueva
   y activarla; ideas gráficas de la Sesión 3 (mapa pergamino, ambientación por etapa).
