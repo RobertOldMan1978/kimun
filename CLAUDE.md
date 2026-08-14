@@ -418,3 +418,15 @@ Se completaron los tres pendientes que quedaron de la Sesión 2:
 - **Pendientes:** revisión pedagógica humana de los bancos; armar nuevas expediciones
   aprovechando los OA de reserva; Kimün "científico"; duelo en 2 celulares; push y
   ranking real; limpiar perfiles de prueba en Supabase.
+
+### Sesión 10 (2026-08-13)
+- **Sincronización (orden 99):** `git pull` desde otro PC trajo el trabajo de las
+  Sesiones 4-9 (motor data-driven, 3 asignaturas nuevas de año completo, Supabase,
+  tablero, PDF). Fast-forward sin conflictos.
+- **PDF de revisión generados:** los tres bancos sin revisar —Matemáticas (518),
+  Ciencias (459) y Lenguaje (443)— con `generar-pdf-preguntas.py --sin-revisar`,
+  para la revisión pedagógica en papel. Quedan en `dev/` (ignorados por git).
+- **Pendientes:** sin cambios respecto a la Sesión 9 (revisión pedagógica humana de
+  los 3 bancos nuevos; nuevas expediciones con OA de reserva; Kimün "científico";
+  duelo en 2 celulares; notificaciones push y ranking real; limpiar perfiles de
+  prueba en Supabase).
