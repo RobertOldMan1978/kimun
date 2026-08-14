@@ -330,6 +330,8 @@ body.jefe-hit{animation:jefeShake .26s}
 @keyframes jefeShake{0%,100%{transform:translateX(0)}25%{transform:translateX(-8px)}75%{transform:translateX(8px)}}
 .jefe-intro{min-height:80vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:14px;padding:20px}
 .ji-villano{font-size:96px;line-height:1;filter:drop-shadow(0 0 24px #ff4d6a);animation:jiPulse 2s ease-in-out infinite}
+.ji-villano img{width:210px;height:210px;object-fit:contain;filter:drop-shadow(0 0 20px #ff4d6a)}
+.jefe-vida .jv-ic img{width:26px;height:26px;object-fit:contain;vertical-align:middle}
 @keyframes jiPulse{0%,100%{transform:scale(1)}50%{transform:scale(1.08)}}
 .ji-dialogo{color:var(--cyan);font-style:italic;max-width:340px;font-size:16px}
 .jefe-hud{position:sticky;top:0;background:#14081aee;padding:12px;border-radius:0 0 16px 16px;z-index:5}
@@ -360,6 +362,11 @@ body.jefe-hit{animation:jefeShake .26s}
 .insignia .i-badge.sec{color:var(--cyan);background:transparent;border:1px solid var(--cyan)}
 .insignia.activa{border-color:var(--gold);box-shadow:0 0 0 2px var(--gold) inset}
 .insignia.lock{opacity:.5;cursor:default}
+/* --- Skins con imagen (avatar ilustrado) --- */
+.hud .avatar img{width:100%;height:100%;object-fit:contain;border-radius:12px}
+.shop-item .em img{width:60px;height:60px;object-fit:contain;display:block;margin:0 auto}
+.rk .em img{width:24px;height:24px;object-fit:contain;vertical-align:middle}
+.jw-item .jw-ic img{width:40px;height:40px;object-fit:contain;vertical-align:middle;border-radius:8px}
 @media (prefers-reduced-motion: reduce){*{animation:none!important;transition:none!important}}
 </style>
 </head>
@@ -779,7 +786,7 @@ const CAMPAÑAS=[{
   capitulos:['hist-cap1','hist-cap2','hist-cap3','hist-cap4','hist-cap5'],
   desafioExtra:'hist-desafio',
   jefeFinal:{
-    villano:'El Guardián del Tiempo', villanoIc:'🐉',
+    villano:'El Guardián del Tiempo', villanoIc:'🐉', villanoImg:'assets/villano-historia.png',
     dialogo:'Nadie ha recorrido toda la historia... ¿crees que tú puedes?',
     vidasJugador:3, nPorFase:4,
     fases:[
@@ -903,7 +910,7 @@ function comboFx(n){const c=$('combo');c.textContent='COMBO x'+n+' 🔥';
  c.classList.remove('show');void c.offsetWidth;c.classList.add('show');}
 
 function refreshHud(){
- $('hudAv').textContent=S.avatar;
+ $('hudAv').innerHTML=avatarHTML(S.avatar);
  $('hudName').textContent=insigniaIc()+S.nombre;
  const dentro=S.xp % XP_POR_NIVEL;
  const nuevoNivel=Math.floor(S.xp/XP_POR_NIVEL)+1;
@@ -1009,16 +1016,21 @@ async function conectarKimun(){
 const SKINS=[{e:"🐲",p:60},{e:"🦄",p:70},{e:"🦖",p:80},{e:"🐙",p:50},{e:"🦉",p:40},{e:"🚀",p:90},{e:"🧙",p:100},{e:"👑",p:150},
  // Skin exclusiva de recompensa: visible pero bloqueada; se desbloquea al vencer al Jefe Final de Historia.
  // Marcador de arte: emoji 🎓 hasta que exista assets/kimun-historiador.png.
- {id:'kimun-historiador', e:"🎓", nombre:'Kimün Historiador', bloqueada:true, desbloqueaCon:'hist'}];
+ {id:'kimun-historiador', e:"🎓", img:'assets/kimun-historiador.png', nombre:'Kimün Historiador', bloqueada:true, desbloqueaCon:'hist'}];
+// Si el avatar equipado es una skin con imagen, devuelve su ruta; si no, null.
+function skinImg(av){const s=SKINS.find(k=>k.e===av&&k.img);return s?s.img:null;}
+// HTML del avatar: <img> si la skin tiene imagen, o el emoji tal cual.
+function avatarHTML(av){const img=skinImg(av);return img?`<img src="${img}" alt="avatar">`:av;}
 function renderTienda(){
  $('tiendaCoins').textContent=S.monedas;
  const g=$('tiendaGrid');g.innerHTML='';
  SKINS.forEach(sk=>{
   const owned=S.skins.includes(sk.e), equipped=S.avatar===sk.e;
   const bloqueada=sk.bloqueada&&!owned;   // exclusiva aún no ganada
+  const em=sk.img?`<img src="${sk.img}" alt="${sk.nombre||''}">`:sk.e; // imagen o emoji
   const it=document.createElement('div');it.className='shop-item'+(equipped?' equipped':'')+(bloqueada?' locked':'');
   if(bloqueada){ // visible pero no comprable: se gana venciendo al Jefe Final
-   it.innerHTML=`<div class="em">${sk.e}</div><div class="price">🔒 Termina Historia</div>`+
+   it.innerHTML=`<div class="em">${em}</div><div class="price">🔒 Termina Historia</div>`+
      `<div class="skin-lock">${sk.nombre||'Skin exclusiva'}</div>`;
    g.appendChild(it); return;
   }
@@ -1027,7 +1039,7 @@ function renderTienda(){
   else if(owned)btn='<button class="equip">Equipar</button>';
   else btn=`<button class="buy"${S.monedas<sk.p?' disabled':''}>Comprar 🪙${sk.p}</button>`;
   const precio=owned?'<div class="price" style="color:var(--green)">Tuyo</div>':`<div class="price">🪙 ${sk.p}</div>`;
-  it.innerHTML=`<div class="em">${sk.e}</div>`+precio+btn;
+  it.innerHTML=`<div class="em">${em}</div>`+precio+btn;
   const b=it.querySelector('button');
   if(b&&!equipped)b.onclick=()=>{
    if(owned){S.avatar=sk.e;SND.tap();}
@@ -1216,7 +1228,8 @@ function iniciarJefeFinal(camp){
 }
 function renderJefeIntro(){
  const jf=JF.camp.jefeFinal;
- $('jiVillano').textContent=jf.villanoIc; $('jiNombre').textContent=jf.villano;
+ $('jiVillano').innerHTML=jf.villanoImg?`<img src="${jf.villanoImg}" alt="${jf.villano}">`:jf.villanoIc;
+ $('jiNombre').textContent=jf.villano;
  $('jiDialogo').textContent='«'+jf.dialogo+'»';
  document.body.classList.add('en-jefe');
  $('nav').style.display='none';
@@ -1228,7 +1241,7 @@ $('jiBack').onclick=()=>{SND.tap();document.body.classList.remove('en-jefe');go(
 function cargarFaseJefe(){JF.preguntas=jefePreguntasFase(JF.camp,JF.fase);JF.idx=0;renderJefePregunta();}
 function pintarHudJefe(){
  const jf=JF.camp.jefeFinal;
- $('jvVillanoIc').textContent=jf.villanoIc;
+ $('jvVillanoIc').innerHTML=jf.villanoImg?`<img src="${jf.villanoImg}" alt="">`:jf.villanoIc;
  $('jvNombre').textContent=jf.villano;
  $('jvFill').style.width=Math.max(0,(JF.vida/JF.vidaMax*100))+'%';
  $('jvVidas').textContent='❤️'.repeat(Math.max(0,JF.vidas))+'🤍'.repeat(Math.max(0,jf.vidasJugador-JF.vidas));
@@ -1301,7 +1314,8 @@ function renderJefeVictoria(){
  const sk=SKINS.find(s=>s.id===r.skin), ins=INSIGNIAS.find(i=>i.id===r.insignia);
  $('jwTitulo').textContent='¡'+camp.asignatura+' dominada!';
  const items=[];
- if(sk) items.push(`<div class="jw-item"><span class="jw-ic">${sk.e}</span><div><b>Skin exclusiva</b><small>${sk.nombre} — ya equipable en la tienda</small></div></div>`);
+ if(sk){const ic=sk.img?`<img src="${sk.img}" alt="${sk.nombre}">`:sk.e;
+  items.push(`<div class="jw-item"><span class="jw-ic">${ic}</span><div><b>Skin exclusiva</b><small>${sk.nombre} — ya equipable en la tienda</small></div></div>`);}
  if(ins) items.push(`<div class="jw-item"><span class="jw-ic">${ins.ic}</span><div><b>Insignia</b><small>${ins.tx}</small></div></div>`);
  items.push(`<div class="jw-item"><span class="jw-ic">👑</span><div><b>Corona dorada</b><small>en la tarjeta de ${camp.asignatura}</small></div></div>`);
  items.push(`<div class="jw-item"><span class="jw-ic">🎁</span><div><b>Bono</b><small>+${r.bonoMonedas||0} monedas · +${r.bonoXP||0} XP</small></div></div>`);
@@ -1509,7 +1523,7 @@ function renderRanking(){
  base.sort((a,b)=>b.p-a.p);
  $('ranking').innerHTML=base.map((r,i)=>
   `<div class="rk ${i<1?'top':''} ${r.me?'me':''}"><div class="pos">${i+1}</div>
-   <div class="em">${r.em}</div><div>${r.me?insigniaIc():''}${r.n}${r.me?' (tú)':''}</div><div class="pts">${r.p} XP</div></div>`).join('');
+   <div class="em">${r.me?avatarHTML(r.em):r.em}</div><div>${r.me?insigniaIc():''}${r.n}${r.me?' (tú)':''}</div><div class="pts">${r.p} XP</div></div>`).join('');
 }
 document.querySelectorAll('.nav button').forEach(b=>b.onclick=()=>{
  SND.tap();

@@ -540,13 +540,22 @@ Se completaron los tres pendientes que quedaron de la Sesión 2:
     jefe vencido, se da por completado el Capítulo 1 (abre el Capítulo 2) y se elimina
     la clave vieja; XP/monedas/estrellas/skins/logros intactos. Recorrido real por la
     UI verificado de punta a punta.
-- **Desviaciones del plan (justificadas):** skin por emoji (no imagen) por el modelo
-  real de `SKINS`; reuso de las clases `.opts/.opt` del quiz en el Jefe Final; perfil
-  como pantalla real (para el selector de insignias); migración marca todo el cap1
-  como completado (estado de mapa limpio) y solo si no se había empezado la campaña.
-- **Assets pendientes de Roberto:** `assets/kimun-historiador.png` (skin) y arte del
-  villano del Jefe Final (hoy marcadores 🎓 y 🐉).
+- **Desviaciones del plan (justificadas):** reuso de las clases `.opts/.opt` del quiz
+  en el Jefe Final; perfil como pantalla real (para el selector de insignias);
+  migración marca todo el cap1 como completado (estado de mapa limpio) y solo si no se
+  había empezado la campaña.
+- **Assets reales integrados (fin de sesión):** Roberto generó (IA) y Claude procesó
+  (recorte al contenido, cuadrado con margen, optimizado con paleta) los dos assets de
+  la campaña:
+  - **Skin "Kimün Historiador"** → `assets/kimun-historiador.png` (384×384, ~52 KB).
+    Se cableó la **Opción A**: el sistema de skins (antes solo emoji) ahora soporta
+    **skins con imagen** (`img` en `SKINS`, helpers `skinImg`/`avatarHTML`); la
+    ilustración se muestra en HUD, tienda, ranking y pantalla de victoria. El emoji
+    `🎓` queda solo como respaldo.
+  - **Villano "El Guardián del Tiempo"** → `assets/villano-historia.png` (512×512,
+    ~93 KB). Campo `villanoImg` en la campaña; se muestra grande en la intro del jefe
+    y pequeño en el HUD del duelo, con `🐉` de respaldo.
 - **Pendientes:** generalizar la campaña a Matemática/Ciencias/Lengua (plantilla ya
-  probada; casi solo datos); los assets de arriba; y los de siempre (Kimün
-  "científico", duelo en 2 celulares, notificaciones push y ranking real, limpiar
-  perfiles de prueba en Supabase).
+  probada; casi solo datos); y los de siempre (Kimün "científico" para Ciencias, duelo
+  en 2 celulares, notificaciones push y ranking real, limpiar perfiles de prueba en
+  Supabase).
