@@ -2,7 +2,7 @@
   "asignatura": "Lenguaje y Comunicación",
   "nivel": "8° básico",
   "meta_preguntas_por_oa": 25,
-  "total_preguntas": 443,
+  "total_preguntas": 514,
   "revisadas": 0,
   "nota": "Lengua y Literatura 8° básico — año completo (LE08 OA 01-15). Generadas por agentes; opciones barajadas. Sin revisión pedagógica humana.",
   "preguntas": [
@@ -6206,6 +6206,1000 @@
       ],
       "correcta": 2,
       "tip": "Decir \"es bueno porque es bueno\" es un círculo: no aporta una razón ni evidencia que convenza.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa03-101",
+      "oa": "LE08 OA 03",
+      "pregunta": "Lee: \"Marta nunca había mirado a los ojos a nadie al hablar. Aquella tarde, tras semanas de ensayo, levantó el mentón y respondió firme a la profesora.\" ¿Qué cambio experimenta Marta y qué frase lo evidencia?",
+      "opciones": [
+        "Se vuelve más tímida; lo prueba la palabra \"ensayo\".",
+        "Pierde la memoria; lo prueba \"aquella tarde\".",
+        "Gana seguridad; lo prueba \"levantó el mentón y respondió firme\".",
+        "Se enoja con la profesora; lo prueba \"respondió\"."
+      ],
+      "correcta": 2,
+      "tip": "La evidencia está en el gesto y el modo de responder: pasar de no mirar a nadie a \"levantar el mentón y responder firme\" muestra que gana seguridad.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa03-102",
+      "oa": "LE08 OA 03",
+      "pregunta": "Lee: \"Sé lo que Tomás piensa mientras calla: teme que descubran su mentira, aunque su rostro finge calma.\" ¿Qué tipo de narrador se reconoce y por qué?",
+      "opciones": [
+        "Omnisciente, porque conoce los pensamientos y temores internos del personaje.",
+        "Protagonista, porque narra en primera persona su propia historia.",
+        "Testigo, porque solo describe lo que ve desde afuera.",
+        "Objetivo, porque no interpreta nada de lo que ocurre."
+      ],
+      "correcta": 0,
+      "tip": "El narrador declara saber lo que Tomás \"piensa\" y \"teme\" por dentro, un rasgo propio del narrador omnisciente.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa03-103",
+      "oa": "LE08 OA 03",
+      "pregunta": "Lee: \"Sofía debía elegir: viajar con la beca al extranjero o quedarse para cuidar a su abuela enferma. Ninguna opción la dejaba tranquila.\" ¿Qué tipo de conflicto enfrenta Sofía?",
+      "opciones": [
+        "Un conflicto contra la naturaleza, por el clima del viaje.",
+        "Un conflicto con otro personaje que la desafía.",
+        "Un conflicto contra la sociedad que la rechaza.",
+        "Un conflicto interno, entre su proyecto personal y el deber familiar."
+      ],
+      "correcta": 3,
+      "tip": "La duda ocurre dentro de la propia Sofía, entre dos deseos legítimos; por eso es un conflicto interno.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa03-104",
+      "oa": "LE08 OA 03",
+      "pregunta": "Lee: \"La niebla tragaba las casas, las calles vacías crujían y una puerta golpeaba sola a lo lejos. Nadie se atrevía a salir.\" ¿Qué ambiente construye el fragmento y qué lo evidencia?",
+      "opciones": [
+        "Un ambiente festivo; lo evidencia la palabra \"casas\".",
+        "Un ambiente inquietante y solitario; lo evidencian la niebla, las calles vacías y la puerta que golpea sola.",
+        "Un ambiente luminoso y alegre; lo evidencia \"a lo lejos\".",
+        "Un ambiente cálido y hogareño; lo evidencia \"nadie\"."
+      ],
+      "correcta": 1,
+      "tip": "La niebla, las calles vacías y la puerta que golpea sola crean una atmósfera de soledad y temor.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa03-105",
+      "oa": "LE08 OA 03",
+      "pregunta": "Lee: \"Al inicio, Damián se reía del nuevo y le escondía los útiles. Al final del año, fue el primero en defenderlo cuando otros lo molestaron.\" ¿Qué evolución muestra Damián?",
+      "opciones": [
+        "De valiente a cobarde.",
+        "De estudioso a distraído.",
+        "De abusador a defensor de su compañero.",
+        "No cambia en nada durante el año."
+      ],
+      "correcta": 2,
+      "tip": "El cambio se ve en sus acciones: pasa de esconder los útiles del nuevo a defenderlo de quienes lo molestan.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa03-106",
+      "oa": "LE08 OA 03",
+      "pregunta": "Lee: \"Corrí sin mirar atrás. Mi corazón latía tan fuerte que no oía mis propios pasos, solo el miedo empujándome calle abajo.\" ¿Qué tipo de narrador se reconoce?",
+      "opciones": [
+        "Narrador protagonista, porque relata en primera persona su propia vivencia.",
+        "Narrador omnisciente, porque conoce el interior de todos los personajes.",
+        "Narrador testigo, porque cuenta la historia de otro a quien observa.",
+        "No hay narrador, porque el texto es un diálogo."
+      ],
+      "correcta": 0,
+      "tip": "El uso de \"corrí\", \"mi corazón\" y \"mis pasos\" en primera persona indica que el propio protagonista narra lo que vive.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa04-101",
+      "oa": "LE08 OA 04",
+      "pregunta": "Lee estos versos: \"Tus manos son dos palomas / que descansan en mi pena.\" La metáfora \"tus manos son dos palomas\", ¿qué sensación construye?",
+      "opciones": [
+        "Sensación de peligro y amenaza.",
+        "Sensación de suavidad, paz y consuelo.",
+        "Sensación de frío y distancia.",
+        "Sensación de rabia contenida."
+      ],
+      "correcta": 1,
+      "tip": "Comparar las manos con palomas que \"descansan en mi pena\" sugiere ternura y una calma que consuela.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa04-102",
+      "oa": "LE08 OA 04",
+      "pregunta": "Lee estos versos: \"Vuelve el mar, vuelve la ola, / vuelve el viento a mi ventana.\" ¿Qué efecto refuerza la repetición de \"vuelve\"?",
+      "opciones": [
+        "La idea de que todo se detiene para siempre.",
+        "La sensación de un lugar silencioso y quieto.",
+        "La impresión de desorden y caos.",
+        "La sensación de un retorno insistente y rítmico, como algo que no deja de volver."
+      ],
+      "correcta": 3,
+      "tip": "Repetir \"vuelve\" al inicio de los versos crea un ritmo marcado y subraya la idea de un regreso constante.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa04-103",
+      "oa": "LE08 OA 04",
+      "pregunta": "Lee estos versos: \"La luna asoma curiosa / y espía mi soledad.\" Al decir que la luna \"espía\", ¿qué recurso se usa y qué efecto crea?",
+      "opciones": [
+        "Personificación; da vida a la luna, que parece acompañar al hablante.",
+        "Comparación; iguala la luna con una persona usando la palabra \"como\".",
+        "Hipérbole; exagera el tamaño de la luna en el cielo.",
+        "Rima; repite los mismos sonidos al final de cada verso."
+      ],
+      "correcta": 0,
+      "tip": "Atribuir a la luna acciones humanas (\"asoma curiosa\", \"espía\") es personificación y la convierte en una compañía para el hablante.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa04-104",
+      "oa": "LE08 OA 04",
+      "pregunta": "Lee estos versos: \"El pan recién horneado / perfuma toda la casa.\" ¿A qué sentido apela principalmente esta imagen y qué evoca?",
+      "opciones": [
+        "Al oído; evoca una melodía suave.",
+        "Al tacto; evoca aspereza y frío.",
+        "Al olfato; evoca calidez y hogar.",
+        "A la vista; evoca oscuridad."
+      ],
+      "correcta": 2,
+      "tip": "El verbo \"perfuma\" apela al olfato, y el aroma del pan recién horneado sugiere un ambiente cálido y hogareño.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa04-105",
+      "oa": "LE08 OA 04",
+      "pregunta": "Lee estos versos: \"Mis penas son como piedras / que cargo por el camino.\" ¿Qué sugiere comparar las penas con piedras que se cargan?",
+      "opciones": [
+        "Que las penas son frágiles y se rompen con facilidad.",
+        "Que las penas pesan y cuestan de llevar, como una carga.",
+        "Que las penas son valiosas como joyas.",
+        "Que las penas desaparecen rápidamente."
+      ],
+      "correcta": 1,
+      "tip": "Las piedras que \"cargo por el camino\" transmiten peso y esfuerzo: así de difícil se siente llevar la pena.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa04-106",
+      "oa": "LE08 OA 04",
+      "pregunta": "Lee estos versos: \"Mi corazón es un invierno / sin una sola estrella.\" ¿Qué estado de ánimo sugiere esta metáfora?",
+      "opciones": [
+        "Alegría y entusiasmo.",
+        "Nerviosismo y prisa.",
+        "Orgullo y valentía.",
+        "Tristeza y desesperanza."
+      ],
+      "correcta": 3,
+      "tip": "Un \"invierno sin una sola estrella\" evoca frío y oscuridad, imágenes que transmiten tristeza y falta de esperanza.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa05-101",
+      "oa": "LE08 OA 05",
+      "pregunta": "Lee la escena: \"ANA (entre dientes, sin mirarlo): Claro, todo salió perfecto. / LUIS: ¿De verdad lo crees?\" ¿Qué función cumple la acotación \"(entre dientes, sin mirarlo)\"?",
+      "opciones": [
+        "Revela que Ana habla con molestia e ironía, aunque sus palabras digan lo contrario.",
+        "Describe el lugar donde ocurre la escena.",
+        "Indica quién es el autor de la obra.",
+        "Resume el final de la historia."
+      ],
+      "correcta": 0,
+      "tip": "La acotación guía el tono: hablar \"entre dientes\" y \"sin mirarlo\" muestra enojo, por lo que la frase resulta irónica.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa05-102",
+      "oa": "LE08 OA 05",
+      "pregunta": "Lee la escena: \"PEDRO: Si me ayudas con esto, te presto mi bicicleta toda la semana. / JOSÉ: ¿Solo por eso? Está bien, cuenta conmigo.\" ¿Cuál es la intención de Pedro en el diálogo?",
+      "opciones": [
+        "Regalar su bicicleta sin pedir nada a cambio.",
+        "Despedirse de José para siempre.",
+        "Convencer a José de que lo ayude ofreciéndole algo a cambio.",
+        "Reclamarle a José por un préstamo anterior."
+      ],
+      "correcta": 2,
+      "tip": "Pedro ofrece la bicicleta como intercambio; su intención es persuadir a José para obtener su ayuda.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa05-103",
+      "oa": "LE08 OA 05",
+      "pregunta": "Lee la escena: \"MADRE: Te prohíbo subir al escenario esta noche. / CLARA: Llevo un año ensayando este papel. Voy a actuar, con tu permiso o sin él.\" ¿Qué conflicto se plantea?",
+      "opciones": [
+        "Un malentendido sobre la hora de la función.",
+        "Un enfrentamiento entre el deseo de Clara y la prohibición de su madre.",
+        "Una discusión sobre el vestuario de la obra.",
+        "Un acuerdo total entre madre e hija."
+      ],
+      "correcta": 1,
+      "tip": "El choque entre lo que Clara quiere (actuar) y lo que su madre le prohíbe es el conflicto que mueve la escena.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa05-104",
+      "oa": "LE08 OA 05",
+      "pregunta": "Lee la escena: \"REY (levantándose de golpe del trono): ¡Que nadie salga de este salón! / GUARDIA: Como ordene, majestad.\" ¿Qué aporta la acotación \"(levantándose de golpe del trono)\"?",
+      "opciones": [
+        "Nombra al autor de la obra.",
+        "Explica el significado de una palabra difícil.",
+        "Cuenta lo que ocurrió antes de la obra.",
+        "Muestra la reacción brusca del rey y refuerza su enojo y autoridad."
+      ],
+      "correcta": 3,
+      "tip": "La acción física \"levantándose de golpe\" indica al actor cómo moverse y subraya la fuerza y el enojo del rey.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa05-105",
+      "oa": "LE08 OA 05",
+      "pregunta": "Lee la escena: \"MERCADER (frotándose las manos): Un precio más y seré el hombre más rico del reino. / CRIADO: Señor, la gente ya no puede pagar.\" ¿Qué rasgo del mercader revela la escena?",
+      "opciones": [
+        "Su avaricia, pues busca más ganancia aunque la gente no pueda pagar.",
+        "Su generosidad con los más pobres.",
+        "Su miedo a perder a sus amigos.",
+        "Su deseo de abandonar el comercio."
+      ],
+      "correcta": 0,
+      "tip": "Frotarse las manos y querer \"un precio más\" pese al reclamo del criado muestran su avaricia.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa05-106",
+      "oa": "LE08 OA 05",
+      "pregunta": "Lee la escena: \"INÉS (al público, mientras sonríe a Marco): No confío en él, pero fingiré que sí. / MARCO: Entonces, ¿somos amigos otra vez?\" ¿Qué permite entender el aparte de Inés dirigido \"(al público)\"?",
+      "opciones": [
+        "Que Inés y Marco nunca se habían conocido antes.",
+        "Que Marco escucha todo lo que Inés piensa.",
+        "Que el espectador conoce la verdadera intención de Inés, oculta para Marco.",
+        "Que la obra ya ha terminado."
+      ],
+      "correcta": 2,
+      "tip": "El aparte se dirige al público y revela lo que Inés piensa en secreto: desconfía de Marco, aunque finja lo contrario ante él.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa08-101",
+      "oa": "LE08 OA 08",
+      "pregunta": "Lee este fragmento: \"El viejo pescador sabía que el mar podía quitárselo todo, pero cada mañana empujaba su bote hacia las olas.\" ¿Qué visión de mundo sugiere el pasaje?",
+      "opciones": [
+        "La perseverancia frente a un destino incierto",
+        "La riqueza como única meta en la vida",
+        "El rechazo total al trabajo cotidiano",
+        "La imposibilidad de conocer el mar"
+      ],
+      "correcta": 0,
+      "tip": "La evidencia está en el contraste: aunque el mar 'podía quitárselo todo', el pescador insiste 'cada mañana'. Esa insistencia expresa perseverancia.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa08-102",
+      "oa": "LE08 OA 08",
+      "pregunta": "Lee: \"Marta guardó la carta sin abrirla; temía que las palabras de su hermano rompieran la paz que tanto le había costado construir.\" ¿Cuál es el dilema del personaje?",
+      "opciones": [
+        "Elegir entre escribir o no escribir una respuesta",
+        "Elegir entre conocer la verdad o conservar su tranquilidad",
+        "Elegir entre viajar o quedarse en su ciudad",
+        "Elegir entre dos hermanos que la buscan"
+      ],
+      "correcta": 1,
+      "tip": "El dilema aparece en el temor a que 'las palabras rompieran la paz': saber lo que dice la carta se opone a conservar su tranquilidad.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa08-103",
+      "oa": "LE08 OA 08",
+      "pregunta": "Lee este cierre de un cuento: \"Al soltar la moneda de oro en la mano del mendigo, el avaro sintió, por primera vez, que algo le pertenecía de verdad.\" ¿Qué mensaje se infiere del final?",
+      "opciones": [
+        "El dinero siempre trae desgracia a quien lo posee",
+        "Los mendigos suelen engañar a las personas ricas",
+        "Es imposible cambiar el carácter de una persona",
+        "La generosidad da una satisfacción que la acumulación no ofrece"
+      ],
+      "correcta": 3,
+      "tip": "La clave es la paradoja: el avaro siente que algo 'le pertenece de verdad' justo cuando da, no cuando guarda. El mensaje valora la generosidad.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa08-104",
+      "oa": "LE08 OA 08",
+      "pregunta": "Lee: \"En la aldea nadie recordaba su nombre, pero todos repetían la canción que ella había compuesto muchos inviernos atrás.\" ¿Qué tema se desprende del fragmento?",
+      "opciones": [
+        "La fama personal como recompensa segura",
+        "La permanencia de la obra más allá del olvido de su autor",
+        "El desprecio de la aldea hacia la música",
+        "La dificultad de aprender canciones antiguas"
+      ],
+      "correcta": 1,
+      "tip": "Se contrapone el olvido del 'nombre' con la permanencia de 'la canción'. El tema es que la obra perdura aunque el autor se olvide.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa08-105",
+      "oa": "LE08 OA 08",
+      "pregunta": "Lee: \"El joven soldado bajó el arma; comprendió que del otro lado había alguien tan asustado como él.\" ¿Cómo se relaciona este pasaje con una visión de mundo?",
+      "opciones": [
+        "Propone que la empatía puede pesar más que la orden de atacar",
+        "Afirma que los soldados nunca sienten miedo",
+        "Sostiene que la guerra siempre termina en victoria",
+        "Indica que el joven no sabía usar el arma"
+      ],
+      "correcta": 0,
+      "tip": "La evidencia es 'comprendió que del otro lado había alguien tan asustado como él': el reconocimiento del otro (empatía) lo lleva a bajar el arma.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa09-101",
+      "oa": "LE08 OA 09",
+      "pregunta": "En una columna se lee: \"El municipio debería crear más ciclovías, porque en las ciudades con buena infraestructura para bicicletas los accidentes disminuyen.\" ¿Cuál es la tesis del autor?",
+      "opciones": [
+        "Los accidentes disminuyen en algunas ciudades",
+        "Las bicicletas son un medio de transporte antiguo",
+        "El municipio debería crear más ciclovías",
+        "En las ciudades hay mucha infraestructura"
+      ],
+      "correcta": 2,
+      "tip": "La tesis es la postura que se defiende: 'el municipio debería crear más ciclovías'. Lo que viene tras 'porque' es el argumento que la sostiene.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa09-102",
+      "oa": "LE08 OA 09",
+      "pregunta": "Analiza el enunciado: \"El nuevo parque es, sin duda, el lugar más hermoso de toda la región.\" ¿Se trata de un hecho o de una opinión?",
+      "opciones": [
+        "Un hecho, porque menciona un parque real",
+        "Una opinión, porque expresa una valoración no verificable",
+        "Un hecho, porque usa la expresión 'sin duda'",
+        "Una opinión, porque el parque es nuevo"
+      ],
+      "correcta": 1,
+      "tip": "'El lugar más hermoso' es un juicio de valor que no se puede comprobar objetivamente; la expresión 'sin duda' refuerza que es una opinión.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa09-103",
+      "oa": "LE08 OA 09",
+      "pregunta": "Tesis: \"Se debe reducir el uso de plástico en el colegio.\" ¿Cuál de estos argumentos SÍ sostiene la tesis?",
+      "opciones": [
+        "El plástico se inventó hace más de un siglo",
+        "Muchos estudiantes prefieren botellas de colores",
+        "Los residuos plásticos tardan cientos de años en degradarse y contaminan el entorno",
+        "En el colegio hay varios cursos de octavo básico"
+      ],
+      "correcta": 2,
+      "tip": "Un argumento válido debe dar una razón a favor de la tesis. Solo la contaminación duradera del plástico justifica reducir su uso; las otras opciones no se relacionan.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa09-104",
+      "oa": "LE08 OA 09",
+      "pregunta": "En una carta al director se afirma: \"El horario de la biblioteca es demasiado corto; por eso, debería extenderse hasta las ocho de la noche.\" ¿Qué función cumple la parte que sigue a 'por eso'?",
+      "opciones": [
+        "Presenta un hecho comprobable",
+        "Introduce un contraargumento del rival",
+        "Cita una fuente de información oficial",
+        "Enuncia la conclusión o propuesta que se deriva del argumento"
+      ],
+      "correcta": 3,
+      "tip": "El conector 'por eso' introduce la conclusión: a partir del argumento (horario corto) se propone extender el horario hasta las ocho.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa09-105",
+      "oa": "LE08 OA 09",
+      "pregunta": "Lee: \"La lectura mejora el vocabulario. Además, un estudio midió que quienes leen a diario reconocen más palabras.\" ¿Qué relación hay entre las dos oraciones?",
+      "opciones": [
+        "La segunda contradice a la primera",
+        "La segunda es una opinión sin relación con la primera",
+        "La segunda aporta evidencia que respalda la afirmación de la primera",
+        "Ambas oraciones son la misma tesis repetida"
+      ],
+      "correcta": 2,
+      "tip": "La primera es la afirmación general; la segunda, señalada por 'además' y basada en 'un estudio', aporta evidencia que la respalda.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa10-101",
+      "oa": "LE08 OA 10",
+      "pregunta": "Un aviso dice: \"Jugo Solcito: la sonrisa de tu familia en cada mañana.\" ¿Qué emoción intenta asociar el anuncio con el producto?",
+      "opciones": [
+        "El miedo a enfermarse",
+        "La rabia por levantarse temprano",
+        "La sorpresa ante un precio bajo",
+        "La felicidad y la unión familiar"
+      ],
+      "correcta": 3,
+      "tip": "Las palabras 'sonrisa' y 'familia' buscan vincular el jugo con la felicidad y la unión familiar, no con una cualidad del producto.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa10-102",
+      "oa": "LE08 OA 10",
+      "pregunta": "Un eslogan afirma: \"Nueve de cada diez expertos recomiendan la crema BrilloTotal.\" ¿Qué recurso persuasivo se emplea?",
+      "opciones": [
+        "La apelación a la autoridad de supuestos especialistas",
+        "El uso de rimas para memorizar el nombre",
+        "La descripción del precio del producto",
+        "La narración de una historia triste"
+      ],
+      "correcta": 0,
+      "tip": "Mencionar 'expertos' que recomiendan busca dar credibilidad apelando a una autoridad, aunque no se identifique quiénes son.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa10-103",
+      "oa": "LE08 OA 10",
+      "pregunta": "En un cartel se lee: \"¡Solo hoy! Últimas unidades del teléfono LumiX.\" ¿Qué efecto busca provocar en el público?",
+      "opciones": [
+        "Tranquilizar para que la compra se piense con calma",
+        "Informar la ficha técnica del teléfono",
+        "Generar urgencia para apurar la decisión de compra",
+        "Comparar el producto con la competencia"
+      ],
+      "correcta": 2,
+      "tip": "'Solo hoy' y 'últimas unidades' crean una sensación de escasez y urgencia para que la persona compre rápido, sin pensarlo demasiado.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa10-104",
+      "oa": "LE08 OA 10",
+      "pregunta": "Un anuncio dice: \"Zapatillas Veloz: las mejores del mundo, elegidas por los campeones.\" ¿Qué parte es una OPINIÓN y no un hecho?",
+      "opciones": [
+        "Que el producto son zapatillas",
+        "Que se llaman 'Veloz'",
+        "Que son 'las mejores del mundo'",
+        "Que el anuncio es sobre calzado"
+      ],
+      "correcta": 2,
+      "tip": "'Las mejores del mundo' es una valoración no comprobable, propia de la publicidad; el resto son datos objetivos del producto.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa10-105",
+      "oa": "LE08 OA 10",
+      "pregunta": "Un aviso muestra a una familia riendo junto a una casa y el texto: \"Seguros Amparo: duerme tranquilo.\" ¿Qué efecto busca la relación entre la imagen y el eslogan?",
+      "opciones": [
+        "Asociar el seguro con una sensación de seguridad y calma",
+        "Explicar el precio mensual del seguro",
+        "Advertir sobre los peligros de las casas",
+        "Enseñar a construir una vivienda"
+      ],
+      "correcta": 0,
+      "tip": "La familia feliz y la frase 'duerme tranquilo' se combinan para asociar el producto con la seguridad y la calma, apelando a la emoción del público.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa11-101",
+      "oa": "LE08 OA 11",
+      "pregunta": "Lee: \"Los pingüinos de Humboldt anidan en las costas de Chile y Perú. En los últimos años, la pesca excesiva ha reducido su alimento y su población ha disminuido.\" ¿Cuál es la idea principal?",
+      "opciones": [
+        "Los pingüinos de Humboldt viven solo en Perú",
+        "La pesca excesiva amenaza a los pingüinos de Humboldt",
+        "Los pingüinos anidan en cualquier costa del mundo",
+        "La pesca es la actividad principal de Chile"
+      ],
+      "correcta": 1,
+      "tip": "La idea central conecta las dos oraciones: la pesca excesiva reduce el alimento y por eso disminuye la población de pingüinos.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa11-102",
+      "oa": "LE08 OA 11",
+      "pregunta": "Un reportaje señala: \"Tras la instalación de más luminarias, los robos nocturnos en el barrio bajaron un 30% en un año.\" ¿Qué se puede inferir del dato?",
+      "opciones": [
+        "Que la iluminación no influye en la seguridad",
+        "Que los robos aumentaron durante el día",
+        "Que el barrio dejó de tener luminarias",
+        "Que una mejor iluminación pudo contribuir a reducir los robos"
+      ],
+      "correcta": 3,
+      "tip": "El texto vincula la instalación de luminarias con la baja de robos; se infiere que la iluminación pudo contribuir a esa reducción.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa11-103",
+      "oa": "LE08 OA 11",
+      "pregunta": "Lee esta entrada de una noticia: \"Un grupo de estudiantes creó un sistema que ahorra agua en los jardines del colegio.\" ¿Cuál es el propósito principal del texto?",
+      "opciones": [
+        "Convencer al lector de comprar un producto",
+        "Informar sobre un hecho ocurrido en un colegio",
+        "Narrar una historia de ficción con personajes",
+        "Expresar los sentimientos del autor"
+      ],
+      "correcta": 1,
+      "tip": "Una entrada de noticia informa sobre un hecho real y reciente; aquí comunica lo que hicieron unos estudiantes, sin vender ni narrar ficción.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa11-104",
+      "oa": "LE08 OA 11",
+      "pregunta": "Un texto expositivo afirma: \"El agua ocupa cerca del 70% de la superficie terrestre; sin embargo, solo una pequeña parte es dulce y apta para el consumo.\" ¿Qué relación establece el conector 'sin embargo'?",
+      "opciones": [
+        "Suma dos datos que apuntan a lo mismo",
+        "Indica la causa del primer dato",
+        "Ordena los hechos en el tiempo",
+        "Marca un contraste entre la abundancia de agua y su escasa disponibilidad para beber"
+      ],
+      "correcta": 3,
+      "tip": "'Sin embargo' introduce un contraste: aunque hay mucha agua, muy poca es dulce y aprovechable para el consumo.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa11-105",
+      "oa": "LE08 OA 11",
+      "pregunta": "Lee: \"El terremoto de 1960 en Valdivia es el más potente registrado por instrumentos en la historia.\" ¿Cuál de estas afirmaciones es un HECHO verificable del texto?",
+      "opciones": [
+        "Valdivia es la ciudad más bonita de Chile",
+        "El terremoto de 1960 fue el más potente registrado por instrumentos",
+        "Los terremotos son siempre inevitables desastres",
+        "Nadie debería vivir cerca de la costa"
+      ],
+      "correcta": 1,
+      "tip": "Un hecho es comprobable con registros. Que fue 'el más potente registrado por instrumentos' es un dato verificable; las demás son opiniones.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa12-101",
+      "oa": "LE08 OA 12",
+      "pregunta": "Lee: \"La abeja recolecta néctar de las flores. En la colmena, lo transforma en miel y, al pasar de flor en flor, ayuda a la polinización.\" ¿Cuál es el mejor resumen?",
+      "opciones": [
+        "La abeja produce miel a partir del néctar y, al hacerlo, favorece la polinización",
+        "Las abejas viven en colmenas muy ordenadas",
+        "Las flores necesitan agua para crecer sanas",
+        "La miel se vende en muchos mercados del país"
+      ],
+      "correcta": 0,
+      "tip": "Un buen resumen conserva las ideas centrales: producir miel del néctar y favorecer la polinización. Las demás añaden datos ausentes o secundarios.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa12-102",
+      "oa": "LE08 OA 12",
+      "pregunta": "Quieres investigar por qué se descongelan los glaciares. ¿Cuál es la pregunta MÁS adecuada para guiar tu lectura?",
+      "opciones": [
+        "¿Cuántas letras tiene la palabra 'glaciar'?",
+        "¿En qué año nació el autor del texto?",
+        "¿Cuál es el color del hielo de los glaciares?",
+        "¿Qué factores provocan el derretimiento de los glaciares?"
+      ],
+      "correcta": 3,
+      "tip": "Una buena pregunta de investigación apunta a las causas del fenómeno. Preguntar por los 'factores' del derretimiento orienta la lectura hacia el propósito.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa12-103",
+      "oa": "LE08 OA 12",
+      "pregunta": "Lee: \"Cuando Tomás vio el paraguas junto a la puerta y a su madre con el impermeable puesto, corrió a buscar sus botas.\" ¿Qué se puede inferir a partir de lo explícito?",
+      "opciones": [
+        "Que Tomás va a salir y afuera está lloviendo o va a llover",
+        "Que Tomás perdió sus botas la noche anterior",
+        "Que la madre de Tomás se irá de vacaciones",
+        "Que en la casa nunca llueve"
+      ],
+      "correcta": 0,
+      "tip": "El paraguas, el impermeable y las botas son pistas explícitas; de ellas se infiere lo implícito: van a salir con lluvia.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa12-104",
+      "oa": "LE08 OA 12",
+      "pregunta": "En un texto multimodal, un artículo sobre el reciclaje incluye un gráfico de barras que compara la basura reciclada cada año. ¿Qué relación cumple la imagen con el texto escrito?",
+      "opciones": [
+        "Contradice lo que dice el texto",
+        "Reemplaza por completo al texto escrito",
+        "Complementa el texto mostrando los datos de manera visual",
+        "Sirve solo de adorno, sin aportar información"
+      ],
+      "correcta": 2,
+      "tip": "En un texto multimodal, un gráfico complementa al texto: presenta de forma visual y ordenada los datos que el escrito menciona.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa12-105",
+      "oa": "LE08 OA 12",
+      "pregunta": "Lees un texto largo sobre volcanes y quieres quedarte con lo esencial de cada párrafo. ¿Qué estrategia aplicas?",
+      "opciones": [
+        "Memorizar todas las palabras del texto tal cual",
+        "Identificar la idea principal de cada párrafo y anotarla con tus palabras",
+        "Leer solo el título y saltar el contenido",
+        "Copiar el texto completo sin cambiar nada"
+      ],
+      "correcta": 1,
+      "tip": "Resumir consiste en detectar la idea principal de cada párrafo y reformularla con palabras propias, no en memorizar ni copiar todo el texto.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa01-101",
+      "oa": "LE08 OA 01",
+      "pregunta": "Sofía debe preparar una exposición sobre los volcanes de Chile y necesita datos precisos. ¿Qué texto le conviene seleccionar según ese propósito?",
+      "opciones": [
+        "Una novela de aventuras ambientada en la cordillera",
+        "Un artículo de una enciclopedia científica sobre volcanes",
+        "Un poema que describe la belleza de un cerro",
+        "Un cuento fantástico sobre un dragón que vive en un cráter"
+      ],
+      "correcta": 1,
+      "tip": "Cuando el propósito es aprender e informarse con datos precisos, conviene elegir un texto expositivo o informativo, no uno literario.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa01-102",
+      "oa": "LE08 OA 01",
+      "pregunta": "Matías tiene una tarde libre y quiere leer solo para entretenerse y relajarse, sin buscar información. ¿Qué selección se ajusta mejor a ese propósito recreativo?",
+      "opciones": [
+        "El manual de instrucciones de una lavadora",
+        "Un informe estadístico sobre la población del país",
+        "Una novela de aventuras que lo mantenga en suspenso",
+        "El reglamento interno de su colegio"
+      ],
+      "correcta": 2,
+      "tip": "Leer para recrearse invita a escoger textos que generen disfrute, como una novela; el propósito guía la selección del texto.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa01-103",
+      "oa": "LE08 OA 01",
+      "pregunta": "Un lector quiere formar un hábito lector autónomo y elegir bien sus próximas lecturas. ¿Cuál es la estrategia más adecuada para seleccionar textos?",
+      "opciones": [
+        "Leer únicamente lo que le asignan en clases y nada más",
+        "Escoger siempre el libro más corto para terminar rápido",
+        "Considerar sus intereses, el propósito y explorar reseñas o recomendaciones",
+        "Elegir al azar el primer libro que encuentre en el estante"
+      ],
+      "correcta": 2,
+      "tip": "La autonomía lectora crece al elegir según intereses y propósitos, apoyándose en reseñas, recomendaciones y la exploración de la biblioteca.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa01-104",
+      "oa": "LE08 OA 01",
+      "pregunta": "Camila debe averiguar rápidamente el horario y los requisitos para inscribirse en un taller de la biblioteca. ¿Qué tipo de texto responde mejor a ese propósito puntual?",
+      "opciones": [
+        "Una biografía extensa del fundador de la biblioteca",
+        "Una antología de cuentos clásicos",
+        "Un libro de poesía contemporánea",
+        "Un folleto informativo con los datos del taller"
+      ],
+      "correcta": 3,
+      "tip": "Para obtener información concreta y rápida se selecciona un texto breve y funcional, como un folleto, adecuado a ese propósito.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa02-101",
+      "oa": "LE08 OA 02",
+      "pregunta": "Lee: \"Aunque sabía que podían castigarlo, el joven compartió su pan con el prisionero hambriento\". ¿Qué dimensión de la experiencia humana refleja principalmente esta acción?",
+      "opciones": [
+        "El interés por acumular riquezas",
+        "La indiferencia ante los demás",
+        "El deseo de obtener fama pública",
+        "La solidaridad y la compasión frente al sufrimiento ajeno"
+      ],
+      "correcta": 3,
+      "tip": "La literatura permite reflexionar sobre dimensiones humanas como la solidaridad; aquí el gesto muestra compasión pese al riesgo personal.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa02-102",
+      "oa": "LE08 OA 02",
+      "pregunta": "Al leer una obra sobre una familia que vive en un país muy distinto al propio, un estudiante comprende mejor sus costumbres y sentimientos. ¿Qué aporta principalmente esta lectura a su experiencia?",
+      "opciones": [
+        "Le enseña reglas ortográficas nuevas",
+        "Le entrega una lista de fechas para memorizar",
+        "Le ayuda a desarrollar empatía y a valorar la diversidad cultural",
+        "Le permite calcular distancias entre ciudades"
+      ],
+      "correcta": 2,
+      "tip": "Leer obras de otras herencias culturales amplía la mirada: fomenta la empatía y el respeto por experiencias humanas distintas a la propia.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa02-103",
+      "oa": "LE08 OA 02",
+      "pregunta": "Un personaje debe decidir entre obedecer una orden injusta o defender a un amigo, arriesgando su puesto. Relacionar este conflicto con la vida real invita a reflexionar sobre:",
+      "opciones": [
+        "El dilema entre la lealtad y la conveniencia personal",
+        "La forma correcta de conjugar un verbo",
+        "El precio de los alimentos en el mercado",
+        "Las reglas de un juego de mesa"
+      ],
+      "correcta": 0,
+      "tip": "Los dilemas literarios reflejan tensiones humanas reales, como elegir entre la lealtad a otro y el propio beneficio; eso invita a pensar sobre los propios valores.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa02-104",
+      "oa": "LE08 OA 02",
+      "pregunta": "Dos obras distintas tratan el tema de la pérdida de un ser querido. Reconocer que personas de distintas épocas han sentido ese mismo dolor permite comprender que la literatura:",
+      "opciones": [
+        "Solo sirve para pasar el tiempo sin pensar",
+        "Aborda experiencias humanas universales que nos conectan con otros",
+        "Únicamente describe hechos históricos exactos",
+        "Se ocupa exclusivamente de temas alegres"
+      ],
+      "correcta": 1,
+      "tip": "Muchos temas literarios son universales: al leerlos reconocemos experiencias compartidas por la humanidad en distintos tiempos y lugares.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa06-101",
+      "oa": "LE08 OA 06",
+      "pregunta": "Lee este fragmento de tono épico: \"Solo, ante mil enemigos, el héroe alzó su lanza y no retrocedió un solo paso\". ¿Qué rasgo propio de la epopeya se reconoce aquí?",
+      "opciones": [
+        "El humor y el enredo cómico",
+        "La crítica burlona a las costumbres sociales",
+        "La descripción de la vida cotidiana sin conflictos",
+        "La exaltación del valor heroico ante un gran desafío"
+      ],
+      "correcta": 3,
+      "tip": "La epopeya ensalza al héroe y sus hazañas; enfrentar solo a mil enemigos sin retroceder destaca el valor heroico, rasgo central del género.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa06-102",
+      "oa": "LE08 OA 06",
+      "pregunta": "Un fragmento de epopeya relata que el protagonista cruza mares embravecidos y vence a un monstruo para salvar a su pueblo. ¿Cuál es la función de narrar estas hazañas extraordinarias?",
+      "opciones": [
+        "Enseñar un procedimiento matemático",
+        "Informar objetivamente sobre un hecho reciente",
+        "Ensalzar los valores y la identidad de una comunidad a través del héroe",
+        "Provocar risa mediante situaciones absurdas"
+      ],
+      "correcta": 2,
+      "tip": "Las hazañas del héroe épico encarnan los valores que una comunidad admira; la epopeya fortalece así su identidad y memoria colectiva.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa06-103",
+      "oa": "LE08 OA 06",
+      "pregunta": "Lee: \"Canta, musa, la cólera del guerrero que asoló las murallas de la ciudad sitiada\". Este comienzo, con su invocación y su verso solemne, es característico de:",
+      "opciones": [
+        "Una noticia de un diario actual",
+        "Una epopeya, por su tono elevado y su narración en verso",
+        "Un aviso publicitario",
+        "Una carta al director"
+      ],
+      "correcta": 1,
+      "tip": "La invocación a la musa, el tono elevado y la narración en verso son marcas propias de la epopeya, distintas del lenguaje cotidiano.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa06-104",
+      "oa": "LE08 OA 06",
+      "pregunta": "En muchas epopeyas antiguas los dioses intervienen para ayudar o poner obstáculos al héroe. Comprender el contexto en que surgieron estas obras ayuda a entender que:",
+      "opciones": [
+        "Sus autores desconocían por completo la naturaleza",
+        "No tienen relación alguna con la cultura de su época",
+        "Fueron escritas para un examen de ciencias",
+        "Reflejan la visión de mundo y las creencias de la sociedad que las creó"
+      ],
+      "correcta": 3,
+      "tip": "Leer epopeya en su contexto muestra que la intervención de los dioses expresa las creencias y la visión de mundo de la sociedad que la produjo.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa07-101",
+      "oa": "LE08 OA 07",
+      "pregunta": "Lee este fragmento: \"—¡Señora, su marido llegó! —gritó el criado. Y el galán, aterrado, saltó por la ventana... para caer justo en los brazos del propio marido\". ¿Qué recurso propio de la comedia se reconoce?",
+      "opciones": [
+        "El enredo que provoca una situación cómica",
+        "La solemnidad heroica del protagonista",
+        "El tono trágico y sin salida",
+        "La descripción científica de un fenómeno"
+      ],
+      "correcta": 0,
+      "tip": "La comedia se construye con enredos y confusiones; la caída inesperada en los brazos del marido genera el efecto cómico buscado.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa07-102",
+      "oa": "LE08 OA 07",
+      "pregunta": "Una comedia teatral termina con las parejas reconciliadas y todos los malentendidos aclarados en una fiesta. ¿Qué característica del género se observa en este final?",
+      "opciones": [
+        "El desenlace trágico con la muerte del héroe",
+        "El final abierto sin ninguna resolución",
+        "La ausencia total de conflicto en la obra",
+        "El desenlace feliz que resuelve los conflictos"
+      ],
+      "correcta": 3,
+      "tip": "La comedia suele cerrar con un desenlace feliz, en el que los enredos se aclaran y los conflictos se resuelven de forma armónica.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa07-103",
+      "oa": "LE08 OA 07",
+      "pregunta": "Lee: \"El avaro contaba sus monedas de noche, temblando, y hasta a su propia sombra acusaba de querer robarle\". Al reírnos de este personaje exagerado, la comedia cumple la función de:",
+      "opciones": [
+        "Rendir homenaje solemne a un héroe nacional",
+        "Criticar con humor un defecto o vicio humano, como la avaricia",
+        "Informar sobre el valor real del dinero",
+        "Narrar objetivamente un hecho histórico"
+      ],
+      "correcta": 1,
+      "tip": "La comedia usa el humor para exagerar defectos humanos, como la avaricia, y así invitar a una crítica social a través de la risa.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa07-104",
+      "oa": "LE08 OA 07",
+      "pregunta": "Un mismo conflicto amoroso puede tratarse en tono trágico o en tono cómico. ¿Qué distingue el tratamiento propio de la comedia?",
+      "opciones": [
+        "Presenta la situación con humor, personajes cómicos y un final favorable",
+        "Concluye siempre con la desgracia irreparable del protagonista",
+        "Elimina por completo los diálogos entre personajes",
+        "Renuncia al conflicto para describir solo paisajes"
+      ],
+      "correcta": 0,
+      "tip": "Frente a la tragedia, la comedia aborda el conflicto con humor y personajes cómicos, y tiende a un desenlace favorable.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa13-101",
+      "oa": "LE08 OA 13",
+      "pregunta": "Antonia quiere escribir un cuento y hacerlo bien. ¿Cuál es el orden más adecuado de las etapas del proceso de escritura?",
+      "opciones": [
+        "Escribir el final, luego el título y por último pensar el tema",
+        "Publicar de inmediato y no revisar nunca el texto",
+        "Planificar las ideas, escribir un borrador y luego revisar y corregir",
+        "Corregir la ortografía antes de tener alguna idea"
+      ],
+      "correcta": 2,
+      "tip": "Escribir es un proceso: primero se planifica (ideas, tema, destinatario), luego se redacta un borrador y finalmente se revisa y edita.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa13-102",
+      "oa": "LE08 OA 13",
+      "pregunta": "Diego escribirá una carta creativa dirigida a un niño de 6 años. ¿Qué decisión de escritura se adecúa mejor a ese destinatario?",
+      "opciones": [
+        "Usar tecnicismos científicos y frases muy largas",
+        "Emplear un lenguaje sencillo, cercano y palabras que el niño entienda",
+        "Escribir en un idioma extranjero para sorprenderlo",
+        "Incluir estadísticas y citas académicas complejas"
+      ],
+      "correcta": 1,
+      "tip": "Adecuar el texto al destinatario es clave: para un niño pequeño conviene un lenguaje sencillo y cercano, no tecnicismos ni frases complejas.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa13-103",
+      "oa": "LE08 OA 13",
+      "pregunta": "Valentina quiere expresar de forma libre y creativa sus emociones sobre el mar, jugando con imágenes y sonidos de las palabras. ¿Qué género le conviene escoger?",
+      "opciones": [
+        "Un poema",
+        "Un instructivo para armar un mueble",
+        "Un informe de laboratorio",
+        "Una lista de compras"
+      ],
+      "correcta": 0,
+      "tip": "En la escritura creativa el género se elige según el propósito: para expresar emociones con imágenes y sonido, el poema es una buena opción.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa13-104",
+      "oa": "LE08 OA 13",
+      "pregunta": "Al llegar a la etapa de revisión de su cuento, ¿qué acción corresponde realizar en ese momento del proceso?",
+      "opciones": [
+        "Recién ahí decidir sobre qué tratará el cuento",
+        "Enviar el texto sin volver a leerlo",
+        "Borrar todo y empezar sin leer lo escrito",
+        "Releer el borrador para mejorar la claridad y corregir errores"
+      ],
+      "correcta": 3,
+      "tip": "Revisar consiste en releer el borrador para mejorar su claridad, coherencia y corregir errores antes de la versión final.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa14-101",
+      "oa": "LE08 OA 14",
+      "pregunta": "En un texto expositivo se lee: \"Los mamíferos son muy diversos; ____, la ballena y el murciélago pertenecen al mismo grupo\". ¿Qué conector completa mejor la idea, al introducir un caso concreto?",
+      "opciones": [
+        "sin embargo",
+        "por ejemplo",
+        "en cambio",
+        "aunque"
+      ],
+      "correcta": 1,
+      "tip": "Para introducir un ejemplo que ilustra una afirmación se usa un conector de ejemplificación como \"por ejemplo\".",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa14-102",
+      "oa": "LE08 OA 14",
+      "pregunta": "Lee: \"Las lluvias fueron muy intensas este año; ____, varios ríos aumentaron su caudal\". ¿Qué conector expresa correctamente la relación de consecuencia?",
+      "opciones": [
+        "por lo tanto",
+        "por ejemplo",
+        "sin embargo",
+        "es decir"
+      ],
+      "correcta": 0,
+      "tip": "La consecuencia se marca con conectores como \"por lo tanto\": las lluvias intensas son la causa; el aumento del caudal, el efecto.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa14-103",
+      "oa": "LE08 OA 14",
+      "pregunta": "Para un texto expositivo sobre el reciclaje dirigido a compañeros de curso, ¿cuál es la mejor introducción?",
+      "opciones": [
+        "Una opinión agresiva que descalifique a quien no recicla",
+        "Una lista de nombres sin relación con el tema",
+        "Una presentación clara del tema que anticipe qué se explicará",
+        "El cierre y las conclusiones del texto"
+      ],
+      "correcta": 2,
+      "tip": "La introducción de un texto expositivo presenta el tema con claridad y anticipa lo que se desarrollará, orientando al lector.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa14-104",
+      "oa": "LE08 OA 14",
+      "pregunta": "Un estudiante ordena su texto expositivo sobre los planetas párrafo por párrafo, de modo que cada idea se conecte con la siguiente sin saltos bruscos. ¿Qué logra con ello?",
+      "opciones": [
+        "Una progresión temática coherente que facilita la comprensión",
+        "Un texto sin ninguna organización interna",
+        "Que el lector deba adivinar el orden de las ideas",
+        "Que cada párrafo trate un tema totalmente distinto y desconectado"
+      ],
+      "correcta": 0,
+      "tip": "La progresión temática enlaza las ideas de forma ordenada, dando coherencia al texto expositivo y ayudando a que el lector lo siga.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa15-101",
+      "oa": "LE08 OA 15",
+      "pregunta": "En un texto persuasivo, ¿cuál de estos enunciados corresponde a la tesis (la postura que se defiende)?",
+      "opciones": [
+        "Según un estudio, el 70% de los estudiantes duerme poco",
+        "Muchos alumnos llegan cansados por la mañana",
+        "Dormir influye en la memoria, afirman los expertos",
+        "El colegio debería comenzar las clases más tarde"
+      ],
+      "correcta": 3,
+      "tip": "La tesis es la postura u opinión que se sostiene; los datos y hechos son las evidencias que la respaldan, no la tesis misma.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa15-102",
+      "oa": "LE08 OA 15",
+      "pregunta": "Para defender la tesis \"Es necesario cuidar el agua en la escuela\", ¿cuál es la evidencia más pertinente?",
+      "opciones": [
+        "El agua es un líquido incoloro e inodoro",
+        "Un informe muestra que la escuela gasta el doble de agua que el promedio",
+        "A muchas personas les gusta nadar en verano",
+        "El agua se congela a cero grados Celsius"
+      ],
+      "correcta": 1,
+      "tip": "La evidencia pertinente apoya directamente la tesis; un dato sobre el gasto real de agua en la escuela sí respalda la necesidad de cuidarla.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa15-103",
+      "oa": "LE08 OA 15",
+      "pregunta": "Lee: \"El recreo es demasiado corto; ____, muchos alumnos no alcanzan a almorzar tranquilos\". ¿Qué conector encadena mejor el argumento con su conclusión?",
+      "opciones": [
+        "por lo tanto",
+        "por ejemplo",
+        "aunque",
+        "en primer lugar"
+      ],
+      "correcta": 0,
+      "tip": "En la argumentación, los conectores causales o consecutivos como \"por lo tanto\" enlazan el argumento con la conclusión que se desea sostener.",
+      "revisada": false
+    },
+    {
+      "id": "leng8-oa15-104",
+      "oa": "LE08 OA 15",
+      "pregunta": "Un texto persuasivo debe mantener coherencia temática. ¿Qué error rompe esa coherencia?",
+      "opciones": [
+        "Sostener la misma postura a lo largo de todo el texto",
+        "Apoyar la tesis con argumentos relacionados entre sí",
+        "Introducir de pronto un tema sin relación con la tesis defendida",
+        "Cerrar reforzando la idea principal planteada al inicio"
+      ],
+      "correcta": 2,
+      "tip": "La coherencia temática exige que todo el texto gire en torno a la tesis; introducir un tema ajeno la rompe y confunde al lector.",
       "revisada": false
     }
   ]

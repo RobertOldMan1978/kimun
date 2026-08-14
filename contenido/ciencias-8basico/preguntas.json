@@ -2,7 +2,7 @@
   "asignatura": "Ciencias Naturales",
   "nivel": "8° básico",
   "meta_preguntas_por_oa": 25,
-  "total_preguntas": 459,
+  "total_preguntas": 534,
   "revisadas": 0,
   "nota": "Ciencias 8° básico — año completo (CN08 OA 01-15). Generadas por agentes; opciones barajadas. Sin revisión pedagógica humana.",
   "preguntas": [
@@ -65,29 +65,29 @@
     {
       "id": "cien8-oa01-005",
       "oa": "CN08 OA 01",
-      "pregunta": "¿Quién fue el primero en observar microorganismos vivos, como bacterias y protozoos, con sus microscopios?",
+      "pregunta": "Los primeros microscopios eran simples; con lentes mejores se observaron microorganismos antes desconocidos. Esto muestra que el modelo de los seres vivos...",
       "opciones": [
-        "Robert Hooke",
-        "Gregor Mendel",
-        "Alexander Fleming",
-        "Anton van Leeuwenhoek"
+        "se amplía cuando nuevos instrumentos aportan más evidencia",
+        "nunca ha cambiado desde la antigüedad",
+        "depende de la opinión de cada persona",
+        "solo incluye animales y plantas de gran tamaño"
       ],
-      "correcta": 3,
-      "tip": "Van Leeuwenhoek los llamó 'animálculos' y fue el primero en verlos vivos.",
+      "correcta": 0,
+      "tip": "Mejores microscopios revelaron microorganismos y ampliaron el modelo de la vida: la tecnología aporta evidencia nueva.",
       "revisada": false
     },
     {
       "id": "cien8-oa01-006",
       "oa": "CN08 OA 01",
-      "pregunta": "Anton van Leeuwenhoek llamó 'animálculos' a los pequeños seres que observaba. ¿Qué eran esos animálculos?",
+      "pregunta": "Van Leeuwenhoek llamó 'animálculos' a lo que veía; con el tiempo y más evidencia, la ciencia reemplazó ese nombre por 'microorganismos'. ¿Qué ilustra este cambio?",
       "opciones": [
-        "Insectos muy pequeños",
-        "Granos de arena",
-        "Semillas de plantas",
-        "Microorganismos vivos, como bacterias y protozoos"
+        "Que las ideas científicas se corrigen y precisan cuando hay más evidencia",
+        "Que los científicos antiguos se equivocaban en todo",
+        "Que los microorganismos cambiaron de forma con los años",
+        "Que el microscopio dejó de ser útil"
       ],
-      "correcta": 3,
-      "tip": "Eran microorganismos vivos, invisibles a simple vista.",
+      "correcta": 0,
+      "tip": "El nombre cambió al comprender mejor qué eran esos seres: las ideas científicas se precisan con nueva evidencia.",
       "revisada": false
     },
     {
@@ -261,15 +261,15 @@
     {
       "id": "cien8-oa01-019",
       "oa": "CN08 OA 01",
-      "pregunta": "Robert Hooke realizó sus famosas observaciones del corcho aproximadamente en el año...",
+      "pregunta": "Hooke solo pudo ver las celdas del corcho porque contaba con un microscopio. ¿Qué relación hay entre la tecnología y este descubrimiento?",
       "opciones": [
-        "2000",
-        "1500",
-        "1900",
-        "1665"
+        "Un mejor instrumento hizo posible una observación que antes no se podía hacer",
+        "El descubrimiento no dependió de ningún instrumento",
+        "La fecha exacta es lo más importante del hallazgo",
+        "El corcho produjo las células al ser observado"
       ],
-      "correcta": 3,
-      "tip": "En 1665 publicó sus observaciones en el libro 'Micrographia'.",
+      "correcta": 0,
+      "tip": "Sin el microscopio, esas estructuras eran invisibles: la tecnología permite nuevas observaciones y modelos.",
       "revisada": false
     },
     {
@@ -375,13 +375,13 @@
       "oa": "CN08 OA 01",
       "pregunta": "¿Qué avance tecnológico fue indispensable para poder formular la teoría celular?",
       "opciones": [
-        "La construcción de barcos",
-        "El descubrimiento del fuego",
-        "La invención de la rueda",
+        "La invención del telescopio",
+        "El desarrollo de la imprenta",
+        "La invención de la brújula",
         "La invención y mejora del microscopio"
       ],
       "correcta": 3,
-      "tip": "Sin microscopio no se habrían podido observar las células.",
+      "tip": "Sin microscopio no se habrían podido observar las células. El telescopio sirve para objetos lejanos, no diminutos.",
       "revisada": false
     },
     {
@@ -2627,15 +2627,15 @@
     {
       "id": "cien8-oa05-004",
       "oa": "CN08 OA 05",
-      "pregunta": "¿Cuál de estos órganos forma parte del sistema excretor?",
+      "pregunta": "¿Qué órgano filtra la sangre y participa directamente en la formación de la orina?",
       "opciones": [
-        "El estómago",
+        "El hígado",
+        "La vejiga",
         "El corazón",
-        "Los pulmones",
-        "Los riñones"
+        "El riñón"
       ],
       "correcta": 3,
-      "tip": "Los riñones filtran la sangre y producen la orina, que elimina desechos del cuerpo.",
+      "tip": "El riñón filtra la sangre y forma la orina. La vejiga solo almacena la orina; el hígado y el corazón cumplen otras funciones.",
       "revisada": false
     },
     {
@@ -6430,6 +6430,1056 @@
       ],
       "correcta": 3,
       "tip": "La evidencia indica que unos pocos elementos (C, H, O y N) son especialmente importantes y frecuentes en los seres vivos.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa01-101",
+      "oa": "CN08 OA 01",
+      "pregunta": "Un investigador observa por primera vez, con un microscopio muy potente, pequeños seres que se mueven solos dentro de una gota de agua estancada. ¿Qué conclusión apoya mejor esta evidencia para el modelo celular de la época?",
+      "opciones": [
+        "Que existen organismos vivos formados por una sola célula, no visibles a simple vista",
+        "Que el agua estancada genera vida por sí misma sin necesidad de células",
+        "Que todas las células provienen de células vegetales anteriores",
+        "Que las células solo existen dentro de tejidos de plantas y animales grandes"
+      ],
+      "correcta": 0,
+      "tip": "Van Leeuwenhoek observó microorganismos (\"animálculos\") con sus lentes; esa evidencia amplió el modelo celular al mostrar seres de una sola célula.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa01-102",
+      "oa": "CN08 OA 01",
+      "pregunta": "La teoría celular afirma que toda célula proviene de otra célula preexistente. Si un científico encontrara evidencia sólida y repetible de células que surgen espontáneamente de materia sin vida, ¿qué debería ocurrir con el modelo?",
+      "opciones": [
+        "El modelo se mantendría igual, porque las teorías no cambian nunca",
+        "La evidencia se descartaría de inmediato por contradecir la teoría vigente",
+        "Se abandonaría el uso del microscopio como herramienta científica",
+        "El modelo debería revisarse, porque una nueva evidencia contradice uno de sus enunciados"
+      ],
+      "correcta": 3,
+      "tip": "En ciencia, un modelo se revisa cuando aparece evidencia nueva y confiable que lo contradice; así evolucionó el modelo celular.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa01-103",
+      "oa": "CN08 OA 01",
+      "pregunta": "Robert Hooke, al mirar un trozo de corcho, describió pequeñas celdillas vacías que llamó \"células\". Hoy sabemos que estaba viendo paredes de células ya muertas. ¿Por qué su observación igual fue un aporte al modelo celular?",
+      "opciones": [
+        "Porque demostró que las células solo existen en el corcho",
+        "Porque probó que las células están siempre vacías por dentro",
+        "Porque aportó la primera evidencia observada de una estructura repetida que se llamaría célula",
+        "Porque confirmó que las células no necesitan un microscopio para verse"
+      ],
+      "correcta": 2,
+      "tip": "Hooke observó las paredes de células muertas del corcho; aun sin ver el contenido vivo, entregó la primera observación registrada de la estructura celular.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa01-104",
+      "oa": "CN08 OA 01",
+      "pregunta": "Dos observaciones sucesivas ayudaron a construir la teoría celular: primero se vio que los tejidos vegetales estaban formados por células, y luego que los tejidos animales también. ¿Qué idea permite unir ambas observaciones en una sola conclusión?",
+      "opciones": [
+        "Que solo las plantas están formadas por células",
+        "Que la célula es la unidad básica que forma a todos los seres vivos",
+        "Que animales y plantas no comparten ninguna estructura",
+        "Que las células animales son en realidad células vegetales transformadas"
+      ],
+      "correcta": 1,
+      "tip": "Al hallar células en plantas y en animales, se generalizó que todos los seres vivos están formados por células: un pilar de la teoría celular.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa01-105",
+      "oa": "CN08 OA 01",
+      "pregunta": "El modelo de la célula fue cambiando a medida que mejoraban los microscopios. ¿Qué relación explica mejor este hecho?",
+      "opciones": [
+        "Mejores instrumentos permiten nuevas observaciones, y esas evidencias hacen evolucionar el modelo",
+        "Los modelos cambian solo cuando cambian los científicos, no las evidencias",
+        "El microscopio no influye en lo que se puede saber sobre la célula",
+        "Los modelos antiguos eran falsos y los nuevos son definitivos e inmodificables"
+      ],
+      "correcta": 0,
+      "tip": "El avance tecnológico (mejores lentes) permitió ver más detalles; esas nuevas evidencias obligaron a ajustar el modelo celular una y otra vez.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa02-101",
+      "oa": "CN08 OA 02",
+      "pregunta": "Una célula muscular gasta mucha energía para contraerse de forma constante. ¿Qué organelo se esperaría encontrar en gran cantidad en ella, y por qué?",
+      "opciones": [
+        "Muchos cloroplastos, porque fabrican energía a partir de la luz",
+        "Muchas vacuolas, porque almacenan el agua que da fuerza al músculo",
+        "Muchas mitocondrias, porque en ellas se libera la energía que la célula necesita",
+        "Muchas paredes celulares, porque dan resistencia al movimiento"
+      ],
+      "correcta": 2,
+      "tip": "La mitocondria libera energía (respiración celular); una célula con alta demanda energética, como la muscular, tiene muchas mitocondrias.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa02-102",
+      "oa": "CN08 OA 02",
+      "pregunta": "Al observar dos células al microscopio, una tiene pared celular y cloroplastos y la otra no. ¿Qué se puede concluir con más seguridad?",
+      "opciones": [
+        "La que tiene pared y cloroplastos es una célula vegetal",
+        "Ambas son células animales de distinto tamaño",
+        "La que no tiene cloroplastos está muerta",
+        "La que tiene pared celular es una célula procarionte sin núcleo"
+      ],
+      "correcta": 0,
+      "tip": "La pared celular y los cloroplastos son característicos de la célula vegetal; la célula animal carece de ambos.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa02-103",
+      "oa": "CN08 OA 02",
+      "pregunta": "La membrana celular deja entrar algunas sustancias y bloquea otras. ¿Cómo se relaciona esta estructura con la función de la célula?",
+      "opciones": [
+        "Permite que todo entre y salga sin ningún control",
+        "Regula el intercambio con el ambiente, controlando qué entra y qué sale",
+        "Solo sirve para dar color a la célula",
+        "Impide por completo cualquier intercambio con el exterior"
+      ],
+      "correcta": 1,
+      "tip": "La membrana es selectiva: controla el paso de sustancias, lo que permite a la célula mantener su interior estable.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa02-104",
+      "oa": "CN08 OA 02",
+      "pregunta": "Una célula procarionte, como una bacteria, no tiene núcleo. ¿Dónde se encuentra entonces su material genético y qué implica esto al compararla con una célula eucarionte?",
+      "opciones": [
+        "En las mitocondrias; por eso las bacterias tienen más energía",
+        "En los cloroplastos; por eso las bacterias hacen fotosíntesis",
+        "Fuera de la célula; por eso la bacteria no puede reproducirse",
+        "Disperso en el citoplasma; a diferencia de la eucarionte, que lo guarda en un núcleo"
+      ],
+      "correcta": 3,
+      "tip": "En la procarionte el material genético está libre en el citoplasma; la eucarionte lo tiene envuelto en un núcleo. Esa es una diferencia clave.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa02-105",
+      "oa": "CN08 OA 02",
+      "pregunta": "En una célula vegetal madura suele haber una vacuola central muy grande llena de agua. ¿Qué función explica mejor la presencia de esta estructura?",
+      "opciones": [
+        "Almacenar agua y sustancias, ayudando a mantener la célula firme",
+        "Producir la energía de la célula a partir de la luz",
+        "Fabricar la pared celular desde el interior",
+        "Reemplazar al núcleo cuando este deja de funcionar"
+      ],
+      "correcta": 0,
+      "tip": "La vacuola almacena agua y sustancias; al llenarse, presiona hacia la pared y mantiene turgente (firme) a la célula vegetal.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa03-101",
+      "oa": "CN08 OA 03",
+      "pregunta": "Se deja un trozo de papa en un vaso con agua pura y otro trozo igual en un vaso con agua muy salada. Al cabo de una hora, ¿qué resultado se espera y por qué?",
+      "opciones": [
+        "El de agua salada se hincha, porque el agua entra hacia la papa",
+        "El de agua pura se hincha y el de agua salada se ablanda, porque el agua se mueve hacia donde hay más sal",
+        "Ambos quedan idénticos, porque la papa no intercambia agua",
+        "El de agua pura se seca, porque el agua pura no puede entrar a la papa"
+      ],
+      "correcta": 1,
+      "tip": "Por osmosis, el agua pasa hacia el medio con más soluto: entra a la papa en agua pura (se hincha) y sale de la papa en agua salada (se ablanda).",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa03-102",
+      "oa": "CN08 OA 03",
+      "pregunta": "En un experimento se coloca una gota de tinta en un extremo de un vaso con agua quieta, sin revolver. Con el tiempo, el color se reparte de forma pareja por todo el vaso. ¿Qué proceso explica este resultado?",
+      "opciones": [
+        "Osmosis, porque el agua atraviesa una membrana",
+        "Evaporación, porque la tinta se convierte en gas",
+        "Filtración, porque el agua separa la tinta por tamaño",
+        "Difusión, porque las partículas se mueven desde donde están más concentradas hacia donde hay menos"
+      ],
+      "correcta": 3,
+      "tip": "La difusión es el movimiento de partículas desde mayor a menor concentración hasta repartirse de forma pareja, sin necesidad de membrana.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa03-103",
+      "oa": "CN08 OA 03",
+      "pregunta": "Un estudiante plantea la hipótesis: \"Una célula colocada en un medio hipertónico pierde agua y se encoge\". Para ponerla a prueba con glóbulos rojos, ¿qué variable debería observar y medir?",
+      "opciones": [
+        "El color del vaso donde están los glóbulos",
+        "La temperatura del laboratorio a lo largo del día",
+        "El cambio de tamaño o forma de los glóbulos rojos",
+        "La marca del microscopio utilizado"
+      ],
+      "correcta": 2,
+      "tip": "La hipótesis predice un cambio de tamaño; por eso la variable que se debe observar y medir es la forma o el volumen de las células.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa03-104",
+      "oa": "CN08 OA 03",
+      "pregunta": "Se sumerge un globo delgado lleno de agua azucarada dentro de un frasco con agua pura; el globo deja pasar agua pero no el azúcar. Después de un rato el globo se ve más inflado. ¿Qué explica este resultado?",
+      "opciones": [
+        "El azúcar salió del globo y arrastró agua hacia afuera",
+        "El agua entró al globo por osmosis, hacia el lado con más azúcar",
+        "El globo produjo agua nueva en su interior",
+        "El agua pura empujó al azúcar fuera del frasco"
+      ],
+      "correcta": 1,
+      "tip": "La membrana deja pasar agua pero no azúcar (selectiva); por osmosis el agua entra hacia el interior más concentrado y el globo se infla.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa03-105",
+      "oa": "CN08 OA 03",
+      "pregunta": "Al regar en exceso una lechuga con agua muy salada, sus hojas se marchitan en lugar de ponerse firmes. ¿Qué proceso celular explica mejor lo que ocurre?",
+      "opciones": [
+        "El agua entra a las células por difusión y las revienta",
+        "La sal fabrica azúcar dentro de la planta y la seca",
+        "La planta deja de hacer fotosíntesis por falta de luz",
+        "El agua sale de las células hacia el suelo salado por osmosis, y las células pierden firmeza"
+      ],
+      "correcta": 3,
+      "tip": "El suelo salado es hipertónico respecto a la célula: el agua sale por osmosis, la célula pierde turgencia y la hoja se marchita.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa04-101",
+      "oa": "CN08 OA 04",
+      "pregunta": "En días muy calurosos, muchas plantas cierran sus estomas. ¿Qué relación entre estructura, función y ambiente explica mejor este comportamiento?",
+      "opciones": [
+        "Cierran los estomas para dejar entrar más luz a la hoja",
+        "Cierran los estomas para reducir la pérdida de agua por evaporación",
+        "Cierran los estomas para absorber más agua desde el aire",
+        "Cierran los estomas para fabricar más raíces"
+      ],
+      "correcta": 1,
+      "tip": "Los estomas regulan el intercambio de gases y la salida de vapor de agua; al cerrarse en el calor, la planta evita perder demasiada agua.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa04-102",
+      "oa": "CN08 OA 04",
+      "pregunta": "El xilema transporta agua desde la raíz hacia las hojas, y el floema lleva el alimento producido en las hojas hacia el resto de la planta. Si se dañara solo el xilema de un tallo, ¿qué consecuencia sería más probable?",
+      "opciones": [
+        "Las hojas recibirían menos agua y comenzarían a marchitarse",
+        "La raíz dejaría de recibir la luz del sol",
+        "Las hojas producirían más agua para compensar",
+        "El floema empezaría a transportar agua desde el aire"
+      ],
+      "correcta": 0,
+      "tip": "El xilema sube el agua; si se daña, el agua no llega a las hojas y estas se marchitan. Cada tejido cumple una función específica.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa04-103",
+      "oa": "CN08 OA 04",
+      "pregunta": "Las raíces de muchas plantas tienen numerosos pelos radiculares muy finos. ¿Cómo se relaciona esta estructura con la función de la raíz en su ambiente?",
+      "opciones": [
+        "Sirven para hacer fotosíntesis bajo tierra",
+        "Permiten que la raíz respire dióxido de carbono del aire",
+        "Dan color verde a la raíz para atraer insectos",
+        "Aumentan la superficie de contacto con el suelo para absorber más agua y minerales"
+      ],
+      "correcta": 3,
+      "tip": "Los pelos radiculares aumentan la superficie de absorción; así la raíz capta más agua y minerales del suelo (relación estructura-función).",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa04-104",
+      "oa": "CN08 OA 04",
+      "pregunta": "Durante el día, por los estomas de una hoja entra dióxido de carbono y sale oxígeno. ¿Con qué función de la planta se relaciona directamente este intercambio de gases?",
+      "opciones": [
+        "Con la absorción de agua por la raíz",
+        "Con el transporte de savia por el floema",
+        "Con la fotosíntesis, que usa dióxido de carbono y libera oxígeno",
+        "Con el crecimiento de nuevos pelos radiculares"
+      ],
+      "correcta": 2,
+      "tip": "En la fotosíntesis la planta toma dióxido de carbono y libera oxígeno; los estomas son la estructura que permite ese intercambio de gases.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa04-105",
+      "oa": "CN08 OA 04",
+      "pregunta": "Una planta ubicada junto a una ventana crece inclinando su tallo hacia la luz. ¿Qué muestra este ejemplo sobre las plantas?",
+      "opciones": [
+        "Que las plantas no pueden responder a lo que ocurre en su ambiente",
+        "Que la planta se mueve al azar sin relación con la luz",
+        "Que las plantas responden a estímulos del ambiente, como la dirección de la luz",
+        "Que el tallo busca alejarse del agua del suelo"
+      ],
+      "correcta": 2,
+      "tip": "Las plantas responden a estímulos: crecer hacia la luz (fototropismo) es una respuesta que favorece la fotosíntesis.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa05-101",
+      "oa": "CN08 OA 05",
+      "pregunta": "El oxígeno que entra por los pulmones llega hasta una célula del pie. ¿Qué interacción entre sistemas hace posible este recorrido?",
+      "opciones": [
+        "El sistema respiratorio capta el oxígeno y el circulatorio lo transporta por la sangre hasta las células",
+        "El sistema digestivo fabrica el oxígeno y el excretor lo reparte",
+        "El sistema circulatorio produce el oxígeno en el corazón",
+        "El sistema respiratorio lleva el oxígeno directamente a cada célula sin la sangre"
+      ],
+      "correcta": 0,
+      "tip": "Respiratorio y circulatorio trabajan juntos: los pulmones captan el oxígeno y la sangre lo transporta a todas las células del cuerpo.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa05-102",
+      "oa": "CN08 OA 05",
+      "pregunta": "Si los riñones (sistema excretor) dejaran de filtrar la sangre, ¿qué consecuencia sería más probable para el cuerpo?",
+      "opciones": [
+        "El cuerpo produciría más oxígeno para compensar",
+        "Se acumularían desechos en la sangre, afectando la salud del organismo",
+        "La digestión de los alimentos se aceleraría mucho",
+        "El corazón dejaría de recibir sangre de inmediato"
+      ],
+      "correcta": 1,
+      "tip": "El sistema excretor elimina desechos de la sangre; si falla, esos desechos se acumulan y dañan el funcionamiento del cuerpo.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa05-103",
+      "oa": "CN08 OA 05",
+      "pregunta": "Los nutrientes de un sándwich terminan alimentando una célula del brazo. ¿Cómo interactúan los sistemas digestivo y circulatorio para lograrlo?",
+      "opciones": [
+        "El circulatorio digiere el alimento y el digestivo lo respira",
+        "El digestivo lleva los nutrientes directamente al brazo sin la sangre",
+        "El circulatorio transforma los nutrientes en aire para las células",
+        "El digestivo descompone el alimento en nutrientes y el circulatorio los transporta a las células"
+      ],
+      "correcta": 3,
+      "tip": "El sistema digestivo descompone el alimento en nutrientes que pasan a la sangre; el circulatorio los reparte a todas las células.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa05-104",
+      "oa": "CN08 OA 05",
+      "pregunta": "Al hacer ejercicio intenso, la respiración y los latidos del corazón se aceleran al mismo tiempo. ¿Qué explica mejor esta respuesta conjunta?",
+      "opciones": [
+        "El corazón y los pulmones compiten entre sí por el oxígeno",
+        "El ejercicio detiene al sistema digestivo y por eso late más rápido el corazón",
+        "Las células trabajan más y necesitan más oxígeno, así que ambos sistemas aumentan su ritmo para abastecerlas",
+        "La aceleración ocurre al azar y no se relaciona con el esfuerzo"
+      ],
+      "correcta": 2,
+      "tip": "Al ejercitarse, las células demandan más oxígeno; respiratorio y circulatorio aumentan su ritmo de manera coordinada para satisfacer esa demanda.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa05-105",
+      "oa": "CN08 OA 05",
+      "pregunta": "Se comparan el sistema respiratorio y el circulatorio. ¿Cuál afirmación describe correctamente la diferencia y la relación entre ambos?",
+      "opciones": [
+        "Ambos fabrican alimento; se diferencian solo en su ubicación",
+        "El respiratorio realiza el intercambio de gases con el aire y el circulatorio los transporta por el cuerpo",
+        "El circulatorio respira aire y el respiratorio bombea sangre",
+        "Los dos eliminan desechos sólidos y no se relacionan entre sí"
+      ],
+      "correcta": 1,
+      "tip": "El respiratorio intercambia gases con el aire (entra oxígeno, sale dióxido de carbono) y el circulatorio los transporta; funciones distintas que se complementan.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa06-101",
+      "oa": "CN08 OA 06",
+      "pregunta": "En la etiqueta de una barra de cereal lees: 22 g de carbohidratos (de los cuales 15 g son azúcares), 3 g de proteínas y 2 g de grasas por porción. ¿Qué conclusión se apoya mejor en estos datos?",
+      "opciones": [
+        "La barra aporta principalmente proteínas para formar músculos.",
+        "La barra no contiene azúcar, así que se puede comer sin límite.",
+        "La mayor parte de su aporte son carbohidratos, y buena parte de ellos son azúcares.",
+        "La barra aporta sobre todo grasas, por lo que conviene evitarla siempre."
+      ],
+      "correcta": 2,
+      "tip": "Los 22 g de carbohidratos superan a proteínas y grasas; además, 15 de esos 22 g corresponden a azúcares.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa06-102",
+      "oa": "CN08 OA 06",
+      "pregunta": "Comparas dos yogures: el yogur A tiene 12 g de azúcar por envase y el yogur B tiene 5 g. Ambos aportan calcio y proteínas similares. Si tu objetivo es reducir el azúcar de tu dieta, ¿qué decisión se apoya mejor en los datos?",
+      "opciones": [
+        "Elegir el yogur B, porque entrega beneficios parecidos con menos azúcar.",
+        "Elegir el yogur A, porque más azúcar significa más proteínas.",
+        "Elegir cualquiera, porque el azúcar no influye en la dieta.",
+        "No consumir yogur, porque el calcio daña la salud."
+      ],
+      "correcta": 0,
+      "tip": "A igualdad de calcio y proteínas, el yogur con menos azúcar (B) es la mejor opción para reducir el azúcar.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa06-103",
+      "oa": "CN08 OA 06",
+      "pregunta": "Un deportista necesita reparar y formar tejido muscular después de entrenar. ¿Qué grupo de nutrientes cumple principalmente esa función de construcción y reparación de tejidos?",
+      "opciones": [
+        "Las vitaminas",
+        "El agua",
+        "Los carbohidratos",
+        "Las proteínas"
+      ],
+      "correcta": 3,
+      "tip": "Las proteínas aportan los aminoácidos que el cuerpo usa para construir y reparar tejidos, como el muscular.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa06-104",
+      "oa": "CN08 OA 06",
+      "pregunta": "Una persona come muchos alimentos energéticos pero casi no consume frutas ni verduras. Con el tiempo presenta encías que sangran y heridas que sanan lento, signos de falta de vitamina C. ¿Qué muestra esta situación sobre los nutrientes?",
+      "opciones": [
+        "Que solo importan las calorías, no el tipo de nutriente.",
+        "Que las vitaminas, aunque se necesitan en poca cantidad, son esenciales para la salud.",
+        "Que las frutas y verduras solo aportan grasas.",
+        "Que la vitamina C se obtiene únicamente de las carnes."
+      ],
+      "correcta": 1,
+      "tip": "Las vitaminas se requieren en cantidades pequeñas, pero su ausencia causa enfermedades; la vitamina C abunda en frutas y verduras.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa06-105",
+      "oa": "CN08 OA 06",
+      "pregunta": "En un experimento agregas una gota de tintura de yodo a tres alimentos. El yodo se vuelve azul-negro cuando hay almidón. La papa se torna azul-negra, pero el aceite y la clara de huevo no cambian. ¿Qué se puede concluir?",
+      "opciones": [
+        "El aceite es rico en almidón.",
+        "La clara de huevo contiene mucho almidón.",
+        "La papa contiene almidón, un tipo de carbohidrato, y los otros dos no.",
+        "El yodo detecta proteínas, no carbohidratos."
+      ],
+      "correcta": 2,
+      "tip": "La prueba de yodo detecta almidón, que es un carbohidrato; solo la papa dio positivo.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa07-101",
+      "oa": "CN08 OA 07",
+      "pregunta": "Un estudiante quiere mejorar su salud y analiza cuatro planes. ¿Cuál combina de mejor manera los factores de una vida saludable?",
+      "opciones": [
+        "Entrenar tres horas seguidas una vez al mes y comer solo comida rápida.",
+        "Realizar actividad física regular, mantener una alimentación balanceada y dormir lo suficiente.",
+        "Dejar de comer por completo para bajar de peso rápido.",
+        "Reemplazar las comidas por bebidas energéticas con mucha azúcar."
+      ],
+      "correcta": 1,
+      "tip": "La salud se apoya en varios factores combinados: actividad física regular, alimentación balanceada y buen descanso.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa07-102",
+      "oa": "CN08 OA 07",
+      "pregunta": "El humo del tabaco contiene sustancias que dañan los pulmones y las vías respiratorias. ¿Qué predicción sobre la salud está mejor fundamentada?",
+      "opciones": [
+        "Fumar mejora la capacidad de los pulmones para captar oxígeno.",
+        "El tabaco solo afecta a quien fuma, nunca a quienes están alrededor.",
+        "Fumar no tiene relación con las enfermedades respiratorias.",
+        "Fumar aumenta el riesgo de enfermedades respiratorias, tanto en quien fuma como por el humo de segunda mano."
+      ],
+      "correcta": 3,
+      "tip": "El humo del tabaco daña las vías respiratorias y también afecta a quienes lo respiran de forma pasiva.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa07-103",
+      "oa": "CN08 OA 07",
+      "pregunta": "Comparas la actividad física de dos jóvenes. Ana camina o anda en bicicleta 40 minutos casi todos los días. Beto hace ejercicio muy intenso una sola vez al mes. Según los factores de una vida saludable, ¿qué afirmación se apoya mejor en la evidencia?",
+      "opciones": [
+        "La actividad física regular de Ana beneficia más su salud que el esfuerzo aislado de Beto.",
+        "Beto tiene mejor condición, porque el ejercicio mensual es suficiente.",
+        "Ninguna actividad física influye en la salud.",
+        "Solo el ejercicio muy intenso mejora la salud."
+      ],
+      "correcta": 0,
+      "tip": "La regularidad de la actividad física aporta más beneficios que un esfuerzo intenso pero aislado.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa07-104",
+      "oa": "CN08 OA 07",
+      "pregunta": "El consumo de alcohol afecta el sistema nervioso, disminuyendo los reflejos y la coordinación. A partir de esta evidencia, ¿qué conclusión es la más adecuada?",
+      "opciones": [
+        "El alcohol mejora los reflejos al conducir.",
+        "El alcohol no tiene efectos sobre el cuerpo.",
+        "Conducir tras consumir alcohol aumenta el riesgo de accidentes por la pérdida de reflejos.",
+        "El alcohol solo afecta al hígado, nunca al cerebro."
+      ],
+      "correcta": 2,
+      "tip": "Al reducir reflejos y coordinación, el alcohol aumenta el riesgo de accidentes, por ejemplo al conducir.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa07-105",
+      "oa": "CN08 OA 07",
+      "pregunta": "Al diseñar un plan de alimentación balanceada para un día, ¿qué criterio es el más adecuado?",
+      "opciones": [
+        "Incluir únicamente carnes en todas las comidas.",
+        "Eliminar por completo el agua para no retener líquidos.",
+        "Basarse solo en dulces y bebidas azucaradas.",
+        "Combinar frutas, verduras, cereales y proteínas en proporciones adecuadas, con suficiente agua."
+      ],
+      "correcta": 3,
+      "tip": "Una alimentación balanceada incluye variedad de grupos de alimentos en proporciones adecuadas e hidratación suficiente.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa08-101",
+      "oa": "CN08 OA 08",
+      "pregunta": "Frotas un globo contra tu cabello y luego lo acercas a pequeños trozos de papel sin tocarlos. Los papeles saltan hacia el globo. ¿Qué explica mejor lo observado?",
+      "opciones": [
+        "El globo quedó cargado por fricción y atrae los papelitos mediante una fuerza eléctrica.",
+        "El globo se calentó y el calor mueve los papeles.",
+        "El aire empuja los papeles hacia el globo.",
+        "El globo se volvió magnético y atrae el papel como un imán."
+      ],
+      "correcta": 0,
+      "tip": "Al frotarlo, el globo se electriza por fricción; la carga genera una fuerza eléctrica que atrae los papelitos.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa08-102",
+      "oa": "CN08 OA 08",
+      "pregunta": "Dos globos se frotan con el mismo paño de lana y luego se acercan colgando de un hilo. ¿Qué se predice que ocurrirá y por qué?",
+      "opciones": [
+        "Se atraerán, porque quedaron con cargas opuestas.",
+        "No pasará nada, porque frotar no genera carga.",
+        "Se repelerán, porque ambos quedaron con el mismo tipo de carga.",
+        "Se pegarán y quedarán unidos de forma permanente."
+      ],
+      "correcta": 2,
+      "tip": "Al frotarse con el mismo material, ambos globos adquieren carga del mismo signo, y cargas iguales se repelen.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa08-103",
+      "oa": "CN08 OA 08",
+      "pregunta": "Acercas, sin tocar, una barra cargada negativamente a una esfera metálica neutra. Dentro del metal las cargas se reordenan: las positivas se acercan a la barra y las negativas se alejan. ¿Qué método de electrización se observa?",
+      "opciones": [
+        "Electrización por fricción.",
+        "Electrización por inducción.",
+        "Electrización por contacto directo.",
+        "No hay electrización, porque no se tocan."
+      ],
+      "correcta": 1,
+      "tip": "En la inducción, un cuerpo cargado reordena las cargas de otro sin tocarlo.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa08-104",
+      "oa": "CN08 OA 08",
+      "pregunta": "Tocas una esfera metálica neutra con una barra cargada positivamente y parte de la carga pasa a la esfera. ¿Qué se predice sobre la esfera después del contacto?",
+      "opciones": [
+        "Quedará neutra, porque el metal no se carga.",
+        "Quedará cargada negativamente, opuesta a la barra.",
+        "Se volverá magnética en lugar de eléctrica.",
+        "Quedará cargada positivamente, con el mismo signo que la barra."
+      ],
+      "correcta": 3,
+      "tip": "En la electrización por contacto, el objeto adquiere carga del mismo signo que el cuerpo que lo tocó.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa08-105",
+      "oa": "CN08 OA 08",
+      "pregunta": "En un día seco, al bajar del auto y tocar la manilla metálica sientes una pequeña descarga. ¿Cuál es la mejor explicación y evaluación del riesgo?",
+      "opciones": [
+        "Te electrizaste por fricción con el asiento; es una descarga pequeña, molesta pero de bajo riesgo.",
+        "La manilla genera electricidad por sí sola y siempre es muy peligrosa.",
+        "El auto es magnético y te atrae con fuerza.",
+        "La descarga demuestra que el auto tiene una falla eléctrica grave."
+      ],
+      "correcta": 0,
+      "tip": "El roce con el asiento te electriza; al tocar el metal, la carga se descarga. Es una molestia menor, no un peligro grave.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa09-101",
+      "oa": "CN08 OA 09",
+      "pregunta": "Comparas una central que quema carbón con un parque de paneles fotovoltaicos. ¿Qué ventaja de los paneles solares está mejor fundamentada?",
+      "opciones": [
+        "Funcionan igual de bien de día y de noche, sin ninguna variación.",
+        "No requieren ninguna inversión inicial.",
+        "No queman combustible ni emiten gases contaminantes durante su funcionamiento.",
+        "Producen energía infinita sin depender del clima."
+      ],
+      "correcta": 2,
+      "tip": "Al generar electricidad con la luz solar, los paneles no queman combustible ni emiten gases durante su operación.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa09-102",
+      "oa": "CN08 OA 09",
+      "pregunta": "Al evaluar las centrales que usan combustibles fósiles (carbón, petróleo, gas) frente a las fuentes renovables, ¿cuál es una desventaja de los combustibles fósiles?",
+      "opciones": [
+        "Nunca se agotan y no contaminan.",
+        "Liberan gases contaminantes y usan recursos que se agotan.",
+        "Solo funcionan cuando hay sol o viento.",
+        "No pueden producir grandes cantidades de energía."
+      ],
+      "correcta": 1,
+      "tip": "Los combustibles fósiles son recursos finitos y su combustión libera gases contaminantes, a diferencia de las renovables.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa09-103",
+      "oa": "CN08 OA 09",
+      "pregunta": "Al evaluar la energía solar y la eólica como fuentes de electricidad, ¿qué limitación se debe considerar?",
+      "opciones": [
+        "Producen gases de efecto invernadero al operar.",
+        "Se acaban rápidamente, igual que el carbón.",
+        "Son las fuentes más contaminantes que existen.",
+        "Su producción depende de las condiciones del clima, como el sol o el viento disponibles."
+      ],
+      "correcta": 3,
+      "tip": "El sol y el viento son limpios y renovables, pero su disponibilidad varía con las condiciones del clima.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa09-104",
+      "oa": "CN08 OA 09",
+      "pregunta": "Una comunidad aislada, con mucho sol todo el año y sin conexión a la red eléctrica, quiere generar su propia electricidad de forma limpia. ¿Qué tecnología resulta más adecuada según esos datos?",
+      "opciones": [
+        "Paneles fotovoltaicos, que aprovechan la abundante luz solar del lugar.",
+        "Una central de carbón, por ser la más limpia.",
+        "Un generador a petróleo, por no depender del sol.",
+        "Ninguna, porque sin red no se puede generar electricidad."
+      ],
+      "correcta": 0,
+      "tip": "Con abundante sol y sin red disponible, los paneles fotovoltaicos permiten generar electricidad limpia en el lugar.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa09-105",
+      "oa": "CN08 OA 09",
+      "pregunta": "Al decidir qué fuente de energía conviene para una ciudad, ¿qué criterio representa un análisis más completo?",
+      "opciones": [
+        "Elegir siempre la más barata, sin considerar nada más.",
+        "Comparar costo, contaminación, disponibilidad del recurso e impacto en el ambiente.",
+        "Elegir la que use la mayor cantidad de combustible fósil posible.",
+        "Escoger al azar, porque todas las fuentes son iguales."
+      ],
+      "correcta": 1,
+      "tip": "Evaluar una fuente de energía requiere comparar varios criterios: costo, contaminación, disponibilidad e impacto ambiental.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa10-101",
+      "oa": "CN08 OA 10",
+      "pregunta": "Tres ampolletas están conectadas en serie con una pila, es decir, una tras otra en un único camino. Si una de ellas se quema y se corta, ¿qué se predice que ocurrirá?",
+      "opciones": [
+        "Las otras dos brillarán con más intensidad.",
+        "Solo se apaga la ampolleta quemada; las demás siguen encendidas.",
+        "No cambia nada en el circuito.",
+        "Se apagan las tres, porque se interrumpe el único camino de la corriente."
+      ],
+      "correcta": 3,
+      "tip": "En serie hay un solo camino; si se corta en un punto, la corriente deja de circular y todas las ampolletas se apagan.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa10-102",
+      "oa": "CN08 OA 10",
+      "pregunta": "Tres ampolletas están conectadas en paralelo a una pila, cada una en su propia rama. Si una ampolleta se quema, ¿qué ocurre con las otras dos?",
+      "opciones": [
+        "Se apagan también, porque comparten el mismo camino.",
+        "Se queman de inmediato por exceso de corriente.",
+        "Siguen encendidas, porque cada una tiene su propio camino para la corriente.",
+        "Se apaga toda la casa sin excepción."
+      ],
+      "correcta": 2,
+      "tip": "En paralelo cada ampolleta tiene su propia rama; si una falla, las demás conservan su camino y siguen encendidas.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa10-103",
+      "oa": "CN08 OA 10",
+      "pregunta": "Un circuito en serie tiene una pila, dos ampolletas y un interruptor. Al abrir el interruptor, ¿qué se predice?",
+      "opciones": [
+        "Ambas ampolletas se apagan, porque el circuito queda abierto y no circula corriente.",
+        "Solo se apaga la ampolleta más cercana al interruptor.",
+        "Las ampolletas brillan más al abrir el interruptor.",
+        "No ocurre ningún cambio."
+      ],
+      "correcta": 0,
+      "tip": "Abrir el interruptor interrumpe el único camino del circuito en serie; deja de circular corriente y todo se apaga.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa10-104",
+      "oa": "CN08 OA 10",
+      "pregunta": "En un circuito en serie se agrega una ampolleta más (una resistencia adicional), manteniendo la misma pila. ¿Qué se predice sobre el brillo de las ampolletas?",
+      "opciones": [
+        "Brillarán más, solo por haber más ampolletas.",
+        "Brillarán menos, porque al aumentar la resistencia total disminuye la corriente.",
+        "No cambiará el brillo en absoluto.",
+        "La pila entregará más voltaje de forma automática."
+      ],
+      "correcta": 1,
+      "tip": "Al sumar resistencias en serie, la resistencia total aumenta y la corriente disminuye, por lo que las ampolletas brillan menos.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa10-105",
+      "oa": "CN08 OA 10",
+      "pregunta": "En los hogares, los enchufes suelen conectarse en paralelo y no en serie. ¿Cuál es la principal ventaja de esa decisión?",
+      "opciones": [
+        "Ahorra todo el cableado de la casa.",
+        "Hace que, al apagar un aparato, se apaguen todos los demás.",
+        "Permite que cada aparato funcione de forma independiente, sin que uno afecte a los demás.",
+        "Aumenta el riesgo de que toda la casa quede a oscuras."
+      ],
+      "correcta": 2,
+      "tip": "En paralelo, cada aparato tiene su propia rama; puede encenderse o apagarse sin afectar a los demás.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa11-101",
+      "oa": "CN08 OA 11",
+      "pregunta": "Sacas una cuchara metálica y una de madera de la misma olla de sopa caliente. Después de un minuto, la cuchara metálica quema al tocarla y la de madera no. ¿Cómo se explica mejor esta diferencia?",
+      "opciones": [
+        "El metal es mejor conductor del calor, así la energía térmica se propaga rápido por toda la cuchara.",
+        "La madera está más caliente por dentro, pero no transmite ese calor a la superficie.",
+        "El metal genera su propio calor al entrar en contacto con la sopa.",
+        "La sopa solo calienta los objetos brillantes, como el metal."
+      ],
+      "correcta": 0,
+      "tip": "Los metales son buenos conductores: la energía térmica pasa rápido de partícula a partícula. La madera es aislante y conduce el calor con lentitud.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa11-102",
+      "oa": "CN08 OA 11",
+      "pregunta": "Tienes un vaso pequeño y una olla grande, ambos con agua a 40 °C. ¿En cuál hay más energía térmica total y por qué?",
+      "opciones": [
+        "En el vaso pequeño, porque el agua se calienta más rápido.",
+        "En ambos es igual, porque tienen la misma temperatura.",
+        "En el vaso pequeño, porque el calor se concentra en menos espacio.",
+        "En la olla grande, porque contiene más agua a la misma temperatura, por lo que tiene más energía térmica total."
+      ],
+      "correcta": 3,
+      "tip": "La temperatura indica cuán rápido se mueven las partículas; la energía térmica total depende además de cuánta materia hay. Más agua a igual temperatura guarda más energía térmica.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa11-103",
+      "oa": "CN08 OA 11",
+      "pregunta": "En una habitación, el aire caliente de una estufa sube y el aire frío baja, formando una corriente que circula. ¿Qué forma de propagación del calor describe mejor este movimiento?",
+      "opciones": [
+        "Conducción, porque el calor pasa de molécula a molécula sin que el aire se mueva.",
+        "Convección, porque el aire caliente, menos denso, sube y el frío baja, formando corrientes.",
+        "Radiación, porque el calor viaja como ondas sin necesidad de aire.",
+        "Equilibrio térmico, porque toda la sala tiene la misma temperatura."
+      ],
+      "correcta": 1,
+      "tip": "En la convección el propio fluido (aire o agua) se mueve: lo caliente sube por ser menos denso y lo frío baja, generando corrientes que transportan el calor.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa11-104",
+      "oa": "CN08 OA 11",
+      "pregunta": "Un termo mantiene el café caliente gracias a una doble pared con vacío entre ambas. ¿Por qué el vacío ayuda a conservar el calor?",
+      "opciones": [
+        "Porque el vacío genera calor adicional que reemplaza al que se pierde.",
+        "Porque el vacío aumenta la temperatura del café con el tiempo.",
+        "Porque el vacío absorbe la radiación del ambiente y la devuelve al café.",
+        "Sin materia entre las paredes casi no hay conducción ni convección, que necesitan partículas para transmitir el calor."
+      ],
+      "correcta": 3,
+      "tip": "La conducción y la convección requieren partículas para transferir energía. Al no haber materia en el vacío, esas dos vías casi desaparecen y el calor se conserva mejor.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa11-105",
+      "oa": "CN08 OA 11",
+      "pregunta": "Colocas una lata de bebida a 8 °C sobre una mesa a 22 °C dentro de una sala cerrada. Si esperas suficiente tiempo, ¿qué ocurrirá?",
+      "opciones": [
+        "La lata seguirá a 8 °C, porque el metal conserva su temperatura.",
+        "La lata se enfriará aún más, porque cede calor a la mesa.",
+        "La lata se calentará hasta acercarse a los 22 °C del ambiente, alcanzando el equilibrio térmico.",
+        "La mesa y la lata intercambiarán temperatura y la mesa quedará a 8 °C."
+      ],
+      "correcta": 2,
+      "tip": "El calor fluye del cuerpo más caliente al más frío hasta igualar temperaturas. La lata se calienta hasta acercarse a la del ambiente: eso es el equilibrio térmico.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa12-101",
+      "oa": "CN08 OA 12",
+      "pregunta": "En un experimento se lanzan partículas contra una lámina de oro muy delgada. La mayoría la atraviesa sin desviarse, pero unas pocas rebotan hacia atrás. ¿Qué modelo atómico explica mejor este resultado?",
+      "opciones": [
+        "El modelo de Thomson, porque la carga positiva está repartida de manera uniforme.",
+        "El modelo de Dalton, porque el átomo es una esfera maciza e indivisible.",
+        "El modelo de Bohr, porque los electrones giran en órbitas de energía definidas.",
+        "El modelo de Rutherford, con un núcleo pequeño, denso y positivo rodeado de mucho espacio vacío."
+      ],
+      "correcta": 3,
+      "tip": "Que casi todo pase de largo indica mucho espacio vacío; que unas pocas reboten indica una zona pequeña, densa y positiva: el núcleo. Eso propuso Rutherford.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa12-102",
+      "oa": "CN08 OA 12",
+      "pregunta": "En ese mismo experimento de la lámina de oro, ¿qué indica el hecho de que la mayoría de las partículas atraviese la lámina sin desviarse?",
+      "opciones": [
+        "Que el átomo es una esfera completamente maciza.",
+        "Que el átomo es, en gran parte, espacio vacío.",
+        "Que los electrones ocupan todo el volumen del átomo.",
+        "Que la lámina de oro no contiene átomos reales."
+      ],
+      "correcta": 1,
+      "tip": "Si las partículas cruzan sin chocar, es porque encuentran poco material en el camino: la mayor parte del átomo es espacio vacío.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa12-103",
+      "oa": "CN08 OA 12",
+      "pregunta": "Thomson descubrió que dentro del átomo existen partículas con carga negativa. ¿Cómo cambió esto el modelo de Dalton, que veía el átomo como una esfera indivisible?",
+      "opciones": [
+        "Propuso que el átomo era divisible y contenía cargas negativas incrustadas en una masa positiva.",
+        "Propuso que el átomo tenía un núcleo con electrones girando en órbitas.",
+        "Confirmó que el átomo era indivisible y sin partículas internas.",
+        "Propuso que el átomo estaba formado solo por cargas positivas."
+      ],
+      "correcta": 0,
+      "tip": "El hallazgo de los electrones mostró que el átomo sí tiene partes internas. Thomson lo imaginó como una masa positiva con cargas negativas incrustadas.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa12-104",
+      "oa": "CN08 OA 12",
+      "pregunta": "Se observa que los átomos de un elemento emiten luz solo en ciertos colores específicos y no en todos. ¿Qué modelo atómico explica mejor esta observación?",
+      "opciones": [
+        "El de Dalton, porque el átomo es una esfera maciza.",
+        "El de Thomson, porque las cargas están repartidas de forma uniforme.",
+        "El de Bohr, porque los electrones ocupan niveles de energía definidos y emiten luz al saltar entre ellos.",
+        "El de Rutherford, porque los electrones pueden estar en cualquier posición."
+      ],
+      "correcta": 2,
+      "tip": "Bohr propuso niveles de energía fijos para los electrones. Al saltar de un nivel a otro liberan luz de un color determinado, lo que explica los colores específicos.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa12-105",
+      "oa": "CN08 OA 12",
+      "pregunta": "¿Por qué el modelo del átomo ha cambiado varias veces a lo largo de la historia?",
+      "opciones": [
+        "Porque cada científico prefería inventar su propio modelo sin razones.",
+        "Porque aparecieron nuevas evidencias experimentales que los modelos anteriores no lograban explicar.",
+        "Porque los modelos antiguos estaban totalmente equivocados y no servían de nada.",
+        "Porque la materia realmente cambia de estructura con el tiempo."
+      ],
+      "correcta": 1,
+      "tip": "La ciencia es acumulativa: cada nuevo experimento aporta evidencia. Cuando un modelo no explica lo observado, se ajusta o se reemplaza por otro mejor.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa13-101",
+      "oa": "CN08 OA 13",
+      "pregunta": "El agua (H2O) se puede separar, mediante electricidad, en hidrógeno y oxígeno, que son dos gases distintos. ¿Qué permite concluir esto sobre el agua?",
+      "opciones": [
+        "Que el agua es un elemento químico puro.",
+        "Que el agua es una mezcla que se separa por filtración.",
+        "Que el agua es un compuesto, formado por la unión de dos elementos diferentes.",
+        "Que el hidrógeno y el oxígeno son en realidad el mismo elemento."
+      ],
+      "correcta": 2,
+      "tip": "Si una sustancia se descompone en elementos más simples, es un compuesto. El agua se separa en hidrógeno y oxígeno, así que es un compuesto de ambos.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa13-102",
+      "oa": "CN08 OA 13",
+      "pregunta": "El oro es una sustancia que no se puede descomponer en otras más simples por medios químicos. Según esto, el oro es:",
+      "opciones": [
+        "Un elemento, porque está formado por un solo tipo de átomo.",
+        "Un compuesto, porque es una sustancia valiosa.",
+        "Una mezcla de varios metales.",
+        "Una molécula formada por átomos distintos."
+      ],
+      "correcta": 0,
+      "tip": "Un elemento no se puede descomponer en sustancias más simples porque está hecho de un solo tipo de átomo. El valor económico no tiene relación con esta clasificación.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa13-103",
+      "oa": "CN08 OA 13",
+      "pregunta": "Un átomo de sodio neutro pierde un electrón. ¿Qué le ocurre a su carga eléctrica?",
+      "opciones": [
+        "Queda con carga negativa, porque perdió una parte del átomo.",
+        "Se mantiene neutro, porque los electrones no afectan la carga.",
+        "Se convierte en un elemento diferente con más protones.",
+        "Queda con carga positiva, porque ahora tiene más protones que electrones."
+      ],
+      "correcta": 3,
+      "tip": "Al perder un electrón (carga negativa) quedan más protones que electrones, así que el átomo se transforma en un ion positivo. El número de protones no cambia, sigue siendo sodio.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa13-104",
+      "oa": "CN08 OA 13",
+      "pregunta": "El oxígeno que respiramos existe como moléculas de O2 (dos átomos de oxígeno unidos), mientras que el aire contiene oxígeno, nitrógeno y otros gases mezclados. ¿Cuál afirmación es correcta?",
+      "opciones": [
+        "El aire es una molécula y el O2 es una mezcla.",
+        "El O2 es una sustancia formada por un solo elemento, y el aire es una mezcla de varias sustancias.",
+        "Tanto el aire como el O2 son elementos puros.",
+        "El O2 es un compuesto porque tiene dos átomos."
+      ],
+      "correcta": 1,
+      "tip": "El O2 está formado por átomos de un mismo elemento, no es compuesto. El aire, en cambio, mezcla varias sustancias distintas en proporciones variables.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa13-105",
+      "oa": "CN08 OA 13",
+      "pregunta": "La sal de mesa (cloruro de sodio) está formada por sodio y cloro unidos químicamente en una proporción fija. En cambio, el agua con sal disuelta puede tener más o menos sal. ¿Qué distingue a la sal del agua salada?",
+      "opciones": [
+        "La sal es un compuesto de proporción fija; el agua salada es una mezcla de proporción variable.",
+        "La sal es una mezcla y el agua salada es un compuesto.",
+        "Ambas son compuestos con fórmula fija.",
+        "Ambas son elementos porque contienen sodio."
+      ],
+      "correcta": 0,
+      "tip": "En un compuesto los elementos se combinan en proporción fija (cloruro de sodio). En una mezcla, como el agua salada, las cantidades pueden variar.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa14-101",
+      "oa": "CN08 OA 14",
+      "pregunta": "El neón y el argón están en el mismo grupo de la tabla periódica (los gases nobles) y se caracterizan por ser muy poco reactivos. Si el criptón está en ese mismo grupo, ¿qué puedes predecir sobre él?",
+      "opciones": [
+        "Que será un metal muy reactivo.",
+        "Que reaccionará violentamente con el agua.",
+        "Que conducirá la electricidad como los metales.",
+        "Que también será muy poco reactivo, como los demás gases nobles de su grupo."
+      ],
+      "correcta": 3,
+      "tip": "Los elementos de un mismo grupo comparten propiedades químicas. Como los gases nobles son poco reactivos, se predice que el criptón también lo será.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa14-102",
+      "oa": "CN08 OA 14",
+      "pregunta": "Un elemento se ubica en la zona izquierda de la tabla periódica. ¿Qué propiedad es más probable que tenga?",
+      "opciones": [
+        "Ser un metal, buen conductor del calor y la electricidad.",
+        "Ser un no metal que no conduce la electricidad.",
+        "Ser un gas a temperatura ambiente.",
+        "Ser un líquido de color intenso."
+      ],
+      "correcta": 0,
+      "tip": "La tabla periódica separa metales (izquierda y centro) de no metales (derecha). Un elemento a la izquierda probablemente es un metal, buen conductor.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa14-103",
+      "oa": "CN08 OA 14",
+      "pregunta": "En la tabla periódica, el carbono tiene número atómico 6 y el oxígeno número atómico 8. ¿Qué significa esta diferencia?",
+      "opciones": [
+        "Que el carbono pesa más que el oxígeno.",
+        "Que el oxígeno tiene 8 protones y el carbono 6 protones en su núcleo.",
+        "Que ambos tienen la misma cantidad de protones.",
+        "Que el oxígeno tiene menos partículas que el carbono."
+      ],
+      "correcta": 1,
+      "tip": "El número atómico indica la cantidad de protones en el núcleo. Por eso el carbono tiene 6 y el oxígeno 8: es lo que los distingue como elementos diferentes.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa14-104",
+      "oa": "CN08 OA 14",
+      "pregunta": "El litio, el sodio y el potasio están en el mismo grupo y todos reaccionan fuertemente con el agua. ¿Por qué los elementos de un mismo grupo suelen tener propiedades químicas parecidas?",
+      "opciones": [
+        "Porque tienen la misma masa atómica.",
+        "Porque están en el mismo período.",
+        "Porque poseen una organización similar de electrones externos, que determina su comportamiento químico.",
+        "Porque todos son gases nobles."
+      ],
+      "correcta": 2,
+      "tip": "El comportamiento químico depende sobre todo de los electrones externos. Los elementos de un mismo grupo tienen una disposición similar de esos electrones, por eso reaccionan parecido.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa14-105",
+      "oa": "CN08 OA 14",
+      "pregunta": "Necesitas un material para fabricar cables que conduzcan bien la electricidad. Según lo que indica la tabla periódica, ¿qué tipo de elemento deberías elegir?",
+      "opciones": [
+        "Un no metal, porque son mejores conductores.",
+        "Un gas noble, porque no reacciona.",
+        "Cualquier elemento, porque todos conducen igual.",
+        "Un metal, porque los metales conducen bien la electricidad."
+      ],
+      "correcta": 3,
+      "tip": "Los metales conducen bien la electricidad, por eso los cables se hacen de cobre o aluminio. Los no metales suelen ser malos conductores.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa15-101",
+      "oa": "CN08 OA 15",
+      "pregunta": "El carbono es uno de los elementos más frecuentes en los seres vivos. ¿Qué característica del carbono ayuda a explicar esto?",
+      "opciones": [
+        "Que es un metal muy pesado y resistente.",
+        "Que es un gas noble que no reacciona con nada.",
+        "Que puede unirse con muchos átomos y formar gran variedad de moléculas, como las que componen a los seres vivos.",
+        "Que solo se encuentra en las rocas y minerales."
+      ],
+      "correcta": 2,
+      "tip": "El carbono forma enlaces con muchos átomos y arma moléculas variadas y largas (como proteínas y grasas). Esa versatilidad lo hace clave para la vida.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa15-102",
+      "oa": "CN08 OA 15",
+      "pregunta": "El carbono, el hidrógeno, el oxígeno y el nitrógeno son los elementos más abundantes en los seres vivos. ¿Qué evidencia apoya mejor esta afirmación?",
+      "opciones": [
+        "Que forman parte de moléculas esenciales como proteínas, grasas y carbohidratos, presentes en todos los organismos.",
+        "Que son los elementos más caros de obtener.",
+        "Que solo existen dentro de los seres vivos.",
+        "Que son los únicos elementos de la tabla periódica."
+      ],
+      "correcta": 0,
+      "tip": "Al analizar las moléculas de los seres vivos (proteínas, grasas, carbohidratos, ADN) se encuentran principalmente estos cuatro elementos, lo que respalda su abundancia.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa15-103",
+      "oa": "CN08 OA 15",
+      "pregunta": "El oxígeno es abundante tanto en la atmósfera como en los seres vivos. ¿Cuál de estas afirmaciones se apoya en evidencias?",
+      "opciones": [
+        "El oxígeno solo se encuentra en el aire, no en los seres vivos.",
+        "El oxígeno forma parte del agua y de muchas moléculas del cuerpo, y también está en el aire que respiramos.",
+        "El oxígeno es un elemento raro en la Tierra.",
+        "El oxígeno es un metal presente solo en las rocas."
+      ],
+      "correcta": 1,
+      "tip": "El oxígeno está en el aire, en el agua (H2O) y en muchas moléculas del cuerpo. Por eso es abundante tanto en el planeta como en los seres vivos.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa15-104",
+      "oa": "CN08 OA 15",
+      "pregunta": "Un estudiante afirma: 'Como el oxígeno es muy abundante en el planeta, también debería ser abundante en los seres vivos'. ¿Cómo puedes evaluar esta afirmación?",
+      "opciones": [
+        "Es incorrecta, porque el oxígeno no aparece en los seres vivos.",
+        "Es incorrecta, porque los seres vivos solo contienen metales.",
+        "No se puede evaluar, porque no existe forma de medir los elementos.",
+        "Es razonable: el oxígeno es abundante en la Tierra y también es uno de los elementos principales de los seres vivos."
+      ],
+      "correcta": 3,
+      "tip": "La afirmación coincide con las evidencias: el oxígeno está entre los elementos más abundantes tanto en la Tierra como en los organismos. No toda abundancia planetaria implica abundancia biológica, pero en este caso ambas se cumplen.",
+      "revisada": false
+    },
+    {
+      "id": "cien8-oa15-105",
+      "oa": "CN08 OA 15",
+      "pregunta": "El hidrógeno es uno de los elementos más frecuentes en los seres vivos, en gran parte porque forma el agua junto con el oxígeno. Considerando que gran parte del cuerpo humano es agua, ¿qué conclusión es válida?",
+      "opciones": [
+        "El agua no contiene hidrógeno.",
+        "El hidrógeno es escaso en el cuerpo humano.",
+        "Al ser el agua tan abundante en el cuerpo, el hidrógeno que la forma también es abundante en los seres vivos.",
+        "El cuerpo humano no contiene agua."
+      ],
+      "correcta": 2,
+      "tip": "El agua (H2O) aporta hidrógeno y oxígeno. Como el cuerpo tiene gran cantidad de agua, ambos elementos resultan muy abundantes en los seres vivos.",
       "revisada": false
     }
   ]

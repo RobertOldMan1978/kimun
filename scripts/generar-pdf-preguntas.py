@@ -43,11 +43,16 @@ def oa_num(c):
 
 # Glifos que la fuente Arial no trae; se sustituyen SOLO para el PDF de revisión.
 # En el juego (navegador) se muestran correctamente, así que el JSON no se toca.
+import re as _re
 _SUBS = {ord(a): b for a, b in zip("₀₁₂₃₄₅₆₇₈₉", "0123456789")}
+_SUPS = {ord(a): b for a, b in zip("⁰¹²³⁴⁵⁶⁷⁸⁹⁺⁻⁼⁽⁾ⁿⁱ", "0123456789+-=()ni")}
+_SUP_RUN = _re.compile("[⁰¹²³⁴⁵⁶⁷⁸⁹⁺⁻⁼⁽⁾ⁿⁱ]+")
 
 
 def _pdf_safe(s):
-    return (s or "").translate(_SUBS).replace("∛", "raíz cúbica de ")
+    s = (s or "").translate(_SUBS).replace("∛", "raíz cúbica de ")
+    # Exponentes en superíndice -> notación con ^ (ej.: "2⁵" -> "2^5", "2⁻¹" -> "2^-1")
+    return _SUP_RUN.sub(lambda m: "^" + m.group().translate(_SUPS), s)
 
 
 def carpetas_asignaturas():

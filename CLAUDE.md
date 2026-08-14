@@ -46,11 +46,12 @@ en línea. Historia de v0 al detalle en la Bitácora (abajo).
   código de amigo, lista de jugadores, bots de práctica y reto de 24h.
 
 **Contenido (bancos de año completo):** Historia **663 (revisadas 663/663;
-22 OA)** · Matemáticas **518 (sin revisar; 17/17 OA)** · Ciencias **459 (sin
-revisar; 15/15 OA)** · Lenguaje **443 (sin revisar; 15/15 OA)**. ~2.083 preguntas
+22 OA)** · Matemáticas **603 (sin revisar; 17/17 OA)** · Ciencias **534 (sin
+revisar; 15/15 OA)** · Lenguaje **514 (sin revisar; 15/15 OA)**. ~2.314 preguntas
 en total. Las 3 asignaturas nuevas se llevaron a cobertura de año completo desde
-el currículum oficial (ver Sesión 9); solo 4-5 OA de cada una están hoy en una
-expedición jugable, el resto es reserva. **Herramientas dev:** tablero con clave
+el currículum oficial (ver Sesión 9) y luego se enriquecieron con ítems de mayor
+orden por revisión pedagógica (ver Sesión 11); solo 4-5 OA de cada una están
+hoy en una expedición jugable, el resto es reserva. **Herramientas dev:** tablero con clave
 (`dev/tablero.html`) y scripts (`consolidar-pool`, `aplicar-revisadas`,
 `generar-pdf-preguntas` —por asignatura y con `--sin-revisar`—, `generar-tablero`).
 
@@ -430,3 +431,36 @@ Se completaron los tres pendientes que quedaron de la Sesión 2:
   los 3 bancos nuevos; nuevas expediciones con OA de reserva; Kimün "científico";
   duelo en 2 celulares; notificaciones push y ranking real; limpiar perfiles de
   prueba en Supabase).
+
+### Sesión 11 (2026-08-14)
+- **Enriquecimiento por revisión pedagógica de los 3 bancos de año completo**
+  (Matemática, Ciencias, Lenguaje). Se recibieron dos tandas de documentos externos:
+  "recomendaciones_*" (estratégicas) y "revision_detallada_*" (por OA, con números
+  de pregunta). **Ninguna aprobó preguntas** (son "previas a aplicación"), así que
+  todo sigue **`revisada:false`**. Criterio acordado: **fixes concretos +
+  enriquecimiento de mayor orden adaptado al formato de quiz (15 s)**, manteniendo
+  los bancos (crecen).
+  - **Matemática 518 → 603:** fixes (OA16 eje truncado como *efecto*, no regla
+    absoluta —preguntas 2, 5, 15 y 17—; OA15 convención de cuartiles declarada;
+    OA17 menos conteo repetido) + 85 ítems (análisis de errores, aplicación,
+    interpretación). Se corrigió además un lote de tildes faltantes heredado.
+  - **Ciencias 459 → 534:** fixes (excretor sin ambigüedad → riñón; distractor
+    absurdo "rueda" reemplazado; OA01 con menos "¿quién descubrió?") + 75 ítems
+    (situación experimental, evidencia→modelo, predicción de circuitos).
+  - **Lenguaje 443 → 514:** +71 ítems (análisis de fragmentos breves, **efecto** de
+    la figura literaria, inferencia con evidencia, emoción en publicidad, decisiones
+    de escritura). Sin errores puntuales que corregir (la revisión es metodológica).
+- Todo generado con agentes en paralelo (parciales por eje) y consolidado con
+  validación (estructura, ids, opciones únicas, barrido de tildes y modismos).
+- **`generar-pdf-preguntas.py`:** ahora sanea también superíndices/exponentes
+  (`2⁵`→`2^5`, `2⁻¹`→`2^-1`) además de subíndices y ∛, para el PDF de revisión.
+- **Límite de formato detectado:** varias recomendaciones (textos fuente + preguntas
+  encadenadas; **producción escrita real** en OA13-15; sets sobre un mismo gráfico)
+  **no caben en el quiz de 15 s**. Serían un **"modo lectura/evaluación" nuevo**
+  (proyecto de motor, no de datos), que queda anotado como pendiente.
+- El motor NO se tocó (solo datos + tablero + script). Las 4 expediciones se
+  verificaron en el navegador (pool listo).
+- **Pendientes:** aprobación humana / curación para la prueba final (las revisiones
+  detalladas traen un mapa de "mejores ítems" por OA); eventual "modo lectura +
+  escritura"; y los de siempre (nuevas expediciones con OA de reserva, Kimün
+  "científico", duelo en 2 celulares, push y ranking real, limpiar Supabase).
