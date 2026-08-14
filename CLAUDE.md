@@ -30,12 +30,13 @@ en línea. Historia de v0 al detalle en la Bitácora (abajo).
 - Inicio con selección **Jugador / Duelo 1v1 / Admin** y el rostro de la mascota
   **Kimün** (zorro; `assets/kimun.png`, con expresiones por respuesta).
 - **Expediciones data-driven** (arreglo `EXPEDICIONES`, progreso por ruta),
-  **4 jugables**: Historia "Los europeos llegan a América" (OA04-07),
+  **6 jugables**: Historia "Los europeos llegan a América" (OA04-07),
   Matemáticas "Álgebra y funciones" (MA08 OA06-09), Ciencias "La célula"
-  (CN08 OA01-04) y Lenguaje "Tipos de texto y medios" (LE08 OA03/09/10/11).
-  Regla: **4 etapas + 1 jefe (5 nodos)**. Cada asignatura tiene, además, un
-  **banco de año completo** (todos sus OA oficiales) como reserva para futuras
-  expediciones (ver Sesión 9).
+  (CN08 OA01-04), Lenguaje "Tipos de texto y medios" (LE08 OA03/09/10/11),
+  Ciencias "Electricidad y calor" (CN08 OA08-11) y Lenguaje "Mundos literarios"
+  (LE08 OA04-07) — estas dos últimas de Sesión 13. Regla: **4 etapas + 1 jefe
+  (5 nodos)**. Cada asignatura tiene, además, un **banco de año completo** (todos
+  sus OA oficiales) como reserva para futuras expediciones (ver Sesión 9).
 - Quiz: 6 preguntas al azar/etapa, timer 15 s, pasa con 66%, 3 estrellas. Al
   fallar revela la respuesta correcta + explicación y botón "Continuar". Kimün
   comenta un dato al iniciar la ruta.
@@ -474,3 +475,27 @@ Se completaron los tres pendientes que quedaron de la Sesión 2:
 - **Pendientes:** sin cambios (curación para la prueba final; eventual "modo lectura +
   escritura"; nuevas expediciones con OA de reserva; Kimün "científico"; duelo en 2
   celulares; push y ranking real; limpiar Supabase).
+
+### Sesión 13 (2026-08-14)
+- **Dos expediciones nuevas (OA de reserva, solo datos):** Ciencias "Electricidad y
+  calor" (CN08 OA08-11) y Lenguaje "Mundos literarios" (OA04 poesía, OA05 teatro,
+  OA06 epopeya, OA07 comedia). Cableadas en `EXPEDICIONES`; **6 expediciones jugables**
+  (30 nodos). Verificadas en el navegador (pool + mapa OK). El motor no se tocó.
+- **Diseño de la feature "campaña de asignatura completa" (piloto Historia):** se
+  usó el flujo brainstorming → spec → plan. Idea: los OA de una asignatura, en orden,
+  en capítulos de 4 OA (los sobrantes → "Desafío Extra" con recompensa mayor), un
+  **Jefe Final grande** multi-fase (barra de vida, 3 corazones, se abre al 100%,
+  puesta en escena épica) y **recompensas** (skin exclusiva bloqueada en tienda,
+  insignias coleccionables con selector, corona dorada, bono). Se construye como
+  **capa "Campaña" data-driven** sobre el motor actual (fase A), estrenando con
+  Historia (fase C). Historia 8° se re-corta en 5 capítulos + Desafío Extra (OA20-22).
+  - **Diseño aprobado** (página de revisión: artefacto privado).
+  - **Spec:** `docs/superpowers/specs/2026-08-14-campana-historia-design.md`.
+  - **Plan (5 fases, 17 tareas):** `docs/superpowers/plans/2026-08-14-campana-historia.md`.
+  - **Aún sin implementar:** será la **primera feature de motor** (hasta ahora todo
+    fue datos). Se retomará en sesión nueva / worktree aislado, tarea por tarea con
+    subagent-driven-development, verificando en el navegador.
+- **Pendientes:** implementar la campaña de Historia (plan listo); luego generalizar
+  la plantilla a Matemática/Ciencias/Lengua; assets de Roberto (skin "Kimün
+  historiador", arte del villano del Jefe Final); y los de siempre (Kimün "científico",
+  duelo en 2 celulares, push y ranking real, limpiar Supabase).
