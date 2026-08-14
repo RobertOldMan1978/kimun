@@ -29,12 +29,19 @@ en línea. Historia de v0 al detalle en la Bitácora (abajo).
 **Jugable hoy:**
 - Inicio con selección **Jugador / Duelo 1v1 / Admin** y el rostro de la mascota
   **Kimün** (zorro; `assets/kimun.png`, con expresiones por respuesta).
-- **Expediciones data-driven** (arreglo `EXPEDICIONES`, progreso por ruta),
-  **6 jugables**: Historia "Los europeos llegan a América" (OA04-07),
+- **Campaña de asignatura completa (piloto Historia, Sesión 14):** Historia se
+  juega como una **campaña con hilo conductor** — 5 capítulos en orden (los 22 OA),
+  un **Desafío Extra** (OA20-22) y un **Jefe Final multi-fase** (4 fases, barra de
+  vida de 16 aciertos, 3 corazones, tema carmesí) que se abre al 100%. Recompensas al
+  vencer: skin exclusiva "Kimün Historiador" (marcador `🎓`), insignia "Maestro de
+  Historia", corona en la tarjeta y bono (+500 🪙 / +300 XP). Capa `CAMPAÑAS`
+  data-driven sobre el motor; los capítulos son expediciones normales.
+- **Expediciones data-driven** (arreglo `EXPEDICIONES`, progreso por ruta). Además de
+  la campaña de Historia (6 rutas), hay **5 expediciones sueltas jugables**:
   Matemáticas "Álgebra y funciones" (MA08 OA06-09), Ciencias "La célula"
   (CN08 OA01-04), Lenguaje "Tipos de texto y medios" (LE08 OA03/09/10/11),
   Ciencias "Electricidad y calor" (CN08 OA08-11) y Lenguaje "Mundos literarios"
-  (LE08 OA04-07) — estas dos últimas de Sesión 13. Regla: **4 etapas + 1 jefe
+  (LE08 OA04-07). Regla de cada expedición/capítulo: **4 etapas + 1 jefe
   (5 nodos)**. Cada asignatura tiene, además, un **banco de año completo** (todos
   sus OA oficiales) como reserva para futuras expediciones (ver Sesión 9).
 - Quiz: 6 preguntas al azar/etapa, timer 15 s, pasa con 66%, 3 estrellas. Al
@@ -499,3 +506,47 @@ Se completaron los tres pendientes que quedaron de la Sesión 2:
   la plantilla a Matemática/Ciencias/Lengua; assets de Roberto (skin "Kimün
   historiador", arte del villano del Jefe Final); y los de siempre (Kimün "científico",
   duelo en 2 celulares, push y ranking real, limpiar Supabase).
+
+### Sesión 14 (2026-08-14)
+- **Campaña de Historia IMPLEMENTADA — primera feature de motor del proyecto.** Se
+  ejecutó el plan de la Sesión 13 (5 fases, 17 tareas) con `executing-plans`, tarea
+  por tarea, verificando cada una en el navegador (`preview_start` + `javascript_tool`
+  + `read_page`). Todo el texto visible en español latino neutro; el motor
+  data-driven publicado NO se rompió (las otras 3 asignaturas siguen como
+  expediciones sueltas).
+  - **Fase 1 · Datos:** se reemplazó `hist-europeos` por **6 rutas** de campaña
+    (`hist-cap1`…`hist-cap5` + `hist-desafio`) que cubren los **22 OA** (mismo
+    `preguntas.json`, distinto agrupamiento). Nuevos catálogos `CAMPAÑAS` (1: Historia)
+    e `INSIGNIAS`; helpers `campañaDe`/`campañaPorId`. Estado nuevo en `S`
+    (`campañasCompletas`, `insignias`, `insigniaActiva`) con `guardar()`/`cargar()`.
+  - **Fase 2 · Pantalla de campaña:** helpers de desbloqueo (`expedicionCompleta`,
+    `nodoCampDesbloqueado`, `desafioDesbloqueado`, `jefeFinalDesbloqueado`); tarjeta
+    única por asignatura con campaña (+👑 al completar); pantalla `scr-campana` con
+    desbloqueo secuencial (cap N tras vencer N-1; Desafío tras los 5 caps; Jefe al
+    100%); botón "Volver a la campaña" en el mapa de capítulo.
+  - **Fase 3 · Jefe Final multi-fase:** `scr-jefe-intro` (villano "El Guardián del
+    Tiempo" 🐉, diálogo, tema carmesí `en-jefe`) + `scr-jefe` (barra de vida =
+    fases×nPorFase = **16 aciertos**, **3 corazones**, **4 fases** por época, rótulo e
+    indicador). Reusa el markup de opciones del quiz. Derrota → reintento con
+    preguntas nuevas; victoria → recompensas + pantalla de celebración.
+  - **Fase 4 · Recompensas:** `otorgarRecompensasCampaña` (marca campaña completa,
+    desbloquea skin exclusiva, otorga insignia, corona y bono +500🪙/+300XP). Skin
+    "Kimün Historiador" **visible-pero-bloqueada** en la tienda (🎓 marcador; el
+    modelo real de skins es por emoji, no por imagen). Nueva pantalla de perfil
+    (`scr-perfil`, reemplaza el `alert` de logros) con **vitrina de insignias +
+    selector**; la insignia activa se luce junto al nombre en HUD, ranking y duelo.
+    Pantalla de victoria `scr-jefe-win` con las 4 recompensas.
+  - **Fase 5 · Migración:** cortesía en `cargar()` — si existe `hist-europeos` con el
+    jefe vencido, se da por completado el Capítulo 1 (abre el Capítulo 2) y se elimina
+    la clave vieja; XP/monedas/estrellas/skins/logros intactos. Recorrido real por la
+    UI verificado de punta a punta.
+- **Desviaciones del plan (justificadas):** skin por emoji (no imagen) por el modelo
+  real de `SKINS`; reuso de las clases `.opts/.opt` del quiz en el Jefe Final; perfil
+  como pantalla real (para el selector de insignias); migración marca todo el cap1
+  como completado (estado de mapa limpio) y solo si no se había empezado la campaña.
+- **Assets pendientes de Roberto:** `assets/kimun-historiador.png` (skin) y arte del
+  villano del Jefe Final (hoy marcadores 🎓 y 🐉).
+- **Pendientes:** generalizar la campaña a Matemática/Ciencias/Lengua (plantilla ya
+  probada; casi solo datos); los assets de arriba; y los de siempre (Kimün
+  "científico", duelo en 2 celulares, notificaciones push y ranking real, limpiar
+  perfiles de prueba en Supabase).

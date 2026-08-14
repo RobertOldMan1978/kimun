@@ -305,6 +305,61 @@ body.en-dificil .nav button.on{color:#ff6b6b;background:#ff2d551a}
 .exp-card:not(.soon){border-color:var(--gold)}
 .exp-card.soon{opacity:.62}
 .exp-card.soon img{filter:grayscale(.55)}
+.exp-card.camp-done{border-color:var(--gold);box-shadow:0 0 0 2px var(--gold) inset,0 0 18px #ffc93c55}
+/* --- Mapa de campaña (nodos de capítulo / desafío / jefe) --- */
+.camp-nodos{display:flex;flex-direction:column;gap:12px}
+.camp-nodo{display:flex;align-items:center;gap:14px;background:var(--panel);border:2px solid #ffffff14;
+ border-radius:16px;padding:12px 14px;cursor:pointer;transition:transform .1s}
+.camp-nodo:active{transform:scale(.99)}
+.camp-nodo .cn-circ{width:52px;height:52px;border-radius:50%;display:grid;place-items:center;font-size:24px;font-weight:900;
+ flex-shrink:0;background:radial-gradient(circle at 32% 28%,#5a4bd0,#2a2160);border:3px solid var(--violet);color:#fff}
+.camp-nodo .cn-body{flex:1;min-width:0}
+.camp-nodo .cn-body b{display:block;font-size:15px}
+.camp-nodo .cn-body small{color:var(--dim);font-weight:800;font-size:12px}
+.camp-nodo.done{border-color:var(--green)}
+.camp-nodo.done .cn-circ{background:radial-gradient(circle at 32% 28%,#4fe6a0,#128a56);border-color:var(--green);color:#053}
+.camp-nodo.lock{opacity:.55;cursor:not-allowed}
+.camp-nodo.lock .cn-circ{background:#241d4e;filter:grayscale(1)}
+.shop-item.locked{opacity:.7;border-color:var(--violet)}
+.shop-item .skin-lock{font-weight:900;font-size:11px;color:var(--violet);margin-top:4px}
+/* --- Jefe Final --- */
+.btn.danger{background:linear-gradient(180deg,#ff4d6a,#b0182f);color:#fff}
+body.en-jefe{background:radial-gradient(circle at 50% 0%,#3d0a16,#0a0410 70%)}
+body.en-jefe .stars,body.en-jefe #stars{filter:hue-rotate(-40deg) saturate(1.3)}
+body.jefe-hit{animation:jefeShake .26s}
+@keyframes jefeShake{0%,100%{transform:translateX(0)}25%{transform:translateX(-8px)}75%{transform:translateX(8px)}}
+.jefe-intro{min-height:80vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:14px;padding:20px}
+.ji-villano{font-size:96px;line-height:1;filter:drop-shadow(0 0 24px #ff4d6a);animation:jiPulse 2s ease-in-out infinite}
+@keyframes jiPulse{0%,100%{transform:scale(1)}50%{transform:scale(1.08)}}
+.ji-dialogo{color:var(--cyan);font-style:italic;max-width:340px;font-size:16px}
+.jefe-hud{position:sticky;top:0;background:#14081aee;padding:12px;border-radius:0 0 16px 16px;z-index:5}
+.jefe-vida .jv-top{display:flex;align-items:center;gap:8px;font-weight:900;font-size:14px;margin-bottom:6px}
+.jefe-vida .jv-ic{font-size:22px}
+.hpbar{height:16px;border-radius:10px;background:#2a0f18;border:2px solid #ff4d6a55;overflow:hidden}
+.hpbar>i{display:block;height:100%;width:100%;background:linear-gradient(90deg,#ff4d6a,#ff8f3c);transition:width .5s ease}
+.jefe-sub{display:flex;align-items:center;justify-content:space-between;margin-top:8px}
+.jefe-hearts{font-size:18px;letter-spacing:2px}
+.jefe-fase{font-weight:900;font-size:12px;color:var(--gold);text-align:right}
+.jefe-win{min-height:80vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:14px;padding:20px}
+.jw-crown{font-size:80px;animation:jiPulse 2s ease-in-out infinite}
+.jw-recompensas{display:flex;flex-direction:column;gap:10px;width:100%;max-width:360px}
+.jw-item{display:flex;align-items:center;gap:12px;background:var(--panel);border:2px solid var(--gold);border-radius:14px;padding:12px;text-align:left}
+.jw-item .jw-ic{font-size:34px;flex-shrink:0}
+.jw-item b{display:block;font-size:14px}
+.jw-item small{color:var(--dim);font-weight:800;font-size:12px}
+/* --- Perfil: logros e insignias --- */
+.logros-grid,.insignias-grid{display:flex;flex-direction:column;gap:10px;margin-top:10px}
+.logro{display:flex;align-items:center;gap:12px;background:var(--panel);border:2px solid #ffffff14;border-radius:14px;padding:12px;font-weight:800}
+.logro .l-ic{font-size:28px}
+.logro.lock{opacity:.5}
+.insignia{display:flex;align-items:center;gap:12px;background:var(--panel);border:2px solid #ffffff14;border-radius:14px;
+ padding:12px;font-weight:800;color:#fff;text-align:left;cursor:pointer;font-family:'Nunito';width:100%}
+.insignia .i-ic{font-size:30px;flex-shrink:0}
+.insignia .i-tx{flex:1}
+.insignia .i-badge{font-size:11px;font-weight:900;color:#053;background:var(--green);border-radius:8px;padding:3px 8px}
+.insignia .i-badge.sec{color:var(--cyan);background:transparent;border:1px solid var(--cyan)}
+.insignia.activa{border-color:var(--gold);box-shadow:0 0 0 2px var(--gold) inset}
+.insignia.lock{opacity:.5;cursor:default}
 @media (prefers-reduced-motion: reduce){*{animation:none!important;transition:none!important}}
 </style>
 </head>
@@ -350,6 +405,49 @@ body.en-dificil .nav button.on{color:#ff6b6b;background:#ff2d551a}
     <button class="btn sec" id="btnExpBack" style="margin-top:18px">← Volver</button>
   </section>
 
+  <!-- ============ MAPA DE CAMPAÑA ============ -->
+  <section class="screen" id="scr-campana">
+    <div class="logo" style="margin:20px 0 4px">
+      <span class="badge">📜</span>
+      <div id="campHead"></div>
+    </div>
+    <div id="campNodos" class="camp-nodos"></div>
+    <button class="btn sec" id="btnCampBack" style="margin-top:18px">← Volver</button>
+  </section>
+
+  <!-- ============ JEFE FINAL · INTRO ============ -->
+  <section class="screen" id="scr-jefe-intro">
+    <div class="jefe-intro">
+      <div id="jiVillano" class="ji-villano"></div>
+      <h2 id="jiNombre" class="disp"></h2>
+      <p id="jiDialogo" class="ji-dialogo"></p>
+      <button class="btn danger" id="jiStart">¡Que comience el duelo!</button>
+      <button class="btn sec" id="jiBack" style="margin-top:10px">← Volver</button>
+    </div>
+  </section>
+
+  <!-- ============ JEFE FINAL · DUELO ============ -->
+  <section class="screen" id="scr-jefe">
+    <div class="jefe-hud">
+      <div class="jefe-vida">
+        <div class="jv-top"><span id="jvVillanoIc" class="jv-ic"></span><span id="jvNombre"></span></div>
+        <div class="hpbar"><i id="jvFill"></i></div>
+      </div>
+      <div class="jefe-sub"><span id="jvVidas" class="jefe-hearts"></span><span id="jvFase" class="jefe-fase"></span></div>
+    </div>
+    <div id="jefePregunta" class="quiz-body"></div>
+  </section>
+
+  <!-- ============ JEFE FINAL · VICTORIA ============ -->
+  <section class="screen" id="scr-jefe-win">
+    <div class="jefe-win">
+      <div class="jw-crown">👑</div>
+      <h2 class="disp" id="jwTitulo">¡Historia dominada!</h2>
+      <div id="jwRecompensas" class="jw-recompensas"></div>
+      <button class="btn" id="jwBack">Volver a la campaña</button>
+    </div>
+  </section>
+
   <!-- ============ INICIO ============ -->
   <section class="screen" id="scr-inicio">
     <div class="logo">
@@ -379,6 +477,7 @@ body.en-dificil .nav button.on{color:#ff6b6b;background:#ff2d551a}
       </div>
       <div class="coins">🪙 <span id="hudCoins">0</span></div>
     </div>
+    <button class="btn sec" id="btnMapaCamp" style="display:none;margin:0 0 10px">← Volver a la campaña</button>
     <div class="mapa-head">
       <img id="mapaImg" src="assets/kimun-conquistador.png" alt="Expedición">
       <div>
@@ -440,6 +539,16 @@ body.en-dificil .nav button.on{color:#ff6b6b;background:#ff2d551a}
     <p style="color:var(--dim);font-weight:800;font-size:13px">Gasta tus monedas en avatares nuevos.</p>
     <div class="coins" style="width:max-content;margin:12px 0">🪙 <span id="tiendaCoins">0</span></div>
     <div class="shopgrid" id="tiendaGrid"></div>
+  </section>
+
+  <!-- ============ PERFIL: LOGROS E INSIGNIAS ============ -->
+  <section class="screen" id="scr-perfil">
+    <h2 class="disp" style="font-size:22px;margin:6px 0 2px">🎖️ Tus logros</h2>
+    <p style="color:var(--dim);font-weight:800;font-size:13px">Lo que has conseguido jugando.</p>
+    <div id="logrosGrid" class="logros-grid"></div>
+    <h2 class="disp" style="font-size:22px;margin:18px 0 2px">🏅 Insignias</h2>
+    <p style="color:var(--dim);font-weight:800;font-size:13px">Gánalas completando campañas. Toca una para lucirla junto a tu nombre.</p>
+    <div id="insigniasGrid" class="insignias-grid"></div>
   </section>
 
   <!-- ============ DUELO: CONFIGURACIÓN ============ -->
@@ -554,14 +663,64 @@ const AVATARES=["🦁","🐉","🦅","🐺","🦊","🤖","👽","🥷"];
      3) añade aquí un objeto con sus etapas (cada etapa mapea un OA; el jefe mezcla varios).
    El motor NO cambia: lee todo desde estos datos, con progreso independiente por ruta. */
 const EXPEDICIONES=[
- { id:'hist-europeos', asignatura:'Historia', nivel:'8° Básico · Los europeos llegan a América',
-   portada:'assets/portada-historia.png', mapaImg:'assets/kimun-conquistador.png', contenido:'contenido/historia-8basico/preguntas.json', activa:true,
+ // --- Campaña Historia (capítulos = expediciones) ---
+ { id:'hist-cap1', asignatura:'Historia', nivel:'8° Básico · Los inicios de la modernidad',
+   portada:'assets/portada-historia.png', mapaImg:'assets/kimun-conquistador.png',
+   contenido:'contenido/historia-8basico/preguntas.json', activa:true, campaña:'hist',
    etapas:[
-     {oa:"HI08 OA 04",nombre:"Los grandes viajes",icono:"⛵",n:6},
+     {oa:"HI08 OA 01",nombre:"El ser humano al centro",icono:"🧑‍🎨",n:6},
+     {oa:"HI08 OA 02",nombre:"De lo medieval a lo moderno",icono:"⛪",n:6},
+     {oa:"HI08 OA 03",nombre:"El Estado moderno",icono:"👑",n:6},
+     {oa:"HI08 OA 04",nombre:"La economía mercantilista",icono:"⚖️",n:6},
+     {oa:"BOSS",nombre:"⚡ JEFE: La modernidad",icono:"🐲",n:8,oas:["HI08 OA 01","HI08 OA 02","HI08 OA 03","HI08 OA 04"]},
+   ]},
+ { id:'hist-cap2', asignatura:'Historia', nivel:'8° Básico · Los europeos llegan a América',
+   portada:'assets/portada-historia.png', mapaImg:'assets/kimun-conquistador.png',
+   contenido:'contenido/historia-8basico/preguntas.json', activa:true, campaña:'hist',
+   etapas:[
      {oa:"HI08 OA 05",nombre:"El encuentro de dos mundos",icono:"🌎",n:6},
-     {oa:"HI08 OA 06",nombre:"La conquista",icono:"⚔️",n:6},
-     {oa:"HI08 OA 07",nombre:"Un mundo nuevo",icono:"🌍",n:6},
-     {oa:"BOSS",nombre:"⚡ JEFE FINAL",icono:"🐲",n:8,oas:["HI08 OA 04","HI08 OA 05","HI08 OA 06","HI08 OA 07"]},
+     {oa:"HI08 OA 06",nombre:"La rapidez de la conquista",icono:"⚔️",n:6},
+     {oa:"HI08 OA 07",nombre:"El impacto en Europa",icono:"🌍",n:6},
+     {oa:"HI08 OA 08",nombre:"Ciudades y administración",icono:"🏛️",n:6},
+     {oa:"BOSS",nombre:"⚡ JEFE: La conquista",icono:"🐲",n:8,oas:["HI08 OA 05","HI08 OA 06","HI08 OA 07","HI08 OA 08"]},
+   ]},
+ { id:'hist-cap3', asignatura:'Historia', nivel:'8° Básico · El mundo colonial',
+   portada:'assets/portada-historia.png', contenido:'contenido/historia-8basico/preguntas.json',
+   activa:true, campaña:'hist',
+   etapas:[
+     {oa:"HI08 OA 09",nombre:"El barroco colonial",icono:"🎭",n:6},
+     {oa:"HI08 OA 10",nombre:"Mercados y comercio atlántico",icono:"⛵",n:6},
+     {oa:"HI08 OA 11",nombre:"La sociedad colonial",icono:"👥",n:6},
+     {oa:"HI08 OA 12",nombre:"Convivencia y conflictos",icono:"🤝",n:6},
+     {oa:"BOSS",nombre:"⚡ JEFE: El mundo colonial",icono:"🐲",n:8,oas:["HI08 OA 09","HI08 OA 10","HI08 OA 11","HI08 OA 12"]},
+   ]},
+ { id:'hist-cap4', asignatura:'Historia', nivel:'8° Básico · Chile colonial y las nuevas ideas',
+   portada:'assets/portada-historia.png', contenido:'contenido/historia-8basico/preguntas.json',
+   activa:true, campaña:'hist',
+   etapas:[
+     {oa:"HI08 OA 13",nombre:"La hacienda",icono:"🌾",n:6},
+     {oa:"HI08 OA 14",nombre:"La Ilustración",icono:"💡",n:6},
+     {oa:"HI08 OA 15",nombre:"Ideas y revoluciones",icono:"🔥",n:6},
+     {oa:"HI08 OA 16",nombre:"Independencia americana",icono:"🏴",n:6},
+     {oa:"BOSS",nombre:"⚡ JEFE: Nuevas ideas",icono:"🐲",n:8,oas:["HI08 OA 13","HI08 OA 14","HI08 OA 15","HI08 OA 16"]},
+   ]},
+ { id:'hist-cap5', asignatura:'Historia', nivel:'8° Básico · Independencia y ciudadanía',
+   portada:'assets/portada-historia.png', contenido:'contenido/historia-8basico/preguntas.json',
+   activa:true, campaña:'hist',
+   etapas:[
+     {oa:"HI08 OA 17",nombre:"Legitimidad de la conquista",icono:"⚖️",n:6},
+     {oa:"HI08 OA 18",nombre:"Los derechos del hombre",icono:"📜",n:6},
+     {oa:"HI08 OA 19",nombre:"Independencia de Chile",icono:"🇨🇱",n:6},
+     {oa:"BOSS",nombre:"⚡ JEFE: Independencia",icono:"🐲",n:8,oas:["HI08 OA 17","HI08 OA 18","HI08 OA 19"]},
+   ]},
+ { id:'hist-desafio', asignatura:'Historia', nivel:'8° Básico · Desafío: Chile hoy',
+   portada:'assets/portada-historia.png', contenido:'contenido/historia-8basico/preguntas.json',
+   activa:true, campaña:'hist', desafio:true, bonoMult:2,
+   etapas:[
+     {oa:"HI08 OA 20",nombre:"¿Qué es una región?",icono:"🗺️",n:6},
+     {oa:"HI08 OA 21",nombre:"Problemas de las regiones",icono:"⚠️",n:6},
+     {oa:"HI08 OA 22",nombre:"Desarrollo y regiones",icono:"📈",n:6},
+     {oa:"BOSS",nombre:"⭐ DESAFÍO: Chile hoy",icono:"🌟",n:8,oas:["HI08 OA 20","HI08 OA 21","HI08 OA 22"]},
    ]},
  { id:'mate-algebra', asignatura:'Matemáticas', nivel:'8° Básico · Álgebra y funciones',
    portada:'assets/portada-matematicas.png', contenido:'contenido/matematicas-8basico/preguntas.json', activa:true,
@@ -609,6 +768,35 @@ const EXPEDICIONES=[
      {oa:"BOSS", nombre:"⚡ JEFE: Mundos literarios", icono:"📚", n:8, oas:["LE08 OA 04","LE08 OA 05","LE08 OA 06","LE08 OA 07"]},
    ]},
 ];
+
+/* ===== CAMPAÑAS (capa "asignatura completa" · data-driven) =====
+   Una campaña agrupa expediciones (capítulos) en orden, con un Desafío Extra y un
+   Jefe Final multi-fase. Los capítulos son objetos normales de EXPEDICIONES (5 nodos),
+   así que reusan todo el motor (activarExpedicion, cargarPool, renderMapa, quiz). */
+const CAMPAÑAS=[{
+  id:'hist', asignatura:'Historia', portada:'assets/portada-historia.png',
+  intro:'De la Europa moderna al Chile de hoy: cuatro siglos en una aventura.',
+  capitulos:['hist-cap1','hist-cap2','hist-cap3','hist-cap4','hist-cap5'],
+  desafioExtra:'hist-desafio',
+  jefeFinal:{
+    villano:'El Guardián del Tiempo', villanoIc:'🐉',
+    dialogo:'Nadie ha recorrido toda la historia... ¿crees que tú puedes?',
+    vidasJugador:3, nPorFase:4,
+    fases:[
+      {nombre:'La modernidad',        oas:['HI08 OA 01','HI08 OA 02','HI08 OA 03','HI08 OA 04']},
+      {nombre:'La conquista',         oas:['HI08 OA 05','HI08 OA 06','HI08 OA 07','HI08 OA 08']},
+      {nombre:'El mundo colonial',    oas:['HI08 OA 09','HI08 OA 10','HI08 OA 11','HI08 OA 12','HI08 OA 13']},
+      {nombre:'Independencia y Chile',oas:['HI08 OA 14','HI08 OA 15','HI08 OA 16','HI08 OA 17','HI08 OA 18','HI08 OA 19','HI08 OA 20','HI08 OA 21','HI08 OA 22']},
+    ],
+  },
+  recompensa:{ skin:'kimun-historiador', insignia:'maestro-historia', bonoMonedas:500, bonoXP:300 },
+}];
+const INSIGNIAS=[
+  {id:'maestro-historia', ic:'🏅', tx:'Maestro de Historia', asignatura:'Historia'},
+];
+function campañaDe(asig){return CAMPAÑAS.find(c=>c.asignatura===asig)||null;}
+function campañaPorId(id){return CAMPAÑAS.find(c=>c.id===id)||null;}
+
 let EXP_ACT=EXPEDICIONES[0];          // expedición activa
 let EXPEDICION=EXP_ACT.etapas;         // etapas de la expedición activa
 let N_ETAPAS=EXPEDICION.length;
@@ -654,7 +842,8 @@ function nuevoProgreso(n){n=n||(EXPEDICION?EXPEDICION.length:5);
  return Array.from({length:n},(_,i)=>({est:i===0?"open":"lock",estrellas:0}));}
 const S={nombre:"",avatar:AVATARES[0],xp:0,nivel:1,monedas:0,
  progreso:nuevoProgreso(), progresoDificil:nuevoProgreso(), dificilDesbloqueado:false,
- skins:[], logros:new Set(), rutas:{}};
+ skins:[], logros:new Set(), rutas:{},
+ campañasCompletas:new Set(), insignias:new Set(), insigniaActiva:null};
 let Q={lvl:0,idx:0,aciertos:0,combo:0,comboMax:0,xpGanado:0,timer:null,t:15,lock:false};
 
 /* Modo de juego: 'normal' | 'dificil' */
@@ -714,7 +903,8 @@ function comboFx(n){const c=$('combo');c.textContent='COMBO x'+n+' 🔥';
  c.classList.remove('show');void c.offsetWidth;c.classList.add('show');}
 
 function refreshHud(){
- $('hudAv').textContent=S.avatar;$('hudName').textContent=S.nombre;
+ $('hudAv').textContent=S.avatar;
+ $('hudName').textContent=insigniaIc()+S.nombre;
  const dentro=S.xp % XP_POR_NIVEL;
  const nuevoNivel=Math.floor(S.xp/XP_POR_NIVEL)+1;
  if(S._lastNivel!=null && nuevoNivel>S._lastNivel) levelUpFx(nuevoNivel);
@@ -736,6 +926,25 @@ function estadoRuta(exp){
  if(!S.rutas[exp.id]) S.rutas[exp.id]={progreso:nuevoProgreso(exp.etapas.length),progresoDificil:nuevoProgreso(exp.etapas.length),dificilDesbloqueado:false};
  return S.rutas[exp.id];
 }
+
+/* ===== Helpers de progreso de campaña ===== */
+// ¿el jefe (último nodo) de esta expedición está vencido en Normal?
+function expedicionCompleta(id){
+ const st=S.rutas[id]; if(!st||!st.progreso)return false;
+ const ult=st.progreso[st.progreso.length-1];
+ return !!ult && ult.est==='done';
+}
+// capítulos completados de una campaña (en orden)
+function capsCompletos(camp){return camp.capitulos.filter(expedicionCompleta).length;}
+// ¿está desbloqueado el capítulo i de la campaña? (cap 1 siempre; cap N tras vencer N-1)
+function nodoCampDesbloqueado(camp,i){
+ if(i===0)return true;
+ if(i<camp.capitulos.length)return expedicionCompleta(camp.capitulos[i-1]);
+ return false;
+}
+function desafioDesbloqueado(camp){return camp.capitulos.every(expedicionCompleta);}
+function jefeFinalDesbloqueado(camp){return desafioDesbloqueado(camp)&&expedicionCompleta(camp.desafioExtra);}
+function campañaCompleta(camp){return S.campañasCompletas.has(camp.id);}
 /* Activa una expedición: fija etapas, carga su pool y apunta el progreso a esa ruta */
 function activarExpedicion(exp){
  EXP_ACT=exp; EXPEDICION=exp.etapas; N_ETAPAS=EXPEDICION.length; MODO='normal';
@@ -747,18 +956,34 @@ function guardar(){try{
  if(EXP_ACT) S.rutas[EXP_ACT.id]={progreso:S.progreso,progresoDificil:S.progresoDificil,dificilDesbloqueado:S.dificilDesbloqueado};
  localStorage.setItem(SAVE_KEY,JSON.stringify({
   nombre:S.nombre,avatar:S.avatar,xp:S.xp,monedas:S.monedas,
-  skins:S.skins,logros:[...S.logros], rutaActual:EXP_ACT?EXP_ACT.id:null, rutas:S.rutas}));}catch(e){}}
+  skins:S.skins,logros:[...S.logros], rutaActual:EXP_ACT?EXP_ACT.id:null, rutas:S.rutas,
+  campañasCompletas:[...S.campañasCompletas], insignias:[...S.insignias], insigniaActiva:S.insigniaActiva}));}catch(e){}}
 function cargar(){try{const d=JSON.parse(localStorage.getItem(SAVE_KEY)||'null');if(!d)return false;
  S.nombre=d.nombre||"";S.avatar=d.avatar||AVATARES[0];S.xp=d.xp||0;S.monedas=d.monedas||0;
  S.skins=Array.isArray(d.skins)?d.skins:[];S.logros=new Set(d.logros||[]);
+ S.campañasCompletas=new Set(d.campañasCompletas||[]);
+ S.insignias=new Set(d.insignias||[]);
+ S.insigniaActiva=d.insigniaActiva||null;
  S.rutas=(d.rutas&&typeof d.rutas==='object')?d.rutas:{};
  if(!d.rutas && Array.isArray(d.progreso)){ // migrar partidas antiguas (Historia)
   S.rutas['hist-europeos']={progreso:d.progreso,
    progresoDificil:Array.isArray(d.progresoDificil)?d.progresoDificil:nuevoProgreso(d.progreso.length),
    dificilDesbloqueado:!!d.dificilDesbloqueado};
  }
+ // Cortesía de campaña: si el jugador ya había vencido el piloto (hist-europeos),
+ // dar por completado el Capítulo 1 para que se abra el Capítulo 2. Lo global no se toca.
+ if(S.rutas['hist-europeos']){
+  const viejo=S.rutas['hist-europeos'];
+  const ult=viejo.progreso&&viejo.progreso[viejo.progreso.length-1];
+  if(ult&&ult.est==='done' && !S.rutas['hist-cap1']){
+   const p=nuevoProgreso(5); p.forEach(n=>{n.est='done';});
+   S.rutas['hist-cap1']={progreso:p,progresoDificil:nuevoProgreso(5),dificilDesbloqueado:false};
+  }
+  delete S.rutas['hist-europeos'];
+ }
  const st=estadoRuta(EXP_ACT); // reflejar la ruta activa
  S.progreso=st.progreso;S.progresoDificil=st.progresoDificil;S.dificilDesbloqueado=st.dificilDesbloqueado;
+ guardar(); // persistir la limpieza/migración con el progreso ya reflejado
  return !!d.nombre;}catch(e){return false;}}
 function hayPartida(){try{const d=JSON.parse(localStorage.getItem(SAVE_KEY)||'null');return !!(d&&d.nombre);}catch(e){return false;}}
 function borrarPartida(){localStorage.removeItem(SAVE_KEY);}
@@ -781,18 +1006,28 @@ async function conectarKimun(){
 }
 
 /* ================= TIENDA DE SKINS ================= */
-const SKINS=[{e:"🐲",p:60},{e:"🦄",p:70},{e:"🦖",p:80},{e:"🐙",p:50},{e:"🦉",p:40},{e:"🚀",p:90},{e:"🧙",p:100},{e:"👑",p:150}];
+const SKINS=[{e:"🐲",p:60},{e:"🦄",p:70},{e:"🦖",p:80},{e:"🐙",p:50},{e:"🦉",p:40},{e:"🚀",p:90},{e:"🧙",p:100},{e:"👑",p:150},
+ // Skin exclusiva de recompensa: visible pero bloqueada; se desbloquea al vencer al Jefe Final de Historia.
+ // Marcador de arte: emoji 🎓 hasta que exista assets/kimun-historiador.png.
+ {id:'kimun-historiador', e:"🎓", nombre:'Kimün Historiador', bloqueada:true, desbloqueaCon:'hist'}];
 function renderTienda(){
  $('tiendaCoins').textContent=S.monedas;
  const g=$('tiendaGrid');g.innerHTML='';
  SKINS.forEach(sk=>{
   const owned=S.skins.includes(sk.e), equipped=S.avatar===sk.e;
-  const it=document.createElement('div');it.className='shop-item'+(equipped?' equipped':'');
+  const bloqueada=sk.bloqueada&&!owned;   // exclusiva aún no ganada
+  const it=document.createElement('div');it.className='shop-item'+(equipped?' equipped':'')+(bloqueada?' locked':'');
+  if(bloqueada){ // visible pero no comprable: se gana venciendo al Jefe Final
+   it.innerHTML=`<div class="em">${sk.e}</div><div class="price">🔒 Termina Historia</div>`+
+     `<div class="skin-lock">${sk.nombre||'Skin exclusiva'}</div>`;
+   g.appendChild(it); return;
+  }
   let btn;
   if(equipped)btn='<button class="on" disabled>✓ Equipado</button>';
   else if(owned)btn='<button class="equip">Equipar</button>';
   else btn=`<button class="buy"${S.monedas<sk.p?' disabled':''}>Comprar 🪙${sk.p}</button>`;
-  it.innerHTML=`<div class="em">${sk.e}</div>`+(owned?'<div class="price" style="color:var(--green)">Tuyo</div>':`<div class="price">🪙 ${sk.p}</div>`)+btn;
+  const precio=owned?'<div class="price" style="color:var(--green)">Tuyo</div>':`<div class="price">🪙 ${sk.p}</div>`;
+  it.innerHTML=`<div class="em">${sk.e}</div>`+precio+btn;
   const b=it.querySelector('button');
   if(b&&!equipped)b.onclick=()=>{
    if(owned){S.avatar=sk.e;SND.tap();}
@@ -893,12 +1128,23 @@ function finDuelo(){
 /* Pantalla de expediciones: generada desde EXPEDICIONES (data-driven) */
 function renderExpediciones(){
  const g=$('expGrid');g.innerHTML='';
- EXPEDICIONES.forEach(exp=>{
-  const c=document.createElement('div');c.className='exp-card'+(exp.activa?'':' soon');
-  c.innerHTML=`<img src="${exp.portada}" alt="${exp.asignatura}"><div class="exp-info"><b>${exp.asignatura}</b><small>${exp.nivel}</small></div>`+
-   (exp.activa?'<span class="exp-go">▶</span>':'<span class="exp-lock">🔒 Pronto</span>');
-  c.onclick=()=>{SND.tap();entrarExpedicion(exp);};
-  g.appendChild(c);
+ const conCamp=new Set(CAMPAÑAS.map(c=>c.asignatura));
+ // 1) una tarjeta por campaña (asignatura con hilo conductor)
+ CAMPAÑAS.forEach(c=>{
+  const done=campañaCompleta(c);
+  const card=document.createElement('div');card.className='exp-card'+(done?' camp-done':'');
+  card.innerHTML=`<img src="${c.portada}" alt="${c.asignatura}">`+
+   `<div class="exp-info"><b>${c.asignatura} ${done?'👑':''}</b><small>Campaña · ${capsCompletos(c)}/${c.capitulos.length} capítulos</small></div>`+
+   `<span class="exp-go">▶</span>`;
+  card.onclick=()=>{SND.tap();abrirCampaña(c);};
+  g.appendChild(card);
+ });
+ // 2) expediciones sueltas (asignaturas sin campaña)
+ EXPEDICIONES.filter(e=>e.activa&&!e.campaña&&!conCamp.has(e.asignatura)).forEach(exp=>{
+  const card=document.createElement('div');card.className='exp-card';
+  card.innerHTML=`<img src="${exp.portada}" alt="${exp.asignatura}"><div class="exp-info"><b>${exp.asignatura}</b><small>${exp.nivel}</small></div><span class="exp-go">▶</span>`;
+  card.onclick=()=>{SND.tap();entrarExpedicion(exp);};
+  g.appendChild(card);
  });
 }
 function entrarExpedicion(exp){
@@ -913,6 +1159,182 @@ function entrarExpedicion(exp){
 $('btnJugador').onclick=()=>{SND.init();SND.tap();$('nav').style.display='none';renderExpediciones();go('scr-expediciones');};
 $('btnExpBack').onclick=()=>{SND.tap();go('scr-rol');};
 $('btnAdmin').onclick=()=>{window.location.href='dev/tablero.html';};
+
+/* ===== Mapa de campaña (Nivel 2) ===== */
+let CAMP_ACT=null;
+function abrirCampaña(c){CAMP_ACT=c; renderCampaña(); go('scr-campana');}
+$('btnCampBack').onclick=()=>{SND.tap();go('scr-expediciones');};
+// Volver desde el mapa de un capítulo a su campaña (refresca el desbloqueo)
+$('btnMapaCamp').onclick=()=>{SND.tap();
+ const c=EXP_ACT&&EXP_ACT.campaña?campañaPorId(EXP_ACT.campaña):CAMP_ACT;
+ if(c){CAMP_ACT=c;renderCampaña();go('scr-campana');}else{go('scr-expediciones');}};
+function renderCampaña(){
+ const c=CAMP_ACT; if(!c)return;
+ $('campHead').innerHTML=`<h1 style="font-size:26px">${c.asignatura} ${campañaCompleta(c)?'👑':''}</h1><p>${c.intro}</p>`;
+ const cont=$('campNodos'); cont.innerHTML='';
+ // capítulos en orden
+ c.capitulos.forEach((id,i)=>{
+  const exp=EXPEDICIONES.find(e=>e.id===id);
+  const abierto=nodoCampDesbloqueado(c,i), hecho=expedicionCompleta(id);
+  const titulo=(exp.nivel.split('· ')[1]||exp.nivel);
+  cont.appendChild(nodoCampañaEl(`${i+1}`, titulo, abierto, hecho,
+    abierto?()=>entrarExpedicion(exp):null, hecho?'Completado':(abierto?'¡Jugar!':'🔒 Bloqueado')));
+ });
+ // desafío extra
+ const de=EXPEDICIONES.find(e=>e.id===c.desafioExtra);
+ const deAb=desafioDesbloqueado(c), deHecho=expedicionCompleta(c.desafioExtra);
+ cont.appendChild(nodoCampañaEl('⭐','Desafío Extra: Chile hoy', deAb, deHecho,
+   deAb?()=>entrarExpedicion(de):null, deHecho?'Completado':(deAb?'¡Desafío!':'🔒 Termina los 5 capítulos')));
+ // jefe final
+ const jfAb=jefeFinalDesbloqueado(c), jfHecho=campañaCompleta(c);
+ cont.appendChild(nodoCampañaEl('👑','JEFE FINAL DE HISTORIA', jfAb, jfHecho,
+   jfAb?()=>iniciarJefeFinal(c):null, jfHecho?'¡Vencido!':(jfAb?'¡Al 100%! Enfréntalo':'🔒 Completa todo')));
+}
+function nodoCampañaEl(marca,titulo,abierto,hecho,onClick,estado){
+ const d=document.createElement('div');
+ d.className='camp-nodo'+(abierto?'':' lock')+(hecho?' done':'');
+ d.innerHTML=`<div class="cn-circ">${hecho?'✓':marca}</div><div class="cn-body"><b>${titulo}</b><small>${estado}</small></div>`;
+ if(onClick) d.onclick=()=>{SND.tap();onClick();};
+ return d;
+}
+
+/* ===== JEFE FINAL (multi-fase) ===== */
+let JF=null; // {camp,fase,idx,preguntas,vidaMax,vida,vidas,lock}
+// Arma las preguntas de una fase mezclando sus OA (reusa POOL y pickN)
+function jefePreguntasFase(camp,faseIdx){
+ const f=camp.jefeFinal.fases[faseIdx], n=camp.jefeFinal.nPorFase, per=Math.max(1,Math.ceil(n/f.oas.length));
+ let sel=[]; f.oas.forEach(oa=>{sel=sel.concat(pickN(POOL[oa]||[],per));});
+ return pickN(sel,n).map(q=>({q:q.pregunta,ops:q.opciones,ok:q.correcta,tip:q.tip}));
+}
+function iniciarJefeFinal(camp){
+ const capExp=EXPEDICIONES.find(e=>e.id===camp.capitulos[0]);
+ activarExpedicion(capExp).then(()=>{ // asegura el POOL de la asignatura cargado
+  const jf=camp.jefeFinal, total=jf.fases.length*jf.nPorFase;
+  JF={camp,fase:0,idx:0,preguntas:[],vidaMax:total,vida:total,vidas:jf.vidasJugador,lock:false};
+  renderJefeIntro();
+ });
+}
+function renderJefeIntro(){
+ const jf=JF.camp.jefeFinal;
+ $('jiVillano').textContent=jf.villanoIc; $('jiNombre').textContent=jf.villano;
+ $('jiDialogo').textContent='«'+jf.dialogo+'»';
+ document.body.classList.add('en-jefe');
+ $('nav').style.display='none';
+ go('scr-jefe-intro');
+}
+$('jiStart').onclick=()=>{SND.init();SND.tap();JF.fase=0;cargarFaseJefe();go('scr-jefe');};
+$('jiBack').onclick=()=>{SND.tap();document.body.classList.remove('en-jefe');go('scr-campana');renderCampaña();};
+
+function cargarFaseJefe(){JF.preguntas=jefePreguntasFase(JF.camp,JF.fase);JF.idx=0;renderJefePregunta();}
+function pintarHudJefe(){
+ const jf=JF.camp.jefeFinal;
+ $('jvVillanoIc').textContent=jf.villanoIc;
+ $('jvNombre').textContent=jf.villano;
+ $('jvFill').style.width=Math.max(0,(JF.vida/JF.vidaMax*100))+'%';
+ $('jvVidas').textContent='❤️'.repeat(Math.max(0,JF.vidas))+'🤍'.repeat(Math.max(0,jf.vidasJugador-JF.vidas));
+ $('jvFase').textContent='Fase '+(JF.fase+1)+' de '+jf.fases.length+' · '+jf.fases[JF.fase].nombre;
+}
+function renderJefePregunta(){
+ pintarHudJefe();
+ const p=JF.preguntas[JF.idx], cont=$('jefePregunta');
+ const orden=p.ops.map((o,i)=>({o,i})).sort(()=>Math.random()-.5);
+ cont.innerHTML=`<div class="qcard"><div class="tag">👑 Jefe Final · Pregunta ${JF.idx+1}/${JF.preguntas.length}</div><h2>${p.q}</h2></div><div class="opts" id="jfOpts"></div>`;
+ const ops=cont.querySelector('#jfOpts');
+ orden.forEach((it,k)=>{const b=document.createElement('div');b.className='opt';
+  if(it.i===p.ok)b.dataset.correcta='1';
+  b.innerHTML=`<span class="key">${'ABCD'[k]}</span>${it.o}`;
+  b.onclick=()=>responderJefe(b,it.i===p.ok);ops.appendChild(b);});
+ JF.lock=false;
+}
+function responderJefe(el,ok){
+ if(JF.lock)return; JF.lock=true;
+ document.querySelectorAll('#jfOpts .opt').forEach(o=>o.classList.add('off'));
+ if(ok){ SND.correct(); JF.vida=Math.max(0,JF.vida-1);
+  if(el){el.classList.remove('off');el.classList.add('ok');}
+  const r=el?el.getBoundingClientRect():null; if(r)particulas(r.left+r.width/2,r.top,['⚔️','💥','✨']);
+ } else { SND.wrong(); JF.vidas--;
+  if(el){el.classList.remove('off');el.classList.add('bad');}
+  const c=document.querySelector('#jfOpts .opt[data-correcta]'); if(c)c.classList.add('ok');
+  document.body.classList.add('jefe-hit'); setTimeout(()=>document.body.classList.remove('jefe-hit'),260);
+  if(navigator.vibrate)navigator.vibrate(140);
+ }
+ pintarHudJefe();
+ setTimeout(()=>{
+  if(JF.vidas<=0){ return jefeDerrota(); }
+  if(JF.vida<=0){ return jefeVictoria(); }
+  JF.idx++;
+  if(JF.idx>=JF.preguntas.length){ // fin de fase → siguiente fase
+   JF.fase++;
+   if(JF.fase>=JF.camp.jefeFinal.fases.length){ JF.fase=0; } // salvaguarda: normalmente ya venció
+   cargarFaseJefe();
+  } else { renderJefePregunta(); }
+ }, ok?700:1200);
+}
+function jefeDerrota(){
+ SND.lose();
+ document.body.classList.remove('en-jefe');
+ alert(JF.camp.jefeFinal.villano+' te venció esta vez. ¡Inténtalo de nuevo!');
+ iniciarJefeFinal(JF.camp); // reintento con preguntas nuevas
+}
+function jefeVictoria(){
+ SND.win();
+ document.body.classList.remove('en-jefe');
+ otorgarRecompensasCampaña(JF.camp); // Fase 4
+ renderJefeVictoria();               // pantalla de celebración
+}
+
+/* ===== Recompensas de campaña (Fase 4) ===== */
+function otorgarRecompensasCampaña(camp){
+ const r=camp.recompensa||{};
+ S.campañasCompletas.add(camp.id);
+ if(r.insignia) S.insignias.add(r.insignia);
+ if(r.skin){ // la skin exclusiva se identifica por id; guardamos su emoji (lo que usa el avatar)
+  const sk=SKINS.find(s=>s.id===r.skin), val=sk?sk.e:r.skin;
+  if(!S.skins.includes(val)) S.skins.push(val);
+ }
+ S.monedas+=(r.bonoMonedas||0); S.xp+=(r.bonoXP||0);
+ if(S.insigniaActiva===null && r.insignia) S.insigniaActiva=r.insignia; // luce la primera por defecto
+ guardar(); refreshHud();
+}
+function renderJefeVictoria(){
+ const camp=JF.camp, r=camp.recompensa||{};
+ const sk=SKINS.find(s=>s.id===r.skin), ins=INSIGNIAS.find(i=>i.id===r.insignia);
+ $('jwTitulo').textContent='¡'+camp.asignatura+' dominada!';
+ const items=[];
+ if(sk) items.push(`<div class="jw-item"><span class="jw-ic">${sk.e}</span><div><b>Skin exclusiva</b><small>${sk.nombre} — ya equipable en la tienda</small></div></div>`);
+ if(ins) items.push(`<div class="jw-item"><span class="jw-ic">${ins.ic}</span><div><b>Insignia</b><small>${ins.tx}</small></div></div>`);
+ items.push(`<div class="jw-item"><span class="jw-ic">👑</span><div><b>Corona dorada</b><small>en la tarjeta de ${camp.asignatura}</small></div></div>`);
+ items.push(`<div class="jw-item"><span class="jw-ic">🎁</span><div><b>Bono</b><small>+${r.bonoMonedas||0} monedas · +${r.bonoXP||0} XP</small></div></div>`);
+ $('jwRecompensas').innerHTML=items.join('');
+ go('scr-jefe-win');
+}
+$('jwBack').onclick=()=>{SND.tap();go('scr-campana');renderCampaña();};
+
+/* ===== Perfil: logros e insignias ===== */
+function renderPerfil(){
+ const lg=$('logrosGrid'); lg.innerHTML='';
+ Object.keys(LOGROS).forEach(k=>{
+  const tengo=S.logros.has(k), L=LOGROS[k];
+  const d=document.createElement('div'); d.className='logro'+(tengo?'':' lock');
+  d.innerHTML=`<span class="l-ic">${tengo?L.ic:'🔒'}</span><span>${L.tx}</span>`;
+  lg.appendChild(d);
+ });
+ renderInsignias();
+}
+// Icono de la insignia activa (con espacio) para anteponer al nombre; '' si no hay
+function insigniaIc(){const i=INSIGNIAS.find(x=>x.id===S.insigniaActiva);return i?i.ic+' ':'';}
+function renderInsignias(){
+ const cont=$('insigniasGrid'); cont.innerHTML='';
+ INSIGNIAS.forEach(ins=>{
+  const tengo=S.insignias.has(ins.id), activa=S.insigniaActiva===ins.id;
+  const d=document.createElement('button');
+  d.className='insignia'+(tengo?'':' lock')+(activa?' activa':'');
+  d.innerHTML=`<span class="i-ic">${tengo?ins.ic:'🔒'}</span><span class="i-tx">${ins.tx}</span>`+
+    (activa?'<span class="i-badge">Lucida</span>':(tengo?'<span class="i-badge sec">Tocar para lucir</span>':''));
+  if(tengo) d.onclick=()=>{SND.tap();S.insigniaActiva=activa?null:ins.id; guardar(); renderInsignias(); refreshHud();};
+  cont.appendChild(d);
+ });
+}
 
 /* ===== Duelo / reiniciar (eventos) ===== */
 $('btnDuelo').onclick=()=>{SND.init();SND.tap();$('nav').style.display='none';abrirDueloOnline();};
@@ -1029,7 +1451,7 @@ async function odFin(){
    const gano=r.ganador==='yo',emp=r.ganador==='empate';
    $('odResIc').textContent=emp?'🤝':(gano?'🏆':'😿');
    $('odResTitle').textContent=emp?'¡Empate!':(gano?'¡Ganaste!':'Perdiste');
-   $('odResScore').innerHTML=`Tú: <b style="color:var(--cyan)">${r.mis_aciertos}/8</b> &nbsp;vs&nbsp; ${r.retador_avatar} ${r.retador_nombre}: <b style="color:var(--cyan)">${r.retador_aciertos}/8</b>`;
+   $('odResScore').innerHTML=`${insigniaIc()}Tú: <b style="color:var(--cyan)">${r.mis_aciertos}/8</b> &nbsp;vs&nbsp; ${r.retador_avatar} ${r.retador_nombre}: <b style="color:var(--cyan)">${r.retador_aciertos}/8</b>`;
   }
  }catch(e){$('odResIc').textContent='⚠️';$('odResTitle').textContent='Ups, algo falló';$('odResScore').textContent=(e.message||'Error');}
  SND.win();go('scr-od-res');
@@ -1056,6 +1478,8 @@ $('btnStart').onclick=()=>{
 /* ================= MAPA ================= */
 function renderMapa(){
  renderModoSel();
+ const bc=$('btnMapaCamp');
+ if(bc) bc.style.display=(EXP_ACT&&EXP_ACT.campaña)?'block':'none';
  if($('mapaSub'))$('mapaSub').textContent=EXP_ACT.nivel;
  if($('mapaImg'))$('mapaImg').src=EXP_ACT.mapaImg||EXP_ACT.portada;
  const box=$('mapbox');box.innerHTML='';
@@ -1085,14 +1509,14 @@ function renderRanking(){
  base.sort((a,b)=>b.p-a.p);
  $('ranking').innerHTML=base.map((r,i)=>
   `<div class="rk ${i<1?'top':''} ${r.me?'me':''}"><div class="pos">${i+1}</div>
-   <div class="em">${r.em}</div><div>${r.n}${r.me?' (tú)':''}</div><div class="pts">${r.p} XP</div></div>`).join('');
+   <div class="em">${r.em}</div><div>${r.me?insigniaIc():''}${r.n}${r.me?' (tú)':''}</div><div class="pts">${r.p} XP</div></div>`).join('');
 }
 document.querySelectorAll('.nav button').forEach(b=>b.onclick=()=>{
  SND.tap();
  const dst=b.dataset.go;
- if(dst==='perfil'){alert('🎖️ Logros: '+(S.logros.size?[...S.logros].map(l=>LOGROS[l].ic+' '+LOGROS[l].tx).join('\n'):'Aún no tienes logros. ¡Juega un nivel!'));return;}
  document.querySelectorAll('.nav button').forEach(x=>x.classList.remove('on'));b.classList.add('on');
- if(dst==='scr-tienda'){renderTienda();go('scr-tienda');}
+ if(dst==='perfil'){renderPerfil();go('scr-perfil');}
+ else if(dst==='scr-tienda'){renderTienda();go('scr-tienda');}
  else{renderMapa();renderRanking();go('scr-mapa');}
 });
 
