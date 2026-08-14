@@ -3,7 +3,7 @@
   "nivel": "8° básico",
   "meta_preguntas_por_oa": 25,
   "total_preguntas": 514,
-  "revisadas": 0,
+  "revisadas": 514,
   "nota": "Lengua y Literatura 8° básico — año completo (LE08 OA 01-15). Generadas por agentes; opciones barajadas. Sin revisión pedagógica humana.",
   "preguntas": [
     {
@@ -18,7 +18,7 @@
       ],
       "correcta": 0,
       "tip": "La narración se organiza en inicio (presentación), desarrollo (conflicto) y desenlace (resolución).",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa03-002",
@@ -32,7 +32,7 @@
       ],
       "correcta": 1,
       "tip": "El narrador protagonista es el personaje principal y relata en primera persona lo que vive; el testigo, en cambio, solo observa a otros.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa03-003",
@@ -46,7 +46,7 @@
       ],
       "correcta": 2,
       "tip": "'Omnisciente' significa 'que lo sabe todo': conoce el interior de cada personaje y todos los hechos.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa03-004",
@@ -60,7 +60,7 @@
       ],
       "correcta": 3,
       "tip": "El narrador testigo relata como observador externo; no conoce el interior de los personajes.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa03-005",
@@ -74,7 +74,7 @@
       ],
       "correcta": 0,
       "tip": "El ambiente es el espacio y el tiempo en que se desarrolla la historia.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa03-006",
@@ -88,7 +88,7 @@
       ],
       "correcta": 0,
       "tip": "El mito narra orígenes del mundo o de la humanidad con dioses y seres sobrenaturales.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa03-007",
@@ -102,7 +102,7 @@
       ],
       "correcta": 2,
       "tip": "La leyenda combina realidad y fantasía, y se ancla en un lugar o época determinados.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa03-008",
@@ -116,7 +116,7 @@
       ],
       "correcta": 3,
       "tip": "El inicio presenta a los personajes, el ambiente y la situación previa al conflicto.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa03-009",
@@ -130,7 +130,7 @@
       ],
       "correcta": 0,
       "tip": "El desenlace cierra la historia y resuelve el conflicto planteado.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa03-010",
@@ -144,7 +144,7 @@
       ],
       "correcta": 1,
       "tip": "El protagonista es el personaje central en torno al cual gira la historia; el antagonista se le opone.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa03-011",
@@ -158,7 +158,7 @@
       ],
       "correcta": 2,
       "tip": "El antagonista es quien enfrenta o dificulta la meta del protagonista.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa03-012",
@@ -172,7 +172,7 @@
       ],
       "correcta": 3,
       "tip": "El cuento narra hechos protagonizados por personajes; los demás informan, persuaden u opinan.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa03-013",
@@ -186,7 +186,7 @@
       ],
       "correcta": 0,
       "tip": "El uso de 'yo' y el hecho de vivir la acción indican un narrador protagonista.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa03-014",
@@ -200,7 +200,7 @@
       ],
       "correcta": 1,
       "tip": "Solo el narrador omnisciente conoce el interior de todos los personajes a la vez.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa03-015",
@@ -214,7 +214,7 @@
       ],
       "correcta": 2,
       "tip": "El texto narrativo busca relatar hechos, reales o ficticios, protagonizados por personajes.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa03-016",
@@ -228,7 +228,7 @@
       ],
       "correcta": 3,
       "tip": "El desarrollo (o nudo) presenta y hace crecer el conflicto de la historia.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa03-017",
@@ -242,7 +242,7 @@
       ],
       "correcta": 0,
       "tip": "Ambos son narrativos; la novela es más larga, con más personajes y tramas que el cuento.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa03-018",
@@ -256,7 +256,7 @@
       ],
       "correcta": 1,
       "tip": "Los personajes son quienes ejecutan las acciones dentro de la historia.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa03-019",
@@ -270,7 +270,7 @@
       ],
       "correcta": 2,
       "tip": "El narrador testigo relata como observador y no accede a los pensamientos ajenos.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa03-020",
@@ -284,7 +284,7 @@
       ],
       "correcta": 3,
       "tip": "El mito es un relato sagrado tradicional que explica orígenes mediante dioses.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa03-021",
@@ -298,7 +298,7 @@
       ],
       "correcta": 0,
       "tip": "La trama o argumento es la sucesión de hechos que forman la historia.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa03-022",
@@ -312,7 +312,7 @@
       ],
       "correcta": 1,
       "tip": "Los personajes secundarios acompañan la acción, pero no son el eje del relato.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa03-023",
@@ -326,7 +326,7 @@
       ],
       "correcta": 2,
       "tip": "El lugar (bosque) y el tiempo (noche de invierno) forman el ambiente del relato.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa03-024",
@@ -340,7 +340,7 @@
       ],
       "correcta": 3,
       "tip": "El conflicto es el problema o tensión central que impulsa la historia.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa03-025",
@@ -354,7 +354,7 @@
       ],
       "correcta": 0,
       "tip": "El narrador omnisciente suele usar la tercera persona (él, ella, ellos) y lo sabe todo.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa03-026",
@@ -368,7 +368,7 @@
       ],
       "correcta": 1,
       "tip": "Las leyendas son relatos tradicionales; pertenecen al texto narrativo.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa03-027",
@@ -382,7 +382,7 @@
       ],
       "correcta": 2,
       "tip": "El narrador es una voz creada para contar; puede o no participar y no equivale al autor real.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa03-028",
@@ -396,7 +396,7 @@
       ],
       "correcta": 3,
       "tip": "La presentación del personaje y su situación inicial corresponde al inicio.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa03-029",
@@ -410,7 +410,7 @@
       ],
       "correcta": 0,
       "tip": "El narrador en primera persona (protagonista o testigo) usa 'yo' y participa en la historia.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa03-030",
@@ -424,7 +424,7 @@
       ],
       "correcta": 1,
       "tip": "La leyenda transmite la cultura y las creencias de un pueblo combinando realidad y fantasía.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa03-031",
@@ -438,7 +438,7 @@
       ],
       "correcta": 0,
       "tip": "El narrador usa 'yo' y vive los hechos como personaje central: es protagonista.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa03-032",
@@ -452,7 +452,7 @@
       ],
       "correcta": 1,
       "tip": "Se describe el lugar donde ocurren los hechos: el ambiente.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa03-033",
@@ -466,7 +466,7 @@
       ],
       "correcta": 2,
       "tip": "Solo el narrador omnisciente accede a los pensamientos y sentimientos de los personajes.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa03-034",
@@ -480,7 +480,7 @@
       ],
       "correcta": 3,
       "tip": "Se resuelve el conflicto y se cierra la historia: es el desenlace.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa03-035",
@@ -494,7 +494,7 @@
       ],
       "correcta": 0,
       "tip": "Llevar paraguas permite inferir que espera lluvia, aunque no se diga directamente.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa03-036",
@@ -508,7 +508,7 @@
       ],
       "correcta": 1,
       "tip": "El plato vacío y el estómago sonando permiten inferir que el niño tiene hambre.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa03-037",
@@ -522,7 +522,7 @@
       ],
       "correcta": 2,
       "tip": "El silencio y las miradas bajas sugieren que su presencia impone respeto o temor.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa03-038",
@@ -536,7 +536,7 @@
       ],
       "correcta": 3,
       "tip": "Las maletas y el taxi esperando permiten inferir un viaje próximo.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa03-039",
@@ -550,7 +550,7 @@
       ],
       "correcta": 0,
       "tip": "Presenta personajes y una historia: es un texto narrativo.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa03-040",
@@ -564,7 +564,7 @@
       ],
       "correcta": 1,
       "tip": "El propósito del texto narrativo es contar una historia, real o ficticia.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa03-041",
@@ -578,7 +578,7 @@
       ],
       "correcta": 2,
       "tip": "El narrador observa los hechos y no conoce los pensamientos ajenos: es testigo.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa03-042",
@@ -592,7 +592,7 @@
       ],
       "correcta": 3,
       "tip": "Mezcla realidad y fantasía anclada en un lugar determinado: es una leyenda.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa11-001",
@@ -606,7 +606,7 @@
       ],
       "correcta": 1,
       "tip": "La noticia informa de manera objetiva sobre un hecho reciente de interés público.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa11-002",
@@ -620,7 +620,7 @@
       ],
       "correcta": 2,
       "tip": "El titular es el título breve y llamativo que sintetiza lo esencial de la noticia.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa11-003",
@@ -634,7 +634,7 @@
       ],
       "correcta": 3,
       "tip": "La entrada (o bajada) es el párrafo breve que amplía el titular y adelanta lo principal.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa11-004",
@@ -648,7 +648,7 @@
       ],
       "correcta": 0,
       "tip": "El cuerpo desarrolla la información con los detalles del hecho noticioso.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa11-005",
@@ -662,7 +662,7 @@
       ],
       "correcta": 1,
       "tip": "Un hecho es verificable y objetivo; las opiniones expresan gustos o juicios personales.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa11-006",
@@ -676,7 +676,7 @@
       ],
       "correcta": 2,
       "tip": "'La mejor' expresa una valoración personal; por eso es opinión, no un dato verificable.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa11-007",
@@ -690,7 +690,7 @@
       ],
       "correcta": 3,
       "tip": "El texto expositivo informa y explica un tema de forma clara y objetiva.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa11-008",
@@ -704,7 +704,7 @@
       ],
       "correcta": 0,
       "tip": "La noticia informa sobre la realidad; los demás son relatos de ficción (literarios).",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa11-009",
@@ -718,7 +718,7 @@
       ],
       "correcta": 1,
       "tip": "El hecho es comprobable y objetivo; la opinión refleja la postura o el gusto de quien la emite.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa11-010",
@@ -732,7 +732,7 @@
       ],
       "correcta": 2,
       "tip": "El texto informativo busca dar a conocer información de manera clara y objetiva.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa11-011",
@@ -746,7 +746,7 @@
       ],
       "correcta": 3,
       "tip": "El reportaje profundiza en un tema con investigación, testimonios y mayor extensión.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa11-012",
@@ -760,7 +760,7 @@
       ],
       "correcta": 0,
       "tip": "Es un dato objetivo y verificable, por lo tanto un hecho.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa11-013",
@@ -774,7 +774,7 @@
       ],
       "correcta": 1,
       "tip": "Comienza con 'creo que' y expresa un juicio personal: es una opinión.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa11-014",
@@ -788,7 +788,7 @@
       ],
       "correcta": 2,
       "tip": "Las 'seis preguntas' de la noticia son qué, quién, cuándo, dónde, por qué y cómo.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa11-015",
@@ -802,7 +802,7 @@
       ],
       "correcta": 3,
       "tip": "La noticia usa un lenguaje claro, objetivo e impersonal para informar con precisión.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa11-016",
@@ -816,7 +816,7 @@
       ],
       "correcta": 0,
       "tip": "Explica un tema de forma objetiva para que se comprenda: es expositivo.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa11-017",
@@ -830,7 +830,7 @@
       ],
       "correcta": 1,
       "tip": "El límite geográfico es verificable en un mapa; los demás son juicios personales.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa11-018",
@@ -844,7 +844,7 @@
       ],
       "correcta": 2,
       "tip": "La noticia informa hechos; la sección de opinión presenta valoraciones y puntos de vista.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa11-019",
@@ -858,7 +858,7 @@
       ],
       "correcta": 3,
       "tip": "El titular atrae al lector y sintetiza en pocas palabras el contenido principal.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa11-020",
@@ -872,7 +872,7 @@
       ],
       "correcta": 0,
       "tip": "La moraleja pertenece a la fábula (texto narrativo), no a la noticia.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa11-021",
@@ -886,7 +886,7 @@
       ],
       "correcta": 1,
       "tip": "Los textos instructivos guían acciones paso a paso; son no literarios.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa11-022",
@@ -900,7 +900,7 @@
       ],
       "correcta": 2,
       "tip": "La literatura recrea mundos imaginarios; el texto no literario informa sobre la realidad.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa11-023",
@@ -914,7 +914,7 @@
       ],
       "correcta": 3,
       "tip": "Presenta un dato verificable respaldado por una fuente: es un hecho.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa11-024",
@@ -928,7 +928,7 @@
       ],
       "correcta": 0,
       "tip": "La entrevista recoge las respuestas de una persona a las preguntas del periodista.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa11-025",
@@ -942,7 +942,7 @@
       ],
       "correcta": 1,
       "tip": "El lenguaje objetivo presenta los hechos sin opiniones ni valoraciones del autor.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa11-026",
@@ -956,7 +956,7 @@
       ],
       "correcta": 2,
       "tip": "El texto expositivo transmite y explica conocimiento de manera clara y ordenada.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa11-027",
@@ -970,7 +970,7 @@
       ],
       "correcta": 3,
       "tip": "Es un dato comprobable experimentalmente: un hecho.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa11-028",
@@ -984,7 +984,7 @@
       ],
       "correcta": 0,
       "tip": "La noticia usa la 'pirámide invertida': lo más importante va primero.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa11-029",
@@ -998,7 +998,7 @@
       ],
       "correcta": 1,
       "tip": "Palabras como 'mejor', 'debería' o 'creo' revelan un juicio personal: opinión.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa11-030",
@@ -1012,7 +1012,7 @@
       ],
       "correcta": 2,
       "tip": "Informar consiste en dar a conocer hechos reales de manera clara y objetiva.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa11-031",
@@ -1026,7 +1026,7 @@
       ],
       "correcta": 0,
       "tip": "Presenta datos verificables (medida y fecha): es un hecho.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa11-032",
@@ -1040,7 +1040,7 @@
       ],
       "correcta": 1,
       "tip": "'El mejor' expresa una valoración personal: es una opinión.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa11-033",
@@ -1054,7 +1054,7 @@
       ],
       "correcta": 2,
       "tip": "Explica un tema de forma objetiva: su propósito es informar.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa11-034",
@@ -1068,7 +1068,7 @@
       ],
       "correcta": 3,
       "tip": "La idea principal es que el agua es esencial para la vida; lo demás son ejemplos.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa11-035",
@@ -1082,7 +1082,7 @@
       ],
       "correcta": 0,
       "tip": "Si la lluvia suspende las clases, se infiere que el clima alteró la rutina escolar.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa11-036",
@@ -1096,7 +1096,7 @@
       ],
       "correcta": 1,
       "tip": "Comprar agua y velas antes de la tormenta indica que la gente se preparó.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa11-037",
@@ -1110,7 +1110,7 @@
       ],
       "correcta": 2,
       "tip": "Que aumente la lectura en celulares permite inferir un cambio en los hábitos de lectura.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa11-038",
@@ -1124,7 +1124,7 @@
       ],
       "correcta": 3,
       "tip": "El titular resume lo esencial de la noticia y atrae la atención del lector.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa11-039",
@@ -1138,7 +1138,7 @@
       ],
       "correcta": 0,
       "tip": "'A mi juicio' revela una valoración personal: corresponde a la sección de opinión.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa11-040",
@@ -1152,7 +1152,7 @@
       ],
       "correcta": 1,
       "tip": "Explica un fenómeno de forma objetiva y ordenada: es un texto expositivo.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa11-041",
@@ -1166,7 +1166,7 @@
       ],
       "correcta": 2,
       "tip": "Solo la frase con datos verificables (lugar y hora) es un hecho objetivo.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa11-042",
@@ -1180,7 +1180,7 @@
       ],
       "correcta": 3,
       "tip": "Da a conocer datos útiles de forma objetiva: su propósito es informar.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa10-001",
@@ -1194,7 +1194,7 @@
       ],
       "correcta": 2,
       "tip": "La publicidad busca convencer al público de comprar o consumir un producto o servicio.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa10-002",
@@ -1208,7 +1208,7 @@
       ],
       "correcta": 3,
       "tip": "La publicidad vende bienes o servicios; la propaganda difunde ideas, creencias o conductas.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa10-003",
@@ -1222,7 +1222,7 @@
       ],
       "correcta": 0,
       "tip": "El eslogan es una frase corta y pegajosa que sintetiza y refuerza el mensaje publicitario.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa10-004",
@@ -1236,7 +1236,7 @@
       ],
       "correcta": 1,
       "tip": "Apela a emociones (aventura, atreverse) para convencer: es un recurso persuasivo.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa10-005",
@@ -1250,7 +1250,7 @@
       ],
       "correcta": 2,
       "tip": "Promueve una idea o conducta social (cuidar el agua), no un producto: es propaganda.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa10-006",
@@ -1264,7 +1264,7 @@
       ],
       "correcta": 3,
       "tip": "Promueve un producto comercial para venderlo: es publicidad.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa10-007",
@@ -1278,7 +1278,7 @@
       ],
       "correcta": 0,
       "tip": "Asociar el producto a emociones positivas (felicidad) es una apelación emocional.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa10-008",
@@ -1292,7 +1292,7 @@
       ],
       "correcta": 1,
       "tip": "La lectura crítica examina la intención del mensaje y no lo acepta sin reflexión.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa10-009",
@@ -1306,7 +1306,7 @@
       ],
       "correcta": 2,
       "tip": "La imagen capta la mirada y refuerza emocionalmente el mensaje que se quiere transmitir.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa10-010",
@@ -1320,7 +1320,7 @@
       ],
       "correcta": 3,
       "tip": "Promueve una idea o conducta beneficiosa (reciclar), no un producto: es propaganda.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa10-011",
@@ -1334,7 +1334,7 @@
       ],
       "correcta": 0,
       "tip": "El emisor de la publicidad es quien busca vender: la empresa, marca o anunciante.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa10-012",
@@ -1348,7 +1348,7 @@
       ],
       "correcta": 1,
       "tip": "Apelar a expertos o cifras busca dar credibilidad y persuadir: recurso de autoridad.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa10-013",
@@ -1362,7 +1362,7 @@
       ],
       "correcta": 2,
       "tip": "El eslogan funciona porque es corto, llamativo y se queda en la memoria del público.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa10-014",
@@ -1376,7 +1376,7 @@
       ],
       "correcta": 3,
       "tip": "La noticia informa hechos; la publicidad persuade para lograr una acción del receptor.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa10-015",
@@ -1390,7 +1390,7 @@
       ],
       "correcta": 0,
       "tip": "Invita a adoptar una conducta cívica, no a comprar algo: es propaganda.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa10-016",
@@ -1404,7 +1404,7 @@
       ],
       "correcta": 1,
       "tip": "Ante promesas exageradas, el lector crítico cuestiona y verifica la información.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa10-017",
@@ -1418,7 +1418,7 @@
       ],
       "correcta": 2,
       "tip": "El público objetivo (receptor) es el grupo de personas al que apunta el mensaje.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa10-018",
@@ -1432,7 +1432,7 @@
       ],
       "correcta": 3,
       "tip": "Los recursos audiovisuales llamativos refuerzan el impacto persuasivo del mensaje.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa10-019",
@@ -1446,7 +1446,7 @@
       ],
       "correcta": 0,
       "tip": "La publicidad destaca lo positivo del producto para hacerlo deseable y venderlo.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa10-020",
@@ -1460,7 +1460,7 @@
       ],
       "correcta": 1,
       "tip": "Promueve una conducta de bien social (vacunarse), no un producto: es propaganda.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa10-021",
@@ -1474,7 +1474,7 @@
       ],
       "correcta": 2,
       "tip": "Asociar el producto a una figura admirada busca persuadir por imitación y prestigio.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa10-022",
@@ -1488,7 +1488,7 @@
       ],
       "correcta": 3,
       "tip": "Leer críticamente permite reconocer intenciones ocultas y decidir con autonomía.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa10-023",
@@ -1502,7 +1502,7 @@
       ],
       "correcta": 0,
       "tip": "La propaganda difunde ideas o conductas (políticas, sociales, ambientales), no productos.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa10-024",
@@ -1516,7 +1516,7 @@
       ],
       "correcta": 1,
       "tip": "Promueve un producto para venderlo: es publicidad.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa10-025",
@@ -1530,7 +1530,7 @@
       ],
       "correcta": 2,
       "tip": "La apelación emocional conecta con los sentimientos (alegría, miedo, nostalgia) para persuadir.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa10-026",
@@ -1544,7 +1544,7 @@
       ],
       "correcta": 3,
       "tip": "Promueve un valor y una conducta social positiva, no un producto: es propaganda.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa10-027",
@@ -1558,7 +1558,7 @@
       ],
       "correcta": 0,
       "tip": "La persuasión se reconoce cuando el mensaje busca influir en tu conducta o decisión.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa10-028",
@@ -1572,7 +1572,7 @@
       ],
       "correcta": 1,
       "tip": "Repetir la marca fija el mensaje en la memoria y favorece su elección.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa10-029",
@@ -1586,7 +1586,7 @@
       ],
       "correcta": 2,
       "tip": "Los recursos persuasivos buscan convencer; numerar las páginas es solo un dato de formato.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa10-030",
@@ -1600,7 +1600,7 @@
       ],
       "correcta": 3,
       "tip": "La publicidad puede exagerar para persuadir; el análisis crítico protege de la manipulación.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa10-031",
@@ -1614,7 +1614,7 @@
       ],
       "correcta": 0,
       "tip": "Un aviso comercial busca persuadir para vender el producto.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa10-032",
@@ -1628,7 +1628,7 @@
       ],
       "correcta": 1,
       "tip": "Asocia el producto con la felicidad para convencer: es una apelación emocional.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa10-033",
@@ -1642,7 +1642,7 @@
       ],
       "correcta": 2,
       "tip": "Apelar a expertos busca dar credibilidad y persuadir: es un recurso de autoridad.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa10-034",
@@ -1656,7 +1656,7 @@
       ],
       "correcta": 3,
       "tip": "Promueve una conducta de bien común, no un producto: es propaganda.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa10-035",
@@ -1670,7 +1670,7 @@
       ],
       "correcta": 0,
       "tip": "Promueve un producto comercial para venderlo: es publicidad.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa10-036",
@@ -1684,7 +1684,7 @@
       ],
       "correcta": 1,
       "tip": "La imagen liga el producto a emociones positivas para persuadir al público.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa10-037",
@@ -1698,7 +1698,7 @@
       ],
       "correcta": 2,
       "tip": "Los dibujos, los colores y el regalo indican que el público objetivo son los niños.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa10-038",
@@ -1712,7 +1712,7 @@
       ],
       "correcta": 3,
       "tip": "La repetición busca fijar la marca en la memoria para que la prefieras.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa10-039",
@@ -1726,7 +1726,7 @@
       ],
       "correcta": 0,
       "tip": "Ante promesas milagrosas, el lector crítico duda y busca información confiable.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa10-040",
@@ -1740,7 +1740,7 @@
       ],
       "correcta": 1,
       "tip": "Promueve una conducta de ahorro de energía: es propaganda.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa10-041",
@@ -1754,7 +1754,7 @@
       ],
       "correcta": 2,
       "tip": "Promueve una conducta saludable, no un producto: es propaganda.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa10-042",
@@ -1768,7 +1768,7 @@
       ],
       "correcta": 3,
       "tip": "La frase 'solo por hoy' crea urgencia para persuadirte de comprar pronto.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa09-001",
@@ -1782,7 +1782,7 @@
       ],
       "correcta": 3,
       "tip": "El texto argumentativo busca convencer o persuadir defendiendo una postura con razones.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa09-002",
@@ -1796,7 +1796,7 @@
       ],
       "correcta": 0,
       "tip": "La tesis es la idea central o punto de vista que el autor sostiene y defiende.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa09-003",
@@ -1810,7 +1810,7 @@
       ],
       "correcta": 1,
       "tip": "Los argumentos son las razones o pruebas que respaldan y justifican la tesis.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa09-004",
@@ -1824,7 +1824,7 @@
       ],
       "correcta": 2,
       "tip": "El contraargumento presenta una razón contraria a la tesis para debatirla o rebatirla.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa09-005",
@@ -1838,7 +1838,7 @@
       ],
       "correcta": 3,
       "tip": "La carta al director expresa una opinión y la defiende: es argumentativa.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa09-006",
@@ -1852,7 +1852,7 @@
       ],
       "correcta": 0,
       "tip": "Es la postura que se defiende; la razón ('porque contamina') es el argumento.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa09-007",
@@ -1866,7 +1866,7 @@
       ],
       "correcta": 1,
       "tip": "Entrega la razón que sostiene la postura, por lo tanto es un argumento.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa09-008",
@@ -1880,7 +1880,7 @@
       ],
       "correcta": 2,
       "tip": "'Porque' introduce la causa o razón que apoya un argumento.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa09-009",
@@ -1894,7 +1894,7 @@
       ],
       "correcta": 3,
       "tip": "'Por lo tanto' introduce la conclusión que se deriva de los argumentos.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa09-010",
@@ -1908,7 +1908,7 @@
       ],
       "correcta": 0,
       "tip": "La editorial expresa la opinión institucional del medio, sin firma de un autor individual.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa09-011",
@@ -1922,7 +1922,7 @@
       ],
       "correcta": 1,
       "tip": "La columna la firma un columnista que expone y defiende su opinión personal.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa09-012",
@@ -1936,7 +1936,7 @@
       ],
       "correcta": 2,
       "tip": "Una tesis es una postura discutible que puede defenderse; las demás son solo datos.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa09-013",
@@ -1950,7 +1950,7 @@
       ],
       "correcta": 3,
       "tip": "Considerar y rebatir la postura contraria fortalece y hace más convincente la propia tesis.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa09-014",
@@ -1964,7 +1964,7 @@
       ],
       "correcta": 0,
       "tip": "'Sin embargo' marca contraste u oposición, útil para introducir contraargumentos.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa09-015",
@@ -1978,7 +1978,7 @@
       ],
       "correcta": 1,
       "tip": "El texto argumentativo sostiene una tesis mediante razones con el fin de convencer.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa09-016",
@@ -1992,7 +1992,7 @@
       ],
       "correcta": 2,
       "tip": "La carta al director comunica la opinión de un lector sobre un asunto de actualidad.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa09-017",
@@ -2006,7 +2006,7 @@
       ],
       "correcta": 3,
       "tip": "'Además' suma información o refuerza con un nuevo argumento a favor de la tesis.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa09-018",
@@ -2020,7 +2020,7 @@
       ],
       "correcta": 0,
       "tip": "El expositivo informa de forma neutral; el argumentativo toma partido y busca convencer.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa09-019",
@@ -2034,7 +2034,7 @@
       ],
       "correcta": 1,
       "tip": "'Deberían' expresa una postura defendible: es una tesis u opinión, no un hecho.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa09-020",
@@ -2048,7 +2048,7 @@
       ],
       "correcta": 2,
       "tip": "Un buen argumento se sostiene en evidencias: hechos, datos o ejemplos verificables.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa09-021",
@@ -2062,7 +2062,7 @@
       ],
       "correcta": 3,
       "tip": "'En conclusión' introduce el cierre que sintetiza la postura defendida.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa09-022",
@@ -2076,7 +2076,7 @@
       ],
       "correcta": 0,
       "tip": "La editorial expresa la opinión del medio: es un texto de opinión argumentativo.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa09-023",
@@ -2090,7 +2090,7 @@
       ],
       "correcta": 1,
       "tip": "Los argumentos convincentes son claros y se apoyan en razones o evidencias sólidas.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa09-024",
@@ -2104,7 +2104,7 @@
       ],
       "correcta": 2,
       "tip": "Presenta la postura contraria que luego se rebate: es un contraargumento.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa09-025",
@@ -2118,7 +2118,7 @@
       ],
       "correcta": 3,
       "tip": "El texto argumentativo busca influir en el pensamiento del lector sobre un tema.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa09-026",
@@ -2132,7 +2132,7 @@
       ],
       "correcta": 0,
       "tip": "'En mi opinión' anuncia claramente un punto de vista personal.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa09-027",
@@ -2146,7 +2146,7 @@
       ],
       "correcta": 1,
       "tip": "El texto argumentativo suele cerrar con una conclusión que refuerza la tesis.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa09-028",
@@ -2160,7 +2160,7 @@
       ],
       "correcta": 2,
       "tip": "Los conectores enlazan tesis, argumentos y conclusión, dando coherencia al razonamiento.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa09-029",
@@ -2174,7 +2174,7 @@
       ],
       "correcta": 3,
       "tip": "Estos conectores marcan contraste, útiles para introducir objeciones o contraargumentos.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa09-030",
@@ -2188,7 +2188,7 @@
       ],
       "correcta": 0,
       "tip": "La tesis es lo que se sostiene; los argumentos son las razones que la respaldan.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa09-031",
@@ -2202,7 +2202,7 @@
       ],
       "correcta": 0,
       "tip": "La tesis es la postura defendida; la razón ('ya que distrae') es el argumento.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa09-032",
@@ -2216,7 +2216,7 @@
       ],
       "correcta": 1,
       "tip": "Entrega la razón que sostiene la postura: es un argumento.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa09-033",
@@ -2230,7 +2230,7 @@
       ],
       "correcta": 2,
       "tip": "Presenta la postura contraria que luego se rebate: es un contraargumento.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa09-034",
@@ -2244,7 +2244,7 @@
       ],
       "correcta": 3,
       "tip": "'Debería' expresa una postura discutible que puede defenderse: es una tesis.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa09-035",
@@ -2258,7 +2258,7 @@
       ],
       "correcta": 0,
       "tip": "La advertencia implica la postura de que se debe frenar la tala de árboles.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa09-036",
@@ -2272,7 +2272,7 @@
       ],
       "correcta": 1,
       "tip": "El dato respalda la conclusión de limitar el uso del celular durante la noche.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa09-037",
@@ -2286,7 +2286,7 @@
       ],
       "correcta": 2,
       "tip": "'Por lo tanto' introduce la conclusión o consecuencia que se deriva de lo anterior.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa09-038",
@@ -2300,7 +2300,7 @@
       ],
       "correcta": 3,
       "tip": "El texto de opinión del medio, sin firma individual, es la editorial.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa09-039",
@@ -2314,7 +2314,7 @@
       ],
       "correcta": 0,
       "tip": "Un lector que opina en el diario sobre un tema público escribe una carta al director.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa09-040",
@@ -2328,7 +2328,7 @@
       ],
       "correcta": 1,
       "tip": "'Además' agrega un nuevo argumento a favor de la misma postura.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa09-041",
@@ -2342,7 +2342,7 @@
       ],
       "correcta": 2,
       "tip": "'Sin embargo' marca contraste, útil para introducir una objeción o contraargumento.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa09-042",
@@ -2356,7 +2356,7 @@
       ],
       "correcta": 3,
       "tip": "Defiende una postura con razones para convencer: es un texto argumentativo.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa01-001",
@@ -2370,7 +2370,7 @@
       ],
       "correcta": 0,
       "tip": "Leer para recrearse busca entretención y disfrute, no una obligación ni un estudio.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa01-002",
@@ -2384,7 +2384,7 @@
       ],
       "correcta": 1,
       "tip": "El hábito lector implica leer con regularidad y por decisión propia, no solo por obligación.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa01-003",
@@ -2398,7 +2398,7 @@
       ],
       "correcta": 2,
       "tip": "El propósito de informarse se cumple mejor con textos que entregan datos verificables, como los expositivos.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa01-004",
@@ -2412,7 +2412,7 @@
       ],
       "correcta": 3,
       "tip": "La lectura recreativa se guía por las preferencias personales y la libertad de elección.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa01-005",
@@ -2426,7 +2426,7 @@
       ],
       "correcta": 0,
       "tip": "Elegir textos por cuenta propia y con frecuencia refleja hábito lector y autonomía.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa01-006",
@@ -2440,7 +2440,7 @@
       ],
       "correcta": 1,
       "tip": "Leer para aprender busca comprender o informarse sobre un tema.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa01-007",
@@ -2454,7 +2454,7 @@
       ],
       "correcta": 2,
       "tip": "La selección según preferencias parte de los intereses y gustos propios del lector.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa01-008",
@@ -2468,7 +2468,7 @@
       ],
       "correcta": 3,
       "tip": "El propósito de guiar una acción se cumple con textos instructivos, como recetas o manuales.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa01-009",
@@ -2482,7 +2482,7 @@
       ],
       "correcta": 0,
       "tip": "La autonomía lectora es la capacidad de decidir y gestionar las propias lecturas.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa01-010",
@@ -2496,7 +2496,7 @@
       ],
       "correcta": 1,
       "tip": "El hábito lector enriquece el vocabulario, la comprensión y el conocimiento del mundo.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa01-011",
@@ -2510,7 +2510,7 @@
       ],
       "correcta": 2,
       "tip": "Para conocer posturas y opiniones se eligen textos argumentativos, como columnas de opinión.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa01-012",
@@ -2524,7 +2524,7 @@
       ],
       "correcta": 3,
       "tip": "El hábito lector se cultiva ofreciendo lecturas afines a los intereses del estudiante.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa01-013",
@@ -2538,7 +2538,7 @@
       ],
       "correcta": 0,
       "tip": "El propósito depende de la intención del lector; aquí se lee para aprender e informarse.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa01-014",
@@ -2552,7 +2552,7 @@
       ],
       "correcta": 1,
       "tip": "La biblioteca facilita el acceso a textos diversos y apoya la selección según propósitos y gustos.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa01-015",
@@ -2566,7 +2566,7 @@
       ],
       "correcta": 2,
       "tip": "La lectura recreativa busca disfrute y entretención, como leer un cómic por gusto.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa01-016",
@@ -2580,7 +2580,7 @@
       ],
       "correcta": 3,
       "tip": "Explorar contratapa e índice apoya la selección informada de textos según el propósito de lectura.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa01-017",
@@ -2594,7 +2594,7 @@
       ],
       "correcta": 0,
       "tip": "La selección de textos debe responder al propósito; para aprender se buscan textos informativos pertinentes.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa01-018",
@@ -2608,7 +2608,7 @@
       ],
       "correcta": 1,
       "tip": "Leer de manera constante y por gusto es señal de un hábito lector consolidado.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa01-019",
@@ -2622,7 +2622,7 @@
       ],
       "correcta": 2,
       "tip": "El propósito cambia el enfoque: recrearse busca disfrute; aprender busca conocimiento.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa01-020",
@@ -2636,7 +2636,7 @@
       ],
       "correcta": 3,
       "tip": "Compartir lecturas y recomendaciones motiva a leer con más frecuencia y amplía las preferencias.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa01-021",
@@ -2650,7 +2650,7 @@
       ],
       "correcta": 0,
       "tip": "La selección del texto depende del propósito: para orientarte, un mapa entrega la información necesaria.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa01-022",
@@ -2664,7 +2664,7 @@
       ],
       "correcta": 1,
       "tip": "Las preferencias lectoras son gustos personales que orientan la selección de textos.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa01-023",
@@ -2678,7 +2678,7 @@
       ],
       "correcta": 2,
       "tip": "Registrar lecturas ayuda a conocer las propias preferencias y a fortalecer la autonomía lectora.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa01-024",
@@ -2692,7 +2692,7 @@
       ],
       "correcta": 3,
       "tip": "Ser lector autónomo implica decidir qué, cómo y para qué leer por cuenta propia.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa01-025",
@@ -2706,7 +2706,7 @@
       ],
       "correcta": 0,
       "tip": "Una misma lectura puede combinar propósitos, como informarse y recrearse al mismo tiempo.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa02-001",
@@ -2720,7 +2720,7 @@
       ],
       "correcta": 0,
       "tip": "La reflexión literaria conecta lo leído con dimensiones de la vida, las emociones y los valores humanos.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa02-002",
@@ -2734,7 +2734,7 @@
       ],
       "correcta": 1,
       "tip": "El tema es la idea central sobre la experiencia humana que la obra invita a reflexionar.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa02-003",
@@ -2748,7 +2748,7 @@
       ],
       "correcta": 2,
       "tip": "La literatura fomenta la empatía al permitirnos ponernos en el lugar de los personajes.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa02-004",
@@ -2762,7 +2762,7 @@
       ],
       "correcta": 3,
       "tip": "La herencia cultural reúne obras y relatos que una comunidad conserva y transmite entre generaciones.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa02-005",
@@ -2776,7 +2776,7 @@
       ],
       "correcta": 0,
       "tip": "Los conflictos de valores enfrentan al personaje con decisiones difíciles que invitan a la reflexión.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa02-006",
@@ -2790,7 +2790,7 @@
       ],
       "correcta": 1,
       "tip": "Interpretar es dar sentido a la obra a partir de la lectura, sustentando las ideas en el texto.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa02-007",
@@ -2804,7 +2804,7 @@
       ],
       "correcta": 2,
       "tip": "La literatura abre una ventana a diversas culturas y visiones de mundo, ampliando la mirada del lector.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa02-008",
@@ -2818,7 +2818,7 @@
       ],
       "correcta": 3,
       "tip": "Los personajes encarnan valores; aquí la constancia frente a la adversidad muestra perseverancia.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa02-009",
@@ -2832,7 +2832,7 @@
       ],
       "correcta": 0,
       "tip": "Las grandes obras exploran experiencias universales que nos ayudan a comprender la vida.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa02-010",
@@ -2846,7 +2846,7 @@
       ],
       "correcta": 1,
       "tip": "Vincular la obra con la propia vida enriquece la reflexión sobre la experiencia humana.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa02-011",
@@ -2860,7 +2860,7 @@
       ],
       "correcta": 2,
       "tip": "El tema expresa una idea sobre la vida; aquí, el valor del perdón y la reconciliación.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa02-012",
@@ -2874,7 +2874,7 @@
       ],
       "correcta": 3,
       "tip": "Los relatos tradicionales conservan la herencia cultural y la manera de ver el mundo de una comunidad.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa02-013",
@@ -2888,7 +2888,7 @@
       ],
       "correcta": 0,
       "tip": "La literatura reflexiona sobre vínculos, conflictos y emociones propios de la vida humana.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa02-014",
@@ -2902,7 +2902,7 @@
       ],
       "correcta": 1,
       "tip": "Conocer el contexto de una obra permite comprender otras visiones de mundo y reflexionar sobre ellas.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa02-015",
@@ -2916,7 +2916,7 @@
       ],
       "correcta": 2,
       "tip": "La interpretación personal admite diversas lecturas válidas siempre que se apoyen en el texto.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa02-016",
@@ -2930,7 +2930,7 @@
       ],
       "correcta": 3,
       "tip": "Un dilema literario confronta opciones importantes; aquí, los bienes materiales frente a los valores.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa02-017",
@@ -2944,7 +2944,7 @@
       ],
       "correcta": 0,
       "tip": "Reflexionar exige una actitud crítica y abierta que dialogue con lo que propone la obra.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa02-018",
@@ -2958,7 +2958,7 @@
       ],
       "correcta": 1,
       "tip": "Las obras que muestran injusticias promueven la reflexión sobre valores como la justicia y la dignidad.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa02-019",
@@ -2972,7 +2972,7 @@
       ],
       "correcta": 2,
       "tip": "La nostalgia por la tierra propia es una experiencia humana profunda que la poesía suele explorar.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa02-020",
@@ -2986,7 +2986,7 @@
       ],
       "correcta": 3,
       "tip": "Comparar obras revela la riqueza de perspectivas sobre los grandes temas de la vida.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa02-021",
@@ -3000,7 +3000,7 @@
       ],
       "correcta": 0,
       "tip": "Ayudar a otro pese al temor muestra solidaridad y valentía, valores que la obra pone en primer plano.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa02-022",
@@ -3014,7 +3014,7 @@
       ],
       "correcta": 1,
       "tip": "Las obras clásicas forman un patrimonio compartido que dialoga con nuestra propia experiencia.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa02-023",
@@ -3028,7 +3028,7 @@
       ],
       "correcta": 2,
       "tip": "Una interpretación es sólida cuando se apoya en evidencias tomadas del propio texto.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa02-024",
@@ -3042,7 +3042,7 @@
       ],
       "correcta": 3,
       "tip": "El crecimiento personal y la capacidad de rectificar son temas frecuentes de la experiencia humana.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa02-025",
@@ -3056,7 +3056,7 @@
       ],
       "correcta": 0,
       "tip": "La literatura amplía la comprensión de nosotros mismos y de los demás a través de la reflexión.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa12-001",
@@ -3070,7 +3070,7 @@
       ],
       "correcta": 0,
       "tip": "Un buen resumen recoge las ideas centrales del texto de manera breve y con palabras propias.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa12-002",
@@ -3084,7 +3084,7 @@
       ],
       "correcta": 1,
       "tip": "La idea principal reúne el sentido central; aquí, los beneficios del reciclaje.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa12-003",
@@ -3098,7 +3098,7 @@
       ],
       "correcta": 2,
       "tip": "Preguntarse sobre el texto activa la mente del lector y mejora la comprensión.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa12-004",
@@ -3112,7 +3112,7 @@
       ],
       "correcta": 3,
       "tip": "Inferir es deducir información no dicha; las señales del texto anuncian una tormenta cercana.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa12-005",
@@ -3126,7 +3126,7 @@
       ],
       "correcta": 0,
       "tip": "En los textos multimodales la imagen suele complementar, ampliar o reforzar lo que dice el texto escrito.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa12-006",
@@ -3140,7 +3140,7 @@
       ],
       "correcta": 1,
       "tip": "La idea principal es el núcleo del párrafo; las ideas secundarias la explican o ejemplifican.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa12-007",
@@ -3154,7 +3154,7 @@
       ],
       "correcta": 2,
       "tip": "Las pistas del texto (paraguas y zapatos mojados) permiten inferir que llovía.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa12-008",
@@ -3168,7 +3168,7 @@
       ],
       "correcta": 3,
       "tip": "Los textos multimodales integran varios lenguajes: verbal, visual y sonoro, entre otros.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa12-009",
@@ -3182,7 +3182,7 @@
       ],
       "correcta": 0,
       "tip": "Formular buenas preguntas sobre el contenido guía la comprensión de lo que se lee.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa12-010",
@@ -3196,7 +3196,7 @@
       ],
       "correcta": 1,
       "tip": "El resumen debe ser fiel al texto original y no agregar información ajena a él.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa12-011",
@@ -3210,7 +3210,7 @@
       ],
       "correcta": 2,
       "tip": "La inferencia combina las pistas: entrenó mucho, pero la lesión le impidió participar.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa12-012",
@@ -3224,7 +3224,7 @@
       ],
       "correcta": 3,
       "tip": "En textos multimodales, gráficos e imágenes visualizan datos y apoyan la comprensión del texto escrito.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa12-013",
@@ -3238,7 +3238,7 @@
       ],
       "correcta": 0,
       "tip": "La idea principal resume el foco del texto: la extrema aridez del desierto de Atacama.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa12-014",
@@ -3252,7 +3252,7 @@
       ],
       "correcta": 1,
       "tip": "Explorar los elementos del texto antes de leer permite anticipar de qué tratará.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa12-015",
@@ -3266,7 +3266,7 @@
       ],
       "correcta": 2,
       "tip": "Las acciones descritas (silencio, puños, salir sin despedirse) sugieren enojo o molestia.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa12-016",
@@ -3280,7 +3280,7 @@
       ],
       "correcta": 3,
       "tip": "Las ideas secundarias apoyan a la principal aportando detalles, ejemplos o explicaciones.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa12-017",
@@ -3294,7 +3294,7 @@
       ],
       "correcta": 0,
       "tip": "La imagen y el texto se relacionan para reforzar el mensaje de proteger la naturaleza.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa12-018",
@@ -3308,7 +3308,7 @@
       ],
       "correcta": 1,
       "tip": "Las estrategias de comprensión se seleccionan según el propósito con que se lee el texto.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa12-019",
@@ -3322,7 +3322,7 @@
       ],
       "correcta": 2,
       "tip": "La idea principal agrupa el sentido del texto: las ventajas de usar la bicicleta.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa12-020",
@@ -3336,7 +3336,7 @@
       ],
       "correcta": 3,
       "tip": "Repetir y verificar el trabajo permite inferir una actitud rigurosa y cuidadosa.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa12-021",
@@ -3350,7 +3350,7 @@
       ],
       "correcta": 0,
       "tip": "Segmentar el texto y resumir por partes facilita comprender y retener la información.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa12-022",
@@ -3364,7 +3364,7 @@
       ],
       "correcta": 1,
       "tip": "Mover la cola y saltar son señales que permiten inferir alegría al ver al dueño.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa12-023",
@@ -3378,7 +3378,7 @@
       ],
       "correcta": 2,
       "tip": "Cuando la imagen aporta información nueva que suma al texto, la relación es de complemento.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa12-024",
@@ -3392,7 +3392,7 @@
       ],
       "correcta": 3,
       "tip": "Un buen resumen recoge las ideas centrales: la amenaza del plástico y el beneficio de reducirlo.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa12-025",
@@ -3406,7 +3406,7 @@
       ],
       "correcta": 0,
       "tip": "Inferir implica deducir a partir de las pistas: no detenerse con luz roja es una infracción.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa04-001",
@@ -3420,7 +3420,7 @@
       ],
       "correcta": 1,
       "tip": "La metáfora identifica una cosa con otra directamente, sin usar \"como\". Aquí los ojos se llaman \"luceros\" sin nexo comparativo.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa04-002",
@@ -3434,7 +3434,7 @@
       ],
       "correcta": 2,
       "tip": "La comparación relaciona dos elementos usando un nexo como \"como\", \"cual\" o \"parece\". La palabra \"como\" es la clave.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa04-003",
@@ -3448,7 +3448,7 @@
       ],
       "correcta": 0,
       "tip": "La personificación atribuye acciones o cualidades humanas a seres u objetos que no son humanos. El viento no puede \"susurrar\" literalmente.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa04-004",
@@ -3462,7 +3462,7 @@
       ],
       "correcta": 3,
       "tip": "La hipérbole es una exageración evidente. Nadie espera literalmente \"una eternidad\": se exagera para expresar una espera larga.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa04-005",
@@ -3476,7 +3476,7 @@
       ],
       "correcta": 0,
       "tip": "Es una metáfora: los cabellos se identifican directamente con \"hilos de oro\", sin usar un nexo comparativo como \"como\".",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa04-006",
@@ -3490,7 +3490,7 @@
       ],
       "correcta": 2,
       "tip": "El nexo \"como\" indica una comparación: se relacionan las manos frías con el hielo mediante un vínculo explícito.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa04-007",
@@ -3504,7 +3504,7 @@
       ],
       "correcta": 3,
       "tip": "Sonreír es una acción humana. Atribuirla a la luna es una personificación.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa04-008",
@@ -3518,7 +3518,7 @@
       ],
       "correcta": 0,
       "tip": "\"Ríos de lágrimas\" es una exageración notoria del llanto: se trata de una hipérbole.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa04-009",
@@ -3532,7 +3532,7 @@
       ],
       "correcta": 3,
       "tip": "El verso es cada línea de un poema. El conjunto de varios versos forma una estrofa.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa04-010",
@@ -3546,7 +3546,7 @@
       ],
       "correcta": 2,
       "tip": "La estrofa es un grupo de versos. En el poema se distinguen porque suelen estar separados por un espacio en blanco.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa04-011",
@@ -3560,7 +3560,7 @@
       ],
       "correcta": 0,
       "tip": "La rima es la coincidencia de sonidos al final de los versos desde la última vocal acentuada. Puede ser consonante o asonante.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa04-012",
@@ -3574,7 +3574,7 @@
       ],
       "correcta": 3,
       "tip": "El hablante lírico es la voz que habla en el poema. No debe confundirse con el autor, que es la persona real que lo escribió.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa04-013",
@@ -3588,7 +3588,7 @@
       ],
       "correcta": 3,
       "tip": "La rima consonante coincide en todos los sonidos (vocales y consonantes) desde la última vocal acentuada, como en \"canción\" y \"pasión\".",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa04-014",
@@ -3602,7 +3602,7 @@
       ],
       "correcta": 1,
       "tip": "La rima asonante coincide solo en las vocales desde la última vocal acentuada. En \"sombra\" y \"loca\" se repiten las vocales o-a.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa04-015",
@@ -3616,7 +3616,7 @@
       ],
       "correcta": 0,
       "tip": "El lenguaje poético apela a los sentidos. \"Aroma\" evoca el olfato, creando una imagen sensorial de olor.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa04-016",
@@ -3630,7 +3630,7 @@
       ],
       "correcta": 3,
       "tip": "La repetición insiste en una palabra o expresión para dar musicalidad y reforzar una idea o un estado de ánimo.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa04-017",
@@ -3644,7 +3644,7 @@
       ],
       "correcta": 2,
       "tip": "\"Suave\", \"terciopelo\" y \"acariciaba\" evocan texturas: es una imagen que apela al tacto.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa04-018",
@@ -3658,7 +3658,7 @@
       ],
       "correcta": 3,
       "tip": "Es una metáfora: el corazón se identifica directamente con un \"pájaro enjaulado\", sin usar \"como\", para sugerir un sentimiento de encierro.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa04-019",
@@ -3672,7 +3672,7 @@
       ],
       "correcta": 0,
       "tip": "Bailar es una acción propia de los seres humanos. Atribuirla a las estrellas es una personificación.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa04-020",
@@ -3686,7 +3686,7 @@
       ],
       "correcta": 3,
       "tip": "El nexo \"como\" señala una comparación entre la sonrisa y el sol de verano.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa04-021",
@@ -3700,7 +3700,7 @@
       ],
       "correcta": 1,
       "tip": "El lenguaje figurado da a las palabras un sentido distinto del literal para crear imágenes y sugerir emociones. Es propio de la poesía.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa04-022",
@@ -3714,7 +3714,7 @@
       ],
       "correcta": 2,
       "tip": "Es una exageración evidente para expresar mucha hambre: se trata de una hipérbole.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa04-023",
@@ -3728,7 +3728,7 @@
       ],
       "correcta": 0,
       "tip": "Los dientes se identifican con \"perlas\" y los labios con \"rubíes\" sin nexo comparativo: son metáforas.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa04-024",
@@ -3742,7 +3742,7 @@
       ],
       "correcta": 2,
       "tip": "Vigilar es una acción humana. Atribuirla a un reloj es una personificación.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa04-025",
@@ -3756,7 +3756,7 @@
       ],
       "correcta": 1,
       "tip": "La comparación usa un nexo explícito (\"como\", \"cual\", \"parece\"). La metáfora identifica los elementos directamente, sin ese nexo.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa05-001",
@@ -3770,7 +3770,7 @@
       ],
       "correcta": 1,
       "tip": "Las acotaciones son las indicaciones del dramaturgo (a menudo entre paréntesis o en cursiva) sobre cómo actuar, moverse o ambientar la escena. No las dicen los personajes.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa05-002",
@@ -3784,7 +3784,7 @@
       ],
       "correcta": 2,
       "tip": "El diálogo es el intercambio de parlamentos entre los personajes. Es la forma principal en que avanza la acción del texto dramático.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa05-003",
@@ -3798,7 +3798,7 @@
       ],
       "correcta": 0,
       "tip": "El conflicto dramático es la oposición de fuerzas (personajes, deseos, ideas) que da tensión y hace avanzar la historia.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa05-004",
@@ -3812,7 +3812,7 @@
       ],
       "correcta": 3,
       "tip": "La obra dramática es el texto escrito por el dramaturgo. La obra teatral es su puesta en escena, con actores, ante un público.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa05-005",
@@ -3826,7 +3826,7 @@
       ],
       "correcta": 2,
       "tip": "El acto es una de las divisiones mayores de la obra. Dentro de cada acto hay escenas más pequeñas.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa05-006",
@@ -3840,7 +3840,7 @@
       ],
       "correcta": 0,
       "tip": "La escena es una subdivisión del acto. Suele cambiar cuando entran o salen personajes del escenario.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa05-007",
@@ -3854,7 +3854,7 @@
       ],
       "correcta": 2,
       "tip": "El dramaturgo es quien escribe el texto dramático. El director, en cambio, es quien guía la representación teatral.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa05-008",
@@ -3868,7 +3868,7 @@
       ],
       "correcta": 1,
       "tip": "El parlamento es el texto que dice cada personaje. Aparece precedido por el nombre del personaje.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa05-009",
@@ -3882,7 +3882,7 @@
       ],
       "correcta": 2,
       "tip": "Lo que va entre paréntesis (\"temblando, mira hacia la puerta\") es una acotación: indica cómo actúa el personaje, no algo que él diga en voz alta.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa05-010",
@@ -3896,7 +3896,7 @@
       ],
       "correcta": 0,
       "tip": "El género dramático se escribe para ser representado en un escenario. La historia avanza mediante los diálogos, sin un narrador que la cuente.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa05-011",
@@ -3910,7 +3910,7 @@
       ],
       "correcta": 3,
       "tip": "En el texto dramático no hay narrador: la historia avanza mediante los diálogos y las acciones de los personajes, guiados por las acotaciones.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa05-012",
@@ -3924,7 +3924,7 @@
       ],
       "correcta": 0,
       "tip": "El antagonista es quien se opone al protagonista. De ese enfrentamiento surge buena parte del conflicto dramático.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa05-013",
@@ -3938,7 +3938,7 @@
       ],
       "correcta": 1,
       "tip": "El protagonista es el personaje central de la obra: sobre él recae la acción principal y el conflicto.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa05-014",
@@ -3952,7 +3952,7 @@
       ],
       "correcta": 3,
       "tip": "El personaje tipo encarna un modelo reconocible (el avaro, el celoso, el gracioso) con rasgos fijos que el público identifica fácilmente.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa05-015",
@@ -3966,7 +3966,7 @@
       ],
       "correcta": 1,
       "tip": "El vestuario, la iluminación y la escenografía real pertenecen a la representación (obra teatral). El texto escrito solo los sugiere mediante acotaciones.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa05-016",
@@ -3980,7 +3980,7 @@
       ],
       "correcta": 1,
       "tip": "El monólogo es un parlamento largo en que un personaje habla solo, muchas veces revelando sus pensamientos o sentimientos al público.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa05-017",
@@ -3994,7 +3994,7 @@
       ],
       "correcta": 0,
       "tip": "Antes de cada parlamento se escribe el nombre del personaje que habla, para saber a quién corresponde cada intervención.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa05-018",
@@ -4008,7 +4008,7 @@
       ],
       "correcta": 2,
       "tip": "Es una acotación: indica la entrada de personajes al escenario. No es algo que un personaje diga, sino una instrucción del dramaturgo.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa05-019",
@@ -4022,7 +4022,7 @@
       ],
       "correcta": 3,
       "tip": "El texto dramático se compone sobre todo de diálogos (lo que dicen los personajes) y acotaciones (las indicaciones del autor), y se divide en actos y escenas.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa05-020",
@@ -4036,7 +4036,7 @@
       ],
       "correcta": 1,
       "tip": "El deseo opuesto de los dos hermanos por la misma casa genera la tensión de la obra: ese es el conflicto dramático.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa05-021",
@@ -4050,7 +4050,7 @@
       ],
       "correcta": 0,
       "tip": "El desenlace es la parte final de la obra, donde el conflicto encuentra su resolución.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa05-022",
@@ -4064,7 +4064,7 @@
       ],
       "correcta": 2,
       "tip": "Las acotaciones son instrucciones dirigidas a actores y equipo (movimientos, tono, escenografía). Se cumplen en escena, pero no se dicen en voz alta.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa05-023",
@@ -4078,7 +4078,7 @@
       ],
       "correcta": 1,
       "tip": "El reparto (o elenco de personajes) es la lista de todos los personajes que intervienen en la obra.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa05-024",
@@ -4092,7 +4092,7 @@
       ],
       "correcta": 2,
       "tip": "Al alternarse los parlamentos de dos personajes (María y Luis), se produce un diálogo.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa05-025",
@@ -4106,7 +4106,7 @@
       ],
       "correcta": 1,
       "tip": "La representación con actores en un escenario es la obra teatral. La obra dramática es el texto escrito que sirve de base a esa puesta en escena.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa06-001",
@@ -4120,7 +4120,7 @@
       ],
       "correcta": 0,
       "tip": "La epopeya es un relato largo, generalmente en verso, que narra las grandes hazañas de un héroe y los valores de un pueblo.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa06-002",
@@ -4134,7 +4134,7 @@
       ],
       "correcta": 1,
       "tip": "El héroe épico destaca por su valentía, fuerza o astucia excepcionales, encarnando los valores admirados por su comunidad.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa06-003",
@@ -4148,7 +4148,7 @@
       ],
       "correcta": 2,
       "tip": "Las grandes epopeyas clásicas, como la Ilíada y la Odisea, fueron compuestas en verso.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa06-004",
@@ -4162,7 +4162,7 @@
       ],
       "correcta": 3,
       "tip": "La Odisea, atribuida a Homero, narra el largo viaje de regreso del héroe Odiseo (Ulises) tras la guerra de Troya.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa06-005",
@@ -4176,7 +4176,7 @@
       ],
       "correcta": 0,
       "tip": "La hazaña es una proeza notable; las epopeyas se construyen encadenando las hazañas del héroe.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa06-006",
@@ -4190,7 +4190,7 @@
       ],
       "correcta": 1,
       "tip": "Homero es el poeta griego al que la tradición atribuye la Ilíada y la Odisea, las epopeyas más célebres de la Antigüedad.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa06-007",
@@ -4204,7 +4204,7 @@
       ],
       "correcta": 2,
       "tip": "Los aedos y rapsodas recitaban de memoria las epopeyas; la tradición oral las conservó antes de que se pusieran por escrito.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa06-008",
@@ -4218,7 +4218,7 @@
       ],
       "correcta": 3,
       "tip": "La Ilíada se sitúa en el marco de la guerra de Troya, un conflicto legendario entre griegos y troyanos.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa06-009",
@@ -4232,7 +4232,7 @@
       ],
       "correcta": 0,
       "tip": "El héroe épico representa los valores heroicos admirados por su pueblo: valentía, honor, lealtad y sacrificio.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa06-010",
@@ -4246,7 +4246,7 @@
       ],
       "correcta": 1,
       "tip": "Conocer el contexto histórico y los valores de la época ayuda a entender por qué el héroe actúa como lo hace.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa06-011",
@@ -4260,7 +4260,7 @@
       ],
       "correcta": 2,
       "tip": "Odiseo (Ulises) es famoso por su astucia; con ingenio supera obstáculos como el cíclope Polifemo.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa06-012",
@@ -4274,7 +4274,7 @@
       ],
       "correcta": 3,
       "tip": "La epopeya es un texto literario en verso; la noticia es un texto no literario que informa hechos actuales.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa06-013",
@@ -4288,7 +4288,7 @@
       ],
       "correcta": 0,
       "tip": "En las epopeyas grecolatinas los dioses intervienen en los asuntos humanos, ayudando o poniendo obstáculos al héroe.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa06-014",
@@ -4302,7 +4302,7 @@
       ],
       "correcta": 1,
       "tip": "Muchas epopeyas, como la Odisea, se estructuran en torno a un largo viaje del héroe lleno de pruebas.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa06-015",
@@ -4316,7 +4316,7 @@
       ],
       "correcta": 2,
       "tip": "El héroe funciona como modelo: sus hazañas expresan los valores que el pueblo considera dignos de admiración.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa06-016",
@@ -4330,7 +4330,7 @@
       ],
       "correcta": 3,
       "tip": "Aunque está escrita en verso, la epopeya narra una historia con hechos y personajes, por lo que pertenece al género narrativo.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa06-017",
@@ -4344,7 +4344,7 @@
       ],
       "correcta": 0,
       "tip": "Las epopeyas suelen abrir con una invocación a la musa, pidiendo inspiración para narrar las hazañas del héroe.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa06-018",
@@ -4358,7 +4358,7 @@
       ],
       "correcta": 1,
       "tip": "Las epopeyas se nutren de los mitos y leyendas de un pueblo, entrelazando lo histórico con lo maravilloso.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa06-019",
@@ -4372,7 +4372,7 @@
       ],
       "correcta": 2,
       "tip": "La epopeya usa un lenguaje solemne y elevado, acorde con la grandeza de las hazañas que narra.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa06-020",
@@ -4386,7 +4386,7 @@
       ],
       "correcta": 3,
       "tip": "La Eneida es la gran epopeya romana; Virgilio narra en ella el viaje del héroe Eneas y los orígenes legendarios de Roma.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa06-021",
@@ -4400,7 +4400,7 @@
       ],
       "correcta": 0,
       "tip": "El desenlace cómico basado en enredos es propio de la comedia, no de la epopeya, que tiene un tono serio y elevado.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa06-022",
@@ -4414,7 +4414,7 @@
       ],
       "correcta": 1,
       "tip": "Las epopeyas son obras muy extensas; un fragmento es solo una parte del gran relato del héroe.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa06-023",
@@ -4428,7 +4428,7 @@
       ],
       "correcta": 2,
       "tip": "Penélope espera fielmente el regreso de Odiseo durante años, representando la lealtad y la constancia.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa06-024",
@@ -4442,7 +4442,7 @@
       ],
       "correcta": 3,
       "tip": "La epopeya celebra al héroe y difunde los valores e ideales de la comunidad a la que pertenece.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa06-025",
@@ -4456,7 +4456,7 @@
       ],
       "correcta": 0,
       "tip": "El Cantar de Mío Cid narra en verso las hazañas del caballero Rodrigo Díaz de Vivar, encarnando los valores heroicos medievales.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa07-001",
@@ -4470,7 +4470,7 @@
       ],
       "correcta": 0,
       "tip": "La comedia busca divertir y provocar la risa del público mediante el humor y las situaciones cómicas.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa07-002",
@@ -4484,7 +4484,7 @@
       ],
       "correcta": 1,
       "tip": "La comedia se caracteriza por su desenlace feliz: los enredos se aclaran y todo termina bien.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa07-003",
@@ -4498,7 +4498,7 @@
       ],
       "correcta": 2,
       "tip": "La comedia es un subgénero dramático, pensado para ser representado en un escenario ante un público.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa07-004",
@@ -4512,7 +4512,7 @@
       ],
       "correcta": 3,
       "tip": "El enredo es una situación complicada, a menudo por confusiones o malentendidos, que genera el humor y luego se resuelve.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa07-005",
@@ -4526,7 +4526,7 @@
       ],
       "correcta": 0,
       "tip": "La comedia presenta personajes cómicos y comunes, cuyas debilidades y situaciones cotidianas provocan risa.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa07-006",
@@ -4540,7 +4540,7 @@
       ],
       "correcta": 1,
       "tip": "La comedia suele incluir crítica social: a través de la risa, cuestiona vicios y costumbres de la sociedad.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa07-007",
@@ -4554,7 +4554,7 @@
       ],
       "correcta": 2,
       "tip": "Tragedia y comedia son los dos grandes géneros dramáticos clásicos: una conmueve con un final doloroso, la otra divierte con un final feliz.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa07-008",
@@ -4568,7 +4568,7 @@
       ],
       "correcta": 3,
       "tip": "Las acotaciones son notas del dramaturgo, generalmente entre paréntesis, que orientan la puesta en escena.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa07-009",
@@ -4582,7 +4582,7 @@
       ],
       "correcta": 0,
       "tip": "Los textos dramáticos, como la comedia, se dividen en actos y escenas y están escritos para ser puestos en escena.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa07-010",
@@ -4596,7 +4596,7 @@
       ],
       "correcta": 1,
       "tip": "Las confusiones de identidad y los malentendidos son motores clásicos del humor en la comedia teatral.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa07-011",
@@ -4610,7 +4610,7 @@
       ],
       "correcta": 2,
       "tip": "Molière fue un dramaturgo francés célebre por comedias como 'El avaro' y 'El enfermo imaginario', que ridiculizan defectos humanos.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa07-012",
@@ -4624,7 +4624,7 @@
       ],
       "correcta": 3,
       "tip": "Conocer la época y sociedad que la comedia critica ayuda a entender el sentido de su humor.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa07-013",
@@ -4638,7 +4638,7 @@
       ],
       "correcta": 0,
       "tip": "La comedia exagera vicios y rasgos de los personajes (avaricia, vanidad) para ridiculizarlos y hacer reír.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa07-014",
@@ -4652,7 +4652,7 @@
       ],
       "correcta": 1,
       "tip": "El parlamento es lo que dice un personaje; a través de los parlamentos avanza la acción en el teatro.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa07-015",
@@ -4666,7 +4666,7 @@
       ],
       "correcta": 2,
       "tip": "La obra dramática es el texto del dramaturgo; la obra teatral es esa obra llevada al escenario por actores.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa07-016",
@@ -4680,7 +4680,7 @@
       ],
       "correcta": 3,
       "tip": "La comedia trata conflictos cotidianos y de tono ligero, que se resuelven felizmente.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa07-017",
@@ -4694,7 +4694,7 @@
       ],
       "correcta": 0,
       "tip": "El final trágico es propio de la tragedia; la comedia termina de manera feliz.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa07-018",
@@ -4708,7 +4708,7 @@
       ],
       "correcta": 1,
       "tip": "El dramaturgo es el autor que escribe la obra dramática, incluidos diálogos y acotaciones.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa07-019",
@@ -4722,7 +4722,7 @@
       ],
       "correcta": 2,
       "tip": "El monólogo es un parlamento extenso en el que un personaje, a solas, expresa sus pensamientos ante el público.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa07-020",
@@ -4736,7 +4736,7 @@
       ],
       "correcta": 3,
       "tip": "La comedia nació en la Antigua Grecia; autores como Aristófanes escribieron las primeras comedias conocidas.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa07-021",
@@ -4750,7 +4750,7 @@
       ],
       "correcta": 0,
       "tip": "El humor físico o de situación (una caída, un tropiezo) es un recurso habitual para provocar risa en la comedia.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa07-022",
@@ -4764,7 +4764,7 @@
       ],
       "correcta": 1,
       "tip": "A través del humor, la comedia expone y cuestiona vicios, costumbres o injusticias de su época.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa07-023",
@@ -4778,7 +4778,7 @@
       ],
       "correcta": 2,
       "tip": "El acto es una de las grandes partes en que se divide una obra teatral; dentro de cada acto hay escenas.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa07-024",
@@ -4792,7 +4792,7 @@
       ],
       "correcta": 3,
       "tip": "La comedia clásica combina diversión y crítica: al reírnos de los defectos ajenos, reflexionamos sobre los propios.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa07-025",
@@ -4806,7 +4806,7 @@
       ],
       "correcta": 0,
       "tip": "La escena es la subdivisión del acto; suele cambiar cuando entran o salen personajes del escenario.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa08-001",
@@ -4820,7 +4820,7 @@
       ],
       "correcta": 0,
       "tip": "Interpretar es proponer qué nos dice la obra, sustentando esa lectura con pasajes y detalles del propio texto.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa08-002",
@@ -4834,7 +4834,7 @@
       ],
       "correcta": 1,
       "tip": "Toda interpretación sólida cita evidencia textual: frases, hechos o detalles de la obra que respaldan la lectura.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa08-003",
@@ -4848,7 +4848,7 @@
       ],
       "correcta": 2,
       "tip": "El tema es la idea central que atraviesa la obra, por ejemplo el amor, la libertad o la amistad.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa08-004",
@@ -4862,7 +4862,7 @@
       ],
       "correcta": 3,
       "tip": "El dilema es un conflicto de decisión: el personaje enfrenta opciones opuestas y ninguna es del todo fácil o buena.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa08-005",
@@ -4876,7 +4876,7 @@
       ],
       "correcta": 0,
       "tip": "La visión de mundo es el conjunto de creencias y valores que la obra refleja sobre la vida y la sociedad.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa08-006",
@@ -4890,7 +4890,7 @@
       ],
       "correcta": 1,
       "tip": "Ana elige decir la verdad pese al miedo: su decisión refleja honestidad y valentía.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa08-007",
@@ -4904,7 +4904,7 @@
       ],
       "correcta": 2,
       "tip": "Vincular la obra con la propia experiencia enriquece la interpretación y la vuelve más significativa.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa08-008",
@@ -4918,7 +4918,7 @@
       ],
       "correcta": 3,
       "tip": "La imagen del árbol crecido junto al anciano sugiere el paso del tiempo y el fruto de lo sembrado en la vida.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa08-009",
@@ -4932,7 +4932,7 @@
       ],
       "correcta": 0,
       "tip": "El contexto histórico explica por qué los personajes piensan y actúan de cierta manera según su época.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa08-010",
@@ -4946,7 +4946,7 @@
       ],
       "correcta": 1,
       "tip": "Interpretar va más allá de los datos: propone un sentido o mensaje, como la relación entre ambición y soledad.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa08-011",
@@ -4960,7 +4960,7 @@
       ],
       "correcta": 2,
       "tip": "El personaje debe elegir entre el éxito mediante trampa y la honestidad aunque implique perder: ese es su dilema.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa08-012",
@@ -4974,7 +4974,7 @@
       ],
       "correcta": 3,
       "tip": "El gesto de ayudar al enemigo herido sugiere que la compasión y la humanidad pueden superar la enemistad.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa08-013",
@@ -4988,7 +4988,7 @@
       ],
       "correcta": 0,
       "tip": "El contraste entre riqueza y soledad sugiere que los bienes materiales no garantizan una vida verdaderamente plena.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa08-014",
@@ -5002,7 +5002,7 @@
       ],
       "correcta": 1,
       "tip": "Los textos literarios admiten varias interpretaciones válidas, siempre que estén fundamentadas en evidencia del texto.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa08-015",
@@ -5016,7 +5016,7 @@
       ],
       "correcta": 2,
       "tip": "Liberar al pájaro pese a la pérdida sugiere que amar también es dejar libre, no retener por egoísmo.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa08-016",
@@ -5030,7 +5030,7 @@
       ],
       "correcta": 3,
       "tip": "El refrán valora la diligencia: hacer las cosas a tiempo evita complicaciones futuras.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa08-017",
@@ -5044,7 +5044,7 @@
       ],
       "correcta": 0,
       "tip": "Las acciones, palabras y transformaciones del personaje son evidencia clave para interpretar su sentido en la obra.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa08-018",
@@ -5058,7 +5058,7 @@
       ],
       "correcta": 1,
       "tip": "El giro de la historia invita a no juzgar por prejuicios: el extranjero despreciado resulta ser quien salva al pueblo.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa08-019",
@@ -5072,7 +5072,7 @@
       ],
       "correcta": 2,
       "tip": "Situar la obra en su época evita interpretarla erróneamente con los valores del presente.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa08-020",
@@ -5086,7 +5086,7 @@
       ],
       "correcta": 3,
       "tip": "El contraste entre el rey poderoso pero solitario y los campesinos alegres sugiere que poder y felicidad no van juntos.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa08-021",
@@ -5100,7 +5100,7 @@
       ],
       "correcta": 0,
       "tip": "La evidencia textual es una cita o hecho del propio texto; no basta con el gusto personal para fundamentar.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa08-022",
@@ -5114,7 +5114,7 @@
       ],
       "correcta": 1,
       "tip": "El personaje elige rescatar a su hermano en vez de salvarse solo: prioriza la solidaridad y el amor fraterno.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa08-023",
@@ -5128,7 +5128,7 @@
       ],
       "correcta": 2,
       "tip": "La interpretación debe ser coherente con la obra: no puede inventar hechos ajenos ni contrarios al texto.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa08-024",
@@ -5142,7 +5142,7 @@
       ],
       "correcta": 3,
       "tip": "La semilla que crece pese a estar enterrada y olvidada sugiere que, con esperanza y esfuerzo, se supera la adversidad.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa08-025",
@@ -5156,7 +5156,7 @@
       ],
       "correcta": 0,
       "tip": "Una interpretación se comunica bien cuando se explica con claridad y se sostiene con evidencia textual, respetando otras lecturas.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa13-001",
@@ -5170,7 +5170,7 @@
       ],
       "correcta": 0,
       "tip": "El proceso de escritura parte por planificar: antes de redactar decides qué escribir, en qué género y para quién.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa13-002",
@@ -5184,7 +5184,7 @@
       ],
       "correcta": 1,
       "tip": "El diario de vida registra vivencias personales en primera persona, fechadas y con un tono íntimo.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa13-003",
@@ -5198,7 +5198,7 @@
       ],
       "correcta": 2,
       "tip": "Planificar un cuento incluye decidir personajes, conflicto y desenlace antes de redactar el borrador.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa13-004",
@@ -5212,7 +5212,7 @@
       ],
       "correcta": 3,
       "tip": "El destinatario es quien leerá tu texto. Elegirlo te ayuda a decidir el tono y el vocabulario.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa13-005",
@@ -5226,7 +5226,7 @@
       ],
       "correcta": 0,
       "tip": "Revisar es releer el borrador para mejorar ideas, orden y corrección antes de la versión final.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa13-006",
@@ -5240,7 +5240,7 @@
       ],
       "correcta": 1,
       "tip": "La crónica narra hechos reales, pero con la mirada y el estilo propios de quien escribe.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa13-007",
@@ -5254,7 +5254,7 @@
       ],
       "correcta": 2,
       "tip": "El poema aprovecha el lenguaje figurado (metáforas, imágenes) para transmitir emociones.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa13-008",
@@ -5268,7 +5268,7 @@
       ],
       "correcta": 3,
       "tip": "La escritura creativa busca expresarse: dar forma a ideas, emociones e imaginación.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa13-009",
@@ -5282,7 +5282,7 @@
       ],
       "correcta": 0,
       "tip": "El destinatario define el tono. A un familiar querido le escribes de forma cercana y afectuosa.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa13-010",
@@ -5296,7 +5296,7 @@
       ],
       "correcta": 1,
       "tip": "El conflicto es el problema central que enfrenta el protagonista; sin conflicto no hay historia.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa13-011",
@@ -5310,7 +5310,7 @@
       ],
       "correcta": 2,
       "tip": "El orden habitual es planificar, redactar un borrador y revisar antes de la versión final.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa13-012",
@@ -5324,7 +5324,7 @@
       ],
       "correcta": 3,
       "tip": "El borrador es un primer intento del texto; se escribe para luego revisarlo y mejorarlo.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa13-013",
@@ -5338,7 +5338,7 @@
       ],
       "correcta": 0,
       "tip": "Planificar el inicio (ambiente y conflicto) permite enganchar al lector desde las primeras líneas.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa13-014",
@@ -5352,7 +5352,7 @@
       ],
       "correcta": 1,
       "tip": "La personificación atribuye acciones humanas (sonreír) a algo que no lo es, como la luna.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa13-015",
@@ -5366,7 +5366,7 @@
       ],
       "correcta": 2,
       "tip": "Elegir el tema orienta y da unidad al texto: sabes de qué vas a escribir y evitas dispersarte.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa13-016",
@@ -5380,7 +5380,7 @@
       ],
       "correcta": 3,
       "tip": "Revisar también es quitar o reescribir lo que no aporta; un texto más claro suele ser mejor.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa13-017",
@@ -5394,7 +5394,7 @@
       ],
       "correcta": 0,
       "tip": "El manual de instrucciones es un texto funcional; cuento, poema y crónica sí son creativos.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa13-018",
@@ -5408,7 +5408,7 @@
       ],
       "correcta": 1,
       "tip": "La voz del autor es su sello: el modo particular de mirar y contar que hace único al texto.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa13-019",
@@ -5422,7 +5422,7 @@
       ],
       "correcta": 2,
       "tip": "El ambiente es el lugar y el mundo donde ocurre la historia; planificarlo da coherencia al relato.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa13-020",
@@ -5436,7 +5436,7 @@
       ],
       "correcta": 3,
       "tip": "Narrar cuenta hechos y personajes; persuadir busca convencer al lector de una idea u opinión.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa13-021",
@@ -5450,7 +5450,7 @@
       ],
       "correcta": 0,
       "tip": "El diario de vida usa la primera persona y expresa vivencias y emociones del día.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa13-022",
@@ -5464,7 +5464,7 @@
       ],
       "correcta": 1,
       "tip": "La edición final pule la ortografía, la puntuación y la presentación del texto ya escrito.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa13-023",
@@ -5478,7 +5478,7 @@
       ],
       "correcta": 2,
       "tip": "El borrador es un espacio para experimentar: escribes libremente y después corriges lo necesario.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa13-024",
@@ -5492,7 +5492,7 @@
       ],
       "correcta": 3,
       "tip": "Las imágenes sensoriales evocan olores, sabores o sonidos, y hacen vívido el poema.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa13-025",
@@ -5506,7 +5506,7 @@
       ],
       "correcta": 0,
       "tip": "Revisar mejora el texto: al releer detectas errores e ideas confusas que el primer intento no resolvió.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa14-001",
@@ -5520,7 +5520,7 @@
       ],
       "correcta": 1,
       "tip": "El texto expositivo explica: su meta es que el lector comprenda un tema, no convencerlo.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa14-002",
@@ -5534,7 +5534,7 @@
       ],
       "correcta": 2,
       "tip": "El texto expositivo se organiza en introducción (presenta el tema), desarrollo (lo explica) y cierre.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa14-003",
@@ -5548,7 +5548,7 @@
       ],
       "correcta": 3,
       "tip": "La introducción presenta el tema y orienta al lector sobre lo que encontrará en el desarrollo.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa14-004",
@@ -5562,7 +5562,7 @@
       ],
       "correcta": 0,
       "tip": "\"Además\" suma información. \"Sin embargo\" contrasta y \"por lo tanto\" indica consecuencia.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa14-005",
@@ -5576,7 +5576,7 @@
       ],
       "correcta": 1,
       "tip": "\"Por ejemplo\" introduce un caso que ilustra lo explicado, ayudando a comprender la idea.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa14-006",
@@ -5590,7 +5590,7 @@
       ],
       "correcta": 2,
       "tip": "La progresión temática es el avance ordenado de las ideas: cada parte se enlaza con la anterior.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa14-007",
@@ -5604,7 +5604,7 @@
       ],
       "correcta": 3,
       "tip": "Usar varias fuentes confiables respalda la información y hace más creíble la explicación.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa14-008",
@@ -5618,7 +5618,7 @@
       ],
       "correcta": 0,
       "tip": "Esquemas, tablas e infografías son recursos gráficos que ayudan a comprender la información.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa14-009",
@@ -5632,7 +5632,7 @@
       ],
       "correcta": 1,
       "tip": "El cierre sintetiza lo dicho y cierra el texto de manera coherente con el desarrollo.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa14-010",
@@ -5646,7 +5646,7 @@
       ],
       "correcta": 2,
       "tip": "El texto expositivo define y explica de forma objetiva, sin opinar ni recurrir a la ficción.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa14-011",
@@ -5660,7 +5660,7 @@
       ],
       "correcta": 3,
       "tip": "Un texto es coherente cuando sus ideas se conectan con el tema y forman un todo con sentido.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa14-012",
@@ -5674,7 +5674,7 @@
       ],
       "correcta": 0,
       "tip": "Explicar bien exige informarse primero: buscar y seleccionar fuentes confiables sobre el tema.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa14-013",
@@ -5688,7 +5688,7 @@
       ],
       "correcta": 1,
       "tip": "\"Por lo tanto\" señala consecuencia: presenta el resultado de lo dicho antes.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa14-014",
@@ -5702,7 +5702,7 @@
       ],
       "correcta": 2,
       "tip": "El objetivo de explicar exige claridad y orden para que el lector comprenda con facilidad.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa14-015",
@@ -5716,7 +5716,7 @@
       ],
       "correcta": 3,
       "tip": "Conectores como \"en primer lugar\", \"luego\" y \"finalmente\" ordenan la secuencia de ideas.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa14-016",
@@ -5730,7 +5730,7 @@
       ],
       "correcta": 0,
       "tip": "Citar la fuente indica el origen del dato y le da respaldo y credibilidad al texto.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa14-017",
@@ -5744,7 +5744,7 @@
       ],
       "correcta": 1,
       "tip": "\"Además\" agrega información en la misma línea; los otros expresan contraste u oposición.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa14-018",
@@ -5758,7 +5758,7 @@
       ],
       "correcta": 2,
       "tip": "El texto expositivo busca informar con objetividad; opinar corresponde al texto argumentativo.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa14-019",
@@ -5772,7 +5772,7 @@
       ],
       "correcta": 3,
       "tip": "Un diagrama de flujo muestra las etapas de un proceso y facilita comprender su secuencia.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa14-020",
@@ -5786,7 +5786,7 @@
       ],
       "correcta": 0,
       "tip": "La introducción expositiva presenta y define el tema de forma clara y objetiva.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa14-021",
@@ -5800,7 +5800,7 @@
       ],
       "correcta": 1,
       "tip": "La cohesión enlaza las partes del texto (con conectores y referencias) para que fluya sin saltos.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa14-022",
@@ -5814,7 +5814,7 @@
       ],
       "correcta": 2,
       "tip": "Saltar entre temas sin relación rompe la coherencia; las ideas deben avanzar ordenadamente.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa14-023",
@@ -5828,7 +5828,7 @@
       ],
       "correcta": 3,
       "tip": "El desarrollo es el cuerpo del texto: allí se explica el tema con ejemplos, datos y detalles.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa14-024",
@@ -5842,7 +5842,7 @@
       ],
       "correcta": 0,
       "tip": "Explicar bien implica adaptar el lenguaje al lector para que comprenda sin dificultad.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa14-025",
@@ -5856,7 +5856,7 @@
       ],
       "correcta": 1,
       "tip": "Variar los conectores según la relación (adición, causa, ejemplo) mejora la cohesión y la claridad.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa15-001",
@@ -5870,7 +5870,7 @@
       ],
       "correcta": 2,
       "tip": "El texto persuasivo busca convencer: quiere que el lector adopte una postura o realice una acción.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa15-002",
@@ -5884,7 +5884,7 @@
       ],
       "correcta": 3,
       "tip": "La tesis es la postura central que defiendes; todo el texto persuasivo gira en torno a ella.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa15-003",
@@ -5898,7 +5898,7 @@
       ],
       "correcta": 0,
       "tip": "Una tesis sin argumentos no convence. Necesita razones y evidencias que la sostengan.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa15-004",
@@ -5912,7 +5912,7 @@
       ],
       "correcta": 1,
       "tip": "El argumento es la razón; la evidencia (dato, ejemplo, cifra) es la prueba que lo apoya.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa15-005",
@@ -5926,7 +5926,7 @@
       ],
       "correcta": 2,
       "tip": "\"Porque\" introduce la causa o razón que justifica una afirmación.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa15-006",
@@ -5940,7 +5940,7 @@
       ],
       "correcta": 3,
       "tip": "Un tema contingente es de actualidad y suscita distintas opiniones, ideal para argumentar.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa15-007",
@@ -5954,7 +5954,7 @@
       ],
       "correcta": 0,
       "tip": "Una tesis toma posición sobre algo debatible; un hecho es información verificable sin opinión.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa15-008",
@@ -5968,7 +5968,7 @@
       ],
       "correcta": 1,
       "tip": "Las evidencias deben ser pertinentes: apoyar directamente la tesis, no distraer del punto.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa15-009",
@@ -5982,7 +5982,7 @@
       ],
       "correcta": 2,
       "tip": "Conocer al destinatario te permite elegir argumentos y un tono que resulten convincentes para él.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa15-010",
@@ -5996,7 +5996,7 @@
       ],
       "correcta": 3,
       "tip": "\"Porque\" introduce la razón (causa) que justifica la afirmación de la tesis.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa15-011",
@@ -6010,7 +6010,7 @@
       ],
       "correcta": 0,
       "tip": "La coherencia temática exige que cada argumento apoye la misma tesis, sin desviarse del tema.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa15-012",
@@ -6024,7 +6024,7 @@
       ],
       "correcta": 1,
       "tip": "Un hecho se puede verificar (un dato respaldado); una opinión expresa un juicio personal.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa15-013",
@@ -6038,7 +6038,7 @@
       ],
       "correcta": 2,
       "tip": "Un dato o cifra respalda el argumento con información objetiva y lo hace más convincente.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa15-014",
@@ -6052,7 +6052,7 @@
       ],
       "correcta": 3,
       "tip": "El persuasivo defiende una postura; el expositivo informa de manera objetiva, sin tomar partido.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa15-015",
@@ -6066,7 +6066,7 @@
       ],
       "correcta": 0,
       "tip": "Un buen argumento da una razón sólida que defiende la postura, no solo un gusto personal.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa15-016",
@@ -6080,7 +6080,7 @@
       ],
       "correcta": 1,
       "tip": "Todo texto persuasivo parte de una tesis clara: primero decides qué postura vas a defender.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa15-017",
@@ -6094,7 +6094,7 @@
       ],
       "correcta": 2,
       "tip": "\"Por lo tanto\" enlaza una idea con su consecuencia, útil para llegar a la conclusión.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa15-018",
@@ -6108,7 +6108,7 @@
       ],
       "correcta": 3,
       "tip": "Sin evidencias que respalden los argumentos, la persuasión se vuelve una mera afirmación sin fuerza.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa15-019",
@@ -6122,7 +6122,7 @@
       ],
       "correcta": 0,
       "tip": "La evidencia debe respaldar directamente la tesis; un estudio sobre la concentración lo hace.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa15-020",
@@ -6136,7 +6136,7 @@
       ],
       "correcta": 1,
       "tip": "\"Ya que\" introduce una causa. \"Sin embargo\", \"en cambio\" y \"no obstante\" marcan contraste.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa15-021",
@@ -6150,7 +6150,7 @@
       ],
       "correcta": 2,
       "tip": "Para conservar la coherencia temática, se quita o reorienta lo que no aporta a la tesis.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa15-022",
@@ -6164,7 +6164,7 @@
       ],
       "correcta": 3,
       "tip": "Apoyar las opiniones con hechos verificables hace la argumentación más creíble y sólida.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa15-023",
@@ -6178,7 +6178,7 @@
       ],
       "correcta": 0,
       "tip": "La persuasión eficaz combina una tesis clara con argumentos respaldados por evidencias pertinentes.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa15-024",
@@ -6192,7 +6192,7 @@
       ],
       "correcta": 1,
       "tip": "La conclusión persuasiva refuerza la tesis y suele cerrar con un llamado a pensar o actuar.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa15-025",
@@ -6206,7 +6206,7 @@
       ],
       "correcta": 2,
       "tip": "Decir \"es bueno porque es bueno\" es un círculo: no aporta una razón ni evidencia que convenza.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa03-101",
@@ -6220,7 +6220,7 @@
       ],
       "correcta": 2,
       "tip": "La evidencia está en el gesto y el modo de responder: pasar de no mirar a nadie a \"levantar el mentón y responder firme\" muestra que gana seguridad.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa03-102",
@@ -6234,7 +6234,7 @@
       ],
       "correcta": 0,
       "tip": "El narrador declara saber lo que Tomás \"piensa\" y \"teme\" por dentro, un rasgo propio del narrador omnisciente.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa03-103",
@@ -6248,7 +6248,7 @@
       ],
       "correcta": 3,
       "tip": "La duda ocurre dentro de la propia Sofía, entre dos deseos legítimos; por eso es un conflicto interno.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa03-104",
@@ -6262,7 +6262,7 @@
       ],
       "correcta": 1,
       "tip": "La niebla, las calles vacías y la puerta que golpea sola crean una atmósfera de soledad y temor.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa03-105",
@@ -6276,7 +6276,7 @@
       ],
       "correcta": 2,
       "tip": "El cambio se ve en sus acciones: pasa de esconder los útiles del nuevo a defenderlo de quienes lo molestan.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa03-106",
@@ -6290,7 +6290,7 @@
       ],
       "correcta": 0,
       "tip": "El uso de \"corrí\", \"mi corazón\" y \"mis pasos\" en primera persona indica que el propio protagonista narra lo que vive.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa04-101",
@@ -6304,7 +6304,7 @@
       ],
       "correcta": 1,
       "tip": "Comparar las manos con palomas que \"descansan en mi pena\" sugiere ternura y una calma que consuela.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa04-102",
@@ -6318,7 +6318,7 @@
       ],
       "correcta": 3,
       "tip": "Repetir \"vuelve\" al inicio de los versos crea un ritmo marcado y subraya la idea de un regreso constante.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa04-103",
@@ -6332,7 +6332,7 @@
       ],
       "correcta": 0,
       "tip": "Atribuir a la luna acciones humanas (\"asoma curiosa\", \"espía\") es personificación y la convierte en una compañía para el hablante.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa04-104",
@@ -6346,7 +6346,7 @@
       ],
       "correcta": 2,
       "tip": "El verbo \"perfuma\" apela al olfato, y el aroma del pan recién horneado sugiere un ambiente cálido y hogareño.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa04-105",
@@ -6360,7 +6360,7 @@
       ],
       "correcta": 1,
       "tip": "Las piedras que \"cargo por el camino\" transmiten peso y esfuerzo: así de difícil se siente llevar la pena.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa04-106",
@@ -6374,7 +6374,7 @@
       ],
       "correcta": 3,
       "tip": "Un \"invierno sin una sola estrella\" evoca frío y oscuridad, imágenes que transmiten tristeza y falta de esperanza.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa05-101",
@@ -6388,7 +6388,7 @@
       ],
       "correcta": 0,
       "tip": "La acotación guía el tono: hablar \"entre dientes\" y \"sin mirarlo\" muestra enojo, por lo que la frase resulta irónica.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa05-102",
@@ -6402,7 +6402,7 @@
       ],
       "correcta": 2,
       "tip": "Pedro ofrece la bicicleta como intercambio; su intención es persuadir a José para obtener su ayuda.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa05-103",
@@ -6416,7 +6416,7 @@
       ],
       "correcta": 1,
       "tip": "El choque entre lo que Clara quiere (actuar) y lo que su madre le prohíbe es el conflicto que mueve la escena.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa05-104",
@@ -6430,7 +6430,7 @@
       ],
       "correcta": 3,
       "tip": "La acción física \"levantándose de golpe\" indica al actor cómo moverse y subraya la fuerza y el enojo del rey.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa05-105",
@@ -6444,7 +6444,7 @@
       ],
       "correcta": 0,
       "tip": "Frotarse las manos y querer \"un precio más\" pese al reclamo del criado muestran su avaricia.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa05-106",
@@ -6458,7 +6458,7 @@
       ],
       "correcta": 2,
       "tip": "El aparte se dirige al público y revela lo que Inés piensa en secreto: desconfía de Marco, aunque finja lo contrario ante él.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa08-101",
@@ -6472,7 +6472,7 @@
       ],
       "correcta": 0,
       "tip": "La evidencia está en el contraste: aunque el mar 'podía quitárselo todo', el pescador insiste 'cada mañana'. Esa insistencia expresa perseverancia.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa08-102",
@@ -6486,7 +6486,7 @@
       ],
       "correcta": 1,
       "tip": "El dilema aparece en el temor a que 'las palabras rompieran la paz': saber lo que dice la carta se opone a conservar su tranquilidad.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa08-103",
@@ -6500,7 +6500,7 @@
       ],
       "correcta": 3,
       "tip": "La clave es la paradoja: el avaro siente que algo 'le pertenece de verdad' justo cuando da, no cuando guarda. El mensaje valora la generosidad.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa08-104",
@@ -6514,7 +6514,7 @@
       ],
       "correcta": 1,
       "tip": "Se contrapone el olvido del 'nombre' con la permanencia de 'la canción'. El tema es que la obra perdura aunque el autor se olvide.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa08-105",
@@ -6528,7 +6528,7 @@
       ],
       "correcta": 0,
       "tip": "La evidencia es 'comprendió que del otro lado había alguien tan asustado como él': el reconocimiento del otro (empatía) lo lleva a bajar el arma.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa09-101",
@@ -6542,7 +6542,7 @@
       ],
       "correcta": 2,
       "tip": "La tesis es la postura que se defiende: 'el municipio debería crear más ciclovías'. Lo que viene tras 'porque' es el argumento que la sostiene.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa09-102",
@@ -6556,7 +6556,7 @@
       ],
       "correcta": 1,
       "tip": "'El lugar más hermoso' es un juicio de valor que no se puede comprobar objetivamente; la expresión 'sin duda' refuerza que es una opinión.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa09-103",
@@ -6570,7 +6570,7 @@
       ],
       "correcta": 2,
       "tip": "Un argumento válido debe dar una razón a favor de la tesis. Solo la contaminación duradera del plástico justifica reducir su uso; las otras opciones no se relacionan.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa09-104",
@@ -6584,7 +6584,7 @@
       ],
       "correcta": 3,
       "tip": "El conector 'por eso' introduce la conclusión: a partir del argumento (horario corto) se propone extender el horario hasta las ocho.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa09-105",
@@ -6598,7 +6598,7 @@
       ],
       "correcta": 2,
       "tip": "La primera es la afirmación general; la segunda, señalada por 'además' y basada en 'un estudio', aporta evidencia que la respalda.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa10-101",
@@ -6612,7 +6612,7 @@
       ],
       "correcta": 3,
       "tip": "Las palabras 'sonrisa' y 'familia' buscan vincular el jugo con la felicidad y la unión familiar, no con una cualidad del producto.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa10-102",
@@ -6626,7 +6626,7 @@
       ],
       "correcta": 0,
       "tip": "Mencionar 'expertos' que recomiendan busca dar credibilidad apelando a una autoridad, aunque no se identifique quiénes son.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa10-103",
@@ -6640,7 +6640,7 @@
       ],
       "correcta": 2,
       "tip": "'Solo hoy' y 'últimas unidades' crean una sensación de escasez y urgencia para que la persona compre rápido, sin pensarlo demasiado.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa10-104",
@@ -6654,7 +6654,7 @@
       ],
       "correcta": 2,
       "tip": "'Las mejores del mundo' es una valoración no comprobable, propia de la publicidad; el resto son datos objetivos del producto.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa10-105",
@@ -6668,7 +6668,7 @@
       ],
       "correcta": 0,
       "tip": "La familia feliz y la frase 'duerme tranquilo' se combinan para asociar el producto con la seguridad y la calma, apelando a la emoción del público.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa11-101",
@@ -6682,7 +6682,7 @@
       ],
       "correcta": 1,
       "tip": "La idea central conecta las dos oraciones: la pesca excesiva reduce el alimento y por eso disminuye la población de pingüinos.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa11-102",
@@ -6696,7 +6696,7 @@
       ],
       "correcta": 3,
       "tip": "El texto vincula la instalación de luminarias con la baja de robos; se infiere que la iluminación pudo contribuir a esa reducción.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa11-103",
@@ -6710,7 +6710,7 @@
       ],
       "correcta": 1,
       "tip": "Una entrada de noticia informa sobre un hecho real y reciente; aquí comunica lo que hicieron unos estudiantes, sin vender ni narrar ficción.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa11-104",
@@ -6724,7 +6724,7 @@
       ],
       "correcta": 3,
       "tip": "'Sin embargo' introduce un contraste: aunque hay mucha agua, muy poca es dulce y aprovechable para el consumo.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa11-105",
@@ -6738,7 +6738,7 @@
       ],
       "correcta": 1,
       "tip": "Un hecho es comprobable con registros. Que fue 'el más potente registrado por instrumentos' es un dato verificable; las demás son opiniones.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa12-101",
@@ -6752,7 +6752,7 @@
       ],
       "correcta": 0,
       "tip": "Un buen resumen conserva las ideas centrales: producir miel del néctar y favorecer la polinización. Las demás añaden datos ausentes o secundarios.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa12-102",
@@ -6766,7 +6766,7 @@
       ],
       "correcta": 3,
       "tip": "Una buena pregunta de investigación apunta a las causas del fenómeno. Preguntar por los 'factores' del derretimiento orienta la lectura hacia el propósito.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa12-103",
@@ -6780,7 +6780,7 @@
       ],
       "correcta": 0,
       "tip": "El paraguas, el impermeable y las botas son pistas explícitas; de ellas se infiere lo implícito: van a salir con lluvia.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa12-104",
@@ -6794,7 +6794,7 @@
       ],
       "correcta": 2,
       "tip": "En un texto multimodal, un gráfico complementa al texto: presenta de forma visual y ordenada los datos que el escrito menciona.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa12-105",
@@ -6808,7 +6808,7 @@
       ],
       "correcta": 1,
       "tip": "Resumir consiste en detectar la idea principal de cada párrafo y reformularla con palabras propias, no en memorizar ni copiar todo el texto.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa01-101",
@@ -6822,7 +6822,7 @@
       ],
       "correcta": 1,
       "tip": "Cuando el propósito es aprender e informarse con datos precisos, conviene elegir un texto expositivo o informativo, no uno literario.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa01-102",
@@ -6836,7 +6836,7 @@
       ],
       "correcta": 2,
       "tip": "Leer para recrearse invita a escoger textos que generen disfrute, como una novela; el propósito guía la selección del texto.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa01-103",
@@ -6850,7 +6850,7 @@
       ],
       "correcta": 2,
       "tip": "La autonomía lectora crece al elegir según intereses y propósitos, apoyándose en reseñas, recomendaciones y la exploración de la biblioteca.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa01-104",
@@ -6864,7 +6864,7 @@
       ],
       "correcta": 3,
       "tip": "Para obtener información concreta y rápida se selecciona un texto breve y funcional, como un folleto, adecuado a ese propósito.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa02-101",
@@ -6878,7 +6878,7 @@
       ],
       "correcta": 3,
       "tip": "La literatura permite reflexionar sobre dimensiones humanas como la solidaridad; aquí el gesto muestra compasión pese al riesgo personal.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa02-102",
@@ -6892,7 +6892,7 @@
       ],
       "correcta": 2,
       "tip": "Leer obras de otras herencias culturales amplía la mirada: fomenta la empatía y el respeto por experiencias humanas distintas a la propia.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa02-103",
@@ -6906,7 +6906,7 @@
       ],
       "correcta": 0,
       "tip": "Los dilemas literarios reflejan tensiones humanas reales, como elegir entre la lealtad a otro y el propio beneficio; eso invita a pensar sobre los propios valores.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa02-104",
@@ -6920,7 +6920,7 @@
       ],
       "correcta": 1,
       "tip": "Muchos temas literarios son universales: al leerlos reconocemos experiencias compartidas por la humanidad en distintos tiempos y lugares.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa06-101",
@@ -6934,7 +6934,7 @@
       ],
       "correcta": 3,
       "tip": "La epopeya ensalza al héroe y sus hazañas; enfrentar solo a mil enemigos sin retroceder destaca el valor heroico, rasgo central del género.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa06-102",
@@ -6948,7 +6948,7 @@
       ],
       "correcta": 2,
       "tip": "Las hazañas del héroe épico encarnan los valores que una comunidad admira; la epopeya fortalece así su identidad y memoria colectiva.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa06-103",
@@ -6962,7 +6962,7 @@
       ],
       "correcta": 1,
       "tip": "La invocación a la musa, el tono elevado y la narración en verso son marcas propias de la epopeya, distintas del lenguaje cotidiano.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa06-104",
@@ -6976,7 +6976,7 @@
       ],
       "correcta": 3,
       "tip": "Leer epopeya en su contexto muestra que la intervención de los dioses expresa las creencias y la visión de mundo de la sociedad que la produjo.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa07-101",
@@ -6990,7 +6990,7 @@
       ],
       "correcta": 0,
       "tip": "La comedia se construye con enredos y confusiones; la caída inesperada en los brazos del marido genera el efecto cómico buscado.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa07-102",
@@ -7004,7 +7004,7 @@
       ],
       "correcta": 3,
       "tip": "La comedia suele cerrar con un desenlace feliz, en el que los enredos se aclaran y los conflictos se resuelven de forma armónica.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa07-103",
@@ -7018,7 +7018,7 @@
       ],
       "correcta": 1,
       "tip": "La comedia usa el humor para exagerar defectos humanos, como la avaricia, y así invitar a una crítica social a través de la risa.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa07-104",
@@ -7032,7 +7032,7 @@
       ],
       "correcta": 0,
       "tip": "Frente a la tragedia, la comedia aborda el conflicto con humor y personajes cómicos, y tiende a un desenlace favorable.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa13-101",
@@ -7046,7 +7046,7 @@
       ],
       "correcta": 2,
       "tip": "Escribir es un proceso: primero se planifica (ideas, tema, destinatario), luego se redacta un borrador y finalmente se revisa y edita.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa13-102",
@@ -7060,7 +7060,7 @@
       ],
       "correcta": 1,
       "tip": "Adecuar el texto al destinatario es clave: para un niño pequeño conviene un lenguaje sencillo y cercano, no tecnicismos ni frases complejas.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa13-103",
@@ -7074,7 +7074,7 @@
       ],
       "correcta": 0,
       "tip": "En la escritura creativa el género se elige según el propósito: para expresar emociones con imágenes y sonido, el poema es una buena opción.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa13-104",
@@ -7088,7 +7088,7 @@
       ],
       "correcta": 3,
       "tip": "Revisar consiste en releer el borrador para mejorar su claridad, coherencia y corregir errores antes de la versión final.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa14-101",
@@ -7102,7 +7102,7 @@
       ],
       "correcta": 1,
       "tip": "Para introducir un ejemplo que ilustra una afirmación se usa un conector de ejemplificación como \"por ejemplo\".",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa14-102",
@@ -7116,7 +7116,7 @@
       ],
       "correcta": 0,
       "tip": "La consecuencia se marca con conectores como \"por lo tanto\": las lluvias intensas son la causa; el aumento del caudal, el efecto.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa14-103",
@@ -7130,7 +7130,7 @@
       ],
       "correcta": 2,
       "tip": "La introducción de un texto expositivo presenta el tema con claridad y anticipa lo que se desarrollará, orientando al lector.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa14-104",
@@ -7144,7 +7144,7 @@
       ],
       "correcta": 0,
       "tip": "La progresión temática enlaza las ideas de forma ordenada, dando coherencia al texto expositivo y ayudando a que el lector lo siga.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa15-101",
@@ -7158,7 +7158,7 @@
       ],
       "correcta": 3,
       "tip": "La tesis es la postura u opinión que se sostiene; los datos y hechos son las evidencias que la respaldan, no la tesis misma.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa15-102",
@@ -7172,7 +7172,7 @@
       ],
       "correcta": 1,
       "tip": "La evidencia pertinente apoya directamente la tesis; un dato sobre el gasto real de agua en la escuela sí respalda la necesidad de cuidarla.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa15-103",
@@ -7186,7 +7186,7 @@
       ],
       "correcta": 0,
       "tip": "En la argumentación, los conectores causales o consecutivos como \"por lo tanto\" enlazan el argumento con la conclusión que se desea sostener.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "leng8-oa15-104",
@@ -7200,7 +7200,7 @@
       ],
       "correcta": 2,
       "tip": "La coherencia temática exige que todo el texto gire en torno a la tesis; introducir un tema ajeno la rompe y confunde al lector.",
-      "revisada": false
+      "revisada": true
     }
   ]
 }

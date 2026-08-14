@@ -45,13 +45,13 @@ en línea. Historia de v0 al detalle en la Bitácora (abajo).
 - **Duelo 1v1:** en el mismo teléfono y **en línea asíncrono (Supabase)** con
   código de amigo, lista de jugadores, bots de práctica y reto de 24h.
 
-**Contenido (bancos de año completo):** Historia **663 (revisadas 663/663;
-22 OA)** · Matemáticas **603 (sin revisar; 17/17 OA)** · Ciencias **534 (sin
-revisar; 15/15 OA)** · Lenguaje **514 (sin revisar; 15/15 OA)**. ~2.314 preguntas
-en total. Las 3 asignaturas nuevas se llevaron a cobertura de año completo desde
-el currículum oficial (ver Sesión 9) y luego se enriquecieron con ítems de mayor
-orden por revisión pedagógica (ver Sesión 11); solo 4-5 OA de cada una están
-hoy en una expedición jugable, el resto es reserva. **Herramientas dev:** tablero con clave
+**Contenido (bancos de año completo, TODOS revisados):** Historia **663/663** ·
+Matemáticas **603/603 (17 OA)** · Ciencias **534/534 (15 OA)** · Lenguaje
+**514/514 (15 OA)**. ~2.314 preguntas, **100% marcadas como revisadas** (aprobación
+humana de Roberto, ver Sesión 12). Los 3 bancos nuevos se llevaron a cobertura de
+año completo desde el currículum oficial (ver Sesión 9) y se enriquecieron con ítems
+de mayor orden por revisión pedagógica (ver Sesión 11); solo 4-5 OA de cada uno
+están hoy en una expedición jugable, el resto es reserva. **Herramientas dev:** tablero con clave
 (`dev/tablero.html`) y scripts (`consolidar-pool`, `aplicar-revisadas`,
 `generar-pdf-preguntas` —por asignatura y con `--sin-revisar`—, `generar-tablero`).
 
@@ -464,3 +464,13 @@ Se completaron los tres pendientes que quedaron de la Sesión 2:
   detalladas traen un mapa de "mejores ítems" por OA); eventual "modo lectura +
   escritura"; y los de siempre (nuevas expediciones con OA de reserva, Kimün
   "científico", duelo en 2 celulares, push y ranking real, limpiar Supabase).
+
+### Sesión 12 (2026-08-14)
+- **Aprobación humana de los 3 bancos:** Roberto marcó Matemática (603), Ciencias
+  (534) y Lenguaje (514) como **revisadas** (`revisada:true` en todas; `revisadas =
+  total`). Con Historia (663), el proyecto queda **100% revisado: 2.314/2.314**.
+  Tablero regenerado (la barra "Revisadas por ti" marca 100% en las 4 asignaturas).
+- Nota: el PDF `--sin-revisar` de esas tres ahora sale vacío (ya no hay pendientes).
+- **Pendientes:** sin cambios (curación para la prueba final; eventual "modo lectura +
+  escritura"; nuevas expediciones con OA de reserva; Kimün "científico"; duelo en 2
+  celulares; push y ranking real; limpiar Supabase).

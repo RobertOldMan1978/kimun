@@ -3,7 +3,7 @@
   "nivel": "8° básico",
   "meta_preguntas_por_oa": 25,
   "total_preguntas": 534,
-  "revisadas": 0,
+  "revisadas": 534,
   "nota": "Ciencias 8° básico — año completo (CN08 OA 01-15). Generadas por agentes; opciones barajadas. Sin revisión pedagógica humana.",
   "preguntas": [
     {
@@ -18,7 +18,7 @@
       ],
       "correcta": 3,
       "tip": "El microscopio amplía objetos diminutos, invisibles a simple vista, como las células.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa01-002",
@@ -32,7 +32,7 @@
       ],
       "correcta": 2,
       "tip": "Robert Hooke, en 1665, llamó 'celdas' (cells) a los espacios que vio en el corcho.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa01-003",
@@ -46,7 +46,7 @@
       ],
       "correcta": 3,
       "tip": "Los compartimentos vacíos del corcho le recordaron pequeñas celdas.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa01-004",
@@ -60,7 +60,7 @@
       ],
       "correcta": 2,
       "tip": "El corcho es tejido muerto; Hooke vio solo las paredes celulares vacías.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa01-005",
@@ -74,7 +74,7 @@
       ],
       "correcta": 0,
       "tip": "Mejores microscopios revelaron microorganismos y ampliaron el modelo de la vida: la tecnología aporta evidencia nueva.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa01-006",
@@ -88,7 +88,7 @@
       ],
       "correcta": 0,
       "tip": "El nombre cambió al comprender mejor qué eran esos seres: las ideas científicas se precisan con nueva evidencia.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa01-007",
@@ -102,7 +102,7 @@
       ],
       "correcta": 2,
       "tip": "Un postulado central: todo ser vivo está formado por células.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa01-008",
@@ -116,7 +116,7 @@
       ],
       "correcta": 2,
       "tip": "La célula es la unidad estructural y funcional básica de los seres vivos.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa01-009",
@@ -130,7 +130,7 @@
       ],
       "correcta": 0,
       "tip": "Toda célula proviene de otra célula por división. Lo planteó Virchow.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa01-010",
@@ -144,7 +144,7 @@
       ],
       "correcta": 2,
       "tip": "El conocimiento científico se actualiza con nuevas evidencias y tecnología.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa01-011",
@@ -158,7 +158,7 @@
       ],
       "correcta": 3,
       "tip": "Schleiden (plantas) y Schwann (animales) formularon la teoría celular.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa01-012",
@@ -172,7 +172,7 @@
       ],
       "correcta": 3,
       "tip": "Schleiden concluyó que las plantas están formadas por células.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa01-013",
@@ -186,7 +186,7 @@
       ],
       "correcta": 2,
       "tip": "Schwann extendió la idea de las células a los animales.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa01-014",
@@ -200,7 +200,7 @@
       ],
       "correcta": 3,
       "tip": "Virchow aportó que las células se originan a partir de células ya existentes.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa01-015",
@@ -214,7 +214,7 @@
       ],
       "correcta": 0,
       "tip": "La idea de los cuatro elementos es antigua y no forma parte de la teoría celular.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa01-016",
@@ -228,7 +228,7 @@
       ],
       "correcta": 1,
       "tip": "Un modelo representa la realidad y se mejora al surgir nueva evidencia.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa01-017",
@@ -242,7 +242,7 @@
       ],
       "correcta": 3,
       "tip": "Las células son microscópicas; se necesitaba un instrumento para verlas.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa01-018",
@@ -256,7 +256,7 @@
       ],
       "correcta": 2,
       "tip": "Mejores instrumentos entregaron nuevas evidencias sobre las células.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa01-019",
@@ -270,7 +270,7 @@
       ],
       "correcta": 0,
       "tip": "Sin el microscopio, esas estructuras eran invisibles: la tecnología permite nuevas observaciones y modelos.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa01-020",
@@ -284,7 +284,7 @@
       ],
       "correcta": 0,
       "tip": "Hooke vio estructuras vacías; van Leeuwenhoek observó seres vivos.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa01-021",
@@ -298,7 +298,7 @@
       ],
       "correcta": 0,
       "tip": "El conocimiento científico se construye entre muchos y se actualiza.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa01-022",
@@ -312,7 +312,7 @@
       ],
       "correcta": 0,
       "tip": "'Uni' significa uno: un organismo de una sola célula es unicelular.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa01-023",
@@ -326,7 +326,7 @@
       ],
       "correcta": 3,
       "tip": "'Pluri' significa muchos: los organismos con muchas células son pluricelulares.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa01-024",
@@ -340,7 +340,7 @@
       ],
       "correcta": 2,
       "tip": "Aunque son muy distintos, todos comparten estar hechos de células.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa01-025",
@@ -354,7 +354,7 @@
       ],
       "correcta": 1,
       "tip": "Las rocas son materia sin vida; no están formadas por células.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa01-026",
@@ -368,7 +368,7 @@
       ],
       "correcta": 2,
       "tip": "La teoría celular descarta la generación espontánea: célula viene de célula.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa01-027",
@@ -382,7 +382,7 @@
       ],
       "correcta": 3,
       "tip": "Sin microscopio no se habrían podido observar las células. El telescopio sirve para objetos lejanos, no diminutos.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa01-028",
@@ -396,7 +396,7 @@
       ],
       "correcta": 2,
       "tip": "La ciencia corrige sus modelos cuando aparece mejor evidencia.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa01-029",
@@ -410,7 +410,7 @@
       ],
       "correcta": 2,
       "tip": "Una teoría científica está bien fundamentada en evidencia.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa01-030",
@@ -424,7 +424,7 @@
       ],
       "correcta": 0,
       "tip": "El orden muestra cómo se acumuló la evidencia hasta la teoría celular.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa01-031",
@@ -438,7 +438,7 @@
       ],
       "correcta": 1,
       "tip": "La teoría celular unifica el estudio de la vida: todo ser vivo tiene células.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa01-032",
@@ -452,7 +452,7 @@
       ],
       "correcta": 0,
       "tip": "Mejores instrumentos entregan nuevas evidencias y mejores modelos.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa01-033",
@@ -466,7 +466,7 @@
       ],
       "correcta": 0,
       "tip": "En 'Micrographia' (1665) Hooke publicó sus observaciones con el microscopio.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa01-034",
@@ -480,7 +480,7 @@
       ],
       "correcta": 2,
       "tip": "La célula es la unidad estructural y funcional de todos los seres vivos.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa02-001",
@@ -494,7 +494,7 @@
       ],
       "correcta": 3,
       "tip": "La teoría celular establece que la célula es la unidad básica de estructura y función de la vida.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa02-002",
@@ -508,7 +508,7 @@
       ],
       "correcta": 1,
       "tip": "La teoría celular afirma que toda célula se origina a partir de otra célula ya existente.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa02-003",
@@ -522,7 +522,7 @@
       ],
       "correcta": 3,
       "tip": "El núcleo dirige la actividad celular y guarda el material genético (ADN).",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa02-004",
@@ -536,7 +536,7 @@
       ],
       "correcta": 1,
       "tip": "Las eucariontes poseen núcleo rodeado por membrana; las procariontes tienen su material genético libre en el citoplasma.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa02-005",
@@ -550,7 +550,7 @@
       ],
       "correcta": 2,
       "tip": "La pared celular, hecha de celulosa, rodea a la célula vegetal y le da rigidez; la célula animal no la tiene.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa02-006",
@@ -564,7 +564,7 @@
       ],
       "correcta": 0,
       "tip": "El cloroplasto contiene clorofila y allí ocurre la fotosíntesis, que produce alimento a partir de luz.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa02-007",
@@ -578,7 +578,7 @@
       ],
       "correcta": 3,
       "tip": "La mitocondria realiza la respiración celular, liberando la energía que la célula necesita.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa02-008",
@@ -592,7 +592,7 @@
       ],
       "correcta": 0,
       "tip": "La membrana celular controla qué sustancias entran y salen, actuando como una barrera selectiva.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa02-009",
@@ -606,7 +606,7 @@
       ],
       "correcta": 3,
       "tip": "El citoplasma es el medio gelatinoso interno donde se encuentran suspendidos los organelos.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa02-010",
@@ -620,7 +620,7 @@
       ],
       "correcta": 2,
       "tip": "La vacuola central de la célula vegetal almacena agua, nutrientes y desechos, y ayuda a mantener su forma.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa02-011",
@@ -634,7 +634,7 @@
       ],
       "correcta": 2,
       "tip": "Los ribosomas son las estructuras encargadas de sintetizar (fabricar) las proteínas.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa02-012",
@@ -648,7 +648,7 @@
       ],
       "correcta": 2,
       "tip": "Los cloroplastos aparecen en células vegetales y de algas; la célula animal no los tiene.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa02-013",
@@ -662,7 +662,7 @@
       ],
       "correcta": 2,
       "tip": "Las bacterias son organismos procariontes: no tienen núcleo definido ni organelos rodeados por membrana.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa02-014",
@@ -676,7 +676,7 @@
       ],
       "correcta": 3,
       "tip": "Las células que gastan mucha energía, como las musculares, tienen muchas mitocondrias para producirla.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa02-015",
@@ -690,7 +690,7 @@
       ],
       "correcta": 1,
       "tip": "El cloroplasto capta la luz solar y produce alimento mediante la fotosíntesis.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa02-016",
@@ -704,7 +704,7 @@
       ],
       "correcta": 0,
       "tip": "Tanto la célula animal como la vegetal son eucariontes y poseen núcleo definido.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa02-017",
@@ -718,7 +718,7 @@
       ],
       "correcta": 0,
       "tip": "Permeabilidad selectiva significa que la membrana elige qué sustancias pueden atravesarla.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa02-018",
@@ -732,7 +732,7 @@
       ],
       "correcta": 2,
       "tip": "En las procariontes el material genético está libre en el citoplasma, sin membrana nuclear.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa02-019",
@@ -746,7 +746,7 @@
       ],
       "correcta": 1,
       "tip": "El pigmento verde es la clorofila de los cloroplastos, característicos de las células vegetales.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa02-020",
@@ -760,7 +760,7 @@
       ],
       "correcta": 0,
       "tip": "La pared celular da forma y sostén; sin ella, la célula vegetal perdería rigidez y sería más frágil, parecida a una animal.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa02-021",
@@ -774,7 +774,7 @@
       ],
       "correcta": 1,
       "tip": "La mitocondria realiza la respiración celular para obtener energía; su estructura interna aumenta esa capacidad.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa02-022",
@@ -788,7 +788,7 @@
       ],
       "correcta": 0,
       "tip": "Toda célula, sin importar su tipo, está rodeada por una membrana celular que la delimita.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa02-023",
@@ -802,7 +802,7 @@
       ],
       "correcta": 3,
       "tip": "Las hojas reciben mucha luz, por lo que sus células tienen abundantes cloroplastos para hacer fotosíntesis.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa02-024",
@@ -816,7 +816,7 @@
       ],
       "correcta": 1,
       "tip": "La mitocondria genera la energía celular, por eso se la compara con una central o planta de energía.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa02-025",
@@ -830,7 +830,7 @@
       ],
       "correcta": 2,
       "tip": "El núcleo alberga el material genético que contiene las instrucciones para la célula.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa02-026",
@@ -844,7 +844,7 @@
       ],
       "correcta": 2,
       "tip": "La célula animal carece de pared celular y de cloroplastos; esos son propios de la célula vegetal.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa02-027",
@@ -858,7 +858,7 @@
       ],
       "correcta": 2,
       "tip": "La célula vegetal típicamente tiene una vacuola central grande; las animales tienen vacuolas pequeñas o ninguna.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa02-028",
@@ -872,7 +872,7 @@
       ],
       "correcta": 1,
       "tip": "Cada organelo tiene una estructura adaptada a la tarea que realiza dentro de la célula.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa02-029",
@@ -886,7 +886,7 @@
       ],
       "correcta": 3,
       "tip": "Ambas son células eucariontes con núcleo definido, aunque la vegetal tenga además pared y cloroplastos.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa02-030",
@@ -900,7 +900,7 @@
       ],
       "correcta": 0,
       "tip": "La célula vegetal realiza ambos: fotosíntesis (cloroplasto, produce alimento con luz) y respiración celular (mitocondria, libera energía).",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa02-031",
@@ -914,7 +914,7 @@
       ],
       "correcta": 3,
       "tip": "El citoplasma no es un organelo, sino el medio gelatinoso que rodea y sostiene a los organelos.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa02-032",
@@ -928,7 +928,7 @@
       ],
       "correcta": 2,
       "tip": "Sin núcleo definido ni organelos con membrana, se trata de una célula procarionte, como una bacteria.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa02-033",
@@ -942,7 +942,7 @@
       ],
       "correcta": 2,
       "tip": "El núcleo dirige y controla las actividades celulares, como una jefatura que da instrucciones.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa02-034",
@@ -956,7 +956,7 @@
       ],
       "correcta": 2,
       "tip": "Las células animales y vegetales necesitan energía, por eso ambas poseen mitocondrias.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa02-035",
@@ -970,7 +970,7 @@
       ],
       "correcta": 3,
       "tip": "El retículo endoplasmático es una red de canales que transporta y procesa sustancias dentro de la célula.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa02-036",
@@ -984,7 +984,7 @@
       ],
       "correcta": 3,
       "tip": "El orden va de menor a mayor: célula, tejido, órgano, sistema y organismo. La célula es la más pequeña.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa03-001",
@@ -998,7 +998,7 @@
       ],
       "correcta": 3,
       "tip": "En la difusión las partículas se mueven a favor del gradiente: de mayor a menor concentración.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa03-002",
@@ -1012,7 +1012,7 @@
       ],
       "correcta": 0,
       "tip": "La osmosis es un caso especial de difusión: el que se mueve es el agua, y lo hace por una membrana semipermeable.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa03-003",
@@ -1026,7 +1026,7 @@
       ],
       "correcta": 0,
       "tip": "El transporte pasivo ocurre a favor del gradiente y no consume energía de la célula.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa03-004",
@@ -1040,7 +1040,7 @@
       ],
       "correcta": 3,
       "tip": "La difusión continúa hasta alcanzar el equilibrio, cuando la concentración se iguala en todas partes.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa03-005",
@@ -1054,7 +1054,7 @@
       ],
       "correcta": 1,
       "tip": "El gradiente es la diferencia de concentración; las partículas se mueven a favor de él en la difusión.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa03-006",
@@ -1068,7 +1068,7 @@
       ],
       "correcta": 0,
       "tip": "Semipermeable significa que controla el paso: algunas sustancias entran o salen y otras no.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa03-007",
@@ -1082,7 +1082,7 @@
       ],
       "correcta": 0,
       "tip": "El colorante se mueve de donde hay más hacia donde hay menos: es difusión.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa03-008",
@@ -1096,7 +1096,7 @@
       ],
       "correcta": 3,
       "tip": "Las partículas olorosas se difunden en el aire desde donde están concentradas hacia donde hay menos.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa03-009",
@@ -1110,7 +1110,7 @@
       ],
       "correcta": 2,
       "tip": "La osmosis es difusión pero específicamente del agua a través de una membrana semipermeable.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa03-010",
@@ -1124,7 +1124,7 @@
       ],
       "correcta": 0,
       "tip": "Hiper = más. El medio hipertónico tiene más solutos que la célula, por eso el agua tiende a salir.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa03-011",
@@ -1138,7 +1138,7 @@
       ],
       "correcta": 1,
       "tip": "Hipo = menos. El medio hipotónico tiene menos solutos y más agua, por eso el agua tiende a entrar a la célula.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa03-012",
@@ -1152,7 +1152,7 @@
       ],
       "correcta": 1,
       "tip": "Iso = igual. En un medio isotónico entra y sale la misma cantidad de agua: la célula no cambia de tamaño.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa03-013",
@@ -1166,7 +1166,7 @@
       ],
       "correcta": 2,
       "tip": "En medio hipertónico hay más solutos afuera, así que el agua sale y la célula se arruga (se deshidrata).",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa03-014",
@@ -1180,7 +1180,7 @@
       ],
       "correcta": 3,
       "tip": "En medio hipotónico hay más agua afuera; el agua entra y la célula animal se hincha y puede reventar.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa03-015",
@@ -1194,7 +1194,7 @@
       ],
       "correcta": 3,
       "tip": "El agua destilada casi no tiene solutos; el agua entra al glóbulo rojo, lo hincha y puede hacerlo estallar.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa03-016",
@@ -1208,7 +1208,7 @@
       ],
       "correcta": 0,
       "tip": "La pared celular de las plantas resiste la presión, así la célula se pone turgente pero no estalla.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa03-017",
@@ -1222,7 +1222,7 @@
       ],
       "correcta": 1,
       "tip": "En medio hipotónico entra agua a la célula vegetal, que se pone turgente (firme) contra su pared.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa03-018",
@@ -1236,7 +1236,7 @@
       ],
       "correcta": 0,
       "tip": "En medio hipertónico sale agua de la célula vegetal; el contenido se contrae y se despega de la pared: plasmólisis.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa03-019",
@@ -1250,7 +1250,7 @@
       ],
       "correcta": 3,
       "tip": "Sin agua, las células pierden turgencia y se plasmolizan; por eso la planta se ve floja y marchita.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa03-020",
@@ -1264,7 +1264,7 @@
       ],
       "correcta": 1,
       "tip": "La sal crea un medio hipertónico afuera; por osmosis el agua sale de las células de la lechuga.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa03-021",
@@ -1278,7 +1278,7 @@
       ],
       "correcta": 3,
       "tip": "El agua está menos concentrada afuera; por osmosis entra a la pasa (más solutos adentro) y esta se hincha.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa03-022",
@@ -1292,7 +1292,7 @@
       ],
       "correcta": 2,
       "tip": "El oxígeno se difunde desde donde hay más (aire de los pulmones) hacia donde hay menos (sangre).",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa03-023",
@@ -1306,7 +1306,7 @@
       ],
       "correcta": 1,
       "tip": "La membrana celular semipermeable es la que regula la entrada y salida de partículas y de agua.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa03-024",
@@ -1320,7 +1320,7 @@
       ],
       "correcta": 3,
       "tip": "El agua va hacia donde hay más solutos, buscando igualar las concentraciones a ambos lados.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa03-025",
@@ -1334,7 +1334,7 @@
       ],
       "correcta": 2,
       "tip": "En un medio isotónico la concentración es igual dentro y fuera, así que no hay cambio neto de agua.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa03-026",
@@ -1348,7 +1348,7 @@
       ],
       "correcta": 2,
       "tip": "Al ser isotónico, el suero no provoca entrada ni salida neta de agua, y las células conservan su forma.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa03-027",
@@ -1362,7 +1362,7 @@
       ],
       "correcta": 2,
       "tip": "La osmosis es específicamente el movimiento del agua; los demás casos son difusión de otras partículas.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa03-028",
@@ -1376,7 +1376,7 @@
       ],
       "correcta": 3,
       "tip": "Mientras mayor es el gradiente (la diferencia), más rápido se difunden las partículas hacia el equilibrio.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa03-029",
@@ -1390,7 +1390,7 @@
       ],
       "correcta": 2,
       "tip": "Las partículas de azúcar se difunden desde donde hay más hacia donde hay menos, hasta el equilibrio.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa03-030",
@@ -1404,7 +1404,7 @@
       ],
       "correcta": 1,
       "tip": "El medio salado es hipertónico; por osmosis el agua sale de las células y la papa pierde firmeza.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa03-031",
@@ -1418,7 +1418,7 @@
       ],
       "correcta": 1,
       "tip": "El agua se mueve hacia el lado más concentrado (con azúcar) y ese nivel sube: es osmosis.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa03-032",
@@ -1432,7 +1432,7 @@
       ],
       "correcta": 3,
       "tip": "La difusión y la osmosis son transporte pasivo: van a favor del gradiente y no gastan energía.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa03-033",
@@ -1446,7 +1446,7 @@
       ],
       "correcta": 1,
       "tip": "El riego crea un medio hipotónico; el agua entra a las células, que se ponen turgentes y firmes.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa03-034",
@@ -1460,7 +1460,7 @@
       ],
       "correcta": 0,
       "tip": "La contracción muscular no es difusión ni osmosis; los otros casos sí son movimiento de partículas o de agua.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa03-035",
@@ -1474,7 +1474,7 @@
       ],
       "correcta": 0,
       "tip": "En agua dulce el medio es hipotónico; el agua tiende a entrar a la célula por osmosis.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa03-036",
@@ -1488,7 +1488,7 @@
       ],
       "correcta": 2,
       "tip": "La difusión facilitada usa proteínas como canal, pero sigue el gradiente y no gasta energía: es transporte pasivo.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa03-037",
@@ -1502,7 +1502,7 @@
       ],
       "correcta": 1,
       "tip": "Afuera hay menos solutos (2% frente a 10%): el medio es hipotónico y el agua entra hacia donde hay más solutos.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa03-038",
@@ -1516,7 +1516,7 @@
       ],
       "correcta": 2,
       "tip": "En la osmosis el agua va desde el lado con menos solutos (más agua libre) hacia el lado con más solutos.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa04-001",
@@ -1530,7 +1530,7 @@
       ],
       "correcta": 3,
       "tip": "Los estomas son poros de la hoja por donde entran y salen gases (CO2, O2) y sale vapor de agua.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa04-002",
@@ -1544,7 +1544,7 @@
       ],
       "correcta": 2,
       "tip": "El xilema transporta agua y sales minerales en sentido ascendente, desde la raíz hacia las hojas.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa04-003",
@@ -1558,7 +1558,7 @@
       ],
       "correcta": 2,
       "tip": "El floema distribuye la savia elaborada, rica en azúcares, hacia toda la planta.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa04-004",
@@ -1572,7 +1572,7 @@
       ],
       "correcta": 0,
       "tip": "La raíz absorbe agua y sales minerales del suelo y ancla la planta.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa04-005",
@@ -1586,7 +1586,7 @@
       ],
       "correcta": 1,
       "tip": "El tallo sostiene a la planta y conecta el transporte entre la raíz y las hojas.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa04-006",
@@ -1600,7 +1600,7 @@
       ],
       "correcta": 3,
       "tip": "La hoja concentra los cloroplastos, por eso es el principal órgano de la fotosíntesis.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa04-007",
@@ -1614,7 +1614,7 @@
       ],
       "correcta": 3,
       "tip": "La transpiración es la salida de vapor de agua por los estomas de las hojas.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa04-008",
@@ -1628,7 +1628,7 @@
       ],
       "correcta": 2,
       "tip": "El fototropismo es la respuesta de crecimiento de la planta hacia la fuente de luz.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa04-009",
@@ -1642,7 +1642,7 @@
       ],
       "correcta": 1,
       "tip": "El gravitropismo hace que las raíces crezcan hacia abajo y los tallos hacia arriba.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa04-010",
@@ -1656,7 +1656,7 @@
       ],
       "correcta": 2,
       "tip": "Xilema y floema forman el sistema de conducción o transporte de la planta.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa04-011",
@@ -1670,7 +1670,7 @@
       ],
       "correcta": 3,
       "tip": "La fotosíntesis necesita dióxido de carbono, que entra por los estomas.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa04-012",
@@ -1684,7 +1684,7 @@
       ],
       "correcta": 2,
       "tip": "La fotosíntesis produce oxígeno, que sale por los estomas.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa04-013",
@@ -1698,7 +1698,7 @@
       ],
       "correcta": 1,
       "tip": "El agua sube por el xilema desde la raíz hasta las hojas.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa04-014",
@@ -1712,7 +1712,7 @@
       ],
       "correcta": 0,
       "tip": "Los azúcares del floema provienen de la fotosíntesis realizada en las hojas.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa04-015",
@@ -1726,7 +1726,7 @@
       ],
       "correcta": 1,
       "tip": "Los pelos absorbentes de la raíz aumentan la superficie de contacto con el suelo.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa04-016",
@@ -1740,7 +1740,7 @@
       ],
       "correcta": 2,
       "tip": "Al cerrar los estomas, la planta pierde menos agua y evita deshidratarse.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa04-017",
@@ -1754,7 +1754,7 @@
       ],
       "correcta": 2,
       "tip": "Los cloroplastos realizan fotosíntesis; el transporte lo hacen xilema, floema y el tallo.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa04-018",
@@ -1768,7 +1768,7 @@
       ],
       "correcta": 2,
       "tip": "El agua entra por la raíz, sube por el tallo y llega a la hoja.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa04-019",
@@ -1782,7 +1782,7 @@
       ],
       "correcta": 1,
       "tip": "Los estomas son las aberturas por donde entran y salen los gases.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa04-020",
@@ -1796,7 +1796,7 @@
       ],
       "correcta": 2,
       "tip": "La raíz muestra gravitropismo positivo: crece en el sentido de la gravedad.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa04-021",
@@ -1810,7 +1810,7 @@
       ],
       "correcta": 0,
       "tip": "El tallo muestra fototropismo positivo: crece hacia la fuente de luz.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa04-022",
@@ -1824,7 +1824,7 @@
       ],
       "correcta": 3,
       "tip": "La forma ancha y plana de la hoja aumenta la captación de luz para la fotosíntesis.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa04-023",
@@ -1838,7 +1838,7 @@
       ],
       "correcta": 0,
       "tip": "Las células oclusivas (de guarda) abren y cierran el poro del estoma.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa04-024",
@@ -1852,7 +1852,7 @@
       ],
       "correcta": 3,
       "tip": "Sin xilema, el agua no llega a las hojas y la planta se marchita.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa04-025",
@@ -1866,7 +1866,7 @@
       ],
       "correcta": 0,
       "tip": "Al perder vapor por transpiración, se genera una fuerza que ayuda al agua a subir por el xilema.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa04-026",
@@ -1880,7 +1880,7 @@
       ],
       "correcta": 3,
       "tip": "Doblarse hacia la luz (fototropismo) es una respuesta a un estímulo: la luz.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa04-027",
@@ -1894,7 +1894,7 @@
       ],
       "correcta": 0,
       "tip": "La savia bruta es agua con sales minerales que viaja por el xilema.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa04-028",
@@ -1908,7 +1908,7 @@
       ],
       "correcta": 1,
       "tip": "El tallo sostiene la planta y conecta el transporte entre raíz y hojas.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa04-029",
@@ -1922,7 +1922,7 @@
       ],
       "correcta": 1,
       "tip": "La fotosíntesis usa agua, CO2 y luz para producir azúcares y oxígeno.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa04-030",
@@ -1936,7 +1936,7 @@
       ],
       "correcta": 2,
       "tip": "Los estomas están en la epidermis de las hojas, sobre todo en la cara inferior.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa04-031",
@@ -1950,7 +1950,7 @@
       ],
       "correcta": 3,
       "tip": "El floema conduce la savia elaborada, rica en azúcares de la fotosíntesis.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa04-032",
@@ -1964,7 +1964,7 @@
       ],
       "correcta": 1,
       "tip": "Por fototropismo, el tallo se inclina hacia la única fuente de luz disponible.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa04-033",
@@ -1978,7 +1978,7 @@
       ],
       "correcta": 0,
       "tip": "Xilema y floema forman el tejido conductor (vascular) que transporta sustancias.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa04-034",
@@ -1992,7 +1992,7 @@
       ],
       "correcta": 3,
       "tip": "La cara inferior recibe menos sol, así se pierde menos agua por transpiración.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa04-035",
@@ -2006,7 +2006,7 @@
       ],
       "correcta": 0,
       "tip": "Los cloroplastos se concentran en las células de la hoja, donde ocurre la fotosíntesis.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa04-036",
@@ -2020,7 +2020,7 @@
       ],
       "correcta": 0,
       "tip": "Son dos respuestas a estímulos distintos: el tallo responde a la luz (fototropismo positivo) y la raíz a la gravedad (gravitropismo positivo).",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa01-035",
@@ -2034,7 +2034,7 @@
       ],
       "correcta": 0,
       "tip": "Van Leeuwenhoek fue el primero en observar microorganismos vivos ('animálculos') con sus microscopios.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa01-036",
@@ -2048,7 +2048,7 @@
       ],
       "correcta": 2,
       "tip": "Mejores instrumentos entregan nuevas evidencias; el microscopio electrónico muestra detalles invisibles para los primeros microscopios.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa01-037",
@@ -2062,7 +2062,7 @@
       ],
       "correcta": 1,
       "tip": "Las células son microscópicas; sin un instrumento que las ampliara no había evidencia para proponer la teoría.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa01-038",
@@ -2076,7 +2076,7 @@
       ],
       "correcta": 3,
       "tip": "La ciencia corrige y mejora sus modelos cuando aparece evidencia nueva y confiable.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa01-039",
@@ -2090,7 +2090,7 @@
       ],
       "correcta": 0,
       "tip": "Virchow aportó que las células se originan a partir de células ya existentes.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa01-040",
@@ -2104,7 +2104,7 @@
       ],
       "correcta": 2,
       "tip": "Los modelos científicos se ajustan y perfeccionan a medida que surge nueva información.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa01-041",
@@ -2118,7 +2118,7 @@
       ],
       "correcta": 1,
       "tip": "Según la teoría celular, todo ser vivo está formado por células; la roca no las tiene.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa01-042",
@@ -2132,7 +2132,7 @@
       ],
       "correcta": 3,
       "tip": "Ver una célula dividirse en dos es evidencia de que toda célula proviene de otra célula.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa01-043",
@@ -2146,7 +2146,7 @@
       ],
       "correcta": 0,
       "tip": "La teoría celular se construyó como un trabajo colectivo que fue acumulando evidencias con el tiempo.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa01-044",
@@ -2160,7 +2160,7 @@
       ],
       "correcta": 2,
       "tip": "Nueva evidencia confiable se incorpora al modelo para hacerlo más completo y preciso.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa02-037",
@@ -2174,7 +2174,7 @@
       ],
       "correcta": 1,
       "tip": "Los ribosomas son los encargados de sintetizar (fabricar) las proteínas de la célula.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa02-038",
@@ -2188,7 +2188,7 @@
       ],
       "correcta": 2,
       "tip": "Muchas mitocondrias indican una célula que gasta mucha energía, como las musculares.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa02-039",
@@ -2202,7 +2202,7 @@
       ],
       "correcta": 0,
       "tip": "Pared celular, cloroplastos y vacuola central grande son características de la célula vegetal.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa02-040",
@@ -2216,7 +2216,7 @@
       ],
       "correcta": 3,
       "tip": "Sin núcleo definido ni organelos con membrana, es una célula procarionte, más simple que la humana (eucarionte).",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa02-041",
@@ -2230,7 +2230,7 @@
       ],
       "correcta": 1,
       "tip": "La mitocondria produce la energía celular; sin ella, la célula no tendría suficiente energía para funcionar.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa02-042",
@@ -2244,7 +2244,7 @@
       ],
       "correcta": 2,
       "tip": "Los cloroplastos captan la luz y realizan la fotosíntesis, que produce el alimento de la célula vegetal.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa02-043",
@@ -2258,7 +2258,7 @@
       ],
       "correcta": 0,
       "tip": "El material genético libre y la ausencia de núcleo definido son propios de una célula procarionte, como una bacteria.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa02-044",
@@ -2272,7 +2272,7 @@
       ],
       "correcta": 3,
       "tip": "La membrana celular es una barrera selectiva que regula qué sustancias entran y salen.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa02-045",
@@ -2286,7 +2286,7 @@
       ],
       "correcta": 1,
       "tip": "El núcleo dirige las actividades de la célula y guarda el material genético; sin él, la célula pierde su centro de control.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa02-046",
@@ -2300,7 +2300,7 @@
       ],
       "correcta": 2,
       "tip": "Si se bloquean los ribosomas, la célula no puede sintetizar proteínas.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa03-039",
@@ -2314,7 +2314,7 @@
       ],
       "correcta": 2,
       "tip": "El agua salada es hipertónica (sale agua, la papa se arruga); el agua dulce es hipotónica (entra agua, la papa queda firme).",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa03-040",
@@ -2328,7 +2328,7 @@
       ],
       "correcta": 1,
       "tip": "El agua pura es hipotónica respecto al interior salado; por osmosis el agua entra a la bolsa y la hincha.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa03-041",
@@ -2342,7 +2342,7 @@
       ],
       "correcta": 3,
       "tip": "Hipertónico: más solutos afuera, el agua sale. Hipotónico: menos solutos afuera, el agua entra.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa03-042",
@@ -2356,7 +2356,7 @@
       ],
       "correcta": 0,
       "tip": "La sal crea un medio hipertónico; por osmosis el agua sale de las células y la verdura pierde firmeza.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa03-043",
@@ -2370,7 +2370,7 @@
       ],
       "correcta": 2,
       "tip": "En la osmosis el agua se mueve hacia el lado más concentrado en solutos (el 20%).",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa03-044",
@@ -2384,7 +2384,7 @@
       ],
       "correcta": 1,
       "tip": "Sin pared, la célula animal puede estallar; la pared celular rígida evita que la vegetal reviente.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa03-045",
@@ -2398,7 +2398,7 @@
       ],
       "correcta": 3,
       "tip": "El interior de la pasa está más concentrado; por osmosis el agua entra y la pasa se hincha.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa03-046",
@@ -2412,7 +2412,7 @@
       ],
       "correcta": 0,
       "tip": "Al ser isotónico, no hay movimiento neto de agua y las células conservan su forma y tamaño.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa03-047",
@@ -2426,7 +2426,7 @@
       ],
       "correcta": 2,
       "tip": "Concentraciones iguales dentro y fuera: medio isotónico, sin cambio neto de agua.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa03-048",
@@ -2440,7 +2440,7 @@
       ],
       "correcta": 1,
       "tip": "Las partículas de azúcar se difunden desde donde hay más hacia donde hay menos, hasta repartirse de forma pareja.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa04-037",
@@ -2454,7 +2454,7 @@
       ],
       "correcta": 2,
       "tip": "El agua con colorante sube por el xilema desde la base hasta las hojas, tiñendo el recorrido.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa04-038",
@@ -2468,7 +2468,7 @@
       ],
       "correcta": 3,
       "tip": "Al cerrar los estomas la planta se protege de la deshidratación, pero también entra menos CO2 y baja la fotosíntesis.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa04-039",
@@ -2482,7 +2482,7 @@
       ],
       "correcta": 0,
       "tip": "Por fototropismo positivo, el tallo se inclina hacia la única fuente de luz disponible.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa04-040",
@@ -2496,7 +2496,7 @@
       ],
       "correcta": 1,
       "tip": "El xilema conduce savia bruta (agua y sales) hacia arriba; el floema reparte savia elaborada (azúcares).",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa04-041",
@@ -2510,7 +2510,7 @@
       ],
       "correcta": 2,
       "tip": "Sin xilema el agua no llega a las hojas, por eso la planta se marchita.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa04-042",
@@ -2524,7 +2524,7 @@
       ],
       "correcta": 3,
       "tip": "El vapor de agua que sale por los estomas (transpiración) se condensa en la bolsa formando gotas.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa04-043",
@@ -2538,7 +2538,7 @@
       ],
       "correcta": 0,
       "tip": "Por gravitropismo, la raíz crece a favor de la gravedad (hacia abajo) y el tallo en contra (hacia arriba).",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa04-044",
@@ -2552,7 +2552,7 @@
       ],
       "correcta": 1,
       "tip": "La forma ancha y plana y la abundancia de cloroplastos aumentan la captación de luz para la fotosíntesis.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa04-045",
@@ -2566,7 +2566,7 @@
       ],
       "correcta": 2,
       "tip": "En ambientes secos conviene reducir la transpiración, por eso las plantas limitan la apertura de estomas.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa04-046",
@@ -2580,7 +2580,7 @@
       ],
       "correcta": 3,
       "tip": "La luz es una materia prima indispensable de la fotosíntesis; sin ella el proceso no puede realizarse.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa05-001",
@@ -2594,7 +2594,7 @@
       ],
       "correcta": 0,
       "tip": "El sistema digestivo descompone los alimentos en moléculas pequeñas (nutrientes) que pueden pasar a la sangre.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa05-002",
@@ -2608,7 +2608,7 @@
       ],
       "correcta": 0,
       "tip": "En los pulmones ocurre el intercambio gaseoso: entra oxígeno a la sangre y sale dióxido de carbono.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa05-003",
@@ -2622,7 +2622,7 @@
       ],
       "correcta": 1,
       "tip": "La sangre recoge el oxígeno en los pulmones y lo reparte a todas las células del cuerpo.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa05-004",
@@ -2636,7 +2636,7 @@
       ],
       "correcta": 3,
       "tip": "El riñón filtra la sangre y forma la orina. La vejiga solo almacena la orina; el hígado y el corazón cumplen otras funciones.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa05-005",
@@ -2650,7 +2650,7 @@
       ],
       "correcta": 2,
       "tip": "El intestino delgado absorbe los nutrientes hacia la sangre, que los reparte por el cuerpo.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa05-006",
@@ -2664,7 +2664,7 @@
       ],
       "correcta": 2,
       "tip": "Los nutrientes obtenidos en la digestión viajan por la sangre hasta las células que los necesitan.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa05-007",
@@ -2678,7 +2678,7 @@
       ],
       "correcta": 1,
       "tip": "Los alvéolos son pequeños sacos de los pulmones donde el oxígeno pasa a la sangre y sale el dióxido de carbono.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa05-008",
@@ -2692,7 +2692,7 @@
       ],
       "correcta": 2,
       "tip": "Las células producen dióxido de carbono; la sangre lo lleva a los pulmones, donde se exhala.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa05-009",
@@ -2706,7 +2706,7 @@
       ],
       "correcta": 3,
       "tip": "Los riñones filtran la sangre, retienen lo útil y eliminan los desechos disueltos como orina.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa05-010",
@@ -2720,7 +2720,7 @@
       ],
       "correcta": 1,
       "tip": "El corazón funciona como una bomba que impulsa la sangre por las arterias y venas.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa05-011",
@@ -2734,7 +2734,7 @@
       ],
       "correcta": 3,
       "tip": "Al hacer ejercicio, las células necesitan más oxígeno y energía, y los sistemas responden juntos.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa05-012",
@@ -2748,7 +2748,7 @@
       ],
       "correcta": 1,
       "tip": "El esófago es el tubo del sistema digestivo que lleva el alimento desde la boca hasta el estómago.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa05-013",
@@ -2762,7 +2762,7 @@
       ],
       "correcta": 1,
       "tip": "Homeostasis es el equilibrio interno que el cuerpo mantiene, por ejemplo en temperatura y agua.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa05-014",
@@ -2776,7 +2776,7 @@
       ],
       "correcta": 2,
       "tip": "El oxígeno entra por los pulmones, pero es la sangre la que lo distribuye a todo el cuerpo.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa05-015",
@@ -2790,7 +2790,7 @@
       ],
       "correcta": 2,
       "tip": "El sistema excretor elimina los desechos que se producen al usar los nutrientes en las células.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa05-016",
@@ -2804,7 +2804,7 @@
       ],
       "correcta": 1,
       "tip": "El exceso de grasas puede acumularse en las arterias y dificultar la circulación de la sangre.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa05-017",
@@ -2818,7 +2818,7 @@
       ],
       "correcta": 2,
       "tip": "Las células usan el oxígeno para liberar la energía guardada en los nutrientes (respiración celular).",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa05-018",
@@ -2832,7 +2832,7 @@
       ],
       "correcta": 3,
       "tip": "El intestino delgado tiene una gran superficie interna que permite absorber los nutrientes hacia la sangre.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa05-019",
@@ -2846,7 +2846,7 @@
       ],
       "correcta": 0,
       "tip": "El humo del tabaco daña los alvéolos y reduce la capacidad de captar oxígeno.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa05-020",
@@ -2860,7 +2860,7 @@
       ],
       "correcta": 0,
       "tip": "El aire entra por la nariz, baja por la tráquea y llega a los pulmones.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa05-021",
@@ -2874,7 +2874,7 @@
       ],
       "correcta": 3,
       "tip": "El agua permite que los riñones disuelvan y eliminen los desechos a través de la orina.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa05-022",
@@ -2888,7 +2888,7 @@
       ],
       "correcta": 0,
       "tip": "Las células combinan nutrientes y oxígeno para obtener energía; esto conecta digestión, respiración y circulación.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa05-023",
@@ -2902,7 +2902,7 @@
       ],
       "correcta": 0,
       "tip": "Los sistemas cooperan para nutrir las células, entregar oxígeno y eliminar desechos, manteniendo la salud.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa05-024",
@@ -2916,7 +2916,7 @@
       ],
       "correcta": 3,
       "tip": "Sin la filtración de los riñones, los desechos se acumulan en la sangre y afectan la salud.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa05-025",
@@ -2930,7 +2930,7 @@
       ],
       "correcta": 0,
       "tip": "El ejercicio regular fortalece el sistema circulatorio y respiratorio, mejorando la salud general.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa06-001",
@@ -2944,7 +2944,7 @@
       ],
       "correcta": 3,
       "tip": "Los carbohidratos, como el pan o el arroz, aportan la energía que el cuerpo usa a diario.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa06-002",
@@ -2958,7 +2958,7 @@
       ],
       "correcta": 1,
       "tip": "Las proteínas de carnes, huevos y legumbres construyen y reparan músculos y otros tejidos.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa06-003",
@@ -2972,7 +2972,7 @@
       ],
       "correcta": 0,
       "tip": "Las legumbres, carnes, huevos y lácteos aportan proteínas al cuerpo.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa06-004",
@@ -2986,7 +2986,7 @@
       ],
       "correcta": 0,
       "tip": "Las grasas almacenan energía y ayudan a absorber vitaminas como la A, D, E y K; lo importante es consumirlas con moderación.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa06-005",
@@ -3000,7 +3000,7 @@
       ],
       "correcta": 1,
       "tip": "Las vitaminas se necesitan en pequeñas cantidades, pero son clave para muchas funciones del cuerpo.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa06-006",
@@ -3014,7 +3014,7 @@
       ],
       "correcta": 0,
       "tip": "Los minerales, como el calcio (huesos) y el hierro (sangre), cumplen funciones específicas en el cuerpo.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa06-007",
@@ -3028,7 +3028,7 @@
       ],
       "correcta": 2,
       "tip": "El agua es el componente más abundante del cuerpo y participa en la digestión, el transporte y la temperatura.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa06-008",
@@ -3042,7 +3042,7 @@
       ],
       "correcta": 3,
       "tip": "El calcio, presente en los lácteos, es clave para huesos y dientes fuertes.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa06-009",
@@ -3056,7 +3056,7 @@
       ],
       "correcta": 2,
       "tip": "El lugol reacciona con el almidón tiñéndose de azul oscuro; es una prueba clásica para carbohidratos.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa06-010",
@@ -3070,7 +3070,7 @@
       ],
       "correcta": 0,
       "tip": "La mancha translúcida en el papel es una prueba sencilla que indica presencia de grasas.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa06-011",
@@ -3084,7 +3084,7 @@
       ],
       "correcta": 2,
       "tip": "El hierro ayuda a transportar oxígeno en la sangre; su falta puede causar anemia y fatiga.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa06-012",
@@ -3098,7 +3098,7 @@
       ],
       "correcta": 1,
       "tip": "Los cereales, panes, arroz y papas son ricos en carbohidratos, la principal fuente de energía.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa06-013",
@@ -3112,7 +3112,7 @@
       ],
       "correcta": 1,
       "tip": "Frutas y verduras aportan vitaminas, minerales y fibra, importantes para la salud.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa06-014",
@@ -3126,7 +3126,7 @@
       ],
       "correcta": 3,
       "tip": "Los nutrientes son sustancias del alimento útiles para el cuerpo; el humo del cigarrillo no lo es.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa06-015",
@@ -3140,7 +3140,7 @@
       ],
       "correcta": 2,
       "tip": "Al sudar se pierde agua; reponerla mantiene el equilibrio interno y evita la deshidratación.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa06-016",
@@ -3154,7 +3154,7 @@
       ],
       "correcta": 0,
       "tip": "Las grasas concentran más energía por gramo que los carbohidratos o las proteínas.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa06-017",
@@ -3168,7 +3168,7 @@
       ],
       "correcta": 3,
       "tip": "La vitamina C contribuye al sistema de defensas y se encuentra en frutas cítricas.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa06-018",
@@ -3182,7 +3182,7 @@
       ],
       "correcta": 1,
       "tip": "El reactivo de biuret cambia a color violeta cuando hay proteínas en la muestra.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa06-019",
@@ -3196,7 +3196,7 @@
       ],
       "correcta": 0,
       "tip": "Ningún alimento tiene todos los nutrientes; por eso una dieta variada asegura un aporte completo.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa06-020",
@@ -3210,7 +3210,7 @@
       ],
       "correcta": 3,
       "tip": "El exceso de azúcar puede llevar a aumento de peso y a problemas de salud como la diabetes.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa06-021",
@@ -3224,7 +3224,7 @@
       ],
       "correcta": 2,
       "tip": "Vitaminas y minerales no dan energía, pero regulan funciones vitales y se requieren en poca cantidad.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa06-022",
@@ -3238,7 +3238,7 @@
       ],
       "correcta": 2,
       "tip": "El yodo es necesario para la tiroides; por eso en Chile la sal suele estar yodada.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa06-023",
@@ -3252,7 +3252,7 @@
       ],
       "correcta": 1,
       "tip": "Las proteínas ayudan a reparar y construir tejido muscular tras el ejercicio.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa06-024",
@@ -3266,7 +3266,7 @@
       ],
       "correcta": 1,
       "tip": "La fibra favorece la digestión y el tránsito intestinal, aunque el cuerpo no la absorbe como energía.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa06-025",
@@ -3280,7 +3280,7 @@
       ],
       "correcta": 3,
       "tip": "El agua hidrata sin azúcares añadidos; las bebidas azucaradas aportan calorías innecesarias.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa07-001",
@@ -3294,7 +3294,7 @@
       ],
       "correcta": 0,
       "tip": "Una alimentación balanceada combina carbohidratos, proteínas, grasas, vitaminas, minerales y agua en las proporciones adecuadas.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa07-002",
@@ -3308,7 +3308,7 @@
       ],
       "correcta": 2,
       "tip": "El ejercicio regular fortalece el sistema circulatorio y muscular y mejora el bienestar general.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa07-003",
@@ -3322,7 +3322,7 @@
       ],
       "correcta": 2,
       "tip": "El tabaco daña los pulmones y el sistema circulatorio, y aumenta el riesgo de cáncer y otras enfermedades.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa07-004",
@@ -3336,7 +3336,7 @@
       ],
       "correcta": 1,
       "tip": "El cerebro sigue desarrollándose en la adolescencia; el alcohol puede dañar ese desarrollo.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa07-005",
@@ -3350,7 +3350,7 @@
       ],
       "correcta": 0,
       "tip": "La actividad física regular es un pilar de la vida saludable, junto a la buena alimentación y el descanso.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa07-006",
@@ -3364,7 +3364,7 @@
       ],
       "correcta": 2,
       "tip": "La vida saludable combina buena alimentación, actividad física y evitar alcohol, tabaco y drogas.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa07-007",
@@ -3378,7 +3378,7 @@
       ],
       "correcta": 3,
       "tip": "Dormir lo suficiente permite que el cuerpo y la mente se recuperen y rindan mejor.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa07-008",
@@ -3392,7 +3392,7 @@
       ],
       "correcta": 1,
       "tip": "Cambios simples y sostenibles, como caminar y comer más frutas y verduras, mejoran la salud.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa07-009",
@@ -3406,7 +3406,7 @@
       ],
       "correcta": 3,
       "tip": "Las drogas alteran funciones del cuerpo y del cerebro, y pueden crear dependencia y daño a la salud.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa07-010",
@@ -3420,7 +3420,7 @@
       ],
       "correcta": 3,
       "tip": "Los hábitos que se adquieren jóvenes influyen en la salud durante toda la vida.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa07-011",
@@ -3434,7 +3434,7 @@
       ],
       "correcta": 0,
       "tip": "La falta de movimiento aumenta el riesgo de obesidad y de enfermedades del corazón.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa07-012",
@@ -3448,7 +3448,7 @@
       ],
       "correcta": 1,
       "tip": "Equilibrar lo que se come con la energía que se gasta al moverse ayuda a mantener un peso saludable.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa07-013",
@@ -3462,7 +3462,7 @@
       ],
       "correcta": 2,
       "tip": "El humo de segunda mano (fumador pasivo) también daña la salud de quienes rodean al fumador.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa07-014",
@@ -3476,7 +3476,7 @@
       ],
       "correcta": 2,
       "tip": "Reducir alimentos grasos y sumar movimiento son cambios clave para mejorar la salud.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa07-015",
@@ -3490,7 +3490,7 @@
       ],
       "correcta": 2,
       "tip": "La publicidad puede promover alimentos poco saludables; conviene analizarla con mirada crítica.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa07-016",
@@ -3504,7 +3504,7 @@
       ],
       "correcta": 1,
       "tip": "El agua limpia y la higiene previenen enfermedades y son parte de una vida saludable.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa07-017",
@@ -3518,7 +3518,7 @@
       ],
       "correcta": 3,
       "tip": "Las bebidas azucaradas aportan mucho azúcar, que en exceso favorece la obesidad y las caries.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa07-018",
@@ -3532,7 +3532,7 @@
       ],
       "correcta": 0,
       "tip": "Una base de frutas, verduras, cereales, legumbres y agua aporta los nutrientes que un adolescente necesita.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa07-019",
@@ -3546,7 +3546,7 @@
       ],
       "correcta": 0,
       "tip": "Además del cuerpo, el ejercicio ayuda a la mente: reduce el estrés y mejora el estado de ánimo.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa07-020",
@@ -3560,7 +3560,7 @@
       ],
       "correcta": 0,
       "tip": "La dependencia es la necesidad física o psicológica de consumir una sustancia, y dificulta dejarla.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa07-021",
@@ -3574,7 +3574,7 @@
       ],
       "correcta": 1,
       "tip": "Los hábitos saludables funcionan mejor cuando las metas son realistas y sostenidas en el tiempo.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa07-022",
@@ -3588,7 +3588,7 @@
       ],
       "correcta": 1,
       "tip": "Una alimentación adecuada aporta la energía y los nutrientes que el cerebro necesita para concentrarse.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa07-023",
@@ -3602,7 +3602,7 @@
       ],
       "correcta": 2,
       "tip": "Rechazar el tabaco protege tu salud; incluso el consumo ocasional es dañino.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa07-024",
@@ -3616,7 +3616,7 @@
       ],
       "correcta": 3,
       "tip": "La salud integral combina alimentación, ejercicio, descanso y evitar alcohol, tabaco y drogas.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa07-025",
@@ -3630,7 +3630,7 @@
       ],
       "correcta": 3,
       "tip": "Analizar los propios hábitos ayuda a decidir con información qué cambiar para mejorar la salud.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa08-001",
@@ -3644,7 +3644,7 @@
       ],
       "correcta": 0,
       "tip": "La carga eléctrica es una propiedad de la materia; existen dos tipos, positiva y negativa.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa08-002",
@@ -3658,7 +3658,7 @@
       ],
       "correcta": 1,
       "tip": "Las cargas del mismo signo se repelen y las de signo distinto se atraen.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa08-003",
@@ -3672,7 +3672,7 @@
       ],
       "correcta": 2,
       "tip": "Cargas iguales se repelen; cargas opuestas se atraen.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa08-004",
@@ -3686,7 +3686,7 @@
       ],
       "correcta": 3,
       "tip": "Cargas de signo opuesto se atraen entre sí.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa08-005",
@@ -3700,7 +3700,7 @@
       ],
       "correcta": 0,
       "tip": "Al frotar dos materiales se transfieren electrones; esto es electrización por fricción o roce.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa08-006",
@@ -3714,7 +3714,7 @@
       ],
       "correcta": 1,
       "tip": "En la electrización solo se transfieren electrones; los protones del núcleo no se mueven.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa08-007",
@@ -3728,7 +3728,7 @@
       ],
       "correcta": 2,
       "tip": "En la electrización por contacto, dos cuerpos se tocan y la carga se reparte; ambos quedan con el mismo signo.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa08-008",
@@ -3742,7 +3742,7 @@
       ],
       "correcta": 3,
       "tip": "En la inducción no hay contacto: la sola cercanía de un objeto cargado reordena las cargas del cuerpo neutro.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa08-009",
@@ -3756,7 +3756,7 @@
       ],
       "correcta": 0,
       "tip": "La palabra clave de la inducción es 'sin tocar'; el contacto requiere que los cuerpos se toquen.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa08-010",
@@ -3770,7 +3770,7 @@
       ],
       "correcta": 1,
       "tip": "Los metales como el cobre son buenos conductores; el plástico y la madera seca son aislantes.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa08-011",
@@ -3784,7 +3784,7 @@
       ],
       "correcta": 2,
       "tip": "El plástico es aislante: impide el paso de la corriente y protege a las personas.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa08-012",
@@ -3798,7 +3798,7 @@
       ],
       "correcta": 3,
       "tip": "El agua común, con sales minerales, conduce la electricidad; por eso aumenta el riesgo de descarga.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa08-013",
@@ -3812,7 +3812,7 @@
       ],
       "correcta": 0,
       "tip": "El rayo es una enorme descarga eléctrica que iguala las cargas acumuladas entre la nube y el suelo.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa08-014",
@@ -3826,7 +3826,7 @@
       ],
       "correcta": 1,
       "tip": "Al caminar te puedes cargar por fricción; al tocar un metal, esa carga se descarga y produce el chispazo.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa08-015",
@@ -3840,7 +3840,7 @@
       ],
       "correcta": 2,
       "tip": "El pararrayos ofrece un camino seguro para que la carga del rayo llegue a tierra sin dañar el edificio.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa08-016",
@@ -3854,7 +3854,7 @@
       ],
       "correcta": 3,
       "tip": "Si las cargas positivas (protones) y negativas (electrones) son iguales, el átomo es neutro.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa08-017",
@@ -3868,7 +3868,7 @@
       ],
       "correcta": 0,
       "tip": "Ganar electrones (cargas negativas) deja al objeto con carga negativa; perderlos lo deja positivo.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa08-018",
@@ -3882,7 +3882,7 @@
       ],
       "correcta": 1,
       "tip": "Perder electrones deja al cuerpo con exceso de carga positiva.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa08-019",
@@ -3896,7 +3896,7 @@
       ],
       "correcta": 2,
       "tip": "Mientras más cerca están las cargas, mayor es la fuerza eléctrica entre ellas.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa08-020",
@@ -3910,7 +3910,7 @@
       ],
       "correcta": 3,
       "tip": "La fricción con la lana carga los pelos con el mismo signo; al repelerse, se separan.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa08-021",
@@ -3924,7 +3924,7 @@
       ],
       "correcta": 0,
       "tip": "El globo cargado induce en la pared una carga opuesta, y por eso se atraen (electrización por inducción).",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa08-022",
@@ -3938,7 +3938,7 @@
       ],
       "correcta": 1,
       "tip": "Si el hilo, sobre todo mojado o con metal, toca un cable, la electricidad puede llegar hasta la persona.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa08-023",
@@ -3952,7 +3952,7 @@
       ],
       "correcta": 2,
       "tip": "El electroscopio detecta cargas: sus láminas se separan cuando se acerca un cuerpo cargado.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa08-024",
@@ -3966,7 +3966,7 @@
       ],
       "correcta": 3,
       "tip": "Plástico, vidrio y goma son aislantes; los metales (cobre, aluminio, hierro) son conductores.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa08-025",
@@ -3980,7 +3980,7 @@
       ],
       "correcta": 0,
       "tip": "Los electrones ocupan la zona externa del átomo y pueden desplazarse; los protones quedan atrapados en el núcleo.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa09-001",
@@ -3994,7 +3994,7 @@
       ],
       "correcta": 1,
       "tip": "Dentro de una pila ocurren reacciones químicas que producen energía eléctrica.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa09-002",
@@ -4008,7 +4008,7 @@
       ],
       "correcta": 2,
       "tip": "Los paneles fotovoltaicos convierten la luz solar directamente en energía eléctrica.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa09-003",
@@ -4022,7 +4022,7 @@
       ],
       "correcta": 3,
       "tip": "Un generador transforma energía de movimiento (mecánica) en energía eléctrica mediante magnetismo.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa09-004",
@@ -4036,7 +4036,7 @@
       ],
       "correcta": 0,
       "tip": "El Sol, el viento y el agua son fuentes renovables; el carbón, el petróleo y el gas son combustibles fósiles.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa09-005",
@@ -4050,7 +4050,7 @@
       ],
       "correcta": 1,
       "tip": "El petróleo es un combustible fósil: se agota y no se renueva en una escala de tiempo humana.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa09-006",
@@ -4064,7 +4064,7 @@
       ],
       "correcta": 2,
       "tip": "Los paneles solares generan electricidad sin emitir gases contaminantes; el carbón sí los emite.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa09-007",
@@ -4078,7 +4078,7 @@
       ],
       "correcta": 3,
       "tip": "Los paneles necesitan luz solar; de noche o con mucha nubosidad su producción baja.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa09-008",
@@ -4092,7 +4092,7 @@
       ],
       "correcta": 0,
       "tip": "El agua mueve turbinas y generadores; así la energía del movimiento se convierte en electricidad.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa09-009",
@@ -4106,7 +4106,7 @@
       ],
       "correcta": 1,
       "tip": "El viento hace girar las aspas del aerogenerador, que mueven un generador y producen electricidad.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa09-010",
@@ -4120,7 +4120,7 @@
       ],
       "correcta": 2,
       "tip": "Las baterías recargables pueden cargarse y descargarse muchas veces antes de agotarse.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa09-011",
@@ -4134,7 +4134,7 @@
       ],
       "correcta": 3,
       "tip": "Al cargar, la batería guarda energía en forma química; al usar el celular, la devuelve como eléctrica.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa09-012",
@@ -4148,7 +4148,7 @@
       ],
       "correcta": 0,
       "tip": "Toda pila tiene un polo positivo (+) y uno negativo (−); entre ellos hay una diferencia de voltaje.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa09-013",
@@ -4162,7 +4162,7 @@
       ],
       "correcta": 1,
       "tip": "El carbón se quema para hervir agua; el vapor mueve turbinas y generadores que producen electricidad.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa09-014",
@@ -4176,7 +4176,7 @@
       ],
       "correcta": 2,
       "tip": "Los fósiles son limitados y contaminan; las renovables son más limpias y prácticamente inagotables.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa09-015",
@@ -4190,7 +4190,7 @@
       ],
       "correcta": 3,
       "tip": "La energía geotérmica aprovecha el calor del interior de la Tierra; Chile tiene gran potencial por sus volcanes.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa09-016",
@@ -4204,7 +4204,7 @@
       ],
       "correcta": 0,
       "tip": "La celda de la calculadora es un pequeño panel fotovoltaico que usa la luz para funcionar.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa09-017",
@@ -4218,7 +4218,7 @@
       ],
       "correcta": 1,
       "tip": "La energía se transforma de una forma a otra; las tecnologías eléctricas convierten una fuente en electricidad.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa09-018",
@@ -4232,7 +4232,7 @@
       ],
       "correcta": 2,
       "tip": "El dínamo transforma el movimiento de la rueda en electricidad para encender la luz.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa09-019",
@@ -4246,7 +4246,7 @@
       ],
       "correcta": 3,
       "tip": "En una zona muy soleada, los paneles solares aprovechan mejor el recurso disponible.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa09-020",
@@ -4260,7 +4260,7 @@
       ],
       "correcta": 0,
       "tip": "La pila funciona por reacciones químicas; cuando esas sustancias se consumen, deja de dar energía.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa09-021",
@@ -4274,7 +4274,7 @@
       ],
       "correcta": 1,
       "tip": "La energía mareomotriz aprovecha el subir y bajar de las mareas para generar electricidad.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa09-022",
@@ -4288,7 +4288,7 @@
       ],
       "correcta": 2,
       "tip": "El panel no gasta un combustible interno: usa la luz solar, un recurso renovable que se repone a diario.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa09-023",
@@ -4302,7 +4302,7 @@
       ],
       "correcta": 3,
       "tip": "La biomasa usa materia orgánica (madera, desechos vegetales) como combustible para generar energía.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa09-024",
@@ -4316,7 +4316,7 @@
       ],
       "correcta": 0,
       "tip": "Mucha electricidad todavía proviene de fuentes contaminantes; ahorrar reduce contaminación y costo.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa09-025",
@@ -4330,7 +4330,7 @@
       ],
       "correcta": 1,
       "tip": "Mientras más luz solar directa recibe, más electricidad genera el panel.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa10-001",
@@ -4344,7 +4344,7 @@
       ],
       "correcta": 2,
       "tip": "Un circuito necesita una fuente (pila), un camino conductor (cables) y un componente que use la energía.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa10-002",
@@ -4358,7 +4358,7 @@
       ],
       "correcta": 3,
       "tip": "La corriente solo circula si el camino está cerrado; si el circuito se abre, no pasa corriente.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa10-003",
@@ -4372,7 +4372,7 @@
       ],
       "correcta": 0,
       "tip": "La corriente es el flujo de cargas (electrones) que se mueven por el conductor.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa10-004",
@@ -4386,7 +4386,7 @@
       ],
       "correcta": 1,
       "tip": "El voltaje es la diferencia de energía que impulsa las cargas; se mide en voltios (V).",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa10-005",
@@ -4400,7 +4400,7 @@
       ],
       "correcta": 2,
       "tip": "La resistencia mide la oposición al paso de la corriente; se mide en ohmios (Ω).",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa10-006",
@@ -4414,7 +4414,7 @@
       ],
       "correcta": 3,
       "tip": "La corriente se mide en amperios (A); el voltaje en voltios y la resistencia en ohmios.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa10-007",
@@ -4428,7 +4428,7 @@
       ],
       "correcta": 0,
       "tip": "En serie hay un único camino: la corriente pasa por un componente y luego por el siguiente.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa10-008",
@@ -4442,7 +4442,7 @@
       ],
       "correcta": 1,
       "tip": "En paralelo, cada componente tiene su propio camino; la corriente se reparte entre las ramas.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa10-009",
@@ -4456,7 +4456,7 @@
       ],
       "correcta": 2,
       "tip": "En serie hay un solo camino; si se corta en un punto, toda la corriente se detiene.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa10-010",
@@ -4470,7 +4470,7 @@
       ],
       "correcta": 3,
       "tip": "En paralelo cada rama es independiente; si una se corta, las demás siguen funcionando.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa10-011",
@@ -4484,7 +4484,7 @@
       ],
       "correcta": 0,
       "tip": "En paralelo cada artefacto es independiente y recibe el mismo voltaje; por eso se usa en las casas.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa10-012",
@@ -4498,7 +4498,7 @@
       ],
       "correcta": 1,
       "tip": "A mayor resistencia total, menor corriente para el mismo voltaje.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa10-013",
@@ -4512,7 +4512,7 @@
       ],
       "correcta": 2,
       "tip": "En serie el voltaje se reparte; con más ampolletas, a cada una le toca menos y brillan menos.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa10-014",
@@ -4526,7 +4526,7 @@
       ],
       "correcta": 3,
       "tip": "La potencia, en watts, mide cuánta energía usa el artefacto por segundo; a más watts, más consumo.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa10-015",
@@ -4540,7 +4540,7 @@
       ],
       "correcta": 0,
       "tip": "La potencia se mide en watts (W); una ampolleta de 100 W consume más que una de 40 W.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa10-016",
@@ -4554,7 +4554,7 @@
       ],
       "correcta": 1,
       "tip": "El interruptor abre el circuito (apaga) o lo cierra (enciende) controlando el paso de la corriente.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa10-017",
@@ -4568,7 +4568,7 @@
       ],
       "correcta": 2,
       "tip": "Que se apaguen todas al fallar una es la marca típica de una conexión en serie.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa10-018",
@@ -4582,7 +4582,7 @@
       ],
       "correcta": 3,
       "tip": "En paralelo, todas las ramas reciben el mismo voltaje de la fuente.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa10-019",
@@ -4596,7 +4596,7 @@
       ],
       "correcta": 0,
       "tip": "El fusible o disyuntor corta la corriente cuando es excesiva, protegiendo la instalación.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa10-020",
@@ -4610,7 +4610,7 @@
       ],
       "correcta": 1,
       "tip": "En un cortocircuito la corriente se dispara por un camino de resistencia casi nula; puede calentar y quemar.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa10-021",
@@ -4624,7 +4624,7 @@
       ],
       "correcta": 2,
       "tip": "Con la misma resistencia, más voltaje impulsa más corriente (relación de la ley de Ohm).",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa10-022",
@@ -4638,7 +4638,7 @@
       ],
       "correcta": 3,
       "tip": "A mayor potencia (watts), mayor consumo de energía por segundo; la estufa gasta mucho más que un LED.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa10-023",
@@ -4652,7 +4652,7 @@
       ],
       "correcta": 0,
       "tip": "El voltaje se mide con un voltímetro; la corriente, con un amperímetro.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa10-024",
@@ -4666,7 +4666,7 @@
       ],
       "correcta": 1,
       "tip": "En paralelo cada aparato es independiente; puedes apagar la televisión sin apagar el refrigerador.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa10-025",
@@ -4680,7 +4680,7 @@
       ],
       "correcta": 2,
       "tip": "Serie = un solo camino; paralelo = varios caminos. Eso explica sus diferencias de brillo, corriente y fallas.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa11-001",
@@ -4694,7 +4694,7 @@
       ],
       "correcta": 3,
       "tip": "El calor es energía en tránsito: fluye del cuerpo de mayor temperatura al de menor temperatura.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa11-002",
@@ -4708,7 +4708,7 @@
       ],
       "correcta": 0,
       "tip": "A mayor temperatura, más rápido se agitan las partículas del cuerpo.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa11-003",
@@ -4722,7 +4722,7 @@
       ],
       "correcta": 1,
       "tip": "El calor fluye del cuerpo más caliente al más frío hasta alcanzar el equilibrio térmico.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa11-004",
@@ -4736,7 +4736,7 @@
       ],
       "correcta": 2,
       "tip": "Temperatura y calor no son lo mismo: la temperatura es una medida; el calor es energía que se transfiere.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa11-005",
@@ -4750,7 +4750,7 @@
       ],
       "correcta": 3,
       "tip": "En el equilibrio térmico ambos cuerpos alcanzan la misma temperatura y deja de fluir calor.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa11-006",
@@ -4764,7 +4764,7 @@
       ],
       "correcta": 0,
       "tip": "En la conducción el calor pasa de partícula a partícula por contacto; es típica de los sólidos, como los metales.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa11-007",
@@ -4778,7 +4778,7 @@
       ],
       "correcta": 1,
       "tip": "En la convección el fluido caliente sube y el frío baja, formando corrientes que transportan el calor.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa11-008",
@@ -4792,7 +4792,7 @@
       ],
       "correcta": 2,
       "tip": "La radiación viaja como ondas y no necesita materia; así el calor del Sol llega a la Tierra a través del vacío.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa11-009",
@@ -4806,7 +4806,7 @@
       ],
       "correcta": 3,
       "tip": "Entre el Sol y la Tierra hay vacío; solo la radiación puede transferir calor sin materia.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa11-010",
@@ -4820,7 +4820,7 @@
       ],
       "correcta": 0,
       "tip": "En el metal, el calor viaja de partícula a partícula por conducción hasta el mango.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa11-011",
@@ -4834,7 +4834,7 @@
       ],
       "correcta": 1,
       "tip": "El agua caliente, menos densa, sube y la fría baja: son corrientes de convección.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa11-012",
@@ -4848,7 +4848,7 @@
       ],
       "correcta": 2,
       "tip": "Los metales conducen bien el calor; la madera, el plástico y la lana son aislantes térmicos.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa11-013",
@@ -4862,7 +4862,7 @@
       ],
       "correcta": 3,
       "tip": "El plástico y la madera son aislantes: conducen poco calor, por eso protegen la mano.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa11-014",
@@ -4876,7 +4876,7 @@
       ],
       "correcta": 0,
       "tip": "La lana atrapa aire y conduce mal el calor, así reduce la pérdida del calor corporal.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa11-015",
@@ -4890,7 +4890,7 @@
       ],
       "correcta": 1,
       "tip": "El termómetro mide temperatura (en °C, por ejemplo), no la cantidad de calor.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa11-016",
@@ -4904,7 +4904,7 @@
       ],
       "correcta": 2,
       "tip": "A igual temperatura final, más masa requiere más calor: por eso el mar tarda más en calentarse que un vaso.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa11-017",
@@ -4918,7 +4918,7 @@
       ],
       "correcta": 3,
       "tip": "Aunque estén a igual temperatura, el metal quita calor a tu mano más rápido; por eso se siente frío.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa11-018",
@@ -4932,7 +4932,7 @@
       ],
       "correcta": 0,
       "tip": "Las brisas se forman por convección: el aire caliente sube y el más frío ocupa su lugar.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa11-019",
@@ -4946,7 +4946,7 @@
       ],
       "correcta": 1,
       "tip": "El termo minimiza conducción, convección y radiación, así el contenido conserva su temperatura.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa11-020",
@@ -4960,7 +4960,7 @@
       ],
       "correcta": 2,
       "tip": "Los colores oscuros absorben más radiación; los claros reflejan más y se calientan menos.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa11-021",
@@ -4974,7 +4974,7 @@
       ],
       "correcta": 3,
       "tip": "Al calentarse, las partículas se agitan más y el material suele dilatarse (aumentar de volumen).",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa11-022",
@@ -4988,7 +4988,7 @@
       ],
       "correcta": 0,
       "tip": "El frío no se transfiere: es el calor del jugo el que pasa al hielo, por eso el jugo se enfría.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa11-023",
@@ -5002,7 +5002,7 @@
       ],
       "correcta": 1,
       "tip": "El aire caliente sube y el frío baja: corrientes de convección reparten el calor por la pieza.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa11-024",
@@ -5016,7 +5016,7 @@
       ],
       "correcta": 2,
       "tip": "Base conductora para cocinar y mango aislante para no quemarse: cada material según su función térmica.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa11-025",
@@ -5030,7 +5030,7 @@
       ],
       "correcta": 3,
       "tip": "Solo la radiación viaja por el vacío; la conducción y la convección necesitan materia.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa12-001",
@@ -5044,7 +5044,7 @@
       ],
       "correcta": 0,
       "tip": "Dalton (inicios del siglo XIX) planteó que la materia estaba hecha de átomos indivisibles e indestructibles: fue el punto de partida de la teoría atómica moderna.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa12-002",
@@ -5058,7 +5058,7 @@
       ],
       "correcta": 1,
       "tip": "Para Dalton el átomo era como una pequeña esfera sólida, maciza e indivisible, sin partes internas conocidas todavía.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa12-003",
@@ -5072,7 +5072,7 @@
       ],
       "correcta": 2,
       "tip": "Thomson identificó el electrón, una partícula muy pequeña de carga negativa, al estudiar los rayos catódicos.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa12-004",
@@ -5086,7 +5086,7 @@
       ],
       "correcta": 3,
       "tip": "Thomson imaginó una esfera de carga positiva con los electrones (las 'pasas') repartidos dentro, de modo que el átomo fuera neutro.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa12-005",
@@ -5100,7 +5100,7 @@
       ],
       "correcta": 0,
       "tip": "Rutherford dirigió el experimento de la lámina de oro, cuyos resultados lo llevaron a proponer la existencia de un núcleo atómico.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa12-006",
@@ -5114,7 +5114,7 @@
       ],
       "correcta": 1,
       "tip": "Que casi todas pasaran indica mucho espacio vacío; que unas pocas rebotaran indica una zona pequeña, densa y positiva: el núcleo.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa12-007",
@@ -5128,7 +5128,7 @@
       ],
       "correcta": 2,
       "tip": "Rutherford propuso un núcleo positivo y pequeño en el centro, con los electrones moviéndose a su alrededor en una gran zona vacía.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa12-008",
@@ -5142,7 +5142,7 @@
       ],
       "correcta": 3,
       "tip": "Bohr propuso que los electrones ocupan niveles (órbitas) de energía definidos y solo cambian de nivel al ganar o perder energía.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa12-009",
@@ -5156,7 +5156,7 @@
       ],
       "correcta": 0,
       "tip": "Al bajar de nivel el electrón libera la energía sobrante, muchas veces como luz; al subir de nivel, en cambio, la absorbe.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa12-010",
@@ -5170,7 +5170,7 @@
       ],
       "correcta": 1,
       "tip": "Los descubrimientos de electrones, protones y neutrones mostraron que el átomo sí tiene partes internas: no es indivisible como creía Dalton.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa12-011",
@@ -5184,7 +5184,7 @@
       ],
       "correcta": 2,
       "tip": "La ciencia avanza revisando sus modelos: cada nueva evidencia experimental permitió mejorar o corregir el modelo anterior del átomo.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa12-012",
@@ -5198,7 +5198,7 @@
       ],
       "correcta": 3,
       "tip": "El orden histórico es Dalton (esfera maciza), Thomson (budín de pasas), Rutherford (núcleo) y Bohr (niveles de energía).",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa12-013",
@@ -5212,7 +5212,7 @@
       ],
       "correcta": 0,
       "tip": "El núcleo recién aparece con Rutherford. En el modelo de Thomson la carga positiva estaba repartida por toda la esfera, sin núcleo.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa12-014",
@@ -5226,7 +5226,7 @@
       ],
       "correcta": 1,
       "tip": "Las órbitas de energía definidas, como planetas alrededor del Sol, son la imagen característica del modelo de Bohr.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa12-015",
@@ -5240,7 +5240,7 @@
       ],
       "correcta": 2,
       "tip": "Thomson repartía la carga positiva por todo el átomo; Rutherford la concentró en un núcleo pequeño y denso en el centro.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa12-016",
@@ -5254,7 +5254,7 @@
       ],
       "correcta": 3,
       "tip": "El rebote de algunas partículas solo se explica si la masa y la carga positiva están concentradas en un núcleo diminuto: idea de Rutherford.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa12-017",
@@ -5268,7 +5268,7 @@
       ],
       "correcta": 0,
       "tip": "El electrón tiene carga negativa; el protón la tiene positiva y el neutrón no tiene carga (es neutro).",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa12-018",
@@ -5282,7 +5282,7 @@
       ],
       "correcta": 1,
       "tip": "Bohr agregó que los electrones solo ocupan ciertos niveles de energía permitidos, algo que el modelo de Rutherford no explicaba.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa12-019",
@@ -5296,7 +5296,7 @@
       ],
       "correcta": 2,
       "tip": "La idea general de átomos se conservó, pero hubo que corregir el 'indivisible': el átomo tiene partes internas más pequeñas.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa12-020",
@@ -5310,7 +5310,7 @@
       ],
       "correcta": 3,
       "tip": "En el modelo de Thomson, los electrones negativos incrustados en la esfera positiva equilibraban la carga y hacían neutro al átomo.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa12-021",
@@ -5324,7 +5324,7 @@
       ],
       "correcta": 0,
       "tip": "Cada modelo fue útil en su época; la llegada de nuevas evidencias permite construir modelos mejores. Así avanza la ciencia.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa12-022",
@@ -5338,7 +5338,7 @@
       ],
       "correcta": 1,
       "tip": "Si casi todas las partículas atraviesan la lámina sin chocar, es porque el átomo es en su mayor parte espacio vacío.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa12-023",
@@ -5352,7 +5352,7 @@
       ],
       "correcta": 2,
       "tip": "Bohr partió del núcleo de Rutherford y le agregó los niveles de energía; ambos coinciden en que existe un núcleo central.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa12-024",
@@ -5366,7 +5366,7 @@
       ],
       "correcta": 3,
       "tip": "Cuando un modelo no explica una evidencia nueva, se construye otro mejor. Así surgieron los modelos de Thomson, Rutherford y Bohr.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa12-025",
@@ -5380,7 +5380,7 @@
       ],
       "correcta": 0,
       "tip": "Thomson propuso el modelo del budín de pasas. Dalton planteó el átomo indivisible, Rutherford el núcleo y Bohr los niveles de energía.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa13-001",
@@ -5394,7 +5394,7 @@
       ],
       "correcta": 1,
       "tip": "El átomo es la unidad básica y más pequeña de la materia que aún conserva las propiedades de su elemento químico.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa13-002",
@@ -5408,7 +5408,7 @@
       ],
       "correcta": 2,
       "tip": "Una molécula se forma cuando dos o más átomos se unen mediante enlaces químicos, por ejemplo la molécula de agua (H₂O).",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa13-003",
@@ -5422,7 +5422,7 @@
       ],
       "correcta": 3,
       "tip": "Al ganar o perder electrones, el átomo deja de ser neutro y queda con carga: se convierte en un ion.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa13-004",
@@ -5436,7 +5436,7 @@
       ],
       "correcta": 0,
       "tip": "Un elemento está formado por un solo tipo de átomo, como el oxígeno (solo átomos de oxígeno) o el hierro (solo átomos de hierro).",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa13-005",
@@ -5450,7 +5450,7 @@
       ],
       "correcta": 1,
       "tip": "Un compuesto, como el agua (H₂O), está formado por átomos de elementos diferentes unidos mediante enlaces químicos.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa13-006",
@@ -5464,7 +5464,7 @@
       ],
       "correcta": 2,
       "tip": "El agua combina hidrógeno y oxígeno, dos elementos distintos: por eso es un compuesto, no un elemento.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa13-007",
@@ -5478,7 +5478,7 @@
       ],
       "correcta": 3,
       "tip": "El oxígeno (O₂) está formado solo por átomos de oxígeno, así que es un elemento. Los demás combinan elementos distintos.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa13-008",
@@ -5492,7 +5492,7 @@
       ],
       "correcta": 0,
       "tip": "El enlace químico es la fuerza que une a los átomos entre sí para formar moléculas y compuestos.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa13-009",
@@ -5506,7 +5506,7 @@
       ],
       "correcta": 1,
       "tip": "Al perder un electrón (carga negativa), quedan más protones positivos que electrones, así que el ion queda con carga positiva.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa13-010",
@@ -5520,7 +5520,7 @@
       ],
       "correcta": 2,
       "tip": "Al ganar un electrón (carga negativa), el átomo tiene más electrones que protones, por lo que el ion queda con carga negativa.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa13-011",
@@ -5534,7 +5534,7 @@
       ],
       "correcta": 3,
       "tip": "La clave está en los átomos: un tipo en el elemento; dos o más tipos unidos químicamente en el compuesto.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa13-012",
@@ -5548,7 +5548,7 @@
       ],
       "correcta": 0,
       "tip": "El O₂ son dos átomos del mismo elemento (oxígeno) unidos: es una molécula, aunque siga siendo un elemento.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa13-013",
@@ -5562,7 +5562,7 @@
       ],
       "correcta": 1,
       "tip": "El CO₂ une carbono y oxígeno, elementos diferentes, mediante enlaces químicos: por eso es un compuesto.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa13-014",
@@ -5576,7 +5576,7 @@
       ],
       "correcta": 2,
       "tip": "El átomo neutro tiene igual número de protones y electrones; el ion ganó o perdió electrones y por eso tiene carga.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa13-015",
@@ -5590,7 +5590,7 @@
       ],
       "correcta": 3,
       "tip": "Los átomos interactúan y forman enlaces; de esa interacción surgen partículas y sustancias como la sal común.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa13-016",
@@ -5604,7 +5604,7 @@
       ],
       "correcta": 0,
       "tip": "El agua (H₂O) une hidrógeno y oxígeno, elementos distintos. O₂, H₂ y N₂ son moléculas de un solo elemento.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa13-017",
@@ -5618,7 +5618,7 @@
       ],
       "correcta": 1,
       "tip": "En un átomo neutro, la carga positiva de los protones se equilibra con la negativa de igual número de electrones.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa13-018",
@@ -5632,7 +5632,7 @@
       ],
       "correcta": 2,
       "tip": "Toda la materia, natural o fabricada, está constituida por átomos que interactúan y se combinan formando distintas sustancias.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa13-019",
@@ -5646,7 +5646,7 @@
       ],
       "correcta": 3,
       "tip": "Al estar formado por un solo tipo de átomo (hierro), el hierro puro es un elemento químico.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa13-020",
@@ -5660,7 +5660,7 @@
       ],
       "correcta": 0,
       "tip": "Si el átomo pierde electrones, el ion es positivo; si los gana, es negativo. Depende de lo que ocurra con los electrones.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa13-021",
@@ -5674,7 +5674,7 @@
       ],
       "correcta": 1,
       "tip": "El átomo es la unidad básica; al unirse forman moléculas, y cuando combinan elementos distintos originan compuestos.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa13-022",
@@ -5688,7 +5688,7 @@
       ],
       "correcta": 2,
       "tip": "Sólidos, líquidos y gases son materia y, por lo tanto, están formados por átomos. La estudiante tiene razón.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa13-023",
@@ -5702,7 +5702,7 @@
       ],
       "correcta": 3,
       "tip": "O₂ une átomos iguales (elemento); H₂O une átomos de elementos distintos (compuesto). Ambas son moléculas.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa13-024",
@@ -5716,7 +5716,7 @@
       ],
       "correcta": 0,
       "tip": "Los átomos forman moléculas al unirse mediante enlaces químicos, la fuerza que los mantiene juntos.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa13-025",
@@ -5730,7 +5730,7 @@
       ],
       "correcta": 1,
       "tip": "La glucosa combina tres elementos distintos (C, H y O) unidos químicamente, por lo que es un compuesto.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa14-001",
@@ -5744,7 +5744,7 @@
       ],
       "correcta": 2,
       "tip": "La tabla periódica organiza todos los elementos químicos conocidos según sus propiedades y su número atómico.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa14-002",
@@ -5758,7 +5758,7 @@
       ],
       "correcta": 3,
       "tip": "El número atómico es igual a la cantidad de protones del núcleo y es lo que identifica a cada elemento.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa14-003",
@@ -5772,7 +5772,7 @@
       ],
       "correcta": 0,
       "tip": "La tabla periódica moderna ordena los elementos de menor a mayor número atómico (cantidad de protones).",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa14-004",
@@ -5786,7 +5786,7 @@
       ],
       "correcta": 1,
       "tip": "Las filas horizontales son los períodos; las columnas verticales son los grupos o familias.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa14-005",
@@ -5800,7 +5800,7 @@
       ],
       "correcta": 2,
       "tip": "Las columnas verticales son los grupos (o familias); reúnen elementos con propiedades químicas parecidas.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa14-006",
@@ -5814,7 +5814,7 @@
       ],
       "correcta": 3,
       "tip": "Los elementos de un mismo grupo (columna) tienen propiedades químicas parecidas por su estructura similar de electrones.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa14-007",
@@ -5828,7 +5828,7 @@
       ],
       "correcta": 0,
       "tip": "La masa se concentra en el núcleo; por eso la masa atómica depende sobre todo de la suma de protones y neutrones.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa14-008",
@@ -5842,7 +5842,7 @@
       ],
       "correcta": 1,
       "tip": "Los metales suelen ser buenos conductores del calor y la electricidad, además de brillantes y maleables.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa14-009",
@@ -5856,7 +5856,7 @@
       ],
       "correcta": 2,
       "tip": "La mayoría de los no metales son malos conductores de la electricidad y del calor, al contrario de los metales.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa14-010",
@@ -5870,7 +5870,7 @@
       ],
       "correcta": 3,
       "tip": "El número atómico es igual al número de protones; si es 6, el átomo tiene 6 protones (corresponde al carbono).",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa14-011",
@@ -5884,7 +5884,7 @@
       ],
       "correcta": 0,
       "tip": "Al conocer la posición de un elemento (grupo y período), se pueden predecir muchas de sus propiedades: por eso es un modelo útil.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa14-012",
@@ -5898,7 +5898,7 @@
       ],
       "correcta": 1,
       "tip": "Cuando se combinan un metal y un no metal suele formarse un enlace iónico, con transferencia de electrones (por ejemplo, en NaCl).",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa14-013",
@@ -5912,7 +5912,7 @@
       ],
       "correcta": 2,
       "tip": "La mayor parte de los elementos de la tabla periódica son metales, ubicados a la izquierda y al centro.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa14-014",
@@ -5926,7 +5926,7 @@
       ],
       "correcta": 3,
       "tip": "Pertenecer al mismo grupo permite predecir propiedades químicas similares, que es una de las utilidades de la tabla.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa14-015",
@@ -5940,7 +5940,7 @@
       ],
       "correcta": 0,
       "tip": "El cobre es un metal excelente conductor de electricidad; por eso se emplea en cables y circuitos.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa14-016",
@@ -5954,7 +5954,7 @@
       ],
       "correcta": 1,
       "tip": "La tabla predice propiedades químicas y físicas (metal/no metal, conductividad, enlaces), pero no datos económicos como el precio.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa14-017",
@@ -5968,7 +5968,7 @@
       ],
       "correcta": 2,
       "tip": "Los metales ocupan la mayor parte de la tabla, hacia la izquierda y el centro; los no metales quedan hacia la derecha.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa14-018",
@@ -5982,7 +5982,7 @@
       ],
       "correcta": 3,
       "tip": "El número atómico indica los protones: 11 para el sodio y 17 para el cloro. Son elementos distintos.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa14-019",
@@ -5996,7 +5996,7 @@
       ],
       "correcta": 0,
       "tip": "No hay dos elementos con el mismo número de protones; por eso el número atómico funciona como el 'documento de identidad' de cada elemento.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa14-020",
@@ -6010,7 +6010,7 @@
       ],
       "correcta": 1,
       "tip": "Los no metales suelen ser malos conductores de electricidad y calor, a diferencia de los metales que conducen bien.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa14-021",
@@ -6024,7 +6024,7 @@
       ],
       "correcta": 2,
       "tip": "Saber si un elemento es metal o no metal, según su posición en la tabla, ayuda a predecir el tipo de enlace que tenderá a formar.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa14-022",
@@ -6038,7 +6038,7 @@
       ],
       "correcta": 3,
       "tip": "Estar en el mismo período significa compartir la fila horizontal. Las propiedades químicas parecidas se dan más bien en un mismo grupo.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa14-023",
@@ -6052,7 +6052,7 @@
       ],
       "correcta": 0,
       "tip": "La conductividad eléctrica es una diferencia clave: los metales suelen conducir bien; la mayoría de los no metales, no.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa14-024",
@@ -6066,7 +6066,7 @@
       ],
       "correcta": 1,
       "tip": "Al ser metales, tanto el aluminio como el hierro conducen electricidad y calor, una propiedad típica de este grupo.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa14-025",
@@ -6080,7 +6080,7 @@
       ],
       "correcta": 2,
       "tip": "La tabla periódica organiza los elementos y, según su posición, permite predecir muchas de sus propiedades químicas y físicas.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa15-001",
@@ -6094,7 +6094,7 @@
       ],
       "correcta": 3,
       "tip": "El carbono forma la estructura de las moléculas de la vida (proteínas, grasas, carbohidratos, ADN): por eso es fundamental para los seres vivos.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa15-002",
@@ -6108,7 +6108,7 @@
       ],
       "correcta": 0,
       "tip": "El carbono, el hidrógeno, el oxígeno y el nitrógeno son los elementos más abundantes en la materia viva.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa15-003",
@@ -6122,7 +6122,7 @@
       ],
       "correcta": 1,
       "tip": "El oxígeno es esencial para la respiración celular, proceso con el que las células obtienen energía.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa15-004",
@@ -6136,7 +6136,7 @@
       ],
       "correcta": 2,
       "tip": "El nitrógeno constituye alrededor del 78% del aire de la atmósfera, siendo su componente más abundante.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa15-005",
@@ -6150,7 +6150,7 @@
       ],
       "correcta": 3,
       "tip": "El agua (H₂O) está formada por hidrógeno y oxígeno, dos de los elementos más frecuentes en los seres vivos.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa15-006",
@@ -6164,7 +6164,7 @@
       ],
       "correcta": 0,
       "tip": "El carbono puede formar muchos enlaces y cadenas, lo que permite construir las moléculas complejas que forman a los seres vivos.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa15-007",
@@ -6178,7 +6178,7 @@
       ],
       "correcta": 1,
       "tip": "Al analizar la composición de los seres vivos se encuentra que el C, H, O y N forman la mayor parte de sus moléculas.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa15-008",
@@ -6192,7 +6192,7 @@
       ],
       "correcta": 2,
       "tip": "El CO₂ está formado por carbono y oxígeno; las plantas lo utilizan durante la fotosíntesis.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa15-009",
@@ -6206,7 +6206,7 @@
       ],
       "correcta": 3,
       "tip": "Las proteínas contienen nitrógeno además de carbono, hidrógeno y oxígeno; ese nitrógeno es esencial en su estructura.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa15-010",
@@ -6220,7 +6220,7 @@
       ],
       "correcta": 0,
       "tip": "El oxígeno está en el aire, disuelto en el agua y combinado en muchos minerales y rocas: es muy abundante en la Tierra.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa15-011",
@@ -6234,7 +6234,7 @@
       ],
       "correcta": 1,
       "tip": "Estas moléculas biológicas se construyen sobre todo con carbono, hidrógeno y oxígeno; las proteínas suman además nitrógeno.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa15-012",
@@ -6248,7 +6248,7 @@
       ],
       "correcta": 2,
       "tip": "El C, H, O y N destacan por ser los elementos más frecuentes en la composición de los seres vivos.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa15-013",
@@ -6262,7 +6262,7 @@
       ],
       "correcta": 3,
       "tip": "El oro y el hierro no son los principales; los seres vivos se componen sobre todo de carbono, hidrógeno, oxígeno y nitrógeno.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa15-014",
@@ -6276,7 +6276,7 @@
       ],
       "correcta": 0,
       "tip": "El hidrógeno está en el agua y en casi todas las moléculas orgánicas (carbohidratos, grasas, proteínas), por eso es tan frecuente.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa15-015",
@@ -6290,7 +6290,7 @@
       ],
       "correcta": 1,
       "tip": "La evidencia muestra que los elementos no están repartidos por igual: algunos, como el oxígeno y el carbono, son mucho más frecuentes.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa15-016",
@@ -6304,7 +6304,7 @@
       ],
       "correcta": 2,
       "tip": "El nitrógeno circula entre el aire, el suelo y los seres vivos, y es indispensable para formar proteínas y otras moléculas.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa15-017",
@@ -6318,7 +6318,7 @@
       ],
       "correcta": 3,
       "tip": "Distintos seres vivos comparten los mismos elementos principales: carbono, hidrógeno, oxígeno y nitrógeno.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa15-018",
@@ -6332,7 +6332,7 @@
       ],
       "correcta": 0,
       "tip": "El oxígeno forma parte del agua y, además, es indispensable en la respiración celular de muchos seres vivos.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa15-019",
@@ -6346,7 +6346,7 @@
       ],
       "correcta": 1,
       "tip": "Los cuatro más frecuentes son carbono, hidrógeno, oxígeno y nitrógeno. El oro está presente en cantidades muy pequeñas o nulas.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa15-020",
@@ -6360,7 +6360,7 @@
       ],
       "correcta": 2,
       "tip": "El carbono forma cadenas y estructuras que sostienen a las moléculas orgánicas; esa evidencia respalda que es esencial para la vida.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa15-021",
@@ -6374,7 +6374,7 @@
       ],
       "correcta": 3,
       "tip": "El oxígeno abunda en la atmósfera y también forma parte del agua y de las moléculas de los seres vivos.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa15-022",
@@ -6388,7 +6388,7 @@
       ],
       "correcta": 0,
       "tip": "Casi todas las moléculas biológicas (proteínas, grasas, azúcares, ADN) contienen carbono; por eso se habla de una 'vida basada en el carbono'.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa15-023",
@@ -6402,7 +6402,7 @@
       ],
       "correcta": 1,
       "tip": "El nitrógeno es parte esencial de las proteínas y del ADN; llega a los seres vivos tras transformarse en compuestos aprovechables.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa15-024",
@@ -6416,7 +6416,7 @@
       ],
       "correcta": 2,
       "tip": "Como la vida conocida se basa en C, H, O y N, buscar estos elementos es una pista para buscar posibilidades de vida.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa15-025",
@@ -6430,7 +6430,7 @@
       ],
       "correcta": 3,
       "tip": "La evidencia indica que unos pocos elementos (C, H, O y N) son especialmente importantes y frecuentes en los seres vivos.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa01-101",
@@ -6444,7 +6444,7 @@
       ],
       "correcta": 0,
       "tip": "Van Leeuwenhoek observó microorganismos (\"animálculos\") con sus lentes; esa evidencia amplió el modelo celular al mostrar seres de una sola célula.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa01-102",
@@ -6458,7 +6458,7 @@
       ],
       "correcta": 3,
       "tip": "En ciencia, un modelo se revisa cuando aparece evidencia nueva y confiable que lo contradice; así evolucionó el modelo celular.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa01-103",
@@ -6472,7 +6472,7 @@
       ],
       "correcta": 2,
       "tip": "Hooke observó las paredes de células muertas del corcho; aun sin ver el contenido vivo, entregó la primera observación registrada de la estructura celular.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa01-104",
@@ -6486,7 +6486,7 @@
       ],
       "correcta": 1,
       "tip": "Al hallar células en plantas y en animales, se generalizó que todos los seres vivos están formados por células: un pilar de la teoría celular.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa01-105",
@@ -6500,7 +6500,7 @@
       ],
       "correcta": 0,
       "tip": "El avance tecnológico (mejores lentes) permitió ver más detalles; esas nuevas evidencias obligaron a ajustar el modelo celular una y otra vez.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa02-101",
@@ -6514,7 +6514,7 @@
       ],
       "correcta": 2,
       "tip": "La mitocondria libera energía (respiración celular); una célula con alta demanda energética, como la muscular, tiene muchas mitocondrias.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa02-102",
@@ -6528,7 +6528,7 @@
       ],
       "correcta": 0,
       "tip": "La pared celular y los cloroplastos son característicos de la célula vegetal; la célula animal carece de ambos.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa02-103",
@@ -6542,7 +6542,7 @@
       ],
       "correcta": 1,
       "tip": "La membrana es selectiva: controla el paso de sustancias, lo que permite a la célula mantener su interior estable.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa02-104",
@@ -6556,7 +6556,7 @@
       ],
       "correcta": 3,
       "tip": "En la procarionte el material genético está libre en el citoplasma; la eucarionte lo tiene envuelto en un núcleo. Esa es una diferencia clave.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa02-105",
@@ -6570,7 +6570,7 @@
       ],
       "correcta": 0,
       "tip": "La vacuola almacena agua y sustancias; al llenarse, presiona hacia la pared y mantiene turgente (firme) a la célula vegetal.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa03-101",
@@ -6584,7 +6584,7 @@
       ],
       "correcta": 1,
       "tip": "Por osmosis, el agua pasa hacia el medio con más soluto: entra a la papa en agua pura (se hincha) y sale de la papa en agua salada (se ablanda).",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa03-102",
@@ -6598,7 +6598,7 @@
       ],
       "correcta": 3,
       "tip": "La difusión es el movimiento de partículas desde mayor a menor concentración hasta repartirse de forma pareja, sin necesidad de membrana.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa03-103",
@@ -6612,7 +6612,7 @@
       ],
       "correcta": 2,
       "tip": "La hipótesis predice un cambio de tamaño; por eso la variable que se debe observar y medir es la forma o el volumen de las células.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa03-104",
@@ -6626,7 +6626,7 @@
       ],
       "correcta": 1,
       "tip": "La membrana deja pasar agua pero no azúcar (selectiva); por osmosis el agua entra hacia el interior más concentrado y el globo se infla.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa03-105",
@@ -6640,7 +6640,7 @@
       ],
       "correcta": 3,
       "tip": "El suelo salado es hipertónico respecto a la célula: el agua sale por osmosis, la célula pierde turgencia y la hoja se marchita.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa04-101",
@@ -6654,7 +6654,7 @@
       ],
       "correcta": 1,
       "tip": "Los estomas regulan el intercambio de gases y la salida de vapor de agua; al cerrarse en el calor, la planta evita perder demasiada agua.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa04-102",
@@ -6668,7 +6668,7 @@
       ],
       "correcta": 0,
       "tip": "El xilema sube el agua; si se daña, el agua no llega a las hojas y estas se marchitan. Cada tejido cumple una función específica.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa04-103",
@@ -6682,7 +6682,7 @@
       ],
       "correcta": 3,
       "tip": "Los pelos radiculares aumentan la superficie de absorción; así la raíz capta más agua y minerales del suelo (relación estructura-función).",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa04-104",
@@ -6696,7 +6696,7 @@
       ],
       "correcta": 2,
       "tip": "En la fotosíntesis la planta toma dióxido de carbono y libera oxígeno; los estomas son la estructura que permite ese intercambio de gases.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa04-105",
@@ -6710,7 +6710,7 @@
       ],
       "correcta": 2,
       "tip": "Las plantas responden a estímulos: crecer hacia la luz (fototropismo) es una respuesta que favorece la fotosíntesis.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa05-101",
@@ -6724,7 +6724,7 @@
       ],
       "correcta": 0,
       "tip": "Respiratorio y circulatorio trabajan juntos: los pulmones captan el oxígeno y la sangre lo transporta a todas las células del cuerpo.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa05-102",
@@ -6738,7 +6738,7 @@
       ],
       "correcta": 1,
       "tip": "El sistema excretor elimina desechos de la sangre; si falla, esos desechos se acumulan y dañan el funcionamiento del cuerpo.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa05-103",
@@ -6752,7 +6752,7 @@
       ],
       "correcta": 3,
       "tip": "El sistema digestivo descompone el alimento en nutrientes que pasan a la sangre; el circulatorio los reparte a todas las células.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa05-104",
@@ -6766,7 +6766,7 @@
       ],
       "correcta": 2,
       "tip": "Al ejercitarse, las células demandan más oxígeno; respiratorio y circulatorio aumentan su ritmo de manera coordinada para satisfacer esa demanda.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa05-105",
@@ -6780,7 +6780,7 @@
       ],
       "correcta": 1,
       "tip": "El respiratorio intercambia gases con el aire (entra oxígeno, sale dióxido de carbono) y el circulatorio los transporta; funciones distintas que se complementan.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa06-101",
@@ -6794,7 +6794,7 @@
       ],
       "correcta": 2,
       "tip": "Los 22 g de carbohidratos superan a proteínas y grasas; además, 15 de esos 22 g corresponden a azúcares.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa06-102",
@@ -6808,7 +6808,7 @@
       ],
       "correcta": 0,
       "tip": "A igualdad de calcio y proteínas, el yogur con menos azúcar (B) es la mejor opción para reducir el azúcar.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa06-103",
@@ -6822,7 +6822,7 @@
       ],
       "correcta": 3,
       "tip": "Las proteínas aportan los aminoácidos que el cuerpo usa para construir y reparar tejidos, como el muscular.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa06-104",
@@ -6836,7 +6836,7 @@
       ],
       "correcta": 1,
       "tip": "Las vitaminas se requieren en cantidades pequeñas, pero su ausencia causa enfermedades; la vitamina C abunda en frutas y verduras.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa06-105",
@@ -6850,7 +6850,7 @@
       ],
       "correcta": 2,
       "tip": "La prueba de yodo detecta almidón, que es un carbohidrato; solo la papa dio positivo.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa07-101",
@@ -6864,7 +6864,7 @@
       ],
       "correcta": 1,
       "tip": "La salud se apoya en varios factores combinados: actividad física regular, alimentación balanceada y buen descanso.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa07-102",
@@ -6878,7 +6878,7 @@
       ],
       "correcta": 3,
       "tip": "El humo del tabaco daña las vías respiratorias y también afecta a quienes lo respiran de forma pasiva.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa07-103",
@@ -6892,7 +6892,7 @@
       ],
       "correcta": 0,
       "tip": "La regularidad de la actividad física aporta más beneficios que un esfuerzo intenso pero aislado.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa07-104",
@@ -6906,7 +6906,7 @@
       ],
       "correcta": 2,
       "tip": "Al reducir reflejos y coordinación, el alcohol aumenta el riesgo de accidentes, por ejemplo al conducir.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa07-105",
@@ -6920,7 +6920,7 @@
       ],
       "correcta": 3,
       "tip": "Una alimentación balanceada incluye variedad de grupos de alimentos en proporciones adecuadas e hidratación suficiente.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa08-101",
@@ -6934,7 +6934,7 @@
       ],
       "correcta": 0,
       "tip": "Al frotarlo, el globo se electriza por fricción; la carga genera una fuerza eléctrica que atrae los papelitos.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa08-102",
@@ -6948,7 +6948,7 @@
       ],
       "correcta": 2,
       "tip": "Al frotarse con el mismo material, ambos globos adquieren carga del mismo signo, y cargas iguales se repelen.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa08-103",
@@ -6962,7 +6962,7 @@
       ],
       "correcta": 1,
       "tip": "En la inducción, un cuerpo cargado reordena las cargas de otro sin tocarlo.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa08-104",
@@ -6976,7 +6976,7 @@
       ],
       "correcta": 3,
       "tip": "En la electrización por contacto, el objeto adquiere carga del mismo signo que el cuerpo que lo tocó.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa08-105",
@@ -6990,7 +6990,7 @@
       ],
       "correcta": 0,
       "tip": "El roce con el asiento te electriza; al tocar el metal, la carga se descarga. Es una molestia menor, no un peligro grave.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa09-101",
@@ -7004,7 +7004,7 @@
       ],
       "correcta": 2,
       "tip": "Al generar electricidad con la luz solar, los paneles no queman combustible ni emiten gases durante su operación.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa09-102",
@@ -7018,7 +7018,7 @@
       ],
       "correcta": 1,
       "tip": "Los combustibles fósiles son recursos finitos y su combustión libera gases contaminantes, a diferencia de las renovables.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa09-103",
@@ -7032,7 +7032,7 @@
       ],
       "correcta": 3,
       "tip": "El sol y el viento son limpios y renovables, pero su disponibilidad varía con las condiciones del clima.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa09-104",
@@ -7046,7 +7046,7 @@
       ],
       "correcta": 0,
       "tip": "Con abundante sol y sin red disponible, los paneles fotovoltaicos permiten generar electricidad limpia en el lugar.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa09-105",
@@ -7060,7 +7060,7 @@
       ],
       "correcta": 1,
       "tip": "Evaluar una fuente de energía requiere comparar varios criterios: costo, contaminación, disponibilidad e impacto ambiental.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa10-101",
@@ -7074,7 +7074,7 @@
       ],
       "correcta": 3,
       "tip": "En serie hay un solo camino; si se corta en un punto, la corriente deja de circular y todas las ampolletas se apagan.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa10-102",
@@ -7088,7 +7088,7 @@
       ],
       "correcta": 2,
       "tip": "En paralelo cada ampolleta tiene su propia rama; si una falla, las demás conservan su camino y siguen encendidas.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa10-103",
@@ -7102,7 +7102,7 @@
       ],
       "correcta": 0,
       "tip": "Abrir el interruptor interrumpe el único camino del circuito en serie; deja de circular corriente y todo se apaga.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa10-104",
@@ -7116,7 +7116,7 @@
       ],
       "correcta": 1,
       "tip": "Al sumar resistencias en serie, la resistencia total aumenta y la corriente disminuye, por lo que las ampolletas brillan menos.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa10-105",
@@ -7130,7 +7130,7 @@
       ],
       "correcta": 2,
       "tip": "En paralelo, cada aparato tiene su propia rama; puede encenderse o apagarse sin afectar a los demás.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa11-101",
@@ -7144,7 +7144,7 @@
       ],
       "correcta": 0,
       "tip": "Los metales son buenos conductores: la energía térmica pasa rápido de partícula a partícula. La madera es aislante y conduce el calor con lentitud.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa11-102",
@@ -7158,7 +7158,7 @@
       ],
       "correcta": 3,
       "tip": "La temperatura indica cuán rápido se mueven las partículas; la energía térmica total depende además de cuánta materia hay. Más agua a igual temperatura guarda más energía térmica.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa11-103",
@@ -7172,7 +7172,7 @@
       ],
       "correcta": 1,
       "tip": "En la convección el propio fluido (aire o agua) se mueve: lo caliente sube por ser menos denso y lo frío baja, generando corrientes que transportan el calor.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa11-104",
@@ -7186,7 +7186,7 @@
       ],
       "correcta": 3,
       "tip": "La conducción y la convección requieren partículas para transferir energía. Al no haber materia en el vacío, esas dos vías casi desaparecen y el calor se conserva mejor.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa11-105",
@@ -7200,7 +7200,7 @@
       ],
       "correcta": 2,
       "tip": "El calor fluye del cuerpo más caliente al más frío hasta igualar temperaturas. La lata se calienta hasta acercarse a la del ambiente: eso es el equilibrio térmico.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa12-101",
@@ -7214,7 +7214,7 @@
       ],
       "correcta": 3,
       "tip": "Que casi todo pase de largo indica mucho espacio vacío; que unas pocas reboten indica una zona pequeña, densa y positiva: el núcleo. Eso propuso Rutherford.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa12-102",
@@ -7228,7 +7228,7 @@
       ],
       "correcta": 1,
       "tip": "Si las partículas cruzan sin chocar, es porque encuentran poco material en el camino: la mayor parte del átomo es espacio vacío.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa12-103",
@@ -7242,7 +7242,7 @@
       ],
       "correcta": 0,
       "tip": "El hallazgo de los electrones mostró que el átomo sí tiene partes internas. Thomson lo imaginó como una masa positiva con cargas negativas incrustadas.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa12-104",
@@ -7256,7 +7256,7 @@
       ],
       "correcta": 2,
       "tip": "Bohr propuso niveles de energía fijos para los electrones. Al saltar de un nivel a otro liberan luz de un color determinado, lo que explica los colores específicos.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa12-105",
@@ -7270,7 +7270,7 @@
       ],
       "correcta": 1,
       "tip": "La ciencia es acumulativa: cada nuevo experimento aporta evidencia. Cuando un modelo no explica lo observado, se ajusta o se reemplaza por otro mejor.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa13-101",
@@ -7284,7 +7284,7 @@
       ],
       "correcta": 2,
       "tip": "Si una sustancia se descompone en elementos más simples, es un compuesto. El agua se separa en hidrógeno y oxígeno, así que es un compuesto de ambos.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa13-102",
@@ -7298,7 +7298,7 @@
       ],
       "correcta": 0,
       "tip": "Un elemento no se puede descomponer en sustancias más simples porque está hecho de un solo tipo de átomo. El valor económico no tiene relación con esta clasificación.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa13-103",
@@ -7312,7 +7312,7 @@
       ],
       "correcta": 3,
       "tip": "Al perder un electrón (carga negativa) quedan más protones que electrones, así que el átomo se transforma en un ion positivo. El número de protones no cambia, sigue siendo sodio.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa13-104",
@@ -7326,7 +7326,7 @@
       ],
       "correcta": 1,
       "tip": "El O2 está formado por átomos de un mismo elemento, no es compuesto. El aire, en cambio, mezcla varias sustancias distintas en proporciones variables.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa13-105",
@@ -7340,7 +7340,7 @@
       ],
       "correcta": 0,
       "tip": "En un compuesto los elementos se combinan en proporción fija (cloruro de sodio). En una mezcla, como el agua salada, las cantidades pueden variar.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa14-101",
@@ -7354,7 +7354,7 @@
       ],
       "correcta": 3,
       "tip": "Los elementos de un mismo grupo comparten propiedades químicas. Como los gases nobles son poco reactivos, se predice que el criptón también lo será.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa14-102",
@@ -7368,7 +7368,7 @@
       ],
       "correcta": 0,
       "tip": "La tabla periódica separa metales (izquierda y centro) de no metales (derecha). Un elemento a la izquierda probablemente es un metal, buen conductor.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa14-103",
@@ -7382,7 +7382,7 @@
       ],
       "correcta": 1,
       "tip": "El número atómico indica la cantidad de protones en el núcleo. Por eso el carbono tiene 6 y el oxígeno 8: es lo que los distingue como elementos diferentes.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa14-104",
@@ -7396,7 +7396,7 @@
       ],
       "correcta": 2,
       "tip": "El comportamiento químico depende sobre todo de los electrones externos. Los elementos de un mismo grupo tienen una disposición similar de esos electrones, por eso reaccionan parecido.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa14-105",
@@ -7410,7 +7410,7 @@
       ],
       "correcta": 3,
       "tip": "Los metales conducen bien la electricidad, por eso los cables se hacen de cobre o aluminio. Los no metales suelen ser malos conductores.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa15-101",
@@ -7424,7 +7424,7 @@
       ],
       "correcta": 2,
       "tip": "El carbono forma enlaces con muchos átomos y arma moléculas variadas y largas (como proteínas y grasas). Esa versatilidad lo hace clave para la vida.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa15-102",
@@ -7438,7 +7438,7 @@
       ],
       "correcta": 0,
       "tip": "Al analizar las moléculas de los seres vivos (proteínas, grasas, carbohidratos, ADN) se encuentran principalmente estos cuatro elementos, lo que respalda su abundancia.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa15-103",
@@ -7452,7 +7452,7 @@
       ],
       "correcta": 1,
       "tip": "El oxígeno está en el aire, en el agua (H2O) y en muchas moléculas del cuerpo. Por eso es abundante tanto en el planeta como en los seres vivos.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa15-104",
@@ -7466,7 +7466,7 @@
       ],
       "correcta": 3,
       "tip": "La afirmación coincide con las evidencias: el oxígeno está entre los elementos más abundantes tanto en la Tierra como en los organismos. No toda abundancia planetaria implica abundancia biológica, pero en este caso ambas se cumplen.",
-      "revisada": false
+      "revisada": true
     },
     {
       "id": "cien8-oa15-105",
@@ -7480,7 +7480,7 @@
       ],
       "correcta": 2,
       "tip": "El agua (H2O) aporta hidrógeno y oxígeno. Como el cuerpo tiene gran cantidad de agua, ambos elementos resultan muy abundantes en los seres vivos.",
-      "revisada": false
+      "revisada": true
     }
   ]
 }
