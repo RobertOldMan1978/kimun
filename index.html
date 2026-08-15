@@ -1524,7 +1524,7 @@ function renderExpediciones(){
  const g=$('expGrid');g.innerHTML='';
  ORDEN_ASIG.forEach(asig=>{
   if(asig==='Matemáticas'){                            // Matemáticas = Reto de Cálculo
-   const nv=calcEstado().estrellas.filter(x=>x>0).length;
+   const nv=calcEstado().etapas.filter(e=>e>=RC_ETAPAS).length;
    const card=document.createElement('div');card.className='exp-card';
    card.innerHTML=`<img src="${ASIG_PORTADA['Matemáticas']}" alt="Matemáticas"><div class="exp-info"><b>Matemáticas</b><small>Cálculo rápido · ${nv}/${NIVELES_CALC.length} niveles</small></div><span class="exp-go">▶</span>`;
    card.onclick=()=>{SND.tap();abrirRetoCalculo();};

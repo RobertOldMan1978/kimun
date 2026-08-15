@@ -637,6 +637,12 @@ Se completaron los tres pendientes que quedaron de la Sesión 2:
   (+500🪙/+300XP); y **Modo Sin Fin ♾️** con récord de racha máxima. Estado `S.calc`
   reescrito (`{etapas[5], jefe, record}`). Texto del candado de skins ahora usa `req`
   por skin (antes "Termina Historia" fijo). Dificultad retadora pero justa para 8°.
+- **Hotfix (importante):** la reescritura de `S.calc` (estrellas→etapas) dejó una línea
+  del menú (`renderExpediciones`, módulo Matemáticas) leyendo `.estrellas`, que ahora es
+  `undefined`. Eso rompía `renderExpediciones` y **impedía entrar** (al pulsar JUGADOR no
+  navegaba). Corregido a `.etapas.filter(e=>e>=RC_ETAPAS)`. Lección: al cambiar la forma
+  de un objeto de estado, reprobar TODOS los flujos que lo leen (incluido el menú), no
+  solo la feature nueva.
 - **Pendientes:** convertir Lenguaje en campaña (y decidir el enfoque de Matemáticas si
   se quiere además una campaña de álgebra); villano + skin por asignatura;
   portadas propias de los capítulos de Ciencias (opcional); duelo en 2 celulares,
