@@ -591,6 +591,15 @@ Se completaron los tres pendientes que quedaron de la Sesión 2:
   portadas de mapa (`portada-mate-algebra`, `portada-leng-textos`,
   `portada-leng-literarios`, 512, ~450 KB). Originales en `assets/originales/`.
   (Quedó una variante B del villano sin usar en Descargas.)
+- **Corrección — nombres en el Duelo:** en "Elige la expedición" (duelo 1v1) cada
+  opción mostraba solo la asignatura (6 "Historia" iguales, indistinguibles). Ahora
+  muestra el **nombre del tema** en grande y la asignatura como subtítulo (`renderODExp`,
+  reusa el helper `nombreMapa`).
+- **Prueba con invitados:** el Capítulo 3 de Historia **"El mundo colonial"** queda
+  **desbloqueado siempre** (flag `libre:true` en la expedición; `nodoCampDesbloqueado`
+  lo respeta), para que los invitados prueben esa unidad sin completar las anteriores.
+  Reversible quitando el flag cuando terminen las pruebas.
 - **Pendientes:** convertir Matemáticas y Lenguaje en campañas (villano + skin c/u);
   portadas propias de los capítulos de Ciencias (opcional); duelo en 2 celulares,
   notificaciones push y ranking real, limpiar perfiles de prueba en Supabase.
+  Recordatorio: quitar el `libre:true` de "El mundo colonial" al terminar las pruebas.

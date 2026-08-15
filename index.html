@@ -225,6 +225,8 @@ input.nm:focus{border-color:var(--cyan)}
   font-family:'Nunito';font-weight:900;font-size:14px;cursor:pointer;text-align:left;display:flex;align-items:center;gap:10px}
 .od-exp button.sel{border-color:var(--cyan);background:#4dd8ff1f}
 .od-exp button img{width:38px;height:38px;border-radius:9px;object-fit:cover}
+.od-exp button .od-exp-tx{display:flex;flex-direction:column;line-height:1.2}
+.od-exp button .od-exp-tx small{font-weight:800;font-size:11px;color:var(--dim)}
 .od-reloj{text-align:center;font-weight:900;color:var(--pink);font-size:14px;margin-bottom:8px}
 .od-jugadores{display:flex;flex-direction:column;gap:8px;max-height:230px;overflow-y:auto}
 .od-jugadores button{padding:10px 12px;border:2px solid #ffffff1f;border-radius:12px;background:#00000030;color:var(--txt);
@@ -703,7 +705,7 @@ const EXPEDICIONES=[
    ]},
  { id:'hist-cap3', asignatura:'Historia', nivel:'8° Básico · El mundo colonial',
    portada:'assets/portada-historia.png', contenido:'contenido/historia-8basico/preguntas.json',
-   activa:true, campaña:'hist',
+   activa:true, campaña:'hist', libre:true,   // desbloqueado siempre (prueba con invitados)
    etapas:[
      {oa:"HI08 OA 09",nombre:"El barroco colonial",icono:"🎭",n:6},
      {oa:"HI08 OA 10",nombre:"Mercados y comercio atlántico",icono:"⛵",n:6},
@@ -991,6 +993,8 @@ function capsCompletos(camp){return camp.capitulos.filter(expedicionCompleta).le
 // ¿está desbloqueado el capítulo i de la campaña? (cap 1 siempre; cap N tras vencer N-1)
 function nodoCampDesbloqueado(camp,i){
  if(i===0)return true;
+ const exp=EXPEDICIONES.find(e=>e.id===camp.capitulos[i]);
+ if(exp&&exp.libre)return true;   // capítulo marcado como libre (siempre abierto)
  if(i<camp.capitulos.length)return expedicionCompleta(camp.capitulos[i-1]);
  return false;
 }
@@ -1464,7 +1468,7 @@ function odPreguntas(exp){let all=[],seen=new Set();
  return pickN(all,8).map(q=>({pregunta:q.pregunta,opciones:q.opciones,correcta:q.correcta,tip:q.tip}));}
 function renderODExp(){const cont=$('odExpSel');cont.innerHTML='';OD_EXP_SEL=null;
  EXPEDICIONES.filter(e=>e.activa).forEach((e,i)=>{const b=document.createElement('button');
-  b.innerHTML=`<img src="${e.portada}" alt=""> ${e.asignatura}`;
+  b.innerHTML=`<img src="${e.portada}" alt=""><span class="od-exp-tx"><b>${nombreMapa(e)}</b><small>${e.asignatura}</small></span>`;
   b.onclick=()=>{SND.tap();cont.querySelectorAll('button').forEach(x=>x.classList.remove('sel'));b.classList.add('sel');OD_EXP_SEL=e;};
   if(i===0){b.classList.add('sel');OD_EXP_SEL=e;}cont.appendChild(b);});}
 function abrirCrearDesafio(){renderODExp();$('odCodigo').value='';$('odSetupErr').textContent='';cargarJugadores();go('scr-od-setup');}
