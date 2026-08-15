@@ -52,8 +52,11 @@ en línea. Historia de v0 al detalle en la Bitácora (abajo).
   fallar revela la respuesta correcta + explicación y botón "Continuar". Kimün
   comenta un dato al iniciar la ruta.
 - **Modo Difícil** desbloqueable (8 preguntas, 10 s, 80%, tema oscuro/carmesí).
-- Persistencia (localStorage), tienda de skins, sonidos (Web Audio), animación
-  de subida de nivel, logros, ranking (aún simulado).
+- Persistencia (localStorage), tienda de skins, animación de subida de nivel,
+  logros, ranking (aún simulado).
+- **Audio:** efectos procedurales (Web Audio, sin archivos) + **música de fondo**
+  opcional por archivos (`assets/audio/`, con fallback si no están); control separado
+  🎵 música / 🔊 efectos, persistido.
 - **Duelo 1v1:** en el mismo teléfono y **en línea asíncrono (Supabase)** con
   código de amigo, lista de jugadores, bots de práctica y reto de 24h.
 
@@ -599,6 +602,16 @@ Se completaron los tres pendientes que quedaron de la Sesión 2:
   **desbloqueado siempre** (flag `libre:true` en la expedición; `nodoCampDesbloqueado`
   lo respeta), para que los invitados prueben esa unidad sin completar las anteriores.
   Reversible quitando el flag cuando terminen las pruebas.
+- **Audio — música de fondo + efectos (enfoque híbrido):** efectos procedurales
+  nuevos en `SND` (tic-tac ≤5 s del timer en quiz y duelos; `hit` golpe al jefe;
+  `hurt` daño; `unlock` desbloqueo de logro/insignia; `coin` compra en tienda).
+  Nuevo objeto `MUSIC`: música de fondo por **archivos ligeros** con loop y volumen,
+  cambia según contexto (`menu` para menú/mapa/quiz, `jefe` para el Jefe Final), con
+  **fallback**: si el archivo no existe, no suena nada y no rompe (404 benigno).
+  Control **separado**: botón 🎵 (música) y 🔊 (efectos), independientes y persistidos
+  (`kimun_music`, `kimun_sound`). Las pistas (`assets/audio/musica-menu.mp3` y
+  `musica-jefe.mp3`) las genera/consigue Roberto; specs y fuentes libres en
+  `assets/audio/README.md`.
 - **Pendientes:** convertir Matemáticas y Lenguaje en campañas (villano + skin c/u);
   portadas propias de los capítulos de Ciencias (opcional); duelo en 2 celulares,
   notificaciones push y ranking real, limpiar perfiles de prueba en Supabase.
