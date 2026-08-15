@@ -228,6 +228,27 @@ input.nm:focus{border-color:var(--cyan)}
 .od-exp button .od-exp-tx{display:flex;flex-direction:column;line-height:1.2}
 .od-exp button .od-exp-tx small{font-weight:800;font-size:11px;color:var(--dim)}
 .od-reloj{text-align:center;font-weight:900;color:var(--pink);font-size:14px;margin-bottom:8px}
+/* ===== RETO DE CÁLCULO ===== */
+.calc-top{display:flex;align-items:center;gap:10px;margin:14px 0 8px}
+.calc-x{width:38px;height:38px;border-radius:11px;border:1px solid #ffffff1f;background:#00000030;color:var(--txt);font-size:15px;cursor:pointer;flex-shrink:0}
+.calc-prog{flex:1;height:10px;border-radius:6px;background:#ffffff14;overflow:hidden}
+.calc-prog i{display:block;height:100%;width:0;background:var(--cyan);transition:width .3s}
+.calc-numq{font-weight:900;color:var(--gold);font-size:14px;flex-shrink:0}
+.calc-timerbar{height:6px;border-radius:4px;background:#ffffff14;overflow:hidden;margin-bottom:14px}
+.calc-timerbar i{display:block;height:100%;width:100%;background:var(--green)}
+.calc-timerbar.low i{background:var(--pink)}
+.calc-combo{text-align:center;height:24px;font-weight:900;color:var(--pink);font-size:16px}
+.calc-preg{text-align:center;font-family:'Titan One';font-size:46px;margin:14px 0 26px;color:var(--txt);letter-spacing:1px;word-break:break-word}
+.calc-opts{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.calc-opts button{padding:22px 12px;border:2px solid #ffffff1f;border-radius:16px;background:#120d2e;color:var(--txt);
+ font-family:'Titan One';font-size:26px;cursor:pointer;transition:.12s}
+.calc-opts button:active{transform:scale(.97)}
+.calc-opts button.ok{border-color:var(--green);background:#3ee08922}
+.calc-opts button.bad{border-color:var(--pink);background:#ff4d8d22}
+.calc-stars{font-size:42px;letter-spacing:4px;color:var(--gold)}
+.calc-res-stats{display:flex;justify-content:center;gap:22px;margin-top:14px}
+.calc-res-stats b{display:block;font-size:24px;color:var(--gold)}
+.calc-res-stats small{color:var(--dim);font-weight:800;font-size:12px}
 .od-jugadores{display:flex;flex-direction:column;gap:8px;max-height:230px;overflow-y:auto}
 .od-jugadores button{padding:10px 12px;border:2px solid #ffffff1f;border-radius:12px;background:#00000030;color:var(--txt);
   font-family:'Nunito';font-weight:900;font-size:14px;cursor:pointer;text-align:left;display:flex;align-items:center;gap:10px}
@@ -423,6 +444,40 @@ body.jefe-hit{animation:jefeShake .26s}
     </div>
     <div class="exp-grid" id="mapasGrid"></div>
     <button class="btn sec" id="btnMapasBack" style="margin-top:18px">← Volver</button>
+  </section>
+
+  <!-- ============ RETO DE CÁLCULO (Matemáticas) ============ -->
+  <section class="screen" id="scr-calc-mapa">
+    <div class="logo" style="margin:18px 0 4px">
+      <span class="badge">🧮</span>
+      <h1 style="font-size:26px">RETO DE CÁLCULO</h1>
+      <p>Cálculo mental rápido · elige un nivel</p>
+    </div>
+    <div class="exp-grid" id="calcNiveles"></div>
+    <button class="btn sec" id="btnCalcBack" style="margin-top:18px">← Volver</button>
+  </section>
+
+  <section class="screen" id="scr-calc">
+    <div class="calc-top">
+      <button class="calc-x" id="calcSalir">✕</button>
+      <div class="calc-prog"><i id="calcProgFill"></i></div>
+      <span class="calc-numq" id="calcNum">1/10</span>
+    </div>
+    <div class="calc-timerbar"><i id="calcTimerFill"></i></div>
+    <div class="calc-combo" id="calcCombo"></div>
+    <div class="calc-preg" id="calcPreg"></div>
+    <div class="calc-opts" id="calcOpts"></div>
+  </section>
+
+  <section class="screen" id="scr-calc-res">
+    <div class="res-wrap" style="text-align:center">
+      <div class="calc-stars" id="calcResStars"></div>
+      <h2 class="disp" id="calcResTit" style="margin:6px 0"></h2>
+      <p id="calcResSub" style="color:var(--dim);font-weight:800"></p>
+      <div class="calc-res-stats" id="calcResStats"></div>
+      <button class="btn" id="calcResNext" style="margin-top:14px">Siguiente nivel ➜</button>
+      <button class="btn sec" id="calcResMapa" style="margin-top:8px">Volver a niveles</button>
+    </div>
   </section>
 
   <!-- ============ MAPA DE CAMPAÑA ============ -->
@@ -898,7 +953,8 @@ function nuevoProgreso(n){n=n||(EXPEDICION?EXPEDICION.length:5);
 const S={nombre:"",avatar:AVATARES[0],xp:0,nivel:1,monedas:0,
  progreso:nuevoProgreso(), progresoDificil:nuevoProgreso(), dificilDesbloqueado:false,
  skins:[], logros:new Set(), rutas:{},
- campañasCompletas:new Set(), insignias:new Set(), insigniaActiva:null};
+ campañasCompletas:new Set(), insignias:new Set(), insigniaActiva:null,
+ calc:{desbloqueado:0, estrellas:[0,0,0,0,0]}};
 let Q={lvl:0,idx:0,aciertos:0,combo:0,comboMax:0,xpGanado:0,timer:null,t:15,lock:false};
 
 /* Modo de juego: 'normal' | 'dificil' */
@@ -985,6 +1041,155 @@ function particulas(x,y,emojis,n=14){
 function comboFx(n){const c=$('combo');c.textContent='COMBO x'+n+' 🔥';
  c.classList.remove('show');void c.offsetWidth;c.classList.add('show');}
 
+/* ================= RETO DE CÁLCULO (Matemáticas) =================
+   Genera operaciones al vuelo. genCalculo(cat, dif 1..5) -> {pregunta, opciones[4], ok}. */
+function _ri(a,b){return a+Math.floor(Math.random()*(b-a+1));}
+function _pick(a){return a[Math.floor(Math.random()*a.length)];}
+function _mezclar(a){for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
+function _esPrimo(n){if(n<2)return false;for(let i=2;i*i<=n;i++)if(n%i===0)return false;return true;}
+// Arma opciones numéricas: respuesta + 3 distractores cercanos (sin repetir).
+function _armarNum(preg, resp, spread){
+ const set=new Set([resp]), extra=[]; let g=0;
+ while(extra.length<3 && g++<60){
+  const m=_ri(0,2); let d;
+  if(m===0) d=resp+_ri(1,spread)*(_ri(0,1)?1:-1);
+  else if(m===1) d=resp+_ri(1,2)*10*(_ri(0,1)?1:-1);
+  else d=resp+(_ri(0,1)?1:-1);
+  if(!set.has(d) && !(resp>=0 && d<0)){set.add(d);extra.push(d);}  // sin negativos raros si la resp es positiva
+ }
+ let k=1; while(extra.length<3){if(!set.has(resp+k)){set.add(resp+k);extra.push(resp+k);}k++;}
+ const opciones=_mezclar([resp,...extra]).map(String);
+ return {pregunta:preg, opciones, ok:opciones.indexOf(String(resp))};
+}
+// Arma opciones a partir de una lista dada.
+function _armarOps(preg, opciones, correcta){
+ const o=_mezclar(opciones.map(String));
+ return {pregunta:preg, opciones:o, ok:o.indexOf(String(correcta))};
+}
+function calcBasica(dif){
+ const R=dif, op=_pick(['+','-','×','÷']); let a,b,resp,p;
+ if(op==='+'){a=_ri(2,8*R);b=_ri(2,8*R);resp=a+b;p=`${a} + ${b}`;}
+ else if(op==='-'){a=_ri(6,9*R);b=_ri(1,a);resp=a-b;p=`${a} − ${b}`;}
+ else if(op==='×'){a=_ri(2,3+R);b=_ri(2,9);resp=a*b;p=`${a} × ${b}`;}
+ else {b=_ri(2,3+R);resp=_ri(2,4+R);a=b*resp;p=`${a} ÷ ${b}`;}
+ return _armarNum(p, resp, Math.max(3,R*2));
+}
+function calcEnteros(dif){  // MA08 OA01: enteros (con negativos) + jerarquía
+ const t=_pick(['jerarquia','resta','mult']);
+ if(t==='jerarquia'){const a=_ri(2,9),b=_ri(2,9),c=_ri(2,9);return _armarNum(`${a} + ${b} × ${c}`, a+b*c, 6);}
+ if(t==='resta'){const a=_ri(2,9),b=_ri(a+1,a+9+dif);return _armarNum(`${a} − ${b}`, a-b, 4);}
+ const a=_ri(2,9),b=_ri(2,6); return _armarNum(_ri(0,1)?`(−${a}) × ${b}`:`${a} × (−${b})`, -(a*b), 6);
+}
+function calcPotencias(dif){  // MA08 OA03-04: potencias (exp. hasta 3) y raíces cuadradas
+ if(_ri(0,1)){const a=_ri(2,5+dif),e=_pick([2,2,3]);return _armarNum(`${a}${e===2?'²':'³'}`, Math.pow(a,e), a);}
+ const a=_ri(3,7+dif); return _armarNum(`√${a*a}`, a, 3);
+}
+function calcFracPor(dif){  // MA08 OA02, OA05: fracción de una cantidad y porcentajes
+ if(_ri(0,1)){const p=_pick([10,20,25,50]),base=_pick([20,40,60,80,100,120,200]);
+  return _armarNum(`${p}% de ${base}`, Math.round(base*p/100), 8);}
+ const f=_pick([[1,2],[1,4],[3,4],[1,3],[2,3]]),base=f[1]*_ri(2,7);
+ return _armarNum(`${f[0]}/${f[1]} de ${base}`, base*f[0]/f[1], 5);
+}
+function calcEcuacion(dif){
+ const t=_pick(['suma','resta','mult','div']); let a,x,b,p;
+ x=_ri(2,4+dif*2);
+ if(t==='suma'){a=_ri(2,9);b=x+a;p=`x + ${a} = ${b}`;}
+ else if(t==='resta'){a=_ri(2,9);b=x-a;p=`x − ${a} = ${b}`;}
+ else if(t==='mult'){a=_ri(2,6);b=x*a;p=`${a}x = ${b}`;}
+ else {a=_ri(2,5);x=a*_ri(2,6);b=x/a;p=`x ÷ ${a} = ${b}`;}
+ return _armarNum(`${p}   (x = ?)`, x, 4);
+}
+// Niveles del Reto (alineados al eje Números de 8°; el calentamiento refuerza la fluidez base)
+const NIVELES_CALC=[
+ {id:'calent',    nombre:'Calentamiento',       icono:'🔥', sub:'Sumas, restas y tablas',        oa:'Fluidez base'},
+ {id:'enteros',   nombre:'Enteros',             icono:'➖', sub:'Con números negativos',         oa:'MA08 OA01'},
+ {id:'potencias', nombre:'Potencias y raíces',  icono:'√',  sub:'a², a³ y raíces',               oa:'MA08 OA03-04'},
+ {id:'fracpor',   nombre:'Fracciones y %',      icono:'½',  sub:'Fracción de una cantidad y %',  oa:'MA08 OA02, OA05'},
+ {id:'relampago', nombre:'Reto Relámpago',      icono:'⚡', sub:'Mixto + ecuaciones, ¡rápido!',  oa:'MA08 OA08'},
+];
+function genCalculo(cat, dif){
+ dif=Math.max(1,Math.min(5,dif||1));
+ switch(cat){
+  case 'calent':    return calcBasica(dif);
+  case 'enteros':   return calcEnteros(dif);
+  case 'potencias': return calcPotencias(dif);
+  case 'fracpor':   return calcFracPor(dif);
+  case 'relampago': return _ri(0,1)?calcEcuacion(dif):genCalculo(_pick(['calent','enteros','potencias','fracpor']),dif);
+  default:          return calcBasica(dif);
+ }
+}
+/* ----- Mini-juego del Reto de Cálculo ----- */
+let RC={nivel:0, cat:'calent', ops:[], idx:0, aciertos:0, combo:0, comboMax:0, timer:null, lock:false};
+const RC_N=10; // operaciones por ronda
+function calcTiempoNivel(i){ return i>=4?6:i>=2?8:10; } // segundos por operación
+function calcEstado(){ if(!S.calc)S.calc={desbloqueado:0, estrellas:[0,0,0,0,0]}; return S.calc; }
+function nivelCalcDesbloqueado(i){ return i<=calcEstado().desbloqueado; }
+function abrirRetoCalculo(){ renderNivelesCalc(); go('scr-calc-mapa'); }
+function renderNivelesCalc(){
+ const g=$('calcNiveles'); g.innerHTML='';
+ NIVELES_CALC.forEach((n,i)=>{
+  const ab=nivelCalcDesbloqueado(i), est=calcEstado().estrellas[i]||0;
+  const card=document.createElement('div'); card.className='exp-card'+(ab?'':' soon');
+  const estrellas=est?(' '+'★'.repeat(est)):'';
+  card.innerHTML=`<div style="width:66px;height:66px;border-radius:12px;background:#4dd8ff1f;display:grid;place-items:center;font-size:30px;flex-shrink:0">${n.icono}</div>`+
+   `<div class="exp-info"><b>${i+1}. ${n.nombre}<span style="color:var(--gold)">${estrellas}</span></b><small>${n.sub}</small></div>`+
+   (ab?'<span class="exp-go">▶</span>':'<span class="exp-lock">🔒</span>');
+  if(ab)card.onclick=()=>{SND.tap();iniciarRondaCalc(i);};
+  g.appendChild(card);
+ });
+}
+function iniciarRondaCalc(i){
+ RC={nivel:i, cat:NIVELES_CALC[i].id, ops:[], idx:0, aciertos:0, combo:0, comboMax:0, timer:null, lock:false, tMax:calcTiempoNivel(i)};
+ for(let k=0;k<RC_N;k++) RC.ops.push(genCalculo(RC.cat, 1+Math.min(4, i + Math.floor(k/4))));
+ go('scr-calc'); pintaOpCalc();
+}
+function pintaOpCalc(){
+ clearInterval(RC.timer); RC.lock=false;
+ const o=RC.ops[RC.idx];
+ $('calcNum').textContent=(RC.idx+1)+'/'+RC_N;
+ $('calcProgFill').style.width=(RC.idx/RC_N*100)+'%';
+ $('calcPreg').textContent=o.pregunta;
+ $('calcCombo').textContent=RC.combo>=2?('🔥 COMBO x'+RC.combo):'';
+ const cont=$('calcOpts'); cont.innerHTML='';
+ o.opciones.forEach((op,i)=>{const b=document.createElement('button');b.textContent=op;b.onclick=()=>responderCalc(i,b);cont.appendChild(b);});
+ const tf=$('calcTimerFill'), bar=tf.parentElement; bar.classList.remove('low'); tf.style.width='100%';
+ const t0=Date.now();
+ RC.timer=setInterval(()=>{
+  const restante=Math.max(0, RC.tMax-(Date.now()-t0)/1000);
+  tf.style.width=(restante/RC.tMax*100)+'%';
+  if(restante<=RC.tMax*0.34) bar.classList.add('low');
+  if(restante<=0){ clearInterval(RC.timer); responderCalc(-1,null); }
+ },80);
+}
+function responderCalc(i,btn){
+ if(RC.lock)return; RC.lock=true; clearInterval(RC.timer);
+ const o=RC.ops[RC.idx], correcto=(i===o.ok), botones=[...$('calcOpts').children];
+ if(botones[o.ok]) botones[o.ok].classList.add('ok');
+ if(correcto){ SND.correct(); RC.aciertos++; RC.combo++; RC.comboMax=Math.max(RC.comboMax,RC.combo); }
+ else { SND.wrong(); RC.combo=0; if(btn)btn.classList.add('bad'); }
+ setTimeout(()=>{ RC.idx++; if(RC.idx>=RC_N) terminarRondaCalc(); else pintaOpCalc(); }, correcto?450:850);
+}
+function terminarRondaCalc(){
+ clearInterval(RC.timer);
+ const a=RC.aciertos, est = a>=9?3 : a>=7?2 : a>=5?1 : 0, st=calcEstado();
+ st.estrellas[RC.nivel]=Math.max(st.estrellas[RC.nivel]||0, est);
+ if(est>=1 && RC.nivel===st.desbloqueado && RC.nivel<NIVELES_CALC.length-1) st.desbloqueado=RC.nivel+1;
+ const xpG=a*6, coG=a*2; S.xp+=xpG; S.monedas+=coG;
+ if(est===3)SND.win(); else if(est>=1)SND.levelup(); else SND.lose();
+ guardar(); refreshHud();
+ $('calcResStars').textContent = '★'.repeat(est)+'☆'.repeat(3-est);
+ $('calcResTit').textContent = est>=1? '¡'+NIVELES_CALC[RC.nivel].nombre+' superado!' : '¡Casi!';
+ $('calcResSub').textContent = est>=1? '¡Buen cálculo mental!' : 'Necesitas al menos 5 de 10 aciertos.';
+ $('calcResStats').innerHTML = `<div><b>${a}/${RC_N}</b><small>aciertos</small></div><div><b>🔥${RC.comboMax}</b><small>mejor racha</small></div><div><b>+${xpG}</b><small>XP</small></div>`;
+ const hayNext=RC.nivel<NIVELES_CALC.length-1 && nivelCalcDesbloqueado(RC.nivel+1);
+ $('calcResNext').style.display=(est>=1 && hayNext)?'block':'none';
+ go('scr-calc-res');
+}
+$('btnCalcBack').onclick=()=>{SND.tap();go('scr-expediciones');};
+$('calcSalir').onclick=()=>{clearInterval(RC.timer);SND.tap();renderNivelesCalc();go('scr-calc-mapa');};
+$('calcResMapa').onclick=()=>{SND.tap();renderNivelesCalc();go('scr-calc-mapa');};
+$('calcResNext').onclick=()=>{SND.tap();iniciarRondaCalc(Math.min(NIVELES_CALC.length-1,RC.nivel+1));};
+
 function refreshHud(){
  $('hudAv').innerHTML=avatarHTML(S.avatar);
  $('hudName').textContent=insigniaIc()+S.nombre;
@@ -1042,13 +1247,15 @@ function guardar(){try{
  localStorage.setItem(SAVE_KEY,JSON.stringify({
   nombre:S.nombre,avatar:S.avatar,xp:S.xp,monedas:S.monedas,
   skins:S.skins,logros:[...S.logros], rutaActual:EXP_ACT?EXP_ACT.id:null, rutas:S.rutas,
-  campañasCompletas:[...S.campañasCompletas], insignias:[...S.insignias], insigniaActiva:S.insigniaActiva}));}catch(e){}}
+  campañasCompletas:[...S.campañasCompletas], insignias:[...S.insignias], insigniaActiva:S.insigniaActiva,
+  calc:S.calc}));}catch(e){}}
 function cargar(){try{const d=JSON.parse(localStorage.getItem(SAVE_KEY)||'null');if(!d)return false;
  S.nombre=d.nombre||"";S.avatar=d.avatar||AVATARES[0];S.xp=d.xp||0;S.monedas=d.monedas||0;
  S.skins=Array.isArray(d.skins)?d.skins:[];S.logros=new Set(d.logros||[]);
  S.campañasCompletas=new Set(d.campañasCompletas||[]);
  S.insignias=new Set(d.insignias||[]);
  S.insigniaActiva=d.insigniaActiva||null;
+ if(d.calc&&Array.isArray(d.calc.estrellas))S.calc=d.calc;
  S.rutas=(d.rutas&&typeof d.rutas==='object')?d.rutas:{};
  if(!d.rutas && Array.isArray(d.progreso)){ // migrar partidas antiguas (Historia)
   S.rutas['hist-europeos']={progreso:d.progreso,
@@ -1237,6 +1444,13 @@ function mapasDe(asig){return EXPEDICIONES.filter(e=>e.activa&&e.asignatura===as
 function renderExpediciones(){
  const g=$('expGrid');g.innerHTML='';
  ORDEN_ASIG.forEach(asig=>{
+  if(asig==='Matemáticas'){                            // Matemáticas = Reto de Cálculo
+   const nv=calcEstado().estrellas.filter(x=>x>0).length;
+   const card=document.createElement('div');card.className='exp-card';
+   card.innerHTML=`<img src="${ASIG_PORTADA['Matemáticas']}" alt="Matemáticas"><div class="exp-info"><b>Matemáticas</b><small>Cálculo rápido · ${nv}/${NIVELES_CALC.length} niveles</small></div><span class="exp-go">▶</span>`;
+   card.onclick=()=>{SND.tap();abrirRetoCalculo();};
+   g.appendChild(card); return;
+  }
   const camp=CAMPAÑAS.find(c=>c.asignatura===asig);
   const exps=mapasDe(asig);
   if(!camp&&!exps.length)return;                       // sin contenido: no se muestra

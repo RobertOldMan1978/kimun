@@ -43,11 +43,13 @@ en línea. Historia de v0 al detalle en la Bitácora (abajo).
     skin "Kimün Científico".
   Capa `CAMPAÑAS` data-driven; el motor de campañas es **genérico** (Desafío Extra
   opcional, jefe con título dinámico).
-- **Expediciones sueltas** (asignaturas aún sin campaña): Matemáticas "Álgebra y
-  funciones" (MA08 OA06-09), Lenguaje "Tipos de texto y medios" (LE08 OA03/09/10/11)
-  y Lenguaje "Mundos literarios" (LE08 OA04-07). Regla de cada capítulo/expedición:
-  **4 etapas + 1 jefe (5 nodos)**. Cada asignatura tiene, además, un **banco de año
-  completo** (todos sus OA oficiales) como reserva (ver Sesión 9).
+- **Matemáticas · "Reto de Cálculo" (Sesión 15):** al entrar a Matemáticas se abre un
+  juego de **cálculo mental rápido** (procedural, 5 niveles alineados al eje Números de
+  8°), no el quiz de álgebra. El banco de álgebra queda de reserva y sigue en el Duelo.
+- **Expediciones sueltas** (aún sin campaña): Lenguaje "Tipos de texto y medios"
+  (LE08 OA03/09/10/11) y Lenguaje "Mundos literarios" (LE08 OA04-07). Regla de cada
+  capítulo/expedición: **4 etapas + 1 jefe (5 nodos)**. Cada asignatura tiene, además,
+  un **banco de año completo** (todos sus OA oficiales) como reserva (ver Sesión 9).
 - Quiz: 6 preguntas al azar/etapa, timer 15 s, pasa con 66%, 3 estrellas. Al
   fallar revela la respuesta correcta + explicación y botón "Continuar". Kimün
   comenta un dato al iniciar la ruta.
@@ -612,7 +614,20 @@ Se completaron los tres pendientes que quedaron de la Sesión 2:
   (`kimun_music`, `kimun_sound`). Las pistas (`assets/audio/musica-menu.mp3` y
   `musica-jefe.mp3`) las genera/consigue Roberto; specs y fuentes libres en
   `assets/audio/README.md`.
-- **Pendientes:** convertir Matemáticas y Lenguaje en campañas (villano + skin c/u);
+- **Matemáticas → "Reto de Cálculo" (nueva mecánica de cálculo mental rápido):** a
+  pedido de Roberto, el camino de Matemáticas deja de ser el quiz de álgebra y pasa a
+  ser un juego de **agilidad numérica**, alineado al eje Números de 8°. Generador
+  **procedural** (`genCalculo`, sin banco, operaciones infinitas) con 5 niveles:
+  Calentamiento (fluidez base), Enteros (OA01), Potencias y raíces (OA03-04),
+  Fracciones y % (OA02/OA05) y Reto Relámpago (mixto + ecuaciones OA08). Mini-juego
+  propio: mapa de niveles con desbloqueo (`scr-calc-mapa`), ronda de 10 operaciones
+  con barra de tiempo por operación (10→6 s), combo y opción múltiple (`scr-calc`), y
+  resultado con estrellas + XP/monedas (`scr-calc-res`). Progreso en `S.calc`
+  (persistido). El módulo Matemáticas del menú abre el Reto; el banco de álgebra sigue
+  disponible para el Duelo 1v1. Contenido verificado (respuestas correctas y alineación
+  curricular). Ajustables: velocidad, nº de operaciones, dificultad, umbral de estrellas.
+- **Pendientes:** convertir Lenguaje en campaña (y decidir el enfoque de Matemáticas si
+  se quiere además una campaña de álgebra); villano + skin por asignatura;
   portadas propias de los capítulos de Ciencias (opcional); duelo en 2 celulares,
   notificaciones push y ranking real, limpiar perfiles de prueba en Supabase.
   Recordatorio: quitar el `libre:true` de "El mundo colonial" al terminar las pruebas.
