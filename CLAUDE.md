@@ -643,6 +643,11 @@ Se completaron los tres pendientes que quedaron de la Sesión 2:
   navegaba). Corregido a `.etapas.filter(e=>e>=RC_ETAPAS)`. Lección: al cambiar la forma
   de un objeto de estado, reprobar TODOS los flujos que lo leen (incluido el menú), no
   solo la feature nueva.
+- **Reto de Cálculo con vida (Kimün + combos):** el Reto ahora tiene al compañero
+  **Kimün reaccionando** en cada operación (neutral / feliz al acertar / sorprendido en
+  combo / triste al fallar) — `kimReact` se generalizó para animar un elemento por id
+  (`kimBuddyCalc`) — y la **animación de combo** ("COMBO x_ 🔥" + sonido) que ya usaba el
+  quiz (`comboFx`, overlay global). Aplica en los tres modos (niveles, jefe y sin fin).
 - **Pendientes:** convertir Lenguaje en campaña (y decidir el enfoque de Matemáticas si
   se quiere además una campaña de álgebra); villano + skin por asignatura;
   portadas propias de los capítulos de Ciencias (opcional); duelo en 2 celulares,

@@ -238,6 +238,7 @@ input.nm:focus{border-color:var(--cyan)}
 .calc-hud-sinfin{flex:1;text-align:center;font-weight:900;color:var(--violet);font-size:15px}
 .calc-hud-sinfin b{color:var(--gold)}
 .calc-nivic{width:60px;height:60px;border-radius:12px;background:#4dd8ff1f;display:grid;place-items:center;font-size:28px;flex-shrink:0}
+#kimBuddyCalc{width:64px;height:64px}
 .calc-x{width:38px;height:38px;border-radius:11px;border:1px solid #ffffff1f;background:#00000030;color:var(--txt);font-size:15px;cursor:pointer;flex-shrink:0}
 .calc-prog{flex:1;height:10px;border-radius:6px;background:#ffffff14;overflow:hidden}
 .calc-prog i{display:block;height:100%;width:0;background:var(--cyan);transition:width .3s}
@@ -479,6 +480,7 @@ body.jefe-hit{animation:jefeShake .26s}
       <div id="calcHudSinfin" class="calc-hud-sinfin" style="display:none">♾️ Racha: <b id="calcRachaN">0</b></div>
     </div>
     <div class="calc-timerbar"><i id="calcTimerFill"></i></div>
+    <div class="kim-stage" style="margin:6px 0 2px"><img class="kim-buddy" id="kimBuddyCalc" src="assets/kimun-neutral.png" alt="Kimün"></div>
     <div class="calc-combo" id="calcCombo"></div>
     <div class="calc-preg" id="calcPreg"></div>
     <div class="calc-opts" id="calcOpts"></div>
@@ -1186,7 +1188,7 @@ function iniciarSinFin(){
 }
 function _difActual(){ if(RC.modo==='jefe')return _ri(4,5); if(RC.modo==='sinfin')return Math.min(5,1+Math.floor(RC.racha/5)); return Math.min(5,RC_BASE[RC.nivel]+RC.etapa); }
 function pintaOpCalc(){
- clearInterval(RC.timer); RC.lock=false;
+ clearInterval(RC.timer); RC.lock=false; kimReact('neutral','kimBuddyCalc');
  const o = RC.modo==='nivel' ? RC.ops[RC.idx] : genCalculo(RC.modo==='jefe'?_pick(['calent','enteros','potencias','fracpor','relampago']):RC.cat, _difActual());
  RC._o=o;
  if(RC.modo==='nivel'){ $('calcNum').textContent=(RC.idx+1)+'/'+RC_N; $('calcProgFill').style.width=(RC.idx/RC_N*100)+'%'; }
@@ -1206,9 +1208,12 @@ function responderCalc(i,btn){
  if(RC.lock)return; RC.lock=true; clearInterval(RC.timer);
  const o=RC._o, correcto=(i===o.ok), botones=[...$('calcOpts').children];
  if(botones[o.ok]) botones[o.ok].classList.add('ok');
- if(correcto){ SND.correct(); RC.aciertos++; RC.combo++; RC.comboMax=Math.max(RC.comboMax,RC.combo);
-   if(RC.modo==='jefe')RC.vida=Math.max(0,RC.vida-1); if(RC.modo==='sinfin')RC.racha++; }
- else { (RC.modo==='jefe'?SND.hurt():SND.wrong()); RC.combo=0; if(btn)btn.classList.add('bad'); if(RC.modo==='jefe')RC.corazones--; }
+ if(correcto){ RC.aciertos++; RC.combo++; RC.comboMax=Math.max(RC.comboMax,RC.combo);
+   if(RC.modo==='jefe')RC.vida=Math.max(0,RC.vida-1); if(RC.modo==='sinfin')RC.racha++;
+   if(RC.combo>=2){ SND.combo(RC.combo); comboFx(RC.combo); kimReact('wow','kimBuddyCalc'); }
+   else { SND.correct(); kimReact('feliz','kimBuddyCalc'); }
+ }
+ else { (RC.modo==='jefe'?SND.hurt():SND.wrong()); RC.combo=0; if(btn)btn.classList.add('bad'); if(RC.modo==='jefe')RC.corazones--; kimReact('triste','kimBuddyCalc'); }
  setTimeout(()=>{
   if(RC.modo==='nivel'){ RC.idx++; return RC.idx>=RC_N?terminarEtapaCalc():pintaOpCalc(); }
   if(RC.modo==='jefe'){ if(RC.vida<=0)return jefeCalcVictoria(); if(RC.corazones<=0)return jefeCalcDerrota(); return pintaOpCalc(); }
@@ -1944,8 +1949,8 @@ document.querySelectorAll('.nav button').forEach(b=>b.onclick=()=>{
 ['neutral','feliz','triste','sorprendido','oro','plata','bronce','fiesta','desanimado']
  .forEach(n=>{const i=new Image();i.src='assets/kimun-'+n+'.png';});
 const KIM_REACT={neutral:['neutral',''],feliz:['feliz','happy'],triste:['triste','sad'],wow:['sorprendido','wow']};
-function kimReact(estado){
- const el=$('kimBuddy');if(!el)return;
+function kimReact(estado, id){
+ const el=$(id||'kimBuddy');if(!el)return;
  const [img,cls]=KIM_REACT[estado]||KIM_REACT.neutral;
  el.src='assets/kimun-'+img+'.png';
  el.className='kim-buddy';void el.offsetWidth;
