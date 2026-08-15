@@ -44,8 +44,10 @@ en línea. Historia de v0 al detalle en la Bitácora (abajo).
   Capa `CAMPAÑAS` data-driven; el motor de campañas es **genérico** (Desafío Extra
   opcional, jefe con título dinámico).
 - **Matemáticas · "Reto de Cálculo" (Sesión 15):** al entrar a Matemáticas se abre un
-  juego de **cálculo mental rápido** (procedural, 5 niveles alineados al eje Números de
-  8°), no el quiz de álgebra. El banco de álgebra queda de reserva y sigue en el Duelo.
+  juego de **cálculo mental rápido** (procedural, alineado al eje Números de 8°), no el
+  quiz de álgebra. **5 niveles × 3 etapas** + **Jefe Final "El Autómata"** (vida y
+  corazones) + **Modo Sin Fin** con récord. El banco de álgebra queda de reserva y
+  sigue en el Duelo.
 - **Expediciones sueltas** (aún sin campaña): Lenguaje "Tipos de texto y medios"
   (LE08 OA03/09/10/11) y Lenguaje "Mundos literarios" (LE08 OA04-07). Regla de cada
   capítulo/expedición: **4 etapas + 1 jefe (5 nodos)**. Cada asignatura tiene, además,
@@ -626,6 +628,15 @@ Se completaron los tres pendientes que quedaron de la Sesión 2:
   (persistido). El módulo Matemáticas del menú abre el Reto; el banco de álgebra sigue
   disponible para el Duelo 1v1. Contenido verificado (respuestas correctas y alineación
   curricular). Ajustables: velocidad, nº de operaciones, dificultad, umbral de estrellas.
+- **Reto de Cálculo ampliado (mismo peso que las campañas):** tras probarlo, Roberto
+  notó que era corto y fácil comparado con las otras asignaturas. Se profundizó:
+  cada nivel pasó a tener **3 sub-etapas** de dificultad creciente (**15 etapas** en
+  total); **Jefe Final "El Autómata" 🤖** (se desbloquea al dominar los 5 niveles;
+  barra de vida de 15, 3 corazones, 6 s/operación, mezcla de todos los tipos) que
+  entrega skin **"Kimün Calculista" 🧮** + insignia **"Maestro del Cálculo" 🎖️** + bono
+  (+500🪙/+300XP); y **Modo Sin Fin ♾️** con récord de racha máxima. Estado `S.calc`
+  reescrito (`{etapas[5], jefe, record}`). Texto del candado de skins ahora usa `req`
+  por skin (antes "Termina Historia" fijo). Dificultad retadora pero justa para 8°.
 - **Pendientes:** convertir Lenguaje en campaña (y decidir el enfoque de Matemáticas si
   se quiere además una campaña de álgebra); villano + skin por asignatura;
   portadas propias de los capítulos de Ciencias (opcional); duelo en 2 celulares,

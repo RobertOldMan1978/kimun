@@ -230,6 +230,14 @@ input.nm:focus{border-color:var(--cyan)}
 .od-reloj{text-align:center;font-weight:900;color:var(--pink);font-size:14px;margin-bottom:8px}
 /* ===== RETO DE CÁLCULO ===== */
 .calc-top{display:flex;align-items:center;gap:10px;margin:14px 0 8px}
+.calc-hud-nivel{display:flex;align-items:center;gap:10px;flex:1}
+.calc-hud-jefe{flex:1}
+.calc-jefe-top{display:flex;justify-content:space-between;font-weight:900;font-size:13px;margin-bottom:4px;color:var(--txt)}
+.calc-vidabar{height:10px;border-radius:6px;background:#ffffff14;overflow:hidden}
+.calc-vidabar i{display:block;height:100%;width:100%;background:var(--pink);transition:width .3s}
+.calc-hud-sinfin{flex:1;text-align:center;font-weight:900;color:var(--violet);font-size:15px}
+.calc-hud-sinfin b{color:var(--gold)}
+.calc-nivic{width:60px;height:60px;border-radius:12px;background:#4dd8ff1f;display:grid;place-items:center;font-size:28px;flex-shrink:0}
 .calc-x{width:38px;height:38px;border-radius:11px;border:1px solid #ffffff1f;background:#00000030;color:var(--txt);font-size:15px;cursor:pointer;flex-shrink:0}
 .calc-prog{flex:1;height:10px;border-radius:6px;background:#ffffff14;overflow:hidden}
 .calc-prog i{display:block;height:100%;width:0;background:var(--cyan);transition:width .3s}
@@ -460,8 +468,15 @@ body.jefe-hit{animation:jefeShake .26s}
   <section class="screen" id="scr-calc">
     <div class="calc-top">
       <button class="calc-x" id="calcSalir">✕</button>
-      <div class="calc-prog"><i id="calcProgFill"></i></div>
-      <span class="calc-numq" id="calcNum">1/10</span>
+      <div id="calcHudNivel" class="calc-hud-nivel">
+        <div class="calc-prog"><i id="calcProgFill"></i></div>
+        <span class="calc-numq" id="calcNum">1/10</span>
+      </div>
+      <div id="calcHudJefe" class="calc-hud-jefe" style="display:none">
+        <div class="calc-jefe-top"><span>🤖 El Autómata</span><span id="calcJefeCor" class="calc-cor">❤️❤️❤️</span></div>
+        <div class="calc-vidabar"><i id="calcJefeVida"></i></div>
+      </div>
+      <div id="calcHudSinfin" class="calc-hud-sinfin" style="display:none">♾️ Racha: <b id="calcRachaN">0</b></div>
     </div>
     <div class="calc-timerbar"><i id="calcTimerFill"></i></div>
     <div class="calc-combo" id="calcCombo"></div>
@@ -903,6 +918,7 @@ const CAMPAÑAS=[{
 const INSIGNIAS=[
   {id:'maestro-historia', ic:'🏅', tx:'Maestro de Historia', asignatura:'Historia'},
   {id:'maestro-ciencias', ic:'🔬', tx:'Maestro de Ciencias', asignatura:'Ciencias'},
+  {id:'maestro-calculo', ic:'🎖️', tx:'Maestro del Cálculo', asignatura:'Matemáticas'},
 ];
 function campañaDe(asig){return CAMPAÑAS.find(c=>c.asignatura===asig)||null;}
 function campañaPorId(id){return CAMPAÑAS.find(c=>c.id===id)||null;}
@@ -954,7 +970,7 @@ const S={nombre:"",avatar:AVATARES[0],xp:0,nivel:1,monedas:0,
  progreso:nuevoProgreso(), progresoDificil:nuevoProgreso(), dificilDesbloqueado:false,
  skins:[], logros:new Set(), rutas:{},
  campañasCompletas:new Set(), insignias:new Set(), insigniaActiva:null,
- calc:{desbloqueado:0, estrellas:[0,0,0,0,0]}};
+ calc:{etapas:[0,0,0,0,0], jefe:false, record:0}};
 let Q={lvl:0,idx:0,aciertos:0,combo:0,comboMax:0,xpGanado:0,timer:null,t:15,lock:false};
 
 /* Modo de juego: 'normal' | 'dificil' */
@@ -1118,77 +1134,139 @@ function genCalculo(cat, dif){
   default:          return calcBasica(dif);
  }
 }
-/* ----- Mini-juego del Reto de Cálculo ----- */
-let RC={nivel:0, cat:'calent', ops:[], idx:0, aciertos:0, combo:0, comboMax:0, timer:null, lock:false};
-const RC_N=10; // operaciones por ronda
-function calcTiempoNivel(i){ return i>=4?6:i>=2?8:10; } // segundos por operación
-function calcEstado(){ if(!S.calc)S.calc={desbloqueado:0, estrellas:[0,0,0,0,0]}; return S.calc; }
-function nivelCalcDesbloqueado(i){ return i<=calcEstado().desbloqueado; }
+/* ----- Mini-juego del Reto de Cálculo (sub-etapas + Jefe + Sin Fin) ----- */
+const RC_N=10;                  // operaciones por etapa
+const RC_ETAPAS=3;              // etapas por nivel
+const RC_BASE=[1,2,2,3,3];      // dificultad base por nivel
+const RC_JEFE_VIDA=15, RC_JEFE_COR=3;
+let RC={modo:'nivel', nivel:0, etapa:0, cat:'calent', ops:[], idx:0, aciertos:0, combo:0, comboMax:0, timer:null, lock:false, tMax:10, vida:0, corazones:0, racha:0};
+
+function calcEstado(){ if(!S.calc||!Array.isArray(S.calc.etapas))S.calc={etapas:[0,0,0,0,0],jefe:false,record:0}; return S.calc; }
+function nivelCalcDesbloqueado(i){ if(i===0)return true; return calcEstado().etapas[i-1]>=1; }
+function jefeCalcDesbloqueado(){ return calcEstado().etapas.every(e=>e>=RC_ETAPAS); }
+function calcTiempo(dif){ return dif>=5?6:dif>=4?7:dif>=3?8:10; }
 function abrirRetoCalculo(){ renderNivelesCalc(); go('scr-calc-mapa'); }
 function renderNivelesCalc(){
- const g=$('calcNiveles'); g.innerHTML='';
+ const g=$('calcNiveles'); g.innerHTML=''; const st=calcEstado();
  NIVELES_CALC.forEach((n,i)=>{
-  const ab=nivelCalcDesbloqueado(i), est=calcEstado().estrellas[i]||0;
+  const ab=nivelCalcDesbloqueado(i), et=st.etapas[i]||0, dom=et>=RC_ETAPAS;
   const card=document.createElement('div'); card.className='exp-card'+(ab?'':' soon');
-  const estrellas=est?(' '+'★'.repeat(est)):'';
-  card.innerHTML=`<div style="width:66px;height:66px;border-radius:12px;background:#4dd8ff1f;display:grid;place-items:center;font-size:30px;flex-shrink:0">${n.icono}</div>`+
-   `<div class="exp-info"><b>${i+1}. ${n.nombre}<span style="color:var(--gold)">${estrellas}</span></b><small>${n.sub}</small></div>`+
+  const prog=dom?'<span style="color:var(--gold)">★ Dominado</span>':`Etapa ${Math.min(et+1,RC_ETAPAS)}/${RC_ETAPAS} · ${n.sub}`;
+  card.innerHTML=`<div class="calc-nivic">${n.icono}</div><div class="exp-info"><b>${i+1}. ${n.nombre}</b><small>${ab?prog:n.sub}</small></div>`+
    (ab?'<span class="exp-go">▶</span>':'<span class="exp-lock">🔒</span>');
-  if(ab)card.onclick=()=>{SND.tap();iniciarRondaCalc(i);};
+  if(ab)card.onclick=()=>{SND.tap();iniciarEtapaCalc(i,Math.min(et,RC_ETAPAS-1));};
   g.appendChild(card);
  });
+ const jefeAb=jefeCalcDesbloqueado();
+ const jc=document.createElement('div'); jc.className='exp-card'+(jefeAb?'':' soon');
+ jc.innerHTML=`<div class="calc-nivic" style="background:#ff4d8d22">🤖</div><div class="exp-info"><b>JEFE: El Autómata ${st.jefe?'👑':''}</b><small>${jefeAb?'¡Vence al maestro del cálculo!':'🔒 Domina los 5 niveles'}</small></div>`+
+  (jefeAb?'<span class="exp-go">⚡</span>':'<span class="exp-lock">🔒</span>');
+ if(jefeAb)jc.onclick=()=>{SND.tap();iniciarJefeCalc();};
+ g.appendChild(jc);
+ const sf=document.createElement('div'); sf.className='exp-card';
+ sf.innerHTML=`<div class="calc-nivic" style="background:#8f6bff22">♾️</div><div class="exp-info"><b>Modo Sin Fin</b><small>Récord: ${st.record||0} seguidas</small></div><span class="exp-go">▶</span>`;
+ sf.onclick=()=>{SND.tap();iniciarSinFin();};
+ g.appendChild(sf);
 }
-function iniciarRondaCalc(i){
- RC={nivel:i, cat:NIVELES_CALC[i].id, ops:[], idx:0, aciertos:0, combo:0, comboMax:0, timer:null, lock:false, tMax:calcTiempoNivel(i)};
- for(let k=0;k<RC_N;k++) RC.ops.push(genCalculo(RC.cat, 1+Math.min(4, i + Math.floor(k/4))));
- go('scr-calc'); pintaOpCalc();
+function mostrarHudCalc(m){ $('calcHudNivel').style.display=m==='nivel'?'flex':'none';
+ $('calcHudJefe').style.display=m==='jefe'?'block':'none'; $('calcHudSinfin').style.display=m==='sinfin'?'block':'none'; }
+function iniciarEtapaCalc(nivel,etapa){
+ const dif=Math.min(5,RC_BASE[nivel]+etapa);
+ RC={modo:'nivel',nivel,etapa,cat:NIVELES_CALC[nivel].id,ops:[],idx:0,aciertos:0,combo:0,comboMax:0,timer:null,lock:false,tMax:calcTiempo(dif)};
+ for(let k=0;k<RC_N;k++) RC.ops.push(genCalculo(RC.cat,dif));
+ mostrarHudCalc('nivel'); go('scr-calc'); pintaOpCalc();
 }
+function iniciarJefeCalc(){
+ RC={modo:'jefe',cat:'relampago',idx:0,aciertos:0,combo:0,comboMax:0,timer:null,lock:false,tMax:6,vida:RC_JEFE_VIDA,corazones:RC_JEFE_COR};
+ mostrarHudCalc('jefe'); go('scr-calc'); pintaOpCalc();
+}
+function iniciarSinFin(){
+ RC={modo:'sinfin',cat:'relampago',idx:0,aciertos:0,combo:0,comboMax:0,timer:null,lock:false,tMax:10,racha:0};
+ mostrarHudCalc('sinfin'); go('scr-calc'); pintaOpCalc();
+}
+function _difActual(){ if(RC.modo==='jefe')return _ri(4,5); if(RC.modo==='sinfin')return Math.min(5,1+Math.floor(RC.racha/5)); return Math.min(5,RC_BASE[RC.nivel]+RC.etapa); }
 function pintaOpCalc(){
  clearInterval(RC.timer); RC.lock=false;
- const o=RC.ops[RC.idx];
- $('calcNum').textContent=(RC.idx+1)+'/'+RC_N;
- $('calcProgFill').style.width=(RC.idx/RC_N*100)+'%';
- $('calcPreg').textContent=o.pregunta;
+ const o = RC.modo==='nivel' ? RC.ops[RC.idx] : genCalculo(RC.modo==='jefe'?_pick(['calent','enteros','potencias','fracpor','relampago']):RC.cat, _difActual());
+ RC._o=o;
+ if(RC.modo==='nivel'){ $('calcNum').textContent=(RC.idx+1)+'/'+RC_N; $('calcProgFill').style.width=(RC.idx/RC_N*100)+'%'; }
+ else if(RC.modo==='jefe'){ $('calcJefeVida').style.width=(RC.vida/RC_JEFE_VIDA*100)+'%'; $('calcJefeCor').textContent='❤️'.repeat(RC.corazones)||'💀'; }
+ else { $('calcRachaN').textContent=RC.racha; }
  $('calcCombo').textContent=RC.combo>=2?('🔥 COMBO x'+RC.combo):'';
+ $('calcPreg').textContent=o.pregunta;
  const cont=$('calcOpts'); cont.innerHTML='';
  o.opciones.forEach((op,i)=>{const b=document.createElement('button');b.textContent=op;b.onclick=()=>responderCalc(i,b);cont.appendChild(b);});
  const tf=$('calcTimerFill'), bar=tf.parentElement; bar.classList.remove('low'); tf.style.width='100%';
- const t0=Date.now();
- RC.timer=setInterval(()=>{
-  const restante=Math.max(0, RC.tMax-(Date.now()-t0)/1000);
-  tf.style.width=(restante/RC.tMax*100)+'%';
-  if(restante<=RC.tMax*0.34) bar.classList.add('low');
-  if(restante<=0){ clearInterval(RC.timer); responderCalc(-1,null); }
- },80);
+ const t0=Date.now(), tMax=RC.tMax;
+ RC.timer=setInterval(()=>{ const rest=Math.max(0,tMax-(Date.now()-t0)/1000);
+  tf.style.width=(rest/tMax*100)+'%'; if(rest<=tMax*0.34)bar.classList.add('low');
+  if(rest<=0){clearInterval(RC.timer);responderCalc(-1,null);} },80);
 }
 function responderCalc(i,btn){
  if(RC.lock)return; RC.lock=true; clearInterval(RC.timer);
- const o=RC.ops[RC.idx], correcto=(i===o.ok), botones=[...$('calcOpts').children];
+ const o=RC._o, correcto=(i===o.ok), botones=[...$('calcOpts').children];
  if(botones[o.ok]) botones[o.ok].classList.add('ok');
- if(correcto){ SND.correct(); RC.aciertos++; RC.combo++; RC.comboMax=Math.max(RC.comboMax,RC.combo); }
- else { SND.wrong(); RC.combo=0; if(btn)btn.classList.add('bad'); }
- setTimeout(()=>{ RC.idx++; if(RC.idx>=RC_N) terminarRondaCalc(); else pintaOpCalc(); }, correcto?450:850);
+ if(correcto){ SND.correct(); RC.aciertos++; RC.combo++; RC.comboMax=Math.max(RC.comboMax,RC.combo);
+   if(RC.modo==='jefe')RC.vida=Math.max(0,RC.vida-1); if(RC.modo==='sinfin')RC.racha++; }
+ else { (RC.modo==='jefe'?SND.hurt():SND.wrong()); RC.combo=0; if(btn)btn.classList.add('bad'); if(RC.modo==='jefe')RC.corazones--; }
+ setTimeout(()=>{
+  if(RC.modo==='nivel'){ RC.idx++; return RC.idx>=RC_N?terminarEtapaCalc():pintaOpCalc(); }
+  if(RC.modo==='jefe'){ if(RC.vida<=0)return jefeCalcVictoria(); if(RC.corazones<=0)return jefeCalcDerrota(); return pintaOpCalc(); }
+  return correcto?pintaOpCalc():terminarSinFin();
+ }, correcto?420:820);
 }
-function terminarRondaCalc(){
+function _resCard(html){ $('calcResStats').innerHTML=html; }
+function terminarEtapaCalc(){
  clearInterval(RC.timer);
- const a=RC.aciertos, est = a>=9?3 : a>=7?2 : a>=5?1 : 0, st=calcEstado();
- st.estrellas[RC.nivel]=Math.max(st.estrellas[RC.nivel]||0, est);
- if(est>=1 && RC.nivel===st.desbloqueado && RC.nivel<NIVELES_CALC.length-1) st.desbloqueado=RC.nivel+1;
- const xpG=a*6, coG=a*2; S.xp+=xpG; S.monedas+=coG;
- if(est===3)SND.win(); else if(est>=1)SND.levelup(); else SND.lose();
+ const a=RC.aciertos, est=a>=9?3:a>=7?2:a>=5?1:0, st=calcEstado(), paso=est>=1;
+ if(paso && RC.etapa+1>st.etapas[RC.nivel]) st.etapas[RC.nivel]=RC.etapa+1;
+ const xpG=a*6; S.xp+=xpG; S.monedas+=a*2;
+ if(est===3)SND.win(); else if(paso)SND.levelup(); else SND.lose();
  guardar(); refreshHud();
- $('calcResStars').textContent = '★'.repeat(est)+'☆'.repeat(3-est);
- $('calcResTit').textContent = est>=1? '¡'+NIVELES_CALC[RC.nivel].nombre+' superado!' : '¡Casi!';
- $('calcResSub').textContent = est>=1? '¡Buen cálculo mental!' : 'Necesitas al menos 5 de 10 aciertos.';
- $('calcResStats').innerHTML = `<div><b>${a}/${RC_N}</b><small>aciertos</small></div><div><b>🔥${RC.comboMax}</b><small>mejor racha</small></div><div><b>+${xpG}</b><small>XP</small></div>`;
- const hayNext=RC.nivel<NIVELES_CALC.length-1 && nivelCalcDesbloqueado(RC.nivel+1);
- $('calcResNext').style.display=(est>=1 && hayNext)?'block':'none';
+ const dom=st.etapas[RC.nivel]>=RC_ETAPAS, hayEtapa=paso&&RC.etapa+1<RC_ETAPAS;
+ $('calcResStars').textContent='★'.repeat(est)+'☆'.repeat(3-est);
+ $('calcResTit').textContent=paso?(dom?'¡'+NIVELES_CALC[RC.nivel].nombre+' dominado! 🏆':'¡Etapa superada!'):'¡Casi!';
+ $('calcResSub').textContent=paso?(dom?'Completaste las 3 etapas de este nivel.':'Sigue con la próxima etapa.'):'Necesitas al menos 5 de 10.';
+ _resCard(`<div><b>${a}/${RC_N}</b><small>aciertos</small></div><div><b>🔥${RC.comboMax}</b><small>racha</small></div><div><b>+${xpG}</b><small>XP</small></div>`);
+ const next=$('calcResNext');
+ if(hayEtapa){ next.textContent='Siguiente etapa ➜'; next.style.display='block'; next.onclick=()=>{SND.tap();iniciarEtapaCalc(RC.nivel,RC.etapa+1);}; }
+ else if(!paso){ next.textContent='Reintentar'; next.style.display='block'; next.onclick=()=>{SND.tap();iniciarEtapaCalc(RC.nivel,RC.etapa);}; }
+ else next.style.display='none';
+ go('scr-calc-res');
+}
+function jefeCalcVictoria(){
+ clearInterval(RC.timer); const st=calcEstado(), primera=!st.jefe; st.jefe=true;
+ if(primera){ if(!S.skins.includes('🧮'))S.skins.push('🧮'); S.insignias.add('maestro-calculo'); if(!S.insigniaActiva)S.insigniaActiva='maestro-calculo'; S.monedas+=500; S.xp+=300; }
+ SND.win(); guardar(); refreshHud();
+ $('calcResStars').textContent='👑';
+ $('calcResTit').textContent='¡Venciste a El Autómata!';
+ $('calcResSub').textContent=primera?'Ganaste la skin "Kimün Calculista" 🧮 y la insignia "Maestro del Cálculo".':'¡Sigues siendo el maestro del cálculo!';
+ _resCard(primera?`<div><b>🧮</b><small>skin</small></div><div><b>🎖️</b><small>insignia</small></div><div><b>+500🪙</b><small>+300 XP</small></div>`:`<div><b>🔥${RC.comboMax}</b><small>mejor racha</small></div>`);
+ $('calcResNext').style.display='none';
+ go('scr-calc-res');
+}
+function jefeCalcDerrota(){
+ clearInterval(RC.timer); SND.lose();
+ $('calcResStars').textContent='💔';
+ $('calcResTit').textContent='El Autómata resistió';
+ $('calcResSub').textContent='Le quitaste '+(RC_JEFE_VIDA-RC.vida)+' de '+RC_JEFE_VIDA+' de vida. ¡Vuelve a intentarlo!';
+ _resCard(`<div><b>${RC_JEFE_VIDA-RC.vida}</b><small>daño</small></div><div><b>🔥${RC.comboMax}</b><small>racha</small></div>`);
+ const next=$('calcResNext'); next.textContent='Reintentar el jefe'; next.style.display='block'; next.onclick=()=>{SND.tap();iniciarJefeCalc();};
+ go('scr-calc-res');
+}
+function terminarSinFin(){
+ clearInterval(RC.timer); const st=calcEstado(), rec=RC.racha>(st.record||0); if(rec)st.record=RC.racha;
+ const xpG=RC.racha*4; S.xp+=xpG; S.monedas+=RC.racha; SND.lose(); guardar(); refreshHud();
+ $('calcResStars').textContent=rec?'🏆':'♾️';
+ $('calcResTit').textContent=rec?'¡Nuevo récord!':'Modo Sin Fin';
+ $('calcResSub').textContent='Resolviste '+RC.racha+' cálculos seguidos.'+(rec?' ¡Tu mejor marca!':' Récord: '+(st.record||0));
+ _resCard(`<div><b>${RC.racha}</b><small>seguidas</small></div><div><b>+${xpG}</b><small>XP</small></div>`);
+ const next=$('calcResNext'); next.textContent='Otra vez ➜'; next.style.display='block'; next.onclick=()=>{SND.tap();iniciarSinFin();};
  go('scr-calc-res');
 }
 $('btnCalcBack').onclick=()=>{SND.tap();go('scr-expediciones');};
 $('calcSalir').onclick=()=>{clearInterval(RC.timer);SND.tap();renderNivelesCalc();go('scr-calc-mapa');};
 $('calcResMapa').onclick=()=>{SND.tap();renderNivelesCalc();go('scr-calc-mapa');};
-$('calcResNext').onclick=()=>{SND.tap();iniciarRondaCalc(Math.min(NIVELES_CALC.length-1,RC.nivel+1));};
 
 function refreshHud(){
  $('hudAv').innerHTML=avatarHTML(S.avatar);
@@ -1255,7 +1333,7 @@ function cargar(){try{const d=JSON.parse(localStorage.getItem(SAVE_KEY)||'null')
  S.campañasCompletas=new Set(d.campañasCompletas||[]);
  S.insignias=new Set(d.insignias||[]);
  S.insigniaActiva=d.insigniaActiva||null;
- if(d.calc&&Array.isArray(d.calc.estrellas))S.calc=d.calc;
+ if(d.calc&&Array.isArray(d.calc.etapas))S.calc=d.calc;
  S.rutas=(d.rutas&&typeof d.rutas==='object')?d.rutas:{};
  if(!d.rutas && Array.isArray(d.progreso)){ // migrar partidas antiguas (Historia)
   S.rutas['hist-europeos']={progreso:d.progreso,
@@ -1301,8 +1379,9 @@ async function conectarKimun(){
 const SKINS=[{e:"🐲",p:60},{e:"🦄",p:70},{e:"🦖",p:80},{e:"🐙",p:50},{e:"🦉",p:40},{e:"🚀",p:90},{e:"🧙",p:100},{e:"👑",p:150},
  // Skin exclusiva de recompensa: visible pero bloqueada; se desbloquea al vencer al Jefe Final de Historia.
  // Marcador de arte: emoji 🎓 hasta que exista assets/kimun-historiador.png.
- {id:'kimun-historiador', e:"🎓", img:'assets/kimun-historiador.png', nombre:'Kimün Historiador', bloqueada:true, desbloqueaCon:'hist'},
- {id:'kimun-cientifico', e:"🔬", img:'assets/kimun-cientifico.png', nombre:'Kimün Científico', bloqueada:true, desbloqueaCon:'cien'}];
+ {id:'kimun-historiador', e:"🎓", img:'assets/kimun-historiador.png', nombre:'Kimün Historiador', bloqueada:true, desbloqueaCon:'hist', req:'Vence a Historia'},
+ {id:'kimun-cientifico', e:"🔬", img:'assets/kimun-cientifico.png', nombre:'Kimün Científico', bloqueada:true, desbloqueaCon:'cien', req:'Vence a Ciencias'},
+ {id:'kimun-calculista', e:"🧮", nombre:'Kimün Calculista', bloqueada:true, req:'Vence a El Autómata'}];
 // Si el avatar equipado es una skin con imagen, devuelve su ruta; si no, null.
 function skinImg(av){const s=SKINS.find(k=>k.e===av&&k.img);return s?s.img:null;}
 // HTML del avatar: <img> si la skin tiene imagen, o el emoji tal cual.
@@ -1316,7 +1395,7 @@ function renderTienda(){
   const em=sk.img?`<img src="${sk.img}" alt="${sk.nombre||''}">`:sk.e; // imagen o emoji
   const it=document.createElement('div');it.className='shop-item'+(equipped?' equipped':'')+(bloqueada?' locked':'');
   if(bloqueada){ // visible pero no comprable: se gana venciendo al Jefe Final
-   it.innerHTML=`<div class="em">${em}</div><div class="price">🔒 Termina Historia</div>`+
+   it.innerHTML=`<div class="em">${em}</div><div class="price">🔒 ${sk.req||'Bloqueada'}</div>`+
      `<div class="skin-lock">${sk.nombre||'Skin exclusiva'}</div>`;
    g.appendChild(it); return;
   }
