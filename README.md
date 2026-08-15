@@ -12,13 +12,12 @@ Un juego tipo aventura con mapa de niveles, quiz con temporizador, combos, XP,
 monedas, estrellas, logros y ranking de curso. **Kimün**, el zorro mascota,
 acompaña y reacciona a cada respuesta. Incluye **Modo Difícil** desbloqueable.
 
-Historia se juega como una **campaña con hilo conductor**: 5 capítulos en orden, un
-**Desafío Extra** y un **Jefe Final multi-fase** (barra de vida, 3 corazones, se abre
-al completar todo) con **recompensas** (skin exclusiva, insignia coleccionable, corona
-y bono). Además hay expediciones sueltas de **Matemáticas** (Álgebra y funciones),
-**Ciencias** (La célula · Electricidad y calor) y **Lenguaje** (Tipos de texto y
-medios · Mundos literarios). Cada asignatura tiene un banco de preguntas de año
-completo (todos sus OA del currículum). También hay **Duelo 1v1** en el mismo
+La pantalla principal ofrece un **módulo por asignatura**. **Historia** y **Ciencias**
+se juegan como **campañas con hilo conductor**: capítulos en orden que cubren todos los
+OA del año, con **Jefe Final multi-fase** (barra de vida, 3 corazones) y **recompensas**
+(skin exclusiva, insignia coleccionable, corona y bono). **Matemáticas** y **Lenguaje**
+están como expediciones sueltas por ahora. Cada asignatura tiene un banco de preguntas
+de año completo (todos sus OA del currículum). También hay **Duelo 1v1** en el mismo
 teléfono y en línea (Supabase). Todo en un solo archivo `index.html`, pensado para
 el celular.
 

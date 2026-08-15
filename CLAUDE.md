@@ -29,21 +29,25 @@ en línea. Historia de v0 al detalle en la Bitácora (abajo).
 **Jugable hoy:**
 - Inicio con selección **Jugador / Duelo 1v1 / Admin** y el rostro de la mascota
   **Kimün** (zorro; `assets/kimun.png`, con expresiones por respuesta).
-- **Campaña de asignatura completa (piloto Historia, Sesión 14):** Historia se
-  juega como una **campaña con hilo conductor** — 5 capítulos en orden (los 22 OA),
-  un **Desafío Extra** (OA20-22) y un **Jefe Final multi-fase** (4 fases, barra de
-  vida de 16 aciertos, 3 corazones, tema carmesí) que se abre al 100%. Recompensas al
-  vencer: skin exclusiva "Kimün Historiador" (marcador `🎓`), insignia "Maestro de
-  Historia", corona en la tarjeta y bono (+500 🪙 / +300 XP). Capa `CAMPAÑAS`
-  data-driven sobre el motor; los capítulos son expediciones normales.
-- **Expediciones data-driven** (arreglo `EXPEDICIONES`, progreso por ruta). Además de
-  la campaña de Historia (6 rutas), hay **5 expediciones sueltas jugables**:
-  Matemáticas "Álgebra y funciones" (MA08 OA06-09), Ciencias "La célula"
-  (CN08 OA01-04), Lenguaje "Tipos de texto y medios" (LE08 OA03/09/10/11),
-  Ciencias "Electricidad y calor" (CN08 OA08-11) y Lenguaje "Mundos literarios"
-  (LE08 OA04-07). Regla de cada expedición/capítulo: **4 etapas + 1 jefe
-  (5 nodos)**. Cada asignatura tiene, además, un **banco de año completo** (todos
-  sus OA oficiales) como reserva para futuras expediciones (ver Sesión 9).
+- **Pantalla principal en 2 niveles (Sesión 15):** un **módulo por asignatura**
+  (Historia, Matemáticas, Ciencias, Lenguaje); al entrar se abre su campaña o una
+  lista de sus mapas (`scr-mapas`). Cada mapa usa su portada propia por convención
+  `assets/portada-<id>.png` con fallback a la de la asignatura.
+- **Campañas de asignatura completa (Historia y Ciencias):** cada una se juega como
+  **campaña con hilo conductor** — capítulos en orden que cubren todos los OA del año +
+  un **Jefe Final multi-fase** (barra de vida, 3 corazones, tema carmesí) que se abre al
+  100%, con recompensas (skin exclusiva, insignia, corona y bono +500🪙/+300XP):
+  - **Historia:** 5 capítulos (22 OA) + Desafío Extra; villano "El Guardián del Tiempo";
+    skin "Kimün Historiador".
+  - **Ciencias:** 4 capítulos (15 OA = las 4 unidades); villano "La Entropía";
+    skin "Kimün Científico".
+  Capa `CAMPAÑAS` data-driven; el motor de campañas es **genérico** (Desafío Extra
+  opcional, jefe con título dinámico).
+- **Expediciones sueltas** (asignaturas aún sin campaña): Matemáticas "Álgebra y
+  funciones" (MA08 OA06-09), Lenguaje "Tipos de texto y medios" (LE08 OA03/09/10/11)
+  y Lenguaje "Mundos literarios" (LE08 OA04-07). Regla de cada capítulo/expedición:
+  **4 etapas + 1 jefe (5 nodos)**. Cada asignatura tiene, además, un **banco de año
+  completo** (todos sus OA oficiales) como reserva (ver Sesión 9).
 - Quiz: 6 preguntas al azar/etapa, timer 15 s, pasa con 66%, 3 estrellas. Al
   fallar revela la respuesta correcta + explicación y botón "Continuar". Kimün
   comenta un dato al iniciar la ruta.
@@ -559,3 +563,34 @@ Se completaron los tres pendientes que quedaron de la Sesión 2:
   probada; casi solo datos); y los de siempre (Kimün "científico" para Ciencias, duelo
   en 2 celulares, notificaciones push y ranking real, limpiar perfiles de prueba en
   Supabase).
+
+### Sesión 15 (2026-08-15)
+- **Sincronización (orden 99):** pull de las Sesiones 11-14 (campaña de Historia,
+  jefe multi-fase, más expediciones sueltas).
+- **Pantalla principal reorganizada en 2 niveles (4 módulos):** la pantalla de
+  expediciones muestra ahora **un módulo por asignatura** (Historia, Matemáticas,
+  Ciencias, Lenguaje) en vez de las expediciones sueltas mezcladas. Al entrar a una
+  asignatura con campaña se abre su campaña; a una sin campaña, una nueva pantalla
+  `scr-mapas` ("Elige un mapa"). Funciones `renderExpediciones` (nivel 1),
+  `abrirAsignatura` (nivel 2), `mapasDe`, `ORDEN_ASIG`.
+- **Portada propia por mapa (convención):** cada mapa usa `assets/portada-<id>.png`
+  con **fallback** (onerror) a la portada de la asignatura; al crear la imagen aparece
+  sola sin tocar código. Genéricas por asignatura en `ASIG_PORTADA`.
+- **Ciencias convertida en CAMPAÑA completa (como Historia):** los 15 OA del año en
+  **4 capítulos** = las 4 unidades oficiales (La célula, Cuerpo humano y salud,
+  Electricidad y calor, La materia y el átomo). Se agregaron `cien-cuerpo` (OA05-07) y
+  `cien-materia` (OA12-15); los 2 existentes pasaron a `campaña:'cien'`. **Jefe Final**
+  de 4 fases (villano **"La Entropía"** 🌀), recompensa skin **"Kimün Científico"** +
+  insignia **"Maestro de Ciencias"** + bono.
+- **Motor de campañas generalizado:** estaba atado a Historia. Ahora el **"Desafío
+  Extra" es opcional** por campaña, el título del jefe es dinámico
+  (`JEFE FINAL DE <asignatura>`) y el jefe se desbloquea sin desafío. → Convertir
+  Matemáticas/Lenguaje será casi solo datos.
+- **Assets reales integrados (lote 3, `scripts/procesar-lote3.py`):**
+  `villano-ciencias.png` (512, ~403 KB), `kimun-cientifico.png` (384, ~215 KB) y 3
+  portadas de mapa (`portada-mate-algebra`, `portada-leng-textos`,
+  `portada-leng-literarios`, 512, ~450 KB). Originales en `assets/originales/`.
+  (Quedó una variante B del villano sin usar en Descargas.)
+- **Pendientes:** convertir Matemáticas y Lenguaje en campañas (villano + skin c/u);
+  portadas propias de los capítulos de Ciencias (opcional); duelo en 2 celulares,
+  notificaciones push y ranking real, limpiar perfiles de prueba en Supabase.

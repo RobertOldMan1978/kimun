@@ -412,6 +412,16 @@ body.jefe-hit{animation:jefeShake .26s}
     <button class="btn sec" id="btnExpBack" style="margin-top:18px">← Volver</button>
   </section>
 
+  <!-- ============ MAPAS DE UNA ASIGNATURA (nivel 2) ============ -->
+  <section class="screen" id="scr-mapas">
+    <div class="logo" style="margin:20px 0 4px">
+      <span class="badge">🗺️</span>
+      <div id="mapasHead"></div>
+    </div>
+    <div class="exp-grid" id="mapasGrid"></div>
+    <button class="btn sec" id="btnMapasBack" style="margin-top:18px">← Volver</button>
+  </section>
+
   <!-- ============ MAPA DE CAMPAÑA ============ -->
   <section class="screen" id="scr-campana">
     <div class="logo" style="margin:20px 0 4px">
@@ -738,8 +748,9 @@ const EXPEDICIONES=[
      {oa:"MA08 OA 09", nombre:"Inecuaciones", icono:"📉", n:6},
      {oa:"BOSS", nombre:"⚡ JEFE: Álgebra y funciones", icono:"🧮", n:8, oas:["MA08 OA 06","MA08 OA 07","MA08 OA 08","MA08 OA 09"]},
    ]},
+ // --- Campaña Ciencias (capítulos = las 4 unidades del año) ---
  { id:'cien-celula', asignatura:'Ciencias', nivel:'8° Básico · La célula',
-   portada:'assets/portada-ciencias.png', contenido:'contenido/ciencias-8basico/preguntas.json', activa:true,
+   portada:'assets/portada-ciencias.png', contenido:'contenido/ciencias-8basico/preguntas.json', activa:true, campaña:'cien',
    etapas:[
      {oa:"CN08 OA 01", nombre:"La teoría celular", icono:"🔬", n:6},
      {oa:"CN08 OA 02", nombre:"Estructura de la célula", icono:"🧫", n:6},
@@ -747,14 +758,31 @@ const EXPEDICIONES=[
      {oa:"CN08 OA 04", nombre:"Las plantas", icono:"🌱", n:6},
      {oa:"BOSS", nombre:"⚡ JEFE: La célula", icono:"🧬", n:8, oas:["CN08 OA 01","CN08 OA 02","CN08 OA 03","CN08 OA 04"]},
    ]},
+ { id:'cien-cuerpo', asignatura:'Ciencias', nivel:'8° Básico · Cuerpo humano y salud',
+   portada:'assets/portada-ciencias.png', contenido:'contenido/ciencias-8basico/preguntas.json', activa:true, campaña:'cien',
+   etapas:[
+     {oa:"CN08 OA 05", nombre:"Sistemas del cuerpo", icono:"🫀", n:6},
+     {oa:"CN08 OA 06", nombre:"Los nutrientes", icono:"🥗", n:6},
+     {oa:"CN08 OA 07", nombre:"Vida saludable", icono:"🏃", n:6},
+     {oa:"BOSS", nombre:"⚡ JEFE: Cuerpo y salud", icono:"🧠", n:8, oas:["CN08 OA 05","CN08 OA 06","CN08 OA 07"]},
+   ]},
  { id:'cien-electricidad', asignatura:'Ciencias', nivel:'8° Básico · Electricidad y calor',
-   portada:'assets/portada-ciencias.png', contenido:'contenido/ciencias-8basico/preguntas.json', activa:true,
+   portada:'assets/portada-ciencias.png', contenido:'contenido/ciencias-8basico/preguntas.json', activa:true, campaña:'cien',
    etapas:[
      {oa:"CN08 OA 08", nombre:"Fuerzas eléctricas", icono:"⚡", n:6},
      {oa:"CN08 OA 09", nombre:"Generación de energía", icono:"🔋", n:6},
      {oa:"CN08 OA 10", nombre:"Circuitos eléctricos", icono:"💡", n:6},
      {oa:"CN08 OA 11", nombre:"El calor", icono:"🔥", n:6},
      {oa:"BOSS", nombre:"⚡ JEFE: Electricidad y calor", icono:"🌡️", n:8, oas:["CN08 OA 08","CN08 OA 09","CN08 OA 10","CN08 OA 11"]},
+   ]},
+ { id:'cien-materia', asignatura:'Ciencias', nivel:'8° Básico · La materia y el átomo',
+   portada:'assets/portada-ciencias.png', contenido:'contenido/ciencias-8basico/preguntas.json', activa:true, campaña:'cien',
+   etapas:[
+     {oa:"CN08 OA 12", nombre:"Modelos del átomo", icono:"⚛️", n:6},
+     {oa:"CN08 OA 13", nombre:"Átomos y sustancias", icono:"🧪", n:6},
+     {oa:"CN08 OA 14", nombre:"La tabla periódica", icono:"📋", n:6},
+     {oa:"CN08 OA 15", nombre:"Elementos de la vida", icono:"🌍", n:6},
+     {oa:"BOSS", nombre:"⚡ JEFE: La materia", icono:"🔬", n:8, oas:["CN08 OA 12","CN08 OA 13","CN08 OA 14","CN08 OA 15"]},
    ]},
  { id:'leng-textos', asignatura:'Lenguaje', nivel:'8° Básico · Tipos de texto y medios',
    portada:'assets/portada-lenguaje.png', contenido:'contenido/lenguaje-8basico/preguntas.json', activa:true,
@@ -797,9 +825,26 @@ const CAMPAÑAS=[{
     ],
   },
   recompensa:{ skin:'kimun-historiador', insignia:'maestro-historia', bonoMonedas:500, bonoXP:300 },
+},{
+  id:'cien', asignatura:'Ciencias', portada:'assets/portada-ciencias.png',
+  intro:'De la célula al átomo: recorre la vida, el cuerpo, la energía y la materia.',
+  capitulos:['cien-celula','cien-cuerpo','cien-electricidad','cien-materia'],
+  jefeFinal:{
+    villano:'La Entropía', villanoIc:'🌀', villanoImg:'assets/villano-ciencias.png',
+    dialogo:'Todo en el universo tiende al desorden... ¿crees que tu ciencia puede descifrarme?',
+    vidasJugador:3, nPorFase:4,
+    fases:[
+      {nombre:'La célula',             oas:['CN08 OA 01','CN08 OA 02','CN08 OA 03','CN08 OA 04']},
+      {nombre:'Cuerpo humano y salud', oas:['CN08 OA 05','CN08 OA 06','CN08 OA 07']},
+      {nombre:'Electricidad y calor',  oas:['CN08 OA 08','CN08 OA 09','CN08 OA 10','CN08 OA 11']},
+      {nombre:'La materia y el átomo', oas:['CN08 OA 12','CN08 OA 13','CN08 OA 14','CN08 OA 15']},
+    ],
+  },
+  recompensa:{ skin:'kimun-cientifico', insignia:'maestro-ciencias', bonoMonedas:500, bonoXP:300 },
 }];
 const INSIGNIAS=[
   {id:'maestro-historia', ic:'🏅', tx:'Maestro de Historia', asignatura:'Historia'},
+  {id:'maestro-ciencias', ic:'🔬', tx:'Maestro de Ciencias', asignatura:'Ciencias'},
 ];
 function campañaDe(asig){return CAMPAÑAS.find(c=>c.asignatura===asig)||null;}
 function campañaPorId(id){return CAMPAÑAS.find(c=>c.id===id)||null;}
@@ -950,7 +995,7 @@ function nodoCampDesbloqueado(camp,i){
  return false;
 }
 function desafioDesbloqueado(camp){return camp.capitulos.every(expedicionCompleta);}
-function jefeFinalDesbloqueado(camp){return desafioDesbloqueado(camp)&&expedicionCompleta(camp.desafioExtra);}
+function jefeFinalDesbloqueado(camp){return desafioDesbloqueado(camp)&&(!camp.desafioExtra||expedicionCompleta(camp.desafioExtra));}
 function campañaCompleta(camp){return S.campañasCompletas.has(camp.id);}
 /* Activa una expedición: fija etapas, carga su pool y apunta el progreso a esa ruta */
 function activarExpedicion(exp){
@@ -1016,7 +1061,8 @@ async function conectarKimun(){
 const SKINS=[{e:"🐲",p:60},{e:"🦄",p:70},{e:"🦖",p:80},{e:"🐙",p:50},{e:"🦉",p:40},{e:"🚀",p:90},{e:"🧙",p:100},{e:"👑",p:150},
  // Skin exclusiva de recompensa: visible pero bloqueada; se desbloquea al vencer al Jefe Final de Historia.
  // Marcador de arte: emoji 🎓 hasta que exista assets/kimun-historiador.png.
- {id:'kimun-historiador', e:"🎓", img:'assets/kimun-historiador.png', nombre:'Kimün Historiador', bloqueada:true, desbloqueaCon:'hist'}];
+ {id:'kimun-historiador', e:"🎓", img:'assets/kimun-historiador.png', nombre:'Kimün Historiador', bloqueada:true, desbloqueaCon:'hist'},
+ {id:'kimun-cientifico', e:"🔬", img:'assets/kimun-cientifico.png', nombre:'Kimün Científico', bloqueada:true, desbloqueaCon:'cien'}];
 // Si el avatar equipado es una skin con imagen, devuelve su ruta; si no, null.
 function skinImg(av){const s=SKINS.find(k=>k.e===av&&k.img);return s?s.img:null;}
 // HTML del avatar: <img> si la skin tiene imagen, o el emoji tal cual.
@@ -1138,26 +1184,52 @@ function finDuelo(){
 })();
 /* ===== Selección de modo (Jugador / Admin) ===== */
 /* Pantalla de expediciones: generada desde EXPEDICIONES (data-driven) */
+/* Orden fijo de los módulos por asignatura en la pantalla principal */
+const ORDEN_ASIG=['Historia','Matemáticas','Ciencias','Lenguaje'];
+/* Portada genérica por asignatura: la usa el módulo (nivel 1) y es el fallback
+   de la portada propia de cada mapa/capítulo. */
+const ASIG_PORTADA={Historia:'assets/portada-historia.png',Matemáticas:'assets/portada-matematicas.png',
+ Ciencias:'assets/portada-ciencias.png',Lenguaje:'assets/portada-lenguaje.png'};
+/* Portada propia de cada mapa POR CONVENCIÓN: assets/portada-<id>.png.
+   Pensado para el final: al crear el archivo aparece solo (sin tocar código);
+   mientras no exista, el onerror cae a la portada de la asignatura. */
+function portadaMapa(exp){return `assets/portada-${exp.id}.png`;}
+function portadaFallback(exp){return ASIG_PORTADA[exp.asignatura]||exp.portada||'';}
+// Nombre corto del mapa a partir del nivel ("8° Básico · La célula" -> "La célula")
+function nombreMapa(exp){const p=(exp.nivel||'').split('·');return p.length>1?p.slice(1).join('·').trim():(exp.nivel||exp.asignatura);}
+// Expediciones sueltas (no campaña) y activas de una asignatura
+function mapasDe(asig){return EXPEDICIONES.filter(e=>e.activa&&e.asignatura===asig&&!e.campaña);}
+
+// NIVEL 1: un módulo por asignatura
 function renderExpediciones(){
  const g=$('expGrid');g.innerHTML='';
- const conCamp=new Set(CAMPAÑAS.map(c=>c.asignatura));
- // 1) una tarjeta por campaña (asignatura con hilo conductor)
- CAMPAÑAS.forEach(c=>{
-  const done=campañaCompleta(c);
+ ORDEN_ASIG.forEach(asig=>{
+  const camp=CAMPAÑAS.find(c=>c.asignatura===asig);
+  const exps=mapasDe(asig);
+  if(!camp&&!exps.length)return;                       // sin contenido: no se muestra
+  const portada=camp?camp.portada:(ASIG_PORTADA[asig]||exps[0].portada);
+  const done=camp?campañaCompleta(camp):false;
+  const sub=camp?`Campaña · ${capsCompletos(camp)}/${camp.capitulos.length} capítulos`
+                :`${exps.length} ${exps.length===1?'mapa':'mapas'}`;
   const card=document.createElement('div');card.className='exp-card'+(done?' camp-done':'');
-  card.innerHTML=`<img src="${c.portada}" alt="${c.asignatura}">`+
-   `<div class="exp-info"><b>${c.asignatura} ${done?'👑':''}</b><small>Campaña · ${capsCompletos(c)}/${c.capitulos.length} capítulos</small></div>`+
-   `<span class="exp-go">▶</span>`;
-  card.onclick=()=>{SND.tap();abrirCampaña(c);};
+  card.innerHTML=`<img src="${portada}" alt="${asig}"><div class="exp-info"><b>${asig} ${done?'👑':''}</b><small>${sub}</small></div><span class="exp-go">▶</span>`;
+  card.onclick=()=>{SND.tap(); if(camp)abrirCampaña(camp); else abrirAsignatura(asig);};
   g.appendChild(card);
  });
- // 2) expediciones sueltas (asignaturas sin campaña)
- EXPEDICIONES.filter(e=>e.activa&&!e.campaña&&!conCamp.has(e.asignatura)).forEach(exp=>{
+}
+
+// NIVEL 2: los mapas de una asignatura (sin campaña), cada uno con su portada propia
+function abrirAsignatura(asig){
+ const exps=mapasDe(asig);
+ $('mapasHead').innerHTML=`<h1 style="font-size:26px">${asig}</h1><p>Elige un mapa</p>`;
+ const g=$('mapasGrid');g.innerHTML='';
+ exps.forEach(exp=>{
   const card=document.createElement('div');card.className='exp-card';
-  card.innerHTML=`<img src="${exp.portada}" alt="${exp.asignatura}"><div class="exp-info"><b>${exp.asignatura}</b><small>${exp.nivel}</small></div><span class="exp-go">▶</span>`;
+  card.innerHTML=`<img src="${portadaMapa(exp)}" alt="${nombreMapa(exp)}" onerror="this.onerror=null;this.src='${portadaFallback(exp)}'"><div class="exp-info"><b>${nombreMapa(exp)}</b><small>${exp.nivel}</small></div><span class="exp-go">▶</span>`;
   card.onclick=()=>{SND.tap();entrarExpedicion(exp);};
   g.appendChild(card);
  });
+ go('scr-mapas');
 }
 function entrarExpedicion(exp){
  if(!exp.activa){alert('🚀 La expedición de '+exp.asignatura+' viene pronto. ¡Sigue explorando Historia!');return;}
@@ -1170,6 +1242,7 @@ function entrarExpedicion(exp){
 }
 $('btnJugador').onclick=()=>{SND.init();SND.tap();$('nav').style.display='none';renderExpediciones();go('scr-expediciones');};
 $('btnExpBack').onclick=()=>{SND.tap();go('scr-rol');};
+$('btnMapasBack').onclick=()=>{SND.tap();go('scr-expediciones');};
 $('btnAdmin').onclick=()=>{window.location.href='dev/tablero.html';};
 
 /* ===== Mapa de campaña (Nivel 2) ===== */
@@ -1192,14 +1265,16 @@ function renderCampaña(){
   cont.appendChild(nodoCampañaEl(`${i+1}`, titulo, abierto, hecho,
     abierto?()=>entrarExpedicion(exp):null, hecho?'Completado':(abierto?'¡Jugar!':'🔒 Bloqueado')));
  });
- // desafío extra
- const de=EXPEDICIONES.find(e=>e.id===c.desafioExtra);
- const deAb=desafioDesbloqueado(c), deHecho=expedicionCompleta(c.desafioExtra);
- cont.appendChild(nodoCampañaEl('⭐','Desafío Extra: Chile hoy', deAb, deHecho,
-   deAb?()=>entrarExpedicion(de):null, deHecho?'Completado':(deAb?'¡Desafío!':'🔒 Termina los 5 capítulos')));
+ // desafío extra (solo si la campaña lo define)
+ if(c.desafioExtra){
+  const de=EXPEDICIONES.find(e=>e.id===c.desafioExtra);
+  const deAb=desafioDesbloqueado(c), deHecho=expedicionCompleta(c.desafioExtra);
+  cont.appendChild(nodoCampañaEl('⭐','Desafío Extra: Chile hoy', deAb, deHecho,
+    deAb?()=>entrarExpedicion(de):null, deHecho?'Completado':(deAb?'¡Desafío!':'🔒 Termina los capítulos')));
+ }
  // jefe final
  const jfAb=jefeFinalDesbloqueado(c), jfHecho=campañaCompleta(c);
- cont.appendChild(nodoCampañaEl('👑','JEFE FINAL DE HISTORIA', jfAb, jfHecho,
+ cont.appendChild(nodoCampañaEl('👑','JEFE FINAL DE '+c.asignatura.toUpperCase(), jfAb, jfHecho,
    jfAb?()=>iniciarJefeFinal(c):null, jfHecho?'¡Vencido!':(jfAb?'¡Al 100%! Enfréntalo':'🔒 Completa todo')));
 }
 function nodoCampañaEl(marca,titulo,abierto,hecho,onClick,estado){
