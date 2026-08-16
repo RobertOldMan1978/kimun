@@ -239,6 +239,9 @@ input.nm:focus{border-color:var(--cyan)}
 .calc-hud-sinfin b{color:var(--gold)}
 .calc-nivic{width:60px;height:60px;border-radius:12px;background:#4dd8ff1f;display:grid;place-items:center;font-size:28px;flex-shrink:0}
 #kimBuddyCalc{width:64px;height:64px}
+.calc-jefe-ic{width:22px;height:22px;object-fit:contain;vertical-align:middle;margin-right:5px}
+.calc-nivic-img{padding:0;overflow:hidden}
+.calc-nivic-img img{width:100%;height:100%;object-fit:contain}
 .calc-x{width:38px;height:38px;border-radius:11px;border:1px solid #ffffff1f;background:#00000030;color:var(--txt);font-size:15px;cursor:pointer;flex-shrink:0}
 .calc-prog{flex:1;height:10px;border-radius:6px;background:#ffffff14;overflow:hidden}
 .calc-prog i{display:block;height:100%;width:0;background:var(--cyan);transition:width .3s}
@@ -474,7 +477,7 @@ body.jefe-hit{animation:jefeShake .26s}
         <span class="calc-numq" id="calcNum">1/10</span>
       </div>
       <div id="calcHudJefe" class="calc-hud-jefe" style="display:none">
-        <div class="calc-jefe-top"><span>🤖 El Autómata</span><span id="calcJefeCor" class="calc-cor">❤️❤️❤️</span></div>
+        <div class="calc-jefe-top"><span><img class="calc-jefe-ic" src="assets/villano-automata.png" alt="">El Autómata</span><span id="calcJefeCor" class="calc-cor">❤️❤️❤️</span></div>
         <div class="calc-vidabar"><i id="calcJefeVida"></i></div>
       </div>
       <div id="calcHudSinfin" class="calc-hud-sinfin" style="display:none">♾️ Racha: <b id="calcRachaN">0</b></div>
@@ -1161,7 +1164,7 @@ function renderNivelesCalc(){
  });
  const jefeAb=jefeCalcDesbloqueado();
  const jc=document.createElement('div'); jc.className='exp-card'+(jefeAb?'':' soon');
- jc.innerHTML=`<div class="calc-nivic" style="background:#ff4d8d22">🤖</div><div class="exp-info"><b>JEFE: El Autómata ${st.jefe?'👑':''}</b><small>${jefeAb?'¡Vence al maestro del cálculo!':'🔒 Domina los 5 niveles'}</small></div>`+
+ jc.innerHTML=`<div class="calc-nivic calc-nivic-img" style="background:#ff4d8d22"><img src="assets/villano-automata.png" alt=""></div><div class="exp-info"><b>JEFE: El Autómata ${st.jefe?'👑':''}</b><small>${jefeAb?'¡Vence al maestro del cálculo!':'🔒 Domina los 5 niveles'}</small></div>`+
   (jefeAb?'<span class="exp-go">⚡</span>':'<span class="exp-lock">🔒</span>');
  if(jefeAb)jc.onclick=()=>{SND.tap();iniciarJefeCalc();};
  g.appendChild(jc);
@@ -1382,11 +1385,15 @@ async function conectarKimun(){
 
 /* ================= TIENDA DE SKINS ================= */
 const SKINS=[{e:"🐲",p:60},{e:"🦄",p:70},{e:"🦖",p:80},{e:"🐙",p:50},{e:"🦉",p:40},{e:"🚀",p:90},{e:"🧙",p:100},{e:"👑",p:150},
+ {e:"🌠",img:'assets/skin-kimun-astronauta.png',nombre:'Kimün Astronauta',p:120},
+ {e:"🪄",img:'assets/skin-kimun-mago.png',nombre:'Kimün Mago',p:130},
+ {e:"🥷",img:'assets/skin-kimun-ninja.png',nombre:'Kimün Ninja',p:140},
+ {e:"🦸",img:'assets/skin-kimun-superheroe.png',nombre:'Kimün Superhéroe',p:160},
  // Skin exclusiva de recompensa: visible pero bloqueada; se desbloquea al vencer al Jefe Final de Historia.
  // Marcador de arte: emoji 🎓 hasta que exista assets/kimun-historiador.png.
  {id:'kimun-historiador', e:"🎓", img:'assets/kimun-historiador.png', nombre:'Kimün Historiador', bloqueada:true, desbloqueaCon:'hist', req:'Vence a Historia'},
  {id:'kimun-cientifico', e:"🔬", img:'assets/kimun-cientifico.png', nombre:'Kimün Científico', bloqueada:true, desbloqueaCon:'cien', req:'Vence a Ciencias'},
- {id:'kimun-calculista', e:"🧮", nombre:'Kimün Calculista', bloqueada:true, req:'Vence a El Autómata'}];
+ {id:'kimun-calculista', e:"🧮", img:'assets/kimun-calculista.png', nombre:'Kimün Calculista', bloqueada:true, req:'Vence a El Autómata'}];
 // Si el avatar equipado es una skin con imagen, devuelve su ruta; si no, null.
 function skinImg(av){const s=SKINS.find(k=>k.e===av&&k.img);return s?s.img:null;}
 // HTML del avatar: <img> si la skin tiene imagen, o el emoji tal cual.

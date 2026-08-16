@@ -648,6 +648,14 @@ Se completaron los tres pendientes que quedaron de la Sesión 2:
   combo / triste al fallar) — `kimReact` se generalizó para animar un elemento por id
   (`kimBuddyCalc`) — y la **animación de combo** ("COMBO x_ 🔥" + sonido) que ya usaba el
   quiz (`comboFx`, overlay global). Aplica en los tres modos (niveles, jefe y sin fin).
+- **Assets reales (lote 4, `scripts/procesar-lote4.py`):** 8 imágenes generadas (IA) y
+  procesadas. Integradas: skin **"Kimün Calculista"** 🧮 (premio del Reto, con imagen);
+  villano **"El Autómata"** 🤖 ahora visible en el mapa del Reto y el HUD del jefe; y
+  **4 skins ilustradas para la Tienda** — Astronauta (120🪙), Mago (130), Ninja (140),
+  Superhéroe (160) — que dan valor real a las monedas (antes solo emojis). Guardadas para
+  la **futura campaña de Lenguaje**: **Kimün Escritor** (`kimun-escritor.png`) y el jefe
+  **"El Borrón"** (`villano-lenguaje.png`). Originales en `assets/originales/`; quedó una
+  variante alternativa del Calculista sin usar (en Descargas de Roberto).
 - **Pendientes:** convertir Lenguaje en campaña (y decidir el enfoque de Matemáticas si
   se quiere además una campaña de álgebra); villano + skin por asignatura;
   portadas propias de los capítulos de Ciencias (opcional); duelo en 2 celulares,
