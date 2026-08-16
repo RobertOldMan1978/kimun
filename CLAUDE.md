@@ -667,6 +667,17 @@ Se completaron los tres pendientes que quedaron de la Sesión 2:
 - **Preview local:** `.claude/launch.json` levanta el servidor estático con
   `preview_start` (`python -m http.server 8765 --directory`, puerto fijo). Antes se
   arrancaba a mano; ahora lo gestiona el harness.
+- **Banda sonora curada (Kevin MacLeod) + sección de créditos:** a Roberto no le
+  convencieron los primeros temas (salvo el menú, de **Pixabay**). Claude buscó
+  candidatas en Incompetech (**Kevin MacLeod**, CC BY 4.0 — FreePD cerró y Pixabay no
+  se puede scrapear), le pasó previews de 40 s, y con las elegidas quedó: **Aventura**
+  (Carefree / Sneaky Snitch) y **Jefe de campaña** (Death of Kings / Crossing the Chasm)
+  que **se alternan al azar** (un contexto de `MUSIC.srcs` puede ser un arreglo; `play`
+  elige una); **Autómata** (Digya) y **Duelo** (Severe Tire Damage). Todas mono 96k.
+- **Sección de Créditos:** enlace "Créditos" en el inicio → recuadro con atribución
+  precisa: música (Kevin MacLeod CC BY 4.0 + Pixabay), tipografías (Google Fonts · SIL
+  OFL), contenido (**MINEDUC** de Chile), ilustraciones (IA de ChatGPT — sin atribución
+  requerida). Revisión de licencias de todo lo de terceros: solo Kevin MacLeod obliga.
 - **Pendientes:** convertir Lenguaje en campaña (y decidir el enfoque de Matemáticas si
   se quiere además una campaña de álgebra); villano + skin por asignatura;
   portadas propias de los capítulos de Ciencias (opcional); duelo en 2 celulares,

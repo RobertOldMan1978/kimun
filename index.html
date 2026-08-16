@@ -201,6 +201,11 @@ input.nm:focus{border-color:var(--cyan)}
 .sndbtn{position:fixed;top:10px;right:10px;z-index:46;width:42px;height:42px;border-radius:12px;border:1px solid #ffffff1f;
   background:#120d2ecc;backdrop-filter:blur(6px);color:var(--txt);font-size:20px;cursor:pointer;display:grid;place-items:center}
 .sndbtn:active{transform:scale(.92)}
+.cred-modal{position:fixed;inset:0;background:#0a0718cc;backdrop-filter:blur(4px);z-index:60;display:flex;align-items:center;justify-content:center;padding:20px}
+.cred-modal[hidden]{display:none}
+.cred-box{background:var(--panel);border:1px solid #ffffff22;border-radius:18px;padding:22px;max-width:400px;width:100%;max-height:85vh;overflow:auto}
+.cred-box p{font-size:13px;line-height:1.5;margin:10px 0;color:var(--txt)}
+.cred-box b{color:var(--cyan)}
 /* ===== TIENDA ===== */
 .shopgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
 .shop-item{background:var(--panel);border:2px solid #ffffff14;border-radius:16px;padding:14px;text-align:center}
@@ -416,6 +421,18 @@ body.jefe-hit{animation:jefeShake .26s}
 <button class="sndbtn" id="musBtn" title="Música" style="right:58px">🎵</button>
 <button class="sndbtn" id="sndBtn" title="Sonido">🔊</button>
 
+<div id="creditosModal" class="cred-modal" hidden>
+  <div class="cred-box">
+    <h2 class="disp" style="color:var(--gold);margin:0 0 6px">Créditos</h2>
+    <p><b>🎵 Música</b><br>Aventura, jefes y duelo: <b>Kevin MacLeod</b> (incompetech.com) · CC BY 4.0.<br>Menú: Pixabay Music.</p>
+    <p><b>🔤 Tipografías</b><br>Titan One y Nunito (Google Fonts · SIL Open Font License).</p>
+    <p><b>📚 Contenido</b><br>Alineado al currículum del MINEDUC de Chile (curriculumnacional.cl).</p>
+    <p><b>🎨 Ilustraciones</b><br>Creadas con inteligencia artificial.</p>
+    <p style="text-align:center;color:var(--gold);font-weight:900;margin-top:14px">Hecho con ❤️ para aprender jugando</p>
+    <button class="btn" id="cerrarCreditos" style="margin-top:6px">Cerrar</button>
+  </div>
+</div>
+
 <div class="wrap">
 
   <!-- ============ SELECCIÓN DE MODO ============ -->
@@ -434,6 +451,9 @@ body.jefe-hit{animation:jefeShake .26s}
     <p style="text-align:center;margin-top:12px"><a href="#" id="btnReset" style="color:var(--dim);font-weight:800;font-size:12px;text-decoration:underline;display:none">🔄 Empezar de nuevo</a></p>
     <p style="text-align:center;color:var(--dim);font-weight:800;font-size:12px;margin-top:6px">
       El modo Admin es para el desarrollador y pide contraseña.
+    </p>
+    <p style="text-align:center;margin-top:10px">
+      <a href="#" id="verCreditos" style="color:var(--cyan);font-weight:800;font-size:12px">Créditos</a>
     </p>
   </section>
 
@@ -1027,13 +1047,16 @@ const SND={
 const MUSIC={
  on: localStorage.getItem('kimun_music')!=='off',
  vol: Math.min(1,Math.max(0,parseFloat(localStorage.getItem('kimun_music_vol')||'0.4'))),
- srcs:{ menu:'assets/audio/musica-menu.mp3', jefe:'assets/audio/musica-jefe.mp3', jefeCalc:'assets/audio/musica-jefe-calc.mp3',
-   aventura:'assets/audio/musica-aventura.mp3', duelo:'assets/audio/musica-duelo.mp3' },
+ srcs:{ menu:'assets/audio/musica-menu.mp3',
+   aventura:['assets/audio/musica-aventura.mp3','assets/audio/musica-aventura2.mp3'],  // se alternan
+   jefe:['assets/audio/musica-jefe.mp3','assets/audio/musica-jefe2.mp3'],              // se alternan
+   jefeCalc:'assets/audio/musica-jefe-calc.mp3', duelo:'assets/audio/musica-duelo.mp3' },
  el:null, actual:null, _ctx:'menu',
  init(){ if(this.el)return; try{ this.el=new Audio(); this.el.loop=true; this.el.volume=this.vol;
    this.el.addEventListener('error',()=>{ this.actual=null; }); }catch(e){} },
  play(nombre){ if(!this.on)return; this.init(); if(!this.el)return;
-   const src=this.srcs[nombre]; if(!src)return;
+   let src=this.srcs[nombre]; if(!src)return;
+   if(Array.isArray(src)) src=src[Math.floor(Math.random()*src.length)];  // alterna entre las pistas del contexto
    if(this.actual===nombre && !this.el.paused)return;
    this.actual=nombre; this.el.src=src;
    const p=this.el.play(); if(p&&p.catch)p.catch(()=>{}); },   // autoplay bloqueado -> se ignora
@@ -1906,6 +1929,11 @@ $('btnODExit').onclick=()=>{SND.tap();abrirDueloOnline();};
 (function(){const b=$('musBtn');if(!b)return;
  const upd=()=>{b.textContent='🎵';b.style.opacity=MUSIC.on?'1':'.4';b.title=MUSIC.on?'Música: activada':'Música: silenciada';};upd();
  b.onclick=()=>{SND.init();MUSIC.setOn(!MUSIC.on);upd();};})();
+/* Créditos */
+(function(){const v=$('verCreditos'),m=$('creditosModal'),c=$('cerrarCreditos');if(!v||!m)return;
+ v.onclick=e=>{e.preventDefault();SND.tap();m.hidden=false;};
+ if(c)c.onclick=()=>{SND.tap();m.hidden=true;};
+ m.onclick=e=>{if(e.target===m)m.hidden=true;};})();
 
 $('btnStart').onclick=()=>{
  SND.init();SND.tap();
