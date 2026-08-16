@@ -656,6 +656,17 @@ Se completaron los tres pendientes que quedaron de la Sesión 2:
   la **futura campaña de Lenguaje**: **Kimün Escritor** (`kimun-escritor.png`) y el jefe
   **"El Borrón"** (`villano-lenguaje.png`). Originales en `assets/originales/`; quedó una
   variante alternativa del Calculista sin usar (en Descargas de Roberto).
+- **Banda sonora completa (5 pistas, mono 96 kbps, livianas):** Roberto generó los
+  temas y Claude los recortó/comprimió con ffmpeg (vía `imageio-ffmpeg`, sin instalar
+  nada al sistema). Cada momento suena distinto y `MUSIC.contexto(id)` enruta por
+  pantalla: `menu` (menú/mapa/tienda/Reto, 60 s, 704 KB), `aventura` (quiz de
+  expedición, 60 s, 704 KB), `jefe` (jefes de campaña, 45 s, 528 KB), `jefeCalc` (jefe
+  del Reto "El Autómata", 45 s, 528 KB) y `duelo` (1v1, 43 s, 512 KB). ~2.9 MB en total,
+  en loop y descargadas por contexto. Los originales pesaban 3-5 MB c/u (256 kbps
+  estéreo) → recortados a loops de 45-60 s. Criterio de Roberto: jefes 45 s, menú ≤60 s.
+- **Preview local:** `.claude/launch.json` levanta el servidor estático con
+  `preview_start` (`python -m http.server 8765 --directory`, puerto fijo). Antes se
+  arrancaba a mano; ahora lo gestiona el harness.
 - **Pendientes:** convertir Lenguaje en campaña (y decidir el enfoque de Matemáticas si
   se quiere además una campaña de álgebra); villano + skin por asignatura;
   portadas propias de los capítulos de Ciencias (opcional); duelo en 2 celulares,

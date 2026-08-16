@@ -1027,7 +1027,8 @@ const SND={
 const MUSIC={
  on: localStorage.getItem('kimun_music')!=='off',
  vol: Math.min(1,Math.max(0,parseFloat(localStorage.getItem('kimun_music_vol')||'0.4'))),
- srcs:{ menu:'assets/audio/musica-menu.mp3', jefe:'assets/audio/musica-jefe.mp3' },
+ srcs:{ menu:'assets/audio/musica-menu.mp3', jefe:'assets/audio/musica-jefe.mp3', jefeCalc:'assets/audio/musica-jefe-calc.mp3',
+   aventura:'assets/audio/musica-aventura.mp3', duelo:'assets/audio/musica-duelo.mp3' },
  el:null, actual:null, _ctx:'menu',
  init(){ if(this.el)return; try{ this.el=new Audio(); this.el.loop=true; this.el.volume=this.vol;
    this.el.addEventListener('error',()=>{ this.actual=null; }); }catch(e){} },
@@ -1039,8 +1040,14 @@ const MUSIC={
  stop(){ if(this.el)this.el.pause(); this.actual=null; },
  setOn(b){ this.on=b; localStorage.setItem('kimun_music',b?'on':'off'); if(!b)this.stop(); else this.play(this._ctx); },
  setVol(v){ this.vol=v; localStorage.setItem('kimun_music_vol',String(v)); if(this.el)this.el.volume=v; },
- contexto(id){ const jefe=(id==='scr-jefe-intro'||id==='scr-jefe'||id==='scr-jefe-win');
-   this._ctx = jefe?'jefe':'menu'; if(this.on)this.play(this._ctx); },
+ contexto(id){
+   let n='menu';
+   if(id==='scr-jefe-intro'||id==='scr-jefe'||id==='scr-jefe-win') n='jefe';       // jefes de campaña
+   else if(id==='scr-calc' && typeof RC!=='undefined' && RC && RC.modo==='jefe') n='jefeCalc'; // El Autómata
+   else if(id==='scr-quiz') n='aventura';                                          // quiz de expedición
+   else if(id && (id.indexOf('scr-duelo')===0 || id.indexOf('scr-od')===0)) n='duelo'; // Duelo 1v1
+   this._ctx=n; if(this.on)this.play(n);
+ },
 };
 
 /* ================= UTIL ================= */

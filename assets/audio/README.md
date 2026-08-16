@@ -5,10 +5,17 @@ El juego reproduce música de fondo en loop según el contexto. Los archivos son
 
 ## Archivos que el juego busca
 
-| Archivo | Cuándo suena | Ánimo sugerido |
+| Archivo | Cuándo suena | Duración actual |
 |---|---|---|
-| `musica-menu.mp3` | Inicio, expediciones, mapa, quiz, tienda | Tranquila, motivadora, positiva |
-| `musica-jefe.mp3` | Jefe Final (intro, duelo y victoria) | Épica, tensa, más rápida |
+| `musica-menu.mp3` | Inicio, expediciones, mapa, tienda, etapas del Reto | 60 s |
+| `musica-aventura.mp3` | Quiz de expedición | 60 s |
+| `musica-jefe.mp3` | Jefes de campaña (Historia / Ciencias) | 45 s |
+| `musica-jefe-calc.mp3` | Jefe del Reto de Cálculo ("El Autómata") | 45 s |
+| `musica-duelo.mp3` | Duelo 1v1 | 43 s |
+
+Todas están en **mono 96 kbps** (livianas) y se reproducen en **loop**. El ruteo por
+pantalla está en `MUSIC.contexto()` dentro de `index.html`. Para re-comprimir/recortar
+otra pista: `ffmpeg -ss <inicio> -i entrada.mp3 -t <segundos> -ac 1 -b:a 96k salida.mp3`.
 
 ## Especificaciones
 
