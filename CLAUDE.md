@@ -678,6 +678,11 @@ Se completaron los tres pendientes que quedaron de la Sesión 2:
   precisa: música (Kevin MacLeod CC BY 4.0 + Pixabay), tipografías (Google Fonts · SIL
   OFL), contenido (**MINEDUC** de Chile), ilustraciones (IA de ChatGPT — sin atribución
   requerida). Revisión de licencias de todo lo de terceros: solo Kevin MacLeod obliga.
+- **Fixes de audio:** (1) **desbloqueo en el primer gesto** del usuario para el autoplay
+  en móvil (listener `pointerdown/touchstart/click/keydown` que arranca `MUSIC`); (2) las
+  **etapas del Reto de Cálculo** ahora usan la música de `aventura` (antes `menu`, por
+  eso "no cambiaba" al entrar al desafío) y el jefe su `jefeCalc`; (3) `MUSIC.play` hace
+  `el.load()` al cambiar de pista (cambio de `src` fiable en móvil).
 - **Pendientes:** convertir Lenguaje en campaña (y decidir el enfoque de Matemáticas si
   se quiere además una campaña de álgebra); villano + skin por asignatura;
   portadas propias de los capítulos de Ciencias (opcional); duelo en 2 celulares,

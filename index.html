@@ -1058,7 +1058,7 @@ const MUSIC={
    let src=this.srcs[nombre]; if(!src)return;
    if(Array.isArray(src)) src=src[Math.floor(Math.random()*src.length)];  // alterna entre las pistas del contexto
    if(this.actual===nombre && !this.el.paused)return;
-   this.actual=nombre; this.el.src=src;
+   this.actual=nombre; this.el.src=src; this.el.load();   // recarga el nuevo archivo (fiable en móvil)
    const p=this.el.play(); if(p&&p.catch)p.catch(()=>{}); },   // autoplay bloqueado -> se ignora
  stop(){ if(this.el)this.el.pause(); this.actual=null; },
  setOn(b){ this.on=b; localStorage.setItem('kimun_music',b?'on':'off'); if(!b)this.stop(); else this.play(this._ctx); },
@@ -1066,7 +1066,7 @@ const MUSIC={
  contexto(id){
    let n='menu';
    if(id==='scr-jefe-intro'||id==='scr-jefe'||id==='scr-jefe-win') n='jefe';       // jefes de campaña
-   else if(id==='scr-calc' && typeof RC!=='undefined' && RC && RC.modo==='jefe') n='jefeCalc'; // El Autómata
+   else if(id==='scr-calc') n=(typeof RC!=='undefined' && RC && RC.modo==='jefe')?'jefeCalc':'aventura'; // Reto: etapas=aventura, jefe=jefeCalc
    else if(id==='scr-quiz') n='aventura';                                          // quiz de expedición
    else if(id && (id.indexOf('scr-duelo')===0 || id.indexOf('scr-od')===0)) n='duelo'; // Duelo 1v1
    this._ctx=n; if(this.on)this.play(n);
@@ -1934,6 +1934,17 @@ $('btnODExit').onclick=()=>{SND.tap();abrirDueloOnline();};
  v.onclick=e=>{e.preventDefault();SND.tap();m.hidden=false;};
  if(c)c.onclick=()=>{SND.tap();m.hidden=true;};
  m.onclick=e=>{if(e.target===m)m.hidden=true;};})();
+/* Desbloqueo de audio en el PRIMER gesto del usuario (autoplay en móvil).
+   Los navegadores móviles no dejan sonar el <audio> hasta un toque real. */
+(function(){
+ function unlock(){
+   try{SND.init();}catch(e){}
+   MUSIC.init();
+   if(MUSIC.on){ MUSIC.actual=null; MUSIC.play(MUSIC._ctx||'menu'); }
+   ['pointerdown','touchstart','click','keydown'].forEach(ev=>document.removeEventListener(ev,unlock,true));
+ }
+ ['pointerdown','touchstart','click','keydown'].forEach(ev=>document.addEventListener(ev,unlock,true));
+})();
 
 $('btnStart').onclick=()=>{
  SND.init();SND.tap();
