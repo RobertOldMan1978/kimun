@@ -1050,7 +1050,8 @@ const MUSIC={
  srcs:{ menu:'assets/audio/musica-menu.mp3',
    aventura:['assets/audio/musica-aventura.mp3','assets/audio/musica-aventura2.mp3'],  // se alternan
    jefe:['assets/audio/musica-jefe.mp3','assets/audio/musica-jefe2.mp3'],              // se alternan
-   jefeCalc:'assets/audio/musica-jefe-calc.mp3', duelo:'assets/audio/musica-duelo.mp3' },
+   jefeCalc:'assets/audio/musica-jefe-calc.mp3', duelo:'assets/audio/musica-duelo.mp3',
+   sinfin:'assets/audio/musica-sinfin.mp3' },
  el:null, actual:null, _ctx:'menu',
  init(){ if(this.el)return; try{ this.el=new Audio(); this.el.loop=true; this.el.volume=this.vol;
    this.el.addEventListener('error',()=>{ this.actual=null; }); }catch(e){} },
@@ -1066,7 +1067,7 @@ const MUSIC={
  contexto(id){
    let n='menu';
    if(id==='scr-jefe-intro'||id==='scr-jefe'||id==='scr-jefe-win') n='jefe';       // jefes de campaña
-   else if(id==='scr-calc') n=(typeof RC!=='undefined' && RC && RC.modo==='jefe')?'jefeCalc':'aventura'; // Reto: etapas=aventura, jefe=jefeCalc
+   else if(id==='scr-calc') n=(typeof RC!=='undefined' && RC)?(RC.modo==='jefe'?'jefeCalc':RC.modo==='sinfin'?'sinfin':'aventura'):'aventura'; // Reto: etapas=aventura, jefe=jefeCalc, sin fin=sinfin
    else if(id==='scr-quiz') n='aventura';                                          // quiz de expedición
    else if(id && (id.indexOf('scr-duelo')===0 || id.indexOf('scr-od')===0)) n='duelo'; // Duelo 1v1
    this._ctx=n; if(this.on)this.play(n);

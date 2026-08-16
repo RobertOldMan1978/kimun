@@ -11,6 +11,7 @@ El juego reproduce música de fondo en loop según el contexto. Los archivos son
 | `musica-aventura.mp3` + `musica-aventura2.mp3` | Quiz de expedición (**se alternan**) | 60 s |
 | `musica-jefe.mp3` + `musica-jefe2.mp3` | Jefes de campaña (**se alternan**) | 45 s |
 | `musica-jefe-calc.mp3` | Jefe del Reto ("El Autómata") | 45 s |
+| `musica-sinfin.mp3` | Modo Sin Fin del Reto (Voxel Revolution) | 60 s |
 | `musica-duelo.mp3` | Duelo 1v1 | 45 s |
 
 Un contexto con **varias pistas** (arreglo en `MUSIC.srcs`) elige una al azar cada vez

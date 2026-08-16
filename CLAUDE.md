@@ -683,6 +683,9 @@ Se completaron los tres pendientes que quedaron de la Sesión 2:
   **etapas del Reto de Cálculo** ahora usan la música de `aventura` (antes `menu`, por
   eso "no cambiaba" al entrar al desafío) y el jefe su `jefeCalc`; (3) `MUSIC.play` hace
   `el.load()` al cambiar de pista (cambio de `src` fiable en móvil).
+- **Música del Modo Sin Fin:** contexto propio `sinfin` con **"Voxel Revolution"**
+  (Kevin MacLeod, electrónica intensa). El Reto quedó con música por modo: etapas
+  `aventura`, sin fin `sinfin`, jefe `jefeCalc`.
 - **Pendientes:** convertir Lenguaje en campaña (y decidir el enfoque de Matemáticas si
   se quiere además una campaña de álgebra); villano + skin por asignatura;
   portadas propias de los capítulos de Ciencias (opcional); duelo en 2 celulares,
