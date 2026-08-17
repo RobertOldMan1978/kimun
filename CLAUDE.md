@@ -33,25 +33,29 @@ en línea. Historia de v0 al detalle en la Bitácora (abajo).
   (Historia, Matemáticas, Ciencias, Lenguaje); al entrar se abre su campaña o una
   lista de sus mapas (`scr-mapas`). Cada mapa usa su portada propia por convención
   `assets/portada-<id>.png` con fallback a la de la asignatura.
-- **Campañas de asignatura completa (Historia y Ciencias):** cada una se juega como
-  **campaña con hilo conductor** — capítulos en orden que cubren todos los OA del año +
+- **Campañas de asignatura completa (Historia, Ciencias y Lenguaje):** cada una se juega
+  como **campaña con hilo conductor** — capítulos en orden que cubren todos los OA del año +
   un **Jefe Final multi-fase** (barra de vida, 3 corazones, tema carmesí) que se abre al
   100%, con recompensas (skin exclusiva, insignia, corona y bono +500🪙/+300XP):
   - **Historia:** 5 capítulos (22 OA) + Desafío Extra; villano "El Guardián del Tiempo";
     skin "Kimün Historiador".
   - **Ciencias:** 4 capítulos (15 OA = las 4 unidades); villano "La Entropía";
     skin "Kimün Científico".
+  - **Lenguaje:** 4 capítulos (15 OA; la U1 "Lectura literaria" partida en 2 —Leer y
+    comprender / Mundos literarios— + Textos y medios + Escritura); villano "El Borrón";
+    skin "Kimün Escritor"; insignia "Maestro de las Letras".
   Capa `CAMPAÑAS` data-driven; el motor de campañas es **genérico** (Desafío Extra
   opcional, jefe con título dinámico).
 - **Matemáticas · "Reto de Cálculo" (Sesión 15):** al entrar a Matemáticas se abre un
   juego de **cálculo mental rápido** (procedural, alineado al eje Números de 8°), no el
   quiz de álgebra. **5 niveles × 3 etapas** + **Jefe Final "El Autómata"** (vida y
-  corazones) + **Modo Sin Fin** con récord. El banco de álgebra queda de reserva y
-  sigue en el Duelo.
-- **Expediciones sueltas** (aún sin campaña): Lenguaje "Tipos de texto y medios"
-  (LE08 OA03/09/10/11) y Lenguaje "Mundos literarios" (LE08 OA04-07). Regla de cada
-  capítulo/expedición: **4 etapas + 1 jefe (5 nodos)**. Cada asignatura tiene, además,
-  un **banco de año completo** (todos sus OA oficiales) como reserva (ver Sesión 9).
+  corazones) + **Modo Sin Fin** con récord. El banco de álgebra queda de reserva.
+  En el **Duelo**, Matemáticas ofrece los 5 niveles del Reto (operaciones generadas al
+  vuelo), ver Sesión 16.
+- Regla de cada capítulo/expedición: **4 etapas + 1 jefe (5 nodos)** (algunos capítulos
+  con 3 etapas cuando su unidad tiene 3 OA). Cada asignatura tiene, además, un **banco de
+  año completo** (todos sus OA oficiales); con las 4 campañas activas ya casi no queda
+  contenido de reserva sin usar.
 - Quiz: 6 preguntas al azar/etapa, timer 15 s, pasa con 66%, 3 estrellas. Al
   fallar revela la respuesta correcta + explicación y botón "Continuar". Kimün
   comenta un dato al iniciar la ruta.
@@ -736,7 +740,33 @@ Se completaron los tres pendientes que quedaron de la Sesión 2:
     encajan en el formato de duelo de 8 preguntas). La expedición de álgebra deja de
     aparecer en el duelo. Verificado en el navegador (respuestas correctas, índices
     válidos, otras asignaturas intactas, sin errores de consola).
-- **Pendientes:** sin cambios respecto a la Sesión 15 (convertir Lenguaje en campaña;
-  villano + skin por asignatura; portadas propias de capítulos de Ciencias; duelo en 2
+- **Lenguaje convertido en CAMPAÑA completa (como Historia y Ciencias) — cierra las 4
+  asignaturas con campaña + jefe.** Se hizo con el flujo brainstorming → diseño aprobado →
+  implementación (solo datos; el motor de campañas ya era genérico desde la Sesión 15).
+  Las 2 expediciones sueltas de Lenguaje pasaron a ser **4 capítulos** que cubren los 15 OA
+  (la U1 "Lectura literaria", con 8 OA, se partió en dos):
+  - **Cap 1 · Leer y comprender** (OA01 hábito lector, OA02 experiencia humana, OA03
+    narración, OA08 interpretación).
+  - **Cap 2 · Mundos literarios** (OA04 poesía, OA05 teatro, OA06 epopeya, OA07 comedia).
+  - **Cap 3 · Textos y medios** (OA09 argumentar, OA10 medios/publicidad, OA11 textos no
+    literarios, OA12 estrategias de comprensión).
+  - **Cap 4 · Escritura** (OA13 crear, OA14 explicar, OA15 persuadir).
+  - **Jefe Final "El Borrón"** ✒️ (`assets/villano-lenguaje.png`), 4 fases (una por
+    capítulo, las 15 OA repartidas), 3 corazones. Recompensas: skin **"Kimün Escritor"**
+    (`assets/kimun-escritor.png`, visible-pero-bloqueada), insignia **"Maestro de las
+    Letras"** ✍️, corona y bono +500🪙/+300XP.
+  - **Implementación** (`index.html`, solo datos): las 4 expediciones con `campaña:'leng'`
+    (se reusaron los ids `leng-literarios` y `leng-textos` para conservar sus portadas; los
+    nuevos `leng-lectura` y `leng-escritura` caen al fallback `portada-lenguaje.png`);
+    entrada `'leng'` en `CAMPAÑAS`; insignia en `INSIGNIAS`; skin `kimun-escritor` en
+    `SKINS` (con imagen, `desbloqueaCon:'leng'`). El motor NO se tocó.
+  - **Verificado en el navegador:** menú muestra Lenguaje como campaña (0/4 capítulos);
+    desbloqueo secuencial (Cap 1 jugable, resto 🔒, jefe al 100%); pool carga para los OA
+    de cada etapa; intro del jefe muestra a "El Borrón" con su arte; recompensas otorgadas
+    OK (skin desbloqueada, insignia ganada, +500🪙). El duelo muestra los 4 capítulos de
+    Lenguaje. Únicos 404: `portada-leng-lectura.png` y `portada-leng-escritura.png` (caen
+    al fallback; arte propio opcional a futuro). Sin errores de JS.
+- **Pendientes:** ¡las 4 asignaturas ya tienen campaña + jefe! Quedan: portadas propias de
+  los 2 capítulos nuevos de Lenguaje y de los capítulos de Ciencias (opcional); duelo en 2
   celulares; notificaciones push y ranking real; limpiar perfiles de prueba en Supabase;
-  quitar `libre:true` de "El mundo colonial" al terminar las pruebas).
+  quitar `libre:true` de "El mundo colonial" al terminar las pruebas.

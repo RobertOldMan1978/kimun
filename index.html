@@ -884,23 +884,41 @@ const EXPEDICIONES=[
      {oa:"CN08 OA 15", nombre:"Elementos de la vida", icono:"🌍", n:6},
      {oa:"BOSS", nombre:"⚡ JEFE: La materia", icono:"🔬", n:8, oas:["CN08 OA 12","CN08 OA 13","CN08 OA 14","CN08 OA 15"]},
    ]},
- { id:'leng-textos', asignatura:'Lenguaje', nivel:'8° Básico · Tipos de texto y medios',
-   portada:'assets/portada-lenguaje.png', contenido:'contenido/lenguaje-8basico/preguntas.json', activa:true,
+ // --- Campaña Lenguaje (capítulos = las 3 unidades del año; la U1 se parte en 2) ---
+ { id:'leng-lectura', asignatura:'Lenguaje', nivel:'8° Básico · Leer y comprender',
+   portada:'assets/portada-lenguaje.png', contenido:'contenido/lenguaje-8basico/preguntas.json', activa:true, campaña:'leng',
    etapas:[
+     {oa:"LE08 OA 01", nombre:"El hábito de leer", icono:"📚", n:6},
+     {oa:"LE08 OA 02", nombre:"La experiencia humana", icono:"💭", n:6},
      {oa:"LE08 OA 03", nombre:"El texto narrativo", icono:"📖", n:6},
-     {oa:"LE08 OA 11", nombre:"Textos informativos", icono:"📰", n:6},
-     {oa:"LE08 OA 10", nombre:"Medios y publicidad", icono:"📣", n:6},
-     {oa:"LE08 OA 09", nombre:"Argumentar y opinar", icono:"💬", n:6},
-     {oa:"BOSS", nombre:"⚡ JEFE: Textos y medios", icono:"🎭", n:8, oas:["LE08 OA 03","LE08 OA 11","LE08 OA 10","LE08 OA 09"]},
+     {oa:"LE08 OA 08", nombre:"Interpretar la obra", icono:"🔎", n:6},
+     {oa:"BOSS", nombre:"⚡ JEFE: Leer y comprender", icono:"✒️", n:8, oas:["LE08 OA 01","LE08 OA 02","LE08 OA 03","LE08 OA 08"]},
    ]},
  { id:'leng-literarios', asignatura:'Lenguaje', nivel:'8° Básico · Mundos literarios',
-   portada:'assets/portada-lenguaje.png', contenido:'contenido/lenguaje-8basico/preguntas.json', activa:true,
+   portada:'assets/portada-lenguaje.png', contenido:'contenido/lenguaje-8basico/preguntas.json', activa:true, campaña:'leng',
    etapas:[
      {oa:"LE08 OA 04", nombre:"Poesía", icono:"🎵", n:6},
      {oa:"LE08 OA 05", nombre:"Teatro", icono:"🎭", n:6},
      {oa:"LE08 OA 06", nombre:"Epopeya", icono:"🛡️", n:6},
      {oa:"LE08 OA 07", nombre:"Comedia", icono:"😄", n:6},
-     {oa:"BOSS", nombre:"⚡ JEFE: Mundos literarios", icono:"📚", n:8, oas:["LE08 OA 04","LE08 OA 05","LE08 OA 06","LE08 OA 07"]},
+     {oa:"BOSS", nombre:"⚡ JEFE: Mundos literarios", icono:"✒️", n:8, oas:["LE08 OA 04","LE08 OA 05","LE08 OA 06","LE08 OA 07"]},
+   ]},
+ { id:'leng-textos', asignatura:'Lenguaje', nivel:'8° Básico · Textos y medios',
+   portada:'assets/portada-lenguaje.png', contenido:'contenido/lenguaje-8basico/preguntas.json', activa:true, campaña:'leng',
+   etapas:[
+     {oa:"LE08 OA 09", nombre:"Argumentar y opinar", icono:"💬", n:6},
+     {oa:"LE08 OA 10", nombre:"Medios y publicidad", icono:"📣", n:6},
+     {oa:"LE08 OA 11", nombre:"Textos informativos", icono:"📰", n:6},
+     {oa:"LE08 OA 12", nombre:"Estrategias de comprensión", icono:"🧩", n:6},
+     {oa:"BOSS", nombre:"⚡ JEFE: Textos y medios", icono:"✒️", n:8, oas:["LE08 OA 09","LE08 OA 10","LE08 OA 11","LE08 OA 12"]},
+   ]},
+ { id:'leng-escritura', asignatura:'Lenguaje', nivel:'8° Básico · Escritura',
+   portada:'assets/portada-lenguaje.png', contenido:'contenido/lenguaje-8basico/preguntas.json', activa:true, campaña:'leng',
+   etapas:[
+     {oa:"LE08 OA 13", nombre:"Escritura creativa", icono:"✍️", n:6},
+     {oa:"LE08 OA 14", nombre:"Escribir para explicar", icono:"📝", n:6},
+     {oa:"LE08 OA 15", nombre:"Escribir para persuadir", icono:"📢", n:6},
+     {oa:"BOSS", nombre:"⚡ JEFE: Escritura", icono:"✒️", n:8, oas:["LE08 OA 13","LE08 OA 14","LE08 OA 15"]},
    ]},
 ];
 
@@ -941,11 +959,28 @@ const CAMPAÑAS=[{
     ],
   },
   recompensa:{ skin:'kimun-cientifico', insignia:'maestro-ciencias', bonoMonedas:500, bonoXP:300 },
+},{
+  id:'leng', asignatura:'Lenguaje', portada:'assets/portada-lenguaje.png',
+  intro:'De la primera lectura a la escritura: narra, imagina, argumenta y crea.',
+  capitulos:['leng-lectura','leng-literarios','leng-textos','leng-escritura'],
+  jefeFinal:{
+    villano:'El Borrón', villanoIc:'✒️', villanoImg:'assets/villano-lenguaje.png',
+    dialogo:'Mancho las páginas y borro las palabras... ¿crees que tus letras pueden vencerme?',
+    vidasJugador:3, nPorFase:4,
+    fases:[
+      {nombre:'Leer y comprender', oas:['LE08 OA 01','LE08 OA 02','LE08 OA 03','LE08 OA 08']},
+      {nombre:'Mundos literarios', oas:['LE08 OA 04','LE08 OA 05','LE08 OA 06','LE08 OA 07']},
+      {nombre:'Textos y medios',   oas:['LE08 OA 09','LE08 OA 10','LE08 OA 11','LE08 OA 12']},
+      {nombre:'Escritura',         oas:['LE08 OA 13','LE08 OA 14','LE08 OA 15']},
+    ],
+  },
+  recompensa:{ skin:'kimun-escritor', insignia:'maestro-lenguaje', bonoMonedas:500, bonoXP:300 },
 }];
 const INSIGNIAS=[
   {id:'maestro-historia', ic:'🏅', tx:'Maestro de Historia', asignatura:'Historia'},
   {id:'maestro-ciencias', ic:'🔬', tx:'Maestro de Ciencias', asignatura:'Ciencias'},
   {id:'maestro-calculo', ic:'🎖️', tx:'Maestro del Cálculo', asignatura:'Matemáticas'},
+  {id:'maestro-lenguaje', ic:'✍️', tx:'Maestro de las Letras', asignatura:'Lenguaje'},
 ];
 function campañaDe(asig){return CAMPAÑAS.find(c=>c.asignatura===asig)||null;}
 function campañaPorId(id){return CAMPAÑAS.find(c=>c.id===id)||null;}
@@ -1426,7 +1461,8 @@ const SKINS=[{e:"🐲",p:60},{e:"🦄",p:70},{e:"🦖",p:80},{e:"🐙",p:50},{e:
  // Marcador de arte: emoji 🎓 hasta que exista assets/kimun-historiador.png.
  {id:'kimun-historiador', e:"🎓", img:'assets/kimun-historiador.png', nombre:'Kimün Historiador', bloqueada:true, desbloqueaCon:'hist', req:'Vence a Historia'},
  {id:'kimun-cientifico', e:"🔬", img:'assets/kimun-cientifico.png', nombre:'Kimün Científico', bloqueada:true, desbloqueaCon:'cien', req:'Vence a Ciencias'},
- {id:'kimun-calculista', e:"🧮", img:'assets/kimun-calculista.png', nombre:'Kimün Calculista', bloqueada:true, req:'Vence a El Autómata'}];
+ {id:'kimun-calculista', e:"🧮", img:'assets/kimun-calculista.png', nombre:'Kimün Calculista', bloqueada:true, req:'Vence a El Autómata'},
+ {id:'kimun-escritor', e:"🖋️", img:'assets/kimun-escritor.png', nombre:'Kimün Escritor', bloqueada:true, desbloqueaCon:'leng', req:'Vence a Lenguaje'}];
 // Si el avatar equipado es una skin con imagen, devuelve su ruta; si no, null.
 function skinImg(av){const s=SKINS.find(k=>k.e===av&&k.img);return s?s.img:null;}
 // HTML del avatar: <img> si la skin tiene imagen, o el emoji tal cual.

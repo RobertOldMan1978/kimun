@@ -12,15 +12,14 @@ Un juego tipo aventura con mapa de niveles, quiz con temporizador, combos, XP,
 monedas, estrellas, logros y ranking de curso. **Kimün**, el zorro mascota,
 acompaña y reacciona a cada respuesta. Incluye **Modo Difícil** desbloqueable.
 
-La pantalla principal ofrece un **módulo por asignatura**. **Historia** y **Ciencias**
-se juegan como **campañas con hilo conductor**: capítulos en orden que cubren todos los
-OA del año, con **Jefe Final multi-fase** (barra de vida, 3 corazones) y **recompensas**
-(skin exclusiva, insignia coleccionable, corona y bono). **Matemáticas** es un
-**Reto de Cálculo** (cálculo mental rápido, por niveles) y **Lenguaje** son expediciones
-sueltas por ahora. Cada asignatura tiene un banco de preguntas
-de año completo (todos sus OA del currículum). También hay **Duelo 1v1** en el mismo
-teléfono y en línea (Supabase). Todo en un solo archivo `index.html`, pensado para
-el celular.
+La pantalla principal ofrece un **módulo por asignatura**. **Historia**, **Ciencias** y
+**Lenguaje** se juegan como **campañas con hilo conductor**: capítulos en orden que cubren
+todos los OA del año, con **Jefe Final multi-fase** (barra de vida, 3 corazones) y
+**recompensas** (skin exclusiva, insignia coleccionable, corona y bono). **Matemáticas** es
+un **Reto de Cálculo** (cálculo mental rápido, por niveles) con su propio Jefe Final. Cada
+asignatura tiene un banco de preguntas de año completo (todos sus OA del currículum).
+También hay **Duelo 1v1** en el mismo teléfono y en línea (Supabase). Todo en un solo
+archivo `index.html`, pensado para el celular.
 
 ## Cómo probarlo
 
