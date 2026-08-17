@@ -342,6 +342,23 @@ declare v int; begin
   if v is null then raise exception 'alumno_invalido'; end if;
   return v; end $$;
 
+-- Cuenta y elimina los perfiles de prueba: los que no son bots y no son alumnos
+-- inscritos por el adulto. Son los perfiles que crea cada navegador o teléfono al
+-- abrir el juego, y se acumulan con las pruebas. p_ejecutar=false solo cuenta.
+-- Ojo: borrar un perfil arrastra sus duelos (on delete cascade) y deja sin progreso
+-- en línea a cualquier dispositivo que no haya canjeado un código de alumno.
+create or replace function public.kimun_admin_limpiar_pruebas(p_clave text, p_ejecutar boolean)
+returns int language plpgsql security definer set search_path=public as $$
+declare n int; begin
+  if not public.kimun_admin_ok(p_clave) then raise exception 'clave_invalida'; end if;
+  if p_ejecutar then
+    delete from public.perfiles where es_bot = false and codigo_acceso is null;
+    get diagnostics n = row_count;
+  else
+    select count(*) into n from public.perfiles where es_bot = false and codigo_acceso is null;
+  end if;
+  return n; end $$;
+
 -- Rivales dummy (bots) para poder jugar sin esperar a nadie
 insert into public.perfiles (id,nombre,avatar,codigo,es_bot,nivel) values
  (gen_random_uuid(),'Vale','🐯','KIM-VALE',true,4),
@@ -367,5 +384,6 @@ grant execute on function
   public.kimun_yo(), public.kimun_xp(int), public.kimun_ranking(), public.kimun_canjear(text),
   public.kimun_admin_curso_crear(text,text), public.kimun_admin_alumno_agregar(text,text,text,text),
   public.kimun_admin_listar(text), public.kimun_admin_alumno_quitar(text,text),
-  public.kimun_admin_xp_fijar(text,text,int)
+  public.kimun_admin_xp_fijar(text,text,int),
+  public.kimun_admin_limpiar_pruebas(text,boolean)
   to anon, authenticated;

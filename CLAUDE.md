@@ -215,6 +215,16 @@ nombre (cada uno recibe un código `ALU-XXXXXXXX`), se ve el XP de cada uno y se
 eliminan. Ya no hace falta entrar a Supabase para nada de esto. La primera entrada
 puede tardar varios segundos porque incluye el login anónimo.
 
+**Mantenimiento (en el mismo panel):**
+- **`✎` en cada alumno:** fija su XP. Es la única forma de **bajar** un XP inflado,
+  porque la sincronización normal (`kimun_xp`) solo sube.
+- **🧹 Limpiar perfiles de prueba:** borra los perfiles que se crean solos al abrir
+  el juego y que nunca canjearon un código de alumno. Cuenta primero y pide
+  confirmación. **No borra** bots ni alumnos inscritos, pero sí arrastra los duelos
+  de esos perfiles y **no tiene deshacer**. Conviene usarlo *después* de que los
+  niños canjeen sus códigos: si se usa antes, un teléfono que ya venía jugando
+  pierde su perfil en línea y sus duelos.
+
 **Cómo entra un alumno:** Inicio → **"🎟️ Tengo un código"** → escribe su `ALU-`.
 Queda vinculado a ese perfil en ese aparato, y puede repetirlo en otro para jugar
 desde varios equipos. Si borra los datos del navegador, vuelve a canjear el mismo
@@ -971,8 +981,18 @@ revisiones independientes del SQL. Diseño y plan en `docs/superpowers/`.
   siguen siendo del aparato y no del alumno, así que en un tablet compartido dos hermanos
   comparten avance aunque tengan XP distinto; y la clave de administración sigue siendo un
   bloqueo suave, aunque ya no se puede leer del código fuente.
-- **Pendientes:** probar el canje en los teléfonos de los niños; **limpiar los perfiles de
-  prueba en Supabase** (la lista de rivales del duelo ya trae 18 entradas, casi todas de
-  pruebas); agregar al panel un botón para corregir el XP (la función existe, falta la
-  interfaz); dar la vuelta manual y decidir el paso a **v1**; los ~22 MB de originales y el
-  huérfano `portada-mate-algebra.png`; duelo en 2 celulares; notificaciones push.
+- **Mantenimiento desde el panel (cierre de la sesión):** se agregaron las dos herramientas
+  que faltaban para no volver a depender del SQL Editor. **`✎` por alumno** usa
+  `kimun_admin_xp_fijar` (que ya existía sin interfaz) para corregir un XP inflado, lo único
+  que la sincronización normal no puede hacer porque solo sube. **🧹 Limpiar perfiles de
+  prueba** usa la función nueva `kimun_admin_limpiar_pruebas(clave, ejecutar)`: con
+  `ejecutar=false` cuenta y con `true` borra, así el botón informa cuántos son y pide
+  confirmación antes de tocar nada. El criterio es "no es bot y no es alumno inscrito", es
+  decir los perfiles que cada navegador o teléfono crea solo al abrir el juego.
+  **Advertencia registrada:** borrar arrastra los duelos de esos perfiles y no tiene
+  deshacer, así que conviene limpiar **después** de que los niños canjeen sus códigos; si se
+  hace antes, un teléfono que ya venía jugando pierde su perfil en línea.
+- **Pendientes:** probar el canje en los teléfonos de los niños y luego ejecutar la limpieza
+  (la lista de rivales del duelo trae 18 entradas, casi todas de pruebas); dar la vuelta
+  manual y decidir el paso a **v1**; los ~22 MB de originales y el huérfano
+  `portada-mate-algebra.png`; duelo en 2 celulares; notificaciones push.
