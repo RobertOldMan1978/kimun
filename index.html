@@ -354,15 +354,25 @@ body.en-dificil .nav button.on{color:#ff6b6b;background:#ff2d551a}
 .camp-nodo{display:flex;align-items:center;gap:14px;background:var(--panel);border:2px solid #ffffff14;
  border-radius:16px;padding:12px 14px;cursor:pointer;transition:transform .1s}
 .camp-nodo:active{transform:scale(.99)}
-.camp-nodo .cn-circ{width:52px;height:52px;border-radius:50%;display:grid;place-items:center;font-size:24px;font-weight:900;
- flex-shrink:0;background:radial-gradient(circle at 32% 28%,#5a4bd0,#2a2160);border:3px solid var(--violet);color:#fff}
+.camp-nodo .cn-marco{position:relative;flex-shrink:0}
+.camp-nodo .cn-circ{width:68px;height:68px;border-radius:50%;display:grid;place-items:center;font-size:26px;font-weight:900;
+ background:radial-gradient(circle at 32% 28%,#5a4bd0,#2a2160);border:3px solid var(--violet);color:#fff}
+/* portada del capítulo (o villano del jefe) dentro del círculo */
+.camp-nodo .cn-circ.cn-img{overflow:hidden;padding:0;background:radial-gradient(circle at 32% 28%,#2a2160,#161036)}
+.camp-nodo .cn-circ.cn-img img{width:114%;height:114%;object-fit:cover;display:block}
+.camp-nodo .cn-badge{position:absolute;right:-3px;bottom:-3px;min-width:24px;height:24px;padding:0 5px;border-radius:12px;
+ display:grid;place-items:center;font-size:13px;font-weight:900;background:var(--violet);border:2px solid #1a1440;color:#fff}
 .camp-nodo .cn-body{flex:1;min-width:0}
 .camp-nodo .cn-body b{display:block;font-size:15px}
 .camp-nodo .cn-body small{color:var(--dim);font-weight:800;font-size:12px}
 .camp-nodo.done{border-color:var(--green)}
 .camp-nodo.done .cn-circ{background:radial-gradient(circle at 32% 28%,#4fe6a0,#128a56);border-color:var(--green);color:#053}
+.camp-nodo.done .cn-circ.cn-img{background:#0d3;border-color:var(--green)}
+.camp-nodo.done .cn-badge{background:var(--green);color:#053}
 .camp-nodo.lock{opacity:.55;cursor:not-allowed}
 .camp-nodo.lock .cn-circ{background:#241d4e;filter:grayscale(1)}
+.camp-nodo.lock .cn-circ.cn-img img{filter:grayscale(1) brightness(.65)}
+.camp-nodo.lock .cn-badge{background:#241d4e;filter:none}
 .shop-item.locked{opacity:.7;border-color:var(--violet)}
 .shop-item .skin-lock{font-weight:900;font-size:11px;color:var(--violet);margin-top:4px}
 /* --- Jefe Final --- */
@@ -1702,24 +1712,31 @@ function renderCampaña(){
   const abierto=nodoCampDesbloqueado(c,i), hecho=expedicionCompleta(id);
   const titulo=(exp.nivel.split('· ')[1]||exp.nivel);
   cont.appendChild(nodoCampañaEl(`${i+1}`, titulo, abierto, hecho,
-    abierto?()=>entrarExpedicion(exp):null, hecho?'Completado':(abierto?'¡Jugar!':'🔒 Bloqueado')));
+    abierto?()=>entrarExpedicion(exp):null, hecho?'Completado':(abierto?'¡Jugar!':'🔒 Bloqueado'),
+    portadaMapa(exp), portadaFallback(exp)));
  });
  // desafío extra (solo si la campaña lo define)
  if(c.desafioExtra){
   const de=EXPEDICIONES.find(e=>e.id===c.desafioExtra);
   const deAb=desafioDesbloqueado(c), deHecho=expedicionCompleta(c.desafioExtra);
   cont.appendChild(nodoCampañaEl('⭐','Desafío Extra: Chile hoy', deAb, deHecho,
-    deAb?()=>entrarExpedicion(de):null, deHecho?'Completado':(deAb?'¡Desafío!':'🔒 Termina los capítulos')));
+    deAb?()=>entrarExpedicion(de):null, deHecho?'Completado':(deAb?'¡Desafío!':'🔒 Termina los capítulos'),
+    portadaMapa(de), portadaFallback(de)));
  }
- // jefe final
+ // jefe final (luce al villano de la campaña)
  const jfAb=jefeFinalDesbloqueado(c), jfHecho=campañaCompleta(c);
  cont.appendChild(nodoCampañaEl('👑','JEFE FINAL DE '+c.asignatura.toUpperCase(), jfAb, jfHecho,
-   jfAb?()=>iniciarJefeFinal(c):null, jfHecho?'¡Vencido!':(jfAb?'¡Al 100%! Enfréntalo':'🔒 Completa todo')));
+   jfAb?()=>iniciarJefeFinal(c):null, jfHecho?'¡Vencido!':(jfAb?'¡Al 100%! Enfréntalo':'🔒 Completa todo'),
+   c.jefeFinal.villanoImg||''));
 }
-function nodoCampañaEl(marca,titulo,abierto,hecho,onClick,estado){
+// img/imgAlt: portada del capítulo (o villano del jefe). Sin imagen, el círculo lleva la marca.
+function nodoCampañaEl(marca,titulo,abierto,hecho,onClick,estado,img,imgAlt){
  const d=document.createElement('div');
  d.className='camp-nodo'+(abierto?'':' lock')+(hecho?' done':'');
- d.innerHTML=`<div class="cn-circ">${hecho?'✓':marca}</div><div class="cn-body"><b>${titulo}</b><small>${estado}</small></div>`;
+ const circ=img
+  ?`<div class="cn-circ cn-img"><img src="${img}" alt=""${imgAlt?` onerror="this.onerror=null;this.src='${imgAlt}'"`:''}></div><span class="cn-badge">${hecho?'✓':(abierto?marca:'🔒')}</span>`
+  :`<div class="cn-circ">${hecho?'✓':marca}</div>`;
+ d.innerHTML=`<div class="cn-marco">${circ}</div><div class="cn-body"><b>${titulo}</b><small>${estado}</small></div>`;
  if(onClick) d.onclick=()=>{SND.tap();onClick();};
  return d;
 }

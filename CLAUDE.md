@@ -38,7 +38,9 @@ backend Supabase para el duelo en línea. Historia de v0 al detalle en la Bitác
 - **Pantalla principal en 2 niveles (Sesión 15):** un **módulo por asignatura**
   (Historia, Matemáticas, Ciencias, Lenguaje); al entrar se abre su campaña o una
   lista de sus mapas (`scr-mapas`). Cada mapa usa su portada propia por convención
-  `assets/portada-<id>.png` con fallback a la de la asignatura.
+  `assets/portada-<id>.png` con fallback a la de la asignatura. **Los 14 capítulos
+  tienen arte propio** y se lucen como ilustración en la pantalla de campaña (el
+  Jefe Final muestra al villano de la asignatura).
 - **Campañas de asignatura completa (Historia, Ciencias y Lenguaje):** cada una se juega
   como **campaña con hilo conductor** — capítulos en orden que cubren todos los OA del año +
   un **Jefe Final multi-fase** (barra de vida, 3 corazones, tema carmesí) que se abre al
@@ -826,3 +828,44 @@ dar una vuelta manual antes de la v1. Todo verificado en el navegador, sin error
 - **Pendientes:** dar la vuelta manual y decidir el paso a **v1**; versión del video en
   9:16 de pantalla completa ya lista; sigue opcional el arte de portadas de capítulos de
   Ciencias; y los de siempre (duelo en 2 celulares, push, ranking real, limpiar Supabase).
+
+### Sesión 18 (2026-08-17)
+- **Sincronización (orden 99):** `git pull` de `main` trajo las Sesiones 15-17 desde el
+  otro PC (campañas de Ciencias y Lenguaje, Reto de Cálculo, banda sonora, intro en
+  video, tienda re-escalonada, modo QA). Fast-forward sin conflictos.
+- **Arte propio para los 14 capítulos (lote 6) — cierra el pendiente de portadas.**
+  Roberto generó las 10 que faltaban (4 de Ciencias + 5 de Historia + el Desafío Extra);
+  Claude escribió los prompts uno por uno, calibrados al estilo de las portadas de
+  Lenguaje (Kimün de cuerpo entero haciendo la actividad del capítulo, objetos temáticos
+  flotando, viñeta circular, paleta violeta/dorado/cian).
+  - **Criterio editorial en los capítulos sensibles:** "Los europeos llegan a América" se
+    centró en la **travesía** (carabela, brújula, astrolabio; sin armas ni banderas) y "El
+    mundo colonial" en la **vida cotidiana y el mestizaje** (mercado, maíz, greda, adobe),
+    evitando ilustrar la conquista armada o el trabajo forzado en una portada para niños.
+  - **Procesamiento (`scripts/procesar-lote6.py`):** a diferencia del lote 5, estas vinieron
+    en **RGB con fondo blanco opaco** (sin alfa), así que recortarlas por canal alfa las
+    habría dejado como cuadrados blancos. El script detecta el fondo con **relleno por
+    inundación desde las 4 esquinas** (así no borra los blancos interiores: delantal,
+    bandera, pergaminos) y lo vuelve transparente con el borde suavizado; luego recorta,
+    cuadra con margen y exporta a 512 px. De ~2,2 MB c/u a ~390 KB (3,8 MB en total).
+    Originales en `assets/originales/`.
+- **Las portadas ahora se lucen en la pantalla de campaña (cambio de motor chico):** antes
+  los capítulos eran nodos con un número y las portadas solo se veían como miniaturas de
+  ~40 px en el selector del duelo, donde el arte no se apreciaba.
+  - `nodoCampañaEl` acepta imagen + respaldo (sin imagen conserva el círculo con la marca,
+    compatible hacia atrás); `renderCampaña` pasa la portada de cada capítulo, la del
+    Desafío Extra y el **villano de la campaña en el nodo del Jefe Final**.
+  - CSS: círculo de 52 → **68 px** con la ilustración dentro, y el número pasó a una
+    **insignia** (`.cn-badge`) que muestra número / ✓ / 🔒 según el estado. El gris de
+    bloqueado se aplica solo a la ilustración, no a la insignia.
+  - **Verificado en el navegador:** las 3 campañas (Historia 7 nodos, Ciencias 5,
+    Lenguaje 5) cargan sus 17 imágenes sin caer al respaldo; los tres estados se ven
+    correctos (completado verde con ✓, jugable violeta con número, bloqueado en gris con
+    🔒). Sin errores de consola. Nota: el panel del navegador se cerró a mitad de la
+    verificación, así que la comprobación final fue por DOM y estilos calculados, no por
+    captura de pantalla.
+- **Pendientes:** dar la vuelta manual y decidir el paso a **v1**; decidir qué hacer con
+  los ~22 MB de originales en el repositorio y con el huérfano
+  `assets/portada-mate-algebra.png` (la expedición de álgebra se eliminó en la v0.99);
+  y los de siempre (duelo en 2 celulares, notificaciones push, ranking real, limpiar
+  perfiles de prueba en Supabase).

@@ -32,8 +32,8 @@ en GitHub Pages (ver la URL en la configuración del repositorio, sección *Page
 
 ## Estado
 
-Versión **v0**: prototipo funcional. El objetivo inmediato es verlo funcionar y
-que sea visualmente atractivo. Login, multiusuario y modelo de negocio quedan
+Versión **v0.99**: completo y jugable de punta a punta, en vuelta de revisión
+manual antes de coronar la v1. Login, multiusuario y modelo de negocio quedan
 para más adelante.
 
 Consulta [CLAUDE.md](CLAUDE.md) para el detalle de decisiones de diseño y el
