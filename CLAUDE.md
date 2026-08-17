@@ -717,6 +717,25 @@ Se completaron los tres pendientes que quedaron de la Sesión 2:
     Historia → seleccionar un mapa (queda marcado) → "← Materias" vuelve a las 4
     asignaturas. Sin errores de consola (los 404 son los fallbacks benignos de
     portadas de capítulo y audio).
+- **Duelo · Matemáticas ahora muestra el Reto de Cálculo (no "Álgebra y funciones"):**
+  a pedido de Roberto, en el duelo Matemáticas debía verse **igual que su mapa** del
+  juego principal (los niveles del Reto de Cálculo), no la vieja expedición de álgebra.
+  Ahora el nivel 2 de Matemáticas lista los **5 niveles** del Reto (🔥 Calentamiento,
+  ➖ Enteros, √ Potencias y raíces, ½ Fracciones y %, ⚡ Reto Relámpago) con su ícono
+  emoji, mismo estilo que `renderNivelesCalc`. Al elegir uno, el duelo **genera 8
+  operaciones al vuelo** con `genCalculo` (dificultad `RC_BASE[i]+1`), sin repetir, y
+  las convierte al formato del duelo (`{pregunta, opciones, correcta, tip}`). Como el
+  duelo asíncrono guarda las preguntas generadas, el rival recibe **las mismas
+  operaciones**.
+  - **Implementación** (`index.html`): helpers `odMapasMate()` (arma los niveles como
+    "mapas" del duelo), `odNMapas(asig)` (conteo para el nivel 1) y `odPreguntasCalc(exp)`
+    (genera las 8 operaciones); `renderODExpMapas` pinta ícono emoji para Matemáticas y
+    portada para el resto; `iniciarDesafio` toma la rama de cálculo (sin `cargarPool`)
+    cuando el mapa elegido trae `calc`. CSS nuevo `.od-exp-ic` (caja del emoji, 38×38).
+  - **Alcance:** solo los 5 niveles (no el Jefe "El Autómata" ni el Modo Sin Fin, que no
+    encajan en el formato de duelo de 8 preguntas). La expedición de álgebra deja de
+    aparecer en el duelo. Verificado en el navegador (respuestas correctas, índices
+    válidos, otras asignaturas intactas, sin errores de consola).
 - **Pendientes:** sin cambios respecto a la Sesión 15 (convertir Lenguaje en campaña;
   villano + skin por asignatura; portadas propias de capítulos de Ciencias; duelo en 2
   celulares; notificaciones push y ranking real; limpiar perfiles de prueba en Supabase;
