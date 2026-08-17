@@ -232,6 +232,7 @@ input.nm:focus{border-color:var(--cyan)}
 .od-exp button img{width:38px;height:38px;border-radius:9px;object-fit:cover}
 .od-exp button .od-exp-tx{display:flex;flex-direction:column;line-height:1.2}
 .od-exp button .od-exp-tx small{font-weight:800;font-size:11px;color:var(--dim)}
+.od-exp button.od-exp-volver{justify-content:center;color:var(--cyan);border-style:dashed;background:#00000018}
 .od-reloj{text-align:center;font-weight:900;color:var(--pink);font-size:14px;margin-bottom:8px}
 /* ===== RETO DE CÁLCULO ===== */
 .calc-top{display:flex;align-items:center;gap:10px;margin:14px 0 8px}
@@ -1831,11 +1832,25 @@ function restante(expira){const ms=new Date(expira)-new Date();if(ms<=0)return '
 function odPreguntas(exp){let all=[],seen=new Set();
  exp.etapas.forEach(e=>{const oas=e.oas||(e.oa&&e.oa!=='BOSS'?[e.oa]:[]);oas.forEach(oa=>(POOL[oa]||[]).forEach(q=>{if(!seen.has(q.pregunta)){seen.add(q.pregunta);all.push(q);}}));});
  return pickN(all,8).map(q=>({pregunta:q.pregunta,opciones:q.opciones,correcta:q.correcta,tip:q.tip}));}
+function odExpsDe(asig){return EXPEDICIONES.filter(e=>e.activa&&e.asignatura===asig);}
+// NIVEL 1 (duelo): un módulo por asignatura; al tocarlo se abren sus mapas.
 function renderODExp(){const cont=$('odExpSel');cont.innerHTML='';OD_EXP_SEL=null;
- EXPEDICIONES.filter(e=>e.activa).forEach((e,i)=>{const b=document.createElement('button');
-  b.innerHTML=`<img src="${e.portada}" alt=""><span class="od-exp-tx"><b>${nombreMapa(e)}</b><small>${e.asignatura}</small></span>`;
+ ORDEN_ASIG.forEach(asig=>{const exps=odExpsDe(asig);if(!exps.length)return;
+  const b=document.createElement('button');
+  const portada=ASIG_PORTADA[asig]||exps[0].portada;
+  b.innerHTML=`<img src="${portada}" alt=""><span class="od-exp-tx"><b>${asig}</b><small>${exps.length} ${exps.length===1?'mapa':'mapas'}</small></span>`;
+  b.onclick=()=>{SND.tap();renderODExpMapas(asig);};
+  cont.appendChild(b);});}
+// NIVEL 2 (duelo): los mapas de una asignatura, con "volver" a materias.
+function renderODExpMapas(asig){const cont=$('odExpSel');cont.innerHTML='';
+ const volver=document.createElement('button');volver.className='od-exp-volver';
+ volver.innerHTML=`<span class="od-exp-tx"><b>← Materias</b></span>`;
+ volver.onclick=()=>{SND.tap();renderODExp();};cont.appendChild(volver);
+ odExpsDe(asig).forEach(e=>{const b=document.createElement('button');
+  b.innerHTML=`<img src="${portadaMapa(e)}" alt="" onerror="this.onerror=null;this.src='${portadaFallback(e)}'"><span class="od-exp-tx"><b>${nombreMapa(e)}</b><small>${e.asignatura}</small></span>`;
   b.onclick=()=>{SND.tap();cont.querySelectorAll('button').forEach(x=>x.classList.remove('sel'));b.classList.add('sel');OD_EXP_SEL=e;};
-  if(i===0){b.classList.add('sel');OD_EXP_SEL=e;}cont.appendChild(b);});}
+  if(OD_EXP_SEL&&OD_EXP_SEL.id===e.id)b.classList.add('sel');
+  cont.appendChild(b);});}
 function abrirCrearDesafio(){renderODExp();$('odCodigo').value='';$('odSetupErr').textContent='';cargarJugadores();go('scr-od-setup');}
 async function cargarJugadores(){
  const cont=$('odJugadores');cont.innerHTML='<p style="color:var(--dim);font-weight:800;font-size:13px">Cargando…</p>';
@@ -1851,6 +1866,7 @@ async function cargarJugadores(){
 }
 async function iniciarDesafio(){
  const codigo=$('odCodigo').value.trim().toUpperCase();$('odSetupErr').textContent='';
+ if(!OD_EXP_SEL){$('odSetupErr').textContent='Elige una expedición primero.';return;}
  if(!/^KIM-[A-Z0-9]{4}$/.test(codigo)){$('odSetupErr').textContent='Código inválido (ej: KIM-AB12).';return;}
  try{const {data,error}=await SB.rpc('kimun_buscar',{p_codigo:codigo});if(error)throw error;
   if(!data||!data.length){$('odSetupErr').textContent='No existe un jugador con ese código.';return;}

@@ -691,3 +691,33 @@ Se completaron los tres pendientes que quedaron de la Sesión 2:
   portadas propias de los capítulos de Ciencias (opcional); duelo en 2 celulares,
   notificaciones push y ranking real, limpiar perfiles de prueba en Supabase.
   Recordatorio: quitar el `libre:true` de "El mundo colonial" al terminar las pruebas.
+
+### Sesión 16 (2026-08-16)
+- **Sincronización (orden 99):** `git pull` de `main` — ya estaba al día (nada nuevo
+  que traer desde el otro PC).
+- **Duelo 1v1 · "Elige la expedición" en 2 niveles (como la pantalla principal):**
+  antes el selector del duelo mostraba **todas** las expediciones activas en una lista
+  plana (13 opciones: 6 capítulos de Historia, álgebra, 4 de Ciencias, 2 de Lenguaje),
+  difícil de recorrer. Ahora es de **2 niveles**: **nivel 1** = un módulo por asignatura
+  (Historia · 6 mapas, Matemáticas · 1 mapa, Ciencias · 4 mapas, Lenguaje · 2 mapas);
+  al tocar uno se abren sus mapas (**nivel 2**), cada uno seleccionable, con botón
+  **"← Materias"** para volver. Todo dentro del mismo contenedor `#odExpSel` (sin
+  pantallas nuevas).
+  - **Implementación** (`index.html`): se reescribió `renderODExp()` (nivel 1) y se
+    agregó `renderODExpMapas(asig)` (nivel 2) + helper `odExpsDe(asig)`. Reutiliza
+    `ORDEN_ASIG`, `ASIG_PORTADA`, `nombreMapa`, `portadaMapa`/`portadaFallback`
+    (portada propia por mapa con fallback a la de la asignatura), igual que la pantalla
+    principal. Nota: en el duelo, **Matemáticas** usa su expedición de álgebra (no el
+    Reto de Cálculo), coherente con que el banco de álgebra vive en el Duelo.
+  - Como ya **no viene nada preseleccionado**, se agregó una validación en
+    `iniciarDesafio`: si no hay expedición elegida, muestra *"Elige una expedición
+    primero."* en vez de fallar. CSS nuevo para el botón `.od-exp-volver` (punteado,
+    cian).
+  - Verificado en el navegador (`preview_start` + `javascript_tool`): nivel 1 → abrir
+    Historia → seleccionar un mapa (queda marcado) → "← Materias" vuelve a las 4
+    asignaturas. Sin errores de consola (los 404 son los fallbacks benignos de
+    portadas de capítulo y audio).
+- **Pendientes:** sin cambios respecto a la Sesión 15 (convertir Lenguaje en campaña;
+  villano + skin por asignatura; portadas propias de capítulos de Ciencias; duelo en 2
+  celulares; notificaciones push y ranking real; limpiar perfiles de prueba en Supabase;
+  quitar `libre:true` de "El mundo colonial" al terminar las pruebas).
