@@ -204,6 +204,46 @@ enunciado y la respuesta correcta).
 **Para probar en local** (el navegador necesita servidor, no `file://` para el
 JavaScript): `python -m http.server 8765` y abrir `http://localhost:8765/`.
 
+### Cursos y ranking real (Sesión 19)
+
+El ranking del curso **ya no es simulado**: muestra a los alumnos reales del curso
+del jugador, ordenados por XP, con datos de Supabase.
+
+**Administrar cursos (adulto):** Inicio → **Modo Admin** → contraseña → **Cursos**.
+Desde ahí se crea un curso (genera un código `CUR-XXXX`), se inscriben alumnos por
+nombre (cada uno recibe un código `ALU-XXXXXXXX`), se ve el XP de cada uno y se
+eliminan. Ya no hace falta entrar a Supabase para nada de esto. La primera entrada
+puede tardar varios segundos porque incluye el login anónimo.
+
+**Cómo entra un alumno:** Inicio → **"🎟️ Tengo un código"** → escribe su `ALU-`.
+Queda vinculado a ese perfil en ese aparato, y puede repetirlo en otro para jugar
+desde varios equipos. Si borra los datos del navegador, vuelve a canjear el mismo
+código y recupera su lugar.
+
+**La contraseña del Modo Admin** vive ahora en la tabla `config` de Supabase,
+guardada con hash (bcrypt), no en el JavaScript. Se cambia con:
+
+    update public.config set valor = crypt('<clave nueva>', gen_salt('bf', 10))
+    where clave='admin_clave';
+
+Si nunca se fija, el panel queda **cerrado** (la semilla es aleatoria), que es el
+comportamiento seguro. Ojo: esta clave es distinta de la del tablero de avance
+(`CLAVE_ADMIN` en `generar-tablero.py`).
+
+**Identidad:** la tabla `vinculos` separa la sesión anónima del dispositivo del
+perfil del alumno. Por eso un mismo alumno puede jugar en el celular y en el
+tablet sin duplicarse. Todas las funciones que antes asumían `auth.uid()` como
+identidad del jugador ahora resuelven el perfil con `kimun_yo()`.
+
+**Límites conocidos:** el XP lo reporta el teléfono, así que puede falsearse; para
+eso existe `kimun_admin_xp_fijar`, que permite al adulto corregirlo (el teléfono
+adopta el valor del servidor cuando es menor). El progreso de campañas y las skins
+siguen siendo del aparato, no del alumno: en un tablet compartido, dos hermanos
+comparten avance aunque tengan XP distinto en el ranking.
+
+Diseño y plan: `docs/superpowers/specs/2026-08-17-cursos-ranking-real-design.md` y
+`docs/superpowers/plans/2026-08-17-cursos-ranking-real.md`.
+
 ### Consolidar el pool de preguntas (`scripts/consolidar-pool.py`)
 
 Une los archivos verificados, elimina duplicados, **baraja las opciones** (evita
@@ -245,9 +285,10 @@ el sesgo de posición), asigna IDs por OA y escribe `preguntas.json`.
 
 ## Backend (Supabase)
 
-El **duelo 1v1 en línea** usa Supabase (proyecto en São Paulo). Esquema y funciones
-en `supabase/schema.sql` (pegar en el SQL Editor). Requiere activar el **login
-anónimo** en Authentication → Sign In / Providers.
+El **duelo 1v1 en línea** y el **ranking por curso** usan Supabase (proyecto en São
+Paulo). Esquema y funciones en `supabase/schema.sql` (pegar el archivo **completo** en
+el SQL Editor; es idempotente y se puede re-ejecutar sin dañar los datos). Requiere
+activar el **login anónimo** en Authentication → Sign In / Providers.
 
 - **Identidad sin contraseñas:** login anónimo → cada dispositivo es un usuario;
   perfil con `nombre`, `avatar` y **código de amigo** (`KIM-XXXX`).
@@ -255,9 +296,18 @@ anónimo** en Authentication → Sign In / Providers.
   **bots** (Vale/Nico/Fran/Diego) el resultado es **instantáneo**; contra
   **jugadores reales** es **asíncrono (24h)** y el puntaje del retador queda
   **oculto** hasta que el rival juega (funciones `SECURITY DEFINER`).
-- **Seguridad:** RLS activo; a `duelos` solo se accede vía funciones RPC. La
-  publishable key va en `index.html` (es pública por diseño; no es secreta).
-- **Pendiente:** notificaciones push y ranking real (los datos ya se guardan).
+- **Seguridad:** RLS activo y **sin políticas de lectura**: ninguna tabla se consulta
+  directo, todo pasa por funciones `SECURITY DEFINER`. Esto es importante desde la
+  Sesión 19: `perfiles` guarda el `codigo_acceso` de cada alumno, que es su credencial,
+  así que dejarla legible expondría los códigos de todos. La publishable key va en
+  `index.html` (es pública por diseño; no es secreta).
+- **Cursos y ranking (Sesión 19):** tablas `cursos`, `vinculos` y `config`; funciones
+  `kimun_yo`, `kimun_xp`, `kimun_ranking`, `kimun_canjear` y las de administración.
+  Ver "Cursos y ranking real" en Herramientas de desarrollo.
+- **Cuidado al editar el esquema:** las funciones que usan pgcrypto (`crypt`, `gen_salt`)
+  necesitan `set search_path = public, extensions`, porque en Supabase esa extensión no
+  vive en `public`. `gen_random_uuid()` no lo necesita: es nativa de PostgreSQL.
+- **Pendiente:** notificaciones push.
 
 ## Bitácora de sesiones
 
@@ -869,3 +919,60 @@ dar una vuelta manual antes de la v1. Todo verificado en el navegador, sin error
   `assets/portada-mate-algebra.png` (la expedición de álgebra se eliminó en la v0.99);
   y los de siempre (duelo en 2 celulares, notificaciones push, ranking real, limpiar
   perfiles de prueba en Supabase).
+
+### Sesión 19 (2026-08-17) — Cursos y ranking real
+Cierra el pendiente más antiguo del proyecto: el ranking dejó de ser simulado. Se hizo con
+el flujo completo brainstorming → diseño aprobado → plan → ejecución por subagentes, con dos
+revisiones independientes del SQL. Diseño y plan en `docs/superpowers/`.
+- **El problema de fondo no era el ranking, sino la identidad.** `renderRanking` inventaba
+  cuatro nombres fijos, pero además Supabase no guardaba XP y **un jugador solo existía en el
+  servidor si entraba al Duelo en línea**. Y la identidad era anónima por dispositivo: al
+  limpiar el navegador se perdía todo. Por eso la feature terminó siendo "cursos + identidad
+  + ranking", no solo el ranking.
+- **Decisiones (Roberto):** el ranking mide **XP total**; se compite **por curso**; los cursos
+  y alumnos los crea **el adulto desde el Modo Admin**; cada alumno entra con un **código de
+  acceso** que lo vincula a su perfil en cualquier aparato.
+- **Backend (`supabase/schema.sql`):** tablas `cursos`, `vinculos` y `config`; columnas `xp`,
+  `curso_id` y `codigo_acceso` en `perfiles`. La tabla **`vinculos` separa la sesión anónima
+  del dispositivo del perfil del alumno** — esa es la pieza que permite jugar en el celular y
+  en el tablet sin duplicarse. Helper `kimun_yo()` y adaptación de las 6 funciones de duelo
+  que asumían `auth.uid()`. Funciones nuevas: `kimun_xp`, `kimun_ranking`, `kimun_canjear` y
+  cinco de administración.
+- **Juego (`index.html`):** el perfil se crea **al abrir el juego** (antes solo en el duelo);
+  pantalla de canje "🎟️ Tengo un código"; sincronización del XP enganchada a `guardar()` con
+  un límite de 15 s; `renderRanking` reescrita con **tres estados** (con curso, sin curso, sin
+  conexión) y caché; y **panel de administración de cursos** dentro del juego (`scr-admin`),
+  de modo que ya no hace falta entrar a Supabase para inscribir alumnos.
+- **Hallazgos de las revisiones (lo más valioso de la sesión).** El plan original tenía
+  defectos que solo aparecieron al revisarlo:
+  - **La política RLS de `perfiles` dejaba la tabla legible.** Al agregarle `codigo_acceso`,
+    los códigos de todos los alumnos habrían quedado a la vista de cualquiera que abriera la
+    consola. Se eliminó la política: ahora nada se lee directo.
+  - **La clave de administración por defecto era explotable** (quedaba escrita en el
+    repositorio). Ahora nace aleatoria y se guarda con hash bcrypt.
+  - **PostgreSQL otorga EXECUTE a PUBLIC por defecto**: omitir una función del `grant` no la
+    protege. Hubo que revocar explícitamente `kimun_admin_ok` y los generadores de código.
+  - **pgcrypto vive en el esquema `extensions`, no en `public`** (particularidad de Supabase),
+    así que `crypt()` no se resolvía dentro de las funciones y el Modo Admin habría muerto con
+    un error indescifrable. `gen_random_uuid()` no sufre el problema porque es nativa de
+    PostgreSQL desde la versión 13.
+  - **`supabase-js` no lanza excepción cuando falla**: devuelve `{data, error}`. Tres
+    manejadores del panel ignoraban el error y fallaban en silencio.
+  - **El campo del código truncaba a 8 caracteres** cuando el código mide 12: el canje habría
+    sido imposible.
+  - **El XP corregido por el adulto se deshacía solo**, porque el teléfono volvía a enviar su
+    valor local. Ahora el cliente adopta el valor del servidor cuando es menor y lo guarda.
+- **Verificado con datos reales:** Roberto creó el curso "8vo csfs" con cuatro alumnos; el
+  canje funciona y el ranking los muestra ordenados. Regresiones probadas: el duelo contra
+  bots sigue operando con la identidad nueva, el juego no se rompe con Supabase caído, y un
+  jugador sin curso ve la invitación a pedir su código en vez de nombres falsos.
+- **Límites asumidos (documentados en el diseño):** el XP lo reporta el teléfono y puede
+  falsearse —por eso existe `kimun_admin_xp_fijar`—; el progreso de campañas y las skins
+  siguen siendo del aparato y no del alumno, así que en un tablet compartido dos hermanos
+  comparten avance aunque tengan XP distinto; y la clave de administración sigue siendo un
+  bloqueo suave, aunque ya no se puede leer del código fuente.
+- **Pendientes:** probar el canje en los teléfonos de los niños; **limpiar los perfiles de
+  prueba en Supabase** (la lista de rivales del duelo ya trae 18 entradas, casi todas de
+  pruebas); agregar al panel un botón para corregir el XP (la función existe, falta la
+  interfaz); dar la vuelta manual y decidir el paso a **v1**; los ~22 MB de originales y el
+  huérfano `portada-mate-algebra.png`; duelo en 2 celulares; notificaciones push.

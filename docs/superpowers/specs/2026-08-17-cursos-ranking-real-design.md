@@ -166,11 +166,15 @@ es lo que permite jugar en el celular y en el tablet.
 
 ## Limitaciones conocidas
 
-- **La clave de administración es un bloqueo suave**, igual que hoy en el tablero. El juego
-  es un sitio estático: quien sepa mirar el código fuente puede encontrarla y crear cursos.
-  Suficiente para un uso familiar o de un curso; no es seguridad real.
+- **La clave de administración es un bloqueo suave.** Quedó mejor de lo previsto en este
+  diseño: no vive en el JavaScript sino en la base de datos, guardada con hash, así que no
+  se puede leer del código fuente como ocurre hoy en el tablero. Aun así no es seguridad
+  fuerte: viaja desde el navegador y no hay límite de intentos. Suficiente para un uso
+  familiar o de un curso.
 - **El XP lo reporta el cliente**, así que puede falsearse editando el almacenamiento del
-  navegador. Verificarlo exigiría subir cada respuesta al servidor, mucho más trabajo.
+  navegador. Verificarlo exigiría subir cada respuesta al servidor, mucho más trabajo. Como
+  el XP es monótono, un valor inflado sería irreversible; por eso el adulto cuenta con
+  `kimun_admin_xp_fijar` para reajustar el XP de un alumno.
 - Los nombres de los alumnos quedan visibles para el resto de su curso. Son los nombres que
   el adulto escribe, así que puede usar solo el nombre de pila o un apodo.
 

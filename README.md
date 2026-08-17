@@ -12,7 +12,7 @@ desafiante y que genere comunidad entre compañeros.
 **Campaña Historia — 8° básico** (los 22 OA del año, en orden).
 
 Un juego tipo aventura con mapa de niveles, quiz con temporizador, combos, XP,
-monedas, estrellas, logros y ranking de curso. **Kimün**, el zorro mascota,
+monedas, estrellas, logros y **ranking real por curso**. **Kimün**, el zorro mascota,
 acompaña y reacciona a cada respuesta. Incluye **Modo Difícil** desbloqueable.
 
 La pantalla principal ofrece un **módulo por asignatura**. **Historia**, **Ciencias** y
@@ -24,6 +24,10 @@ asignatura tiene un banco de preguntas de año completo (todos sus OA del currí
 También hay **Duelo 1v1** en el mismo teléfono y en línea (Supabase), una **tienda de
 skins** (incluidas skins deportivas ilustradas) y una **intro de bienvenida** en video que
 se ve una vez. Todo en un solo archivo `index.html`, pensado para el celular.
+
+El **ranking es real y por curso**: un adulto crea el curso e inscribe a los alumnos desde
+el Modo Admin, y cada uno entra en su teléfono con un código de acceso. El XP se sincroniza
+con el servidor, así que los compañeros compiten con datos de verdad.
 
 ## Cómo probarlo
 

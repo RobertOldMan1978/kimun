@@ -403,13 +403,18 @@ Añadir al `grant execute` final:
 
 (`kimun_admin_ok` **no** se otorga: solo la usan las otras funciones.)
 
-- [ ] **Paso 3: Cambiar la clave real**
+- [ ] **Paso 3: Fijar la clave real**
 
-En el SQL Editor:
+La fila `admin_clave` nace con un valor aleatorio cifrado que nadie conoce, de modo que
+mientras no se fije una clave el Modo Admin queda **cerrado**, no abierto. Para fijar la
+propia, en el SQL Editor:
 
 ```sql
-update public.config set valor='<la clave que elija Roberto>' where clave='admin_clave';
+update public.config set valor = crypt('<la clave que elija Roberto>', gen_salt('bf'))
+where clave='admin_clave';
 ```
+
+La clave se guarda con hash (bcrypt), nunca en texto plano.
 
 - [ ] **Paso 4: Verificar la creación de un curso y un alumno**
 
@@ -551,7 +556,7 @@ Después de la sección `scr-rol`, agregar:
       <p style="color:var(--dim);font-weight:800;font-size:13px">
         Escribe el código que te dio tu profesor para entrar al ranking de tu curso.
       </p>
-      <input id="canjeCodigo" placeholder="ALU-XXXX" maxlength="8"
+      <input id="canjeCodigo" placeholder="ALU-XXXXXXXX" maxlength="12"
              style="width:100%;padding:12px;border-radius:12px;border:2px solid var(--violet);
                     background:#1a1440;color:#fff;font-weight:900;text-align:center;font-size:18px;margin:10px 0">
       <button class="btn" id="btnCanjeOk">Entrar</button>
@@ -598,6 +603,14 @@ $('btnCanjeOk').onclick=async ()=>{
 };
 ```
 
+> **Correcciones aplicadas durante la implementación.** El `maxlength` del campo era 8,
+> heredado de cuando el código de alumno tenía 4 caracteres; tras subirlo a 8 por seguridad,
+> el código completo mide 12 (`ALU-` + 8) y el campo lo truncaba, de modo que **el canje era
+> imposible**. Además, el canje ahora pone `_rankUlt=0` y limpia `kimun_rank`: sin eso, el
+> limitador de 30 segundos dejaba el ranking mostrando "Pide tu código…" durante medio
+> minuto después de un canje exitoso, y podía asomar por un instante el ranking del curso
+> anterior si el mismo teléfono canjeaba otro código.
+
 - [ ] **Paso 4: Verificar el caso correcto**
 
 Con el `ALU-XXXX` creado en la Tarea 4: abrir el juego → "Tengo un código" → escribirlo →
@@ -635,11 +648,24 @@ function sincronizarXP(){
  const espera = Math.max(0, 15000-(Date.now()-_xpUlt));
  _xpTimer=setTimeout(async ()=>{
   _xpTimer=null; _xpUlt=Date.now();
-  try{ await SB.rpc('kimun_xp',{p_xp:S.xp}); }
-  catch(e){ console.error('XP:',e.message||e); }   // best-effort: no interrumpe el juego
+  try{
+   const {data,error}=await SB.rpc('kimun_xp',{p_xp:S.xp});
+   if(error) throw error;
+   // El servidor manda: si el adulto corrigió un XP inflado, el teléfono lo adopta.
+   // Hay que guardar: si no, al reabrir el juego se volvería a enviar el XP viejo
+   // desde el disco y la corrección del adulto se desharía sola.
+   if(typeof data==='number' && data < S.xp){ S.xp=data; refreshHud(); guardar(); }
+  }catch(e){ console.error('XP:',e.message||e); }  // best-effort: no interrumpe el juego
  }, espera);
 }
 ```
+
+**Por qué el cliente adopta el valor del servidor:** `kimun_xp` es monótona, así que un XP
+inflado desde la consola sería permanente. El adulto puede corregirlo con
+`kimun_admin_xp_fijar`, pero si el teléfono siguiera enviando su XP local inflado, la
+corrección se revertiría en el siguiente envío. Adoptando el valor devuelto cuando es
+menor, el ajuste del adulto se propaga al teléfono. Esto no impide falsificar el XP —eso
+sigue siendo la limitación asumida en el diseño—, pero devuelve el control al adulto.
 
 - [ ] **Paso 2: Llamarlo desde un único punto**
 
@@ -874,6 +900,16 @@ $('btnAdmAlumno').onclick=async ()=>{
 };
 ```
 
+> **Corrección aplicada durante la implementación.** El código de `btnAdmCurso`,
+> `btnAdmAlumno` y el borrado con ✕ que aparece arriba tiene un defecto: `supabase-js`
+> **no lanza excepción** cuando la función SQL falla, devuelve `{data, error}`. Como esos
+> tres manejadores ignoraban el resultado, un código de curso mal escrito no mostraba
+> ningún error: el campo se limpiaba y el alumno no aparecía, sin explicación. La versión
+> implementada captura el error (`const {error}=await SB.rpc(...); if(error) throw error;`),
+> traduce los mensajes del backend (`clave_invalida`, `curso_invalido`, `nombre_vacio`,
+> `alumno_invalido`) a texto entendible en `admMsg`, y desactiva los botones mientras dura
+> la llamada, que puede tardar más de seis segundos.
+
 - [ ] **Paso 4: Verificar el flujo completo**
 
 Inicio → Modo Admin → clave correcta → crear "8° A" → agregar "Matías" con el `CUR-XXXX`
@@ -914,9 +950,19 @@ Esperado: resultado inmediato con ganador, sin errores en consola.
 
 - [ ] **Paso 2: Probar el juego sin Supabase**
 
-En consola: `SB = null; renderRanking(); go('scr-mapa');`
-Esperado: el juego navega normal; el ranking muestra el mensaje correspondiente y nada
-lanza excepción.
+`SB` es una constante, así que no se puede reasignar a null. Se simula la caída
+reemplazando su método:
+
+```js
+const rpcReal = SB.rpc.bind(SB);
+SB.rpc = () => Promise.reject(new Error('sin conexion simulada'));
+// recorrer ranking, guardar, expediciones, tienda, perfil y mapa
+SB.rpc = rpcReal;   // restaurar al terminar
+```
+
+Esperado: el juego navega normal; el ranking muestra "Sin conexión…" y nada lanza
+excepción. En la consola solo deben aparecer los `console.error` controlados
+(`Ranking:` y `XP:`).
 
 - [ ] **Paso 3: Probar un jugador nuevo sin curso**
 
@@ -940,6 +986,39 @@ git commit -m "Documentar cursos y ranking real"
 ```
 
 ---
+
+## Correcciones aplicadas a la Fase 1 tras la revisión de seguridad
+
+La revisión del SQL implementado encontró defectos que el plan original no contemplaba.
+Quedaron corregidos en `supabase/schema.sql` y se anotan aquí para que el documento no
+mienta respecto del código:
+
+| Corrección | Motivo |
+| --- | --- |
+| La clave de administración nace aleatoria y se guarda con bcrypt | El valor de relleno quedaba en un repositorio público: sin cambiarlo, cualquiera podía listar y borrar alumnos |
+| `revoke execute … from public` sobre `kimun_admin_ok` y los generadores de código | PostgreSQL otorga EXECUTE a PUBLIC por defecto: omitirlas del `grant` **no** las protegía, y `kimun_admin_ok` servía como oráculo para probar claves |
+| El código de alumno pasó a 8 caracteres | Con 4 eran 65.536 combinaciones: fuerza bruta en minutos sobre una función expuesta y sin límite de intentos |
+| `kimun_crear_duelo` lanza `sin_perfil` si no hay vínculo | Antes producía un error opaco de restricción `not null` |
+| `kimun_jugadores` solo lista bots y perfiles con vínculo activo | Tras el canje quedaban dos perfiles con el mismo nombre, y los duelos al perfil viejo no le llegaban a nadie |
+| Nueva `kimun_admin_xp_fijar(clave, codigo_acceso, xp)` | El XP es monótono: un XP inflado desde la consola era irreversible, incluso para el adulto |
+| La migración de vínculos filtra `codigo_acceso is null` | Al re-ejecutar el esquema creaba una fila basura por cada alumno inscrito |
+| `kimun_admin_alumno_quitar` devuelve el número de filas y lanza `alumno_invalido` | Un código mal escrito se veía igual que un borrado correcto |
+
+Una segunda revisión encontró además que `crypt()` no se resolvía dentro de las funciones:
+en Supabase pgcrypto vive en el esquema `extensions`, no en `public`, de modo que el
+`create extension` del archivo es un no-op y el `search_path` fijado a `public` dejaba la
+función sin encontrar. (`gen_random_uuid()` no sufre el problema porque desde PostgreSQL 13
+es nativa del núcleo.) Las funciones que usan pgcrypto declaran ahora
+`set search_path = public, extensions`.
+
+**Consecuencias para la Fase 2:**
+
+- `kimun_crear_duelo` puede devolver el error `sin_perfil`. La Tarea 5 ya conecta el perfil
+  al iniciar el juego, así que no debería ocurrir; si el manejo de errores del duelo muestra
+  el mensaje crudo, conviene traducirlo.
+- **Antes de canjear conviene no tener duelos pendientes.** Al canjear, el código de amigo
+  efectivo del jugador cambia, así que un duelo que estuviera esperando respuesta contra el
+  perfil anterior deja de verse y caduca a las 24 horas.
 
 ## Notas para quien ejecute
 
