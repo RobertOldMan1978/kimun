@@ -212,6 +212,7 @@ input.nm:focus{border-color:var(--cyan)}
 .shop-item.equipped{border-color:var(--green)}
 .shop-item .em{font-size:44px;line-height:1}
 .shop-item .price{font-weight:900;color:var(--gold);margin:6px 0}
+.shop-item .skin-name{font-weight:900;font-size:11px;color:var(--cyan);margin-top:4px;line-height:1.15;min-height:26px;display:flex;align-items:center;justify-content:center}
 .shop-item button{width:100%;padding:10px;border:none;border-radius:12px;font-family:'Nunito';font-weight:900;font-size:13px;cursor:pointer}
 .shop-item .buy{background:linear-gradient(180deg,var(--gold),#ff9d3c);color:#2a1400}
 .shop-item .equip{background:var(--panel2);color:var(--cyan);border:1px solid var(--cyan)}
@@ -410,6 +411,22 @@ body.jefe-hit{animation:jefeShake .26s}
 .rk .em img{width:24px;height:24px;object-fit:contain;vertical-align:middle}
 .jw-item .jw-ic img{width:40px;height:40px;object-fit:contain;vertical-align:middle;border-radius:8px}
 @media (prefers-reduced-motion: reduce){*{animation:none!important;transition:none!important}}
+/* Modo QA (solo con ?qa=1): resalta la respuesta correcta y muestra un aviso. */
+.qa-ok{outline:3px solid var(--green)!important;outline-offset:2px;position:relative}
+.qa-ok::after{content:"✓";position:absolute;top:2px;right:8px;color:var(--green);font-weight:900;font-size:15px;pointer-events:none}
+.qa-badge{position:fixed;top:8px;left:8px;z-index:99999;background:var(--green);color:#04231a;
+  font:900 12px/1 'Nunito',sans-serif;padding:7px 11px;border-radius:9px;box-shadow:0 3px 10px #0007;letter-spacing:.02em}
+/* Intro (video de bienvenida) */
+#introOverlay{position:fixed;inset:0;z-index:100000;background:#0a0716;display:flex;align-items:center;justify-content:center;transition:opacity .45s ease}
+#introOverlay.fade{opacity:0}
+#introOverlay video{max-width:100%;max-height:100%;object-fit:contain}
+#introSkip{position:fixed;bottom:20px;right:18px;z-index:100001;background:#ffffff1f;color:#fff;border:1.5px solid #ffffff55;
+  border-radius:999px;padding:9px 18px;font:900 13px/1 'Nunito',sans-serif;cursor:pointer;backdrop-filter:blur(4px)}
+#introSkip:hover{background:#ffffff33}
+#introTap{display:none;position:absolute;left:50%;bottom:16%;transform:translateX(-50%);z-index:100001;color:#fff;
+  font:900 16px/1 'Nunito',sans-serif;background:#ffffff1f;border:1.5px solid #ffffff66;border-radius:999px;
+  padding:12px 22px;backdrop-filter:blur(4px);animation:tapPulse 1.4s ease-in-out infinite}
+@keyframes tapPulse{0%,100%{opacity:.72}50%{opacity:1}}
 </style>
 </head>
 <body>
@@ -423,10 +440,17 @@ body.jefe-hit{animation:jefeShake .26s}
 <button class="sndbtn" id="musBtn" title="Música" style="right:58px">🎵</button>
 <button class="sndbtn" id="sndBtn" title="Sonido">🔊</button>
 
+<!-- Intro (se reproduce una vez por dispositivo, antes del menú) -->
+<div id="introOverlay">
+  <video id="introVid" src="assets/intro.mp4" playsinline preload="auto"></video>
+  <div id="introTap">▶ Toca para comenzar</div>
+  <button id="introSkip">Saltar ▸</button>
+</div>
+
 <div id="creditosModal" class="cred-modal" hidden>
   <div class="cred-box">
     <h2 class="disp" style="color:var(--gold);margin:0 0 6px">Créditos</h2>
-    <p><b>🎵 Música</b><br>Aventura, jefes y duelo: <b>Kevin MacLeod</b> (incompetech.com) · CC BY 4.0.<br>Menú: Pixabay Music.</p>
+    <p><b>🎵 Música</b><br>Intro ("Fanfare for Space"), aventura, jefes y duelo: <b>Kevin MacLeod</b> (incompetech.com) · CC BY.<br>Menú: Pixabay Music.</p>
     <p><b>🔤 Tipografías</b><br>Titan One y Nunito (Google Fonts · SIL Open Font License).</p>
     <p><b>📚 Contenido</b><br>Alineado al currículum del MINEDUC de Chile (curriculumnacional.cl).</p>
     <p><b>🎨 Ilustraciones</b><br>Creadas con inteligencia artificial.</p>
@@ -779,6 +803,11 @@ const AVATARES=["🦁","🐉","🦅","🐺","🦊","🤖","👽","🥷"];
      2) agrega su portada en assets/,
      3) añade aquí un objeto con sus etapas (cada etapa mapea un OA; el jefe mezcla varios).
    El motor NO cambia: lee todo desde estos datos, con progreso independiente por ruta. */
+/* ===== Modo QA (oculto): añade ?qa=1 a la URL para pruebas manuales. Marca la
+   respuesta correcta en todas las preguntas y desbloquea todos los capítulos y
+   jefes. No cambia nada en el juego normal (sin el parámetro). ===== */
+const QA=new URLSearchParams(location.search).has('qa');
+
 const EXPEDICIONES=[
  // --- Campaña Historia (capítulos = expediciones) ---
  { id:'hist-cap1', asignatura:'Historia', nivel:'8° Básico · Los inicios de la modernidad',
@@ -803,7 +832,7 @@ const EXPEDICIONES=[
    ]},
  { id:'hist-cap3', asignatura:'Historia', nivel:'8° Básico · El mundo colonial',
    portada:'assets/portada-historia.png', contenido:'contenido/historia-8basico/preguntas.json',
-   activa:true, campaña:'hist', libre:true,   // desbloqueado siempre (prueba con invitados)
+   activa:true, campaña:'hist',
    etapas:[
      {oa:"HI08 OA 09",nombre:"El barroco colonial",icono:"🎭",n:6},
      {oa:"HI08 OA 10",nombre:"Mercados y comercio atlántico",icono:"⛵",n:6},
@@ -839,15 +868,8 @@ const EXPEDICIONES=[
      {oa:"HI08 OA 22",nombre:"Desarrollo y regiones",icono:"📈",n:6},
      {oa:"BOSS",nombre:"⭐ DESAFÍO: Chile hoy",icono:"🌟",n:8,oas:["HI08 OA 20","HI08 OA 21","HI08 OA 22"]},
    ]},
- { id:'mate-algebra', asignatura:'Matemáticas', nivel:'8° Básico · Álgebra y funciones',
-   portada:'assets/portada-matematicas.png', contenido:'contenido/matematicas-8basico/preguntas.json', activa:true,
-   etapas:[
-     {oa:"MA08 OA 06", nombre:"Operaciones algebraicas", icono:"➕", n:6},
-     {oa:"MA08 OA 07", nombre:"Función lineal", icono:"📈", n:6},
-     {oa:"MA08 OA 08", nombre:"Ecuaciones lineales", icono:"⚖️", n:6},
-     {oa:"MA08 OA 09", nombre:"Inecuaciones", icono:"📉", n:6},
-     {oa:"BOSS", nombre:"⚡ JEFE: Álgebra y funciones", icono:"🧮", n:8, oas:["MA08 OA 06","MA08 OA 07","MA08 OA 08","MA08 OA 09"]},
-   ]},
+ // Nota: el banco de Álgebra (contenido/matematicas-8basico) queda de reserva; en el
+ // juego Matemáticas se juega como Reto de Cálculo (procedural), no como expedición.
  // --- Campaña Ciencias (capítulos = las 4 unidades del año) ---
  { id:'cien-celula', asignatura:'Ciencias', nivel:'8° Básico · La célula',
    portada:'assets/portada-ciencias.png', contenido:'contenido/ciencias-8basico/preguntas.json', activa:true, campaña:'cien',
@@ -1215,8 +1237,8 @@ const RC_JEFE_VIDA=15, RC_JEFE_COR=3;
 let RC={modo:'nivel', nivel:0, etapa:0, cat:'calent', ops:[], idx:0, aciertos:0, combo:0, comboMax:0, timer:null, lock:false, tMax:10, vida:0, corazones:0, racha:0};
 
 function calcEstado(){ if(!S.calc||!Array.isArray(S.calc.etapas))S.calc={etapas:[0,0,0,0,0],jefe:false,record:0}; return S.calc; }
-function nivelCalcDesbloqueado(i){ if(i===0)return true; return calcEstado().etapas[i-1]>=1; }
-function jefeCalcDesbloqueado(){ return calcEstado().etapas.every(e=>e>=RC_ETAPAS); }
+function nivelCalcDesbloqueado(i){ if(QA)return true; if(i===0)return true; return calcEstado().etapas[i-1]>=1; }
+function jefeCalcDesbloqueado(){ return QA||calcEstado().etapas.every(e=>e>=RC_ETAPAS); }
 function calcTiempo(dif){ return dif>=5?6:dif>=4?7:dif>=3?8:10; }
 function abrirRetoCalculo(){ renderNivelesCalc(); go('scr-calc-mapa'); }
 function renderNivelesCalc(){
@@ -1268,7 +1290,7 @@ function pintaOpCalc(){
  $('calcCombo').textContent=RC.combo>=2?('🔥 COMBO x'+RC.combo):'';
  $('calcPreg').textContent=o.pregunta;
  const cont=$('calcOpts'); cont.innerHTML='';
- o.opciones.forEach((op,i)=>{const b=document.createElement('button');b.textContent=op;b.onclick=()=>responderCalc(i,b);cont.appendChild(b);});
+ o.opciones.forEach((op,i)=>{const b=document.createElement('button');b.textContent=op;if(QA&&i===o.ok)b.classList.add('qa-ok');b.onclick=()=>responderCalc(i,b);cont.appendChild(b);});
  const tf=$('calcTimerFill'), bar=tf.parentElement; bar.classList.remove('low'); tf.style.width='100%';
  const t0=Date.now(), tMax=RC.tMax;
  RC.timer=setInterval(()=>{ const rest=Math.max(0,tMax-(Date.now()-t0)/1000);
@@ -1380,14 +1402,15 @@ function expedicionCompleta(id){
 function capsCompletos(camp){return camp.capitulos.filter(expedicionCompleta).length;}
 // ¿está desbloqueado el capítulo i de la campaña? (cap 1 siempre; cap N tras vencer N-1)
 function nodoCampDesbloqueado(camp,i){
+ if(QA)return true;
  if(i===0)return true;
  const exp=EXPEDICIONES.find(e=>e.id===camp.capitulos[i]);
  if(exp&&exp.libre)return true;   // capítulo marcado como libre (siempre abierto)
  if(i<camp.capitulos.length)return expedicionCompleta(camp.capitulos[i-1]);
  return false;
 }
-function desafioDesbloqueado(camp){return camp.capitulos.every(expedicionCompleta);}
-function jefeFinalDesbloqueado(camp){return desafioDesbloqueado(camp)&&(!camp.desafioExtra||expedicionCompleta(camp.desafioExtra));}
+function desafioDesbloqueado(camp){return QA||camp.capitulos.every(expedicionCompleta);}
+function jefeFinalDesbloqueado(camp){return QA||(desafioDesbloqueado(camp)&&(!camp.desafioExtra||expedicionCompleta(camp.desafioExtra)));}
 function campañaCompleta(camp){return S.campañasCompletas.has(camp.id);}
 /* Activa una expedición: fija etapas, carga su pool y apunta el progreso a esa ruta */
 function activarExpedicion(exp){
@@ -1452,11 +1475,19 @@ async function conectarKimun(){
 }
 
 /* ================= TIENDA DE SKINS ================= */
-const SKINS=[{e:"🐲",p:60},{e:"🦄",p:70},{e:"🦖",p:80},{e:"🐙",p:50},{e:"🦉",p:40},{e:"🚀",p:90},{e:"🧙",p:100},{e:"👑",p:150},
- {e:"🌠",img:'assets/skin-kimun-astronauta.png',nombre:'Kimün Astronauta',p:120},
- {e:"🪄",img:'assets/skin-kimun-mago.png',nombre:'Kimün Mago',p:130},
- {e:"🥷",img:'assets/skin-kimun-ninja.png',nombre:'Kimün Ninja',p:140},
- {e:"🦸",img:'assets/skin-kimun-superheroe.png',nombre:'Kimün Superhéroe',p:160},
+const SKINS=[{e:"🐲",p:120},{e:"🦄",p:150},{e:"🦖",p:180},{e:"🐙",p:100},{e:"🦉",p:80},{e:"🚀",p:220},{e:"🧙",p:260},{e:"👑",p:350},
+ {e:"🌠",img:'assets/skin-kimun-astronauta.png',nombre:'Kimün Astronauta',p:450},
+ {e:"🪄",img:'assets/skin-kimun-mago.png',nombre:'Kimün Mago',p:550},
+ {e:"🥷",img:'assets/skin-kimun-ninja.png',nombre:'Kimün Ninja',p:700},
+ {e:"🦸",img:'assets/skin-kimun-superheroe.png',nombre:'Kimün Superhéroe',p:900},
+ // Skins deportivas (premium, ilustradas · lote 5).
+ {e:"🥋",img:'assets/skin-kimun-karate.png',nombre:'Kimün Karateka',p:320},
+ {e:"⚽",img:'assets/skin-kimun-futbol.png',nombre:'Kimün Futbolista',p:360},
+ {e:"🏀",img:'assets/skin-kimun-basquetbol.png',nombre:'Kimün Basquetbolista',p:400},
+ {e:"🏐",img:'assets/skin-kimun-voleibol.png',nombre:'Kimün Voleibolista',p:440},
+ {e:"🚴",img:'assets/skin-kimun-ciclismo.png',nombre:'Kimün Ciclista',p:480},
+ {e:"🎾",img:'assets/skin-kimun-tenis.png',nombre:'Kimün Tenista',p:520},
+ {e:"🛹",img:'assets/skin-kimun-skate.png',nombre:'Kimün Skater',p:560},
  // Skin exclusiva de recompensa: visible pero bloqueada; se desbloquea al vencer al Jefe Final de Historia.
  // Marcador de arte: emoji 🎓 hasta que exista assets/kimun-historiador.png.
  {id:'kimun-historiador', e:"🎓", img:'assets/kimun-historiador.png', nombre:'Kimün Historiador', bloqueada:true, desbloqueaCon:'hist', req:'Vence a Historia'},
@@ -1485,7 +1516,8 @@ function renderTienda(){
   else if(owned)btn='<button class="equip">Equipar</button>';
   else btn=`<button class="buy"${S.monedas<sk.p?' disabled':''}>Comprar 🪙${sk.p}</button>`;
   const precio=owned?'<div class="price" style="color:var(--green)">Tuyo</div>':`<div class="price">🪙 ${sk.p}</div>`;
-  it.innerHTML=`<div class="em">${em}</div>`+precio+btn;
+  const nombreHtml=sk.nombre?`<div class="skin-name">${sk.nombre}</div>`:'';
+  it.innerHTML=`<div class="em">${em}</div>`+nombreHtml+precio+btn;
   const b=it.querySelector('button');
   if(b&&!equipped)b.onclick=()=>{
    if(owned){S.avatar=sk.e;SND.tap();}
@@ -1737,6 +1769,7 @@ function renderJefePregunta(){
  const ops=cont.querySelector('#jfOpts');
  orden.forEach((it,k)=>{const b=document.createElement('div');b.className='opt';
   if(it.i===p.ok)b.dataset.correcta='1';
+  if(QA&&it.i===p.ok)b.classList.add('qa-ok');
   b.innerHTML=`<span class="key">${'ABCD'[k]}</span>${it.o}`;
   b.onclick=()=>responderJefe(b,it.i===p.ok);ops.appendChild(b);});
  JF.lock=false;
@@ -1947,6 +1980,7 @@ function odPinta(){
  const orden=P.opciones.map((o,i)=>({o,i})).sort(()=>Math.random()-.5);
  const box=$('odOpts');box.innerHTML='';
  orden.forEach((it,k)=>{const b=document.createElement('div');b.className='opt';
+  if(QA&&it.i===P.correcta)b.classList.add('qa-ok');
   b.innerHTML=`<span class="key">${'ABCD'[k]}</span>${it.o}`;b.onclick=()=>odResponder(b,it.i===P.correcta);box.appendChild(b);});
  clearInterval(OD.timer);OD.t=15;$('odTimer').textContent=OD.t;$('odTimer').className='timer';
  OD.timer=setInterval(()=>{OD.t--;$('odTimer').textContent=OD.t;if(OD.t<=5){$('odTimer').classList.add('low');if(OD.t>0)SND.tick();}
@@ -2121,6 +2155,7 @@ function pintaPregunta(){
  orden.forEach((it,k)=>{
   const b=document.createElement('div');b.className='opt';
   if(it.i===P.ok)b.dataset.correcta='1';
+  if(QA&&it.i===P.ok)b.classList.add('qa-ok');
   b.innerHTML=`<span class="key">${'ABCD'[k]}</span>${it.o}`;
   b.onclick=e=>responder(b,it.i===P.ok,P,e);
   $('qOpts').appendChild(b);});
@@ -2210,6 +2245,34 @@ function terminarNivel(){
  if(paso)particulas(window.innerWidth/2,window.innerHeight/3,['🎉','⭐','✨','🎊'],24);
  go('scr-res');
 }
+/* Aviso visible del modo QA (solo con ?qa=1). */
+if(QA){const b=document.createElement('div');b.className='qa-badge';b.textContent='🧪 QA · respuestas marcadas · todo desbloqueado';document.body.appendChild(b);}
+
+/* Intro de bienvenida: se ve una sola vez por dispositivo. ?intro=1 la fuerza a repetirse.
+   Intenta reproducir CON sonido; si el navegador bloquea el autoplay, pide un toque. */
+(function(){
+ const ov=$('introOverlay'); if(!ov) return;
+ const vid=$('introVid'), skip=$('introSkip'), tap=$('introTap');
+ const forzar=new URLSearchParams(location.search).has('intro');
+ const visto=localStorage.getItem('kimun_intro');
+ const reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+ if(!forzar && (visto || reduce)){ ov.remove(); return; }   // ya se vio o se prefiere sin animación
+ try{ localStorage.setItem('kimun_intro','1'); }catch(e){}
+ let cerrado=false, guard=null;
+ function ocultar(){ if(cerrado) return; cerrado=true; clearTimeout(guard); try{vid.pause();}catch(e){}
+  ov.classList.add('fade'); setTimeout(()=>ov.remove(),480); }
+ skip.onclick=ocultar;
+ vid.addEventListener('ended',ocultar);
+ vid.addEventListener('playing',()=>{ clearTimeout(guard); guard=setTimeout(ocultar,13000); },{once:true}); // salvaguarda desde que arranca (video ~11s)
+ function intentar(){ if(tap)tap.style.display='none'; vid.muted=false;
+  const p=vid.play();
+  if(p&&p.catch)p.catch(()=>{                                // autoplay con sonido bloqueado → pedir un toque
+    if(tap)tap.style.display='block';
+    ov.addEventListener('pointerdown',function h(){ ov.removeEventListener('pointerdown',h); intentar(); },{once:true});
+  });
+ }
+ intentar();
+})();
 </script>
 </body>
 </html>

@@ -4,6 +4,9 @@ Plataforma de juegos educativos para escolares chilenos, alineada al currículum
 del Ministerio de Educación de Chile. La idea: que estudiar sea entretenido,
 desafiante y que genere comunidad entre compañeros.
 
+> **Estado: v0.99** — completo y jugable de punta a punta (4 asignaturas con campaña
+> y jefe final), en revisión antes de la v1.
+
 ## Piloto actual
 
 **Campaña Historia — 8° básico** (los 22 OA del año, en orden).
@@ -18,8 +21,9 @@ todos los OA del año, con **Jefe Final multi-fase** (barra de vida, 3 corazones
 **recompensas** (skin exclusiva, insignia coleccionable, corona y bono). **Matemáticas** es
 un **Reto de Cálculo** (cálculo mental rápido, por niveles) con su propio Jefe Final. Cada
 asignatura tiene un banco de preguntas de año completo (todos sus OA del currículum).
-También hay **Duelo 1v1** en el mismo teléfono y en línea (Supabase). Todo en un solo
-archivo `index.html`, pensado para el celular.
+También hay **Duelo 1v1** en el mismo teléfono y en línea (Supabase), una **tienda de
+skins** (incluidas skins deportivas ilustradas) y una **intro de bienvenida** en video que
+se ve una vez. Todo en un solo archivo `index.html`, pensado para el celular.
 
 ## Cómo probarlo
 

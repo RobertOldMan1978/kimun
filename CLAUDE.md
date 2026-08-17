@@ -22,11 +22,17 @@ mismo motor de juego.
 
 ## Estado actual
 
-Publicado en GitHub Pages y en prueba real. Un `index.html` mobile-first +
-contenido en JSON (`contenido/<asignatura>/`) + backend Supabase para el duelo
-en línea. Historia de v0 al detalle en la Bitácora (abajo).
+**Versión 0.99 (candidata a v1)** — completa y jugable de punta a punta; en vuelta
+manual antes de coronar la v1 (ver Sesión 17). Publicado en GitHub Pages y en prueba
+real. Un `index.html` mobile-first + contenido en JSON (`contenido/<asignatura>/`) +
+backend Supabase para el duelo en línea. Historia de v0 al detalle en la Bitácora (abajo).
 
 **Jugable hoy:**
+- **Intro de bienvenida (video):** al abrir por primera vez se reproduce una intro
+  de ~11 s (`assets/intro.mp4`: el zorro llega desde el espacio con los símbolos de las
+  4 asignaturas + fanfarria "Fanfare for Space"; fundido de entrada/salida). Se ve **una
+  vez por dispositivo**; `?intro=1` la fuerza. Si el navegador bloquea el autoplay con
+  sonido, muestra "▶ Toca para comenzar".
 - Inicio con selección **Jugador / Duelo 1v1 / Admin** y el rostro de la mascota
   **Kimün** (zorro; `assets/kimun.png`, con expresiones por respuesta).
 - **Pantalla principal en 2 niveles (Sesión 15):** un **módulo por asignatura**
@@ -60,8 +66,10 @@ en línea. Historia de v0 al detalle en la Bitácora (abajo).
   fallar revela la respuesta correcta + explicación y botón "Continuar". Kimün
   comenta un dato al iniciar la ruta.
 - **Modo Difícil** desbloqueable (8 preguntas, 10 s, 80%, tema oscuro/carmesí).
-- Persistencia (localStorage), tienda de skins, animación de subida de nivel,
-  logros, ranking (aún simulado).
+- Persistencia (localStorage), **tienda de skins** (precios escalonados 80–900;
+  emojis baratos de entrada + skins ilustradas premium, incluidas **7 deportivas**:
+  karate, fútbol, básquetbol, vóleibol, ciclismo, tenis, skate), animación de subida
+  de nivel, logros, ranking (aún simulado).
 - **Audio:** efectos procedurales (Web Audio, sin archivos) + **música de fondo**
   opcional por archivos (`assets/audio/`, con fallback si no están); control separado
   🎵 música / 🔊 efectos, persistido.
@@ -152,6 +160,15 @@ Orden tentativo, sujeto a prioridad de "verlo funcionar y atractivo" primero:
 - El registro de ejecuciones queda en `scripts/auto-commit.log` (ignorado por git).
 
 ## Herramientas de desarrollo
+
+### Parámetros de URL (ocultos)
+- **`?qa=1` — Modo QA:** marca la respuesta correcta en todas las preguntas (expedición,
+  jefe, duelo, Reto de Cálculo) y **desbloquea todo** (capítulos, jefes, niveles del
+  Reto), para probar cualquier parte sin avanzar en orden. Muestra un aviso arriba a la
+  izquierda. No afecta el juego normal (sin el parámetro). Implementado con la constante
+  global `QA` y la clase CSS `.qa-ok`.
+- **`?intro=1`:** fuerza que la intro de bienvenida se reproduzca aunque ya se haya visto
+  (por defecto se ve una sola vez por dispositivo; flag `kimun_intro` en localStorage).
 
 ### Tablero de avance (`dev/tablero.html`)
 
@@ -770,3 +787,42 @@ Se completaron los tres pendientes que quedaron de la Sesión 2:
   los 2 capítulos nuevos de Lenguaje y de los capítulos de Ciencias (opcional); duelo en 2
   celulares; notificaciones push y ranking real; limpiar perfiles de prueba en Supabase;
   quitar `libre:true` de "El mundo colonial" al terminar las pruebas.
+
+### Sesión 17 (2026-08-16) — Preparación de la v0.99
+Cierre de contenido, pulido y una intro. Se decidió etiquetar **v0.99** (candidata) para
+dar una vuelta manual antes de la v1. Todo verificado en el navegador, sin errores de JS.
+- **Revisión de completitud:** chequeo cruzado (script) de que **todos los assets
+  referenciados existen** (31) y de que **cada etapa y jefe tiene preguntas**; los Jefes
+  Finales cubren el 100% de los OA de su banco. Smoke test de las 4 campañas + Reto +
+  duelo, carga limpia sin errores.
+- **Limpieza v0.99:** se eliminó la expedición **`mate-algebra`** (quedaba inalcanzable:
+  Matemáticas se juega como Reto de Cálculo y el duelo usa los niveles de cálculo; el banco
+  de álgebra queda de reserva). Se quitó el flag **`libre:true`** de "El mundo colonial"
+  → desbloqueo secuencial restaurado (probado con jugador nuevo).
+- **Modo QA (`?qa=1`):** marca la respuesta correcta en todos los modos y desbloquea todo,
+  para pruebas manuales; aviso visible; oculto y sin efecto en el juego normal. (Ver
+  "Herramientas de desarrollo".)
+- **Economía de la tienda re-escalonada:** los precios iban 40–160 (se compraba lo más caro
+  con un capítulo). Ahora **80–900**: emojis de entrada (🦉80 … 👑350) + skins ilustradas
+  premium (Astronauta 450, Mago 550, Ninja 700, Superhéroe 900). La tienda ahora muestra el
+  **nombre** de las skins que lo tienen.
+- **7 skins deportivas nuevas (premium, ilustradas · lote 5):** Karateka, Futbolista,
+  Basquetbolista, Voleibolista, Ciclista, Tenista, Skater (🥋⚽🏀🏐🚴🎾🛹, 320–560).
+  Roberto generó el arte (IA); Claude lo procesó con `scripts/procesar-lote5.py` (recorte,
+  cuadrado, 384 px). En el mismo lote se integraron las **2 portadas** que faltaban de
+  Lenguaje (`portada-leng-lectura`, `portada-leng-escritura`, 512 px) → ya no hay 404.
+- **Intro de bienvenida (video):** `assets/intro.mp4` (~11 s, 9:16, 720×1278, ~1 MB). El
+  zorro llega desde el fondo del espacio y orbitan símbolos de las 4 asignaturas (números y
+  ÷+, átomo y matraz, pergamino y reloj de arena, pluma y letras) — sin palabras. Roberto
+  generó el video (IA, varias iteraciones: sin texto, sin doble cola); Claude lo comprimió
+  con ffmpeg (7–8 MB → ~1 MB), le antepuso **1 s de negro** y le puso **fundido de
+  entrada/salida** (imagen + audio). **Audio:** "Fanfare for Space" de Kevin MacLeod
+  (Incompetech, CC BY), tramo **7–17 s**, mono AAC, fusionado en el mp4 (atribución añadida
+  a Créditos). Se reproduce **una vez por dispositivo** (flag `kimun_intro`), con botón
+  "Saltar" y "▶ Toca para comenzar" cuando el navegador bloquea el autoplay con sonido;
+  respeta `prefers-reduced-motion`; `?intro=1` la fuerza.
+- **Documento de resumen (artefacto):** página visual con las 4 campañas y un diagrama de
+  todo lo que se puede hacer en Kimün (privada, para compartir cuando Roberto quiera).
+- **Pendientes:** dar la vuelta manual y decidir el paso a **v1**; versión del video en
+  9:16 de pantalla completa ya lista; sigue opcional el arte de portadas de capítulos de
+  Ciencias; y los de siempre (duelo en 2 celulares, push, ranking real, limpiar Supabase).
