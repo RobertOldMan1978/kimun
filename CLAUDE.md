@@ -1020,4 +1020,9 @@ revisiones independientes del SQL. Diseño y plan en `docs/superpowers/`.
   clave='admin_clave';`. Sin cambios en el repo (el tablero ya estaba en ese valor). Nota:
   esa clave también permite borrar cursos/alumnos; se puede endurecer cambiando `CLAVE_ADMIN`
   + regenerar el tablero + re-ejecutar el `update` con el nuevo valor.
+- **Saludo al alumno en el inicio:** tras canjear su código, la pantalla de inicio muestra
+  **"¡Hola, <Nombre>!"** con las mismas letras que KIMÜN (Titan One + degradado
+  cian/violeta/rosa). Elemento `#rolNombre` + función `pintarInicio()` (se llama al cargar,
+  tras el sync con el servidor, tras canjear y en `go('scr-rol')`). Si hay alumno, el saludo
+  reemplaza el subtítulo genérico; si no, se ve el subtítulo normal. Solo `index.html`.
 - **Pendientes:** sin cambios respecto a la Sesión 19.

@@ -62,6 +62,8 @@ h1,h2,.disp{font-family:'Titan One',cursive;letter-spacing:.5px}
 .logo h1{font-size:34px;line-height:1.05;margin-top:6px;
   background:linear-gradient(90deg,var(--gold),#ff9d3c,var(--pink));-webkit-background-clip:text;background-clip:text;color:transparent}
 .logo p{color:var(--dim);font-weight:800;margin-top:6px}
+.rol-nombre{font-family:'Titan One',cursive;letter-spacing:.5px;font-size:24px;line-height:1.1;margin-top:8px;
+  background:linear-gradient(90deg,var(--cyan),var(--violet),var(--pink));-webkit-background-clip:text;background-clip:text;color:transparent}
 .card{background:var(--panel);border:1px solid #ffffff14;border-radius:var(--r);padding:18px;margin-top:16px;box-shadow:0 10px 30px #00000045}
 .card h3{font-size:13px;text-transform:uppercase;letter-spacing:2px;color:var(--dim);margin-bottom:12px}
 input.nm{width:100%;padding:14px;border-radius:14px;border:2px solid #ffffff1f;background:#00000040;color:var(--txt);
@@ -476,7 +478,8 @@ body.jefe-hit{animation:jefeShake .26s}
     <div class="logo">
       <img class="badge-img" src="assets/kimun-512.png" alt="Kimün, la mascota" width="150" height="150">
       <h1>KIMÜN</h1>
-      <p>Aprende jugando · 8° Básico</p>
+      <div id="rolNombre" class="rol-nombre" hidden></div>
+      <p id="rolSub">Aprende jugando · 8° Básico</p>
     </div>
     <div class="card">
       <h3>¿Cómo quieres entrar?</h3>
@@ -1204,7 +1207,12 @@ const MUSIC={
 function go(id){document.querySelectorAll('.screen').forEach(s=>s.classList.remove('on'));$(id).classList.add('on');window.scrollTo(0,0);
  var enJuego=(id==='scr-mapa'||id==='scr-quiz'||id==='scr-res');
  document.body.classList.toggle('en-dificil', enJuego && MODO==='dificil');
+ if(id==='scr-rol')pintarInicio();
  MUSIC.contexto(id);}
+// Saluda al alumno por su nombre (mismas letras que KIMÜN) si canjeó un código.
+function pintarInicio(){const el=$('rolNombre'),sub=$('rolSub');if(!el)return;
+ if(S.alumno){el.textContent='¡Hola, '+S.alumno+'!';el.hidden=false;if(sub)sub.hidden=true;}
+ else{el.hidden=true;if(sub)sub.hidden=false;}}
 function toast(l){if(S.logros.has(l))return;S.logros.add(l);SND.unlock();
  $('toastIc').textContent=LOGROS[l].ic;$('toastTx').textContent=LOGROS[l].tx;
  $('toast').classList.add('show');setTimeout(()=>$('toast').classList.remove('show'),2600);}
@@ -1704,6 +1712,7 @@ function finDuelo(){
  (function agenda(){setTimeout(()=>{estrellaFugaz();agenda();},8000+Math.random()*14000);})();
  window.estrellaFugaz=estrellaFugaz;
  cargar();
+ pintarInicio();
  // Perfil en el servidor desde el inicio (antes solo se creaba al entrar al duelo).
  // No bloquea: si falla, el juego funciona igual y se reintenta en la próxima sesión.
  setTimeout(async ()=>{
@@ -1711,7 +1720,7 @@ function finDuelo(){
   if(!p) return;
   if(p.codigo_acceso){ S.alumno = p.nombre; S.nombre = p.nombre; S.avatar = p.avatar; }
   await cargarCurso();
-  guardar(); refreshHud();
+  guardar(); refreshHud(); pintarInicio();
  }, 1200);
  if(S.nombre)$('inpName').value=S.nombre;
  const g=$('avgrid');AVATARES.forEach((a)=>{const d=document.createElement('div');
