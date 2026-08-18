@@ -358,7 +358,7 @@ h1,h2,.disp{font-family:'Titan One',cursive;letter-spacing:.5px}
         '<!DOCTYPE html>\n<html lang="es">\n<head>\n'
         '<meta charset="UTF-8">\n'
         '<meta name="viewport" content="width=device-width, initial-scale=1.0">\n'
-        '<title>KIMÜN · Tablero de desarrollo</title>\n'
+        '<title>VULPO · Tablero de desarrollo</title>\n'
         '<link rel="preconnect" href="https://fonts.googleapis.com">\n'
         '<link href="https://fonts.googleapis.com/css2?family=Titan+One&family=Nunito:wght@600;800;900&display=swap" rel="stylesheet">\n'
         "<style>" + css + "</style>\n</head>\n<body>\n"
@@ -383,7 +383,7 @@ h1,h2,.disp{font-family:'Titan One',cursive;letter-spacing:.5px}
         '    </div>\n'
         '  </div>\n'
         '  <div class="top">\n'
-        '    <h1>KIMÜN · Tablero</h1>\n'
+        '    <h1>VULPO · Tablero</h1>\n'
         '    <div class="lema">Panel de desarrollo · avance por materia y OA</div>\n'
         '  </div>\n'
         '  <div class="gen">Generado el ' + marca + ' · <code>python scripts/generar-tablero.py</code></div>\n'

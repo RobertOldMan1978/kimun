@@ -1,8 +1,16 @@
-# KIMÜN — Plataforma de juegos educativos
+# VULPO — Plataforma de juegos educativos
+
+> **Nota de marca:** el proyecto se llamó **KIMÜN** hasta la Sesión 21. El nombre estaba
+> tomado como marca de terceros, incluido el rubro de enseñanza, así que la plataforma pasó
+> a llamarse **VULPO** y la mascota **Vulpi**. La bitácora conserva el nombre antiguo porque
+> es el registro histórico, y los identificadores internos (claves del navegador, funciones
+> de Supabase, archivos de arte) también lo conservan a propósito: cambiarlos borraría el
+> progreso de quienes ya juegan. Ver
+> `docs/superpowers/specs/2026-08-18-renombre-vulpo-design.md`.
 
 ## Descripción del proyecto
 
-KIMÜN es una plataforma de juegos educativos para escolares chilenos de 15 años
+VULPO es una plataforma de juegos educativos para escolares chilenos de 15 años
 hacia abajo, alineada al currículum del Ministerio de Educación de Chile. La meta
 es que estudiar sea entretenido, desafiante y que genere comunidad mediante
 competencia sana entre compañeros.
@@ -34,7 +42,7 @@ backend Supabase para el duelo en línea. Historia de v0 al detalle en la Bitác
   vez por dispositivo**; `?intro=1` la fuerza. Si el navegador bloquea el autoplay con
   sonido, muestra "▶ Toca para comenzar".
 - Inicio con selección **Jugador / Duelo 1v1 / Admin** y el rostro de la mascota
-  **Kimün** (zorro; `assets/kimun.png`, con expresiones por respuesta).
+  **Vulpi** (zorro; `assets/kimun.png`, con expresiones por respuesta).
 - **Pantalla principal en 2 niveles (Sesión 15):** un **módulo por asignatura**
   (Historia, Matemáticas, Ciencias, Lenguaje); al entrar se abre su campaña o una
   lista de sus mapas (`scr-mapas`). Cada mapa usa su portada propia por convención
@@ -46,12 +54,12 @@ backend Supabase para el duelo en línea. Historia de v0 al detalle en la Bitác
   un **Jefe Final multi-fase** (barra de vida, 3 corazones, tema carmesí) que se abre al
   100%, con recompensas (skin exclusiva, insignia, corona y bono +500🪙/+300XP):
   - **Historia:** 5 capítulos (22 OA) + Desafío Extra; villano "El Guardián del Tiempo";
-    skin "Kimün Historiador".
+    skin "Vulpi Historiador".
   - **Ciencias:** 4 capítulos (15 OA = las 4 unidades); villano "La Entropía";
-    skin "Kimün Científico".
+    skin "Vulpi Científico".
   - **Lenguaje:** 4 capítulos (15 OA; la U1 "Lectura literaria" partida en 2 —Leer y
     comprender / Mundos literarios— + Textos y medios + Escritura); villano "El Borrón";
-    skin "Kimün Escritor"; insignia "Maestro de las Letras".
+    skin "Vulpi Escritor"; insignia "Maestro de las Letras".
   Capa `CAMPAÑAS` data-driven; el motor de campañas es **genérico** (Desafío Extra
   opcional, jefe con título dinámico).
 - **Matemáticas · "Reto de Cálculo" (Sesión 15):** al entrar a Matemáticas se abre un
@@ -65,7 +73,7 @@ backend Supabase para el duelo en línea. Historia de v0 al detalle en la Bitác
   año completo** (todos sus OA oficiales); con las 4 campañas activas ya casi no queda
   contenido de reserva sin usar.
 - Quiz: 6 preguntas al azar/etapa, timer 15 s, pasa con 66%, 3 estrellas. Al
-  fallar revela la respuesta correcta + explicación y botón "Continuar". Kimün
+  fallar revela la respuesta correcta + explicación y botón "Continuar". Vulpi
   comenta un dato al iniciar la ruta.
 - **Modo Difícil** desbloqueable (8 preguntas, 10 s, 80%, tema oscuro/carmesí).
 - Persistencia (localStorage), **tienda de skins** (precios escalonados 80–900;
@@ -1063,3 +1071,47 @@ revisiones independientes del SQL. Diseño y plan en `docs/superpowers/`.
   - Verificado en el navegador (los 4 disparan la maestría, no antes; video una sola vez; aura
     persiste; ranking d4; sin errores de consola).
 - **Pendientes:** sin cambios respecto a la Sesión 19.
+
+### Sesión 21 (2026-08-18) — Rol de profesor (diseñado) y renombre a VULPO
+- **Sincronización (orden 99):** llegó la Sesión 20 desde el otro PC (eliminar cursos,
+  clave unificada, saludo al alumno, recompensas del Modo Difícil y Maestría Total).
+- **Rol de profesor — diseño y plan, sin implementar.** Roberto pidió cuentas de profesor
+  que administren uno o más cursos. El modelo actual no servía: una clave global (que además
+  está en el repositorio) daba acceso total a todos los cursos, y `cursos` no tenía dueño.
+  Decisiones: profesores de **un colegio real** (no solo gente de confianza), por lo que se
+  pasa a **correo y contraseña** con Supabase Auth; **Roberto autoriza cada correo** con una
+  lista blanca; cada profesor tiene **autonomía total sobre sus cursos** y nada sobre los
+  ajenos; y el acceso es una **página propia** (`profesor.html`) con almacenamiento de sesión
+  separado, para que iniciar sesión como profesor no le borre la identidad al niño que juega
+  en ese mismo teléfono. **Idea de Roberto que mejoró el diseño:** sacar el Modo Admin del
+  juego por completo, de modo que los niños solo vean Jugador y Duelo. Como consecuencia, la
+  clave global y el panel de cursos dentro del juego se desmontan.
+  Diseño: `docs/superpowers/specs/2026-08-18-rol-profesor-design.md`;
+  plan de 11 tareas: `docs/superpowers/plans/2026-08-18-rol-profesor.md`. **Queda en cola.**
+- **Renombre de la marca: KIMÜN → VULPO (plataforma) y Vulpi (mascota).** El nombre KIMÜN
+  ya existe como marca de terceros, **incluida al menos una del rubro de enseñanza**, lo que
+  bloqueaba el lanzamiento a producción. Se eligió una palabra de fantasía derivada de
+  *vulpes* (zorro en latín): **Vulpo** para el colegio y los apoderados, **Vulpi** para el
+  compañero de juego de los niños. Se descartó *Zorbi* porque ya es una app educativa activa;
+  las empresas brasileñas *Vulpi* no bloquean porque las marcas se protegen por país y clase.
+  Roberto confirmó la disponibilidad de **Vulpo** antes de ejecutar.
+  Diseño: `docs/superpowers/specs/2026-08-18-renombre-vulpo-design.md`.
+  - **Hallazgo que redujo el trabajo:** el nombre **nunca estuvo dibujado en el arte** (el
+    logo es texto con tipografía web), así que **no hubo que regenerar ninguna ilustración**.
+  - **Cambió lo visible:** título, logo, textos de la mascota ("🦊 Vulpi te cuenta…"), los
+    nombres de las 17 skins, README, CLAUDE.md y el tablero.
+  - **NO cambiaron los identificadores internos, a propósito:** las claves del navegador
+    (`kimun_save`, `kimun_intro`…), las ~20 funciones de Supabase (`kimun_*`), los ids de las
+    skins (`kimun-historiador`) y los 34 archivos de arte. **Cambiar las claves o los ids
+    habría borrado el progreso y las skins compradas** de quien ya juega. Nadie los ve y no
+    constituyen uso de marca.
+  - **La bitácora conserva el nombre antiguo** porque es el registro histórico; se agregó una
+    nota de marca al inicio de `CLAUDE.md` para que nadie lo lea como un descuido.
+  - **Verificado:** siete pantallas más los créditos sin rastro del nombre anterior, y el
+    progreso guardado (XP, monedas, skins) intacto tras el cambio. Sin errores de consola.
+  - **Repositorio renombrado** a `vulpo`; GitHub deja una redirección desde la URL anterior.
+- **Pendientes:** implementar el rol de profesor (plan listo); que los niños canjeen sus
+  códigos y luego ejecutar la limpieza de perfiles de prueba; considerar un dominio propio
+  (`vulpo.cl`) para no depender de la redirección de GitHub; dar la vuelta manual y decidir
+  el paso a **v1**; los ~22 MB de originales y el huérfano `portada-mate-algebra.png`; duelo
+  en 2 celulares; notificaciones push.

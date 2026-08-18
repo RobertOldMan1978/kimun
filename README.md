@@ -1,4 +1,4 @@
-# KIMÜN 🎮📚
+# VULPO 🎮📚
 
 Plataforma de juegos educativos para escolares chilenos, alineada al currículum
 del Ministerio de Educación de Chile. La idea: que estudiar sea entretenido,
@@ -12,7 +12,7 @@ desafiante y que genere comunidad entre compañeros.
 **Campaña Historia — 8° básico** (los 22 OA del año, en orden).
 
 Un juego tipo aventura con mapa de niveles, quiz con temporizador, combos, XP,
-monedas, estrellas, logros y **ranking real por curso**. **Kimün**, el zorro mascota,
+monedas, estrellas, logros y **ranking real por curso**. **Vulpi**, el zorro mascota,
 acompaña y reacciona a cada respuesta. Incluye **Modo Difícil** desbloqueable.
 
 La pantalla principal ofrece un **módulo por asignatura**. **Historia**, **Ciencias** y

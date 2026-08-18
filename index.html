@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-<title>KIMÜN · Aprende jugando — 8° Básico</title>
+<title>VULPO · Aprende jugando — 8° Básico</title>
 <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
 <link rel="icon" type="image/png" sizes="512x512" href="assets/kimun-512.png">
 <link rel="apple-touch-icon" href="assets/kimun-180.png">
@@ -157,7 +157,7 @@ input.nm:focus{border-color:var(--cyan)}
 .qexpl .expl-tip{display:block;color:var(--dim);margin-top:6px}
 .btn.seguir{margin-top:12px;background:linear-gradient(180deg,var(--cyan),#2aa8d8);color:#04222e;box-shadow:0 6px 0 #1a6d8f,0 12px 24px #00000055}
 .btn.seguir:active{box-shadow:0 2px 0 #1a6d8f}
-/* Comentario de Kimün en el mapa */
+/* Comentario de Vulpi en el mapa */
 .kim-dato{display:flex;align-items:center;gap:12px;background:var(--panel);border:1px solid #ffc93c55;border-radius:16px;padding:10px 12px;margin:0 0 12px;box-shadow:0 8px 22px #0005;opacity:0;transform:translateY(-8px);transition:.35s}
 .kim-dato.show{opacity:1;transform:translateY(0)}
 .kim-dato img{width:52px;height:52px;border-radius:50%;object-fit:cover;object-position:center 40%;border:3px solid var(--gold);flex-shrink:0}
@@ -301,7 +301,7 @@ input.nm:focus{border-color:var(--cyan)}
 .pend-item .pi-n{font-weight:900;font-size:14px}
 .pend-item .pi-t{color:var(--pink);font-weight:800;font-size:12px}
 .pend-item .pi-go{color:var(--green);font-weight:900}
-/* ===== COMPAÑERO KIMÜN ===== */
+/* ===== COMPAÑERO VULPI ===== */
 .kim-stage{display:flex;justify-content:center;margin:2px 0 10px}
 .kim-buddy{width:88px;height:88px;border-radius:50%;object-fit:cover;object-position:center 30%;
  background:radial-gradient(circle at 50% 34%,#fff,#efe6d2);
@@ -315,7 +315,7 @@ input.nm:focus{border-color:var(--cyan)}
 .kim-res{width:164px;height:164px;border-radius:50%;object-fit:cover;object-position:center 30%;
  background:radial-gradient(circle at 50% 34%,#fff,#efe6d2);
  border:5px solid var(--gold);box-shadow:0 0 26px #ffc93c88,0 10px 16px #0007}
-/* Kimün vestido (ambientación de expedición) */
+/* Vulpi vestido (ambientación de expedición) */
 .badge-conq{width:168px;height:168px;object-fit:contain;
  filter:drop-shadow(0 8px 16px #0007) drop-shadow(0 0 16px #ffc93c55);animation:float 3s ease-in-out infinite}
 .mapa-head{display:flex;align-items:center;gap:12px;margin:6px 0 8px}
@@ -475,7 +475,7 @@ body.es-maestro .badge-img{filter:drop-shadow(0 0 10px #ffc93ccc) drop-shadow(0 
 <div class="combo" id="combo"></div>
 <div class="toast" id="toast"><div class="ic" id="toastIc">🏅</div><div><b>¡Logro desbloqueado!</b><span id="toastTx"></span></div></div>
 <div class="levelup" id="levelup"><div class="box">
-  <img class="kim" src="assets/kimun-512.png" alt="Kimün">
+  <img class="kim" src="assets/kimun-512.png" alt="Vulpi">
   <span class="lvl-num">NIVEL 2</span><span class="lvl-sub">¡Subiste de nivel!</span>
 </div></div>
 <button class="sndbtn" id="musBtn" title="Música" style="right:58px">🎵</button>
@@ -511,8 +511,8 @@ body.es-maestro .badge-img{filter:drop-shadow(0 0 10px #ffc93ccc) drop-shadow(0 
   <!-- ============ SELECCIÓN DE MODO ============ -->
   <section class="screen on" id="scr-rol">
     <div class="logo">
-      <img class="badge-img" src="assets/kimun-512.png" alt="Kimün, la mascota" width="150" height="150">
-      <h1>KIMÜN</h1>
+      <img class="badge-img" src="assets/kimun-512.png" alt="Vulpi, la mascota" width="150" height="150">
+      <h1>VULPO</h1>
       <div id="rolNombre" class="rol-nombre" hidden></div>
       <p id="rolSub">Aprende jugando · 8° Básico</p>
     </div>
@@ -632,7 +632,7 @@ body.es-maestro .badge-img{filter:drop-shadow(0 0 10px #ffc93ccc) drop-shadow(0 
       <div id="calcHudSinfin" class="calc-hud-sinfin" style="display:none">♾️ Racha: <b id="calcRachaN">0</b></div>
     </div>
     <div class="calc-timerbar"><i id="calcTimerFill"></i></div>
-    <div class="kim-stage" style="margin:6px 0 2px"><img class="kim-buddy" id="kimBuddyCalc" src="assets/kimun-neutral.png" alt="Kimün"></div>
+    <div class="kim-stage" style="margin:6px 0 2px"><img class="kim-buddy" id="kimBuddyCalc" src="assets/kimun-neutral.png" alt="Vulpi"></div>
     <div class="calc-combo" id="calcCombo"></div>
     <div class="calc-preg" id="calcPreg"></div>
     <div class="calc-opts" id="calcOpts"></div>
@@ -695,7 +695,7 @@ body.es-maestro .badge-img{filter:drop-shadow(0 0 10px #ffc93ccc) drop-shadow(0 
   <!-- ============ INICIO ============ -->
   <section class="screen" id="scr-inicio">
     <div class="logo">
-      <img class="badge-conq" src="assets/kimun-conquistador.png" alt="Kimün explorador">
+      <img class="badge-conq" src="assets/kimun-conquistador.png" alt="Vulpi explorador">
       <h1>EXPEDICIÓN<br>HISTORIA</h1>
       <p>8° Básico · Descubre, conquista y sube de nivel</p>
     </div>
@@ -730,8 +730,8 @@ body.es-maestro .badge-img{filter:drop-shadow(0 0 10px #ffc93ccc) drop-shadow(0 
       </div>
     </div>
     <div class="kim-dato" id="kimDato" hidden>
-      <img src="assets/kimun-feliz.png" alt="Kimün">
-      <div class="kd-body"><div class="kd-title">🦊 Kimün te cuenta…</div><div id="kimDatoTxt"></div></div>
+      <img src="assets/kimun-feliz.png" alt="Vulpi">
+      <div class="kd-body"><div class="kd-title">🦊 Vulpi te cuenta…</div><div id="kimDatoTxt"></div></div>
       <button class="kd-x" id="kimDatoX" aria-label="Cerrar">✕</button>
     </div>
     <div class="modo-sel" id="modoSel" style="display:none"></div>
@@ -750,7 +750,7 @@ body.es-maestro .badge-img{filter:drop-shadow(0 0 10px #ffc93ccc) drop-shadow(0 
       <div class="qprog"><i id="qProg"></i></div>
       <div class="timer" id="qTimer">15</div>
     </div>
-    <div class="kim-stage"><img class="kim-buddy" id="kimBuddy" src="assets/kimun-neutral.png" alt="Kimün"></div>
+    <div class="kim-stage"><img class="kim-buddy" id="kimBuddy" src="assets/kimun-neutral.png" alt="Vulpi"></div>
     <div class="qcard">
       <div class="tag" id="qTag">Nivel 1</div>
       <h2 id="qText">Pregunta…</h2>
@@ -764,7 +764,7 @@ body.es-maestro .badge-img{filter:drop-shadow(0 0 10px #ffc93ccc) drop-shadow(0 
   <!-- ============ RESULTADO ============ -->
   <section class="screen" id="scr-res">
     <div class="resbox">
-      <img class="big kim-res" id="resKim" src="assets/kimun-oro.png" alt="Kimün">
+      <img class="big kim-res" id="resKim" src="assets/kimun-oro.png" alt="Vulpi">
       <h2 id="resTitle">¡Nivel superado!</h2>
       <div class="starline" id="resStars"></div>
       <div class="statgrid">
@@ -1255,7 +1255,7 @@ function go(id){document.querySelectorAll('.screen').forEach(s=>s.classList.remo
  document.body.classList.toggle('en-dificil', enJuego && MODO==='dificil');
  if(id==='scr-rol')pintarInicio();
  MUSIC.contexto(id);}
-// Saluda al alumno por su nombre (mismas letras que KIMÜN) si canjeó un código.
+// Saluda al alumno por su nombre (mismas letras que VULPO) si canjeó un código.
 function pintarInicio(){const el=$('rolNombre'),sub=$('rolSub');if(!el)return;
  if(S.alumno){el.textContent='¡Hola, '+S.alumno+'!';el.hidden=false;if(sub)sub.hidden=true;}
  else{el.hidden=true;if(sub)sub.hidden=false;}}
@@ -1460,7 +1460,7 @@ function jefeCalcVictoria(){
  revisarDificil();   // vencer a El Autómata puede completar la Maestría Total (los 4 jefes)
  $('calcResStars').textContent='👑';
  $('calcResTit').textContent='¡Venciste a El Autómata!';
- $('calcResSub').textContent=primera?'Ganaste la skin "Kimün Calculista" 🧮 y la insignia "Maestro del Cálculo".':'¡Sigues siendo el maestro del cálculo!';
+ $('calcResSub').textContent=primera?'Ganaste la skin "Vulpi Calculista" 🧮 y la insignia "Maestro del Cálculo".':'¡Sigues siendo el maestro del cálculo!';
  _resCard(primera?`<div><b>🧮</b><small>skin</small></div><div><b>🎖️</b><small>insignia</small></div><div><b>+500🪙</b><small>+300 XP</small></div>`:`<div><b>🔥${RC.comboMax}</b><small>mejor racha</small></div>`);
  $('calcResNext').style.display='none';
  go('scr-calc-res');
@@ -1627,26 +1627,26 @@ function sincronizarXP(){
 
 /* ================= TIENDA DE SKINS ================= */
 const SKINS=[{e:"🐲",p:120},{e:"🦄",p:150},{e:"🦖",p:180},{e:"🐙",p:100},{e:"🦉",p:80},{e:"🚀",p:220},{e:"🧙",p:260},{e:"👑",p:350},
- {e:"🌠",img:'assets/skin-kimun-astronauta.png',nombre:'Kimün Astronauta',p:450},
- {e:"🪄",img:'assets/skin-kimun-mago.png',nombre:'Kimün Mago',p:550},
- {e:"🥷",img:'assets/skin-kimun-ninja.png',nombre:'Kimün Ninja',p:700},
- {e:"🦸",img:'assets/skin-kimun-superheroe.png',nombre:'Kimün Superhéroe',p:900},
+ {e:"🌠",img:'assets/skin-kimun-astronauta.png',nombre:'Vulpi Astronauta',p:450},
+ {e:"🪄",img:'assets/skin-kimun-mago.png',nombre:'Vulpi Mago',p:550},
+ {e:"🥷",img:'assets/skin-kimun-ninja.png',nombre:'Vulpi Ninja',p:700},
+ {e:"🦸",img:'assets/skin-kimun-superheroe.png',nombre:'Vulpi Superhéroe',p:900},
  // Skins deportivas (premium, ilustradas · lote 5).
- {e:"🥋",img:'assets/skin-kimun-karate.png',nombre:'Kimün Karateka',p:320},
- {e:"⚽",img:'assets/skin-kimun-futbol.png',nombre:'Kimün Futbolista',p:360},
- {e:"🏀",img:'assets/skin-kimun-basquetbol.png',nombre:'Kimün Basquetbolista',p:400},
- {e:"🏐",img:'assets/skin-kimun-voleibol.png',nombre:'Kimün Voleibolista',p:440},
- {e:"🚴",img:'assets/skin-kimun-ciclismo.png',nombre:'Kimün Ciclista',p:480},
- {e:"🎾",img:'assets/skin-kimun-tenis.png',nombre:'Kimün Tenista',p:520},
- {e:"🛹",img:'assets/skin-kimun-skate.png',nombre:'Kimün Skater',p:560},
+ {e:"🥋",img:'assets/skin-kimun-karate.png',nombre:'Vulpi Karateka',p:320},
+ {e:"⚽",img:'assets/skin-kimun-futbol.png',nombre:'Vulpi Futbolista',p:360},
+ {e:"🏀",img:'assets/skin-kimun-basquetbol.png',nombre:'Vulpi Basquetbolista',p:400},
+ {e:"🏐",img:'assets/skin-kimun-voleibol.png',nombre:'Vulpi Voleibolista',p:440},
+ {e:"🚴",img:'assets/skin-kimun-ciclismo.png',nombre:'Vulpi Ciclista',p:480},
+ {e:"🎾",img:'assets/skin-kimun-tenis.png',nombre:'Vulpi Tenista',p:520},
+ {e:"🛹",img:'assets/skin-kimun-skate.png',nombre:'Vulpi Skater',p:560},
  // Skin exclusiva de recompensa: visible pero bloqueada; se desbloquea al vencer al Jefe Final de Historia.
  // Marcador de arte: emoji 🎓 hasta que exista assets/kimun-historiador.png.
- {id:'kimun-historiador', e:"🎓", img:'assets/kimun-historiador.png', nombre:'Kimün Historiador', bloqueada:true, desbloqueaCon:'hist', req:'Vence a Historia'},
- {id:'kimun-cientifico', e:"🔬", img:'assets/kimun-cientifico.png', nombre:'Kimün Científico', bloqueada:true, desbloqueaCon:'cien', req:'Vence a Ciencias'},
- {id:'kimun-calculista', e:"🧮", img:'assets/kimun-calculista.png', nombre:'Kimün Calculista', bloqueada:true, req:'Vence a El Autómata'},
- {id:'kimun-escritor', e:"🖋️", img:'assets/kimun-escritor.png', nombre:'Kimün Escritor', bloqueada:true, desbloqueaCon:'leng', req:'Vence a Lenguaje'},
+ {id:'kimun-historiador', e:"🎓", img:'assets/kimun-historiador.png', nombre:'Vulpi Historiador', bloqueada:true, desbloqueaCon:'hist', req:'Vence a Historia'},
+ {id:'kimun-cientifico', e:"🔬", img:'assets/kimun-cientifico.png', nombre:'Vulpi Científico', bloqueada:true, desbloqueaCon:'cien', req:'Vence a Ciencias'},
+ {id:'kimun-calculista', e:"🧮", img:'assets/kimun-calculista.png', nombre:'Vulpi Calculista', bloqueada:true, req:'Vence a El Autómata'},
+ {id:'kimun-escritor', e:"🖋️", img:'assets/kimun-escritor.png', nombre:'Vulpi Escritor', bloqueada:true, desbloqueaCon:'leng', req:'Vence a Lenguaje'},
  // Skin maestra: se gana completando las 3 asignaturas en Modo Difícil (emoji hasta que haya arte).
- {id:'kimun-maestro', e:"🏆", img:'assets/skin-kimun-maestro.png', nombre:'Kimün Maestro', bloqueada:true, req:'Vence los 4 jefes (3 en Difícil + El Autómata)'}];
+ {id:'kimun-maestro', e:"🏆", img:'assets/skin-kimun-maestro.png', nombre:'Vulpi Maestro', bloqueada:true, req:'Vence los 4 jefes (3 en Difícil + El Autómata)'}];
 // Si el avatar equipado es una skin con imagen, devuelve su ruta; si no, null.
 function skinImg(av){const s=SKINS.find(k=>k.e===av&&k.img);return s?s.img:null;}
 // HTML del avatar: <img> si la skin tiene imagen, o el emoji tal cual.
@@ -2508,7 +2508,7 @@ document.querySelectorAll('.nav button').forEach(b=>b.onclick=()=>{
  else{renderMapa();renderRanking();go('scr-mapa');}
 });
 
-/* ================= COMPAÑERO KIMÜN ================= */
+/* ================= COMPAÑERO VULPI ================= */
 /* Precarga para evitar parpadeo al cambiar de expresión */
 ['neutral','feliz','triste','sorprendido','oro','plata','bronce','fiesta','desanimado']
  .forEach(n=>{const i=new Image();i.src='assets/kimun-'+n+'.png';});
@@ -2520,7 +2520,7 @@ function kimReact(estado, id){
  el.className='kim-buddy';void el.offsetWidth;
  if(cls)el.classList.add(cls);
 }
-/* Comentario/dato de Kimün al iniciar la ruta: revela al azar una pregunta y su respuesta */
+/* Comentario/dato de Vulpi al iniciar la ruta: revela al azar una pregunta y su respuesta */
 function datoKimun(){
  const bub=$('kimDato');if(!bub)return;
  let todas=[];Object.keys(POOL).forEach(oa=>{todas=todas.concat(POOL[oa]);});
