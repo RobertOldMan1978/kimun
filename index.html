@@ -107,6 +107,18 @@ input.nm:focus{border-color:var(--cyan)}
 .rk .em{font-size:20px}
 .rk .pts{margin-left:auto;color:var(--cyan)}
 .rk.me{background:#8f6bff22;border-radius:10px}
+/* Ranking · marca de Modo Difícil: borde animado 4 colores (las asignaturas), más intenso por conteo */
+.rk.dif{border:2px solid transparent;border-radius:12px;margin:5px 0;padding:9px 8px;
+  background:linear-gradient(#241a49,#241a49) padding-box,
+    linear-gradient(90deg,var(--gold),var(--cyan),var(--green),var(--pink),var(--gold)) border-box;
+  background-size:auto,300% 100%;animation:rkflow 6s linear infinite}
+.rk.me.dif{background:linear-gradient(#2e2359,#2e2359) padding-box,
+    linear-gradient(90deg,var(--gold),var(--cyan),var(--green),var(--pink),var(--gold)) border-box;
+  background-size:auto,300% 100%}
+.rk.dif.d2{box-shadow:0 0 12px #ffffff1f}
+.rk.dif.d3{border-width:3px;box-shadow:0 0 22px #8f6bff66,0 0 9px #ffc93c55;animation-duration:3.2s}
+@keyframes rkflow{to{background-position:0 0,300% 0}}
+@media (prefers-reduced-motion:reduce){.rk.dif{animation:none}}
 
 /* ===== QUIZ ===== */
 .qtop{display:flex;align-items:center;gap:10px;margin-bottom:12px}
@@ -1071,6 +1083,10 @@ const INSIGNIAS=[
   {id:'maestro-ciencias', ic:'🔬', tx:'Maestro de Ciencias', asignatura:'Ciencias'},
   {id:'maestro-calculo', ic:'🎖️', tx:'Maestro del Cálculo', asignatura:'Matemáticas'},
   {id:'maestro-lenguaje', ic:'✍️', tx:'Maestro de las Letras', asignatura:'Lenguaje'},
+  // Insignias exclusivas del Modo Difícil (se ganan completando la asignatura en Difícil).
+  {id:'dif-historia', ic:'🔥', tx:'Historia · Difícil', asignatura:'Historia'},
+  {id:'dif-ciencias', ic:'🔥', tx:'Ciencias · Difícil', asignatura:'Ciencias'},
+  {id:'dif-lenguaje', ic:'🔥', tx:'Lenguaje · Difícil', asignatura:'Lenguaje'},
 ];
 function campañaDe(asig){return CAMPAÑAS.find(c=>c.asignatura===asig)||null;}
 function campañaPorId(id){return CAMPAÑAS.find(c=>c.id===id)||null;}
@@ -1113,6 +1129,10 @@ const LOGROS={
  perfecto:{ic:"💎",tx:"Nivel perfecto"},
  jefe:{ic:"👑",tx:"¡Venciste al Jefe Final!"},
  dificil:{ic:"🔥",tx:"¡Modo Difícil desbloqueado!"},
+ 'dif-historia':{ic:"🔥",tx:"¡Historia en Difícil!"},
+ 'dif-ciencias':{ic:"🔥",tx:"¡Ciencias en Difícil!"},
+ 'dif-lenguaje':{ic:"🔥",tx:"¡Lenguaje en Difícil!"},
+ 'dif-maestro':{ic:"🏆",tx:"¡Kimün Maestro: las 3 en Difícil!"},
 };
 
 /* ================= ESTADO ================= */
@@ -1597,7 +1617,9 @@ const SKINS=[{e:"🐲",p:120},{e:"🦄",p:150},{e:"🦖",p:180},{e:"🐙",p:100}
  {id:'kimun-historiador', e:"🎓", img:'assets/kimun-historiador.png', nombre:'Kimün Historiador', bloqueada:true, desbloqueaCon:'hist', req:'Vence a Historia'},
  {id:'kimun-cientifico', e:"🔬", img:'assets/kimun-cientifico.png', nombre:'Kimün Científico', bloqueada:true, desbloqueaCon:'cien', req:'Vence a Ciencias'},
  {id:'kimun-calculista', e:"🧮", img:'assets/kimun-calculista.png', nombre:'Kimün Calculista', bloqueada:true, req:'Vence a El Autómata'},
- {id:'kimun-escritor', e:"🖋️", img:'assets/kimun-escritor.png', nombre:'Kimün Escritor', bloqueada:true, desbloqueaCon:'leng', req:'Vence a Lenguaje'}];
+ {id:'kimun-escritor', e:"🖋️", img:'assets/kimun-escritor.png', nombre:'Kimün Escritor', bloqueada:true, desbloqueaCon:'leng', req:'Vence a Lenguaje'},
+ // Skin maestra: se gana completando las 3 asignaturas en Modo Difícil (emoji hasta que haya arte).
+ {id:'kimun-maestro', e:"🏆", nombre:'Kimün Maestro', bloqueada:true, req:'Vence las 3 en Difícil'}];
 // Si el avatar equipado es una skin con imagen, devuelve su ruta; si no, null.
 function skinImg(av){const s=SKINS.find(k=>k.e===av&&k.img);return s?s.img:null;}
 // HTML del avatar: <img> si la skin tiene imagen, o el emoji tal cual.
@@ -1721,6 +1743,7 @@ function finDuelo(){
   if(p.codigo_acceso){ S.alumno = p.nombre; S.nombre = p.nombre; S.avatar = p.avatar; }
   await cargarCurso();
   guardar(); refreshHud(); pintarInicio();
+  revisarDificil();   // sincroniza la marca 🔥 y otorga premios de Difícil ya logrados
  }, 1200);
  if(S.nombre)$('inpName').value=S.nombre;
  const g=$('avgrid');AVATARES.forEach((a)=>{const d=document.createElement('div');
@@ -2431,11 +2454,16 @@ function renderRanking(){
 }
 // Los nombres los escribió el adulto en el panel: se escapan antes de pintarlos.
 function pintarRanking(filas){
- $('ranking').innerHTML=filas.map((r,i)=>
-  `<div class="rk ${i<1?'top':''} ${r.soy_yo?'me':''}"><div class="pos">${i+1}</div>
+ $('ranking').innerHTML=filas.map((r,i)=>{
+  const marca=(r.dificil>0)?'🔥 ':'';
+  const ins=r.soy_yo?insigniaIc():'';
+  // Evita el 🔥 duplicado: si la insignia lucida ya es 🔥, no repetir la marca.
+  const pre=(marca&&ins.trim()==='🔥')?ins:(marca+ins);
+  const difcls=(r.dificil>0)?(' dif d'+Math.min(3,r.dificil)):'';
+  return `<div class="rk ${i<1?'top':''} ${r.soy_yo?'me':''}${difcls}"><div class="pos">${i+1}</div>
    <div class="em">${r.soy_yo?avatarHTML(S.avatar):admEsc(r.avatar)}</div>
-   <div>${r.soy_yo?insigniaIc():''}${admEsc(r.nombre)}${r.soy_yo?' (tú)':''}</div>
-   <div class="pts">${admEsc(r.xp)} XP</div></div>`).join('');
+   <div>${pre}${admEsc(r.nombre)}${r.soy_yo?' (tú)':''}</div>
+   <div class="pts">${admEsc(r.xp)} XP</div></div>`;}).join('');
 }
 function pintarSinCurso(){
  $('ranking').innerHTML=
@@ -2549,6 +2577,27 @@ function responder(el,ok,P,e){
   e.hidden=false;$('btnSeguir').hidden=false;
  }
 }
+/* ===== Recompensas del Modo Difícil ===== */
+const DIF_ASIGS=['Historia','Ciencias','Lenguaje'];   // Matemáticas (Reto de Cálculo) no usa Difícil
+function capDificilCompleto(capId){const r=S.rutas[capId];
+ return !!(r&&Array.isArray(r.progresoDificil)&&r.progresoDificil.length&&r.progresoDificil.every(n=>n.est==='done'));}
+function asignaturaDificilCompleta(asig){const c=CAMPAÑAS.find(x=>x.asignatura===asig);
+ return !!(c&&c.capitulos.every(capDificilCompleto));}
+function asignaturasDificil(){return DIF_ASIGS.filter(asignaturaDificilCompleta);}
+// Otorga las insignias/skin de Difícil por asignaturas completas y sincroniza la marca 🔥.
+// Idempotente: solo premia lo nuevo. Se llama al pasar una etapa/jefe en Difícil y al iniciar.
+function revisarDificil(){
+ const hechas=asignaturasDificil();
+ const ins={Historia:'dif-historia',Ciencias:'dif-ciencias',Lenguaje:'dif-lenguaje'};
+ let nuevo=false;
+ hechas.forEach(asig=>{const id=ins[asig];
+  if(id&&!S.insignias.has(id)){S.insignias.add(id);if(S.insigniaActiva===null)S.insigniaActiva=id;toast(id);nuevo=true;}});
+ if(hechas.length>=3){const sk=SKINS.find(s=>s.id==='kimun-maestro');
+  if(sk&&!S.skins.includes(sk.e)){S.skins.push(sk.e);toast('dif-maestro');nuevo=true;}}
+ if(nuevo){guardar();refreshHud();}
+ if(SB&&MI_PERFIL){try{Promise.resolve(SB.rpc('kimun_dificil',{p_n:hechas.length})).catch(()=>{});}catch(e){}}  // best-effort
+ return hechas.length;
+}
 function avanzar(){Q.idx++;if(Q.idx<Q.preguntas.length)pintaPregunta();else terminarNivel();}
 function terminarNivel(){
  const tot=Q.preguntas.length;
@@ -2590,6 +2639,7 @@ function terminarNivel(){
  }
  $('btnMap').onclick=()=>{renderMapa();renderRanking();go('scr-mapa');};
  refreshHud();guardar();
+ if(dif&&paso)revisarDificil();   // ¿completó una asignatura en Difícil? → insignia/skin + marca 🔥
  if(paso)particulas(window.innerWidth/2,window.innerHeight/3,['🎉','⭐','✨','🎊'],24);
  go('scr-res');
 }

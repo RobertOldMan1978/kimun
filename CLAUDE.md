@@ -1025,4 +1025,21 @@ revisiones independientes del SQL. Diseño y plan en `docs/superpowers/`.
   cian/violeta/rosa). Elemento `#rolNombre` + función `pintarInicio()` (se llama al cargar,
   tras el sync con el servidor, tras canjear y en `go('scr-rol')`). Si hay alumno, el saludo
   reemplaza el subtítulo genérico; si no, se ve el subtítulo normal. Solo `index.html`.
-- **Pendientes:** sin cambios respecto a la Sesión 19.
+- **Recompensas del Modo Difícil (para motivar a estudiar más):** el Difícil era más difícil y
+  rendía MENOS (10 s → menos bono de XP) y no daba recompensa propia. Se hizo con brainstorming →
+  spec (`docs/superpowers/specs/2026-08-17-modo-dificil-recompensas-design.md`) → implementación.
+  Roberto eligió recompensas de **prestigio/estatus, no inflar el XP** (para no distorsionar el
+  ranking). Hito: completar **todos los capítulos de una asignatura en Difícil** (Historia,
+  Ciencias, Lenguaje; Matemáticas queda fuera, tiene su propia dificultad).
+  - **3 insignias 🔥** (`dif-historia/ciencias/lenguaje`), **skin "Kimün Maestro" 🏆** al completar
+    las 3 (bloqueada, emoji hasta que haya arte), y **marca 🔥 social en el ranking** junto a
+    cualquier alumno con Difícil, con **borde animado de 4 colores** (las asignaturas) cuya
+    intensidad sube con el conteo (d1 borde · d2 +brillo · d3 grueso+brillo). Respeta
+    `prefers-reduced-motion`.
+  - **Backend (`supabase/schema.sql`, Roberto lo aplicó):** columna `perfiles.dificil`, función
+    `kimun_dificil(n)` (sube el conteo, como `kimun_xp`) y `kimun_ranking` ahora devuelve `dificil`.
+  - **Cliente (`index.html`):** helpers `asignaturasDificil()` + `revisarDificil()` (otorga
+    insignias/skin, sincroniza el conteo; idempotente, retroactivo al iniciar), llamada al pasar
+    una etapa en Difícil; marca 🔥 con dedupe (evita doble 🔥 en la fila propia). Best-effort: si el
+    backend no está, no rompe (la marca simplemente no aparece).
+- **Pendientes:** sin cambios respecto a la Sesión 19. (Arte de la skin "Kimün Maestro" opcional.)

@@ -50,6 +50,7 @@ create table if not exists public.cursos (
 alter table public.perfiles add column if not exists curso_id      uuid references public.cursos(id) on delete set null;
 alter table public.perfiles add column if not exists xp            int not null default 0;
 alter table public.perfiles add column if not exists codigo_acceso text unique;   -- ALU-XXXX
+alter table public.perfiles add column if not exists dificil       int not null default 0;  -- asignaturas completadas en Modo Difícil
 
 -- Vínculo dispositivo -> perfil (permite jugar en varios equipos)
 create table if not exists public.vinculos (
@@ -247,11 +248,22 @@ declare mi uuid; v int; begin
   update public.perfiles set xp = greatest(xp, coalesce(p_xp,0)) where id=mi returning xp into v;
   return coalesce(v,0); end $$;
 
--- Ranking de mi curso (vacío si no tengo curso)
+-- Sincroniza cuántas asignaturas completó el alumno en Modo Difícil. Solo sube (el estado
+-- de Difícil es local del aparato, como el progreso de campañas), igual que kimun_xp.
+create or replace function public.kimun_dificil(p_n int) returns int
+language plpgsql security definer set search_path=public as $$
+declare mi uuid; v int; begin
+  mi := public.kimun_yo();
+  if mi is null then return 0; end if;
+  update public.perfiles set dificil = greatest(dificil, coalesce(p_n,0)) where id=mi returning dificil into v;
+  return coalesce(v,0); end $$;
+
+-- Ranking de mi curso (vacío si no tengo curso). Devuelve "dificil" para la marca 🔥.
+drop function if exists public.kimun_ranking();
 create or replace function public.kimun_ranking()
-returns table(nombre text, avatar text, xp int, soy_yo boolean, curso text)
+returns table(nombre text, avatar text, xp int, soy_yo boolean, curso text, dificil int)
 language sql security definer set search_path=public as $$
-  select p.nombre, p.avatar, p.xp, coalesce(p.id = public.kimun_yo(), false), c.nombre
+  select p.nombre, p.avatar, p.xp, coalesce(p.id = public.kimun_yo(), false), c.nombre, p.dificil
   from public.perfiles p
   join public.cursos c on c.id = p.curso_id
   where p.curso_id = (select curso_id from public.perfiles where id = public.kimun_yo())
@@ -396,7 +408,7 @@ grant execute on function
   public.kimun_perfil(text,text), public.kimun_buscar(text), public.kimun_jugadores(),
   public.kimun_crear_duelo(text,text,jsonb,int,int), public.kimun_pendientes(),
   public.kimun_responder(uuid,int,int), public.kimun_historial(),
-  public.kimun_yo(), public.kimun_xp(int), public.kimun_ranking(), public.kimun_canjear(text),
+  public.kimun_yo(), public.kimun_xp(int), public.kimun_dificil(int), public.kimun_ranking(), public.kimun_canjear(text),
   public.kimun_admin_curso_crear(text,text), public.kimun_admin_curso_quitar(text,text),
   public.kimun_admin_alumno_agregar(text,text,text,text),
   public.kimun_admin_listar(text), public.kimun_admin_alumno_quitar(text,text),
