@@ -327,6 +327,24 @@ activar el **login anónimo** en Authentication → Sign In / Providers.
   vive en `public`. `gen_random_uuid()` no lo necesita: es nativa de PostgreSQL.
 - **Pendiente:** notificaciones push.
 
+## Trámites pendientes (fuera del código)
+
+> **Recordar estos dos puntos CADA VEZ que se revisen los pendientes del proyecto.**
+> No son tareas de programación, pero bloquean el lanzamiento a producción.
+
+1. **Registrar la marca VULPO en INAPI.** El 2026-08-18 se verificó que estaba
+   *disponible*, pero **no está registrada**. Mientras no se inscriba, cualquiera puede
+   registrarla primero y el proyecto quedaría en el mismo problema que con KIMÜN. Clases
+   relevantes: software y educación. Conviene hacerlo con un abogado de marcas.
+   Trámite: https://www.inapi.cl/marcas
+
+2. **Contratar el dominio propio `vulpo.cl`.** Hoy el juego vive en
+   `robertoldman1978.github.io/vulpo/`. **GitHub Pages NO redirige las direcciones
+   antiguas** —comprobado: la anterior devuelve 404—, así que cualquier cambio de nombre
+   del repositorio rompe todos los enlaces que estén circulando. Un dominio propio elimina
+   esa dependencia y da una dirección estable para colegios y apoderados.
+   Trámite: https://www.nic.cl/
+
 ## Bitácora de sesiones
 
 ### Sesión 1 (2026-08-12)
