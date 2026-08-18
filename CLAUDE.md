@@ -1042,4 +1042,24 @@ revisiones independientes del SQL. Diseño y plan en `docs/superpowers/`.
     insignias/skin, sincroniza el conteo; idempotente, retroactivo al iniciar), llamada al pasar
     una etapa en Difícil; marca 🔥 con dedupe (evita doble 🔥 en la fila propia). Best-effort: si el
     backend no está, no rompe (la marca simplemente no aparece).
-- **Pendientes:** sin cambios respecto a la Sesión 19. (Arte de la skin "Kimün Maestro" opcional.)
+- **Maestría Total (recompensa cumbre + celebración):** logro máximo = **los 4 jefes al
+  máximo** — Historia + Ciencias + Lenguaje **en Difícil** y vencer a **El Autómata** (Reto de
+  Cálculo). `esMaestro()` = `asignaturasDificil().length>=3 && S.calc.jefe`. Diseño en
+  `docs/superpowers/specs/2026-08-18-maestria-total-design.md`.
+  - **Al lograrlo:** (1) **video de celebración** `assets/maestro.mp4` (zorro rey, 10 s, con
+    música épica **"Hero Down"** de Kevin MacLeod, CC BY) — overlay `#maestroOverlay`, una sola
+    vez (flag `S.maestro`), con sonido (es tras una acción del usuario) y botón "Saltar";
+    (2) **skin "Kimün Maestro" 🏆** (arte real integrado, `skin-kimun-maestro.png`, lote 5-bis)
+    — su desbloqueo se movió de 3 → los 4; (3) **cambios visuales permanentes** con la clase
+    `body.es-maestro`: **aura dorada** en el compañero Kimün (`#kimBuddy`/`#kimBuddyCalc`/
+    `#resKim`) y el logo, **halo dorado** en el avatar/HUD, y **marco dorado** en la fila del
+    ranking (`.rk.dif.d4`, sobre los bordes de 4 colores).
+  - **Backend:** SIN migración nueva — reutiliza el `dificil` que ya se sincroniza; ahora el
+    conteo **suma El Autómata** (0–4) y el ranking pinta el marco dorado si `dificil>=4`.
+  - **Bug corregido de paso:** `#maestroOverlay` con `hidden` quedaba visible porque el CSS
+    `id + display:flex` anulaba el atributo; se agregó `#maestroOverlay[hidden]{display:none}`.
+  - **Video de intro/maestro:** ambos se comprimen con ffmpeg (imageio-ffmpeg) y guardan
+    originales en `assets/originales/`. Créditos: añadida atribución de "Hero Down".
+  - Verificado en el navegador (los 4 disparan la maestría, no antes; video una sola vez; aura
+    persiste; ranking d4; sin errores de consola).
+- **Pendientes:** sin cambios respecto a la Sesión 19.

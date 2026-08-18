@@ -117,6 +117,11 @@ input.nm:focus{border-color:var(--cyan)}
   background-size:auto,300% 100%}
 .rk.dif.d2{box-shadow:0 0 12px #ffffff1f}
 .rk.dif.d3{border-width:3px;box-shadow:0 0 22px #8f6bff66,0 0 9px #ffc93c55;animation-duration:3.2s}
+/* Maestría Total: marco dorado sólido, por encima del borde de 4 colores */
+.rk.dif.d4{border:3px solid var(--gold);
+  background:linear-gradient(#3a2c12,#241a49) padding-box, linear-gradient(#ffe07a,#ffc93c,#ff9d3c) border-box;
+  box-shadow:0 0 24px #ffc93c88,0 0 10px #ffe07a66;animation:none}
+.rk.me.dif.d4{background:linear-gradient(#4a3a14,#2e2359) padding-box, linear-gradient(#ffe07a,#ffc93c,#ff9d3c) border-box}
 @keyframes rkflow{to{background-position:0 0,300% 0}}
 @media (prefers-reduced-motion:reduce){.rk.dif{animation:none}}
 
@@ -451,6 +456,18 @@ body.jefe-hit{animation:jefeShake .26s}
   font:900 16px/1 'Nunito',sans-serif;background:#ffffff1f;border:1.5px solid #ffffff66;border-radius:999px;
   padding:12px 22px;backdrop-filter:blur(4px);animation:tapPulse 1.4s ease-in-out infinite}
 @keyframes tapPulse{0%,100%{opacity:.72}50%{opacity:1}}
+/* Maestría Total: aura/halo dorados permanentes */
+body.es-maestro .hud .avatar{border-color:var(--gold)!important;box-shadow:0 0 16px #ffc93c,0 0 6px #ffe07a}
+body.es-maestro #kimBuddy,body.es-maestro #kimBuddyCalc,body.es-maestro #resKim,
+body.es-maestro .badge-img{filter:drop-shadow(0 0 10px #ffc93ccc) drop-shadow(0 0 3px #ffe07a)}
+/* Overlay del video de celebración del Maestro */
+#maestroOverlay{position:fixed;inset:0;z-index:100000;background:#0a0716;display:flex;align-items:center;justify-content:center;transition:opacity .45s ease}
+#maestroOverlay[hidden]{display:none}   /* el id+display:flex anulaba el atributo hidden */
+#maestroOverlay.fade{opacity:0}
+#maestroOverlay video{max-width:100%;max-height:100%;object-fit:contain}
+#maestroSkip{position:fixed;bottom:20px;right:18px;z-index:100001;background:#ffffff1f;color:#fff;border:1.5px solid #ffffff55;
+  border-radius:999px;padding:9px 18px;font:900 13px/1 'Nunito',sans-serif;cursor:pointer;backdrop-filter:blur(4px)}
+#maestroSkip:hover{background:#ffffff33}
 </style>
 </head>
 <body>
@@ -469,6 +486,12 @@ body.jefe-hit{animation:jefeShake .26s}
   <video id="introVid" src="assets/intro.mp4" playsinline preload="auto"></video>
   <div id="introTap">▶ Toca para comenzar</div>
   <button id="introSkip">Saltar ▸</button>
+</div>
+
+<!-- Celebración de la Maestría Total (al vencer a los 4 jefes) -->
+<div id="maestroOverlay" hidden>
+  <video id="maestroVid" src="assets/maestro.mp4" playsinline preload="auto"></video>
+  <button id="maestroSkip">Saltar ▸</button>
 </div>
 
 <div id="creditosModal" class="cred-modal" hidden>
@@ -1088,6 +1111,8 @@ const INSIGNIAS=[
   {id:'dif-ciencias', ic:'🔥', tx:'Ciencias · Difícil', asignatura:'Ciencias'},
   {id:'dif-lenguaje', ic:'🔥', tx:'Lenguaje · Difícil', asignatura:'Lenguaje'},
 ];
+// Asignaturas con Modo Difícil (Matemáticas es el Reto de Cálculo, no usa Difícil).
+const DIF_ASIGS=['Historia','Ciencias','Lenguaje'];
 function campañaDe(asig){return CAMPAÑAS.find(c=>c.asignatura===asig)||null;}
 function campañaPorId(id){return CAMPAÑAS.find(c=>c.id===id)||null;}
 
@@ -1132,7 +1157,7 @@ const LOGROS={
  'dif-historia':{ic:"🔥",tx:"¡Historia en Difícil!"},
  'dif-ciencias':{ic:"🔥",tx:"¡Ciencias en Difícil!"},
  'dif-lenguaje':{ic:"🔥",tx:"¡Lenguaje en Difícil!"},
- 'dif-maestro':{ic:"🏆",tx:"¡Kimün Maestro: las 3 en Difícil!"},
+ 'dif-maestro':{ic:"🏆",tx:"¡MAESTRÍA TOTAL: venciste a los 4 jefes!"},
 };
 
 /* ================= ESTADO ================= */
@@ -1144,7 +1169,8 @@ const S={nombre:"",avatar:AVATARES[0],xp:0,nivel:1,monedas:0,
  campañasCompletas:new Set(), insignias:new Set(), insigniaActiva:null,
  calc:{etapas:[0,0,0,0,0], jefe:false, record:0},
  curso:null,        // {nombre} del curso al que pertenece el alumno
- alumno:null};      // nombre del perfil del servidor, si canjeó un código
+ alumno:null,       // nombre del perfil del servidor, si canjeó un código
+ maestro:false};    // logró la Maestría Total (3 en Difícil + El Autómata) → ya celebrada
 let Q={lvl:0,idx:0,aciertos:0,combo:0,comboMax:0,xpGanado:0,timer:null,t:15,lock:false};
 
 /* Modo de juego: 'normal' | 'dificil' */
@@ -1431,6 +1457,7 @@ function jefeCalcVictoria(){
  clearInterval(RC.timer); const st=calcEstado(), primera=!st.jefe; st.jefe=true;
  if(primera){ if(!S.skins.includes('🧮'))S.skins.push('🧮'); S.insignias.add('maestro-calculo'); if(!S.insigniaActiva)S.insigniaActiva='maestro-calculo'; S.monedas+=500; S.xp+=300; }
  SND.win(); guardar(); refreshHud();
+ revisarDificil();   // vencer a El Autómata puede completar la Maestría Total (los 4 jefes)
  $('calcResStars').textContent='👑';
  $('calcResTit').textContent='¡Venciste a El Autómata!';
  $('calcResSub').textContent=primera?'Ganaste la skin "Kimün Calculista" 🧮 y la insignia "Maestro del Cálculo".':'¡Sigues siendo el maestro del cálculo!';
@@ -1520,7 +1547,7 @@ function guardar(){try{
   nombre:S.nombre,avatar:S.avatar,xp:S.xp,monedas:S.monedas,
   skins:S.skins,logros:[...S.logros], rutaActual:EXP_ACT?EXP_ACT.id:null, rutas:S.rutas,
   campañasCompletas:[...S.campañasCompletas], insignias:[...S.insignias], insigniaActiva:S.insigniaActiva,
-  calc:S.calc, curso:S.curso, alumno:S.alumno}));sincronizarXP();}catch(e){}}
+  calc:S.calc, curso:S.curso, alumno:S.alumno, maestro:S.maestro}));sincronizarXP();}catch(e){}}
 function cargar(){try{const d=JSON.parse(localStorage.getItem(SAVE_KEY)||'null');if(!d)return false;
  S.nombre=d.nombre||"";S.avatar=d.avatar||AVATARES[0];S.xp=d.xp||0;S.monedas=d.monedas||0;
  S.skins=Array.isArray(d.skins)?d.skins:[];S.logros=new Set(d.logros||[]);
@@ -1528,7 +1555,7 @@ function cargar(){try{const d=JSON.parse(localStorage.getItem(SAVE_KEY)||'null')
  S.insignias=new Set(d.insignias||[]);
  S.insigniaActiva=d.insigniaActiva||null;
  if(d.calc&&Array.isArray(d.calc.etapas))S.calc=d.calc;
- S.curso=d.curso||null; S.alumno=d.alumno||null;
+ S.curso=d.curso||null; S.alumno=d.alumno||null; S.maestro=!!d.maestro;
  S.rutas=(d.rutas&&typeof d.rutas==='object')?d.rutas:{};
  if(!d.rutas && Array.isArray(d.progreso)){ // migrar partidas antiguas (Historia)
   S.rutas['hist-europeos']={progreso:d.progreso,
@@ -1619,7 +1646,7 @@ const SKINS=[{e:"🐲",p:120},{e:"🦄",p:150},{e:"🦖",p:180},{e:"🐙",p:100}
  {id:'kimun-calculista', e:"🧮", img:'assets/kimun-calculista.png', nombre:'Kimün Calculista', bloqueada:true, req:'Vence a El Autómata'},
  {id:'kimun-escritor', e:"🖋️", img:'assets/kimun-escritor.png', nombre:'Kimün Escritor', bloqueada:true, desbloqueaCon:'leng', req:'Vence a Lenguaje'},
  // Skin maestra: se gana completando las 3 asignaturas en Modo Difícil (emoji hasta que haya arte).
- {id:'kimun-maestro', e:"🏆", nombre:'Kimün Maestro', bloqueada:true, req:'Vence las 3 en Difícil'}];
+ {id:'kimun-maestro', e:"🏆", img:'assets/skin-kimun-maestro.png', nombre:'Kimün Maestro', bloqueada:true, req:'Vence los 4 jefes (3 en Difícil + El Autómata)'}];
 // Si el avatar equipado es una skin con imagen, devuelve su ruta; si no, null.
 function skinImg(av){const s=SKINS.find(k=>k.e===av&&k.img);return s?s.img:null;}
 // HTML del avatar: <img> si la skin tiene imagen, o el emoji tal cual.
@@ -1735,6 +1762,7 @@ function finDuelo(){
  window.estrellaFugaz=estrellaFugaz;
  cargar();
  pintarInicio();
+ aplicarMaestria();   // aura dorada si ya es maestro (no depende del servidor)
  // Perfil en el servidor desde el inicio (antes solo se creaba al entrar al duelo).
  // No bloquea: si falla, el juego funciona igual y se reintenta en la próxima sesión.
  setTimeout(async ()=>{
@@ -2459,7 +2487,7 @@ function pintarRanking(filas){
   const ins=r.soy_yo?insigniaIc():'';
   // Evita el 🔥 duplicado: si la insignia lucida ya es 🔥, no repetir la marca.
   const pre=(marca&&ins.trim()==='🔥')?ins:(marca+ins);
-  const difcls=(r.dificil>0)?(' dif d'+Math.min(3,r.dificil)):'';
+  const difcls=(r.dificil>0)?(' dif d'+Math.min(4,r.dificil)):'';   // d4 = maestría total (marco dorado)
   return `<div class="rk ${i<1?'top':''} ${r.soy_yo?'me':''}${difcls}"><div class="pos">${i+1}</div>
    <div class="em">${r.soy_yo?avatarHTML(S.avatar):admEsc(r.avatar)}</div>
    <div>${pre}${admEsc(r.nombre)}${r.soy_yo?' (tú)':''}</div>
@@ -2578,25 +2606,53 @@ function responder(el,ok,P,e){
  }
 }
 /* ===== Recompensas del Modo Difícil ===== */
-const DIF_ASIGS=['Historia','Ciencias','Lenguaje'];   // Matemáticas (Reto de Cálculo) no usa Difícil
 function capDificilCompleto(capId){const r=S.rutas[capId];
  return !!(r&&Array.isArray(r.progresoDificil)&&r.progresoDificil.length&&r.progresoDificil.every(n=>n.est==='done'));}
 function asignaturaDificilCompleta(asig){const c=CAMPAÑAS.find(x=>x.asignatura===asig);
  return !!(c&&c.capitulos.every(capDificilCompleto));}
 function asignaturasDificil(){return DIF_ASIGS.filter(asignaturaDificilCompleta);}
-// Otorga las insignias/skin de Difícil por asignaturas completas y sincroniza la marca 🔥.
-// Idempotente: solo premia lo nuevo. Se llama al pasar una etapa/jefe en Difícil y al iniciar.
+// Maestría Total = 3 asignaturas en Difícil + vencer a El Autómata (los 4 jefes al máximo).
+function esMaestro(){return asignaturasDificil().length>=3 && !!(S.calc&&S.calc.jefe);}
+// Aura/halo dorados permanentes mientras se es maestro (clase en el body).
+function aplicarMaestria(){document.body.classList.toggle('es-maestro', esMaestro());}
+// La primera vez que se logra la maestría: skin cumbre + video de celebración.
+function revisarMaestria(){
+ aplicarMaestria();
+ if(esMaestro() && !S.maestro){
+  S.maestro=true;
+  const sk=SKINS.find(s=>s.id==='kimun-maestro');
+  if(sk&&!S.skins.includes(sk.e))S.skins.push(sk.e);
+  guardar(); refreshHud(); aplicarMaestria();
+  toast('dif-maestro');
+  reproducirMaestro();
+ }
+}
+// Otorga las insignias de Difícil por asignatura, sincroniza la marca (0–4, incluye El
+// Autómata) y revisa la maestría. Idempotente. Se llama al pasar una etapa en Difícil,
+// al vencer a El Autómata y al iniciar.
 function revisarDificil(){
  const hechas=asignaturasDificil();
  const ins={Historia:'dif-historia',Ciencias:'dif-ciencias',Lenguaje:'dif-lenguaje'};
  let nuevo=false;
  hechas.forEach(asig=>{const id=ins[asig];
   if(id&&!S.insignias.has(id)){S.insignias.add(id);if(S.insigniaActiva===null)S.insigniaActiva=id;toast(id);nuevo=true;}});
- if(hechas.length>=3){const sk=SKINS.find(s=>s.id==='kimun-maestro');
-  if(sk&&!S.skins.includes(sk.e)){S.skins.push(sk.e);toast('dif-maestro');nuevo=true;}}
  if(nuevo){guardar();refreshHud();}
- if(SB&&MI_PERFIL){try{Promise.resolve(SB.rpc('kimun_dificil',{p_n:hechas.length})).catch(()=>{});}catch(e){}}  // best-effort
- return hechas.length;
+ const cnt=hechas.length+((S.calc&&S.calc.jefe)?1:0);   // 0–4: suma El Autómata
+ if(SB&&MI_PERFIL){try{Promise.resolve(SB.rpc('kimun_dificil',{p_n:cnt})).catch(()=>{});}catch(e){}}  // best-effort
+ revisarMaestria();
+ return cnt;
+}
+// Video de celebración de la Maestría Total (una vez; con sonido, es tras una acción del usuario).
+function reproducirMaestro(){
+ const ov=$('maestroOverlay'),vid=$('maestroVid'),skip=$('maestroSkip'); if(!ov)return;
+ ov.hidden=false; ov.classList.remove('fade');
+ let cerrado=false,guard=null;
+ function cerrar(){if(cerrado)return;cerrado=true;clearTimeout(guard);try{vid.pause();}catch(e){}
+  ov.classList.add('fade');setTimeout(()=>{ov.hidden=true;ov.classList.remove('fade');},480);}
+ skip.onclick=cerrar; vid.onended=cerrar;
+ vid.addEventListener('playing',()=>{clearTimeout(guard);guard=setTimeout(cerrar,12000);},{once:true});
+ vid.currentTime=0; vid.muted=false;
+ const p=vid.play(); if(p&&p.catch)p.catch(()=>{vid.muted=true;const q=vid.play();if(q&&q.catch)q.catch(()=>cerrar());});
 }
 function avanzar(){Q.idx++;if(Q.idx<Q.preguntas.length)pintaPregunta();else terminarNivel();}
 function terminarNivel(){
