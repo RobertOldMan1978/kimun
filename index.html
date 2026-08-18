@@ -1878,8 +1878,12 @@ async function admListar(){
    if(f.codigo_acceso) porCurso[f.curso_codigo].alumnos.push(f); });
  $('admLista').innerHTML=Object.entries(porCurso).map(([cod,c])=>
   `<div style="margin-bottom:14px">
-     <b style="color:var(--gold)">${admEsc(c.nombre)}</b>
-     <small style="color:var(--cyan);font-weight:900"> ${admEsc(cod)}</small>
+     <div style="display:flex;align-items:center;gap:8px">
+       <b style="color:var(--gold);flex:1">${admEsc(c.nombre)}<small style="color:var(--cyan);font-weight:900"> ${admEsc(cod)}</small></b>
+       <button class="adm-curso-del" data-cod="${admEsc(cod)}" data-nombre="${admEsc(c.nombre)}" data-n="${c.alumnos.length}"
+               title="Eliminar curso"
+               style="background:none;border:none;color:var(--pink);font-weight:900;font-size:16px;cursor:pointer">🗑️</button>
+     </div>
      ${c.alumnos.length?c.alumnos.map(a=>
        `<div style="display:flex;align-items:center;gap:8px;padding:6px 0;border-bottom:1px solid #ffffff14">
           <span>${admEsc(a.avatar)}</span><b style="flex:1">${admEsc(a.alumno)}</b>
@@ -1893,6 +1897,19 @@ async function admListar(){
         </div>`).join('')
       :'<p style="color:var(--dim);font-weight:800;font-size:12px">Sin alumnos todavía.</p>'}
    </div>`).join('') || '<p style="color:var(--dim);font-weight:800;font-size:13px">Aún no hay cursos.</p>';
+ // Eliminar curso completo (borra el curso y sus alumnos inscritos + su ranking)
+ $('admLista').querySelectorAll('.adm-curso-del').forEach(b=>b.onclick=async ()=>{
+  const nombre=b.dataset.nombre||'este curso', n=Number(b.dataset.n)||0;
+  const msg='¿Eliminar el curso "'+nombre+'"?\n\n'
+    +(n>0?('Se borrarán también sus '+n+' alumno'+(n===1?'':'s')+' y su lugar en el ranking.\n\n'):'')
+    +'Esta acción no se puede deshacer.';
+  if(!confirm(msg)) return;
+  admAviso(''); b.disabled=true;
+  try{ const {error}=await SB.rpc('kimun_admin_curso_quitar',{p_clave:ADM_CLAVE,p_curso_codigo:b.dataset.cod});
+       if(error) throw error;
+       await admListar(); admAviso('Curso eliminado','var(--green)'); }
+  catch(e){ b.disabled=false; admAviso(admError(e)); }
+ });
  // Eliminar alumno (el diseño no contempla editar: se borra y se agrega de nuevo)
  $('admLista').querySelectorAll('.adm-del').forEach(b=>b.onclick=async ()=>{
   if(!confirm('¿Eliminar a este alumno? Perderá su lugar en el ranking.')) return;

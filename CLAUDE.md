@@ -996,3 +996,19 @@ revisiones independientes del SQL. Diseño y plan en `docs/superpowers/`.
   (la lista de rivales del duelo trae 18 entradas, casi todas de pruebas); dar la vuelta
   manual y decidir el paso a **v1**; los ~22 MB de originales y el huérfano
   `portada-mate-algebra.png`; duelo en 2 celulares; notificaciones push.
+
+### Sesión 20 (2026-08-17)
+- **Sincronización (orden 99):** llegó desde el otro PC la feature de Cursos y ranking real
+  (Sesiones 18-19) + las portadas de capítulo de Historia y Ciencias (lote 6).
+- **Botón para eliminar cursos (Modo Admin):** faltaba en el panel de cursos (solo se podían
+  crear cursos y agregar/quitar alumnos). Ahora cada curso tiene un botón **🗑️** junto a su
+  nombre que, tras confirmar (avisa que borra también sus alumnos y su lugar en el ranking),
+  elimina el curso.
+  - **Backend (`supabase/schema.sql`):** función nueva `kimun_admin_curso_quitar(clave,
+    curso_codigo)` (SECURITY DEFINER, valida la clave con `kimun_admin_ok`): borra los
+    `perfiles` con ese `curso_id` (arrastra sus duelos por cascade) y luego el curso;
+    devuelve cuántos alumnos borró. Agregada al `grant`. **Roberto la aplicó en Supabase.**
+  - **Juego (`index.html`):** botón `.adm-curso-del` en el encabezado de cada curso de
+    `admListar`, con confirmación destructiva y refresco de la lista. Reusa el patrón del
+    borrado de alumno y el traductor de errores `admError` (usa `curso_invalido`, ya definido).
+- **Pendientes:** sin cambios respecto a la Sesión 19.

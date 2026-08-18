@@ -292,6 +292,21 @@ declare r public.cursos; begin
   values (trim(p_nombre), public.kimun_gen_codigo_curso()) returning * into r;
   return r; end $$;
 
+-- Elimina un curso completo: borra sus alumnos inscritos (y, por cascade, sus
+-- duelos) y luego el curso. Devuelve cuántos alumnos se borraron. Avisa si el
+-- código no existe para no confundir un curso ya borrado con uno mal escrito.
+drop function if exists public.kimun_admin_curso_quitar(text,text);
+create or replace function public.kimun_admin_curso_quitar(p_clave text, p_curso_codigo text)
+returns int language plpgsql security definer set search_path=public as $$
+declare cid uuid; n int; begin
+  if not public.kimun_admin_ok(p_clave) then raise exception 'clave_invalida'; end if;
+  select id into cid from public.cursos where codigo = upper(trim(p_curso_codigo));
+  if cid is null then raise exception 'curso_invalido'; end if;
+  delete from public.perfiles where curso_id = cid;   -- alumnos del curso (arrastra sus duelos)
+  get diagnostics n = row_count;
+  delete from public.cursos where id = cid;
+  return n; end $$;
+
 create or replace function public.kimun_admin_alumno_agregar(p_clave text, p_curso_codigo text, p_nombre text, p_avatar text)
 returns public.perfiles language plpgsql security definer set search_path=public as $$
 declare r public.perfiles; c public.cursos; begin
@@ -382,7 +397,8 @@ grant execute on function
   public.kimun_crear_duelo(text,text,jsonb,int,int), public.kimun_pendientes(),
   public.kimun_responder(uuid,int,int), public.kimun_historial(),
   public.kimun_yo(), public.kimun_xp(int), public.kimun_ranking(), public.kimun_canjear(text),
-  public.kimun_admin_curso_crear(text,text), public.kimun_admin_alumno_agregar(text,text,text,text),
+  public.kimun_admin_curso_crear(text,text), public.kimun_admin_curso_quitar(text,text),
+  public.kimun_admin_alumno_agregar(text,text,text,text),
   public.kimun_admin_listar(text), public.kimun_admin_alumno_quitar(text,text),
   public.kimun_admin_xp_fijar(text,text,int),
   public.kimun_admin_limpiar_pruebas(text,boolean)
