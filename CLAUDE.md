@@ -1011,4 +1011,13 @@ revisiones independientes del SQL. Diseño y plan en `docs/superpowers/`.
   - **Juego (`index.html`):** botón `.adm-curso-del` en el encabezado de cada curso de
     `admListar`, con confirmación destructiva y refresco de la lista. Reusa el patrón del
     borrado de alumno y el traductor de errores `admError` (usa `curso_invalido`, ya definido).
+- **Contraseña de Admin unificada (Cursos + Tablero):** había dos claves distintas —la de
+  Cursos (servidor, bcrypt en `config.admin_clave`) y la del Tablero (bloqueo suave
+  `CLAVE_ADMIN` en `generar-tablero.py`). Roberto eligió el enfoque **simple: una sola clave**
+  para ambos, asumiendo que la de Cursos baja a "bloqueo suave" (queda en el repo vía el
+  tablero). Se estandarizó en la que ya usaba el tablero (`112358`); Roberto la fijó en
+  Supabase con `update public.config set valor = crypt('112358', gen_salt('bf',10)) where
+  clave='admin_clave';`. Sin cambios en el repo (el tablero ya estaba en ese valor). Nota:
+  esa clave también permite borrar cursos/alumnos; se puede endurecer cambiando `CLAVE_ADMIN`
+  + regenerar el tablero + re-ejecutar el `update` con el nuevo valor.
 - **Pendientes:** sin cambios respecto a la Sesión 19.
