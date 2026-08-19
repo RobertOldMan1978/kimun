@@ -293,7 +293,16 @@ async function accion(fn, exito){
     if(error) throw error;
     await pintarLista();
     aviso(exito,'var(--green)');
-  }catch(e){ aviso(traducir(e)); }
+  }catch(e){
+    // Dentro del panel, "no autorizado" casi siempre significa que el curso o el
+    // alumno ya no existe —lo borró otra pestaña, u otro profesor—, no que falten
+    // permisos. El servidor responde lo mismo en ambos casos a propósito: separarlos
+    // permitiría descubrir qué códigos existen probándolos uno por uno.
+    aviso(esNoAutorizado(e)
+      ? 'No tienes permiso para esto, o el curso o alumno ya no existe.'
+      : traducir(e));
+    try{ await pintarLista(); }catch(_){}   // refresca para mostrar la realidad
+  }
 }
 
 async function limpiarPruebas(){

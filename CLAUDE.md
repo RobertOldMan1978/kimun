@@ -1214,9 +1214,18 @@ en cuentas reales con aislamiento entre docentes.
 - **Límites conocidos:** el correo integrado de Supabase permite **2 envíos por hora**, así
   que para un colegio real hace falta SMTP propio (Resend o Brevo) antes de dar de alta
   varios profesores; sin él, tampoco hay autorrecuperación de contraseña.
-- **Pendiente de verificación:** el **aislamiento entre dos profesores** —que un docente no
-  pueda tocar los cursos de otro— está implementado y revisado, pero no se probó con dos
-  cuentas reales. Es la prueba que le da sentido a la feature.
+- **Aislamiento VERIFICADO con dos cuentas reales.** Roberto creó un profesor de prueba y,
+  desde su sesión, llamó directamente a las funciones del servidor saltándose la interfaz:
+  `kimun_prof_curso_quitar` sobre el curso del administrador y `kimun_prof_xp_fijar` sobre un
+  alumno ajeno. **Ambas respondieron `no_autorizado`** y los datos quedaron intactos. Además,
+  el profesor de prueba ve "Mis cursos" en vez de "Todos los cursos", no ve los cursos ajenos
+  y no tiene sección de administración.
+- **Confusión detectada al probar, y corregida:** el servidor responde `no_autorizado` tanto
+  cuando faltan permisos como cuando el curso no existe —es deliberado, separarlos permitiría
+  descubrir qué códigos existen probándolos—, pero el panel mostraba "No tienes permiso" a un
+  profesor que simplemente había borrado su propio curso en otra pestaña. Ahora el mensaje
+  dice "No tienes permiso para esto, o el curso o alumno ya no existe" y la lista se refresca
+  sola tras un fallo, para no seguir mostrando algo que ya no está.
 - **Nota:** el curso "8vo csfs" y sus cuatro alumnos ya no existían al llegar aquí; se habían
   borrado antes del cambio. Los códigos `ALU-` entregados quedaron sin efecto.
 - **Pendientes:** probar el aislamiento con un segundo profesor; crear el curso real de los
