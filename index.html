@@ -1102,7 +1102,8 @@ function buildPreguntas(lvl){
   sel=[];c.oas.forEach(oa=>{sel=sel.concat(pickN(POOL[oa],per));});
   sel=pickN(sel,N);
  }else{sel=pickN(POOL[c.oa],N);}
- return sel.map(q=>({q:q.pregunta,ops:q.opciones,ok:q.correcta,tip:q.tip}));
+ // Se conserva el `oa` de cada pregunta: lo necesita el mapa de dominio del profesor.
+ return sel.map(q=>({q:q.pregunta,ops:q.opciones,ok:q.correcta,tip:q.tip,oa:q.oa}));
 }
 function poolListo(lvl){
  const c=EXPEDICION[lvl];
@@ -1585,6 +1586,50 @@ function sincronizarXP(){
  }, espera);
 }
 
+/* ===== Dominio por objetivo de aprendizaje =====
+   Se acumula en memoria durante la etapa y se envía un resumen al terminarla.
+   El niño no ve nada de esto y nunca se le interrumpe el juego. */
+let DOM_BUF = {};                       // { "HI08 OA 04": {n:6, ok:4} }
+const DOM_PEND = 'kimun_dom_pend';      // resúmenes que no se pudieron enviar
+
+function registrarOA(oa, ok){
+ if(QA) return;                         // el modo QA marca las respuestas: no mide nada
+ if(!oa) return;
+ const d = DOM_BUF[oa] || (DOM_BUF[oa] = {n:0, ok:0});
+ d.n++; if(ok) d.ok++;
+}
+
+// Convierte el acumulador en el arreglo que espera el servidor y lo vacía.
+function cerrarDominio(){
+ const datos = Object.keys(DOM_BUF).map(oa => ({oa, n:DOM_BUF[oa].n, ok:DOM_BUF[oa].ok}));
+ DOM_BUF = {};
+ return datos;
+}
+
+async function enviarDominio(){
+ try{
+  let datos = cerrarDominio();
+  // Se suman los resúmenes que quedaron pendientes de un intento anterior.
+  try{ const p = JSON.parse(localStorage.getItem(DOM_PEND)||'[]');
+       if(Array.isArray(p) && p.length) datos = p.concat(datos); }catch(e){}
+  if(!datos.length) return;
+  if(!SB || !MI_PERFIL){ guardarPendiente(datos); return; }
+  try{
+   const {error} = await SB.rpc('kimun_dominio',{p_datos:datos});
+   if(error) throw error;
+   localStorage.removeItem(DOM_PEND);
+  }catch(e){
+   console.error('Dominio:', e.message||e);
+   guardarPendiente(datos);             // se reintenta al terminar la próxima etapa
+  }
+ }catch(e){ console.error('Dominio:', e.message||e); }  // best-effort: nunca interrumpe la partida
+}
+
+function guardarPendiente(datos){
+ // Se acota para que un teléfono sin conexión durante días no acumule sin límite.
+ try{ localStorage.setItem(DOM_PEND, JSON.stringify(datos.slice(-200))); }catch(e){}
+}
+
 /* ================= TIENDA DE SKINS ================= */
 const SKINS=[{e:"🐲",p:120},{e:"🦄",p:150},{e:"🦖",p:180},{e:"🐙",p:100},{e:"🦉",p:80},{e:"🚀",p:220},{e:"🧙",p:260},{e:"👑",p:350},
  {e:"🌠",img:'assets/skin-kimun-astronauta.png',nombre:'Vulpi Astronauta',p:450},
@@ -1910,7 +1955,8 @@ let JF=null; // {camp,fase,idx,preguntas,vidaMax,vida,vidas,lock}
 function jefePreguntasFase(camp,faseIdx){
  const f=camp.jefeFinal.fases[faseIdx], n=camp.jefeFinal.nPorFase, per=Math.max(1,Math.ceil(n/f.oas.length));
  let sel=[]; f.oas.forEach(oa=>{sel=sel.concat(pickN(POOL[oa]||[],per));});
- return pickN(sel,n).map(q=>({q:q.pregunta,ops:q.opciones,ok:q.correcta,tip:q.tip}));
+ // Igual que en las etapas: se conserva el `oa` para el mapa de dominio.
+ return pickN(sel,n).map(q=>({q:q.pregunta,ops:q.opciones,ok:q.correcta,tip:q.tip,oa:q.oa}));
 }
 function iniciarJefeFinal(camp){
  const capExp=EXPEDICIONES.find(e=>e.id===camp.capitulos[0]);
@@ -1956,6 +2002,7 @@ function renderJefePregunta(){
 }
 function responderJefe(el,ok){
  if(JF.lock)return; JF.lock=true;
+ registrarOA(JF.preguntas[JF.idx] && JF.preguntas[JF.idx].oa, ok);   // mapa de dominio
  document.querySelectorAll('#jfOpts .opt').forEach(o=>o.classList.add('off'));
  if(ok){ SND.hit(); JF.vida=Math.max(0,JF.vida-1);
   if(el){el.classList.remove('off');el.classList.add('ok');}
@@ -1968,7 +2015,7 @@ function responderJefe(el,ok){
  }
  pintarHudJefe();
  setTimeout(()=>{
-  if(JF.vidas<=0){ return jefeDerrota(); }
+  if(JF.vidas<=0){ enviarDominio(); return jefeDerrota(); }   // no se pierde lo que sí respondió
   if(JF.vida<=0){ return jefeVictoria(); }
   JF.idx++;
   if(JF.idx>=JF.preguntas.length){ // fin de fase → siguiente fase
@@ -2015,6 +2062,7 @@ function renderJefeVictoria(){
  items.push(`<div class="jw-item"><span class="jw-ic">👑</span><div><b>Corona dorada</b><small>en la tarjeta de ${camp.asignatura}</small></div></div>`);
  items.push(`<div class="jw-item"><span class="jw-ic">🎁</span><div><b>Bono</b><small>+${r.bonoMonedas||0} monedas · +${r.bonoXP||0} XP</small></div></div>`);
  $('jwRecompensas').innerHTML=items.join('');
+ enviarDominio();
  go('scr-jefe-win');
 }
 $('jwBack').onclick=()=>{SND.tap();go('scr-campana');renderCampaña();};
@@ -2382,6 +2430,7 @@ function pintaPregunta(){
 }
 function responder(el,ok,P,e){
  if(Q.lock)return;Q.lock=true;clearInterval(Q.timer);
+ registrarOA(P&&P.oa, ok);            // mapa de dominio (no registra en modo QA)
  document.querySelectorAll('.opt').forEach(o=>o.classList.add('off'));
  if(ok){
   Q.combo++;Q.comboMax=Math.max(Q.comboMax,Q.combo);Q.aciertos++;
@@ -2505,7 +2554,7 @@ function terminarNivel(){
   $('btnNext').onclick=()=>startQuiz(Q.lvl);
  }
  $('btnMap').onclick=()=>{renderMapa();renderRanking();go('scr-mapa');};
- refreshHud();guardar();
+ refreshHud();guardar();enviarDominio();
  if(dif&&paso)revisarDificil();   // ¿completó una asignatura en Difícil? → insignia/skin + marca 🔥
  if(paso)particulas(window.innerWidth/2,window.innerHeight/3,['🎉','⭐','✨','🎊'],24);
  go('scr-res');

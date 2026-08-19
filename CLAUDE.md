@@ -293,6 +293,45 @@ Diseño y plan del rol de profesor:
 `docs/superpowers/specs/2026-08-18-rol-profesor-design.md` y
 `docs/superpowers/plans/2026-08-18-rol-profesor.md`.
 
+### Mapa de dominio por OA (avance del curso y del alumno)
+
+Responde la pregunta que el XP no contesta: **qué entienden los alumnos**, objetivo
+por objetivo, para decidir qué reforzar en clase. Vive en `profesor.html`.
+
+**Cómo se usa:** en el panel, **"📊 Ver avance"** junto al nombre de cada curso abre
+la tabla del curso completo, y el botón **📊** de cada alumno abre la suya. La tabla
+va **de peor a mejor porcentaje**, así que lo que hay que reforzar queda arriba,
+muestra el **texto del objetivo** (no su código: `HI08 OA 04` no le dice nada a
+nadie; el panel lo carga desde `contenido/<asignatura>/oa.json`) y **cuántas
+preguntas respaldan cada porcentaje**. Los objetivos con menos de diez respuestas se
+ven atenuados, porque un 45% de 4 preguntas no significa lo mismo que uno de 40. Un
+objetivo que nadie jugó **no aparece**: mostrarlo como 0% se leería como "no lo
+entienden" cuando en realidad es "todavía no lo ven".
+
+**Qué se mide:** solo las **campañas y los jefes finales**. El duelo queda fuera
+porque es contra el reloj y se falla por apuro, y el Reto de Cálculo genera sus
+operaciones al vuelo, sin objetivo asociado. El **Modo Difícil sí cuenta** (usa las
+mismas preguntas del banco) y el **modo QA (`?qa=1`) no registra nada**, para que las
+pruebas del desarrollador no ensucien el mapa.
+
+**Qué se guarda:** contadores por alumno y objetivo (respondidas y correctas) en la
+tabla `dominio`, **no las respuestas**. No queda registro de qué pregunta falló ni de
+cuándo, así que no se puede reconstruir la sesión de un niño. El juego acumula en
+memoria durante la etapa y envía un resumen al terminarla; si no hay señal, queda
+pendiente en el teléfono y se reintenta después, sin interrumpir la partida.
+
+**🔄 Reiniciar mediciones** (por curso, con confirmación) pone los contadores en
+cero. Existe porque **acumulan todo el año**: un alumno que falló mucho en marzo y
+hoy domina el tema arrastraría un porcentaje bajo. Sirve al empezar una unidad o un
+semestre. No borra alumnos ni XP, y no toca los otros cursos.
+
+> **No sirve para calificar**, y la pantalla lo dice con todas sus letras: el dato lo
+> reporta el teléfono del alumno, igual que el XP, así que es falsificable por alguien
+> que sepa. Es una brújula para decidir qué repasar, no una nota.
+
+Diseño y plan: `docs/superpowers/specs/2026-08-18-mapa-dominio-oa-design.md` y
+`docs/superpowers/plans/2026-08-18-mapa-dominio-oa.md`.
+
 ### Consolidar el pool de preguntas (`scripts/consolidar-pool.py`)
 
 Une los archivos verificados, elimina duplicados, **baraja las opciones** (evita
@@ -361,6 +400,11 @@ Providers, y dejar activada la **confirmación de correo** para las cuentas de p
   otorga a nadie desde afuera. Reemplazaron por completo a las viejas `kimun_admin_*`,
   que fueron eliminadas junto con la clave global. Ver "Cursos, profesores y ranking
   real" en Herramientas de desarrollo.
+- **Dominio por OA (Sesión 22):** tabla `dominio` (una fila por alumno y objetivo, con
+  contadores; se borra en cascada junto con el alumno), `kimun_dominio` para registrar
+  desde el juego y `kimun_prof_dominio`, `kimun_prof_dominio_alumno` y
+  `kimun_prof_dominio_reiniciar` para el panel. Ver "Mapa de dominio por OA" en
+  Herramientas de desarrollo.
 - **Cuidado al editar el esquema:** `gen_random_uuid()` es nativa de PostgreSQL y no
   necesita nada especial, pero si alguna función vuelve a usar pgcrypto (`crypt`,
   `gen_salt`) necesita `set search_path = public, extensions`, porque en Supabase esa
@@ -1231,3 +1275,48 @@ en cuentas reales con aislamiento entre docentes.
 - **Pendientes:** probar el aislamiento con un segundo profesor; crear el curso real de los
   niños y que canjeen sus códigos; los dos trámites (marca en INAPI y dominio `vulpo.cl`);
   configurar SMTP; la vuelta manual para decidir la v1; duelo en 2 celulares; push.
+
+### Sesión 23 (2026-08-18) — Mapa de dominio por OA
+Primera herramienta pensada para el **adulto** y no para el niño: el profesor ve, por
+objetivo de aprendizaje, cómo va su curso y cada alumno, para decidir qué reforzar. Hecha
+con el flujo brainstorming → spec → plan → subagentes, con revisión de seguridad aparte.
+- **El problema:** el XP mide cuánto juega un niño, no qué entiende. Cada pregunta ya traía
+  su campo `oa`, pero nada de eso subía al servidor.
+- **Decisiones (Roberto):** se ve **el curso y también cada alumno**; se guardan
+  **contadores por alumno y objetivo** (no cada respuesta, por privacidad y volumen); y solo
+  cuentan **campaña y jefes**, no el duelo (contra el reloj, se falla por apuro) ni el Reto
+  de Cálculo (operaciones generadas al vuelo, sin OA).
+- **Backend:** tabla `dominio` (perfil, oa, respondidas, correctas), `kimun_dominio(jsonb)`
+  que suma el resumen de cada etapa, y `kimun_prof_dominio`, `kimun_prof_dominio_alumno` y
+  `kimun_prof_dominio_reiniciar` con el aislamiento por curso ya probado.
+- **Juego:** acumulador en memoria durante la etapa y envío al terminar; el **modo QA no
+  registra**; los envíos fallidos quedan pendientes y se reintentan. Nada interrumpe la
+  partida.
+- **Panel:** botón "📊 Ver avance" por curso y 📊 por alumno; tabla ordenada de peor a mejor
+  con el **texto real del objetivo** (leído de `contenido/<asignatura>/oa.json`), la barra de
+  color y **cuántas preguntas respaldan cada porcentaje**; botón de reinicio de mediciones.
+- **Dos fallos silenciosos que se atajaron al implementar:**
+  - `buildPreguntas` y `jefePreguntasFase` **descartaban el campo `oa`** al armar las
+    preguntas. Con el plan tal cual, la tabla habría quedado **vacía para siempre sin ningún
+    error visible**. Fue el hallazgo más importante de la sesión.
+  - El backend descarta las entradas cuyo código no calce con `^[A-Z]{2}[0-9]{2} OA [0-9]{2}$`.
+    La expresión se contrastó contra las **2.314 preguntas y los 69 códigos reales** antes de
+    dejarla: un código legítimo que no calzara habría dejado ese objetivo sin medir, también
+    en silencio.
+  - Además, un cast sin validar podía perder un lote entero y dejarlo reintentándose para
+    siempre, y una referencia calificada con esquema en un `ON CONFLICT` podía fallar recién
+    en producción (los cuerpos plpgsql no se validan al crearse). Ambas corregidas, la
+    segunda también en `kimun_prof_alta`, que ya estaba aplicada.
+- **Decisión registrada:** una etapa abandonada a medias **no se descarta**; lo respondido
+  viaja con el resumen de la siguiente etapa terminada. Son respuestas reales, y un alumno
+  que abandona tras fallar es información útil. El jefe abandonado sí se pierde.
+- **Probado con datos reales:** una etapa jugada por la interfaz registró exactamente 6
+  respondidas y 4 correctas. Después se simuló un curso completo —**30 alumnos, ~460
+  respuestas en 77 registros**— con dificultad distinta por asignatura, para ver el informe
+  con contraste.
+- **Límite asumido y visible en pantalla:** **no sirve para calificar**; el dato lo reporta
+  el teléfono del alumno, igual que el XP.
+- **Pendientes:** que Roberto revise el informe con su cuenta; borrar el curso de simulación;
+  Matemáticas no aparece en el mapa (habría que mapear los niveles del Reto a los OA de
+  Números si se quiere cubrir); los dos trámites (INAPI y `vulpo.cl`); SMTP antes de dar de
+  alta profesores reales; la vuelta manual para decidir la v1; duelo en 2 celulares; push.

@@ -93,6 +93,19 @@ create table if not exists public.profesores_autorizados (
   creado       timestamptz not null default now()
 );
 
+-- Dominio por objetivo de aprendizaje: una fila por alumno y OA. Se guardan
+-- contadores, no respuestas: no queda registro de qué pregunta falló ni cuándo,
+-- así que no se puede reconstruir la sesión de un niño.
+create table if not exists public.dominio (
+  perfil_id   uuid not null references public.perfiles(id) on delete cascade,
+  oa          text not null,                    -- "HI08 OA 01"
+  respondidas int  not null default 0,
+  correctas   int  not null default 0,
+  actualizado timestamptz not null default now(),
+  primary key (perfil_id, oa)
+);
+create index if not exists idx_dominio_perfil on public.dominio(perfil_id);
+
 -- Dueño del curso. Nulo = curso huérfano, visible solo para administradores.
 alter table public.cursos add column if not exists profesor_id uuid
   references public.profesores(id) on delete set null;
@@ -130,6 +143,7 @@ alter table public.duelos   enable row level security;
 alter table public.cursos   enable row level security;
 alter table public.vinculos enable row level security;
 alter table public.config   enable row level security;
+alter table public.dominio  enable row level security;
 -- Sin políticas, igual que el resto del esquema. Importa especialmente en
 -- profesores_autorizados, porque revela qué correos pueden registrarse.
 alter table public.profesores             enable row level security;
@@ -304,6 +318,50 @@ declare mi uuid; v int; begin
   update public.perfiles set dificil = greatest(dificil, coalesce(p_n,0)) where id=mi returning dificil into v;
   return coalesce(v,0); end $$;
 
+-- Suma el resumen de una etapa terminada. Recibe [{"oa":"HI08 OA 04","n":6,"ok":4}].
+-- Es acumulativa: cada llamada se suma a lo que ya había.
+create or replace function public.kimun_dominio(p_datos jsonb)
+returns int language plpgsql security definer set search_path=public as $$
+declare mi uuid; fila jsonb; n int := 0; begin
+  mi := public.kimun_yo();
+  if mi is null then return 0; end if;
+  if p_datos is null or jsonb_typeof(p_datos) <> 'array' then return 0; end if;
+  for fila in select * from jsonb_array_elements(p_datos) loop
+    -- Se ignoran las entradas mal formadas en vez de fallar: esto corre en segundo
+    -- plano mientras el niño juega y nunca debe interrumpirlo.
+    continue when coalesce(fila->>'oa','') = '';
+    -- El código tiene que verse como un objetivo de verdad ("HI08 OA 01"). Sin esta
+    -- validación, cualquiera puede insertarse desde la consola del navegador miles de
+    -- filas con códigos inventados, que después aparecen crudos en la tabla del
+    -- profesor. No expone datos ajenos —solo se escribe sobre el propio perfil—, pero
+    -- ensucia la herramienta hasta volverla inútil.
+    continue when (fila->>'oa') !~ '^[A-Z]{2}[0-9]{2} OA [0-9]{2}$';
+    -- Los contadores llegan como texto dentro del JSON. Si no son dígitos, el cast a
+    -- entero de más abajo lanzaría una excepción, se perdería el lote completo y el
+    -- teléfono lo reintentaría para siempre: el niño quedaría sin medición, en
+    -- silencio. Por eso se descartan aquí, antes de cualquier cast.
+    continue when (fila->>'n')  !~ '^[0-9]+$';
+    continue when coalesce(fila->>'ok','0') !~ '^[0-9]+$';
+    -- Un "n" ausente llega como nulo y no lo atrapa la expresión regular; este
+    -- coalesce sí lo descarta.
+    continue when coalesce((fila->>'n')::int, 0) <= 0;
+    insert into public.dominio(perfil_id, oa, respondidas, correctas)
+    values (mi, fila->>'oa',
+            greatest(0,(fila->>'n')::int),
+            least(greatest(0,coalesce((fila->>'ok')::int,0)), greatest(0,(fila->>'n')::int)))
+    -- La tabla se nombra sin el esquema a propósito: esa es la forma que documenta
+    -- PostgreSQL para leer la fila existente, y el search_path ya está fijado en
+    -- public. Los cuerpos plpgsql no se validan al crearse, así que una referencia
+    -- que no resolviera se pegaría sin quejarse y recién fallaría en producción, la
+    -- primera vez que un niño terminara una etapa.
+    on conflict (perfil_id, oa) do update set
+      respondidas = dominio.respondidas + excluded.respondidas,
+      correctas   = dominio.correctas   + excluded.correctas,
+      actualizado = now();
+    n := n + 1;
+  end loop;
+  return n; end $$;
+
 -- Ranking de mi curso (vacío si no tengo curso). Devuelve "dificil" para la marca 🔥.
 drop function if exists public.kimun_ranking();
 create or replace function public.kimun_ranking()
@@ -376,10 +434,14 @@ declare mi_correo text; aut public.profesores_autorizados; r public.profesores; 
   -- escalar permisos. Un ascenso se hace a mano, con un update sobre
   -- public.profesores. El correo sí se sincroniza para que no se desalinee del
   -- de Auth, que es justo la situación que el delete de arriba ya no limpia.
+  -- La tabla se nombra sin el esquema por el mismo motivo que en kimun_dominio: es
+  -- la forma documentada de leer la fila existente y el search_path ya apunta a
+  -- public. Esta rama solo corre cuando alguien se registra por segunda vez, así que
+  -- una referencia que no resolviera se habría quedado latente hasta ese día.
   insert into public.profesores(id, correo, nombre, es_admin)
   values (auth.uid(), lower(mi_correo), nullif(trim(p_nombre),''), aut.como_admin)
   on conflict (id) do update set
-    nombre = coalesce(excluded.nombre, public.profesores.nombre),
+    nombre = coalesce(excluded.nombre, profesores.nombre),
     correo = excluded.correo
   returning * into r;
   update public.profesores_autorizados set usado = true where lower(correo) = lower(mi_correo);
@@ -480,6 +542,54 @@ declare cid uuid; v int; begin
   -- queda nulo y la página leería un éxito falso.
   if v is null then raise exception 'alumno_invalido'; end if;
   return v; end $$;
+
+-- Dominio agregado de un curso mío, por objetivo.
+-- El drop previo es el mismo guardia de idempotencia que usan kimun_ranking y
+-- kimun_prof_listar: al ser "returns table", cambiarle una columna al returns
+-- haría fallar el re-pegado del archivo con "cannot change return type".
+drop function if exists public.kimun_prof_dominio(text);
+create or replace function public.kimun_prof_dominio(p_curso_codigo text)
+returns table(oa text, respondidas bigint, correctas bigint, alumnos bigint)
+language plpgsql security definer set search_path=public as $$
+declare cid uuid; begin
+  select id into cid from public.cursos where codigo = upper(trim(p_curso_codigo));
+  if cid is null or not public.kimun_prof_es_mio(cid) then raise exception 'no_autorizado'; end if;
+  return query
+    select d.oa, sum(d.respondidas), sum(d.correctas), count(distinct d.perfil_id)
+    from public.dominio d
+    join public.perfiles p on p.id = d.perfil_id
+    where p.curso_id = cid
+    group by d.oa
+    order by (sum(d.correctas)::numeric / nullif(sum(d.respondidas),0)) asc nulls last, d.oa;
+end $$;
+
+-- Dominio de un alumno mío.
+drop function if exists public.kimun_prof_dominio_alumno(text);
+create or replace function public.kimun_prof_dominio_alumno(p_codigo_acceso text)
+returns table(oa text, respondidas int, correctas int)
+language plpgsql security definer set search_path=public as $$
+declare cid uuid; pid uuid; begin
+  select id, curso_id into pid, cid from public.perfiles
+   where codigo_acceso = upper(trim(p_codigo_acceso));
+  if pid is null or cid is null or not public.kimun_prof_es_mio(cid)
+    then raise exception 'no_autorizado'; end if;
+  return query
+    select d.oa, d.respondidas, d.correctas from public.dominio d
+    where d.perfil_id = pid
+    order by (d.correctas::numeric / nullif(d.respondidas,0)) asc nulls last, d.oa;
+end $$;
+
+-- Pone en cero las mediciones de un curso mío. Devuelve cuántas filas borró.
+create or replace function public.kimun_prof_dominio_reiniciar(p_curso_codigo text)
+returns int language plpgsql security definer set search_path=public as $$
+declare cid uuid; n int; begin
+  select id into cid from public.cursos where codigo = upper(trim(p_curso_codigo));
+  if cid is null or not public.kimun_prof_es_mio(cid) then raise exception 'no_autorizado'; end if;
+  delete from public.dominio d
+   using public.perfiles p
+   where p.id = d.perfil_id and p.curso_id = cid;
+  get diagnostics n = row_count;
+  return n; end $$;
 
 -- Autoriza un correo para que pueda crear su cuenta de profesor.
 create or replace function public.kimun_prof_autorizar(p_correo text)
@@ -589,13 +699,16 @@ grant execute on function
   public.kimun_crear_duelo(text,text,jsonb,int,int), public.kimun_pendientes(),
   public.kimun_responder(uuid,int,int), public.kimun_historial(),
   public.kimun_yo(), public.kimun_xp(int), public.kimun_dificil(int), public.kimun_ranking(), public.kimun_canjear(text),
+  public.kimun_dominio(jsonb),
   public.kimun_prof_yo(), public.kimun_prof_alta(text),
   public.kimun_prof_listar(), public.kimun_prof_curso_crear(text),
   public.kimun_prof_curso_quitar(text), public.kimun_prof_alumno_agregar(text,text,text),
   public.kimun_prof_alumno_quitar(text), public.kimun_prof_xp_fijar(text,int),
   public.kimun_prof_autorizar(text), public.kimun_prof_profesores(),
   public.kimun_prof_quitar(text), public.kimun_prof_curso_asignar(text,text),
-  public.kimun_prof_limpiar_pruebas(boolean)
+  public.kimun_prof_limpiar_pruebas(boolean),
+  public.kimun_prof_dominio(text), public.kimun_prof_dominio_alumno(text),
+  public.kimun_prof_dominio_reiniciar(text)
   to anon, authenticated;
 
 -- ------------------------------------------------------------

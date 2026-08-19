@@ -76,6 +76,13 @@ porque las funciones de lectura parten del curso. Si más tarde canjea un códig
 quedan asociados al perfil del alumno y pasan a contar. Es el comportamiento deseable: nada
 se pierde y nadie ve lo que no le corresponde.
 
+**Una etapa abandonada a medias no se descarta:** lo respondido queda en memoria y viaja
+junto con el resumen de la siguiente etapa que sí se termine. Son respuestas reales a
+preguntas reales, y un alumno que abandona después de fallar varias es justamente
+información que al profesor le sirve. La excepción es el jefe abandonado a media pelea, que
+no envía nada, porque su flujo no pasa por el cierre de etapa; es una pérdida menor que no
+justifica complicar el código.
+
 Si el envío falla —sin señal, por ejemplo— el resumen queda pendiente en el teléfono y se
 reintenta en la siguiente oportunidad. **El niño nunca ve nada de esto** y el juego no se
 interrumpe: es best-effort, como la sincronización del XP.

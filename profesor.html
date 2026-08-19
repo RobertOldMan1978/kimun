@@ -121,6 +121,47 @@ function esc(t){ return String(t==null?'':t)
   .replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')
   .replace(/"/g,'&quot;').replace(/'/g,'&#39;'); }
 
+// Dentro del panel, "no autorizado" casi siempre significa que el curso o el alumno
+// ya no existe —lo borró otra pestaña, u otro profesor—, no que falten permisos. El
+// servidor responde lo mismo en ambos casos a propósito: separarlos permitiría
+// descubrir qué códigos existen probándolos uno por uno.
+function errorPanel(e){
+  return esNoAutorizado(e)
+    ? 'No tienes permiso para esto, o el curso o alumno ya no existe.'
+    : traducir(e);
+}
+
+// Vuelve al panel sin dejar la pantalla en blanco si la lista no se puede cargar.
+function volverAlPanel(){
+  pintarLista().catch(e=>aviso(errorPanel(e)));
+}
+
+/* Textos de los objetivos de aprendizaje. El código HI08 OA 01 no le dice nada a
+   nadie: sin el texto real, la tabla es ilegible para un profesor. */
+const OA_CARPETA = {HI08:'historia-8basico', MA08:'matematicas-8basico',
+                    CN08:'ciencias-8basico', LE08:'lenguaje-8basico'};
+const OA_TEXTO = {};        // "HI08 OA 01" -> "Analizar, apoyándose en diversas fuentes…"
+const OA_CARGADA = {};      // carpetas ya pedidas
+
+async function cargarTextosOA(codigos){
+  const carpetas = [...new Set(codigos.map(c => OA_CARPETA[String(c).slice(0,4)]).filter(Boolean))];
+  await Promise.all(carpetas.map(async carpeta => {
+    if(OA_CARGADA[carpeta]) return;
+    OA_CARGADA[carpeta] = true;
+    try{
+      const r = await fetch('contenido/'+carpeta+'/oa.json');
+      if(!r.ok) throw new Error('HTTP '+r.status);
+      const d = await r.json();
+      (d.oa||[]).forEach(o => { if(o && o.codigo) OA_TEXTO[o.codigo] = o.texto || o.codigo; });
+    }catch(e){
+      // Si falla, se olvida la marca: de lo contrario un corte momentáneo dejaría a esa
+      // asignatura mostrando códigos en vez de textos durante toda la sesión.
+      OA_CARGADA[carpeta] = false;
+      console.error('OA:', e.message||e);
+    }
+  }));
+}
+
 $('btnCambiar').onclick=()=>{
   MODO = MODO==='entrar' ? 'crear' : 'entrar';
   $('authTitulo').textContent = MODO==='entrar' ? 'Ingresar' : 'Crear mi cuenta';
@@ -201,6 +242,8 @@ async function pintarLista(){
       <code> ${esc(cod)}</code>
       <button class="mini delcurso" data-cod="${esc(cod)}"
               style="background:none;border:0;color:var(--pink);font-weight:900;cursor:pointer">🗑️</button>
+      <button class="mini avance" data-cod="${esc(cod)}"
+              style="background:none;border:0;color:var(--cyan);font-weight:900;cursor:pointer">📊 Ver avance</button>
       ${c.alumnos.length ? c.alumnos.map(a=>`
         <div style="display:flex;align-items:center;gap:8px;padding:6px 0;border-bottom:1px solid #ffffff14">
           <span>${esc(a.avatar)}</span><b style="flex:1">${esc(a.alumno)}</b>
@@ -208,6 +251,8 @@ async function pintarLista(){
           <span style="color:var(--dim)">${esc(a.xp)} XP</span>
           <button class="mini xp" data-cod="${esc(a.codigo_acceso)}" data-xp="${esc(a.xp)}"
                   style="background:none;border:0;color:var(--gold);font-weight:900;cursor:pointer">✎</button>
+          <button class="mini avalum" data-cod="${esc(a.codigo_acceso)}" title="Ver avance"
+                  style="background:none;border:0;color:var(--cyan);font-weight:900;cursor:pointer">📊</button>
           <button class="mini del" data-cod="${esc(a.codigo_acceso)}"
                   style="background:none;border:0;color:var(--pink);font-weight:900;cursor:pointer">✕</button>
         </div>`).join('')
@@ -283,6 +328,96 @@ function conectarAcciones(){
     if(!confirm('¿Eliminar este curso?\n\nSe borran también todos sus alumnos y sus duelos. No se puede deshacer.')) return;
     await accion(()=>SB.rpc('kimun_prof_curso_quitar',{p_curso_codigo:b.dataset.cod}), 'Curso eliminado');
   });
+  document.querySelectorAll('.avance').forEach(b=>b.onclick=()=>verAvance(b.dataset.cod));
+  document.querySelectorAll('.avalum').forEach(b=>b.onclick=()=>verAvanceAlumno(b.dataset.cod));
+}
+
+/* ===== Avance por objetivo de aprendizaje ===== */
+
+// El límite se dice con todas sus letras en las dos vistas: el dato viaja desde el
+// teléfono del alumno, así que es una brújula para decidir qué repasar, no una nota.
+const AVISO_NO_CALIFICA = '<b>No sirve para calificar:</b> el dato lo reporta el teléfono '+
+  'del alumno. Úsalo para decidir qué reforzar.';
+
+// Tabla de dominio, ordenada de peor a mejor: lo que hay que reforzar queda arriba.
+// El servidor ya la devuelve en ese orden, así que no se reordena.
+async function verAvance(cursoCodigo){
+  aviso('Cargando…','var(--dim)');
+  try{
+    const {data,error}=await SB.rpc('kimun_prof_dominio',{p_curso_codigo:cursoCodigo});
+    if(error) throw error;
+    if(!data || !data.length){
+      $('lista').innerHTML = `<p style="color:var(--dim);font-size:13px">
+        Todavía no hay datos de este curso. Aparecen cuando los alumnos juegan las campañas.</p>
+        <button class="btn sec" id="btnVolverPanel">← Volver</button>`;
+      $('btnVolverPanel').onclick = volverAlPanel; aviso(''); return;
+    }
+    await cargarTextosOA(data.map(f => f.oa));
+    $('lista').innerHTML = `
+      <p style="color:var(--dim);font-size:12px;margin-bottom:10px">
+        Porcentaje de acierto por objetivo, de menor a mayor. ${AVISO_NO_CALIFICA}</p>
+      ${data.map(f => filaAvance(f.oa, f.respondidas, f.correctas)).join('')}
+      <div style="margin-top:14px">
+        <button class="btn sec" id="btnReiniciarMed">🔄 Reiniciar mediciones</button>
+        <button class="btn sec" id="btnVolverPanel">← Volver</button>
+      </div>`;
+    $('btnVolverPanel').onclick = volverAlPanel;
+    $('btnReiniciarMed').onclick = () => reiniciarMediciones(cursoCodigo);
+    aviso('');
+  }catch(e){ aviso(errorPanel(e)); }
+}
+
+async function verAvanceAlumno(codigoAcceso){
+  aviso('Cargando…','var(--dim)');
+  try{
+    const {data,error}=await SB.rpc('kimun_prof_dominio_alumno',{p_codigo_acceso:codigoAcceso});
+    if(error) throw error;
+    if(!data || !data.length){
+      $('lista').innerHTML = `<p style="color:var(--dim);font-size:13px">
+        Este alumno todavía no tiene datos. Aparecen cuando juega las campañas.</p>
+        <button class="btn sec" id="btnVolverPanel">← Volver</button>`;
+      $('btnVolverPanel').onclick = volverAlPanel; aviso(''); return;
+    }
+    await cargarTextosOA(data.map(f => f.oa));
+    $('lista').innerHTML = `
+      <p style="color:var(--dim);font-size:12px;margin-bottom:10px">
+        Objetivos de este alumno, de menor a mayor acierto. ${AVISO_NO_CALIFICA}</p>
+      ${data.map(f => filaAvance(f.oa, f.respondidas, f.correctas)).join('')}
+      <button class="btn sec" id="btnVolverPanel" style="margin-top:14px">← Volver</button>`;
+    $('btnVolverPanel').onclick = volverAlPanel;
+    aviso('');
+  }catch(e){ aviso(errorPanel(e)); }
+}
+
+// Una fila: texto del objetivo, barra, porcentaje y cuántas preguntas lo respaldan.
+function filaAvance(oa, respondidas, correctas){
+  const n = Number(respondidas)||0, ok = Number(correctas)||0;
+  const pct = n ? Math.round(ok*100/n) : 0;
+  const flojo = n < 10;                       // base pequeña: el porcentaje dice poco
+  const color = pct >= 75 ? 'var(--green)' : pct >= 50 ? 'var(--gold)' : 'var(--pink)';
+  return `<div style="padding:8px 0;border-bottom:1px solid #ffffff14;opacity:${flojo?0.55:1}">
+    <div style="font-size:13px;margin-bottom:4px">${esc(OA_TEXTO[oa]||oa)}</div>
+    <div style="display:flex;align-items:center;gap:8px">
+      <div style="flex:1;height:8px;background:#ffffff14;border-radius:4px;overflow:hidden">
+        <div style="width:${pct}%;height:100%;background:${color}"></div>
+      </div>
+      <b style="color:${color};min-width:42px;text-align:right">${pct}%</b>
+      <small style="color:var(--dim);min-width:96px;text-align:right">${n} pregunta${n===1?'':'s'}</small>
+    </div>
+  </div>`;
+}
+
+async function reiniciarMediciones(cursoCodigo){
+  if(!confirm('¿Reiniciar las mediciones de este curso?\n\n'+
+    'Los porcentajes vuelven a cero y se empieza a medir de nuevo. Sirve al comenzar una '+
+    'unidad o un semestre. No se borra ningún alumno ni su XP, pero las mediciones '+
+    'anteriores no se pueden recuperar.')) return;
+  try{
+    const {error}=await SB.rpc('kimun_prof_dominio_reiniciar',{p_curso_codigo:cursoCodigo});
+    if(error) throw error;
+    await verAvance(cursoCodigo);
+    aviso('Mediciones reiniciadas','var(--green)');
+  }catch(e){ aviso(errorPanel(e)); }
 }
 
 // Ejecuta una acción, informa y refresca la lista. Centraliza el manejo de errores:
@@ -294,13 +429,7 @@ async function accion(fn, exito){
     await pintarLista();
     aviso(exito,'var(--green)');
   }catch(e){
-    // Dentro del panel, "no autorizado" casi siempre significa que el curso o el
-    // alumno ya no existe —lo borró otra pestaña, u otro profesor—, no que falten
-    // permisos. El servidor responde lo mismo en ambos casos a propósito: separarlos
-    // permitiría descubrir qué códigos existen probándolos uno por uno.
-    aviso(esNoAutorizado(e)
-      ? 'No tienes permiso para esto, o el curso o alumno ya no existe.'
-      : traducir(e));
+    aviso(errorPanel(e));                   // ver el comentario de errorPanel
     try{ await pintarLista(); }catch(_){}   // refresca para mostrar la realidad
   }
 }
