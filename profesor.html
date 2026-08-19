@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<title>VULPO · Profesores</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;900&family=Titan+One&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<style>
+:root{--gold:#ffc93c;--cyan:#4dd8ff;--green:#3ee089;--pink:#ff4d8d;--violet:#8f6bff;
+ --dim:#a89fd6;--panel:#241d4e}
+*{box-sizing:border-box}
+body{margin:0;background:#140f33;color:#fff;font-family:Nunito,sans-serif;font-weight:800;
+ padding:16px;max-width:480px;margin:0 auto}
+h1{font-family:'Titan One',cursive;color:var(--gold);font-size:28px;text-align:center;margin:12px 0}
+.card{background:var(--panel);border:2px solid #ffffff14;border-radius:16px;padding:16px;margin-bottom:14px}
+.card h3{margin:0 0 12px;font-size:16px;color:var(--cyan)}
+input{width:100%;padding:12px;border-radius:12px;border:2px solid var(--violet);
+ background:#1a1440;color:#fff;font-weight:800;margin-bottom:10px;font-family:inherit}
+.btn{width:100%;padding:13px;border:0;border-radius:14px;background:var(--gold);color:#2a1c00;
+ font-family:inherit;font-weight:900;font-size:15px;cursor:pointer;margin-bottom:8px}
+.btn.sec{background:var(--violet);color:#fff}
+.btn:disabled{opacity:.5;cursor:default}
+.msg{text-align:center;font-size:13px;margin-top:8px;min-height:18px}
+.hide{display:none}
+code{color:var(--cyan);font-weight:900}
+</style>
+</head>
+<body>
+<h1>VULPO · Profesores</h1>
+
+<div class="card" id="cardAuth">
+  <h3 id="authTitulo">Ingresar</h3>
+  <input id="correo" type="email" placeholder="Correo" autocomplete="email">
+  <input id="clave" type="password" placeholder="Contraseña" autocomplete="current-password">
+  <input id="nombre" class="hide" placeholder="Tu nombre">
+  <button class="btn" id="btnEntrar">Entrar</button>
+  <button class="btn sec" id="btnCambiar">Crear mi cuenta</button>
+  <p class="msg" id="authMsg"></p>
+</div>
+
+<div class="card hide" id="cardPanel">
+  <h3 id="panelTitulo">Mis cursos</h3>
+  <div id="lista"></div>
+  <p class="msg" id="panelMsg"></p>
+  <button class="btn sec" id="btnSalir">Cerrar sesión</button>
+</div>
+
+<script>
+const SUPA_URL='https://bdgzpjzlqidcexdkjhzy.supabase.co';
+const SUPA_KEY='sb_publishable_I3FWEIOQf-_7ni_46PGSSQ_PLD3mQpM';
+// storageKey propio: sin esto, la sesión del profesor reemplazaría la del alumno
+// que juega en este mismo navegador, y el niño perdería su identidad.
+const SB=window.supabase.createClient(SUPA_URL,SUPA_KEY,
+  {auth:{storageKey:'kimun-profesor',persistSession:true,autoRefreshToken:true}});
+const $=id=>document.getElementById(id);
+let MODO='entrar', YO=null;
+
+const ERRORES={
+  no_autorizado:'No tienes permiso para esto. Si es tu primera vez, pídele acceso al administrador.',
+  sin_sesion:'La sesión se cerró. Vuelve a entrar.',
+  sin_correo:'Tu cuenta no tiene un correo confirmado. Revisa el correo de confirmación y vuelve a entrar.',
+  correo_invalido:'Ese correo no es válido.',
+  profesor_invalido:'Ese profesor no existe.',
+  no_te_puedes_quitar:'No puedes quitarte a ti mismo.',
+  nombre_vacio:'Escribe un nombre.',
+  curso_invalido:'Ese curso no existe.',
+  alumno_invalido:'Ese alumno no existe.'
+};
+// Mensaje del caso más frecuente: la cuenta existe, lo que falta es la autorización.
+// Decirle "no tienes permiso" a secas lo manda a revisar su contraseña, que está bien.
+const SIN_AUTORIZACION='Tu cuenta se creó, pero tu correo todavía no está autorizado. '+
+  'Pídele acceso al administrador y vuelve a entrar.';
+
+function traducir(e){
+  // supabase-js trae un código aparte del mensaje; se miran los dos.
+  const t=((e&&e.message)||'')+' '+((e&&e.code)||'');
+  for(const k in ERRORES) if(t.includes(k)) return ERRORES[k];
+  if(t.includes('Invalid login')) return 'Correo o contraseña incorrectos.';
+  if(t.includes('already registered')) return 'Ese correo ya tiene cuenta. Usa "Entrar".';
+  if(t.includes('at least')) return 'La contraseña debe tener al menos 6 caracteres.';
+  // El servicio de correo integrado de Supabase permite 2 envíos por hora, así que
+  // esto aparece en cuanto se dan de alta varios profesores seguidos.
+  if(t.includes('over_email_send_rate_limit')||t.includes('email rate limit'))
+    return 'Supabase ya envió demasiados correos por ahora. Espera un rato y vuelve a intentarlo.';
+  if(t.includes('email_address_invalid')) return 'Ese correo no es válido.';
+  if(t.includes('Failed to fetch')||t.includes('NetworkError')||t.includes('Load failed'))
+    return 'No hay conexión con el servidor. Revisa tu internet y vuelve a intentarlo.';
+  if(t.includes('JWT')) return 'La sesión se cerró. Vuelve a entrar.';
+  return 'No se pudo completar la acción. Intenta de nuevo.';
+}
+
+function esNoAutorizado(e){
+  return (((e&&e.message)||'')+' '+((e&&e.code)||'')).includes('no_autorizado');
+}
+
+function mostrarIngreso(){
+  $('cardPanel').classList.add('hide');
+  $('cardAuth').classList.remove('hide');
+}
+
+// Un fallo de autorización deja la sesión abierta pero inútil: el botón de cerrar
+// sesión vive dentro del panel, que sigue oculto, así que sin esto la persona no
+// puede probar con otra cuenta salvo borrando el almacenamiento del navegador.
+// Solo se cierra la sesión ante no_autorizado; un corte de red no debe expulsar a nadie.
+async function manejarFalloDeIngreso(e){
+  if(esNoAutorizado(e)){
+    try{ await SB.auth.signOut(); }catch(_){}
+    mostrarIngreso();
+    aviso(SIN_AUTORIZACION);
+    return;
+  }
+  aviso(traducir(e));
+}
+function aviso(t,color){
+  const el = $('cardPanel').classList.contains('hide') ? $('authMsg') : $('panelMsg');
+  el.style.color=color||'var(--pink)'; el.textContent=t;
+}
+function esc(t){ return String(t==null?'':t)
+  .replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')
+  .replace(/"/g,'&quot;').replace(/'/g,'&#39;'); }
+
+$('btnCambiar').onclick=()=>{
+  MODO = MODO==='entrar' ? 'crear' : 'entrar';
+  $('authTitulo').textContent = MODO==='entrar' ? 'Ingresar' : 'Crear mi cuenta';
+  $('btnEntrar').textContent  = MODO==='entrar' ? 'Entrar' : 'Crear cuenta';
+  $('btnCambiar').textContent = MODO==='entrar' ? 'Crear mi cuenta' : '← Ya tengo cuenta';
+  $('nombre').classList.toggle('hide', MODO==='entrar');
+  aviso('');
+};
+
+$('btnEntrar').onclick=async ()=>{
+  const correo=($('correo').value||'').trim(), clave=$('clave').value||'';
+  if(!correo||!clave){ aviso('Escribe tu correo y tu contraseña.'); return; }
+  $('btnEntrar').disabled=true; aviso('Comprobando…','var(--dim)');
+  try{
+    if(MODO==='crear'){
+      const {data,error}=await SB.auth.signUp({email:correo,password:clave});
+      if(error) throw error;
+      // Con la confirmación de correo activada, signUp no devuelve sesión.
+      if(!data.session){
+        aviso('Te enviamos un correo para confirmar tu cuenta. Confírmalo y entra con tu contraseña.','var(--cyan)');
+        return;
+      }
+    }else{
+      const {error}=await SB.auth.signInWithPassword({email:correo,password:clave});
+      if(error) throw error;
+    }
+    await asegurarAlta($('nombre').value||'');
+    await cargarPanel();
+  }catch(e){ await manejarFalloDeIngreso(e); }
+  finally{ $('btnEntrar').disabled=false; }
+};
+
+$('btnSalir').onclick=async ()=>{ await SB.auth.signOut(); location.reload(); };
+
+// Completa el registro si esta cuenta todavía no tiene fila de profesor. Se llama
+// al crear la cuenta Y al iniciar sesión, para que funcione con la confirmación de
+// correo activada o desactivada.
+async function asegurarAlta(nombre){
+  if(await soyProfesor()) return;                   // ya está registrado
+  const {error}=await SB.rpc('kimun_prof_alta',{p_nombre:nombre});
+  if(error) throw error;
+}
+
+// OJO: kimun_prof_yo NO devuelve null para quien no es profesor, devuelve una fila
+// con todos los campos vacíos, que en JavaScript es un objeto verdadero. Hay que
+// mirar el id: sin esta comprobación, el panel se abre para cualquiera.
+async function soyProfesor(){
+  const {data,error}=await SB.rpc('kimun_prof_yo');
+  // "No se pudo comprobar" no es lo mismo que "no eres profesor": si se traga el
+  // error, un corte de red le dice a un profesor legítimo que pida un acceso que
+  // ya tiene. Se propaga para que el mensaje diga lo que en verdad pasó.
+  if(error) throw error;
+  const fila = Array.isArray(data) ? data[0] : data;
+  return (fila && fila.id) ? fila : null;
+}
+
+async function cargarPanel(){
+  YO = await soyProfesor();
+  if(!YO){ throw new Error('no_autorizado'); }
+  $('cardAuth').classList.add('hide');
+  $('cardPanel').classList.remove('hide');
+  $('panelTitulo').textContent = YO.es_admin ? 'Todos los cursos' : 'Mis cursos';
+  await pintarLista();
+}
+
+async function pintarLista(){
+  const {data,error}=await SB.rpc('kimun_prof_listar');
+  if(error) throw error;
+  const porCurso={};
+  (data||[]).forEach(f=>{
+    porCurso[f.curso_codigo]=porCurso[f.curso_codigo]||{nombre:f.curso,alumnos:[]};
+    if(f.codigo_acceso) porCurso[f.curso_codigo].alumnos.push(f);
+  });
+  const cursos=Object.entries(porCurso);
+  $('lista').innerHTML = (cursos.length ? cursos.map(([cod,c])=>`
+    <div style="margin-bottom:16px">
+      <b style="color:var(--gold)">${esc(c.nombre)}</b>
+      <code> ${esc(cod)}</code>
+      <button class="mini delcurso" data-cod="${esc(cod)}"
+              style="background:none;border:0;color:var(--pink);font-weight:900;cursor:pointer">🗑️</button>
+      ${c.alumnos.length ? c.alumnos.map(a=>`
+        <div style="display:flex;align-items:center;gap:8px;padding:6px 0;border-bottom:1px solid #ffffff14">
+          <span>${esc(a.avatar)}</span><b style="flex:1">${esc(a.alumno)}</b>
+          <code>${esc(a.codigo_acceso)}</code>
+          <span style="color:var(--dim)">${esc(a.xp)} XP</span>
+          <button class="mini xp" data-cod="${esc(a.codigo_acceso)}" data-xp="${esc(a.xp)}"
+                  style="background:none;border:0;color:var(--gold);font-weight:900;cursor:pointer">✎</button>
+          <button class="mini del" data-cod="${esc(a.codigo_acceso)}"
+                  style="background:none;border:0;color:var(--pink);font-weight:900;cursor:pointer">✕</button>
+        </div>`).join('')
+       : '<p style="color:var(--dim);font-size:12px">Sin alumnos todavía.</p>'}
+      <div style="margin-top:8px">
+        <input class="in-alumno" data-curso="${esc(cod)}" placeholder="Nombre del alumno nuevo">
+        <button class="btn sec add-alumno" data-curso="${esc(cod)}">+ Agregar alumno</button>
+      </div>
+    </div>`).join('')
+   : '<p style="color:var(--dim);font-size:13px">Aún no tienes cursos.</p>')
+   + `<div style="margin-top:10px;border-top:1px solid #ffffff22;padding-top:12px">
+        <input id="cursoNombre" placeholder="Nombre del curso nuevo (8° A)">
+        <button class="btn sec" id="btnCurso">+ Crear curso</button>
+      </div>`;
+  conectarAcciones();
+
+  if(YO.es_admin){
+    $('lista').insertAdjacentHTML('beforeend', `
+      <div style="margin-top:16px;border-top:2px solid var(--violet);padding-top:12px">
+        <h3 style="color:var(--violet);font-size:15px;margin:0 0 10px">Administración</h3>
+        <input id="nuevoCorreo" type="email" placeholder="Correo del profesor nuevo">
+        <button class="btn sec" id="btnAutorizar">+ Autorizar profesor</button>
+        <div id="profes" style="margin:10px 0"></div>
+        <button class="btn sec" id="btnLimpiar">🧹 Limpiar perfiles de prueba</button>
+        <button class="btn sec" id="btnTablero">📊 Tablero de avance</button>
+      </div>`);
+    $('btnAutorizar').onclick=async ()=>{
+      const c=($('nuevoCorreo').value||'').trim();
+      if(!c){ aviso('Escribe un correo.'); return; }
+      await accion(()=>SB.rpc('kimun_prof_autorizar',{p_correo:c}), 'Correo autorizado');
+    };
+    $('btnTablero').onclick=()=>{ window.location.href='dev/tablero.html'; };
+    $('btnLimpiar').onclick=limpiarPruebas;
+    const {data:profes,error:errProfes}=await SB.rpc('kimun_prof_profesores');
+    if(errProfes){
+      $('profes').innerHTML='<p style="color:var(--pink);font-size:12px">No se pudo cargar la lista de profesores.</p>';
+    }else{
+      $('profes').innerHTML=(profes||[]).map(p=>
+        `<div style="display:flex;gap:8px;padding:4px 0;font-size:13px">
+           <span style="flex:1">${esc(p.correo)}</span>
+           <span style="color:var(--dim)">${p.registrado?esc(p.nombre||'sin nombre'):'sin registrar'}</span>
+           <span style="color:var(--cyan)">${p.cursos} curso${p.cursos===1?'':'s'}</span>
+         </div>`).join('');
+    }
+  }
+}
+
+function conectarAcciones(){
+  $('btnCurso').onclick=async ()=>{
+    const n=($('cursoNombre').value||'').trim();
+    if(!n){ aviso('Escribe un nombre.'); return; }
+    await accion(()=>SB.rpc('kimun_prof_curso_crear',{p_nombre:n}), 'Curso creado');
+  };
+  document.querySelectorAll('.add-alumno').forEach(b=>b.onclick=async ()=>{
+    const campo=document.querySelector('.in-alumno[data-curso="'+b.dataset.curso+'"]');
+    const n=(campo.value||'').trim();
+    if(!n){ aviso('Escribe un nombre.'); return; }
+    await accion(()=>SB.rpc('kimun_prof_alumno_agregar',
+      {p_curso_codigo:b.dataset.curso,p_nombre:n,p_avatar:'🦊'}), 'Alumno agregado');
+  });
+  document.querySelectorAll('.xp').forEach(b=>b.onclick=async ()=>{
+    const v=prompt('XP de este alumno:', b.dataset.xp);
+    if(v===null) return;
+    if(!/^\d+$/.test(v.trim())){ aviso('Escribe un número entero de 0 o más.'); return; }
+    await accion(()=>SB.rpc('kimun_prof_xp_fijar',
+      {p_codigo_acceso:b.dataset.cod,p_xp:parseInt(v,10)}), 'XP actualizado a '+parseInt(v,10));
+  });
+  document.querySelectorAll('.del').forEach(b=>b.onclick=async ()=>{
+    if(!confirm('¿Eliminar a este alumno?\n\nPierde su lugar en el ranking y sus duelos. No se puede deshacer.')) return;
+    await accion(()=>SB.rpc('kimun_prof_alumno_quitar',{p_codigo_acceso:b.dataset.cod}), 'Alumno eliminado');
+  });
+  document.querySelectorAll('.delcurso').forEach(b=>b.onclick=async ()=>{
+    if(!confirm('¿Eliminar este curso?\n\nSe borran también todos sus alumnos y sus duelos. No se puede deshacer.')) return;
+    await accion(()=>SB.rpc('kimun_prof_curso_quitar',{p_curso_codigo:b.dataset.cod}), 'Curso eliminado');
+  });
+}
+
+// Ejecuta una acción, informa y refresca la lista. Centraliza el manejo de errores:
+// supabase-js no lanza excepción cuando la función SQL falla, devuelve {data, error}.
+async function accion(fn, exito){
+  try{
+    const {error}=await fn();
+    if(error) throw error;
+    await pintarLista();
+    aviso(exito,'var(--green)');
+  }catch(e){ aviso(traducir(e)); }
+}
+
+async function limpiarPruebas(){
+  try{
+    const {data:n,error}=await SB.rpc('kimun_prof_limpiar_pruebas',{p_ejecutar:false});
+    if(error) throw error;
+    if(!n){ aviso('No hay perfiles de prueba','var(--green)'); return; }
+    if(!confirm('Se van a borrar '+n+' perfil'+(n===1?'':'es')+' de prueba.\n\n'+
+      'Son los que se crean solos cuando alguien abre el juego y nunca escribió un código de alumno.\n\n'+
+      'También se pierden sus duelos. No se borran los alumnos inscritos ni los rivales de práctica.\n\n¿Continuar?')) return;
+    const {data:b,error:e2}=await SB.rpc('kimun_prof_limpiar_pruebas',{p_ejecutar:true});
+    if(e2) throw e2;
+    await pintarLista();
+    aviso('Se borraron '+b+' perfil'+(b===1?'':'es')+' de prueba','var(--green)');
+  }catch(e){ aviso(traducir(e)); }
+}
+
+// Si ya había sesión abierta, entrar directo al panel
+(async ()=>{
+  const {data:{session}}=await SB.auth.getSession();
+  if(session){ try{ await cargarPanel(); }catch(e){ await manejarFalloDeIngreso(e); } }
+})();
+</script>
+</body>
+</html>

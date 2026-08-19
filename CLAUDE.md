@@ -196,15 +196,16 @@ Lee `contenido/<asignatura>/oa.json` y `preguntas.json`, y escribe
 cada vez que se agreguen o etiqueten preguntas. Está preparado para varias
 asignaturas: basta con crear otra carpeta en `contenido/` con esos dos archivos.
 
-**Acceso integrado (Jugador / Admin):** la pantalla de inicio de `index.html`
-ofrece dos modos. "Jugador" abre el juego (lo que ven los niños). "Modo Admin"
-lleva al tablero, protegido por contraseña. La contraseña se define en la
-constante `CLAVE_ADMIN` dentro de `scripts/generar-tablero.py`; al cambiarla hay
-que volver a generar el tablero.
+**Cómo se llega al tablero (Sesión 22):** ya **no** se entra desde el juego. El
+tablero se abre desde el panel del administrador en `profesor.html` (botón
+"📊 Tablero de avance"), o escribiendo la dirección directamente. Sigue pidiendo su
+propia contraseña, definida en la constante `CLAVE_ADMIN` de
+`scripts/generar-tablero.py`; al cambiarla hay que volver a generar el tablero.
 
-> Nota: es un **bloqueo suave** para que los niños no entren al panel, NO
-> seguridad real (es un sitio estático; quien sepa mirar el código puede
-> saltárselo).
+> Nota: esa contraseña es un **bloqueo suave** para que los niños no entren al
+> tablero, NO seguridad real (es un sitio estático; quien sepa mirar el código
+> puede saltársela). El acceso a los datos de cursos y alumnos, en cambio, sí es
+> seguridad real: lo protege Supabase Auth desde `profesor.html`.
 
 **En el tablero:** al pinchar un OA se despliegan sus preguntas (solo el
 enunciado y la respuesta correcta).
@@ -212,55 +213,85 @@ enunciado y la respuesta correcta).
 **Para probar en local** (el navegador necesita servidor, no `file://` para el
 JavaScript): `python -m http.server 8765` y abrir `http://localhost:8765/`.
 
-### Cursos y ranking real (Sesión 19)
+### Cursos, profesores y ranking real (Sesiones 19 y 22)
 
 El ranking del curso **ya no es simulado**: muestra a los alumnos reales del curso
 del jugador, ordenados por XP, con datos de Supabase.
 
-**Administrar cursos (adulto):** Inicio → **Modo Admin** → contraseña → **Cursos**.
-Desde ahí se crea un curso (genera un código `CUR-XXXX`), se inscriben alumnos por
-nombre (cada uno recibe un código `ALU-XXXXXXXX`), se ve el XP de cada uno y se
-eliminan. Ya no hace falta entrar a Supabase para nada de esto. La primera entrada
-puede tardar varios segundos porque incluye el login anónimo.
+**Los cursos se administran en `profesor.html`**, una página aparte del juego. Se
+entra con **correo y contraseña** (cuentas reales de Supabase Auth). Desde el panel
+se crea un curso (genera un código `CUR-XXXX`), se inscriben alumnos por nombre
+(cada uno recibe un código `ALU-XXXXXXXX`), se ve el XP de cada uno, se corrige y se
+eliminan. No hace falta entrar a Supabase para nada de esto.
 
-**Mantenimiento (en el mismo panel):**
+**Quién ve qué:**
+- Un **profesor** ve y administra **solo sus cursos**. Los ajenos no le aparecen y
+  las funciones del servidor rechazan cualquier intento de tocarlos.
+- Un **administrador** ve **todos** los cursos (incluidos los que quedaron sin
+  dueño) y además **autoriza los correos** de los profesores nuevos.
+
+**Una cuenta no basta: hace falta estar autorizado.** Crear un usuario en Supabase
+Auth no otorga ningún permiso. Los permisos viven en la tabla `profesores`: **sin
+fila ahí, una cuenta no puede hacer nada**. Y solo se consigue esa fila si el
+administrador autorizó antes ese correo (tabla `profesores_autorizados`). Por eso el
+primer administrador se crea a mano, una sola vez, con el procedimiento comentado en
+`supabase/schema.sql`; la lista blanca **no** se siembra en el repositorio, que es
+público.
+
+**El juego ya no tiene Modo Admin (Sesión 22).** La pantalla de inicio de
+`index.html` ofrece solo **Jugador** y **Duelo 1v1**, más "🎟️ Tengo un código" y
+Créditos. El tablero de avance se abre desde el panel del administrador.
+
+> **La clave global de administración desapareció: que nadie la busque.** Antes el
+> Modo Admin se abría con una sola contraseña compartida (guardada con hash en la
+> tabla `config`, pero replicada en el repositorio a través del tablero) que daba
+> acceso total a todos los cursos y alumnos. Ya no existe: ni la fila `admin_clave`,
+> ni las funciones `kimun_admin_*`, ni el panel dentro del juego. El único camino es
+> una cuenta de profesor autorizada.
+
+**Mantenimiento (en el panel del profesor):**
 - **`✎` en cada alumno:** fija su XP. Es la única forma de **bajar** un XP inflado,
   porque la sincronización normal (`kimun_xp`) solo sube.
-- **🧹 Limpiar perfiles de prueba:** borra los perfiles que se crean solos al abrir
-  el juego y que nunca canjearon un código de alumno. Cuenta primero y pide
-  confirmación. **No borra** bots ni alumnos inscritos, pero sí arrastra los duelos
-  de esos perfiles y **no tiene deshacer**. Conviene usarlo *después* de que los
-  niños canjeen sus códigos: si se usa antes, un teléfono que ya venía jugando
-  pierde su perfil en línea y sus duelos.
+- **🧹 Limpiar perfiles de prueba** (solo administrador): borra los perfiles que se
+  crean solos al abrir el juego y que nunca canjearon un código de alumno. Cuenta
+  primero y pide confirmación. **No borra** bots ni alumnos inscritos, pero sí
+  arrastra los duelos de esos perfiles y **no tiene deshacer**. Conviene usarlo
+  *después* de que los niños canjeen sus códigos: si se usa antes, un teléfono que
+  ya venía jugando pierde su perfil en línea y sus duelos.
 
 **Cómo entra un alumno:** Inicio → **"🎟️ Tengo un código"** → escribe su `ALU-`.
 Queda vinculado a ese perfil en ese aparato, y puede repetirlo en otro para jugar
 desde varios equipos. Si borra los datos del navegador, vuelve a canjear el mismo
 código y recupera su lugar.
 
-**La contraseña del Modo Admin** vive ahora en la tabla `config` de Supabase,
-guardada con hash (bcrypt), no en el JavaScript. Se cambia con:
+**Contraseñas de profesor:** las gestiona Supabase Auth. La **recuperación por
+correo necesita SMTP configurado** en el proyecto de Supabase; sin eso, Roberto
+restablece la contraseña a mano desde el panel de Supabase. Ojo también con el
+servicio de correo integrado: permite **solo 2 correos por hora**, así que las altas
+y confirmaciones seguidas se topan con `over_email_send_rate_limit` y hay que
+esperar.
 
-    update public.config set valor = crypt('<clave nueva>', gen_salt('bf', 10))
-    where clave='admin_clave';
+**Sesiones separadas:** `profesor.html` usa un cliente de Supabase con su propio
+`storageKey` (`kimun-profesor`). Sin eso, que un adulto inicie sesión como profesor
+en el teléfono de un niño le borraría al niño su identidad anónima del juego.
 
-Si nunca se fija, el panel queda **cerrado** (la semilla es aleatoria), que es el
-comportamiento seguro. Ojo: esta clave es distinta de la del tablero de avance
-(`CLAVE_ADMIN` en `generar-tablero.py`).
-
-**Identidad:** la tabla `vinculos` separa la sesión anónima del dispositivo del
-perfil del alumno. Por eso un mismo alumno puede jugar en el celular y en el
-tablet sin duplicarse. Todas las funciones que antes asumían `auth.uid()` como
-identidad del jugador ahora resuelven el perfil con `kimun_yo()`.
+**Identidad del alumno:** la tabla `vinculos` separa la sesión anónima del
+dispositivo del perfil del alumno. Por eso un mismo alumno puede jugar en el celular
+y en el tablet sin duplicarse. Todas las funciones que antes asumían `auth.uid()`
+como identidad del jugador resuelven el perfil con `kimun_yo()`.
 
 **Límites conocidos:** el XP lo reporta el teléfono, así que puede falsearse; para
-eso existe `kimun_admin_xp_fijar`, que permite al adulto corregirlo (el teléfono
+eso existe `kimun_prof_xp_fijar`, que permite al profesor corregirlo (el teléfono
 adopta el valor del servidor cuando es menor). El progreso de campañas y las skins
 siguen siendo del aparato, no del alumno: en un tablet compartido, dos hermanos
 comparten avance aunque tengan XP distinto en el ranking.
 
-Diseño y plan: `docs/superpowers/specs/2026-08-17-cursos-ranking-real-design.md` y
+Diseño y plan de los cursos y el ranking:
+`docs/superpowers/specs/2026-08-17-cursos-ranking-real-design.md` y
 `docs/superpowers/plans/2026-08-17-cursos-ranking-real.md`.
+Diseño y plan del rol de profesor:
+`docs/superpowers/specs/2026-08-18-rol-profesor-design.md` y
+`docs/superpowers/plans/2026-08-18-rol-profesor.md`.
 
 ### Consolidar el pool de preguntas (`scripts/consolidar-pool.py`)
 
@@ -303,10 +334,11 @@ el sesgo de posición), asigna IDs por OA y escribe `preguntas.json`.
 
 ## Backend (Supabase)
 
-El **duelo 1v1 en línea** y el **ranking por curso** usan Supabase (proyecto en São
-Paulo). Esquema y funciones en `supabase/schema.sql` (pegar el archivo **completo** en
-el SQL Editor; es idempotente y se puede re-ejecutar sin dañar los datos). Requiere
-activar el **login anónimo** en Authentication → Sign In / Providers.
+El **duelo 1v1 en línea**, el **ranking por curso** y las **cuentas de profesor** usan
+Supabase (proyecto en São Paulo). Esquema y funciones en `supabase/schema.sql` (pegar
+el archivo **completo** en el SQL Editor; es idempotente y se puede re-ejecutar sin
+dañar los datos). Requiere activar el **login anónimo** en Authentication → Sign In /
+Providers, y dejar activada la **confirmación de correo** para las cuentas de profesor.
 
 - **Identidad sin contraseñas:** login anónimo → cada dispositivo es un usuario;
   perfil con `nombre`, `avatar` y **código de amigo** (`KIM-XXXX`).
@@ -319,12 +351,20 @@ activar el **login anónimo** en Authentication → Sign In / Providers.
   Sesión 19: `perfiles` guarda el `codigo_acceso` de cada alumno, que es su credencial,
   así que dejarla legible expondría los códigos de todos. La publishable key va en
   `index.html` (es pública por diseño; no es secreta).
-- **Cursos y ranking (Sesión 19):** tablas `cursos`, `vinculos` y `config`; funciones
-  `kimun_yo`, `kimun_xp`, `kimun_ranking`, `kimun_canjear` y las de administración.
-  Ver "Cursos y ranking real" en Herramientas de desarrollo.
-- **Cuidado al editar el esquema:** las funciones que usan pgcrypto (`crypt`, `gen_salt`)
-  necesitan `set search_path = public, extensions`, porque en Supabase esa extensión no
-  vive en `public`. `gen_random_uuid()` no lo necesita: es nativa de PostgreSQL.
+- **Cursos y ranking (Sesión 19):** tablas `cursos` y `vinculos`; funciones
+  `kimun_yo`, `kimun_xp`, `kimun_dificil`, `kimun_ranking` y `kimun_canjear`.
+- **Profesores (Sesión 22):** tablas `profesores` (los permisos viven aquí: sin fila,
+  una cuenta no puede nada), `profesores_autorizados` (lista blanca de correos) y la
+  columna `cursos.profesor_id` (dueño del curso). La familia de funciones
+  **`kimun_prof_*`** identifica al profesor por su sesión (`auth.uid()`) y **no recibe
+  ninguna clave**; `kimun_prof_es_mio` decide si un curso le pertenece y por eso no se
+  otorga a nadie desde afuera. Reemplazaron por completo a las viejas `kimun_admin_*`,
+  que fueron eliminadas junto con la clave global. Ver "Cursos, profesores y ranking
+  real" en Herramientas de desarrollo.
+- **Cuidado al editar el esquema:** `gen_random_uuid()` es nativa de PostgreSQL y no
+  necesita nada especial, pero si alguna función vuelve a usar pgcrypto (`crypt`,
+  `gen_salt`) necesita `set search_path = public, extensions`, porque en Supabase esa
+  extensión no vive en `public`.
 - **Pendiente:** notificaciones push.
 
 ## Trámites pendientes (fuera del código)
@@ -1133,3 +1173,52 @@ revisiones independientes del SQL. Diseño y plan en `docs/superpowers/`.
   (`vulpo.cl`) para no depender de la redirección de GitHub; dar la vuelta manual y decidir
   el paso a **v1**; los ~22 MB de originales y el huérfano `portada-mate-algebra.png`; duelo
   en 2 celulares; notificaciones push.
+
+### Sesión 22 (2026-08-18) — Rol de profesor implementado
+Se ejecutó el plan de 11 tareas con subagentes (implementador + revisión de seguridad por
+separado). El resultado: **la clave global compartida desapareció** y la administración vive
+en cuentas reales con aislamiento entre docentes.
+- **Backend:** tablas `profesores` y `profesores_autorizados`, columna `cursos.profesor_id` y
+  **14 funciones `kimun_prof_*`** que identifican al profesor por su sesión (`auth.uid()`) y
+  ya no reciben ninguna clave. Helper `kimun_prof_es_mio` para la comprobación de propiedad.
+- **`profesor.html` (nuevo):** ingreso, registro y panel, con un cliente de Supabase de
+  **almacenamiento separado** (`storageKey:'kimun-profesor'`). Sin eso, un profesor que
+  inicia sesión en el teléfono donde juega su hijo le borraría la identidad al niño.
+- **Se retiró del juego:** el botón Modo Admin, la pantalla `scr-admin` y sus 148 líneas de
+  JavaScript, más las 8 funciones `kimun_admin_*` y la fila `admin_clave`. **La pantalla de
+  inicio quedó con solo Jugador y Duelo**, que era la idea de Roberto.
+- **Hallazgos de las revisiones (lo más valioso).** El plan tenía defectos que solo
+  aparecieron al revisarlo y ejecutarlo:
+  - **La cuenta de administrador era reclamable desde internet.** Sembrar el correo del
+    administrador en la lista blanca, con el repositorio público y la confirmación de correo
+    desactivada, permitía que cualquiera se registrara con ese correo y quedara como
+    administrador. Se eliminó la semilla: el administrador se crea a mano desde Supabase.
+  - **La recomendación de desactivar la confirmación de correo era peligrosa** y se revirtió.
+    Es lo único que impide registrarse con un correo ajeno.
+  - **El `delete` que liberaba registros huérfanos permitía escalar a administrador** y podía
+    borrar la cuenta de un profesor vivo. Quedó acotado con `not exists` sobre `auth.users`.
+  - **`kimun_prof_yo` no devuelve null** para quien no es profesor, sino una fila de campos
+    vacíos, que en JavaScript es un objeto verdadero: **el panel se habría abierto para
+    cualquiera**. Se detectó probando contra el servidor real, no leyendo código.
+  - **Un profesor no autorizado quedaba encerrado**, viendo "no tienes permiso" en cada
+    visita sin poder cerrar sesión, porque el botón vivía dentro del panel oculto. Es el
+    camino que recorre todo docente que se registra antes de ser autorizado.
+  - **`admEsc` era usada por el ranking**, no solo por el panel: borrar el bloque del Modo
+    Admin habría roto el ranking del curso. Se rescató como `escHtml`.
+  - Faltaban por completo **revocar a un profesor** y **reasignar un curso huérfano**: sin
+    ellas, un docente que deja el colegio conservaba acceso para siempre.
+- **Riesgo activo encontrado y cerrado:** la clave `112358` estaba en el repositorio público
+  y permitía a cualquiera leer los códigos de acceso de todos los alumnos y borrar cursos.
+  Roberto la cambió por una que no está en el repositorio; con el retiro de las funciones
+  `kimun_admin_*` el problema queda cerrado de raíz.
+- **Límites conocidos:** el correo integrado de Supabase permite **2 envíos por hora**, así
+  que para un colegio real hace falta SMTP propio (Resend o Brevo) antes de dar de alta
+  varios profesores; sin él, tampoco hay autorrecuperación de contraseña.
+- **Pendiente de verificación:** el **aislamiento entre dos profesores** —que un docente no
+  pueda tocar los cursos de otro— está implementado y revisado, pero no se probó con dos
+  cuentas reales. Es la prueba que le da sentido a la feature.
+- **Nota:** el curso "8vo csfs" y sus cuatro alumnos ya no existían al llegar aquí; se habían
+  borrado antes del cambio. Los códigos `ALU-` entregados quedaron sin efecto.
+- **Pendientes:** probar el aislamiento con un segundo profesor; crear el curso real de los
+  niños y que canjeen sus códigos; los dos trámites (marca en INAPI y dominio `vulpo.cl`);
+  configurar SMTP; la vuelta manual para decidir la v1; duelo en 2 celulares; push.

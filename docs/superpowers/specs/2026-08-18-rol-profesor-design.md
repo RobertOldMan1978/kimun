@@ -133,9 +133,12 @@ El orden importa, porque una secuencia equivocada deja el sistema sin nadie que 
 administrarlo:
 
 1. Crear las tablas nuevas y `cursos.profesor_id`.
-2. Sembrar el correo de Roberto en `profesores_autorizados`.
-3. Roberto crea su cuenta en la página del profesor. Como su correo se sembró con
-   `como_admin = true`, queda administrador automáticamente.
+2. Roberto crea su usuario desde el panel de Supabase (Authentication → Add user), que nace
+   con el correo ya confirmado.
+3. Marcarlo como administrador con una consulta única sobre `profesores`. **No se siembra su
+   correo en `profesores_autorizados` con `como_admin = true`**: el repositorio es público,
+   así que esa fila sería una cuenta de administrador esperando a que alguien la reclame
+   registrándose con ese correo.
 4. Asignar todos los cursos existentes a esa cuenta.
 5. Recién entonces eliminar las funciones con clave y el panel del juego.
 
@@ -165,6 +168,9 @@ Roberto se la restablezca desde el panel de Supabase. El resto del sistema funci
   autonomía; el borrado pide confirmación y explica qué arrastra.
 - **Sin verificación de que la persona trabaje en el colegio**: la garantía es que Roberto
   autoriza cada correo a mano.
+- **La confirmación de correo debe quedar activada.** Es lo que impide que alguien se
+  registre con un correo autorizado que no le pertenece. Desactivarla convierte la lista
+  blanca en una lista de cuentas reclamables.
 - **Sin SMTP no hay autorrecuperación de contraseña.**
 - El XP sigue siendo reportado por el teléfono del alumno y puede falsearse; el profesor lo
   corrige con `kimun_prof_xp_fijar`.

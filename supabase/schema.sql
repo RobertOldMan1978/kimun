@@ -38,7 +38,7 @@ create table if not exists public.duelos (
 );
 create index if not exists idx_duelos_codigo on public.duelos(retado_codigo);
 
--- Cursos (los crea el adulto desde el Modo Admin)
+-- Cursos (los crea el profesor desde profesor.html)
 create table if not exists public.cursos (
   id     uuid primary key default gen_random_uuid(),
   nombre text not null,
@@ -59,28 +59,70 @@ create table if not exists public.vinculos (
   creado    timestamptz not null default now()
 );
 
--- Clave del Modo Admin, guardada en el servidor (no en el JavaScript).
--- Se guarda con hash (bcrypt), nunca en texto plano.
+-- Ajustes del servidor en pares clave/valor. Aquí vivía la clave global del Modo
+-- Admin, que ya no existe: los permisos ahora son por cuenta de profesor. La tabla
+-- se conserva por si más adelante hace falta guardar algún ajuste, y al final de
+-- este archivo se borra la fila 'admin_clave' de las bases donde quedó.
 create table if not exists public.config (
   clave text primary key,
   valor text not null
 );
--- Se siembra con un valor aleatorio que nadie conoce: así, si la clave real no se
--- fija, el Modo Admin queda cerrado en vez de abierto con una clave conocida.
--- Roberto fija la suya con:
---   update public.config set valor = crypt('<su clave>', gen_salt('bf', 10)) where clave='admin_clave';
-insert into public.config(clave,valor)
-values ('admin_clave', crypt(encode(gen_random_bytes(18),'hex'), gen_salt('bf', 10)))
-on conflict (clave) do nothing;
 
--- Saneamiento: una versión anterior de este archivo guardaba la clave en texto
--- plano, y el "on conflict do nothing" de arriba la conservaría para siempre.
--- Con un valor así la validación nunca acierta y el Modo Admin queda cerrado sin
--- explicación. Esto lo reemplaza por una semilla aleatoria. Solo actúa sobre
--- valores que no son un hash bcrypt (los bcrypt empiezan con "$2"), así que
--- volver a ejecutar el esquema jamás pisa una clave real ya configurada.
-update public.config set valor = crypt(encode(gen_random_bytes(18),'hex'), gen_salt('bf', 10))
- where clave = 'admin_clave' and valor not like '$2%';
+-- ------------------------------------------------------------
+-- Profesores. Este es el único modelo de administración: cada profesor entra con
+-- su correo y su contraseña (Supabase Auth) y solo obtiene permisos si tiene fila
+-- en la tabla "profesores". La antigua clave global compartida fue eliminada.
+-- ------------------------------------------------------------
+
+-- Profesores: una fila por cuenta de Supabase Auth. Los permisos viven aquí,
+-- no en la cuenta: sin fila en esta tabla, una cuenta no puede hacer nada.
+create table if not exists public.profesores (
+  id       uuid primary key,                 -- auth.uid() de su cuenta
+  correo   text unique not null,
+  nombre   text,
+  es_admin boolean not null default false,
+  creado   timestamptz not null default now()
+);
+
+-- Lista blanca: solo estos correos pueden completar su registro.
+create table if not exists public.profesores_autorizados (
+  correo       text primary key,
+  invitado_por uuid references public.profesores(id) on delete set null,
+  como_admin   boolean not null default false,   -- la primera alta hereda esta marca
+  usado        boolean not null default false,
+  creado       timestamptz not null default now()
+);
+
+-- Dueño del curso. Nulo = curso huérfano, visible solo para administradores.
+alter table public.cursos add column if not exists profesor_id uuid
+  references public.profesores(id) on delete set null;
+create index if not exists idx_cursos_profesor on public.cursos(profesor_id);
+
+-- ------------------------------------------------------------
+-- Alta de la primera cuenta de administrador (procedimiento manual)
+--
+-- Aquí NO se siembra ningún correo en profesores_autorizados, a propósito.
+-- Este repositorio es público: una fila con como_admin = true escrita en el
+-- archivo publica cuál es el correo del administrador y lo deja como una cuenta
+-- esperando a que alguien la reclame. Bastaría con registrarse en Supabase Auth
+-- con ese correo y llamar a kimun_prof_alta para quedar como administrador de
+-- toda la plataforma. Por eso el primer administrador se crea a mano, una sola
+-- vez, y nunca por lista blanca.
+--
+-- Procedimiento (una sola vez, por Roberto):
+--   1. Panel de Supabase → Authentication → Users → "Add user". El usuario
+--      creado desde el panel nace con el correo ya confirmado, que es lo que
+--      kimun_prof_alta exige para dejar entrar a alguien.
+--   2. Ejecutar en el SQL Editor, reemplazando el correo si corresponde:
+--
+--        insert into public.profesores(id, correo, nombre, es_admin)
+--        select id, email, 'Roberto', true from auth.users
+--         where email = 'vulpochile.app@gmail.com'
+--        on conflict (id) do update set es_admin = true;
+--
+-- A partir de ahí, los demás profesores se autorizan desde el panel del
+-- administrador con kimun_prof_autorizar, que nunca otorga como_admin.
+-- ------------------------------------------------------------
 
 -- RLS: ninguna tabla se lee directo; todo pasa por las funciones SECURITY DEFINER.
 alter table public.perfiles enable row level security;
@@ -88,6 +130,10 @@ alter table public.duelos   enable row level security;
 alter table public.cursos   enable row level security;
 alter table public.vinculos enable row level security;
 alter table public.config   enable row level security;
+-- Sin políticas, igual que el resto del esquema. Importa especialmente en
+-- profesores_autorizados, porque revela qué correos pueden registrarse.
+alter table public.profesores             enable row level security;
+alter table public.profesores_autorizados enable row level security;
 drop policy if exists "perfiles_select" on public.perfiles;
 
 -- Genera un código único tipo KIM-AB12
@@ -280,104 +326,237 @@ declare r public.perfiles; begin
   return r; end $$;
 
 -- ------------------------------------------------------------
--- Administración de cursos (Modo Admin). La clave viaja en cada
--- llamada y se compara contra la tabla config; nunca vive en el
--- JavaScript del juego.
+-- Funciones del rol de profesor. No reciben ninguna clave: identifican al
+-- profesor por su sesión de Supabase Auth (auth.uid()) y consultan la tabla
+-- profesores para saber qué puede hacer.
 -- ------------------------------------------------------------
 
--- Valida la clave del Modo Admin contra el hash guardado en config.
--- El search_path incluye "extensions" a propósito: en Supabase pgcrypto vive en
--- ese esquema, no en public, así que sin él la función no encuentra crypt() y
--- falla con "function crypt(text, text) does not exist". No quitar.
--- (gen_random_uuid(), que usa el resto del archivo, sí es nativa de PostgreSQL y
--- por eso nunca necesitó este ajuste.)
-create or replace function public.kimun_admin_ok(p_clave text) returns boolean
-language sql security definer stable set search_path = public, extensions as $$
-  select exists(select 1 from public.config where clave='admin_clave' and valor = crypt(p_clave, valor)); $$;
+-- Mi fila de profesor, o null si esta cuenta no tiene permisos.
+create or replace function public.kimun_prof_yo()
+returns public.profesores language sql security definer stable set search_path=public as $$
+  select * from public.profesores where id = auth.uid(); $$;
 
-create or replace function public.kimun_admin_curso_crear(p_clave text, p_nombre text)
-returns public.cursos language plpgsql security definer set search_path=public as $$
-declare r public.cursos; begin
-  if not public.kimun_admin_ok(p_clave) then raise exception 'clave_invalida'; end if;
-  if coalesce(trim(p_nombre),'') = '' then raise exception 'nombre_vacio'; end if;
-  insert into public.cursos(nombre,codigo)
-  values (trim(p_nombre), public.kimun_gen_codigo_curso()) returning * into r;
+-- Completa el registro. El correo NO se pasa por parámetro: se toma de la sesión,
+-- para que nadie pueda registrarse con el correo autorizado de otra persona.
+create or replace function public.kimun_prof_alta(p_nombre text)
+returns public.profesores language plpgsql security definer set search_path=public as $$
+declare mi_correo text; aut public.profesores_autorizados; r public.profesores; begin
+  if auth.uid() is null then raise exception 'sin_sesion'; end if;
+  -- Defensa en profundidad: solo una cuenta de correo real y confirmada puede
+  -- darse de alta. Cada teléfono que abre el juego tiene una sesión anónima, y
+  -- desde ella se puede llamar a updateUser({email}); sin estos dos filtros esa
+  -- sesión entraría por la misma puerta que un profesor.
+  -- Por eso 'sin_correo' cubre ahora tres casos: la sesión no tiene correo,
+  -- el correo todavía no está confirmado, o la sesión es anónima.
+  select email into mi_correo from auth.users
+   where id = auth.uid() and email_confirmed_at is not null
+     and coalesce(is_anonymous, false) = false;
+  if mi_correo is null then raise exception 'sin_correo'; end if;
+  select * into aut from public.profesores_autorizados where lower(correo) = lower(mi_correo);
+  if aut.correo is null then raise exception 'no_autorizado'; end if;
+  -- Si la cuenta de Auth se borró y se recreó, el correo sigue tomado por un
+  -- profesor cuyo id ya no existe. Se libera antes de insertar el nuevo, porque
+  -- el "on conflict (id)" de abajo no atrapa ese choque (es contra la
+  -- restricción única de correo) y el registro se volvería imposible, con un
+  -- error de clave duplicada que en la página se lee como un mensaje genérico.
+  -- El "not exists" es imprescindible: sin él, este delete alcanzaría a un
+  -- profesor VIVO cuyo correo guardado quedó desalineado del real, lo borraría
+  -- y la siguiente alta tomaría la rama del insert, volviendo a leer como_admin
+  -- de la lista blanca. Es decir, sería una vía de escalada, no una limpieza.
+  -- Consecuencia asumida: cursos.profesor_id tiene "on delete set null", así que
+  -- los cursos del profesor borrado quedan huérfanos y pasan a verlos solo los
+  -- administradores, hasta reasignarlos con kimun_prof_curso_asignar.
+  delete from public.profesores p
+   where lower(p.correo) = lower(mi_correo)
+     and p.id <> auth.uid()
+     and not exists (select 1 from auth.users u where u.id = p.id);
+  -- Deliberado: el "do update" toca el nombre y el correo, nunca es_admin.
+  -- Marcar como_admin en la lista blanca después del registro NO asciende a
+  -- nadie; si lo hiciera, bastaría con volver a llamar a esta función para
+  -- escalar permisos. Un ascenso se hace a mano, con un update sobre
+  -- public.profesores. El correo sí se sincroniza para que no se desalinee del
+  -- de Auth, que es justo la situación que el delete de arriba ya no limpia.
+  insert into public.profesores(id, correo, nombre, es_admin)
+  values (auth.uid(), lower(mi_correo), nullif(trim(p_nombre),''), aut.como_admin)
+  on conflict (id) do update set
+    nombre = coalesce(excluded.nombre, public.profesores.nombre),
+    correo = excluded.correo
+  returning * into r;
+  update public.profesores_autorizados set usado = true where lower(correo) = lower(mi_correo);
   return r; end $$;
 
--- Elimina un curso completo: borra sus alumnos inscritos (y, por cascade, sus
--- duelos) y luego el curso. Devuelve cuántos alumnos se borraron. Avisa si el
--- código no existe para no confundir un curso ya borrado con uno mal escrito.
-drop function if exists public.kimun_admin_curso_quitar(text,text);
-create or replace function public.kimun_admin_curso_quitar(p_clave text, p_curso_codigo text)
+-- ¿Ese curso es mío? Los administradores pasan siempre.
+create or replace function public.kimun_prof_es_mio(p_curso uuid)
+returns boolean language sql security definer stable set search_path=public as $$
+  select exists(
+    select 1 from public.cursos c, public.profesores p
+    where p.id = auth.uid() and c.id = p_curso
+      and (p.es_admin or c.profesor_id = p.id)); $$;
+
+-- Mis cursos con sus alumnos. Un administrador ve todos, incluidos los huérfanos.
+-- El drop previo es el guardia de idempotencia que ya usa kimun_ranking: al ser
+-- "returns table", cambiar cualquier columna del returns haría fallar el
+-- re-pegado del archivo con "cannot change return type of existing function".
+drop function if exists public.kimun_prof_listar();
+create or replace function public.kimun_prof_listar()
+returns table(curso text, curso_codigo text, alumno text, avatar text,
+              codigo_acceso text, xp int, dificil int)
+language plpgsql security definer set search_path=public as $$
+declare yo public.profesores; begin
+  select * into yo from public.profesores where id = auth.uid();
+  if yo.id is null then raise exception 'no_autorizado'; end if;
+  return query
+    select c.nombre, c.codigo, p.nombre, p.avatar, p.codigo_acceso, p.xp, p.dificil
+    from public.cursos c
+    left join public.perfiles p on p.curso_id = c.id
+    where yo.es_admin or c.profesor_id = yo.id
+    order by c.nombre, p.xp desc nulls last, p.nombre;
+end $$;
+
+create or replace function public.kimun_prof_curso_crear(p_nombre text)
+returns public.cursos language plpgsql security definer set search_path=public as $$
+declare yo public.profesores; r public.cursos; begin
+  select * into yo from public.profesores where id = auth.uid();
+  if yo.id is null then raise exception 'no_autorizado'; end if;
+  if coalesce(trim(p_nombre),'') = '' then raise exception 'nombre_vacio'; end if;
+  insert into public.cursos(nombre, codigo, profesor_id)
+  values (trim(p_nombre), public.kimun_gen_codigo_curso(), yo.id) returning * into r;
+  return r; end $$;
+
+-- Elimina un curso mío y sus alumnos (arrastra los duelos de esos alumnos).
+create or replace function public.kimun_prof_curso_quitar(p_curso_codigo text)
 returns int language plpgsql security definer set search_path=public as $$
 declare cid uuid; n int; begin
-  if not public.kimun_admin_ok(p_clave) then raise exception 'clave_invalida'; end if;
   select id into cid from public.cursos where codigo = upper(trim(p_curso_codigo));
-  if cid is null then raise exception 'curso_invalido'; end if;
-  delete from public.perfiles where curso_id = cid;   -- alumnos del curso (arrastra sus duelos)
+  -- Un código que no existe y un curso ajeno responden lo mismo a propósito: si
+  -- se distinguieran, cualquier profesor podría recorrer los códigos CUR- y
+  -- averiguar cuáles existen en la plataforma.
+  if cid is null or not public.kimun_prof_es_mio(cid) then raise exception 'no_autorizado'; end if;
+  delete from public.perfiles where curso_id = cid;
   get diagnostics n = row_count;
   delete from public.cursos where id = cid;
   return n; end $$;
 
-create or replace function public.kimun_admin_alumno_agregar(p_clave text, p_curso_codigo text, p_nombre text, p_avatar text)
+create or replace function public.kimun_prof_alumno_agregar(p_curso_codigo text, p_nombre text, p_avatar text)
 returns public.perfiles language plpgsql security definer set search_path=public as $$
-declare r public.perfiles; c public.cursos; begin
-  if not public.kimun_admin_ok(p_clave) then raise exception 'clave_invalida'; end if;
+declare cid uuid; r public.perfiles; begin
   if coalesce(trim(p_nombre),'') = '' then raise exception 'nombre_vacio'; end if;
-  select * into c from public.cursos where codigo = upper(trim(p_curso_codigo));
-  if c.id is null then raise exception 'curso_invalido'; end if;
+  select id into cid from public.cursos where codigo = upper(trim(p_curso_codigo));
+  -- Mismo criterio que en kimun_prof_curso_quitar: no se distingue "no existe"
+  -- de "no es tuyo", para no filtrar qué códigos de curso están en uso.
+  if cid is null or not public.kimun_prof_es_mio(cid) then raise exception 'no_autorizado'; end if;
   insert into public.perfiles(id,nombre,avatar,codigo,curso_id,codigo_acceso)
   values (gen_random_uuid(), trim(p_nombre), coalesce(p_avatar,'🦊'),
-          public.kimun_gen_codigo(), c.id, public.kimun_gen_codigo_alumno())
+          public.kimun_gen_codigo(), cid, public.kimun_gen_codigo_alumno())
   returning * into r;
   return r; end $$;
 
-create or replace function public.kimun_admin_listar(p_clave text)
-returns table(curso text, curso_codigo text, alumno text, avatar text, codigo_acceso text, xp int)
-language plpgsql security definer set search_path=public as $$
-begin
-  if not public.kimun_admin_ok(p_clave) then raise exception 'clave_invalida'; end if;
-  return query
-    select c.nombre, c.codigo, p.nombre, p.avatar, p.codigo_acceso, p.xp
-    from public.cursos c
-    left join public.perfiles p on p.curso_id = c.id
-    order by c.nombre, p.xp desc nulls last, p.nombre;
-end $$;
-
--- Elimina un alumno. Devuelve cuántas filas borró y avisa si el código no
--- existía, para que un código mal escrito no se vea como un borrado correcto.
--- El drop previo es necesario porque esta función antes devolvía void y
--- "create or replace" no permite cambiar el tipo de retorno.
-drop function if exists public.kimun_admin_alumno_quitar(text,text);
-create or replace function public.kimun_admin_alumno_quitar(p_clave text, p_codigo_acceso text)
+-- Nota: un alumno sin curso (curso_id nulo) deja "cid" nulo y la función responde
+-- alumno_invalido. Es lo correcto: por esta vía nadie toca un perfil sin curso.
+create or replace function public.kimun_prof_alumno_quitar(p_codigo_acceso text)
 returns int language plpgsql security definer set search_path=public as $$
-declare n int; begin
-  if not public.kimun_admin_ok(p_clave) then raise exception 'clave_invalida'; end if;
+declare cid uuid; n int; begin
+  select curso_id into cid from public.perfiles where codigo_acceso = upper(trim(p_codigo_acceso));
+  if cid is null then raise exception 'alumno_invalido'; end if;
+  if not public.kimun_prof_es_mio(cid) then raise exception 'no_autorizado'; end if;
   delete from public.perfiles where codigo_acceso = upper(trim(p_codigo_acceso));
   get diagnostics n = row_count;
+  -- Puede pasar si otra sesión borró al alumno entre la lectura y el delete. Sin
+  -- este aviso, la página informaría un borrado que nunca ocurrió.
   if n = 0 then raise exception 'alumno_invalido'; end if;
   return n; end $$;
 
--- Corrige el XP de un alumno. kimun_xp solo sube (lo informa el propio juego),
--- así que esta es la única manera de bajar un puntaje inflado a mano.
-create or replace function public.kimun_admin_xp_fijar(p_clave text, p_codigo_acceso text, p_xp int)
+-- Corrige el XP de un alumno mío. kimun_xp solo sube, así que esta es la única
+-- forma de bajar un valor inflado desde el teléfono.
+create or replace function public.kimun_prof_xp_fijar(p_codigo_acceso text, p_xp int)
 returns int language plpgsql security definer set search_path=public as $$
-declare v int; begin
-  if not public.kimun_admin_ok(p_clave) then raise exception 'clave_invalida'; end if;
+declare cid uuid; v int; begin
+  select curso_id into cid from public.perfiles where codigo_acceso = upper(trim(p_codigo_acceso));
+  if cid is null then raise exception 'alumno_invalido'; end if;
+  if not public.kimun_prof_es_mio(cid) then raise exception 'no_autorizado'; end if;
   update public.perfiles set xp = greatest(0, coalesce(p_xp,0))
   where codigo_acceso = upper(trim(p_codigo_acceso)) returning xp into v;
+  -- Igual que arriba: si el alumno desapareció entre la lectura y el update, "v"
+  -- queda nulo y la página leería un éxito falso.
   if v is null then raise exception 'alumno_invalido'; end if;
   return v; end $$;
 
--- Cuenta y elimina los perfiles de prueba: los que no son bots y no son alumnos
--- inscritos por el adulto. Son los perfiles que crea cada navegador o teléfono al
--- abrir el juego, y se acumulan con las pruebas. p_ejecutar=false solo cuenta.
--- Ojo: borrar un perfil arrastra sus duelos (on delete cascade) y deja sin progreso
--- en línea a cualquier dispositivo que no haya canjeado un código de alumno.
-create or replace function public.kimun_admin_limpiar_pruebas(p_clave text, p_ejecutar boolean)
+-- Autoriza un correo para que pueda crear su cuenta de profesor.
+create or replace function public.kimun_prof_autorizar(p_correo text)
+returns public.profesores_autorizados language plpgsql security definer set search_path=public as $$
+declare yo public.profesores; r public.profesores_autorizados; begin
+  select * into yo from public.profesores where id = auth.uid();
+  if yo.id is null or not yo.es_admin then raise exception 'no_autorizado'; end if;
+  if coalesce(trim(p_correo),'') !~ '^[^@[:space:]]+@[^@[:space:]]+\.[^@[:space:]]+$'
+    then raise exception 'correo_invalido'; end if;
+  insert into public.profesores_autorizados(correo, invitado_por)
+  values (lower(trim(p_correo)), yo.id)
+  on conflict (correo) do update set invitado_por = excluded.invitado_por
+  returning * into r;
+  return r; end $$;
+
+-- Lista de profesores y cuántos cursos tiene cada uno.
+-- El join es "full outer" a propósito: si fuera desde profesores_autorizados,
+-- un profesor ya registrado cuyo correo se quitó de la lista blanca dejaría de
+-- aparecer, y el administrador no tendría cómo verlo ni revocarlo. Así se listan
+-- los dos conjuntos: los correos autorizados y los profesores registrados.
+-- Mismo guardia de idempotencia que kimun_prof_listar (es "returns table").
+drop function if exists public.kimun_prof_profesores();
+create or replace function public.kimun_prof_profesores()
+returns table(correo text, nombre text, es_admin boolean, cursos int, registrado boolean)
+language plpgsql security definer set search_path=public as $$
+declare yo public.profesores; begin
+  select * into yo from public.profesores where id = auth.uid();
+  if yo.id is null or not yo.es_admin then raise exception 'no_autorizado'; end if;
+  return query
+    select coalesce(a.correo, p.correo), p.nombre, coalesce(p.es_admin,false),
+           (select count(*)::int from public.cursos c where c.profesor_id = p.id),
+           (p.id is not null)
+    from public.profesores_autorizados a
+    full outer join public.profesores p on lower(p.correo) = lower(a.correo)
+    order by coalesce(a.creado, p.creado);
+end $$;
+
+-- Revoca a un profesor: borra su fila de profesores y saca su correo de la lista
+-- blanca, para que no pueda volver a registrarse solo. Devuelve cuántos
+-- profesores borró (0 si el correo estaba autorizado pero nunca se registró).
+-- Sus cursos NO se borran: cursos.profesor_id tiene "on delete set null", así
+-- que quedan huérfanos, visibles solo para los administradores, hasta que se
+-- reasignen con kimun_prof_curso_asignar.
+create or replace function public.kimun_prof_quitar(p_correo text)
 returns int language plpgsql security definer set search_path=public as $$
-declare n int; begin
-  if not public.kimun_admin_ok(p_clave) then raise exception 'clave_invalida'; end if;
+declare yo public.profesores; n int; begin
+  select * into yo from public.profesores where id = auth.uid();
+  if yo.id is null or not yo.es_admin then raise exception 'no_autorizado'; end if;
+  -- Un administrador no puede revocarse a sí mismo: si es el único, la
+  -- plataforma quedaría sin nadie que pueda administrarla y solo se recuperaría
+  -- con SQL a mano.
+  if lower(trim(coalesce(p_correo,''))) = lower(yo.correo) then raise exception 'no_te_puedes_quitar'; end if;
+  delete from public.profesores where lower(correo) = lower(trim(coalesce(p_correo,'')));
+  get diagnostics n = row_count;
+  delete from public.profesores_autorizados where lower(correo) = lower(trim(coalesce(p_correo,'')));
+  return n; end $$;
+
+-- Reasigna un curso a un profesor. Es la contraparte de kimun_prof_quitar: sin
+-- esto, un curso huérfano no tendría forma de volver a tener dueño.
+create or replace function public.kimun_prof_curso_asignar(p_curso_codigo text, p_correo text)
+returns public.cursos language plpgsql security definer set search_path=public as $$
+declare yo public.profesores; cid uuid; pid uuid; r public.cursos; begin
+  select * into yo from public.profesores where id = auth.uid();
+  if yo.id is null or not yo.es_admin then raise exception 'no_autorizado'; end if;
+  select id into cid from public.cursos where codigo = upper(trim(coalesce(p_curso_codigo,'')));
+  if cid is null then raise exception 'curso_invalido'; end if;
+  select id into pid from public.profesores where lower(correo) = lower(trim(coalesce(p_correo,'')));
+  if pid is null then raise exception 'profesor_invalido'; end if;
+  update public.cursos set profesor_id = pid where id = cid returning * into r;
+  return r; end $$;
+
+-- Limpieza de perfiles de prueba. Cuenta con p_ejecutar=false y borra con true.
+create or replace function public.kimun_prof_limpiar_pruebas(p_ejecutar boolean)
+returns int language plpgsql security definer set search_path=public as $$
+declare yo public.profesores; n int; begin
+  select * into yo from public.profesores where id = auth.uid();
+  if yo.id is null or not yo.es_admin then raise exception 'no_autorizado'; end if;
   if p_ejecutar then
     delete from public.perfiles where es_bot = false and codigo_acceso is null;
     get diagnostics n = row_count;
@@ -396,12 +575,13 @@ on conflict (codigo) do nothing;
 
 -- PostgreSQL otorga EXECUTE a PUBLIC en toda función nueva, así que no basta con
 -- omitirlas del grant de abajo: hay que quitarles el permiso de forma explícita.
--- kimun_admin_ok se usa solo dentro de las funciones de administración; si
--- quedara expuesta serviría para probar claves una tras otra sin dejar rastro.
--- Los generadores de código tampoco tienen por qué llamarse desde afuera.
+-- Los generadores de código no tienen por qué llamarse desde afuera.
+-- kimun_prof_es_mio tampoco se otorga: solo la llaman las demás funciones del
+-- rol de profesor, que corren como su propietario y por eso siguen pudiendo usarla.
 revoke execute on function
-  public.kimun_admin_ok(text), public.kimun_gen_codigo(),
-  public.kimun_gen_codigo_curso(), public.kimun_gen_codigo_alumno()
+  public.kimun_gen_codigo(),
+  public.kimun_gen_codigo_curso(), public.kimun_gen_codigo_alumno(),
+  public.kimun_prof_es_mio(uuid)
   from public;
 
 grant execute on function
@@ -409,9 +589,33 @@ grant execute on function
   public.kimun_crear_duelo(text,text,jsonb,int,int), public.kimun_pendientes(),
   public.kimun_responder(uuid,int,int), public.kimun_historial(),
   public.kimun_yo(), public.kimun_xp(int), public.kimun_dificil(int), public.kimun_ranking(), public.kimun_canjear(text),
-  public.kimun_admin_curso_crear(text,text), public.kimun_admin_curso_quitar(text,text),
-  public.kimun_admin_alumno_agregar(text,text,text,text),
-  public.kimun_admin_listar(text), public.kimun_admin_alumno_quitar(text,text),
-  public.kimun_admin_xp_fijar(text,text,int),
-  public.kimun_admin_limpiar_pruebas(text,boolean)
+  public.kimun_prof_yo(), public.kimun_prof_alta(text),
+  public.kimun_prof_listar(), public.kimun_prof_curso_crear(text),
+  public.kimun_prof_curso_quitar(text), public.kimun_prof_alumno_agregar(text,text,text),
+  public.kimun_prof_alumno_quitar(text), public.kimun_prof_xp_fijar(text,int),
+  public.kimun_prof_autorizar(text), public.kimun_prof_profesores(),
+  public.kimun_prof_quitar(text), public.kimun_prof_curso_asignar(text,text),
+  public.kimun_prof_limpiar_pruebas(boolean)
   to anon, authenticated;
+
+-- ------------------------------------------------------------
+-- Retiro del modelo de clave global
+--
+-- El Modo Admin, que se abría con una sola contraseña compartida, fue
+-- reemplazado por las cuentas de profesor (kimun_prof_*). Sus funciones ya no se
+-- crean más arriba, pero eso no las quita de las bases donde alguna vez se
+-- aplicó este archivo: hay que eliminarlas de verdad. Estos drop son idempotentes
+-- (el "if exists" no falla si ya no están) y usan la firma exacta que tenían,
+-- porque PostgreSQL identifica una función por sus tipos de parámetros.
+-- ------------------------------------------------------------
+drop function if exists public.kimun_admin_curso_crear(text,text);
+drop function if exists public.kimun_admin_curso_quitar(text,text);
+drop function if exists public.kimun_admin_alumno_agregar(text,text,text,text);
+drop function if exists public.kimun_admin_listar(text);
+drop function if exists public.kimun_admin_alumno_quitar(text,text);
+drop function if exists public.kimun_admin_xp_fijar(text,text,int);
+drop function if exists public.kimun_admin_limpiar_pruebas(text,boolean);
+drop function if exists public.kimun_admin_ok(text);
+
+-- Y la clave misma: ya no la valida nadie, así que no tiene por qué seguir ahí.
+delete from public.config where clave = 'admin_clave';

@@ -79,14 +79,15 @@ create table if not exists public.profesores_autorizados (
 alter table public.cursos add column if not exists profesor_id uuid
   references public.profesores(id) on delete set null;
 
--- Semilla: el correo del dueño de la plataforma, como administrador.
-insert into public.profesores_autorizados(correo, como_admin)
-values ('thingol25@gmail.com', true)
-on conflict (correo) do nothing;
+-- NO se siembra aquí al administrador. Una fila con como_admin=true en un
+-- repositorio público es una cuenta de administrador esperando a que alguien la
+-- reclame: bastaría con registrarse con ese correo. El alta del administrador se
+-- hace a mano, con el procedimiento comentado más abajo en este mismo archivo.
 ```
 
-> **Confirmar con Roberto** que ese es el correo con el que quiere crear su cuenta de
-> administrador. Si prefiere otro, se cambia esa línea antes de aplicar el esquema.
+El correo del administrador es `vulpochile.app@gmail.com`, pero **no se siembra en la lista
+blanca**: Roberto crea ese usuario desde el panel de Supabase y lo marca como administrador
+con una consulta única. Ver la nota de seguridad de la Tarea 5.
 
 - [ ] **Paso 2: Activar RLS en las tablas nuevas**
 
@@ -104,13 +105,22 @@ registrarse.
 
 - [ ] **Paso 3: Aplicar y verificar**
 
-Pegar `supabase/schema.sql` completo en el SQL Editor y ejecutar. Luego:
+Pegar `supabase/schema.sql` completo en el SQL Editor y ejecutar. Antes de seguir, confirmar
+que las dos columnas de `auth.users` que usa `kimun_prof_alta` existen en este proyecto —los
+cuerpos plpgsql no se validan al crearse, así que un nombre equivocado recién fallaría en el
+primer registro de profesor, con un error confuso:
 
 ```sql
-select count(*) from public.profesores_autorizados where como_admin;
+select email_confirmed_at, is_anonymous from auth.users limit 1;
 ```
 
-Esperado: `1`.
+Esperado: la consulta corre sin error (puede devolver cero filas). Luego:
+
+```sql
+select count(*) from public.profesores;
+```
+
+Esperado: `0` — todavía no hay ningún profesor; el administrador se crea en la Tarea 8.
 
 ```sql
 select column_name from information_schema.columns
@@ -414,7 +424,7 @@ sesión anónima del alumno en ese mismo navegador.
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
-<title>KIMÜN · Profesores</title>
+<title>VULPO · Profesores</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;900&family=Titan+One&display=swap" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
@@ -439,7 +449,7 @@ code{color:var(--cyan);font-weight:900}
 </style>
 </head>
 <body>
-<h1>KIMÜN · Profesores</h1>
+<h1>VULPO · Profesores</h1>
 
 <div class="card" id="cardAuth">
   <h3 id="authTitulo">Ingresar</h3>
@@ -468,10 +478,12 @@ const $=id=>document.getElementById(id);
 let MODO='entrar', YO=null;
 
 const ERRORES={
-  no_autorizado:'Tu correo no está autorizado. Pídele acceso al administrador.',
+  no_autorizado:'No tienes permiso para esto. Si es tu primera vez, pídele acceso al administrador.',
   sin_sesion:'La sesión se cerró. Vuelve a entrar.',
-  sin_correo:'No se pudo leer tu correo.',
+  sin_correo:'Tu cuenta no tiene un correo confirmado. Revisa el correo de confirmación y vuelve a entrar.',
   correo_invalido:'Ese correo no es válido.',
+  profesor_invalido:'Ese profesor no existe.',
+  no_te_puedes_quitar:'No puedes quitarte a ti mismo.',
   nombre_vacio:'Escribe un nombre.',
   curso_invalido:'Ese curso no existe.',
   alumno_invalido:'Ese alumno no existe.'
@@ -504,14 +516,18 @@ $('btnEntrar').onclick=async ()=>{
   $('btnEntrar').disabled=true; aviso('Comprobando…','var(--dim)');
   try{
     if(MODO==='crear'){
-      const {error}=await SB.auth.signUp({email:correo,password:clave});
+      const {data,error}=await SB.auth.signUp({email:correo,password:clave});
       if(error) throw error;
-      const {error:e2}=await SB.rpc('kimun_prof_alta',{p_nombre:$('nombre').value||''});
-      if(e2) throw e2;
+      // Con la confirmación de correo activada, signUp no devuelve sesión.
+      if(!data.session){
+        aviso('Te enviamos un correo para confirmar tu cuenta. Confírmalo y entra con tu contraseña.','var(--cyan)');
+        return;
+      }
     }else{
       const {error}=await SB.auth.signInWithPassword({email:correo,password:clave});
       if(error) throw error;
     }
+    await asegurarAlta($('nombre').value||'');
     await cargarPanel();
   }catch(e){ aviso(traducir(e)); }
   finally{ $('btnEntrar').disabled=false; }
@@ -519,10 +535,26 @@ $('btnEntrar').onclick=async ()=>{
 
 $('btnSalir').onclick=async ()=>{ await SB.auth.signOut(); location.reload(); };
 
-async function cargarPanel(){
-  const {data,error}=await SB.rpc('kimun_prof_yo');
+// Completa el registro si esta cuenta todavía no tiene fila de profesor. Se llama
+// al crear la cuenta Y al iniciar sesión, para que funcione con la confirmación de
+// correo activada o desactivada.
+async function asegurarAlta(nombre){
+  if(await soyProfesor()) return;                   // ya está registrado
+  const {error}=await SB.rpc('kimun_prof_alta',{p_nombre:nombre});
   if(error) throw error;
-  YO=Array.isArray(data)?data[0]:data;
+}
+
+// OJO: kimun_prof_yo NO devuelve null para quien no es profesor, devuelve una fila
+// con todos los campos vacíos, que en JavaScript es un objeto verdadero. Hay que
+// mirar el id: sin esta comprobación, el panel se abre para cualquiera.
+async function soyProfesor(){
+  const {data}=await SB.rpc('kimun_prof_yo');
+  const fila = Array.isArray(data) ? data[0] : data;
+  return (fila && fila.id) ? fila : null;
+}
+
+async function cargarPanel(){
+  YO = await soyProfesor();
   if(!YO){ throw new Error('no_autorizado'); }
   $('cardAuth').classList.add('hide');
   $('cardPanel').classList.remove('hide');
@@ -542,16 +574,46 @@ async function pintarLista(){ $('lista').textContent='(la Tarea 6 lo completa)';
 </html>
 ```
 
+> **Corrección al plan, tras la revisión de seguridad.** La versión anterior de esta nota
+> indicaba desactivar la confirmación de correo en Supabase. **Era peligroso** y se revierte:
+> combinada con la semilla del correo del administrador en un repositorio público, permitía
+> que cualquiera se registrara con ese correo y quedara como administrador de la plataforma.
+>
+> El registro se resuelve así:
+>
+> 1. **La confirmación de correo queda activada.** El servicio integrado de Supabase alcanza
+>    para el puñado de altas de profesores; si no basta, se configura SMTP antes de abrir la
+>    página.
+> 2. **La cuenta del administrador NO se siembra en la lista blanca.** Roberto crea su
+>    usuario desde el panel de Supabase (Authentication → Add user), que nace confirmado, y
+>    lo marca como administrador con una consulta única. El detalle está comentado en
+>    `supabase/schema.sql`, donde antes estaba la semilla.
+> 3. **La página intenta el alta también al iniciar sesión** (`asegurarAlta()`), no solo tras
+>    el registro. Así el profesor confirma su correo, vuelve a entrar, y el alta se completa
+>    en ese momento.
+
 - [ ] **Paso 2: Verificar que un correo no autorizado queda sin permisos**
 
 Levantar el servidor (`preview_start` con `{name:"kimun"}`) y abrir
 `http://localhost:8765/profesor.html`. Pulsar "Crear mi cuenta" y registrarse con un correo
-cualquiera que **no** esté autorizado, por ejemplo `prueba-no-autorizada@example.com`, con
-una contraseña de al menos 6 caracteres.
+cualquiera que **no** esté autorizado y con una contraseña de al menos 6 caracteres.
 
-Esperado: el mensaje "Tu correo no está autorizado. Pídele acceso al administrador." y el
-panel **no** se abre. La cuenta queda creada en Supabase Auth pero sin fila en `profesores`,
-que es exactamente el comportamiento del diseño.
+**No uses `@example.com`**: Supabase rechaza ese dominio con `email_address_invalid` antes de
+llegar a la lógica de la página, así que la prueba no probaría nada. Usa un dominio real.
+
+Ten presente además que el servicio de correo integrado de Supabase permite **2 correos por
+hora**: si repites la prueba, el tercer intento falla con `over_email_send_rate_limit` y hay
+que esperar.
+
+Esperado, según cómo esté configurado el proyecto:
+- **Con la confirmación de correo activada** (que es como debe estar): el aviso "Te enviamos
+  un correo para confirmar tu cuenta…" y el panel no se abre.
+- **Sin confirmación**: el mensaje de que su correo no está autorizado, y el panel tampoco se
+  abre.
+
+En ambos casos la cuenta queda creada en Supabase Auth pero sin fila en `profesores`, que es
+exactamente el comportamiento del diseño. Al recibir `no_autorizado` la página cierra la
+sesión, para que esa persona no quede encerrada sin poder intentar con otra cuenta.
 
 - [ ] **Paso 3: Verificar que la sesión del juego no se ve afectada**
 
@@ -797,14 +859,32 @@ git commit -m "Profesores: borrados, correccion de XP y seccion de administrador
 
 **Archivos:** ninguno (operación sobre los datos)
 
-- [ ] **Paso 1: Roberto crea su cuenta**
+- [ ] **Paso 1: Roberto crea su usuario en Supabase**
 
-Abrir `profesor.html`, "Crear mi cuenta", con el correo sembrado en la Tarea 1 y una
-contraseña de al menos 6 caracteres.
+El primer administrador **no** se crea con "Crear mi cuenta": la lista blanca está vacía a
+propósito, porque sembrar ahí un correo con marca de administrador, en un repositorio
+público, sería dejar esa cuenta a disposición de quien la reclame primero.
+
+En Supabase → **Authentication → Users → Add user**, con el correo
+`vulpochile.app@gmail.com` y una contraseña. Marcar la opción que lo deja **confirmado**.
+
+- [ ] **Paso 2: Marcarlo como administrador**
+
+Una sola vez, en el SQL Editor:
+
+```sql
+insert into public.profesores(id, correo, nombre, es_admin)
+select id, email, 'Roberto', true from auth.users where email = 'vulpochile.app@gmail.com'
+on conflict (id) do update set es_admin = true;
+```
+
+- [ ] **Paso 3: Entrar al panel**
+
+Abrir `profesor.html` y usar **"Entrar"** (no "Crear mi cuenta") con ese correo y contraseña.
 
 Esperado: entra al panel y el título dice "Todos los cursos".
 
-- [ ] **Paso 2: Verificar que quedó como administrador**
+- [ ] **Paso 4: Verificar que quedó como administrador**
 
 ```sql
 select correo, es_admin from public.profesores;
@@ -812,7 +892,7 @@ select correo, es_admin from public.profesores;
 
 Esperado: su correo con `es_admin = true`.
 
-- [ ] **Paso 3: Asignarle los cursos existentes**
+- [ ] **Paso 5: Asignarle los cursos existentes**
 
 ```sql
 update public.cursos set profesor_id = (select id from public.profesores where es_admin limit 1)
@@ -825,7 +905,7 @@ Esperado: el curso "8vo csfs" queda con dueño. Verificar:
 select c.nombre, p.correo from public.cursos c left join public.profesores p on p.id = c.profesor_id;
 ```
 
-- [ ] **Paso 4: Verificar que los alumnos siguen intactos**
+- [ ] **Paso 6: Verificar que los alumnos siguen intactos**
 
 En el panel, comprobar que "8vo csfs" aparece con sus cuatro alumnos y sus códigos.
 

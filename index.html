@@ -520,54 +520,14 @@ body.es-maestro .badge-img{filter:drop-shadow(0 0 10px #ffc93ccc) drop-shadow(0 
       <h3>¿Cómo quieres entrar?</h3>
       <button class="btn" id="btnJugador">🎮 JUGADOR</button>
       <button class="btn sec" id="btnDuelo">⚔️ DUELO 1v1</button>
-      <button class="btn sec" id="btnAdmin">🔧 Modo Admin</button>
     </div>
     <p style="text-align:center;margin-top:12px"><a href="#" id="btnReset" style="color:var(--dim);font-weight:800;font-size:12px;text-decoration:underline;display:none">🔄 Empezar de nuevo</a></p>
     <p style="text-align:center;margin-top:8px">
       <a href="#" id="btnCanje" style="color:var(--cyan);font-weight:800;font-size:13px">🎟️ Tengo un código</a>
     </p>
-    <p style="text-align:center;color:var(--dim);font-weight:800;font-size:12px;margin-top:6px">
-      El modo Admin es para el desarrollador y pide contraseña.
-    </p>
     <p style="text-align:center;margin-top:10px">
       <a href="#" id="verCreditos" style="color:var(--cyan);font-weight:800;font-size:12px">Créditos</a>
     </p>
-  </section>
-
-  <!-- ============ MODO ADMIN · CURSOS ============ -->
-  <section class="screen" id="scr-admin">
-    <div class="card">
-      <h3>🔧 Modo Admin</h3>
-      <input id="admClave" type="password" placeholder="Contraseña"
-             style="width:100%;padding:12px;border-radius:12px;border:2px solid var(--violet);
-                    background:#1a1440;color:#fff;font-weight:800;margin-bottom:10px">
-      <button class="btn" id="btnAdmEntrar">Entrar a Cursos</button>
-      <button class="btn sec" id="btnAdmTablero">📊 Tablero de avance</button>
-      <button class="btn sec" id="btnAdmBack">← Volver</button>
-      <p id="admMsg" style="text-align:center;font-weight:800;font-size:13px;margin-top:8px"></p>
-    </div>
-    <div class="card" id="admPanel" style="display:none">
-      <h3>Cursos</h3>
-      <input id="admCursoNombre" placeholder="Nombre del curso (8° A)"
-             style="width:100%;padding:10px;border-radius:12px;border:2px solid var(--violet);
-                    background:#1a1440;color:#fff;font-weight:800;margin-bottom:8px">
-      <button class="btn sec" id="btnAdmCurso">+ Crear curso</button>
-      <div style="height:10px"></div>
-      <input id="admAlumnoCurso" placeholder="Código del curso (CUR-XXXX)" maxlength="8"
-             style="width:100%;padding:10px;border-radius:12px;border:2px solid var(--violet);
-                    background:#1a1440;color:#fff;font-weight:800;margin-bottom:8px">
-      <input id="admAlumnoNombre" placeholder="Nombre del alumno"
-             style="width:100%;padding:10px;border-radius:12px;border:2px solid var(--violet);
-                    background:#1a1440;color:#fff;font-weight:800;margin-bottom:8px">
-      <button class="btn sec" id="btnAdmAlumno">+ Agregar alumno</button>
-      <div id="admLista" style="margin-top:14px"></div>
-      <div style="height:10px"></div>
-      <!-- Mantenimiento: saca los perfiles que crea cada teléfono al abrir el juego -->
-      <button class="btn sec" id="btnAdmLimpiar">🧹 Limpiar perfiles de prueba</button>
-      <p style="color:var(--dim);font-weight:800;font-size:12px;margin-top:6px">
-        Borra los perfiles sueltos que quedan de las pruebas. No toca a los alumnos
-        inscritos ni a los rivales de práctica.</p>
-    </div>
   </section>
 
   <!-- ============ CANJE DEL CÓDIGO DE ALUMNO ============ -->
@@ -1779,7 +1739,7 @@ function finDuelo(){
   d.onclick=()=>{SND.init();SND.tap();document.querySelectorAll('.av').forEach(x=>x.classList.remove('sel'));d.classList.add('sel');S.avatar=a;};
   g.appendChild(d);});
 })();
-/* ===== Selección de modo (Jugador / Admin) ===== */
+/* ===== Selección de modo (Jugador / Duelo) ===== */
 /* Pantalla de expediciones: generada desde EXPEDICIONES (data-driven) */
 /* Orden fijo de los módulos por asignatura en la pantalla principal */
 const ORDEN_ASIG=['Historia','Matemáticas','Ciencias','Lenguaje'];
@@ -1847,10 +1807,6 @@ function entrarExpedicion(exp){
 $('btnJugador').onclick=()=>{SND.init();SND.tap();$('nav').style.display='none';renderExpediciones();go('scr-expediciones');};
 $('btnExpBack').onclick=()=>{SND.tap();go('scr-rol');};
 $('btnMapasBack').onclick=()=>{SND.tap();go('scr-expediciones');};
-$('btnAdmin').onclick=()=>{SND.tap();$('admMsg').textContent='';$('admPanel').style.display='none';
- $('admClave').value='';go('scr-admin');};
-$('btnAdmTablero').onclick=()=>{window.location.href='dev/tablero.html';};
-$('btnAdmBack').onclick=()=>{SND.tap();go('scr-rol');};
 
 /* ===== Canje del código de alumno ===== */
 // Pantalla desde la que se abrió el canje, para volver justo a donde estaba el jugador.
@@ -1899,154 +1855,6 @@ $('btnCanjeOk').onclick=async ()=>{
     ? 'Ese código no existe. Revísalo con tu profesor.'
     : 'No se pudo conectar. Intenta de nuevo.';
  }
-};
-
-/* ===== Modo Admin · cursos y alumnos ===== */
-let ADM_CLAVE='';                                   // solo en memoria, nunca se guarda
-// Escapa el texto que viene de la base de datos: un nombre con < o & no debe romper la lista.
-function admEsc(t){return String(t==null?'':t).replace(/[&<>"']/g,
- c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
-// Traduce los errores que lanza el backend a un mensaje claro para Roberto.
-const ADM_ERRORES={clave_invalida:'La contraseña ya no es válida. Vuelve a entrar.',
- curso_invalido:'Ese código de curso no existe. Revísalo.',
- nombre_vacio:'Escribe un nombre.',
- alumno_invalido:'Ese alumno ya no existe.'};
-function admError(e){
- const txt=String((e&&(e.message||e.hint||e.details))||'');
- const clave=Object.keys(ADM_ERRORES).find(k=>txt.includes(k));
- return clave?ADM_ERRORES[clave]:'No se pudo completar la acción. Intenta de nuevo.';
-}
-// Un solo lugar para pintar el mensaje del panel (rosa = error, verde = listo, gris = en curso).
-function admAviso(texto,color){const m=$('admMsg');m.style.color=color||'var(--pink)';m.textContent=texto||'';}
-// Desactiva los botones mientras dura una llamada, para evitar dobles envíos.
-function admOcupado(activo){['btnAdmEntrar','btnAdmCurso','btnAdmAlumno','btnAdmLimpiar'].forEach(id=>{
- const b=$(id); if(b) b.disabled=activo; });}
-$('btnAdmEntrar').onclick=async ()=>{
- SND.tap(); ADM_CLAVE=$('admClave').value||'';
- if(!SB){admAviso('Necesitas conexión.');return;}
- admAviso('Verificando…','var(--dim)'); admOcupado(true);
- try{ await conectarKimun(); await admListar(); $('admPanel').style.display='block';
-      admAviso(''); }
- catch(e){ admAviso('Contraseña incorrecta.'); $('admPanel').style.display='none'; }
- finally{ admOcupado(false); }
-};
-async function admListar(){
- const {data,error}=await SB.rpc('kimun_admin_listar',{p_clave:ADM_CLAVE});
- if(error) throw error;
- const porCurso={};
- (data||[]).forEach(f=>{ (porCurso[f.curso_codigo] = porCurso[f.curso_codigo] || {nombre:f.curso, alumnos:[]});
-   if(f.codigo_acceso) porCurso[f.curso_codigo].alumnos.push(f); });
- $('admLista').innerHTML=Object.entries(porCurso).map(([cod,c])=>
-  `<div style="margin-bottom:14px">
-     <div style="display:flex;align-items:center;gap:8px">
-       <b style="color:var(--gold);flex:1">${admEsc(c.nombre)}<small style="color:var(--cyan);font-weight:900"> ${admEsc(cod)}</small></b>
-       <button class="adm-curso-del" data-cod="${admEsc(cod)}" data-nombre="${admEsc(c.nombre)}" data-n="${c.alumnos.length}"
-               title="Eliminar curso"
-               style="background:none;border:none;color:var(--pink);font-weight:900;font-size:16px;cursor:pointer">🗑️</button>
-     </div>
-     ${c.alumnos.length?c.alumnos.map(a=>
-       `<div style="display:flex;align-items:center;gap:8px;padding:6px 0;border-bottom:1px solid #ffffff14">
-          <span>${admEsc(a.avatar)}</span><b style="flex:1">${admEsc(a.alumno)}</b>
-          <code style="color:var(--cyan);font-weight:900">${admEsc(a.codigo_acceso)}</code>
-          <span style="color:var(--dim);font-weight:800">${admEsc(a.xp)} XP</span>
-          <button class="adm-xp" data-cod="${admEsc(a.codigo_acceso)}" data-xp="${admEsc(a.xp)}"
-                  title="Corregir el XP"
-                  style="background:none;border:none;color:var(--gold);font-weight:900;cursor:pointer">✎</button>
-          <button class="adm-del" data-cod="${admEsc(a.codigo_acceso)}"
-                  style="background:none;border:none;color:var(--pink);font-weight:900;cursor:pointer">✕</button>
-        </div>`).join('')
-      :'<p style="color:var(--dim);font-weight:800;font-size:12px">Sin alumnos todavía.</p>'}
-   </div>`).join('') || '<p style="color:var(--dim);font-weight:800;font-size:13px">Aún no hay cursos.</p>';
- // Eliminar curso completo (borra el curso y sus alumnos inscritos + su ranking)
- $('admLista').querySelectorAll('.adm-curso-del').forEach(b=>b.onclick=async ()=>{
-  const nombre=b.dataset.nombre||'este curso', n=Number(b.dataset.n)||0;
-  const msg='¿Eliminar el curso "'+nombre+'"?\n\n'
-    +(n>0?('Se borrarán también sus '+n+' alumno'+(n===1?'':'s')+' y su lugar en el ranking.\n\n'):'')
-    +'Esta acción no se puede deshacer.';
-  if(!confirm(msg)) return;
-  admAviso(''); b.disabled=true;
-  try{ const {error}=await SB.rpc('kimun_admin_curso_quitar',{p_clave:ADM_CLAVE,p_curso_codigo:b.dataset.cod});
-       if(error) throw error;
-       await admListar(); admAviso('Curso eliminado','var(--green)'); }
-  catch(e){ b.disabled=false; admAviso(admError(e)); }
- });
- // Eliminar alumno (el diseño no contempla editar: se borra y se agrega de nuevo)
- $('admLista').querySelectorAll('.adm-del').forEach(b=>b.onclick=async ()=>{
-  if(!confirm('¿Eliminar a este alumno? Perderá su lugar en el ranking.')) return;
-  admAviso(''); b.disabled=true;
-  try{ const {error}=await SB.rpc('kimun_admin_alumno_quitar',{p_clave:ADM_CLAVE,p_codigo_acceso:b.dataset.cod});
-       if(error) throw error;
-       await admListar(); admAviso('Alumno eliminado','var(--green)'); }
-  catch(e){ b.disabled=false; admAviso(admError(e)); }
- });
- // Corregir el XP: kimun_xp solo sube, así que este es el único modo de bajar
- // un puntaje inflado por las pruebas.
- $('admLista').querySelectorAll('.adm-xp').forEach(b=>b.onclick=async ()=>{
-  const actual=b.dataset.xp||'0';
-  const txt=prompt('¿Cuánto XP debe tener este alumno?',actual);
-  if(txt===null) return;                                  // canceló
-  const v=Number(String(txt).trim());
-  if(!/^\d+$/.test(String(txt).trim())||!Number.isInteger(v)||v<0){
-   admAviso('Escribe un número entero de 0 o más.'); return; }
-  admAviso(''); b.disabled=true;
-  try{ const {error}=await SB.rpc('kimun_admin_xp_fijar',
-        {p_clave:ADM_CLAVE,p_codigo_acceso:b.dataset.cod,p_xp:v});
-       if(error) throw error;
-       await admListar(); admAviso('XP actualizado a '+v,'var(--green)'); }
-  catch(e){ b.disabled=false; admAviso(admError(e)); }
- });
-}
-$('btnAdmCurso').onclick=async ()=>{
- SND.tap(); admAviso('');
- const n=($('admCursoNombre').value||'').trim();
- if(!n){admAviso('Escribe un nombre.');return;}
- admOcupado(true);
- try{ const {error}=await SB.rpc('kimun_admin_curso_crear',{p_clave:ADM_CLAVE,p_nombre:n});
-      if(error) throw error;
-      $('admCursoNombre').value=''; await admListar(); admAviso('Curso creado','var(--green)'); }
- catch(e){ admAviso(admError(e)); }
- finally{ admOcupado(false); }
-};
-$('btnAdmAlumno').onclick=async ()=>{
- SND.tap(); admAviso('');
- const c=($('admAlumnoCurso').value||'').trim().toUpperCase();
- const n=($('admAlumnoNombre').value||'').trim();
- if(!c){admAviso('Escribe el código del curso.');return;}
- if(!n){admAviso('Escribe un nombre.');return;}
- admOcupado(true);
- try{ const {error}=await SB.rpc('kimun_admin_alumno_agregar',{p_clave:ADM_CLAVE,p_curso_codigo:c,p_nombre:n,p_avatar:'🦊'});
-      if(error) throw error;
-      $('admAlumnoNombre').value=''; await admListar(); admAviso('Alumno agregado','var(--green)'); }
- catch(e){ admAviso(admError(e)); }
- finally{ admOcupado(false); }
-};
-// Limpieza de perfiles de prueba: primero cuenta (p_ejecutar=false), avisa qué
-// implica y solo borra si Roberto confirma.
-$('btnAdmLimpiar').onclick=async ()=>{
- SND.tap(); admAviso('');
- if(!SB){admAviso('Necesitas conexión.');return;}
- admOcupado(true);
- try{
-  const {data:n,error}=await SB.rpc('kimun_admin_limpiar_pruebas',{p_clave:ADM_CLAVE,p_ejecutar:false});
-  if(error) throw error;
-  const total=Number(n)||0;
-  if(total===0){ admAviso('No hay perfiles de prueba','var(--green)'); return; }
-  const msg='Se van a borrar '+total+' perfil'+(total===1?'':'es')+' de prueba.\n\n'
-   +'Son los perfiles que se crean solos cada vez que alguien abre el juego en un\n'
-   +'teléfono o navegador y nunca escribió un código de alumno.\n\n'
-   +'Al borrarlos también se pierden los duelos que jugaron, y esos teléfonos\n'
-   +'empezarán de cero la próxima vez que abran el juego.\n\n'
-   +'NO se borran los alumnos que inscribiste ni los rivales de práctica.\n\n'
-   +'¿Continuar?';
-  if(!confirm(msg)) { admAviso('No se borró nada','var(--dim)'); return; }
-  const r=await SB.rpc('kimun_admin_limpiar_pruebas',{p_clave:ADM_CLAVE,p_ejecutar:true});
-  if(r.error) throw r.error;
-  const borrados=Number(r.data)||0;
-  await admListar();
-  admAviso('Se borraron '+borrados+' perfil'+(borrados===1?'':'es')+' de prueba','var(--green)');
- }
- catch(e){ admAviso(admError(e)); }
- finally{ admOcupado(false); }
 };
 
 /* ===== Mapa de campaña (Nivel 2) ===== */
@@ -2480,7 +2288,10 @@ function renderRanking(){
   if(!cache) el.innerHTML='<p style="color:var(--dim);font-weight:800;font-size:13px;text-align:center">Sin conexión. El ranking se actualizará más tarde.</p>';
  });
 }
-// Los nombres los escribió el adulto en el panel: se escapan antes de pintarlos.
+// Escapa el texto que viene del servidor: un nombre con < o & no debe romper la lista.
+function escHtml(t){return String(t==null?'':t).replace(/[&<>"']/g,
+ c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+// Los nombres los escribió el profesor en su panel: se escapan antes de pintarlos.
 function pintarRanking(filas){
  $('ranking').innerHTML=filas.map((r,i)=>{
   const marca=(r.dificil>0)?'🔥 ':'';
@@ -2489,9 +2300,9 @@ function pintarRanking(filas){
   const pre=(marca&&ins.trim()==='🔥')?ins:(marca+ins);
   const difcls=(r.dificil>0)?(' dif d'+Math.min(4,r.dificil)):'';   // d4 = maestría total (marco dorado)
   return `<div class="rk ${i<1?'top':''} ${r.soy_yo?'me':''}${difcls}"><div class="pos">${i+1}</div>
-   <div class="em">${r.soy_yo?avatarHTML(S.avatar):admEsc(r.avatar)}</div>
-   <div>${pre}${admEsc(r.nombre)}${r.soy_yo?' (tú)':''}</div>
-   <div class="pts">${admEsc(r.xp)} XP</div></div>`;}).join('');
+   <div class="em">${r.soy_yo?avatarHTML(S.avatar):escHtml(r.avatar)}</div>
+   <div>${pre}${escHtml(r.nombre)}${r.soy_yo?' (tú)':''}</div>
+   <div class="pts">${escHtml(r.xp)} XP</div></div>`;}).join('');
 }
 function pintarSinCurso(){
  $('ranking').innerHTML=
