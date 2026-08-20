@@ -1478,12 +1478,10 @@ herramienta recién construida. De ahí salió el trabajo de esta sesión.
   por asignatura, el scroll horizontal que introdujo el botón por alumno); los dos trámites
   (INAPI y `vulpo.cl`); SMTP; la vuelta manual para decidir la v1.
 
-### Sesión 26 (2026-08-19) — El mapa se puede recorrer
-Sesión corta y de una sola pieza: el panel del profesor tenía la información correcta pero
-era incómodo de usar en un teléfono. Se tomó el paquete de presentación que dejaron los tres
-informes de la Sesión 24, junto con el defecto de desplazamiento lateral. Todo en
-`profesor.html`; **no se tocó el esquema de Supabase ni `index.html`**, así que no hubo nada
-que aplicar en el SQL Editor.
+### Sesión 26 (2026-08-19) — El mapa se puede recorrer, y participación
+Dos trabajos sobre el panel del profesor. Primero, la **presentación del mapa**: tenía la
+información correcta pero era incómoda en un teléfono (solo en `profesor.html`, sin tocar el
+esquema). Después, una feature nueva, **participación y fecha**, que sí toca el backend.
 - **El desborde en móvil no lo causaba el botón 📊.** Ese fue el disparador, pero la causa
   estaba desde antes: el nombre del alumno llevaba `flex:1` **sin `min-width:0`**, y un
   elemento flex no se encoge por debajo del ancho de su contenido salvo que se le diga. Con
@@ -1511,9 +1509,49 @@ que aplicar en el SQL Editor.
   desplegable de apoyo cargando después de filtrar, los tres bloques, la vista por alumno,
   el curso sin datos y el panel de administrador. Sin errores de consola. **Falta la
   confirmación con la cuenta real**, aunque las llamadas al servidor no cambiaron.
-- **README corregido:** decía que los cursos se crean "desde el Modo Admin", que se retiró
-  en la Sesión 22. Ahora apunta a `profesor.html` y menciona el mapa de dominio.
-- **Pendientes:** los mismos de la Sesión 25 menos la presentación del mapa —probar el
-  aislamiento entre profesores en la vista de apoyo, borrar el curso de simulación y generar
-  datos nuevos, participación y fecha (quién jugó esta semana y quién no ha entrado nunca),
-  los dos trámites (INAPI y `vulpo.cl`), SMTP, la vuelta manual para decidir la v1.
+- **README corregido (primer trabajo):** decía que los cursos se crean "desde el Modo
+  Admin", que se retiró en la Sesión 22. Ahora apunta a `profesor.html` y menciona el mapa.
+
+**Participación y fecha (segundo trabajo).** El mapa decía *qué* contenidos costaban, no
+*quiénes* están jugando. Se hizo con el flujo completo brainstorming → spec → plan →
+subagentes (implementador + revisión de spec + revisión de calidad por separado).
+- **El dato no salía de donde parecía.** La primera idea era usar `dominio.actualizado`, que
+  ya existía, pero solo se escribe al terminar una etapa de **campaña o jefe**: un niño que
+  juega Matemáticas (Reto de Cálculo) todos los días aparecería como "nunca entró". Se eligió
+  una columna `visto` en `perfiles`, **sellada dentro de `kimun_xp`** —la sincronización que
+  el juego ya hace cada 15 s en cualquier modo, y también al abrir—, así que mide la última
+  entrada de verdad. Una línea de SQL, cero envíos nuevos desde el cliente.
+- **Cuatro grupos, no una lista con fecha.** Jugaron esta semana / hace más de una semana /
+  canjearon su código pero no han jugado / **nunca canjearon su código**. Los dos últimos se
+  separan porque la acción es distinta: no canjear casi nunca es desinterés, es un código
+  perdido o un teléfono que no tienen, y se resuelve volviendo a entregar el código. Fichas
+  alfabéticas, **sin fecha individual ni orden por inactividad**: una lista de menores por
+  días sin entrar se leería como lista de asistencia. Va en un bloque plegado arriba del
+  mapa, porque la participación es el contexto que hace legible el porcentaje (un 45% no es
+  lo mismo con 30 niños jugando que con cinco que nunca entraron).
+- **Migración de arranque:** `visto` se rellena desde `max(dominio.actualizado)` al aplicar
+  el esquema (idempotente con `where visto is null`). Quien solo jugó Reto de Cálculo parte
+  sin fecha hasta su próxima entrada; es una limitación del primer momento, no permanente.
+- **Hallazgo de la revisión de calidad (lo más valioso).** `cargarParticipacion` se lanza
+  sin `await`; se cargaba con ids fijos, así que cambiar de curso con la consulta en vuelo
+  hacía que la respuesta tardía escribiera **los datos de un curso bajo el encabezado de
+  otro** —el cruce de identidad que la herramienta se cuida de evitar—. Corregido capturando
+  los nodos antes del await, como ya hace `conectarFilasOA`. La revisión también rescató el
+  marcador de Safari (`list-style:none` no oculta el triángulo del `<details>` en iOS sin
+  `::-webkit-details-marker`, ya sabido desde la Sesión 25).
+- **Backend:** columna `perfiles.visto`, `visto = now()` dentro de `kimun_xp`, función
+  `kimun_prof_participacion(curso)` con el aislamiento por curso ya probado, y la migración
+  de relleno. `index.html` **no se tocó**: el juego ya llama a `kimun_xp`.
+- **Verificado a 375 px con backend simulado** (20 alumnos repartidos en los cuatro grupos):
+  titular y conteos correctos sin perder a nadie, sin desborde lateral, el fallo de
+  participación no tumba el mapa, el bloque aparece aunque el curso no tenga datos de
+  dominio, y la carrera de cursos quedó demostrada (A lento no pisa a B). Sin errores de
+  consola. Diseño y plan: `docs/superpowers/specs/2026-08-19-participacion-fecha-design.md` y
+  `docs/superpowers/plans/2026-08-19-participacion-fecha.md`.
+- **Falta por el lado de Roberto:** aplicar el esquema en el SQL Editor (hasta entonces la
+  vista corre con datos simulados) y probar el aislamiento de `kimun_prof_participacion`
+  entre dos profesores, igual que en la vista de apoyo.
+- **Pendientes:** probar el aislamiento entre profesores en las vistas nuevas (apoyo y
+  participación) y aplicar el SQL de participación; borrar el curso de simulación y generar
+  datos nuevos; los dos trámites (INAPI y `vulpo.cl`); SMTP; la vuelta manual para decidir
+  la v1.
