@@ -51,6 +51,7 @@ alter table public.perfiles add column if not exists curso_id      uuid referenc
 alter table public.perfiles add column if not exists xp            int not null default 0;
 alter table public.perfiles add column if not exists codigo_acceso text unique;   -- ALU-XXXX
 alter table public.perfiles add column if not exists dificil       int not null default 0;  -- asignaturas completadas en Modo Difícil
+alter table public.perfiles add column if not exists visto timestamptz;   -- última vez que abrió el juego
 
 -- Vínculo dispositivo -> perfil (permite jugar en varios equipos)
 create table if not exists public.vinculos (
@@ -312,7 +313,7 @@ language plpgsql security definer set search_path=public as $$
 declare mi uuid; v int; begin
   mi := public.kimun_yo();
   if mi is null then return 0; end if;
-  update public.perfiles set xp = greatest(xp, coalesce(p_xp,0)) where id=mi returning xp into v;
+  update public.perfiles set xp = greatest(xp, coalesce(p_xp,0)), visto = now() where id=mi returning xp into v;
   return coalesce(v,0); end $$;
 
 -- Sincroniza cuántas asignaturas completó el alumno en Modo Difícil. Solo sube (el estado
@@ -599,6 +600,23 @@ declare cid uuid; pid uuid; begin
     order by (d.ok_1::numeric / nullif(d.resp_1,0)) asc nulls last, d.oa;
 end $$;
 
+-- Participación del curso: una fila por alumno inscrito, con la última vez que abrió el
+-- juego y si alguna vez canjeó su código. El cliente la reparte en grupos.
+drop function if exists public.kimun_prof_participacion(text);
+create or replace function public.kimun_prof_participacion(p_curso_codigo text)
+returns table(alumno text, avatar text, visto timestamptz, vinculado boolean)
+language plpgsql security definer set search_path=public as $$
+declare cid uuid; begin
+  select id into cid from public.cursos where codigo = upper(trim(p_curso_codigo));
+  if cid is null or not public.kimun_prof_es_mio(cid) then raise exception 'no_autorizado'; end if;
+  return query
+    select p.nombre, p.avatar, p.visto,
+           exists(select 1 from public.vinculos v where v.perfil_id = p.id)
+    from public.perfiles p
+    where p.curso_id = cid
+    order by p.nombre;   -- alfabético a propósito: por fecha sería un ranking de niños
+end $$;
+
 -- Alumnos de un curso mío con su primer intento en UN objetivo, para saber a quiénes
 -- reforzar. Devuelve a TODOS los alumnos inscritos, también a los que no lo jugaron:
 -- "12 no lo han visto" es información, no un vacío. Ordena por nombre a propósito —un
@@ -754,6 +772,7 @@ grant execute on function
   public.kimun_prof_dominio(text), public.kimun_prof_dominio_alumno(text),
   public.kimun_prof_dominio_reiniciar(text)
   , public.kimun_prof_dominio_oa(text,text)
+  , public.kimun_prof_participacion(text)
   to anon, authenticated;
 
 -- ------------------------------------------------------------
@@ -777,3 +796,18 @@ drop function if exists public.kimun_admin_ok(text);
 
 -- Y la clave misma: ya no la valida nadie, así que no tiene por qué seguir ahí.
 delete from public.config where clave = 'admin_clave';
+
+-- ------------------------------------------------------------
+-- Relleno inicial de "visto" (participación).
+--
+-- Sin esto, al aplicar la columna por primera vez el curso entero se vería como "nunca ha
+-- jugado" hasta que cada niño vuelva a abrir el juego, y el profesor leería un curso
+-- muerto. Se copia el último contacto conocido desde "dominio". Quien jugó campañas parte
+-- con su fecha real; quien solo jugó Reto de Cálculo parte en nulo hasta su próxima
+-- entrada (esa tabla no registra objetivos). El "where visto is null" lo hace idempotente:
+-- re-pegar el archivo no pisa las fechas reales ya guardadas.
+-- ------------------------------------------------------------
+update public.perfiles p
+   set visto = d.ult
+  from (select perfil_id, max(actualizado) ult from public.dominio group by perfil_id) d
+ where d.perfil_id = p.id and p.visto is null;
