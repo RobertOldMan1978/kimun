@@ -267,6 +267,14 @@ Esperado: **35**. Si da menos, alguien se está perdiendo entre los grupos.
 
 - [ ] **Paso 7: Verificar que no desborda en móvil**
 
+**El panel debe estar visible para que esto signifique algo:** `cardPanel` nace oculto, y
+midiendo sobre un contenedor con `display:none` los anchos salen iguales y la comprobación
+pasa sin haber medido nada. Quitarle la clase `hide` antes.
+
+Nota para los tres pasos anteriores: declaran `const g` en el ámbito de la página, así que
+pegarlos dos veces da `Identifier 'g' has already been declared`. Envolverlos en
+`(() => { ... })()` si hay que repetirlos.
+
 ```js
 document.getElementById('lista').innerHTML =
   detalleApoyo(Array.from({length:15},(_,i)=>({alumno:'Estudiante '+(i+1),avatar:'🦊',resp_1:6,ok_1:1})));

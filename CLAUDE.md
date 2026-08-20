@@ -1405,3 +1405,40 @@ herramienta recién construida. De ahí salió el trabajo de esta sesión.
 - **Pendientes:** limpiar el curso de simulación y ver el informe con datos limpios; las
   mejoras listadas arriba; los dos trámites (INAPI y `vulpo.cl`); SMTP; la vuelta manual para
   decidir la v1.
+
+### Sesión 25 (2026-08-18) — Quiénes necesitan apoyo, y el comando Titanic
+- **Del objetivo a los nombres.** Era el vacío que el informe pedagógico puso primero: el
+  mapa decía *qué* contenido estaba flojo, no *quiénes*. Un objetivo en 45% puede ser el
+  curso completo —hay que reenseñar y se pierde una clase— o seis niños que arrastran el
+  promedio —basta un grupo de refuerzo—, y distinguirlo exigía abrir 35 fichas a mano.
+  - **Función nueva `kimun_prof_dominio_oa(curso, oa)`**: devuelve a **todos** los alumnos
+    inscritos con su primer intento en ese objetivo, también a los que no lo jugaron
+    ("12 no lo han visto" es información), **ordenados por nombre**. El orden alfabético es
+    intencional: por rendimiento sería un ranking de niños.
+  - **Cuatro grupos** al desplegar una fila: Necesitan apoyo (bajo 45%), En camino (45-70%),
+    Lo lograron (70%+) y **Todavía sin evidencia** (menos de 4 preguntas de primer intento o
+    sin jugar). Ese cuarto grupo evita mandar al refuerzo a un niño que falló **una sola
+    pregunta** en un jefe final, donde cae una de cada objetivo.
+  - **No se muestra el porcentaje individual ni se puede ordenar por rendimiento**, a
+    propósito: una lista de menores ordenada por nota, con números al lado, es el artefacto
+    que termina proyectado en un consejo o pegado en un libro de notas.
+  - **No agrega ni una columna:** la información ya estaba en `dominio`.
+  - **Verificado:** la clasificación reparte bien los cinco casos de prueba (incluido el que
+    falló su única pregunta, que cae en "sin evidencia"); con 35 alumnos la suma de los
+    cuatro grupos da 35, o sea nadie se pierde; no desborda en 375 px; y la función rechaza
+    a un anónimo. **Falta que Roberto pruebe el aislamiento entre dos profesores**, que es lo
+    que protege los nombres de los alumnos ajenos.
+  - Hallazgos del subagente: faltaba el `drop function if exists` de la función nueva —sin
+    él, el día que alguien agregue una columna al resultado, re-aplicar el esquema falla—; y
+    `list-style:none` no oculta el triángulo del desplegable en Safari, hace falta
+    `::-webkit-details-marker`.
+- **Comando `/titanic`** (`.claude/skills/titanic/SKILL.md`): genera el prompt de traspaso
+  para empezar una sesión nueva sin perder el hilo. Revisa el estado real del repositorio y
+  entrega un prompt listo para copiar; **el `/clear` y el pegado son del usuario**. La
+  decisión clave: el prompt **no repite lo que ya está en `CLAUDE.md`**, que se carga solo,
+  sino el delta de la conversación que se cierra.
+- **Pendientes:** probar el aislamiento entre profesores en la vista de apoyo; borrar el
+  curso de simulación y generar datos nuevos para ver el mapa con el primer intento; las
+  mejoras que dejaron los tres informes (participación y fecha, encabezado del curso, filtro
+  por asignatura, el scroll horizontal que introdujo el botón por alumno); los dos trámites
+  (INAPI y `vulpo.cl`); SMTP; la vuelta manual para decidir la v1.

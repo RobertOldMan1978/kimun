@@ -599,6 +599,30 @@ declare cid uuid; pid uuid; begin
     order by (d.ok_1::numeric / nullif(d.resp_1,0)) asc nulls last, d.oa;
 end $$;
 
+-- Alumnos de un curso mío con su primer intento en UN objetivo, para saber a quiénes
+-- reforzar. Devuelve a TODOS los alumnos inscritos, también a los que no lo jugaron:
+-- "12 no lo han visto" es información, no un vacío. Ordena por nombre a propósito —un
+-- orden por rendimiento convertiría esto en un ranking de niños, que es justo lo que no
+-- se quiere.
+-- El drop previo es el mismo guardia de idempotencia de las otras "returns table":
+-- cambiarle una columna al returns haría fallar el re-pegado del archivo.
+drop function if exists public.kimun_prof_dominio_oa(text,text);
+create or replace function public.kimun_prof_dominio_oa(p_curso_codigo text, p_oa text)
+returns table(alumno text, avatar text, resp_1 int, ok_1 int)
+language plpgsql security definer set search_path=public as $$
+declare cid uuid; begin
+  select id into cid from public.cursos where codigo = upper(trim(p_curso_codigo));
+  if cid is null or not public.kimun_prof_es_mio(cid) then raise exception 'no_autorizado'; end if;
+  return query
+    select p.nombre, p.avatar, coalesce(d.resp_1,0), coalesce(d.ok_1,0)
+    from public.perfiles p
+    left join public.dominio d on d.perfil_id = p.id and d.oa = p_oa
+    -- Solo alumnos inscritos: los perfiles sueltos que crea cada teléfono al abrir el
+    -- juego no son del curso, igual que en el resto del panel.
+    where p.curso_id = cid and p.codigo_acceso is not null
+    order by p.nombre;
+end $$;
+
 -- Pone en cero las mediciones de un curso mío. Devuelve cuántas filas borró.
 create or replace function public.kimun_prof_dominio_reiniciar(p_curso_codigo text)
 returns int language plpgsql security definer set search_path=public as $$
@@ -729,6 +753,7 @@ grant execute on function
   public.kimun_prof_limpiar_pruebas(boolean),
   public.kimun_prof_dominio(text), public.kimun_prof_dominio_alumno(text),
   public.kimun_prof_dominio_reiniciar(text)
+  , public.kimun_prof_dominio_oa(text,text)
   to anon, authenticated;
 
 -- ------------------------------------------------------------

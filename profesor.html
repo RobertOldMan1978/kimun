@@ -25,6 +25,9 @@ input{width:100%;padding:12px;border-radius:12px;border:2px solid var(--violet);
 .msg{text-align:center;font-size:13px;margin-top:8px;min-height:18px}
 .hide{display:none}
 code{color:var(--cyan);font-weight:900}
+/* El triángulo por omisión del desplegable se oculta: la fila del mapa ya se ve
+   pulsable, y en WebKit "list-style:none" por sí solo no lo quita. */
+.oa-fila>summary::-webkit-details-marker{display:none}
 </style>
 </head>
 <body>
@@ -368,6 +371,26 @@ async function verAvance(cursoCodigo){
       </div>`;
     $('btnVolverPanel').onclick = volverAlPanel;
     $('btnReiniciarMed').onclick = () => reiniciarMediciones(cursoCodigo);
+    // Carga perezosa: cada objetivo pide sus alumnos la primera vez que se abre.
+    document.querySelectorAll('#lista .oa-fila').forEach(det => det.addEventListener('toggle', async () => {
+      if(!det.open || det.dataset.cargado) return;
+      det.dataset.cargado = '1';
+      const caja = det.querySelector('.oa-detalle');
+      // Se limpia el mensaje del intento anterior: si no, al reabrir tras un fallo el
+      // profesor sigue leyendo el error viejo mientras la consulta ya va en camino.
+      caja.textContent = 'Cargando…';
+      try{
+        const {data,error} = await SB.rpc('kimun_prof_dominio_oa',
+          {p_curso_codigo:cursoCodigo, p_oa:det.dataset.oa});
+        if(error) throw error;
+        caja.innerHTML = detalleApoyo(data);
+      }catch(e){
+        det.dataset.cargado = '';          // permite reintentar cerrando y abriendo
+        caja.textContent = esNoAutorizado(e)
+          ? 'No tienes permiso para esto, o el curso ya no existe.'
+          : 'No se pudo cargar. Cierra y vuelve a abrir.';
+      }
+    }));
     aviso('');
   }catch(e){ aviso(errorPanel(e)); }
 }
@@ -390,6 +413,13 @@ async function verAvanceAlumno(codigoAcceso){
       ${data.map(filaAvance).join('')}
       <button class="btn sec" id="btnVolverPanel" style="margin-top:14px">← Volver</button>`;
     $('btnVolverPanel').onclick = volverAlPanel;
+    // Aquí la fila NO se despliega: esta vista es de un solo alumno, así que no hay
+    // grupos que mostrar. Sin esto quedaría un desplegable con "Cargando…" para siempre.
+    document.querySelectorAll('#lista .oa-fila').forEach(det => {
+      det.querySelector('summary').style.cursor = 'default';
+      det.addEventListener('click', e => e.preventDefault());   // no despliega
+      const d = det.querySelector('.oa-detalle'); if(d) d.remove();
+    });
     aviso('');
   }catch(e){ aviso(errorPanel(e)); }
 }
@@ -413,16 +443,69 @@ function filaAvance(f){
              : r1     ? `${r1} pregunta${r1===1?'':'s'}`
              : 'sin primer intento';
   const detalle = base + (reintentos ? ` · ${reintentos} reintento${reintentos===1?'':'s'}` : '');
-  return `<div style="padding:8px 0;border-bottom:1px solid #ffffff14">
-    <div style="font-size:13px;margin-bottom:4px">${esc(OA_TEXTO[f.oa]||f.oa)}</div>
-    <div style="display:flex;align-items:center;gap:8px">
-      <div style="flex:1;height:8px;background:#ffffff14;border-radius:4px;overflow:hidden">
-        <div style="width:${pct}%;height:100%;background:${color}"></div>
+  // El detalle se pide al abrir, no al cargar la tabla: con 50 objetivos serían 50
+  // llamadas por adelantado para algo que casi nunca se mira entero.
+  const idOa = String(f.oa).replace(/[^A-Za-z0-9]/g,'');
+  return `<details class="oa-fila" data-oa="${esc(f.oa)}" id="oa-${idOa}"
+                   style="padding:8px 0;border-bottom:1px solid #ffffff14">
+    <summary style="cursor:pointer;list-style:none">
+      <div style="font-size:13px;margin-bottom:4px">${esc(OA_TEXTO[f.oa]||f.oa)}</div>
+      <div style="display:flex;align-items:center;gap:8px">
+        <div style="flex:1;height:8px;background:#ffffff14;border-radius:4px;overflow:hidden">
+          <div style="width:${pct}%;height:100%;background:${color}"></div>
+        </div>
+        <b style="color:${color};min-width:42px;text-align:right">${pct}%</b>
+        <small style="color:var(--dim);min-width:120px;text-align:right">${detalle}</small>
       </div>
-      <b style="color:${color};min-width:42px;text-align:right">${pct}%</b>
-      <small style="color:var(--dim);min-width:120px;text-align:right">${detalle}</small>
-    </div>
-  </div>`;
+    </summary>
+    <div class="oa-detalle" style="padding-top:6px;color:var(--dim);font-size:12px">Cargando…</div>
+  </details>`;
+}
+
+// Reparte a los alumnos de un objetivo en cuatro grupos. Los umbrales son los mismos que
+// los colores del mapa (45 y 70), que ya están calibrados al piso del azar.
+// "Sin evidencia" recoge a quienes no lo jugaron y a quienes tienen menos de 4 preguntas
+// de primer intento: con una sola pregunta —caso típico de un jefe final, donde cae una de
+// cada objetivo— un alumno queda en 0% o 100%, y mandarlo al refuerzo por eso sería una
+// decisión injusta tomada sobre nada.
+const APOYO_MIN_PREGUNTAS = 4;
+function gruposApoyo(filas){
+  const g = {apoyo:[], camino:[], logrado:[], sinDatos:[]};
+  (filas||[]).forEach(f => {
+    const r1 = Number(f.resp_1)||0, o1 = Number(f.ok_1)||0;
+    if(r1 < APOYO_MIN_PREGUNTAS){ g.sinDatos.push(f); return; }
+    const pct = o1*100/r1;
+    if(pct <  45) g.apoyo.push(f);
+    else if(pct < 70) g.camino.push(f);
+    else g.logrado.push(f);
+  });
+  return g;
+}
+
+// Los nombres van como fichas en línea: 35 alumnos en columna serían cuatro pantallas
+// en un teléfono. Sin porcentaje individual, a propósito: esta vista sirve para armar un
+// grupo de refuerzo, no para comparar niños entre sí.
+function fichasAlumnos(filas){
+  return filas.map(f =>
+    `<span style="display:inline-block;background:#ffffff14;border-radius:12px;
+                  padding:3px 9px;margin:2px 3px 2px 0;font-size:12px">
+       ${esc(f.avatar||'🦊')} ${esc(f.alumno)}</span>`).join('');
+}
+
+function detalleApoyo(filas){
+  const g = gruposApoyo(filas);
+  const grupo = (titulo, lista, color, plegado, nota) => !lista.length ? '' : `
+    <details ${plegado?'':'open'} style="margin:6px 0 6px 10px">
+      <summary style="color:${color};font-size:12px;cursor:pointer;padding:3px 0">
+        ${titulo} (${lista.length})</summary>
+      <div style="padding:4px 0">${fichasAlumnos(lista)}</div>
+      ${nota?`<p style="color:var(--dim);font-size:11px;margin:2px 0 0">${nota}</p>`:''}
+    </details>`;
+  return grupo('Necesitan apoyo', g.apoyo, 'var(--pink)', false, '')
+       + grupo('En camino', g.camino, 'var(--gold)', false, '')
+       + grupo('Lo lograron', g.logrado, 'var(--green)', true, '')
+       + grupo('Todavía sin evidencia', g.sinDatos, 'var(--dim)', true,
+               'No lo han jugado, o respondieron muy pocas preguntas para saberlo.');
 }
 
 // Separa por base en vez de atenuar. Ordenar de peor a mejor y a la vez atenuar las bases
