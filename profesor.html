@@ -28,6 +28,9 @@ code{color:var(--cyan);font-weight:900}
 /* El triángulo por omisión del desplegable se oculta: la fila del mapa ya se ve
    pulsable, y en WebKit "list-style:none" por sí solo no lo quita. */
 .oa-fila>summary::-webkit-details-marker{display:none}
+/* Igual para el bloque de participación: su summary usa list-style:none, que en
+   Safari no basta para ocultar el triángulo (ver Sesión 25). */
+#partBloque>summary::-webkit-details-marker{display:none}
 
 /* Filas de curso y de alumno, en dos líneas. En un teléfono de 375 px el nombre, el
    código, el XP y los botones no caben en la misma fila: el nombre no podía encogerse
@@ -455,12 +458,12 @@ function bloqueParticipacionHTML(){
   </details>`;
 }
 
-function pintarParticipacion(filas){
+function pintarParticipacion(titular, cuerpo, filas){
   const g = gruposParticipacion(filas);
   const total = (filas||[]).length;
-  $('partTitular').textContent =
+  titular.textContent =
     `Participación · ${g.semana.length} de ${total} jugaron esta semana`;
-  $('partCuerpo').innerHTML =
+  cuerpo.innerHTML =
       grupoFichas('Jugaron esta semana', g.semana, 'var(--green)', false, '')
     + grupoFichas('Hace más de una semana', g.viejo, 'var(--gold)', false, '')
     + grupoFichas('Canjearon su código pero no han jugado', g.sinJugar, 'var(--dim)', true, '')
@@ -472,13 +475,20 @@ function pintarParticipacion(filas){
 
 // Se lanza sin await desde verAvance: el mapa no la espera y su fallo no impide ver el
 // avance. Si falla, el bloque lo dice y el mapa queda intacto.
+//
+// Los nodos se capturan ANTES del await: si el profesor cambia de curso mientras la
+// consulta está en vuelo, verAvance repinta #lista con nodos nuevos (reusando los mismos
+// ids) y estas referencias quedan huérfanas. Escribir en el nodo huérfano es inofensivo,
+// en vez de pisar la participación del curso que ahora está a la vista. Mismo patrón
+// defensivo que conectarFilasOA.
 async function cargarParticipacion(cursoCodigo){
+  const titular = $('partTitular'), cuerpo = $('partCuerpo');
   try{
     const {data,error} = await SB.rpc('kimun_prof_participacion',{p_curso_codigo:cursoCodigo});
     if(error) throw error;
-    pintarParticipacion(data);
+    pintarParticipacion(titular, cuerpo, data);
   }catch(e){
-    const t = $('partTitular'); if(t) t.textContent = 'Participación · no se pudo cargar';
+    if(titular) titular.textContent = 'Participación · no se pudo cargar';
   }
 }
 
