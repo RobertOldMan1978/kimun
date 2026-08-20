@@ -428,6 +428,60 @@ function filtrosAsignatura(data){
   </div>`;
 }
 
+// Reparte a los alumnos del curso en cuatro grupos por su última entrada. La ventana es
+// móvil (7 días hacia atrás), no "desde el lunes", para no depender de la zona horaria del
+// servidor. "Nunca canjearon" se separa de "dejaron de jugar" porque la acción es distinta:
+// volver a entregar el código, no insistirle al niño.
+const PART_DIAS = 7;
+function gruposParticipacion(filas){
+  const g = {semana:[], viejo:[], sinJugar:[], sinCodigo:[]};
+  const corte = Date.now() - PART_DIAS*24*60*60*1000;
+  (filas||[]).forEach(f => {
+    if(!f.vinculado){ g.sinCodigo.push(f); return; }
+    if(!f.visto){ g.sinJugar.push(f); return; }
+    (new Date(f.visto).getTime() >= corte ? g.semana : g.viejo).push(f);
+  });
+  return g;
+}
+
+// El bloque va plegado, con el titular en la línea visible: es el dato que hay que ver sin
+// abrir nada. Se pinta primero con "Cargando…" y se rellena aparte, para no retrasar el mapa.
+function bloqueParticipacionHTML(){
+  return `<details id="partBloque" style="margin-bottom:12px;border:1px solid #ffffff22;
+            border-radius:12px;padding:8px 10px">
+    <summary style="cursor:pointer;list-style:none;color:var(--cyan);font-size:13px"
+             id="partTitular">Participación · cargando…</summary>
+    <div id="partCuerpo" style="padding-top:6px"></div>
+  </details>`;
+}
+
+function pintarParticipacion(filas){
+  const g = gruposParticipacion(filas);
+  const total = (filas||[]).length;
+  $('partTitular').textContent =
+    `Participación · ${g.semana.length} de ${total} jugaron esta semana`;
+  $('partCuerpo').innerHTML =
+      grupoFichas('Jugaron esta semana', g.semana, 'var(--green)', false, '')
+    + grupoFichas('Hace más de una semana', g.viejo, 'var(--gold)', false, '')
+    + grupoFichas('Canjearon su código pero no han jugado', g.sinJugar, 'var(--dim)', true, '')
+    + grupoFichas('Nunca canjearon su código', g.sinCodigo, 'var(--pink)', true,
+        'Puede ser un código perdido o mal escrito, o que no tengan teléfono. La acción '
+        + 'es volver a entregar el código. El dato lo reporta el teléfono: no es asistencia.')
+    + (total ? '' : '<p style="color:var(--dim);font-size:12px">Este curso no tiene alumnos inscritos.</p>');
+}
+
+// Se lanza sin await desde verAvance: el mapa no la espera y su fallo no impide ver el
+// avance. Si falla, el bloque lo dice y el mapa queda intacto.
+async function cargarParticipacion(cursoCodigo){
+  try{
+    const {data,error} = await SB.rpc('kimun_prof_participacion',{p_curso_codigo:cursoCodigo});
+    if(error) throw error;
+    pintarParticipacion(data);
+  }catch(e){
+    const t = $('partTitular'); if(t) t.textContent = 'Participación · no se pudo cargar';
+  }
+}
+
 // Cablea los chips. El filtro elegido se devuelve por callback, porque cada vista
 // repinta cosas distintas.
 function conectarFiltros(alCambiar){
@@ -475,16 +529,19 @@ async function verAvance(cursoCodigo, cursoNombre){
     if(error) throw error;
     const titulo = cursoNombre || cursoCodigo;
     if(!data || !data.length){
-      $('lista').innerHTML = cabeceraAvance(titulo, 'Avance por objetivo') + `
+      $('lista').innerHTML = cabeceraAvance(titulo, 'Avance por objetivo')
+        + bloqueParticipacionHTML() + `
         <p style="color:var(--dim);font-size:13px">
-        Todavía no hay datos de este curso. Aparecen cuando los alumnos juegan las campañas.</p>
+        Todavía no hay datos de avance de este curso. Aparecen cuando los alumnos juegan las campañas.</p>
         <button class="btn sec" id="btnVolverPanel">← Volver</button>`;
       $('btnVolverCab').onclick = volverAlPanel;
       $('btnVolverPanel').onclick = volverAlPanel;
+      cargarParticipacion(cursoCodigo);
       irArriba(); aviso(''); return;
     }
     await cargarTextosOA(data.map(f => f.oa));
-    $('lista').innerHTML = cabeceraAvance(titulo, 'Avance por objetivo') + `
+    $('lista').innerHTML = cabeceraAvance(titulo, 'Avance por objetivo')
+      + bloqueParticipacionHTML() + `
       <p style="color:var(--dim);font-size:12px;margin-bottom:10px">
         Porcentaje de acierto por objetivo, de menor a mayor. ${AVISO_NO_CALIFICA}</p>
       ${filtrosAsignatura(data)}
@@ -499,6 +556,7 @@ async function verAvance(cursoCodigo, cursoNombre){
     $('btnVolverCab').onclick = volverAlPanel;
     $('btnVolverPanel').onclick = volverAlPanel;
     $('btnReiniciarMed').onclick = () => reiniciarMediciones(cursoCodigo, cursoNombre);
+    cargarParticipacion(cursoCodigo);
 
     let filtro = '';                                  // '' = todas las asignaturas
     const pintarCuerpo = () => {
@@ -628,19 +686,24 @@ function fichasAlumnos(filas){
        ${esc(f.avatar||'🦊')} ${esc(f.alumno)}</span>`).join('');
 }
 
-function detalleApoyo(filas){
-  const g = gruposApoyo(filas);
-  const grupo = (titulo, lista, color, plegado, nota) => !lista.length ? '' : `
+// Un grupo de alumnos como fichas dentro de un <details>. Compartido por la vista de
+// apoyo (por objetivo) y por la de participación (por curso).
+function grupoFichas(titulo, lista, color, plegado, nota){
+  return !lista.length ? '' : `
     <details ${plegado?'':'open'} style="margin:6px 0 6px 10px">
       <summary style="color:${color};font-size:12px;cursor:pointer;padding:3px 0">
         ${titulo} (${lista.length})</summary>
       <div style="padding:4px 0">${fichasAlumnos(lista)}</div>
       ${nota?`<p style="color:var(--dim);font-size:11px;margin:2px 0 0">${nota}</p>`:''}
     </details>`;
-  return grupo('Necesitan apoyo', g.apoyo, 'var(--pink)', false, '')
-       + grupo('En camino', g.camino, 'var(--gold)', false, '')
-       + grupo('Lo lograron', g.logrado, 'var(--green)', true, '')
-       + grupo('Todavía sin evidencia', g.sinDatos, 'var(--dim)', true,
+}
+
+function detalleApoyo(filas){
+  const g = gruposApoyo(filas);
+  return grupoFichas('Necesitan apoyo', g.apoyo, 'var(--pink)', false, '')
+       + grupoFichas('En camino', g.camino, 'var(--gold)', false, '')
+       + grupoFichas('Lo lograron', g.logrado, 'var(--green)', true, '')
+       + grupoFichas('Todavía sin evidencia', g.sinDatos, 'var(--dim)', true,
                'No lo han jugado, o respondieron muy pocas preguntas para saberlo.');
 }
 
