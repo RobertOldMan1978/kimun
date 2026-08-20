@@ -25,9 +25,14 @@ También hay **Duelo 1v1** en el mismo teléfono y en línea (Supabase), una **t
 skins** (incluidas skins deportivas ilustradas) y una **intro de bienvenida** en video que
 se ve una vez. Todo en un solo archivo `index.html`, pensado para el celular.
 
-El **ranking es real y por curso**: un adulto crea el curso e inscribe a los alumnos desde
-el Modo Admin, y cada uno entra en su teléfono con un código de acceso. El XP se sincroniza
-con el servidor, así que los compañeros compiten con datos de verdad.
+El **ranking es real y por curso**: el profesor crea el curso e inscribe a los alumnos
+desde `profesor.html` —una página aparte del juego, con correo y contraseña—, y cada uno
+entra en su teléfono con un código de acceso. El XP se sincroniza con el servidor, así que
+los compañeros compiten con datos de verdad.
+
+Ese mismo panel trae el **mapa de dominio por objetivo de aprendizaje**: muestra, de peor a
+mejor porcentaje, qué contenidos le están costando al curso y quiénes necesitan apoyo en
+cada uno. Es una brújula para decidir qué repasar en clase, **no sirve para calificar**.
 
 ## Cómo probarlo
 

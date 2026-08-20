@@ -323,6 +323,12 @@ responder sin saber ya da 25%, así que un 50% no es "la mitad" sino un tercio d
 dominio real. Cortan en **45%** (rojo/ámbar) y **70%** (ámbar/verde), y una nota en
 pantalla explica el 25%.
 
+**Cómo se recorre (Sesión 26):** un **encabezado pegado arriba** dice de qué curso o
+alumno es la tabla y deja el botón de volver siempre a mano; el texto de cada objetivo se
+**recorta a dos líneas** y se abre entero al desplegar la fila; hay **filtro por
+asignatura** y un botón flotante para **volver arriba**. Antes cabían tres objetivos por
+pantalla y las 60 filas sumaban 8.228 px de desplazamiento.
+
 **Tres bloques en vez de atenuar:** "Para reforzar" (10 alumnos o más, bajo 70%), "Van
 bien" (10 o más, 70% o más) y **"Todavía con pocos datos"** (menos de 10 alumnos,
 plegado). Menos de diez alumnos son unas 60 respuestas: ±12 puntos de margen, el borde
@@ -1442,3 +1448,43 @@ herramienta recién construida. De ahí salió el trabajo de esta sesión.
   mejoras que dejaron los tres informes (participación y fecha, encabezado del curso, filtro
   por asignatura, el scroll horizontal que introdujo el botón por alumno); los dos trámites
   (INAPI y `vulpo.cl`); SMTP; la vuelta manual para decidir la v1.
+
+### Sesión 26 (2026-08-19) — El mapa se puede recorrer
+Sesión corta y de una sola pieza: el panel del profesor tenía la información correcta pero
+era incómodo de usar en un teléfono. Se tomó el paquete de presentación que dejaron los tres
+informes de la Sesión 24, junto con el defecto de desplazamiento lateral. Todo en
+`profesor.html`; **no se tocó el esquema de Supabase ni `index.html`**, así que no hubo nada
+que aplicar en el SQL Editor.
+- **El desborde en móvil no lo causaba el botón 📊.** Ese fue el disparador, pero la causa
+  estaba desde antes: el nombre del alumno llevaba `flex:1` **sin `min-width:0`**, y un
+  elemento flex no se encoge por debajo del ancho de su contenido salvo que se le diga. Con
+  un nombre largo la fila crecía y arrastraba el panel entero: 382 px sobre 375. La fila del
+  alumno pasó a **dos líneas** (nombre y botones arriba, código y XP abajo) y los botones de
+  **21×25 px a 38×38**, con el de borrar apartado del resto porque es lo único sin deshacer.
+  El mismo defecto estaba en la cabecera del curso y en la lista de profesores del
+  administrador; los tres se corrigieron igual.
+- **El mapa se recorre:** encabezado **pegado arriba** con el nombre del curso o del alumno
+  y el botón de volver (el título del panel se oculta mientras tanto: decir "Mis cursos"
+  sobre la tabla de un curso confunde); texto del objetivo **recortado a dos líneas**, que
+  se abre entero al desplegar la fila —en la vista de un alumno, donde la fila no se
+  despliega, va completo desde el principio—; **filtro por asignatura** en las dos vistas,
+  que no se dibuja si hay una sola; salto al inicio al abrir cada vista y al cambiar de
+  filtro; y botón flotante de **volver arriba** pasados 600 px. De **tres objetivos por
+  pantalla a unos diez**.
+- **Lo que más riesgo tenía:** el filtro rehace el cuerpo de la tabla, así que los `toggle`
+  que cargan "quiénes necesitan apoyo" hay que **volver a cablearlos** en cada repintado. Sin
+  eso el desplegable habría quedado mudo justo después de filtrar, que es cuando más se usa.
+  Se extrajeron `conectarFilasOA` y `conectarFiltros` para que las dos vistas compartan el
+  mismo cableado.
+- **Verificado a 375 px con un banco de pruebas** que sustituye el backend (35 alumnos, 52
+  objetivos, tres asignaturas), porque el panel real necesita credenciales: `scrollWidth`
+  igual al viewport en todas las pantallas, filtro (52 → 22 Historia → 15 Ciencias), el
+  desplegable de apoyo cargando después de filtrar, los tres bloques, la vista por alumno,
+  el curso sin datos y el panel de administrador. Sin errores de consola. **Falta la
+  confirmación con la cuenta real**, aunque las llamadas al servidor no cambiaron.
+- **README corregido:** decía que los cursos se crean "desde el Modo Admin", que se retiró
+  en la Sesión 22. Ahora apunta a `profesor.html` y menciona el mapa de dominio.
+- **Pendientes:** los mismos de la Sesión 25 menos la presentación del mapa —probar el
+  aislamiento entre profesores en la vista de apoyo, borrar el curso de simulación y generar
+  datos nuevos, participación y fecha (quién jugó esta semana y quién no ha entrado nunca),
+  los dos trámites (INAPI y `vulpo.cl`), SMTP, la vuelta manual para decidir la v1.
