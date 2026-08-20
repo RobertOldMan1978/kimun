@@ -1555,3 +1555,54 @@ subagentes (implementador + revisión de spec + revisión de calidad por separad
   participación) y aplicar el SQL de participación; borrar el curso de simulación y generar
   datos nuevos; los dos trámites (INAPI y `vulpo.cl`); SMTP; la vuelta manual para decidir
   la v1.
+
+### Sesión 27 (2026-08-20) — Se cierra participación y el panel se pliega en acordeón
+Tres bloques: se cerró lo que quedaba pendiente de la Sesión 26, se generaron datos limpios
+para ver los informes, y se reorganizó el panel del profesor.
+- **Participación verificada en producción.** Roberto ya había pegado el esquema; se confirmó
+  en el SQL Editor que existen `perfiles.visto` y `kimun_prof_participacion(p_curso_codigo text)`.
+  El **aislamiento entre profesores** quedó probado en las dos vistas nuevas: desde la sesión
+  del profesor de prueba (`profe-prueba@vulpo.cl`), llamar `kimun_prof_participacion` y
+  `kimun_prof_dominio_oa` sobre un curso ajeno (`CUR-A692`, de otra cuenta) devolvió
+  **HTTP 400 / `no_autorizado`** (la función hace `raise exception`, que PostgREST traduce a
+  400). Cierra las dos pruebas que quedaban desde las Sesiones 25 y 26.
+- **Datos limpios en `CUR-1939` (enfoque híbrido).** Se generaron **30 alumnos**: 28 por un
+  bloque SQL de simulación (repartidos en los cuatro grupos de participación, con dominio de
+  **primer intento** variado sobre los 12 OA de las primeras etapas de las tres campañas) y
+  **2 jugados de verdad** desde el juego —**Renata Poblete** y **Simón Valenzuela**—, canjeando
+  su código `ALU-` real y registrando por las **mismas funciones del servidor** que usa el
+  juego (`kimun_dominio`, `kimun_xp`). Renata además **jugó el Reto de Cálculo por la interfaz**
+  (etapa 1 superada), para demostrar que **Matemáticas cuenta para participación y XP** aunque
+  —por diseño— no aparezca en el mapa de dominio. Detalle de automatización: el timer de las
+  preguntas no deja seguir el ritmo clic a clic desde fuera, así que las etapas de campaña se
+  registraron con la función real (idéntico pipeline) y el Reto se resolvió con un script en la
+  propia página.
+- **Panel del profesor reorganizado en acordeón (solo `profesor.html`, cero SQL).** Antes
+  `pintarLista` pintaba **todos los cursos con todos sus alumnos expandidos**, un caos con más
+  de un curso. Ahora:
+  - **Identidad arriba:** "👤 &lt;nombre&gt; — Administrador/Profesor" (`#profId`), que se
+    oculta en las vistas de avance (junto al título) y reaparece al volver.
+  - **Cursos plegados** (`<details>`, el mismo patrón que las filas de objetivos): la cabecera
+    muestra nombre, código, "N alumnos" y **"Participación · X/N jugaron esta semana"**, cargada
+    en segundo plano por `cargarTitularesParticipacion` (una consulta por curso, reusa
+    `gruposParticipacion`). El nodo del titular **se captura antes del `await`** para que la
+    respuesta tardía de un curso no escriba bajo otro (misma precaución de la Sesión 26).
+  - **Dentro del curso:** primero "📊 Ver avance del curso", luego un sub-acordeón
+    **"👥 Alumnos (N)"** con las filas y el campo de agregar. El 🗑️ borra el curso **sin**
+    alternar el acordeón (`stopPropagation`), y el marcador nativo del `<details>` se oculta con
+    `::-webkit-details-marker` (fix de Safari ya conocido).
+  - Ajuste sobre el plan: en móvil el nombre del curso se truncaba, así que "N alumnos" y la
+    participación pasaron a sus propias líneas para que el nombre respire.
+  - Diseño y plan: `docs/superpowers/specs/2026-08-20-panel-profesor-acordeon-design.md` y
+    `docs/superpowers/plans/2026-08-20-panel-profesor-acordeon.md`.
+- **Verificado a 375 px con un banco simulado** que sustituye el backend (no se puede iniciar
+  sesión de profesor desde aquí): identidad y rol, dos cursos plegados con su titular correcto
+  (1/3 y 1/2, sin cruce al repintar), avance primero + alumnos plegables, 🗑️ sin alternar,
+  nombre completo, sin desborde lateral, bloque de administración intacto y cero errores de
+  consola. **Falta la confirmación con la cuenta real** (donde el titular consulta de verdad),
+  aunque las llamadas al servidor no cambiaron.
+- **Pendientes:** confirmar el acordeón con la cuenta real; **la feature grande que pidió
+  Roberto** —orientar por asignatura (qué repasar) y **preparar un desafío que obligue a rehacer
+  una cadena de preguntas** para reforzar, con su propio brainstorming (toca panel + backend +
+  el juego); borrar el curso de simulación cuando ya no se necesite; los dos trámites (INAPI y
+  `vulpo.cl`); SMTP; la vuelta manual para decidir la v1.

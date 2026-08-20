@@ -41,6 +41,22 @@ code{color:var(--cyan);font-weight:900}
 .alu{padding:6px 0;border-bottom:1px solid #ffffff14}
 .alu-top{display:flex;align-items:center;gap:6px}
 .alu-sub{font-size:12px;color:var(--dim);margin-top:2px}
+.prof-id{font-weight:900;color:var(--cyan);font-size:14px;margin-bottom:2px}
+/* Acordeón de cursos y de alumnos */
+.curso{border:1px solid #ffffff22;border-radius:12px;margin-bottom:10px;overflow:hidden}
+.curso>summary,.alumnos>summary{cursor:pointer;list-style:none;display:flex;
+  align-items:center;gap:8px;flex-wrap:wrap}
+.curso>summary{padding:10px}
+.curso>summary::-webkit-details-marker,
+.alumnos>summary::-webkit-details-marker{display:none}
+.cur-chevron{color:var(--dim);font-size:12px;transition:transform .15s}
+details[open]>summary>.cur-chevron{transform:rotate(90deg)}
+.cur-alu{font-size:12px;color:var(--dim);flex-basis:100%;order:4}
+.cur-part{font-size:12px;color:var(--cyan);flex-basis:100%;order:5}
+.curso-cuerpo{padding:0 10px 10px}
+.alumnos{margin-top:8px;border-top:1px solid #ffffff14}
+.alumnos>summary{padding:8px 0;color:var(--cyan);font-size:13px;font-weight:700}
+.alumnos-cuerpo{padding-top:4px}
 /* Área tocable de verdad: los botones de 21×25 px se fallaban con el dedo. */
 .ico{background:none;border:0;font-family:inherit;font-weight:900;font-size:15px;
  line-height:1;cursor:pointer;padding:0;min-width:38px;height:38px;border-radius:10px;
@@ -87,6 +103,7 @@ code{color:var(--cyan);font-weight:900}
 </div>
 
 <div class="card hide" id="cardPanel">
+  <div id="profId" class="prof-id hide"></div>
   <h3 id="panelTitulo">Mis cursos</h3>
   <div id="lista"></div>
   <p class="msg" id="panelMsg"></p>
@@ -277,12 +294,14 @@ async function cargarPanel(){
   if(!YO){ throw new Error('no_autorizado'); }
   $('cardAuth').classList.add('hide');
   $('cardPanel').classList.remove('hide');
+  $('profId').textContent = '👤 ' + (YO.nombre || YO.correo) + ' — ' + (YO.es_admin ? 'Administrador' : 'Profesor');
   $('panelTitulo').textContent = YO.es_admin ? 'Todos los cursos' : 'Mis cursos';
   await pintarLista();
 }
 
 async function pintarLista(){
   $('panelTitulo').classList.remove('hide');   // las vistas de avance lo ocultan
+  $('profId').classList.remove('hide');
   const {data,error}=await SB.rpc('kimun_prof_listar');
   if(error) throw error;
   const porCurso={};
@@ -292,39 +311,50 @@ async function pintarLista(){
   });
   const cursos=Object.entries(porCurso);
   $('lista').innerHTML = (cursos.length ? cursos.map(([cod,c])=>`
-    <div style="margin-bottom:16px">
-      <div class="cur-head">
+    <details class="curso">
+      <summary>
+        <span class="cur-chevron" aria-hidden="true">▸</span>
         <b class="cur-nom" style="color:var(--gold)">${esc(c.nombre)}</b>
         <code>${esc(cod)}</code>
+        <span class="cur-alu">${c.alumnos.length} alumno${c.alumnos.length===1?'':'s'}</span>
+        <span class="cur-part" data-cod="${esc(cod)}">Participación · …</span>
         <button class="ico ico-del delcurso" data-cod="${esc(cod)}" title="Eliminar curso">🗑️</button>
-      </div>
-      <button class="btn-chip avance" data-cod="${esc(cod)}" data-nom="${esc(c.nombre)}"
-        >📊 Ver avance del curso</button>
-      ${c.alumnos.length ? c.alumnos.map(a=>`
-        <div class="alu">
-          <div class="alu-top">
-            <span>${esc(a.avatar)}</span><b class="alu-nom">${esc(a.alumno)}</b>
-            <button class="ico xp" data-cod="${esc(a.codigo_acceso)}" data-xp="${esc(a.xp)}"
-                    title="Fijar XP" style="color:var(--gold)">✎</button>
-            <button class="ico avalum" data-cod="${esc(a.codigo_acceso)}"
-                    data-nom="${esc(a.alumno)}" title="Ver avance">📊</button>
-            <button class="ico ico-del del" data-cod="${esc(a.codigo_acceso)}"
-                    title="Eliminar alumno">✕</button>
+      </summary>
+      <div class="curso-cuerpo">
+        <button class="btn-chip avance" data-cod="${esc(cod)}" data-nom="${esc(c.nombre)}"
+          >📊 Ver avance del curso</button>
+        <details class="alumnos">
+          <summary><span class="cur-chevron" aria-hidden="true">▸</span>👥 Alumnos (${c.alumnos.length})</summary>
+          <div class="alumnos-cuerpo">
+            ${c.alumnos.length ? c.alumnos.map(a=>`
+              <div class="alu">
+                <div class="alu-top">
+                  <span>${esc(a.avatar)}</span><b class="alu-nom">${esc(a.alumno)}</b>
+                  <button class="ico xp" data-cod="${esc(a.codigo_acceso)}" data-xp="${esc(a.xp)}"
+                          title="Fijar XP" style="color:var(--gold)">✎</button>
+                  <button class="ico avalum" data-cod="${esc(a.codigo_acceso)}"
+                          data-nom="${esc(a.alumno)}" title="Ver avance">📊</button>
+                  <button class="ico ico-del del" data-cod="${esc(a.codigo_acceso)}"
+                          title="Eliminar alumno">✕</button>
+                </div>
+                <div class="alu-sub"><code>${esc(a.codigo_acceso)}</code> · ${esc(a.xp)} XP</div>
+              </div>`).join('')
+             : '<p style="color:var(--dim);font-size:12px">Sin alumnos todavía.</p>'}
+            <div style="margin-top:8px">
+              <input class="in-alumno" data-curso="${esc(cod)}" placeholder="Nombre del alumno nuevo">
+              <button class="btn sec add-alumno" data-curso="${esc(cod)}">+ Agregar alumno</button>
+            </div>
           </div>
-          <div class="alu-sub"><code>${esc(a.codigo_acceso)}</code> · ${esc(a.xp)} XP</div>
-        </div>`).join('')
-       : '<p style="color:var(--dim);font-size:12px">Sin alumnos todavía.</p>'}
-      <div style="margin-top:8px">
-        <input class="in-alumno" data-curso="${esc(cod)}" placeholder="Nombre del alumno nuevo">
-        <button class="btn sec add-alumno" data-curso="${esc(cod)}">+ Agregar alumno</button>
+        </details>
       </div>
-    </div>`).join('')
+    </details>`).join('')
    : '<p style="color:var(--dim);font-size:13px">Aún no tienes cursos.</p>')
    + `<div style="margin-top:10px;border-top:1px solid #ffffff22;padding-top:12px">
         <input id="cursoNombre" placeholder="Nombre del curso nuevo (8° A)">
         <button class="btn sec" id="btnCurso">+ Crear curso</button>
       </div>`;
   conectarAcciones();
+  cargarTitularesParticipacion(cursos.map(([cod])=>cod));
 
   if(YO.es_admin){
     $('lista').insertAdjacentHTML('beforeend', `
@@ -381,7 +411,8 @@ function conectarAcciones(){
     if(!confirm('¿Eliminar a este alumno?\n\nPierde su lugar en el ranking y sus duelos. No se puede deshacer.')) return;
     await accion(()=>SB.rpc('kimun_prof_alumno_quitar',{p_codigo_acceso:b.dataset.cod}), 'Alumno eliminado');
   });
-  document.querySelectorAll('.delcurso').forEach(b=>b.onclick=async ()=>{
+  document.querySelectorAll('.delcurso').forEach(b=>b.onclick=async (ev)=>{
+    ev.stopPropagation(); ev.preventDefault();
     if(!confirm('¿Eliminar este curso?\n\nSe borran también todos sus alumnos y sus duelos. No se puede deshacer.')) return;
     await accion(()=>SB.rpc('kimun_prof_curso_quitar',{p_curso_codigo:b.dataset.cod}), 'Curso eliminado');
   });
@@ -405,6 +436,7 @@ const AVISO_NO_CALIFICA = 'El porcentaje es del <b>primer intento</b>: cuántos 
 // porque aquí ya no describe lo que se está mirando.
 function cabeceraAvance(titulo, sub){
   $('panelTitulo').classList.add('hide');
+  $('profId').classList.add('hide');
   return `<div class="av-head">
     <button class="ico" id="btnVolverCab" title="Volver">←</button>
     <div style="min-width:0">
@@ -490,6 +522,27 @@ async function cargarParticipacion(cursoCodigo){
   }catch(e){
     if(titular) titular.textContent = 'Participación · no se pudo cargar';
   }
+}
+
+// Titular de participación en la cabecera plegada de cada curso. Una consulta por curso,
+// asíncrona, para no retrasar el render de la lista. El nodo se captura ANTES del await
+// (mismo patrón defensivo que cargarParticipacion): si la lista se repinta mientras una
+// consulta está en vuelo, la referencia vieja queda huérfana en vez de escribir el titular
+// de un curso bajo la cabecera de otro.
+function cargarTitularesParticipacion(codigos){
+  (codigos||[]).forEach(async cod => {
+    const nodo = document.querySelector('.cur-part[data-cod="'+CSS.escape(cod)+'"]');
+    if(!nodo) return;
+    try{
+      const {data,error} = await SB.rpc('kimun_prof_participacion',{p_curso_codigo:cod});
+      if(error) throw error;
+      const g = gruposParticipacion(data);
+      const total = (data||[]).length;
+      nodo.textContent = `Participación · ${g.semana.length}/${total} jugaron esta semana`;
+    }catch(e){
+      nodo.textContent = 'Participación no disponible';
+    }
+  });
 }
 
 // Cablea los chips. El filtro elegido se devuelve por callback, porque cada vista
