@@ -32,7 +32,9 @@ los compañeros compiten con datos de verdad.
 
 Ese mismo panel trae el **mapa de dominio por objetivo de aprendizaje**: muestra, de peor a
 mejor porcentaje, qué contenidos le están costando al curso y quiénes necesitan apoyo en
-cada uno. Es una brújula para decidir qué repasar en clase, **no sirve para calificar**.
+cada uno. Arriba del mapa, un bloque de **participación** dice quién jugó esta semana y
+quién no ha entrado nunca. Es una brújula para decidir qué reforzar en clase, **no sirve
+para calificar**.
 
 ## Cómo probarlo
 

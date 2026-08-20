@@ -368,6 +368,30 @@ curso repase el tema.
 > reporta el teléfono del alumno, igual que el XP, así que es falsificable por alguien
 > que sepa. Es una brújula para decidir qué repasar, no una nota.
 
+**Participación y fecha (Sesión 26):** arriba del mapa, un bloque plegado responde la otra
+pregunta del profesor —quién está jugando— que el porcentaje por objetivo no contesta. El
+titular se ve sin abrir nada (*"Participación · 24 de 35 jugaron esta semana"*) y al
+desplegar reparte a los alumnos en **cuatro grupos**: jugaron esta semana, hace más de una
+semana, **canjearon su código pero no han jugado**, y **nunca canjearon su código**. Esos
+dos últimos se separan a propósito: no canjear casi nunca es desinterés (es un papel
+perdido, un código mal escrito o un teléfono que no tienen), y la acción es volver a
+entregar el código, no insistirle al niño. Nombres como fichas en orden alfabético, **sin
+fecha individual ni orden por inactividad**: una lista de menores ordenada por días sin
+entrar se leería como lista de asistencia, y quien no tiene teléfono ni internet en casa
+quedaría arriba.
+
+Lo que mide es **la última vez que el niño abrió el juego** (columna `visto` en `perfiles`,
+sellada dentro de `kimun_xp`), así que cuenta **todos los modos** —campaña, Reto de Cálculo,
+duelo, tienda—, no solo las campañas como el mapa. La ventana de "esta semana" son 7 días
+móviles. La participación se pide en paralelo con el mapa y **su fallo no impide ver el
+avance**; aparece también cuando el curso todavía no tiene datos de dominio, que es justo
+cuando más interesa saber quién no entró. **Límite del arranque:** al aplicar el esquema,
+`visto` se rellena desde `dominio.actualizado`, así que quien solo jugó Reto de Cálculo
+parte sin fecha hasta su próxima entrada. **Caso de borde:** un hermano que canjea otro
+código en el mismo teléfono deja al primero como "nunca canjeó" en la siguiente consulta,
+por el modelo un-dispositivo-un-vínculo. Y el mismo límite del mapa: **no es asistencia**,
+el dato lo reporta el teléfono.
+
 Diseño y plan: `docs/superpowers/specs/2026-08-18-mapa-dominio-oa-design.md` y
 `docs/superpowers/plans/2026-08-18-mapa-dominio-oa.md`. El cambio al primer intento:
 `docs/superpowers/specs/2026-08-18-primer-intento-design.md` y
@@ -441,6 +465,11 @@ Providers, y dejar activada la **confirmación de correo** para las cuentas de p
   otorga a nadie desde afuera. Reemplazaron por completo a las viejas `kimun_admin_*`,
   que fueron eliminadas junto con la clave global. Ver "Cursos, profesores y ranking
   real" en Herramientas de desarrollo.
+- **Participación (Sesión 26):** columna `perfiles.visto timestamptz`, sellada dentro de
+  `kimun_xp` (la sincronización que el juego ya hace en todos los modos, no solo campañas),
+  y la función `kimun_prof_participacion(curso)` que devuelve a cada alumno inscrito con su
+  `visto` y si tiene fila en `vinculos`. Una migración al final del esquema rellena `visto`
+  desde `max(dominio.actualizado)` la primera vez (idempotente con `where visto is null`).
 - **Dominio por OA (Sesión 22):** tabla `dominio` (una fila por alumno y objetivo, con
   contadores; se borra en cascada junto con el alumno), `kimun_dominio` para registrar
   desde el juego y `kimun_prof_dominio`, `kimun_prof_dominio_alumno` y
