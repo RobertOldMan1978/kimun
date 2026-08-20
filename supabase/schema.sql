@@ -106,6 +106,13 @@ create table if not exists public.dominio (
 );
 create index if not exists idx_dominio_perfil on public.dominio(perfil_id);
 
+-- Primer contacto con el objetivo: se escriben una sola vez y no se vuelven a tocar.
+-- Sin esto, el porcentaje queda sesgado: "respondidas" crece con los reintentos, y se
+-- reintenta porque no se entendió, así que el alumno que menos sabe pesa más en el
+-- promedio del curso.
+alter table public.dominio add column if not exists resp_1 int not null default 0;
+alter table public.dominio add column if not exists ok_1   int not null default 0;
+
 -- Dueño del curso. Nulo = curso huérfano, visible solo para administradores.
 alter table public.cursos add column if not exists profesor_id uuid
   references public.profesores(id) on delete set null;
@@ -345,8 +352,10 @@ declare mi uuid; fila jsonb; n int := 0; begin
     -- Un "n" ausente llega como nulo y no lo atrapa la expresión regular; este
     -- coalesce sí lo descarta.
     continue when coalesce((fila->>'n')::int, 0) <= 0;
-    insert into public.dominio(perfil_id, oa, respondidas, correctas)
+    insert into public.dominio(perfil_id, oa, respondidas, correctas, resp_1, ok_1)
     values (mi, fila->>'oa',
+            greatest(0,(fila->>'n')::int),
+            least(greatest(0,coalesce((fila->>'ok')::int,0)), greatest(0,(fila->>'n')::int)),
             greatest(0,(fila->>'n')::int),
             least(greatest(0,coalesce((fila->>'ok')::int,0)), greatest(0,(fila->>'n')::int)))
     -- La tabla se nombra sin el esquema a propósito: esa es la forma que documenta
@@ -354,6 +363,11 @@ declare mi uuid; fila jsonb; n int := 0; begin
     -- public. Los cuerpos plpgsql no se validan al crearse, así que una referencia
     -- que no resolviera se pegaría sin quejarse y recién fallaría en producción, la
     -- primera vez que un niño terminara una etapa.
+    --
+    -- El "do update" NO toca resp_1 ni ok_1: esa es toda la idea. La primera vez que un
+    -- alumno responde un objetivo es necesariamente un insert, así que quedan congeladas
+    -- en su primer contacto. Si alguna vez alguien las agrega a esta lista, el número del
+    -- panel vuelve a ser un acumulado sesgado por los reintentos y nada lo delata.
     on conflict (perfil_id, oa) do update set
       respondidas = dominio.respondidas + excluded.respondidas,
       correctas   = dominio.correctas   + excluded.correctas,
@@ -549,24 +563,30 @@ declare cid uuid; v int; begin
 -- haría fallar el re-pegado del archivo con "cannot change return type".
 drop function if exists public.kimun_prof_dominio(text);
 create or replace function public.kimun_prof_dominio(p_curso_codigo text)
-returns table(oa text, respondidas bigint, correctas bigint, alumnos bigint)
+returns table(oa text, respondidas bigint, correctas bigint, alumnos bigint,
+              resp_1 bigint, ok_1 bigint, alumnos_1 bigint)
 language plpgsql security definer set search_path=public as $$
 declare cid uuid; begin
   select id into cid from public.cursos where codigo = upper(trim(p_curso_codigo));
   if cid is null or not public.kimun_prof_es_mio(cid) then raise exception 'no_autorizado'; end if;
   return query
-    select d.oa, sum(d.respondidas), sum(d.correctas), count(distinct d.perfil_id)
+    select d.oa, sum(d.respondidas), sum(d.correctas), count(distinct d.perfil_id),
+           sum(d.resp_1), sum(d.ok_1),
+           -- Cuántos alumnos aportaron un primer intento: es el número que decide si el
+           -- porcentaje es creíble, y no es lo mismo que cuántos hay en el curso.
+           count(distinct d.perfil_id) filter (where d.resp_1 > 0)
     from public.dominio d
     join public.perfiles p on p.id = d.perfil_id
     where p.curso_id = cid
     group by d.oa
-    order by (sum(d.correctas)::numeric / nullif(sum(d.respondidas),0)) asc nulls last, d.oa;
+    -- El orden se calcula sobre el primer intento, que es el número que se muestra.
+    order by (sum(d.ok_1)::numeric / nullif(sum(d.resp_1),0)) asc nulls last, d.oa;
 end $$;
 
 -- Dominio de un alumno mío.
 drop function if exists public.kimun_prof_dominio_alumno(text);
 create or replace function public.kimun_prof_dominio_alumno(p_codigo_acceso text)
-returns table(oa text, respondidas int, correctas int)
+returns table(oa text, respondidas int, correctas int, resp_1 int, ok_1 int)
 language plpgsql security definer set search_path=public as $$
 declare cid uuid; pid uuid; begin
   select id, curso_id into pid, cid from public.perfiles
@@ -574,9 +594,9 @@ declare cid uuid; pid uuid; begin
   if pid is null or cid is null or not public.kimun_prof_es_mio(cid)
     then raise exception 'no_autorizado'; end if;
   return query
-    select d.oa, d.respondidas, d.correctas from public.dominio d
+    select d.oa, d.respondidas, d.correctas, d.resp_1, d.ok_1 from public.dominio d
     where d.perfil_id = pid
-    order by (d.correctas::numeric / nullif(d.respondidas,0)) asc nulls last, d.oa;
+    order by (d.ok_1::numeric / nullif(d.resp_1,0)) asc nulls last, d.oa;
 end $$;
 
 -- Pone en cero las mediciones de un curso mío. Devuelve cuántas filas borró.

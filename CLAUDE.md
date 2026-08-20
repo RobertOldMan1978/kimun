@@ -302,11 +302,39 @@ por objetivo, para decidir qué reforzar en clase. Vive en `profesor.html`.
 la tabla del curso completo, y el botón **📊** de cada alumno abre la suya. La tabla
 va **de peor a mejor porcentaje**, así que lo que hay que reforzar queda arriba,
 muestra el **texto del objetivo** (no su código: `HI08 OA 04` no le dice nada a
-nadie; el panel lo carga desde `contenido/<asignatura>/oa.json`) y **cuántas
-preguntas respaldan cada porcentaje**. Los objetivos con menos de diez respuestas se
-ven atenuados, porque un 45% de 4 preguntas no significa lo mismo que uno de 40. Un
-objetivo que nadie jugó **no aparece**: mostrarlo como 0% se leería como "no lo
-entienden" cuando en realidad es "todavía no lo ven".
+nadie; el panel lo carga desde `contenido/<asignatura>/oa.json`) y **cuántos alumnos
+respaldan cada porcentaje**. Un objetivo que nadie jugó **no aparece**: mostrarlo como
+0% se leería como "no lo entienden" cuando en realidad es "todavía no lo ven".
+Matemáticas tampoco aparece, y el panel lo dice, para que su silencio no se lea como
+"todo bien": el Reto de Cálculo no tiene objetivos asociados.
+
+**Qué significa el porcentaje: el PRIMER intento** (Sesión 24), no el acumulado del
+año. Es decir, cuántos acertaron **la primera vez que vieron ese contenido**. El
+acumulado estaba sesgado porque su denominador dependía justo de lo que se quería
+medir: `respondidas` crece con los reintentos, y se reintenta porque no se entendió,
+así que **el alumno que menos sabe pesaba más en el promedio del curso**. Con el primer
+intento la base es pareja (a lo más 6 respuestas por alumno y objetivo), que es lo que
+vuelve legítimo ordenar de peor a mejor. Los **reintentos** (`respondidas - resp_1`)
+se muestran aparte, como señal de cuánto costó: 62% con pocos reintentos ("les costó
+pero lo sacaron") pide algo muy distinto que 62% con cuarenta ("se están estrellando").
+
+**Los colores están calibrados al piso del azar:** con cuatro opciones por pregunta,
+responder sin saber ya da 25%, así que un 50% no es "la mitad" sino un tercio de
+dominio real. Cortan en **45%** (rojo/ámbar) y **70%** (ámbar/verde), y una nota en
+pantalla explica el 25%.
+
+**Tres bloques en vez de atenuar:** "Para reforzar" (10 alumnos o más, bajo 70%), "Van
+bien" (10 o más, 70% o más) y **"Todavía con pocos datos"** (menos de 10 alumnos,
+plegado). Menos de diez alumnos son unas 60 respuestas: ±12 puntos de margen, el borde
+de lo interpretable. Antes se atenuaban esas filas, pero atenuar y ordenar de peor a
+mejor se peleaban entre sí —la posición decía "mira esto primero" y la opacidad "ignora
+esto"—, de modo que la primera fila podía ser justo la menos confiable.
+
+> **Comparar objetivos entre sí es el uso menos defendible** de esta tabla: los bancos
+> de preguntas no están calibrados entre sí (los escribieron agentes distintos en tandas
+> distintas), así que parte de la brecha entre un objetivo en 45% y otro en 87% es que
+> un banco es más duro. Comparar un objetivo consigo mismo en el tiempo, o contra un
+> umbral fijo, sí es defendible.
 
 **Qué se mide:** solo las **campañas y los jefes finales**. El duelo queda fuera
 porque es contra el reloj y se falla por apuro, y el Reto de Cálculo genera sus
@@ -314,8 +342,10 @@ operaciones al vuelo, sin objetivo asociado. El **Modo Difícil sí cuenta** (us
 mismas preguntas del banco) y el **modo QA (`?qa=1`) no registra nada**, para que las
 pruebas del desarrollador no ensucien el mapa.
 
-**Qué se guarda:** contadores por alumno y objetivo (respondidas y correctas) en la
-tabla `dominio`, **no las respuestas**. No queda registro de qué pregunta falló ni de
+**Qué se guarda:** contadores por alumno y objetivo en la tabla `dominio`, **no las
+respuestas**: el acumulado (`respondidas`, `correctas`) y el primer contacto (`resp_1`,
+`ok_1`), que se escriben solo al insertar la fila y **nunca se vuelven a tocar** — por
+eso quedan congeladas en el primer intento. No queda registro de qué pregunta falló ni de
 cuándo, así que no se puede reconstruir la sesión de un niño. El juego acumula en
 memoria durante la etapa y envía un resumen al terminarla; si no hay señal, queda
 pendiente en el teléfono y se reintenta después, sin interrumpir la partida.
@@ -323,14 +353,19 @@ pendiente en el teléfono y se reintenta después, sin interrumpir la partida.
 **🔄 Reiniciar mediciones** (por curso, con confirmación) pone los contadores en
 cero. Existe porque **acumulan todo el año**: un alumno que falló mucho en marzo y
 hoy domina el tema arrastraría un porcentaje bajo. Sirve al empezar una unidad o un
-semestre. No borra alumnos ni XP, y no toca los otros cursos.
+semestre. No borra alumnos ni XP, y no toca los otros cursos. Con el porcentaje de
+primer intento es, además, **la única forma de volver a medir** un objetivo: `resp_1`
+queda congelada para siempre, así que sin reiniciar el número no se mueve aunque el
+curso repase el tema.
 
 > **No sirve para calificar**, y la pantalla lo dice con todas sus letras: el dato lo
 > reporta el teléfono del alumno, igual que el XP, así que es falsificable por alguien
 > que sepa. Es una brújula para decidir qué repasar, no una nota.
 
 Diseño y plan: `docs/superpowers/specs/2026-08-18-mapa-dominio-oa-design.md` y
-`docs/superpowers/plans/2026-08-18-mapa-dominio-oa.md`.
+`docs/superpowers/plans/2026-08-18-mapa-dominio-oa.md`. El cambio al primer intento:
+`docs/superpowers/specs/2026-08-18-primer-intento-design.md` y
+`docs/superpowers/plans/2026-08-18-primer-intento.md`.
 
 ### Consolidar el pool de preguntas (`scripts/consolidar-pool.py`)
 
@@ -403,8 +438,10 @@ Providers, y dejar activada la **confirmación de correo** para las cuentas de p
 - **Dominio por OA (Sesión 22):** tabla `dominio` (una fila por alumno y objetivo, con
   contadores; se borra en cascada junto con el alumno), `kimun_dominio` para registrar
   desde el juego y `kimun_prof_dominio`, `kimun_prof_dominio_alumno` y
-  `kimun_prof_dominio_reiniciar` para el panel. Ver "Mapa de dominio por OA" en
-  Herramientas de desarrollo.
+  `kimun_prof_dominio_reiniciar` para el panel. Desde la Sesión 24 la tabla lleva además
+  `resp_1` y `ok_1` (el primer contacto), que `kimun_dominio` escribe **solo en la rama
+  `insert`**: el `on conflict do update` no las menciona a propósito, y ese detalle es
+  toda la idea. Ver "Mapa de dominio por OA" en Herramientas de desarrollo.
 - **Cuidado al editar el esquema:** `gen_random_uuid()` es nativa de PostgreSQL y no
   necesita nada especial, pero si alguna función vuelve a usar pgcrypto (`crypt`,
   `gen_salt`) necesita `set search_path = public, extensions`, porque en Supabase esa
@@ -1320,3 +1357,51 @@ con el flujo brainstorming → spec → plan → subagentes, con revisión de se
   Matemáticas no aparece en el mapa (habría que mapear los niveles del Reto a los OA de
   Números si se quiere cubrir); los dos trámites (INAPI y `vulpo.cl`); SMTP antes de dar de
   alta profesores reales; la vuelta manual para decidir la v1; duelo en 2 celulares; push.
+
+### Sesión 24 (2026-08-18) — Revisión del informe y corrección del porcentaje
+Roberto pidió mejorar el área del profesor y se despacharon **tres agentes con miradas
+distintas** —docente de aula, analista de datos y diseñador de producto— sobre la
+herramienta recién construida. De ahí salió el trabajo de esta sesión.
+- **El hallazgo que obligó a corregir:** el porcentaje era `correctas/respondidas` acumulado,
+  y **el denominador dependía de lo que se quería medir**. Se reintenta una etapa cuando no
+  se entendió, así que el alumno que menos sabe aporta más respuestas y pesa más en el
+  promedio del curso. Ejemplo con 30 alumnos: el panel mostraba 66,7% donde el promedio real
+  era 76,7%, con la mitad de la base aportada por seis niños repitiendo.
+- **La corrección:** dos columnas `resp_1` y `ok_1` en `dominio`, escritas **solo en la rama
+  `insert`** de `kimun_dominio` y jamás en el `on conflict do update`. El porcentaje pasa a
+  ser "cuántos acertaron la primera vez que vieron este contenido", con el mismo denominador
+  para todos los objetivos. `respondidas - resp_1` queda como señal propia: cuánto costó.
+  **Cuatro líneas de SQL, cero cambios en `index.html`.**
+- **Verificado contra la base real:** dos partidas sobre un objetivo nuevo (4 de 6 y luego 6
+  de 6) dejaron `respondidas=12, correctas=10` y **`resp_1=6, ok_1=4`**. Ese objetivo reporta
+  67% en vez del 83% inflado.
+- **Otros cambios del panel:** colores calibrados al **piso del azar** (con 4 opciones,
+  responder sin saber da 25%, así que los cortes van en 45% y 70%); la atenuación por base
+  pequeña se reemplazó por **tres bloques** —Para reforzar, Van bien, Todavía con pocos
+  datos— porque ordenar de peor a mejor y atenuar a la vez se peleaban: la posición decía
+  "mira esto primero" y la opacidad decía "ignora esto", de modo que la primera fila podía
+  ser justo la menos confiable; se muestra el número de alumnos que respaldan cada
+  porcentaje (dato que ya viajaba del servidor y se descartaba); y se advierte que
+  **Matemáticas no se mide**, para que el silencio no se lea como "todo bien".
+- **Lo que los tres informes dejaron para más adelante**, sin implementar:
+  - **Del objetivo a los nombres:** al tocar una fila, ver quiénes necesitan apoyo. Es el
+    vacío que el profesor de aula puso primero, y los datos ya existen.
+  - **Participación y fecha:** quién jugó esta semana y quién no ha entrado nunca.
+    `dominio.actualizado` ya lo permite sin guardar nada nuevo.
+  - **Presentación:** encabezado que diga de qué curso es, salto al inicio al abrir, botón de
+    volver arriba, texto a dos líneas, filtro por asignatura. Con textos de 250 caracteres
+    caben **tres objetivos por pantalla** y 60 filas son 8.228 px de scroll.
+  - **Un defecto de hoy sin corregir:** el botón 📊 por alumno empujó esa fila y provocó
+    **scroll horizontal** en móvil; los botones miden 21×25 px y el de borrar quedó a 30 px
+    del de ver avance.
+  - **Estadística por ítem** (~2.300 filas fijas, sin `perfil_id`) para calibrar los bancos,
+    que hoy no lo están: parte de la brecha entre un objetivo en 45% y otro en 87% es que un
+    banco es más duro, no que los niños sepan menos.
+- **Advertencia registrada:** el riesgo real no es que la herramienta se use poco, sino que
+  un colegio la use para **calificar o supervisar docentes**. El dato viene del teléfono del
+  alumno: en cuanto tiene consecuencias, el camino corto a un buen número deja de ser
+  estudiar. Y la cuenta de administrador —que en un colegio sería UTP— puede abrir el avance
+  de cualquier curso.
+- **Pendientes:** limpiar el curso de simulación y ver el informe con datos limpios; las
+  mejoras listadas arriba; los dos trámites (INAPI y `vulpo.cl`); SMTP; la vuelta manual para
+  decidir la v1.
