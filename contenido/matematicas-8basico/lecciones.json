@@ -61,6 +61,68 @@
         {"t":"ejemplo","intro":"Calculemos un descuento paso a paso (toca para avanzar):","pasos":["Un producto cuesta $2000 y tiene 20% de descuento","Calcula el 20% de 2000: 20/100 · 2000 = 400","El descuento es de $400","Réstalo del precio: 2000 − 400 = 1600","Pagas $1600"]},
         {"t":"practica","fromBank":{"oa":"MA08 OA 05","n":3}}
       ]
+    },
+    {
+      "id": "ma-oa06",
+      "oa": "MA08 OA 06",
+      "titulo": "Lenguaje algebraico y expresiones",
+      "bloques": [
+        {"t":"texto","md":"En álgebra, una letra representa un número que no conoces. Por ejemplo, \"el doble de un número\" se escribe 2·n, donde n es ese número cualquiera."},
+        {"t":"diagrama","kind":"algebra","params":{"x":2,"u":3,"etiqueta":"2x + 3"},"intro":"Dos fichas 'x' y tres unidades: eso es 2x + 3."},
+        {"t":"texto","md":"Los términos semejantes son los que tienen la misma parte con letra; solo esos se pueden juntar. La propiedad distributiva reparte una multiplicación sobre una suma: a·(b + c) = a·b + a·c."},
+        {"t":"ejemplo","intro":"Juntemos términos semejantes (toca para avanzar):","pasos":["2x + 3x","Son términos semejantes (los dos llevan x)","= 5x"]},
+        {"t":"ejemplo","intro":"Ahora usemos la propiedad distributiva:","pasos":["3·(x + 2)","Reparte el 3: 3·x + 3·2","= 3x + 6"]},
+        {"t":"practica","fromBank":{"oa":"MA08 OA 06","n":3}}
+      ]
+    },
+    {
+      "id": "ma-oa07",
+      "oa": "MA08 OA 07",
+      "titulo": "La función lineal",
+      "bloques": [
+        {"t":"texto","md":"Una función relaciona dos cantidades: para cada valor de x hay un valor de y. La función lineal tiene la forma y = a·x y su gráfico es una recta que pasa por el origen."},
+        {"t":"diagrama","kind":"funcion","params":{"a":2,"b":0,"interactivo":true},"intro":"Mueve la pendiente y observa cómo cambia la inclinación de la recta."},
+        {"t":"texto","md":"La pendiente a dice cuánto sube y por cada 1 que avanza x. Mientras mayor es a, más inclinada es la recta."},
+        {"t":"ejemplo","intro":"Evaluemos una función lineal (toca para avanzar):","pasos":["Si y = 3x","cuando x = 2","y = 3·2 = 6"]},
+        {"t":"practica","fromBank":{"oa":"MA08 OA 07","n":3}}
+      ]
+    },
+    {
+      "id": "ma-oa08",
+      "oa": "MA08 OA 08",
+      "titulo": "Ecuaciones de primer grado",
+      "bloques": [
+        {"t":"texto","md":"Una ecuación es una igualdad con una incógnita; resolverla es encontrar el valor de x que la hace verdadera. Funciona como una balanza en equilibrio."},
+        {"t":"diagrama","kind":"balanza","params":{"izqX":2,"izqU":1,"derU":7,"etiqueta":"2x + 1 = 7"},"intro":"Los dos lados pesan lo mismo."},
+        {"t":"texto","md":"Para despejar x, haces lo MISMO a ambos lados (restar, sumar, dividir). Así la balanza sigue equilibrada."},
+        {"t":"ejemplo","intro":"Resolvamos una ecuación paso a paso (toca para avanzar):","pasos":["2x + 1 = 7","Resta 1 a ambos lados: 2x = 6","Divide por 2: x = 3"]},
+        {"t":"practica","fromBank":{"oa":"MA08 OA 08","n":3}}
+      ]
+    },
+    {
+      "id": "ma-oa09",
+      "oa": "MA08 OA 09",
+      "titulo": "Inecuaciones",
+      "bloques": [
+        {"t":"texto","md":"Una inecuación usa <, >, ≤ o ≥ en vez de =. Su solución no es un solo número, sino un conjunto de números."},
+        {"t":"diagrama","kind":"recta","params":{"min":-6,"max":6,"marca":4,"interactivo":true,"intervalo":{"desde":2,"tipo":">"}},"intro":"El círculo abierto en el 2 significa que el 2 no entra; todos los mayores que 2 sí."},
+        {"t":"texto","md":"Se resuelve casi como una ecuación, PERO al multiplicar o dividir por un número negativo se INVIERTE el signo de la desigualdad."},
+        {"t":"ejemplo","intro":"Una inecuación sencilla (toca para avanzar):","pasos":["x + 3 > 5","Resta 3: x > 2"]},
+        {"t":"ejemplo","intro":"Ahora un caso con número negativo:","pasos":["−2x > 4","Divide por −2 e invierte el signo","x < −2"]},
+        {"t":"practica","fromBank":{"oa":"MA08 OA 09","n":3}}
+      ]
+    },
+    {
+      "id": "ma-oa10",
+      "oa": "MA08 OA 10",
+      "titulo": "La función afín",
+      "bloques": [
+        {"t":"texto","md":"La función afín tiene la forma f(x) = a·x + b. La pendiente a dice cuánto sube; el valor inicial b dice dónde corta el eje y."},
+        {"t":"diagrama","kind":"funcion","params":{"a":1,"b":2,"interactivo":true},"intro":"Mueve a y b: b sube o baja la recta, a cambia su inclinación."},
+        {"t":"texto","md":"Si b = 0 es una función lineal (pasa por el origen); si b ≠ 0 la recta no pasa por el origen."},
+        {"t":"ejemplo","intro":"Evaluemos una función afín (toca para avanzar):","pasos":["f(x) = 2x + 1","en x = 0: f(0) = 1","en x = 1: f(1) = 3"]},
+        {"t":"practica","fromBank":{"oa":"MA08 OA 10","n":3}}
+      ]
     }
   ]
 }

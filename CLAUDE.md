@@ -73,9 +73,9 @@ backend Supabase para el duelo en línea. Historia de v0 al detalle en la Bitác
   **Modo Sin Fin**— se conserva idéntico, pero ahora **cada nivel se desbloquea al
   completar su lección** ("aprender desbloquea el Reto"). En el **Duelo**, Matemáticas
   ofrece los 5 niveles del Reto (operaciones al vuelo), ver Sesión 16. El banco de
-  álgebra queda de reserva. **Solo la Unidad 1 (Números) está construida**; Álgebra,
-  Geometría, Estadística y el Jefe Final "La Incógnita" son planes de seguimiento que
-  reusan el mismo motor de lecciones.
+  álgebra queda de reserva. **Construidas las Unidades 1 (Números) y 2 (Álgebra y
+  funciones)**; Geometría, Estadística y el Jefe Final "La Incógnita" son planes de
+  seguimiento que reusan el mismo motor de lecciones.
 - Regla de cada capítulo/expedición: **4 etapas + 1 jefe (5 nodos)** (algunos capítulos
   con 3 etapas cuando su unidad tiene 3 OA). Cada asignatura tiene, además, un **banco de
   año completo** (todos sus OA oficiales); con las 4 campañas activas ya casi no queda
@@ -1721,8 +1721,22 @@ implementador por tarea + revisión de spec y de calidad por separado).
   el mapa) y el **nivel "Enteros" del Reto quedó desbloqueado**. **Sin regresión**: Historia,
   Ciencias, Lenguaje y el Reto intactos. Sin errores nuevos de consola. (La prueba end-to-end creó
   un perfil anónimo de prueba en Supabase, de los que limpia "🧹 Limpiar perfiles de prueba".)
-- **Pendientes:** planes de seguimiento —**Cap 2 Álgebra**, **Cap 3 Geometría**, **Cap 4
-  Estadística** (contenido + los widgets que faltan) y el **Jefe Final "La Incógnita"** (necesita
-  arte de Roberto: `villano-matematicas.png` + skin "Vulpi Matemático"; los datos ya están puestos
-  pero inertes)—; portadas propias por capítulo (opcional; hoy caen al fallback); y los de siempre
-  (los dos trámites INAPI y `vulpo.cl`, SMTP, la vuelta manual para decidir la v1).
+- **Cap 2 (Álgebra y funciones, OA06–10) — construido el mismo día (Plan 2).** Reusó el motor
+  sin tocarlo: 3 widgets nuevos —`funcion` (recta f(x)=ax+b con deslizadores de pendiente e
+  intercepto), `algebra` (fichas de términos: "x" y unidades) y `balanza` (ecuación como
+  equilibrio)—; OA09 (inecuaciones) reusa el `recta` con intervalos. 5 lecciones (lenguaje
+  algebraico, función lineal, ecuaciones, inecuaciones, función afín) y se activó el capítulo
+  `mate-algebra` (se abre al completar Números). Verificado end-to-end, sin regresión.
+  Plan: `docs/superpowers/plans/2026-08-21-camino-matematicas-cap2-algebra.md`.
+  - **Dos bugs pre-existentes del motor de quiz, hallados en la revisión y corregidos** (afectaban
+    a todos los modos, no solo a las lecciones): (1) el botón **"Continuar" quedaba siempre
+    visible** porque `.btn{display:block}` anulaba el atributo `hidden` —permitía **saltar
+    preguntas sin responder**, incluso en campañas, ensuciando la medición—; se corrigió con
+    `.btn[hidden]{display:none}`. (2) `avanzar` **sin guard de reentrada** lanzaba un `TypeError`
+    con doble toque en la última pregunta; se agregó `if(!Q||!Q.preguntas)return;`.
+- **Pendientes:** planes de seguimiento —**Cap 3 Geometría** y **Cap 4 Estadística** (contenido +
+  los widgets que faltan: `plano`, `triangulo`, `transformacion`, `solido`, `cajon`, `barras`,
+  `arbol`) y el **Jefe Final "La Incógnita"** (necesita arte de Roberto: `villano-matematicas.png`
+  + skin "Vulpi Matemático"; los datos ya están puestos pero inertes)—; portadas propias por
+  capítulo (opcional; hoy caen al fallback); y los de siempre (los dos trámites INAPI y
+  `vulpo.cl`, SMTP, la vuelta manual para decidir la v1).
