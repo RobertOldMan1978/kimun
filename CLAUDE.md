@@ -62,12 +62,20 @@ backend Supabase para el duelo en línea. Historia de v0 al detalle en la Bitác
     skin "Vulpi Escritor"; insignia "Maestro de las Letras".
   Capa `CAMPAÑAS` data-driven; el motor de campañas es **genérico** (Desafío Extra
   opcional, jefe con título dinámico).
-- **Matemáticas · "Reto de Cálculo" (Sesión 15):** al entrar a Matemáticas se abre un
-  juego de **cálculo mental rápido** (procedural, alineado al eje Números de 8°), no el
-  quiz de álgebra. **5 niveles × 3 etapas** + **Jefe Final "El Autómata"** (vida y
-  corazones) + **Modo Sin Fin** con récord. El banco de álgebra queda de reserva.
-  En el **Duelo**, Matemáticas ofrece los 5 niveles del Reto (operaciones generadas al
-  vuelo), ver Sesión 16.
+- **Matemáticas · campaña "camino de aprendizaje" (Sesión 29) + "Reto de Cálculo"
+  (Sesión 15):** al entrar a Matemáticas se abre su **campaña** con 4 capítulos = las 4
+  unidades del año (Números jugable; Álgebra, Geometría y Estadística en "🔒 Pronto").
+  Cada lección es una **mini-clase guiada**: explicación breve + **diagramas SVG
+  interactivos** (recta arrastrable, barras de fracciones/%, cuadrículas de
+  potencias/raíces) + ejemplo resuelto paso a paso + práctica del banco revisado, que
+  **mide dominio por OA** (por fin Matemáticas entra al mapa del profesor). El **Reto de
+  Cálculo** —cálculo mental rápido, **5 niveles × 3 etapas** + Jefe "El Autómata" +
+  **Modo Sin Fin**— se conserva idéntico, pero ahora **cada nivel se desbloquea al
+  completar su lección** ("aprender desbloquea el Reto"). En el **Duelo**, Matemáticas
+  ofrece los 5 niveles del Reto (operaciones al vuelo), ver Sesión 16. El banco de
+  álgebra queda de reserva. **Solo la Unidad 1 (Números) está construida**; Álgebra,
+  Geometría, Estadística y el Jefe Final "La Incógnita" son planes de seguimiento que
+  reusan el mismo motor de lecciones.
 - Regla de cada capítulo/expedición: **4 etapas + 1 jefe (5 nodos)** (algunos capítulos
   con 3 etapas cuando su unidad tiene 3 OA). Cada asignatura tiene, además, un **banco de
   año completo** (todos sus OA oficiales); con las 4 campañas activas ya casi no queda
@@ -305,8 +313,9 @@ muestra el **texto del objetivo** (no su código: `HI08 OA 04` no le dice nada a
 nadie; el panel lo carga desde `contenido/<asignatura>/oa.json`) y **cuántos alumnos
 respaldan cada porcentaje**. Un objetivo que nadie jugó **no aparece**: mostrarlo como
 0% se leería como "no lo entienden" cuando en realidad es "todavía no lo ven".
-Matemáticas tampoco aparece, y el panel lo dice, para que su silencio no se lea como
-"todo bien": el Reto de Cálculo no tiene objetivos asociados.
+Matemáticas **ya aparece** desde la Sesión 29: su **camino de aprendizaje** registra
+dominio por OA como cualquier campaña. Lo que **no** se mide es el **Reto de Cálculo**,
+que genera sus operaciones al vuelo sin objetivo asociado, y el panel lo dice.
 
 **Qué significa el porcentaje: el PRIMER intento** (Sesión 24), no el acumulado del
 año. Es decir, cuántos acertaron **la primera vez que vieron ese contenido**. El
@@ -342,9 +351,10 @@ esto"—, de modo que la primera fila podía ser justo la menos confiable.
 > un banco es más duro. Comparar un objetivo consigo mismo en el tiempo, o contra un
 > umbral fijo, sí es defendible.
 
-**Qué se mide:** solo las **campañas y los jefes finales**. El duelo queda fuera
-porque es contra el reloj y se falla por apuro, y el Reto de Cálculo genera sus
-operaciones al vuelo, sin objetivo asociado. El **Modo Difícil sí cuenta** (usa las
+**Qué se mide:** las **campañas y los jefes finales**, incluidas las **lecciones del
+camino de aprendizaje de Matemáticas** (su práctica registra dominio por OA, Sesión 29).
+El duelo queda fuera porque es contra el reloj y se falla por apuro, y el Reto de Cálculo
+genera sus operaciones al vuelo, sin objetivo asociado. El **Modo Difícil sí cuenta** (usa las
 mismas preguntas del banco) y el **modo QA (`?qa=1`) no registra nada**, para que las
 pruebas del desarrollador no ensucien el mapa.
 
@@ -1662,3 +1672,57 @@ brainstorming → spec → plan → ejecución por fases (executing-plans), veri
 - **Pendientes:** la prueba real end-to-end del refuerzo; confirmar el acordeón con la cuenta
   real; borrar el curso de simulación cuando ya no se necesite; los dos trámites (INAPI y
   `vulpo.cl`); SMTP; la vuelta manual para decidir la v1.
+
+### Sesión 29 (2026-08-21) — Camino de aprendizaje de Matemáticas (Plan 1: motor + Unidad 1)
+Hasta hoy Matemáticas **no enseñaba**: abría directo el Reto de Cálculo (entrenamiento de
+agilidad, sin explicaciones ni dibujos), y era la única asignatura que el profesor no podía
+medir (el Reto genera operaciones al vuelo, sin OA). Roberto pidió un **camino de aprendizaje
+real** —enseñar con ejemplos gráficos y dibujos— conservando el camino de ejercicios. Se hizo
+con el flujo completo brainstorming → diseño aprobado → plan → ejecución por subagentes (un
+implementador por tarea + revisión de spec y de calidad por separado).
+- **Decisiones (brainstorming, con Roberto):** lección con **formato mixto según el tema**
+  (unos OA se manipulan, otros se explican); **aprender desbloquea el Reto** (cada nivel del
+  Reto se abre al completar su lección); **año completo** (4 unidades) como campaña, construido
+  como **motor de lecciones + contenido por unidad**; **diagramas dibujados con código (SVG
+  interactivo)** + arte decorativo con imágenes de Roberto; **Matemáticas entra al mapa de
+  dominio**; **villano nuevo "La Incógnita"** para el Jefe Final (El Autómata sigue en el Reto).
+  Diseño: `docs/superpowers/specs/2026-08-21-camino-aprendizaje-matematicas-design.md`; plan:
+  `docs/superpowers/plans/2026-08-21-camino-aprendizaje-matematicas.md`.
+- **Enfoque elegido — motor de lecciones por bloques (data-driven).** Una lección es datos
+  (`contenido/matematicas-8basico/lecciones.json`); el motor (`scr-leccion` +
+  `abrirLeccion`/`renderBloque`/`avanzarBloque`) recorre bloques tipados: `texto`, `imagen`,
+  `diagrama` (invoca un widget del catálogo `DIAGRAMAS[kind]`), `ejemplo` (revelado paso a paso)
+  y `práctica` (reusa el motor de quiz con un flag `Q.leccion`, hermano de `Q.desafio`). Agregar
+  una lección es agregar datos; el motor no se toca.
+- **Catálogo de diagramas SVG (interactivos, sin librerías):** en este plan se construyeron
+  `recta` (marcador arrastrable e intervalos con círculo abierto/cerrado), `fracciones` (barra
+  partida) y `potencias` (cuadrícula lado×lado). El resto del catálogo (`funcion`, `plano`,
+  `triangulo`, `transformacion`, `solido`, `cajon`, `barras`, `arbol`) llega con las unidades 2-4.
+- **Unidad 1 (Números) completa y jugable:** 5 mini-clases (OA01–05) con explicación + diagrama
+  + ejemplos + práctica del banco revisado. Matemáticas se sumó a `CAMPAÑAS` como campaña `'mate'`
+  con 4 capítulos (Números activo; los otros 3 en "🔒 Pronto"). El desbloqueo del Reto
+  (`nivelCalcDesbloqueado` + tabla `RETO_REQUISITO`) pasó a leer `S.mateLecciones`, con
+  **migración cortés** (un nivel ya dominado antes sigue abierto). La medición **reusa
+  `kimun_dominio` tal cual: cero backend nuevo**; se ajustó el aviso "Matemáticas no se mide" de
+  `profesor.html`.
+- **Hallazgos de las revisiones (lo valioso):**
+  - **Matemáticas no está en `EXPEDICIONES`**, así que `contenidoDeAsignatura('Matemáticas')`
+    devuelve `null`; con el plan literal, **toda práctica se habría saltado en silencio**. Se
+    añadió una ruta de respaldo directa al banco (`contenido/matematicas-8basico/preguntas.json`).
+  - **Dependencia de formato:** el `fromBank.oa` debe calzar EXACTO con el banco (`"MA08 OA 0N"`,
+    con espacios); si no, la práctica sale vacía y la lección se marca completa sin medir. Se
+    validaron los 5 códigos contra las 603 preguntas del banco.
+  - **Trap latente de Maestría:** una campaña con `capitulos:[]` haría `[].every()===true`; se dio
+    `capitulos:[]` a la entrada `'mate'` y se blindó `asignaturaDificilCompleta` (hoy protegido por
+    `DIF_ASIGS`, que excluye Matemáticas). Auditados los ~10 usos de `.capitulos`.
+- **Verificado en el navegador (revisión final, recorrido real):** menú → campaña de Matemáticas
+  → Números → lección de enteros de punta a punta (texto → recta interactiva → ejemplos → práctica)
+  → queda ✓, se abre la siguiente, **el dominio se registró de verdad** (Matemáticas ya aparece en
+  el mapa) y el **nivel "Enteros" del Reto quedó desbloqueado**. **Sin regresión**: Historia,
+  Ciencias, Lenguaje y el Reto intactos. Sin errores nuevos de consola. (La prueba end-to-end creó
+  un perfil anónimo de prueba en Supabase, de los que limpia "🧹 Limpiar perfiles de prueba".)
+- **Pendientes:** planes de seguimiento —**Cap 2 Álgebra**, **Cap 3 Geometría**, **Cap 4
+  Estadística** (contenido + los widgets que faltan) y el **Jefe Final "La Incógnita"** (necesita
+  arte de Roberto: `villano-matematicas.png` + skin "Vulpi Matemático"; los datos ya están puestos
+  pero inertes)—; portadas propias por capítulo (opcional; hoy caen al fallback); y los de siempre
+  (los dos trámites INAPI y `vulpo.cl`, SMTP, la vuelta manual para decidir la v1).

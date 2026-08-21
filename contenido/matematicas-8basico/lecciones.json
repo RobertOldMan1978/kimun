@@ -1,0 +1,66 @@
+{
+  "asignatura": "Matemática",
+  "unidad": "U1 Números",
+  "lecciones": [
+    {
+      "id": "ma-oa01",
+      "oa": "MA08 OA 01",
+      "titulo": "Multiplicar y dividir enteros",
+      "bloques": [
+        {"t":"texto","md":"Los números enteros incluyen los positivos, el cero y los negativos. En la recta numérica, los negativos van a la izquierda del cero."},
+        {"t":"diagrama","kind":"recta","params":{"min":-6,"max":6,"marca":-3,"interactivo":true},"intro":"Arrastra el punto: su distancia al 0 es su valor absoluto."},
+        {"t":"texto","md":"Al multiplicar o dividir, mira los signos: si son IGUALES el resultado es positivo (+); si son DISTINTOS, es negativo (−)."},
+        {"t":"ejemplo","intro":"Sigue el ejemplo paso a paso (toca para avanzar):","pasos":["(−4) · (−3)","Signos iguales → resultado positivo","= 12"]},
+        {"t":"ejemplo","intro":"Otro caso:","pasos":["(−15) : (+3)","Signos distintos → resultado negativo","= −5"]},
+        {"t":"practica","fromBank":{"oa":"MA08 OA 01","n":3}}
+      ]
+    },
+    {
+      "id": "ma-oa02",
+      "oa": "MA08 OA 02",
+      "titulo": "Multiplicar y dividir fracciones y decimales",
+      "bloques": [
+        {"t":"texto","md":"Para multiplicar dos fracciones, multiplicas numerador por numerador y denominador por denominador. Para dividir, multiplicas la primera fracción por el inverso de la segunda (das vuelta la de abajo)."},
+        {"t":"diagrama","kind":"fracciones","params":{"partes":4,"pintadas":1,"etiqueta":"1/4"},"intro":"La barra está dividida en cuatro partes iguales y pintamos una: eso es una parte de cuatro, es decir 1/4."},
+        {"t":"ejemplo","intro":"Multipliquemos dos fracciones paso a paso (toca para avanzar):","pasos":["2/3 · 3/5","Numeradores: 2 · 3 = 6. Denominadores: 3 · 5 = 15","= 6/15","Simplifica dividiendo arriba y abajo por 3","= 2/5"]},
+        {"t":"ejemplo","intro":"La regla de los signos también sirve con fracciones y decimales:","pasos":["(−1/2) · (+4)","Signos distintos → resultado negativo","= −4/2 = −2"]},
+        {"t":"practica","fromBank":{"oa":"MA08 OA 02","n":3}}
+      ]
+    },
+    {
+      "id": "ma-oa03",
+      "oa": "MA08 OA 03",
+      "titulo": "Multiplicar y dividir potencias",
+      "bloques": [
+        {"t":"texto","md":"Una potencia es una base multiplicada por sí misma varias veces. En 3², el 3 es la base y el 2 es el exponente: significa 3 · 3 = 9."},
+        {"t":"diagrama","kind":"potencias","params":{"lado":3,"etiqueta":"3² = 9"},"intro":"Un cuadrado de lado 3 tiene 3 · 3 = 9 casillas. Por eso 3² = 9."},
+        {"t":"texto","md":"Cuando las potencias tienen la MISMA base: al multiplicar se SUMAN los exponentes y al dividir se RESTAN."},
+        {"t":"ejemplo","intro":"Multipliquemos dos potencias de igual base (toca para avanzar):","pasos":["2² · 2³","Misma base → suma los exponentes: 2 + 3 = 5","= 2⁵","2⁵ = 2 · 2 · 2 · 2 · 2","= 32"]},
+        {"t":"practica","fromBank":{"oa":"MA08 OA 03","n":3}}
+      ]
+    },
+    {
+      "id": "ma-oa04",
+      "oa": "MA08 OA 04",
+      "titulo": "Raíces cuadradas",
+      "bloques": [
+        {"t":"texto","md":"La raíz cuadrada de un número es el lado de un cuadrado cuya área es ese número. Como 4 · 4 = 16, la raíz cuadrada de 16 es 4."},
+        {"t":"diagrama","kind":"potencias","params":{"lado":4,"etiqueta":"√16 = 4"},"intro":"Este cuadrado tiene un área de 16 casillas, así que su lado mide 4. Por eso √16 = 4."},
+        {"t":"ejemplo","intro":"Estimemos una raíz que no es exacta (toca para avanzar):","pasos":["¿Cuánto es √20?","20 está entre 16 (=4²) y 25 (=5²)","Entonces √20 está entre 4 y 5"]},
+        {"t":"practica","fromBank":{"oa":"MA08 OA 04","n":3}}
+      ]
+    },
+    {
+      "id": "ma-oa05",
+      "oa": "MA08 OA 05",
+      "titulo": "Variaciones porcentuales",
+      "bloques": [
+        {"t":"texto","md":"Un porcentaje es una fracción de 100. Por ejemplo, 30% significa 30 de cada 100, es decir 30/100."},
+        {"t":"diagrama","kind":"fracciones","params":{"partes":10,"pintadas":3,"etiqueta":"30%"},"intro":"Si divides el total en 10 partes iguales y tomas 3, eso es 3 de cada 10, lo mismo que 30 de cada 100: un 30%."},
+        {"t":"texto","md":"En un aumento porcentual sumas ese porcentaje al total. En un descuento, lo restas del total."},
+        {"t":"ejemplo","intro":"Calculemos un descuento paso a paso (toca para avanzar):","pasos":["Un producto cuesta $2000 y tiene 20% de descuento","Calcula el 20% de 2000: 20/100 · 2000 = 400","El descuento es de $400","Réstalo del precio: 2000 − 400 = 1600","Pagas $1600"]},
+        {"t":"practica","fromBank":{"oa":"MA08 OA 05","n":3}}
+      ]
+    }
+  ]
+}

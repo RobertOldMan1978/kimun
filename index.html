@@ -474,6 +474,19 @@ body.es-maestro .badge-img{filter:drop-shadow(0 0 10px #ffc93ccc) drop-shadow(0 
 #maestroSkip{position:fixed;bottom:20px;right:18px;z-index:100001;background:#ffffff1f;color:#fff;border:1.5px solid #ffffff55;
   border-radius:999px;padding:9px 18px;font:900 13px/1 'Nunito',sans-serif;cursor:pointer;backdrop-filter:blur(4px)}
 #maestroSkip:hover{background:#ffffff33}
+#scr-leccion{padding:16px}
+#scr-leccion.on{display:flex;flex-direction:column;gap:12px}
+.lec-top{display:flex;align-items:center;gap:10px}
+.lec-prog{flex:1;height:8px;background:#241a44;border-radius:6px;overflow:hidden}
+#lecProgBar{height:100%;width:0;background:linear-gradient(90deg,var(--cyan),var(--violet));transition:width .3s}
+.lec-titulo{font-family:'Titan One',sans-serif;font-size:20px;margin:2px 0}
+.lec-cuerpo{background:#241a44;border:1px solid #3a2f60;border-radius:16px;padding:16px;min-height:220px}
+.lec-cuerpo p{font-size:15px;line-height:1.5}
+.lec-cuerpo img{max-width:100%;border-radius:12px;display:block;margin:0 auto}
+.lec-diag{width:100%;overflow-x:auto}
+.lec-ejemplo-paso{opacity:.35;transition:opacity .3s;margin:6px 0;font-size:15px}
+.lec-ejemplo-paso.on{opacity:1}
+.lec-cont{width:100%}
 </style>
 </head>
 <body>
@@ -614,6 +627,17 @@ body.es-maestro .badge-img{filter:drop-shadow(0 0 10px #ffc93ccc) drop-shadow(0 
       <button class="btn" id="calcResNext" style="margin-top:14px">Siguiente nivel ➜</button>
       <button class="btn sec" id="calcResMapa" style="margin-top:8px">Volver a niveles</button>
     </div>
+  </section>
+
+  <!-- ============ LECCIÓN (camino de aprendizaje Matemáticas) ============ -->
+  <section class="screen" id="scr-leccion">
+    <div class="lec-top">
+      <button id="lecSalir" class="btn sec">← Salir</button>
+      <div class="lec-prog"><div id="lecProgBar"></div></div>
+    </div>
+    <h2 id="lecTitulo" class="lec-titulo"></h2>
+    <div id="lecCuerpo" class="lec-cuerpo"></div>
+    <button id="lecCont" class="btn lec-cont">Continuar</button>
   </section>
 
   <!-- ============ MAPA DE CAMPAÑA ============ -->
@@ -1067,6 +1091,29 @@ const CAMPAÑAS=[{
     ],
   },
   recompensa:{ skin:'kimun-escritor', insignia:'maestro-lenguaje', bonoMonedas:500, bonoXP:300 },
+},{
+  id:'mate', asignatura:'Matemáticas', portada:'assets/portada-matematicas.png',
+  intro:'Aprende los números, el álgebra, la geometría y los datos… y desafía tu cálculo.',
+  esLecciones:true,
+  capitulos:[],   // Matemáticas no usa expediciones; ver capitulosMate
+  capitulosMate:[
+    {id:'mate-numeros', titulo:'Números', lecciones:['ma-oa01','ma-oa02','ma-oa03','ma-oa04','ma-oa05']},
+    {id:'mate-algebra', titulo:'Álgebra y funciones', lecciones:[], proximamente:true},
+    {id:'mate-geometria', titulo:'Geometría', lecciones:[], proximamente:true},
+    {id:'mate-datos', titulo:'Probabilidad y estadística', lecciones:[], proximamente:true},
+  ],
+  jefeFinal:{
+    villano:'La Incógnita', villanoIc:'❓', villanoImg:'assets/villano-matematicas.png',
+    dialogo:'Soy la x que nadie despeja… ¿crees que tus números pueden encontrarme?',
+    vidasJugador:3, nPorFase:4,
+    fases:[
+      {nombre:'Números',      oas:['MA08 OA 01','MA08 OA 02','MA08 OA 03','MA08 OA 04','MA08 OA 05']},
+      {nombre:'Álgebra',      oas:['MA08 OA 06','MA08 OA 07','MA08 OA 08','MA08 OA 09','MA08 OA 10']},
+      {nombre:'Geometría',    oas:['MA08 OA 11','MA08 OA 12','MA08 OA 13','MA08 OA 14']},
+      {nombre:'Datos y azar', oas:['MA08 OA 15','MA08 OA 16','MA08 OA 17']},
+    ],
+  },
+  recompensa:{ skin:'kimun-matematico', insignia:'maestro-matematica', bonoMonedas:500, bonoXP:300 },
 }];
 const INSIGNIAS=[
   {id:'maestro-historia', ic:'🏅', tx:'Maestro de Historia', asignatura:'Historia'},
@@ -1141,7 +1188,8 @@ const S={nombre:"",avatar:AVATARES[0],xp:0,nivel:1,monedas:0,
  calc:{etapas:[0,0,0,0,0], jefe:false, record:0},
  curso:null,        // {nombre} del curso al que pertenece el alumno
  alumno:null,       // nombre del perfil del servidor, si canjeó un código
- maestro:false};    // logró la Maestría Total (3 en Difícil + El Autómata) → ya celebrada
+ maestro:false,     // logró la Maestría Total (3 en Difícil + El Autómata) → ya celebrada
+ mateLecciones:{}}; // { 'ma-oa01': true, ... } lecciones de Matemáticas completadas
 let Q={lvl:0,idx:0,aciertos:0,combo:0,comboMax:0,xpGanado:0,timer:null,t:15,lock:false};
 
 /* Modo de juego: 'normal' | 'dificil' */
@@ -1244,6 +1292,216 @@ function particulas(x,y,emojis,n=14){
 function comboFx(n){const c=$('combo');c.textContent='COMBO x'+n+' 🔥';
  c.classList.remove('show');void c.offsetWidth;c.classList.add('show');}
 
+/* ================= CATÁLOGO DE DIAGRAMAS (SVG interactivo) =================
+   Cada widget: DIAGRAMAS[kind](params, nodo) dibuja SVG dentro de `nodo`.
+   Sin librerías. Limpia sus propios listeners al re-montar (nodo.innerHTML=''). */
+const NS='http://www.w3.org/2000/svg';
+function svgEl(tag,attrs){const e=document.createElementNS(NS,tag);
+ for(const k in attrs)e.setAttribute(k,attrs[k]);return e;}
+const DIAGRAMAS={};
+function montarDiagrama(kind,params,nodo){
+ nodo.innerHTML=''; nodo.className='lec-diag';
+ const fn=DIAGRAMAS[kind];
+ if(!fn){nodo.textContent='(diagrama no disponible)';return;}
+ try{fn(params||{},nodo);}catch(e){console.error('Diagrama',kind,e);nodo.textContent='';}
+}
+
+// recta numérica: marca un punto (arrastrable) e intervalos con círculo abierto/cerrado.
+// params: {min=-6,max=6, marca:number, interactivo:bool, intervalo:{desde,tipo:'>'|'>='|...}}
+DIAGRAMAS.recta=function(p,nodo){
+ const min=p.min??-6,max=p.max??6,x0=24,x1=336,y=54;
+ const svg=svgEl('svg',{viewBox:'0 0 360 90',role:'img','aria-label':'Recta numérica'});
+ svg.style.touchAction='none';
+ const xOf=v=>x0+(v-min)/(max-min)*(x1-x0);
+ svg.appendChild(svgEl('line',{x1:x0,y1:y,x2:x1,y2:y,stroke:'#5a4b8f','stroke-width':2}));
+ for(let v=min;v<=max;v++){
+  svg.appendChild(svgEl('line',{x1:xOf(v),y1:y-4,x2:xOf(v),y2:y+4,stroke:'#5a4b8f','stroke-width':1.5}));
+  const t=svgEl('text',{x:xOf(v),y:y+22,'text-anchor':'middle',fill:'#a99fd0','font-size':9});
+  t.textContent=v; svg.appendChild(t);
+ }
+ // intervalo opcional (para inecuaciones): sombra + círculo abierto/cerrado
+ if(p.intervalo){const it=p.intervalo, cerrado=/=/.test(it.tipo||''), haciaDer=/>/.test(it.tipo||'');
+  const xd=xOf(it.desde), xf=haciaDer?x1:x0;
+  svg.appendChild(svgEl('line',{x1:xd,y1:y,x2:xf,y2:y,stroke:'#3ee089','stroke-width':4}));
+  svg.appendChild(svgEl('circle',{cx:xd,cy:y,r:6,fill:cerrado?'#3ee089':'#241a44',stroke:'#3ee089','stroke-width':2}));
+ }
+ // marcador (arrastrable si interactivo)
+ let cur=p.marca??0;
+ const knob=svgEl('circle',{cy:y,r:11,fill:'#8f6bff',stroke:'#4dd8ff','stroke-width':2.5});
+ const lbl=svgEl('text',{y:y-24,'text-anchor':'middle',fill:'#ffc93c','font-family':"'Titan One',sans-serif",'font-size':16});
+ function set(v){cur=Math.max(min,Math.min(max,Math.round(v)));const x=xOf(cur);
+  knob.setAttribute('cx',x);lbl.setAttribute('x',x);lbl.textContent=(cur>0?'+':'')+cur;}
+ svg.appendChild(knob);svg.appendChild(lbl);set(cur);
+ if(p.interactivo){
+  const toVal=cx=>{const r=svg.getBoundingClientRect();const px=(cx-r.left)/r.width*360;
+   return min+(px-x0)/(x1-x0)*(max-min);};
+  let drag=false;
+  knob.addEventListener('pointerdown',e=>{drag=true;knob.setPointerCapture(e.pointerId);});
+  svg.addEventListener('pointermove',e=>{if(drag)set(toVal(e.clientX));});
+  svg.addEventListener('pointerup',()=>{drag=false;});
+  svg.addEventListener('pointerdown',e=>{if(e.target!==knob)set(toVal(e.clientX));});
+ }
+ nodo.appendChild(svg);
+};
+
+// fracciones/%: barra partida en `partes`, con `pintadas` resaltadas.
+// params: {partes=4, pintadas=1, etiqueta:'1/4'}
+DIAGRAMAS.fracciones=function(p,nodo){
+ const partes=Math.max(1,p.partes??4), pint=Math.max(0,Math.min(partes,p.pintadas??0));
+ const w=320,h=70,x0=20,y0=14,bw=w-40;
+ const svg=svgEl('svg',{viewBox:`0 0 ${w} ${h+20}`,role:'img','aria-label':'Fracción'});
+ const cw=bw/partes;
+ for(let i=0;i<partes;i++){
+  svg.appendChild(svgEl('rect',{x:x0+i*cw,y:y0,width:cw-2,height:38,rx:4,
+   fill:i<pint?'#8f6bff':'#241a44',stroke:'#5a4b8f','stroke-width':1.5}));
+ }
+ const t=svgEl('text',{x:w/2,y:h+8,'text-anchor':'middle',fill:'#ffc93c',
+  'font-family':"'Titan One',sans-serif",'font-size':16});
+ t.textContent=p.etiqueta||`${pint}/${partes}`; svg.appendChild(t);
+ nodo.appendChild(svg);
+};
+
+// potencias/raíces: cuadrícula base×base que ilustra un cuadrado (área) o la raíz como lado.
+// params: {lado=3, etiqueta:'3² = 9'}
+DIAGRAMAS.potencias=function(p,nodo){
+ const lado=Math.max(1,Math.min(10,p.lado??3)), cell=24, o=16;
+ const size=lado*cell, svg=svgEl('svg',{viewBox:`0 0 ${size+2*o} ${size+2*o+18}`,
+  role:'img','aria-label':'Potencia'});
+ for(let r=0;r<lado;r++)for(let c=0;c<lado;c++){
+  svg.appendChild(svgEl('rect',{x:o+c*cell,y:o+r*cell,width:cell-2,height:cell-2,rx:3,
+   fill:'#4dd8ff',opacity:.85,stroke:'#241a44','stroke-width':1}));
+ }
+ const t=svgEl('text',{x:o+size/2,y:size+2*o+8,'text-anchor':'middle',fill:'#ffc93c',
+  'font-family':"'Titan One',sans-serif",'font-size':15});
+ t.textContent=p.etiqueta||`${lado}² = ${lado*lado}`; svg.appendChild(t);
+ nodo.appendChild(svg);
+};
+
+/* ================= MOTOR DE LECCIONES (camino de aprendizaje) ================= */
+let LEC=null;  // {leccion, idx}  idx = bloque actual
+function abrirLeccion(leccion){
+ LEC={leccion, idx:0};
+ $('lecTitulo').textContent=leccion.titulo;
+ go('scr-leccion');
+ renderBloque();
+}
+$('lecSalir').onclick=()=>{SND.tap(); volverAlCapituloMate();};
+$('lecCont').onclick=()=>{SND.tap(); avanzarBloque();};
+
+function renderBloque(){
+ const b=LEC.leccion.bloques[LEC.idx], cuerpo=$('lecCuerpo');
+ cuerpo.innerHTML=''; cuerpo.onclick=null;
+ $('lecProgBar').style.width=(LEC.idx/LEC.leccion.bloques.length*100)+'%';
+ if(b.t==='texto'){
+  const p=document.createElement('p'); p.textContent=b.md; cuerpo.appendChild(p);
+ }else if(b.t==='imagen'){
+  const img=document.createElement('img'); img.src=b.src; img.alt=b.alt||'';
+  img.onerror=function(){this.onerror=null;this.style.display='none';}; cuerpo.appendChild(img);
+  if(b.pie){const p=document.createElement('p');p.textContent=b.pie;p.style.textAlign='center';cuerpo.appendChild(p);}
+ }else if(b.t==='diagrama'){
+  if(b.intro){const p=document.createElement('p');p.textContent=b.intro;cuerpo.appendChild(p);}
+  const d=document.createElement('div'); cuerpo.appendChild(d);
+  montarDiagrama(b.kind,b.params,d);
+ }else if(b.t==='ejemplo'){
+  if(b.intro){const p=document.createElement('p');p.textContent=b.intro;cuerpo.appendChild(p);}
+  b.pasos.forEach((paso,i)=>{const el=document.createElement('div');
+   el.className='lec-ejemplo-paso'+(i===0?' on':'');el.textContent=paso;cuerpo.appendChild(el);});
+  let vis=1; cuerpo.onclick=()=>{const pasos=cuerpo.querySelectorAll('.lec-ejemplo-paso');
+   if(vis<pasos.length){pasos[vis].classList.add('on');vis++;}};
+ }
+ const sig=LEC.leccion.bloques[LEC.idx+1];
+ $('lecCont').textContent = (sig&&sig.t==='practica') ? 'Practicar ▶'
+   : (LEC.idx===LEC.leccion.bloques.length-1?'Terminar':'Continuar');
+}
+
+function avanzarBloque(){
+ const sig=LEC.leccion.bloques[LEC.idx+1];
+ if(sig&&sig.t==='practica'){ iniciarPracticaLeccion(LEC.leccion); return; }
+ LEC.idx++;
+ if(LEC.idx>=LEC.leccion.bloques.length){ terminarLeccion(); return; }
+ renderBloque();
+}
+
+// Toma n preguntas del banco de Matemáticas para un OA. Devuelve el formato del quiz.
+// Nota: Matemáticas no está registrada en EXPEDICIONES (se juega como Reto de Cálculo),
+// así que contenidoDeAsignatura('Matemáticas') devuelve null; se usa la ruta directa como
+// respaldo (el banco de año completo de Matemáticas —603 preguntas, 17 OA— vive en
+// contenido/matematicas-8basico/preguntas.json).
+async function preguntasDeOA(oa,n){
+ const url=contenidoDeAsignatura('Matemáticas')||'contenido/matematicas-8basico/preguntas.json';
+ let pool=[];
+ try{ const d=await (await fetch(url)).json();
+      pool=(d.preguntas||[]).filter(q=>q.oa===oa); }catch(e){ return []; }
+ return pickN(pool,n).map(q=>({q:q.pregunta,ops:q.opciones,ok:q.correcta,tip:q.tip,oa:q.oa}));
+}
+
+// Lanza el quiz en modo lección (reusa el motor con el flag Q.leccion).
+async function iniciarPracticaLeccion(leccion){
+ const bloque=leccion.bloques.find(b=>b.t==='practica')||{};
+ const fb=bloque.fromBank||{oa:leccion.oa,n:3};
+ const preguntas = await preguntasDeOA(fb.oa, fb.n||3);
+ if(!preguntas.length){ terminarLeccion(); return; }  // sin banco: se marca completa igual
+ Q={lvl:0,idx:0,aciertos:0,combo:0,comboMax:0,xpGanado:0,timer:null,t:15,lock:false,
+    preguntas, leccion:{id:leccion.id, titulo:leccion.titulo}};
+ MODO='normal';
+ go('scr-quiz'); pintaPregunta();
+}
+
+// Al terminar la práctica del quiz: envía dominio y marca la lección completa.
+function finPracticaLeccion(){
+ clearInterval(Q.timer);
+ const id=Q.leccion.id;
+ enviarDominio();                    // sube el primer intento por OA (reusa kimun_dominio)
+ Q={lvl:0,idx:0,aciertos:0,combo:0,comboMax:0,xpGanado:0,timer:null,t:15,lock:false};
+ marcarLeccionCompleta(id);
+}
+
+// Marca la lección, revisa el desbloqueo del Reto y vuelve al capítulo.
+function marcarLeccionCompleta(id){
+ S.mateLecciones[id]=true; guardar(); refreshHud();
+ SND.win(); toast('primera');
+ volverAlCapituloMate();
+}
+
+// terminarLeccion: fin sin práctica (lección solo teórica). Marca completa igual.
+function terminarLeccion(){ marcarLeccionCompleta(LEC.leccion.id); }
+
+// Carga bajo demanda las lecciones de Matemáticas (cacheadas tras el primer fetch).
+let LECCIONES=null;   // cache del archivo
+async function cargarLecciones(){
+ if(LECCIONES) return LECCIONES;
+ try{ const d=await (await fetch('contenido/matematicas-8basico/lecciones.json')).json();
+      LECCIONES=d.lecciones||[]; }catch(e){ LECCIONES=[]; }
+ return LECCIONES;
+}
+function leccionPorId(id){ return (LECCIONES||[]).find(l=>l.id===id); }
+
+// Lista de lecciones de un capítulo de Matemáticas (reusa la pantalla scr-campana).
+let CAP_MATE=null;
+function abrirCapituloMate(cap){ CAP_MATE=cap; renderLeccionesMate(); go('scr-campana'); }
+async function renderLeccionesMate(){
+ await cargarLecciones();
+ const cap=CAP_MATE;
+ $('campHead').innerHTML=`<h1 style="font-size:24px">${cap.titulo}</h1><p>Lecciones de la unidad</p>`;
+ const cont=$('campNodos'); cont.innerHTML='';
+ (cap.lecciones||[]).forEach((id,i)=>{
+  const hecho=!!S.mateLecciones[id];
+  const abierto = i===0 || S.mateLecciones[cap.lecciones[i-1]];
+  cont.appendChild(nodoCampañaEl(`${i+1}`, tituloLeccion(id), abierto, hecho,
+    abierto?()=>iniciarLeccionPorId(id):null,
+    hecho?'✓ Completada':(abierto?'¡Aprender!':'🔒 Bloqueada'), ''));
+ });
+ const volver=document.createElement('div'); volver.className='camp-nodo';
+ volver.innerHTML='<div class="cn-marco"><div class="cn-circ">←</div></div><div class="cn-body"><b>Volver a Matemáticas</b></div>';
+ volver.onclick=()=>{SND.tap();renderCampaña();};
+ cont.appendChild(volver);
+}
+function tituloLeccion(id){ const l=leccionPorId(id); return l?l.titulo:id; }
+async function iniciarLeccionPorId(id){ await cargarLecciones(); const l=leccionPorId(id); if(l)abrirLeccion(l); }
+
+// Vuelve desde una lección a la lista de su capítulo (o a la campaña si no había capítulo).
+function volverAlCapituloMate(){ if(CAP_MATE)renderLeccionesMate(); else renderCampaña(); go('scr-campana'); }
+
 /* ================= RETO DE CÁLCULO (Matemáticas) =================
    Genera operaciones al vuelo. genCalculo(cat, dif 1..5) -> {pregunta, opciones[4], ok}. */
 function _ri(a,b){return a+Math.floor(Math.random()*(b-a+1));}
@@ -1329,7 +1587,21 @@ const RC_JEFE_VIDA=15, RC_JEFE_COR=3;
 let RC={modo:'nivel', nivel:0, etapa:0, cat:'calent', ops:[], idx:0, aciertos:0, combo:0, comboMax:0, timer:null, lock:false, tMax:10, vida:0, corazones:0, racha:0};
 
 function calcEstado(){ if(!S.calc||!Array.isArray(S.calc.etapas))S.calc={etapas:[0,0,0,0,0],jefe:false,record:0}; return S.calc; }
-function nivelCalcDesbloqueado(i){ if(QA)return true; if(i===0)return true; return calcEstado().etapas[i-1]>=1; }
+// Mapeo lección → nivel del Reto. Migración cortés: un nivel ya dominado antes sigue abierto.
+const RETO_REQUISITO=[
+ null,                                   // 0 Calentamiento: siempre
+ ['ma-oa01'],                            // 1 Enteros
+ ['ma-oa03','ma-oa04'],                  // 2 Potencias y raíces
+ ['ma-oa02','ma-oa05'],                  // 3 Fracciones y %
+ ['ma-oa01','ma-oa02','ma-oa03','ma-oa04','ma-oa05'], // 4 Reto Relámpago: toda la unidad
+];
+function nivelCalcDesbloqueado(i){
+ if(QA)return true;
+ if(i===0)return true;
+ if(calcEstado().etapas[i]>=1) return true;             // ya jugado antes → cortesía
+ const req=RETO_REQUISITO[i]; if(!req) return true;
+ return req.every(id=>S.mateLecciones[id]);
+}
 function jefeCalcDesbloqueado(){ return QA||calcEstado().etapas.every(e=>e>=RC_ETAPAS); }
 function calcTiempo(dif){ return dif>=5?6:dif>=4?7:dif>=3?8:10; }
 function abrirRetoCalculo(){ renderNivelesCalc(); go('scr-calc-mapa'); }
@@ -1518,7 +1790,7 @@ function guardar(){try{
   nombre:S.nombre,avatar:S.avatar,xp:S.xp,monedas:S.monedas,
   skins:S.skins,logros:[...S.logros], rutaActual:EXP_ACT?EXP_ACT.id:null, rutas:S.rutas,
   campañasCompletas:[...S.campañasCompletas], insignias:[...S.insignias], insigniaActiva:S.insigniaActiva,
-  calc:S.calc, curso:S.curso, alumno:S.alumno, maestro:S.maestro}));sincronizarXP();}catch(e){}}
+  calc:S.calc, curso:S.curso, alumno:S.alumno, maestro:S.maestro, mateLecciones:S.mateLecciones}));sincronizarXP();}catch(e){}}
 function cargar(){try{const d=JSON.parse(localStorage.getItem(SAVE_KEY)||'null');if(!d)return false;
  S.nombre=d.nombre||"";S.avatar=d.avatar||AVATARES[0];S.xp=d.xp||0;S.monedas=d.monedas||0;
  S.skins=Array.isArray(d.skins)?d.skins:[];S.logros=new Set(d.logros||[]);
@@ -1526,6 +1798,7 @@ function cargar(){try{const d=JSON.parse(localStorage.getItem(SAVE_KEY)||'null')
  S.insignias=new Set(d.insignias||[]);
  S.insigniaActiva=d.insigniaActiva||null;
  if(d.calc&&Array.isArray(d.calc.etapas))S.calc=d.calc;
+ if(d.mateLecciones&&typeof d.mateLecciones==='object')S.mateLecciones=d.mateLecciones;
  S.curso=d.curso||null; S.alumno=d.alumno||null; S.maestro=!!d.maestro;
  S.rutas=(d.rutas&&typeof d.rutas==='object')?d.rutas:{};
  if(!d.rutas && Array.isArray(d.progreso)){ // migrar partidas antiguas (Historia)
@@ -1817,11 +2090,13 @@ function mapasDe(asig){return EXPEDICIONES.filter(e=>e.activa&&e.asignatura===as
 function renderExpediciones(){
  const g=$('expGrid');g.innerHTML='';
  ORDEN_ASIG.forEach(asig=>{
-  if(asig==='Matemáticas'){                            // Matemáticas = Reto de Cálculo
-   const nv=calcEstado().etapas.filter(e=>e>=RC_ETAPAS).length;
+  if(asig==='Matemáticas'){                            // Matemáticas = campaña de lecciones + Reto
+   const camp=CAMPAÑAS.find(c=>c.id==='mate');
+   const cap0=camp.capitulosMate[0];
+   const nHechas=cap0.lecciones.filter(id=>S.mateLecciones[id]).length;
    const card=document.createElement('div');card.className='exp-card';
-   card.innerHTML=`<img src="${ASIG_PORTADA['Matemáticas']}" alt="Matemáticas"><div class="exp-info"><b>Matemáticas</b><small>Cálculo rápido · ${nv}/${NIVELES_CALC.length} niveles</small></div><span class="exp-go">▶</span>`;
-   card.onclick=()=>{SND.tap();abrirRetoCalculo();};
+   card.innerHTML=`<img src="${ASIG_PORTADA['Matemáticas']}" alt="Matemáticas"><div class="exp-info"><b>Matemáticas</b><small>Aprende y practica · Números ${nHechas}/${cap0.lecciones.length}</small></div><span class="exp-go">▶</span>`;
+   card.onclick=()=>{SND.tap();abrirCampaña(camp);};
    g.appendChild(card); return;
   }
   const camp=CAMPAÑAS.find(c=>c.asignatura===asig);
@@ -1923,6 +2198,7 @@ $('btnMapaCamp').onclick=()=>{SND.tap();
  if(c){CAMP_ACT=c;renderCampaña();go('scr-campana');}else{go('scr-expediciones');}};
 function renderCampaña(){
  const c=CAMP_ACT; if(!c)return;
+ if(c.esLecciones){ renderCampañaMate(c); return; }
  $('campHead').innerHTML=`<h1 style="font-size:26px">${c.asignatura} ${campañaCompleta(c)?'👑':''}</h1><p>${c.intro}</p>`;
  const cont=$('campNodos'); cont.innerHTML='';
  // capítulos en orden
@@ -1948,6 +2224,29 @@ function renderCampaña(){
    jfAb?()=>iniciarJefeFinal(c):null, jfHecho?'¡Vencido!':(jfAb?'¡Al 100%! Enfréntalo':'🔒 Completa todo'),
    c.jefeFinal.villanoImg||''));
 }
+// Campaña de Matemáticas: capítulos = grupos de lecciones. Además, acceso al Reto.
+function renderCampañaMate(c){
+ CAP_MATE=null;   // no dejar un capítulo colgante de una visita anterior
+ $('campHead').innerHTML=`<h1 style="font-size:26px">${c.asignatura}</h1><p>${c.intro}</p>`;
+ const cont=$('campNodos'); cont.innerHTML='';
+ c.capitulosMate.forEach((cap,i)=>{
+  const hechas=(cap.lecciones||[]).filter(id=>S.mateLecciones[id]).length;
+  const tot=(cap.lecciones||[]).length;
+  const hecho=tot>0 && hechas===tot;
+  const abierto=!cap.proximamente && (i===0 || capMateCompleto(c.capitulosMate[i-1]));
+  const estado=cap.proximamente?'🔒 Pronto':(hecho?'Completado':(abierto?`${hechas}/${tot} lecciones`:'🔒 Bloqueado'));
+  cont.appendChild(nodoCampañaEl(`${i+1}`, cap.titulo, abierto, hecho,
+    abierto?()=>abrirCapituloMate(cap):null, estado,
+    'assets/portada-'+cap.id+'.png', c.portada));
+ });
+ const reto=document.createElement('div');
+ reto.className='camp-nodo';
+ reto.innerHTML='<div class="cn-marco"><div class="cn-circ">⚡</div></div><div class="cn-body"><b>Reto de Cálculo</b><small>Práctica rápida · se desbloquea al aprender</small></div>';
+ reto.onclick=()=>{SND.tap();abrirRetoCalculo();};
+ cont.appendChild(reto);
+}
+function capMateCompleto(cap){ if(!cap||!cap.lecciones||!cap.lecciones.length)return false;
+ return cap.lecciones.every(id=>S.mateLecciones[id]); }
 // img/imgAlt: portada del capítulo (o villano del jefe). Sin imagen, el círculo lleva la marca.
 function nodoCampañaEl(marca,titulo,abierto,hecho,onClick,estado,img,imgAlt){
  const d=document.createElement('div');
@@ -2419,7 +2718,9 @@ $('btnBack').onclick=()=>{clearInterval(Q.timer);go(Q.desafio?'scr-rol':'scr-map
 function pintaPregunta(){
  const N=EXPEDICION[Q.lvl],P=Q.preguntas[Q.idx];Q.lock=false;
  kimReact('neutral');
- $('qTag').textContent = Q.desafio
+ $('qTag').textContent = Q.leccion
+   ? `📘 ${Q.leccion.titulo} · Pregunta ${Q.idx+1}/${Q.preguntas.length}`
+   : Q.desafio
    ? `📣 ${Q.desafio.titulo} · Pregunta ${Q.idx+1}/${Q.preguntas.length}`
    : `${MODO==='dificil'?'🔥 ':''}${N.icono} ${N.nombre} · Pregunta ${Q.idx+1}/${Q.preguntas.length}`;
  $('qText').textContent=P.q;$('qFb').textContent='';$('qFb').className='feedback';
@@ -2482,7 +2783,9 @@ function responder(el,ok,P,e){
 function capDificilCompleto(capId){const r=S.rutas[capId];
  return !!(r&&Array.isArray(r.progresoDificil)&&r.progresoDificil.length&&r.progresoDificil.every(n=>n.est==='done'));}
 function asignaturaDificilCompleta(asig){const c=CAMPAÑAS.find(x=>x.asignatura===asig);
- return !!(c&&c.capitulos.every(capDificilCompleto));}
+ // Una campaña sin capítulos de expedición (Matemáticas, capitulos:[]) no cuenta para
+ // Difícil: exige capítulos antes de evaluar para no generar una "Maestría" falsa.
+ return !!(c&&c.capitulos.length&&c.capitulos.every(capDificilCompleto));}
 function asignaturasDificil(){return DIF_ASIGS.filter(asignaturaDificilCompleta);}
 // Maestría Total = 3 asignaturas en Difícil + vencer a El Autómata (los 4 jefes al máximo).
 function esMaestro(){return asignaturasDificil().length>=3 && !!(S.calc&&S.calc.jefe);}
@@ -2528,6 +2831,7 @@ function reproducirMaestro(){
  const p=vid.play(); if(p&&p.catch)p.catch(()=>{vid.muted=true;const q=vid.play();if(q&&q.catch)q.catch(()=>cerrar());});
 }
 function avanzar(){Q.idx++;if(Q.idx<Q.preguntas.length)pintaPregunta();
+  else if(Q.leccion)finPracticaLeccion();
   else if(Q.desafio)terminarDesafio();else terminarNivel();}
 function terminarNivel(){
  const tot=Q.preguntas.length;
