@@ -55,6 +55,12 @@ h1,h2,.disp{font-family:'Titan One',cursive;letter-spacing:.5px}
 
 /* ===== INICIO ===== */
 .logo{text-align:center;margin:26px 0 8px}
+.banner-desafio{max-width:480px;margin:0 auto 12px;padding:12px 14px;border:2px solid var(--gold);
+  border-radius:14px;background:linear-gradient(90deg,#ffc93c22,#ff4d8d22);text-align:center}
+.banner-desafio h4{color:var(--gold);font-size:14px;margin:0 0 4px}
+.banner-desafio p{color:#fff;font-size:12px;margin:0 0 8px}
+.banner-desafio button{background:var(--violet);color:#fff;border:0;border-radius:10px;
+  font-family:inherit;font-weight:900;padding:8px 16px;cursor:pointer}
 .logo .badge{font-size:56px;display:inline-block;animation:float 3s ease-in-out infinite}
 .logo .badge-img{width:150px;height:150px;border-radius:50%;object-fit:cover;object-position:center 42%;
   border:4px solid var(--gold);box-shadow:0 0 30px #ffc93c66,0 12px 26px #0006;animation:float 3s ease-in-out infinite}
@@ -516,6 +522,7 @@ body.es-maestro .badge-img{filter:drop-shadow(0 0 10px #ffc93ccc) drop-shadow(0 
       <div id="rolNombre" class="rol-nombre" hidden></div>
       <p id="rolSub">Aprende jugando · 8° Básico</p>
     </div>
+    <div id="bannerDesafio" class="banner-desafio" hidden></div>
     <div class="card">
       <h3>¿Cómo quieres entrar?</h3>
       <button class="btn" id="btnJugador">🎮 JUGADOR</button>
@@ -1066,6 +1073,8 @@ const INSIGNIAS=[
   {id:'maestro-ciencias', ic:'🔬', tx:'Maestro de Ciencias', asignatura:'Ciencias'},
   {id:'maestro-calculo', ic:'🎖️', tx:'Maestro del Cálculo', asignatura:'Matemáticas'},
   {id:'maestro-lenguaje', ic:'✍️', tx:'Maestro de las Letras', asignatura:'Lenguaje'},
+  // Se gana la primera vez que se completa cualquier desafío de refuerzo del profesor.
+  {id:'mision-profe', ic:'📣', tx:'Misión del profe', asignatura:null},
   // Insignias exclusivas del Modo Difícil (se ganan completando la asignatura en Difícil).
   {id:'dif-historia', ic:'🔥', tx:'Historia · Difícil', asignatura:'Historia'},
   {id:'dif-ciencias', ic:'🔥', tx:'Ciencias · Difícil', asignatura:'Ciencias'},
@@ -1119,6 +1128,7 @@ const LOGROS={
  'dif-ciencias':{ic:"🔥",tx:"¡Ciencias en Difícil!"},
  'dif-lenguaje':{ic:"🔥",tx:"¡Lenguaje en Difícil!"},
  'dif-maestro':{ic:"🏆",tx:"¡MAESTRÍA TOTAL: venciste a los 4 jefes!"},
+ 'mision-profe':{ic:"📣",tx:"¡Misión del profe cumplida!"},
 };
 
 /* ================= ESTADO ================= */
@@ -1214,7 +1224,7 @@ const MUSIC={
 function go(id){document.querySelectorAll('.screen').forEach(s=>s.classList.remove('on'));$(id).classList.add('on');window.scrollTo(0,0);
  var enJuego=(id==='scr-mapa'||id==='scr-quiz'||id==='scr-res');
  document.body.classList.toggle('en-dificil', enJuego && MODO==='dificil');
- if(id==='scr-rol')pintarInicio();
+ if(id==='scr-rol'){pintarInicio();revisarDesafio();}
  MUSIC.contexto(id);}
 // Saluda al alumno por su nombre (mismas letras que VULPO) si canjeó un código.
 function pintarInicio(){const el=$('rolNombre'),sub=$('rolSub');if(!el)return;
@@ -1776,6 +1786,7 @@ function finDuelo(){
   if(p.codigo_acceso){ S.alumno = p.nombre; S.nombre = p.nombre; S.avatar = p.avatar; }
   await cargarCurso();
   guardar(); refreshHud(); pintarInicio();
+  revisarDesafio();   // muestra el banner del desafío del profe, si hay
   revisarDificil();   // sincroniza la marca 🔥 y otorga premios de Difícil ya logrados
  }, 1200);
  if(S.nombre)$('inpName').value=S.nombre;
@@ -1888,7 +1899,7 @@ $('btnCanjeOk').onclick=async ()=>{
   await SB.rpc('kimun_xp',{p_xp:S.xp});        // conserva el avance local
   localStorage.removeItem('kimun_rank');       // fuera el ranking del curso anterior
   await cargarCurso();
-  guardar(); refreshHud();
+  guardar(); refreshHud(); revisarDesafio();
   _rankUlt=0;                                  // el ranking debe volver a consultarse ya, sin esperar los 30 s
   $('canjeMsg').style.color='var(--green)';
   $('canjeMsg').textContent='¡Listo, '+p.nombre+'! Ya estás en '+(S.curso?S.curso.nombre:'tu curso')+'.';
@@ -2403,12 +2414,14 @@ function startQuiz(lvl){
  if(!poolListo(lvl)){alert('Cargando preguntas… intenta de nuevo en un momento.');return;}
  Q={lvl,idx:0,aciertos:0,combo:0,comboMax:0,xpGanado:0,timer:null,t:15,lock:false,preguntas:buildPreguntas(lvl)};
  go('scr-quiz');pintaPregunta();}
-$('btnBack').onclick=()=>{clearInterval(Q.timer);go('scr-mapa');};
+$('btnBack').onclick=()=>{clearInterval(Q.timer);go(Q.desafio?'scr-rol':'scr-mapa');};
 
 function pintaPregunta(){
  const N=EXPEDICION[Q.lvl],P=Q.preguntas[Q.idx];Q.lock=false;
  kimReact('neutral');
- $('qTag').textContent=`${MODO==='dificil'?'🔥 ':''}${N.icono} ${N.nombre} · Pregunta ${Q.idx+1}/${Q.preguntas.length}`;
+ $('qTag').textContent = Q.desafio
+   ? `📣 ${Q.desafio.titulo} · Pregunta ${Q.idx+1}/${Q.preguntas.length}`
+   : `${MODO==='dificil'?'🔥 ':''}${N.icono} ${N.nombre} · Pregunta ${Q.idx+1}/${Q.preguntas.length}`;
  $('qText').textContent=P.q;$('qFb').textContent='';$('qFb').className='feedback';
  $('qExpl').hidden=true;$('btnSeguir').hidden=true;
  $('qProg').style.width=(Q.idx/Q.preguntas.length*100)+'%';
@@ -2430,7 +2443,7 @@ function pintaPregunta(){
 }
 function responder(el,ok,P,e){
  if(Q.lock)return;Q.lock=true;clearInterval(Q.timer);
- registrarOA(P&&P.oa, ok);            // mapa de dominio (no registra en modo QA)
+ if(!Q.desafio) registrarOA(P&&P.oa, ok);   // el desafío mide aparte, no toca el mapa de dominio
  document.querySelectorAll('.opt').forEach(o=>o.classList.add('off'));
  if(ok){
   Q.combo++;Q.comboMax=Math.max(Q.comboMax,Q.combo);Q.aciertos++;
@@ -2514,7 +2527,8 @@ function reproducirMaestro(){
  vid.currentTime=0; vid.muted=false;
  const p=vid.play(); if(p&&p.catch)p.catch(()=>{vid.muted=true;const q=vid.play();if(q&&q.catch)q.catch(()=>cerrar());});
 }
-function avanzar(){Q.idx++;if(Q.idx<Q.preguntas.length)pintaPregunta();else terminarNivel();}
+function avanzar(){Q.idx++;if(Q.idx<Q.preguntas.length)pintaPregunta();
+  else if(Q.desafio)terminarDesafio();else terminarNivel();}
 function terminarNivel(){
  const tot=Q.preguntas.length;
  const ratio=Q.aciertos/tot;
@@ -2558,6 +2572,78 @@ function terminarNivel(){
  if(dif&&paso)revisarDificil();   // ¿completó una asignatura en Difícil? → insignia/skin + marca 🔥
  if(paso)particulas(window.innerWidth/2,window.innerHeight/3,['🎉','⭐','✨','🎊'],24);
  go('scr-res');
+}
+
+/* ===== Desafío de refuerzo (lado alumno) ===== */
+// Ruta del preguntas.json de una asignatura (cualquiera de sus expediciones sirve).
+function contenidoDeAsignatura(asig){
+  const e=EXPEDICIONES.find(x=>x.asignatura===asig&&x.contenido);
+  return e?e.contenido:null;
+}
+// Arma ~12 preguntas de los objetivos del desafío, repartidas por OA. Hace su propio fetch
+// para no pisar el POOL de la expedición activa.
+async function construirPreguntasDesafio(asig, objetivos){
+  const url=contenidoDeAsignatura(asig); if(!url) return [];
+  const pool={};
+  try{ const d=await (await fetch(url)).json();
+       (d.preguntas||[]).forEach(q=>{(pool[q.oa]=pool[q.oa]||[]).push(q);}); }
+  catch(e){ return []; }
+  const per=Math.min(6,Math.max(2,Math.round(12/objetivos.length)));
+  let sel=[]; objetivos.forEach(oa=>{ sel=sel.concat(pickN(pool[oa],per)); });
+  sel=pickN(sel,12);
+  return sel.map(q=>({q:q.pregunta,ops:q.opciones,ok:q.correcta,tip:q.tip,oa:q.oa}));
+}
+// Arranca el quiz en modo desafío (reusa el motor con el flag Q.desafio).
+async function jugarDesafio(d){
+  const preguntas=await construirPreguntasDesafio(d.asignatura, d.objetivos);
+  if(!preguntas.length){ alert('No se pudo cargar el desafío. Intenta más tarde.'); return; }
+  Q={lvl:0,idx:0,aciertos:0,combo:0,comboMax:0,xpGanado:0,timer:null,t:15,lock:false,
+     preguntas, desafio:{id:d.desafio_id, asignatura:d.asignatura, titulo:'Refuerzo de '+d.asignatura}};
+  MODO='normal';
+  go('scr-quiz'); pintaPregunta();
+}
+// Muestra u oculta el banner del desafío en el inicio. Best-effort: si el backend no
+// responde, el banner no aparece y el juego sigue igual.
+async function revisarDesafio(){
+  const cont=$('bannerDesafio'); if(!cont) return;
+  cont.hidden=true;
+  if(!SB||!MI_PERFIL) return;
+  let d=null;
+  try{ const {data}=await SB.rpc('kimun_refuerzo_activo'); d=(data&&data[0])||null; }catch(e){ return; }
+  if(!d) return;
+  cont.innerHTML=`<h4>📣 Desafío de tu profe</h4>
+    <p>Refuerzo de ${d.asignatura} · repasa lo que costó</p>
+    <button id="btnDesafio">¡Jugar ahora!</button>`;
+  $('btnDesafio').onclick=()=>jugarDesafio(d);
+  cont.hidden=false;
+}
+// Fin del desafío: resultado propio + recompensa. No toca el progreso de campañas ni el
+// mapa de dominio (se midió aparte). El +5/acierto ya se sumó en responder; aquí va el bono.
+function terminarDesafio(){
+  const tot=Q.preguntas.length, ac=Q.aciertos, ratio=ac/tot;
+  const estrellas = ratio>=1?3:(ratio>=0.80?2:(ratio>=0.66?1:0));
+  S.monedas += 30;
+  let insigniaNueva=false;
+  if(!S.insignias.has('mision-profe')){ S.insignias.add('mision-profe');
+    if(!S.insigniaActiva)S.insigniaActiva='mision-profe'; insigniaNueva=true; }
+  guardar(); refreshHud();
+  if(!QA && SB && MI_PERFIL){
+    try{ Promise.resolve(SB.rpc('kimun_refuerzo_completar',
+      {p_desafio_id:Q.desafio.id,p_correctas:ac,p_total:tot})).catch(()=>{}); }catch(e){}
+  }
+  SND.win();
+  $('resKim').src='assets/kimun-'+(estrellas>=2?'oro':estrellas===1?'plata':'bronce')+'.png';
+  $('resTitle').textContent='¡Refuerzo cumplido!';
+  $('resStars').innerHTML=[1,2,3].map(i=>i<=estrellas?'<span class="g">★</span>':'<span class="w">★</span>').join('');
+  $('resXp').textContent='+'+Q.xpGanado;
+  $('resCoins').textContent='+'+(30+ac*5);
+  $('resCombo').textContent='x'+Q.comboMax;
+  $('btnNext').style.display='none';
+  $('btnMap').textContent='VOLVER AL INICIO';
+  $('btnMap').onclick=()=>{revisarDesafio();pintarInicio();go('scr-rol');};
+  if(insigniaNueva) setTimeout(()=>toast('mision-profe'),600);
+  particulas(window.innerWidth/2,window.innerHeight/3,['🎉','⭐','✨','📣'],24);
+  go('scr-res');
 }
 /* Aviso visible del modo QA (solo con ?qa=1). */
 if(QA){const b=document.createElement('div');b.className='qa-badge';b.textContent='🧪 QA · respuestas marcadas · todo desbloqueado';document.body.appendChild(b);}

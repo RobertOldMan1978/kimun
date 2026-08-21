@@ -583,6 +583,73 @@ function conectarFilasOA(cursoCodigo){
   }));
 }
 
+/* ===== Desafío de refuerzo (bloque en la vista de avance) ===== */
+
+// Objetivos flojos de una asignatura: primer intento < 70% con evidencia (>=4 alumnos de
+// primer intento), peores primero, tope 5. `filas` viene de kimun_prof_dominio.
+function objetivosFlojos(filas, asignatura){
+  const pref = {Historia:'HI08', Ciencias:'CN08', Lenguaje:'LE08'}[asignatura];
+  return (filas||[])
+    .filter(f => pref && String(f.oa).startsWith(pref) && f.resp_1 > 0 && f.alumnos_1 >= 4
+                 && (f.ok_1 / f.resp_1) < 0.70)
+    .sort((a,b) => (a.ok_1/a.resp_1) - (b.ok_1/b.resp_1))
+    .slice(0,5);
+}
+
+// Bloque "Refuerzo" bajo el mapa: muestra el desafío activo (seguimiento) o, si no hay, la
+// sugerencia por asignatura con botón de lanzar. Se cablea aparte para poder repintarse tras
+// lanzar/cerrar sin salir de la vista de avance (no usa `accion`, que vuelve al panel).
+async function cargarRefuerzo(cursoCodigo, filasDominio){
+  const cont = document.getElementById('refuerzoBloque');
+  if(!cont) return;
+  let est=null;
+  try{ const {data}=await SB.rpc('kimun_prof_refuerzo_estado',{p_curso_codigo:cursoCodigo});
+       est=(data&&data[0])||null; }catch(e){ est=null; }
+  if(est){
+    const acierto = est.total>0 ? Math.round(est.correctas/est.total*100) : 0;
+    const pi = est.pi_resp>0 ? Math.round(est.pi_ok/est.pi_resp*100) : 0;
+    cont.innerHTML = `
+      <h3 style="color:var(--gold);font-size:15px;margin:0 0 8px">📣 Refuerzo de ${esc(est.asignatura)} · activo</h3>
+      <p style="font-size:13px;margin:0 0 8px">Lo completaron <b>${est.completaron}/${est.inscritos}</b> ·
+        acierto del curso <b>${acierto}%</b> (primer intento era <b>${pi}%</b>).</p>
+      <button class="btn sec" id="refCerrar">Cerrar desafío</button>`;
+    document.getElementById('refCerrar').onclick=async ()=>{
+      if(!confirm('¿Cerrar el desafío de refuerzo? Dejará de aparecerles a los alumnos.')) return;
+      try{ const {error}=await SB.rpc('kimun_prof_refuerzo_cerrar',{p_curso_codigo:cursoCodigo});
+           if(error) throw error; aviso('Desafío cerrado','var(--green)'); }
+      catch(e){ aviso(errorPanel(e)); }
+      cargarRefuerzo(cursoCodigo, filasDominio);
+    };
+    return;
+  }
+  const asigs=['Historia','Ciencias','Lenguaje'];
+  const bloques=asigs.map(a=>{
+    const objs=objetivosFlojos(filasDominio,a);
+    if(!objs.length) return '';
+    const lista=objs.map(o=>{
+      const pct=Math.round(o.ok_1/o.resp_1*100);
+      return `<li style="font-size:12px;color:var(--dim)">${esc(OA_TEXTO[o.oa]||o.oa)} · ${pct}%</li>`;
+    }).join('');
+    return `<div style="margin-bottom:12px">
+      <p style="font-size:13px;margin:0 0 4px"><b>${a}</b> · ${objs.length} objetivo${objs.length===1?'':'s'} para reforzar</p>
+      <ul style="margin:0 0 6px 16px;padding:0">${lista}</ul>
+      <button class="btn-chip refLanzar" data-asig="${a}" data-oas="${esc(objs.map(o=>o.oa).join('|'))}"
+        >📣 Lanzar desafío de refuerzo de ${a}</button></div>`;
+  }).filter(Boolean).join('');
+  cont.innerHTML = bloques
+    ? `<h3 style="color:var(--gold);font-size:15px;margin:0 0 8px">Refuerzo sugerido</h3>${bloques}`
+    : '<p style="color:var(--dim);font-size:12px">No hay objetivos bajo el umbral para reforzar por ahora.</p>';
+  cont.querySelectorAll('.refLanzar').forEach(b=>b.onclick=async ()=>{
+    const oas=b.dataset.oas.split('|');
+    if(!confirm(`¿Lanzar el desafío de refuerzo de ${b.dataset.asig}?\n\nLes aparecerá a todos los alumnos del curso.`)) return;
+    try{ const {error}=await SB.rpc('kimun_prof_refuerzo_lanzar',
+      {p_curso_codigo:cursoCodigo,p_asignatura:b.dataset.asig,p_objetivos:oas});
+      if(error) throw error; aviso('Desafío lanzado','var(--green)'); }
+    catch(e){ aviso(errorPanel(e)); }
+    cargarRefuerzo(cursoCodigo, filasDominio);
+  });
+}
+
 // Tabla de dominio, ordenada de peor a mejor: lo que hay que reforzar queda arriba.
 // El servidor ya la devuelve en ese orden, así que no se reordena.
 async function verAvance(cursoCodigo, cursoNombre){
@@ -612,6 +679,7 @@ async function verAvance(cursoCodigo, cursoNombre){
       <p style="color:var(--dim);font-size:11px;margin-top:12px">
         Matemáticas no aparece aquí: se juega como Reto de Cálculo, con operaciones que se
         generan al momento y no están asociadas a un objetivo del currículum.</p>
+      <div id="refuerzoBloque" style="margin-top:16px;border-top:1px solid #ffffff22;padding-top:12px"></div>
       <div style="margin-top:14px">
         <button class="btn sec" id="btnReiniciarMed">🔄 Reiniciar mediciones</button>
         <button class="btn sec" id="btnVolverPanel">← Volver</button>
@@ -629,6 +697,7 @@ async function verAvance(cursoCodigo, cursoNombre){
     };
     conectarFiltros(a => { filtro = a; pintarCuerpo(); });
     pintarCuerpo();
+    cargarRefuerzo(cursoCodigo, data);
     irArriba();
     aviso('');
   }catch(e){ aviso(errorPanel(e)); }

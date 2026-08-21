@@ -114,6 +114,38 @@ create index if not exists idx_dominio_perfil on public.dominio(perfil_id);
 alter table public.dominio add column if not exists resp_1 int not null default 0;
 alter table public.dominio add column if not exists ok_1   int not null default 0;
 
+-- ------------------------------------------------------------
+-- Desafío de refuerzo (Sesión 28). El profesor lanza un desafío con los objetivos
+-- flojos de una asignatura; el alumno lo juega como una cadena de preguntas. Se mide
+-- APARTE del mapa de dominio (el primer intento queda intacto): estas tablas no las
+-- toca kimun_dominio.
+-- ------------------------------------------------------------
+-- A lo más un desafío activo por curso. Guarda los OA, no las preguntas: cada alumno
+-- juega preguntas al azar del pool (es refuerzo, no un examen calificado).
+create table if not exists public.desafios (
+  id         uuid primary key default gen_random_uuid(),
+  curso_id   uuid not null references public.cursos(id) on delete cascade,
+  asignatura text not null,
+  objetivos  text[] not null,            -- {"HI08 OA 03","HI08 OA 04"}
+  activo     boolean not null default true,
+  creado     timestamptz not null default now()
+);
+-- "Uno por curso" garantizado en la base, no solo en el cliente: aunque dos pestañas
+-- lancen a la vez, no quedan dos activos.
+create unique index if not exists idx_desafio_activo_curso
+  on public.desafios(curso_id) where activo;
+
+-- Resultado de cada alumno en un desafío. El primer intento manda: no se puede "mejorar"
+-- reintentando (la función de completar usa on conflict do nothing).
+create table if not exists public.desafio_resultados (
+  desafio_id uuid not null references public.desafios(id) on delete cascade,
+  perfil_id  uuid not null references public.perfiles(id) on delete cascade,
+  correctas  int  not null,
+  total      int  not null,
+  completado timestamptz not null default now(),
+  primary key (desafio_id, perfil_id)
+);
+
 -- Dueño del curso. Nulo = curso huérfano, visible solo para administradores.
 alter table public.cursos add column if not exists profesor_id uuid
   references public.profesores(id) on delete set null;
@@ -756,6 +788,95 @@ revoke execute on function
   public.kimun_prof_es_mio(uuid)
   from public;
 
+-- ------------------------------------------------------------
+-- Funciones del desafío de refuerzo (Sesión 28).
+-- Panel (kimun_prof_refuerzo_*): identifican al profesor por su sesión y validan la
+-- propiedad del curso con kimun_prof_es_mio. Juego (kimun_refuerzo_*): operan sobre el
+-- propio perfil y su curso, vía kimun_yo().
+-- ------------------------------------------------------------
+
+-- Lanza un desafío para un curso mío. Cierra el activo previo (uno por curso).
+create or replace function public.kimun_prof_refuerzo_lanzar(p_curso_codigo text, p_asignatura text, p_objetivos text[])
+returns uuid language plpgsql security definer set search_path=public as $$
+declare cid uuid; nid uuid; begin
+  select id into cid from public.cursos where codigo = upper(trim(p_curso_codigo));
+  if cid is null or not public.kimun_prof_es_mio(cid) then raise exception 'no_autorizado'; end if;
+  if p_objetivos is null or array_length(p_objetivos,1) is null then raise exception 'sin_objetivos'; end if;
+  update public.desafios set activo=false where curso_id=cid and activo;
+  insert into public.desafios(curso_id, asignatura, objetivos)
+  values (cid, p_asignatura, p_objetivos) returning id into nid;
+  return nid;
+end $$;
+
+-- Cierra el desafío activo de un curso mío. Devuelve cuántos cerró (0 o 1).
+create or replace function public.kimun_prof_refuerzo_cerrar(p_curso_codigo text)
+returns int language plpgsql security definer set search_path=public as $$
+declare cid uuid; n int; begin
+  select id into cid from public.cursos where codigo = upper(trim(p_curso_codigo));
+  if cid is null or not public.kimun_prof_es_mio(cid) then raise exception 'no_autorizado'; end if;
+  update public.desafios set activo=false where curso_id=cid and activo;
+  get diagnostics n = row_count; return n;
+end $$;
+
+-- Estado del desafío activo de un curso mío, con las cifras para el seguimiento. El cliente
+-- calcula acierto_curso = correctas/total y primer_intento = pi_ok/pi_resp. El drop previo
+-- es el guardia de idempotencia de las "returns table".
+drop function if exists public.kimun_prof_refuerzo_estado(text);
+create or replace function public.kimun_prof_refuerzo_estado(p_curso_codigo text)
+returns table(desafio_id uuid, asignatura text, objetivos text[], creado timestamptz,
+              inscritos bigint, completaron bigint, correctas bigint, total bigint,
+              pi_ok bigint, pi_resp bigint)
+language plpgsql security definer set search_path=public as $$
+declare cid uuid; begin
+  select id into cid from public.cursos where codigo = upper(trim(p_curso_codigo));
+  if cid is null or not public.kimun_prof_es_mio(cid) then raise exception 'no_autorizado'; end if;
+  return query
+   with d as (select * from public.desafios where curso_id = cid and activo limit 1)
+   select d.id, d.asignatura, d.objetivos, d.creado,
+     (select count(*) from public.perfiles p where p.curso_id = cid and p.codigo_acceso is not null),
+     (select count(*) from public.desafio_resultados r where r.desafio_id = d.id),
+     coalesce((select sum(r.correctas) from public.desafio_resultados r where r.desafio_id = d.id),0),
+     coalesce((select sum(r.total)     from public.desafio_resultados r where r.desafio_id = d.id),0),
+     coalesce((select sum(dm.ok_1)   from public.dominio dm join public.perfiles p on p.id = dm.perfil_id
+               where p.curso_id = cid and dm.oa = any(d.objetivos)),0),
+     coalesce((select sum(dm.resp_1) from public.dominio dm join public.perfiles p on p.id = dm.perfil_id
+               where p.curso_id = cid and dm.oa = any(d.objetivos)),0)
+   from d;
+end $$;
+
+-- El desafío activo del curso del alumno, SOLO si no lo ha completado (para el banner).
+drop function if exists public.kimun_refuerzo_activo();
+create or replace function public.kimun_refuerzo_activo()
+returns table(desafio_id uuid, asignatura text, objetivos text[])
+language plpgsql security definer set search_path=public as $$
+declare mi uuid; cid uuid; begin
+  mi := public.kimun_yo(); if mi is null then return; end if;
+  select curso_id into cid from public.perfiles where id = mi;
+  if cid is null then return; end if;
+  return query
+   select d.id, d.asignatura, d.objetivos
+   from public.desafios d
+   where d.curso_id = cid and d.activo
+     and not exists (select 1 from public.desafio_resultados r
+                     where r.desafio_id = d.id and r.perfil_id = mi)
+   limit 1;
+end $$;
+
+-- Registra el resultado del alumno en un desafío. Solo si el desafío está activo y es del
+-- curso del alumno. El primer intento manda (on conflict do nothing).
+create or replace function public.kimun_refuerzo_completar(p_desafio_id uuid, p_correctas int, p_total int)
+returns void language plpgsql security definer set search_path=public as $$
+declare mi uuid; cid uuid; existe boolean; begin
+  mi := public.kimun_yo(); if mi is null then return; end if;
+  select curso_id into cid from public.perfiles where id = mi;
+  select true into existe from public.desafios d
+   where d.id = p_desafio_id and d.activo and d.curso_id = cid;
+  if not existe then return; end if;
+  insert into public.desafio_resultados(desafio_id, perfil_id, correctas, total)
+  values (p_desafio_id, mi, greatest(0,coalesce(p_correctas,0)), greatest(1,coalesce(p_total,1)))
+  on conflict (desafio_id, perfil_id) do nothing;
+end $$;
+
 grant execute on function
   public.kimun_perfil(text,text), public.kimun_buscar(text), public.kimun_jugadores(),
   public.kimun_crear_duelo(text,text,jsonb,int,int), public.kimun_pendientes(),
@@ -773,6 +894,11 @@ grant execute on function
   public.kimun_prof_dominio_reiniciar(text)
   , public.kimun_prof_dominio_oa(text,text)
   , public.kimun_prof_participacion(text)
+  , public.kimun_prof_refuerzo_lanzar(text,text,text[])
+  , public.kimun_prof_refuerzo_cerrar(text)
+  , public.kimun_prof_refuerzo_estado(text)
+  , public.kimun_refuerzo_activo()
+  , public.kimun_refuerzo_completar(uuid,int,int)
   to anon, authenticated;
 
 -- ------------------------------------------------------------

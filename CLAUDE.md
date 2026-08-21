@@ -477,6 +477,15 @@ Providers, y dejar activada la **confirmación de correo** para las cuentas de p
   `resp_1` y `ok_1` (el primer contacto), que `kimun_dominio` escribe **solo en la rama
   `insert`**: el `on conflict do update` no las menciona a propósito, y ese detalle es
   toda la idea. Ver "Mapa de dominio por OA" en Herramientas de desarrollo.
+- **Desafío de refuerzo (Sesión 28):** tablas `desafios` (con índice único parcial
+  `where activo` → a lo más un desafío activo por curso) y `desafio_resultados`; funciones
+  `kimun_prof_refuerzo_lanzar` / `_cerrar` / `_estado` (panel, aislamiento por
+  `kimun_prof_es_mio`) y `kimun_refuerzo_activo` / `_completar` (juego, vía `kimun_yo`). Se
+  mide **aparte** de `dominio`: el resultado del refuerzo va a `desafio_resultados` y **no**
+  toca el primer intento del mapa. `_completar` usa `on conflict do nothing` (el primer intento
+  manda). El profesor lanza desde el bloque "Refuerzo" de la vista de avance; el alumno lo ve
+  como banner en el inicio y lo juega como una cadena de ~12 preguntas (el juego reusa el motor
+  de quiz con el flag `Q.desafio`). Ver la Bitácora, Sesión 28.
 - **Cuidado al editar el esquema:** `gen_random_uuid()` es nativa de PostgreSQL y no
   necesita nada especial, pero si alguna función vuelve a usar pgcrypto (`crypt`,
   `gen_salt`) necesita `set search_path = public, extensions`, porque en Supabase esa
@@ -1605,4 +1614,51 @@ para ver los informes, y se reorganizó el panel del profesor.
   Roberto** —orientar por asignatura (qué repasar) y **preparar un desafío que obligue a rehacer
   una cadena de preguntas** para reforzar, con su propio brainstorming (toca panel + backend +
   el juego); borrar el curso de simulación cuando ya no se necesite; los dos trámites (INAPI y
+  `vulpo.cl`); SMTP; la vuelta manual para decidir la v1.
+
+### Sesión 28 (2026-08-20) — Desafío de refuerzo (feature completa, 3 fases)
+La feature grande que pidió Roberto: el profesor lanza, con un clic, un desafío con los
+objetivos flojos de una asignatura; el alumno lo ve como banner en el inicio y lo juega como
+una cadena de preguntas; el profesor ve cuántos lo hicieron y con qué acierto. Flujo completo
+brainstorming → spec → plan → ejecución por fases (executing-plans), verificando cada fase.
+- **Decisiones del diseño (con mockups):** el sistema **sugiere** y el profesor **lanza** (no lo
+  arma a mano); va a **todo el curso**; es una **cadena de los objetivos flojos de una
+  asignatura** (< 70% de primer intento, con evidencia); **banner en el inicio**, insistente pero
+  **no bloquea**; recompensa **XP + monedas + insignia "Misión del profe"** (única, la primera
+  vez); seguimiento **quién lo hizo + acierto del curso**, medido **aparte**; **uno activo por
+  curso**. Diseño y plan: `docs/superpowers/specs/2026-08-20-desafio-refuerzo-design.md` y
+  `docs/superpowers/plans/2026-08-20-desafio-refuerzo.md`.
+- **El punto delicado — medición aparte.** El mapa de dominio muestra el **primer intento**, que
+  queda congelado a propósito (Sesión 24). El desafío repite esos objetivos, así que **no puede**
+  haber un "segundo primer intento": su resultado se guarda en `desafio_resultados`, una medición
+  independiente, y **no** llama a `kimun_dominio`. El seguimiento compara el acierto del refuerzo
+  contra el primer intento original. El mapa no se altera (verificado: `registrarOA` no se llama
+  en el desafío).
+- **Fase 1 · Backend (aplicado):** tablas `desafios` (con índice único parcial `where activo` →
+  uno por curso garantizado en la base) y `desafio_resultados`; funciones
+  `kimun_prof_refuerzo_lanzar` / `_cerrar` / `_estado` (panel, con aislamiento `kimun_prof_es_mio`)
+  y `kimun_refuerzo_activo` / `_completar` (juego, vía `kimun_yo`). El `_completar` usa
+  `on conflict do nothing` (el primer intento manda). **Lección:** las `kimun_prof_*` dan
+  `no_autorizado` desde el SQL Editor porque no hay sesión de profesor (`auth.uid()` null) — eso
+  **confirma** que existen y que el aislamiento funciona; se prueban de verdad desde el panel.
+- **Fase 2 · Panel (`profesor.html`):** bajo el mapa del curso, un bloque "Refuerzo" que muestra
+  la sugerencia por asignatura (objetivos flojos con su texto y %) + botón lanzar, o el
+  seguimiento del desafío activo (X/N completaron · acierto Y% · primer intento era Z%) + cerrar.
+  No usa `accion` (que vuelve al panel); repinta solo el bloque para no salir de la vista de
+  avance. Verificado con banco simulado.
+- **Fase 3 · Juego (`index.html`), la delicada — reusa el motor de quiz con un flag `Q.desafio`,
+  sin duplicarlo.** Banner `#bannerDesafio` en el inicio (aparece al cargar, al canjear y al
+  volver); `construirPreguntasDesafio` arma ~12 preguntas de los OA con su propio fetch (no pisa
+  el POOL de la expedición activa); `jugarDesafio` arranca el quiz; tres desvíos por `Q.desafio`
+  en `pintaPregunta` (tag "📣"), `responder` (no registra dominio) y `avanzar` (→ `terminarDesafio`);
+  `terminarDesafio` da el resultado propio + recompensa. Insignia nueva `mision-profe` en
+  `INSIGNIAS`/`LOGROS`. **Verificado en el navegador:** el juego carga sin errores de sintaxis, el
+  banner aparece, el desafío juega 12 preguntas de los objetivos correctos, al terminar otorga
+  XP/monedas/insignia y llama `kimun_refuerzo_completar`, en `?qa` no registra, **y el juego normal
+  quedó intacto** (etapa de campaña con tag normal, dominio sí se registra).
+- **Falta por el lado de Roberto:** la prueba real end-to-end (lanzar desde su panel → jugar como
+  alumno → confirmar que el banner desaparece al completar y que el seguimiento muestra las
+  cifras), que no se pudo hacer aquí por no poder iniciar sesión de profesor.
+- **Pendientes:** la prueba real end-to-end del refuerzo; confirmar el acordeón con la cuenta
+  real; borrar el curso de simulación cuando ya no se necesite; los dos trámites (INAPI y
   `vulpo.cl`); SMTP; la vuelta manual para decidir la v1.
