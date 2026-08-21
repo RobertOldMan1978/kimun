@@ -73,8 +73,8 @@ backend Supabase para el duelo en línea. Historia de v0 al detalle en la Bitác
   **Modo Sin Fin**— se conserva idéntico, pero ahora **cada nivel se desbloquea al
   completar su lección** ("aprender desbloquea el Reto"). En el **Duelo**, Matemáticas
   ofrece los 5 niveles del Reto (operaciones al vuelo), ver Sesión 16. El banco de
-  álgebra queda de reserva. **Construidas las Unidades 1 (Números) y 2 (Álgebra y
-  funciones)**; Geometría, Estadística y el Jefe Final "La Incógnita" son planes de
+  álgebra queda de reserva. **Construidas las Unidades 1 (Números), 2 (Álgebra y
+  funciones) y 3 (Geometría)**; Estadística y el Jefe Final "La Incógnita" son planes de
   seguimiento que reusan el mismo motor de lecciones.
 - Regla de cada capítulo/expedición: **4 etapas + 1 jefe (5 nodos)** (algunos capítulos
   con 3 etapas cuando su unidad tiene 3 OA). Cada asignatura tiene, además, un **banco de
@@ -1734,9 +1734,17 @@ implementador por tarea + revisión de spec y de calidad por separado).
     preguntas sin responder**, incluso en campañas, ensuciando la medición—; se corrigió con
     `.btn[hidden]{display:none}`. (2) `avanzar` **sin guard de reentrada** lanzaba un `TypeError`
     con doble toque en la última pregunta; se agregó `if(!Q||!Q.preguntas)return;`.
-- **Pendientes:** planes de seguimiento —**Cap 3 Geometría** y **Cap 4 Estadística** (contenido +
-  los widgets que faltan: `plano`, `triangulo`, `transformacion`, `solido`, `cajon`, `barras`,
-  `arbol`) y el **Jefe Final "La Incógnita"** (necesita arte de Roberto: `villano-matematicas.png`
-  + skin "Vulpi Matemático"; los datos ya están puestos pero inertes)—; portadas propias por
-  capítulo (opcional; hoy caen al fallback); y los de siempre (los dos trámites INAPI y
-  `vulpo.cl`, SMTP, la vuelta manual para decidir la v1).
+- **Cap 3 (Geometría, OA11–14) — construido el mismo día (Plan 3).** 3 widgets nuevos:
+  `triangulo` (Pitágoras: triángulo rectángulo con los cuadrados de los catetos + la ecuación
+  con números; escala adaptativa para que ternas como 6-8-10 quepan), `solido`
+  (prisma/cilindro pseudo-3D con base/altura/radio y fórmula de volumen) y `transformacion`
+  (figura y su imagen tras reflexión, traslación o rotación de 90° en el plano cartesiano). 4
+  lecciones (área y volumen, teorema de Pitágoras, movimientos en el plano, componer
+  transformaciones y simetría) y se activó el capítulo `mate-geometria`. Verificado end-to-end,
+  sin regresión (los dos fixes del quiz del Cap 2 siguen en pie).
+  Plan: `docs/superpowers/plans/2026-08-21-camino-matematicas-cap3-geometria.md`.
+- **Pendientes:** el plan de seguimiento **Cap 4 Estadística** (contenido + los widgets que
+  faltan: `cajon`, `barras`, `arbol`) y el **Jefe Final "La Incógnita"** (necesita arte de
+  Roberto: `villano-matematicas.png` + skin "Vulpi Matemático"; los datos ya están puestos pero
+  inertes); portadas propias por capítulo (opcional; hoy caen al fallback); y los de siempre
+  (los dos trámites INAPI y `vulpo.cl`, SMTP, la vuelta manual para decidir la v1).

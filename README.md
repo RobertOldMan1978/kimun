@@ -21,10 +21,11 @@ todos los OA del año, con **Jefe Final multi-fase** (barra de vida, 3 corazones
 **recompensas** (skin exclusiva, insignia coleccionable, corona y bono). **Matemáticas**
 tiene un **camino de aprendizaje**: mini-clases guiadas con explicación, **diagramas
 interactivos** (recta, fracciones, potencias, plano cartesiano con función, balanza de
-ecuaciones) y práctica; aprender cada tema **desbloquea** el **Reto de Cálculo** (cálculo
-mental rápido, por niveles, con su Jefe "El Autómata"). Por ahora están construidas las
-Unidades 1 (Números) y 2 (Álgebra y funciones). Cada asignatura tiene un banco de preguntas
-de año completo (todos sus OA del currículum).
+ecuaciones, triángulo de Pitágoras, sólidos y transformaciones en el plano) y práctica;
+aprender cada tema **desbloquea** el **Reto de Cálculo** (cálculo mental rápido, por niveles,
+con su Jefe "El Autómata"). Por ahora están construidas las Unidades 1 (Números), 2 (Álgebra
+y funciones) y 3 (Geometría). Cada asignatura tiene un banco de preguntas de año completo
+(todos sus OA del currículum).
 También hay **Duelo 1v1** en el mismo teléfono y en línea (Supabase), una **tienda de
 skins** (incluidas skins deportivas ilustradas) y una **intro de bienvenida** en video que
 se ve una vez. Todo en un solo archivo `index.html`, pensado para el celular.

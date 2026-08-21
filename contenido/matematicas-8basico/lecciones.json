@@ -123,6 +123,56 @@
         {"t":"ejemplo","intro":"Evaluemos una función afín (toca para avanzar):","pasos":["f(x) = 2x + 1","en x = 0: f(0) = 1","en x = 1: f(1) = 3"]},
         {"t":"practica","fromBank":{"oa":"MA08 OA 10","n":3}}
       ]
+    },
+    {
+      "id": "ma-oa11",
+      "oa": "MA08 OA 11",
+      "titulo": "Área y volumen de prismas y cilindros",
+      "bloques": [
+        {"t":"texto","md":"Un prisma recto tiene dos bases iguales y caras rectangulares. Su volumen es el área de la base multiplicada por la altura."},
+        {"t":"diagrama","kind":"solido","params":{"tipo":"prisma"},"intro":"El volumen mide cuánto cabe dentro: base × altura."},
+        {"t":"texto","md":"El cilindro es como un prisma de base circular; su volumen es π·r²·altura (el área del círculo por la altura)."},
+        {"t":"diagrama","kind":"solido","params":{"tipo":"cilindro"}},
+        {"t":"ejemplo","intro":"Calculemos el volumen de un prisma (toca para avanzar):","pasos":["Prisma de base 4 × 3 y altura 5","Área de la base = 4 · 3 = 12","Volumen = 12 · 5 = 60"]},
+        {"t":"practica","fromBank":{"oa":"MA08 OA 11","n":3}}
+      ]
+    },
+    {
+      "id": "ma-oa12",
+      "oa": "MA08 OA 12",
+      "titulo": "El teorema de Pitágoras",
+      "bloques": [
+        {"t":"texto","md":"En un triángulo rectángulo, el cuadrado de la hipotenusa (el lado más largo) es igual a la suma de los cuadrados de los catetos: a² + b² = c²."},
+        {"t":"diagrama","kind":"triangulo","params":{"a":3,"b":4},"intro":"Los cuadrados de los catetos (a² y b²) suman el cuadrado de la hipotenusa."},
+        {"t":"texto","md":"Sirve para hallar un lado cuando conoces los otros dos."},
+        {"t":"ejemplo","intro":"Hallemos la hipotenusa (toca para avanzar):","pasos":["Catetos a = 3 y b = 4","3² + 4² = 9 + 16 = 25","c = √25 = 5"]},
+        {"t":"practica","fromBank":{"oa":"MA08 OA 12","n":3}}
+      ]
+    },
+    {
+      "id": "ma-oa13",
+      "oa": "MA08 OA 13",
+      "titulo": "Movimientos en el plano",
+      "bloques": [
+        {"t":"texto","md":"Una figura se puede mover sin cambiar su forma ni su tamaño. Hay tres movimientos: trasladar (deslizar), reflejar (como un espejo) y rotar (girar)."},
+        {"t":"diagrama","kind":"transformacion","params":{"tipo":"reflexion"},"intro":"La reflexión crea una imagen espejo al otro lado de un eje."},
+        {"t":"diagrama","kind":"transformacion","params":{"tipo":"traslacion"},"intro":"La traslación desliza la figura según un vector."},
+        {"t":"texto","md":"La reflexión usa un eje; la traslación, un vector; la rotación, un punto y un ángulo."},
+        {"t":"ejemplo","intro":"Reflejemos un punto (toca para avanzar):","pasos":["Reflejar el punto (2, 3) sobre el eje y","Cambia el signo de x","La imagen es (−2, 3)"]},
+        {"t":"practica","fromBank":{"oa":"MA08 OA 13","n":3}}
+      ]
+    },
+    {
+      "id": "ma-oa14",
+      "oa": "MA08 OA 14",
+      "titulo": "Componer transformaciones y simetría",
+      "bloques": [
+        {"t":"texto","md":"Puedes aplicar varias transformaciones seguidas (componer). Una figura tiene simetría si, al reflejarla, se ve igual."},
+        {"t":"diagrama","kind":"transformacion","params":{"tipo":"rotacion"},"intro":"Al rotar 90°, la figura gira alrededor de un punto."},
+        {"t":"texto","md":"Las teselaciones cubren el plano repitiendo una figura con estos movimientos, sin dejar huecos."},
+        {"t":"ejemplo","intro":"Rotemos un punto (toca para avanzar):","pasos":["Rotar el punto (1, 0) un cuarto de vuelta (90°)","Gira alrededor del origen","La imagen es (0, 1)"]},
+        {"t":"practica","fromBank":{"oa":"MA08 OA 14","n":3}}
+      ]
     }
   ]
 }
