@@ -73,10 +73,12 @@ backend Supabase para el duelo en línea. Historia de v0 al detalle en la Bitác
   **Modo Sin Fin**— se conserva idéntico, pero ahora **cada nivel se desbloquea al
   completar su lección** ("aprender desbloquea el Reto"). En el **Duelo**, Matemáticas
   ofrece los 5 niveles del Reto (operaciones al vuelo), ver Sesión 16. El banco de
-  álgebra queda de reserva. **Las 4 unidades del año están construidas** (Números, Álgebra
-  y funciones, Geometría, y Probabilidad y estadística): 17 lecciones para los 17 OA, con
-  11 widgets de diagrama interactivos. Solo queda pendiente el **Jefe Final "La Incógnita"**
-  (necesita el arte del villano y la skin; los datos ya están puestos pero inertes).
+  álgebra queda de reserva. **Matemáticas está completa:** las 4 unidades del año (Números,
+  Álgebra y funciones, Geometría, y Probabilidad y estadística) con 17 lecciones para los 17
+  OA y 11 widgets de diagrama interactivos, **más el Jefe Final "La Incógnita"** (villano
+  encapuchado hecho de ecuaciones; 4 fases × 4 preguntas, se abre al completar las 4
+  unidades) que entrega la skin **"Vulpi Matemático"** + insignia **"Maestro de las
+  Matemáticas"** + corona + bono. Es la asignatura más completa del juego.
 - Regla de cada capítulo/expedición: **4 etapas + 1 jefe (5 nodos)** (algunos capítulos
   con 3 etapas cuando su unidad tiene 3 OA). Cada asignatura tiene, además, un **banco de
   año completo** (todos sus OA oficiales); con las 4 campañas activas ya casi no queda
@@ -1778,8 +1780,17 @@ implementador por tarea + revisión de spec y de calidad por separado).
   progreso, informa cuántos se agregaron y cuáles fallaron). **Sin cambios en Supabase.**
   Verificado con backend simulado (stub de `SB.rpc`); la prueba real end-to-end queda del lado
   de Roberto.
-- **Pendientes:** el **Jefe Final "La Incógnita"** de la campaña de Matemáticas (necesita arte de
-  Roberto: `villano-matematicas.png` + skin "Vulpi Matemático"; los datos ya están puestos pero
-  inertes); portadas propias por capítulo de Matemáticas (opcional; hoy caen al fallback); y los
-  de siempre (los dos trámites INAPI y `vulpo.cl`,
-  SMTP, la vuelta manual para decidir la v1).
+- **Jefe Final "La Incógnita" ACTIVADO (mismo día) — cierra Matemáticas.** Roberto generó el
+  arte (5 imágenes: villano, skin y 3 portadas de capítulo) y Claude lo procesó con
+  `scripts/procesar-lote7.py` (fondo blanco quitado por inundación, recorte, cuadrado, 512/384
+  px; originales en `assets/originales/`). Las 3 portadas nuevas (`portada-mate-numeros/
+  geometria/datos.png`) se usan solas; los capítulos ya no caen al fallback. Se registró la skin
+  `kimun-matematico` en `SKINS` y la insignia `maestro-matematica` en `INSIGNIAS`; se dibujó el
+  **nodo del Jefe Final** en `renderCampañaMate` (helper `campañaMateCompleta`: se abre al
+  completar las 4 unidades) y se ramificó `iniciarJefeFinal` para que la campaña de lecciones
+  cargue el banco de Matemáticas con `cargarPoolMate` (el motor asumía una expedición, y
+  Matemáticas tiene `capitulos:[]`). El resto del motor del jefe ya era genérico. **Verificado
+  en `?qa=1`:** intro con el villano → 16 aciertos → "¡Matemáticas dominada!" con las 4
+  recompensas (skin equipable, insignia, corona, +500🪙/+300 XP), sin errores.
+- **Pendientes:** portadas propias por capítulo de las OTRAS asignaturas (opcional); los dos
+  trámites (INAPI y `vulpo.cl`), SMTP, la vuelta manual para decidir la v1.

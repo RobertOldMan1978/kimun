@@ -1123,6 +1123,7 @@ const INSIGNIAS=[
   {id:'maestro-ciencias', ic:'🔬', tx:'Maestro de Ciencias', asignatura:'Ciencias'},
   {id:'maestro-calculo', ic:'🎖️', tx:'Maestro del Cálculo', asignatura:'Matemáticas'},
   {id:'maestro-lenguaje', ic:'✍️', tx:'Maestro de las Letras', asignatura:'Lenguaje'},
+  {id:'maestro-matematica', ic:'📐', tx:'Maestro de las Matemáticas', asignatura:'Matemáticas'},
   // Se gana la primera vez que se completa cualquier desafío de refuerzo del profesor.
   {id:'mision-profe', ic:'📣', tx:'Misión del profe', asignatura:null},
   // Insignias exclusivas del Modo Difícil (se ganan completando la asignatura en Difícil).
@@ -2174,6 +2175,7 @@ const SKINS=[{e:"🐲",p:120},{e:"🦄",p:150},{e:"🦖",p:180},{e:"🐙",p:100}
  {id:'kimun-cientifico', e:"🔬", img:'assets/kimun-cientifico.png', nombre:'Vulpi Científico', bloqueada:true, desbloqueaCon:'cien', req:'Vence a Ciencias'},
  {id:'kimun-calculista', e:"🧮", img:'assets/kimun-calculista.png', nombre:'Vulpi Calculista', bloqueada:true, req:'Vence a El Autómata'},
  {id:'kimun-escritor', e:"🖋️", img:'assets/kimun-escritor.png', nombre:'Vulpi Escritor', bloqueada:true, desbloqueaCon:'leng', req:'Vence a Lenguaje'},
+ {id:'kimun-matematico', e:"📐", img:'assets/kimun-matematico.png', nombre:'Vulpi Matemático', bloqueada:true, desbloqueaCon:'mate', req:'Vence a La Incógnita'},
  // Skin maestra: se gana completando las 3 asignaturas en Modo Difícil (emoji hasta que haya arte).
  {id:'kimun-maestro', e:"🏆", img:'assets/skin-kimun-maestro.png', nombre:'Vulpi Maestro', bloqueada:true, req:'Vence los 4 jefes (3 en Difícil + El Autómata)'}];
 // Si el avatar equipado es una skin con imagen, devuelve su ruta; si no, null.
@@ -2470,9 +2472,10 @@ function renderCampaña(){
    c.jefeFinal.villanoImg||''));
 }
 // Campaña de Matemáticas: capítulos = grupos de lecciones. Además, acceso al Reto.
+function campañaMateCompleta(c){ return QA || c.capitulosMate.every(capMateCompleto); }
 function renderCampañaMate(c){
  CAP_MATE=null;   // no dejar un capítulo colgante de una visita anterior
- $('campHead').innerHTML=`<h1 style="font-size:26px">${c.asignatura}</h1><p>${c.intro}</p>`;
+ $('campHead').innerHTML=`<h1 style="font-size:26px">${c.asignatura} ${campañaCompleta(c)?'👑':''}</h1><p>${c.intro}</p>`;
  const cont=$('campNodos'); cont.innerHTML='';
  c.capitulosMate.forEach((cap,i)=>{
   const hechas=(cap.lecciones||[]).filter(id=>S.mateLecciones[id]).length;
@@ -2489,6 +2492,12 @@ function renderCampañaMate(c){
  reto.innerHTML='<div class="cn-marco"><div class="cn-circ">⚡</div></div><div class="cn-body"><b>Reto de Cálculo</b><small>Práctica rápida · se desbloquea al aprender</small></div>';
  reto.onclick=()=>{SND.tap();abrirRetoCalculo();};
  cont.appendChild(reto);
+ // Jefe Final "La Incógnita": se abre al completar las 4 unidades.
+ const jfAb=campañaMateCompleta(c), jfHecho=campañaCompleta(c);
+ cont.appendChild(nodoCampañaEl('👑','JEFE FINAL DE MATEMÁTICAS', jfAb, jfHecho,
+   jfAb?()=>iniciarJefeFinal(c):null,
+   jfHecho?'¡Vencido!':(jfAb?'¡Al 100%! Enfréntalo':'🔒 Completa las 4 unidades'),
+   c.jefeFinal.villanoImg||''));
 }
 function capMateCompleto(cap){ if(!cap||!cap.lecciones||!cap.lecciones.length)return false;
  return cap.lecciones.every(id=>S.mateLecciones[id]); }
@@ -2513,13 +2522,21 @@ function jefePreguntasFase(camp,faseIdx){
  // Igual que en las etapas: se conserva el `oa` para el mapa de dominio.
  return pickN(sel,n).map(q=>({q:q.pregunta,ops:q.opciones,ok:q.correcta,tip:q.tip,oa:q.oa}));
 }
+// Carga el banco completo de Matemáticas en el POOL global (keyed por OA), para el jefe
+// de la campaña de lecciones (Matemáticas no tiene expedición de la cual tomar el POOL).
+async function cargarPoolMate(){
+ POOL={};
+ try{ const d=await (await fetch('contenido/matematicas-8basico/preguntas.json')).json();
+      (d.preguntas||[]).forEach(q=>{(POOL[q.oa]=POOL[q.oa]||[]).push(q);}); }catch(e){}
+}
 function iniciarJefeFinal(camp){
- const capExp=EXPEDICIONES.find(e=>e.id===camp.capitulos[0]);
- activarExpedicion(capExp).then(()=>{ // asegura el POOL de la asignatura cargado
+ const arrancar=()=>{
   const jf=camp.jefeFinal, total=jf.fases.length*jf.nPorFase;
   JF={camp,fase:0,idx:0,preguntas:[],vidaMax:total,vida:total,vidas:jf.vidasJugador,lock:false};
   renderJefeIntro();
- });
+ };
+ if(camp.esLecciones){ cargarPoolMate().then(arrancar); }   // campaña de Matemáticas
+ else { const capExp=EXPEDICIONES.find(e=>e.id===camp.capitulos[0]); activarExpedicion(capExp).then(arrancar); }
 }
 function renderJefeIntro(){
  const jf=JF.camp.jefeFinal;
