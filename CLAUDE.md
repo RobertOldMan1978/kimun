@@ -1761,6 +1761,13 @@ implementador por tarea + revisión de spec y de calidad por separado).
   correcta) y revisados a mano los casos de criterio (el→él, esta→está, que→qué)—. **61
   correcciones** en ~30 preguntas; el re-escaneo queda en cero. La estructura del banco quedó
   intacta (603 preguntas, `correcta` y 4 opciones). Herramientas en el scratchpad de la sesión.
+- **Ajustes finos (mismo día):** (1) la **práctica de las lecciones de Matemáticas subió de 3 a
+  6 preguntas** (`fromBank.n` en `lecciones.json`; los 17 OA tienen 30 preguntas, sobra) — más
+  práctica y más datos de dominio por objetivo. (2) **Acceso a la tienda desde Expediciones:** la
+  tienda solo se alcanzaba por la barra inferior del juego (oculta fuera del mapa) y **no tenía
+  botón "Volver" propio**; se agregó un botón "🛍️ Tienda de skins" al final de `scr-expediciones`
+  (antes de Volver) y un "← Volver" a `scr-tienda` que regresa a donde se abrió (variable
+  `tiendaOrigen`: Expediciones o el mapa del juego).
 - **Pendientes:** el **Jefe Final "La Incógnita"** de la campaña de Matemáticas (necesita arte de
   Roberto: `villano-matematicas.png` + skin "Vulpi Matemático"; los datos ya están puestos pero
   inertes); portadas propias por capítulo de Matemáticas (opcional; hoy caen al fallback); y los

@@ -575,7 +575,8 @@ body.es-maestro .badge-img{filter:drop-shadow(0 0 10px #ffc93ccc) drop-shadow(0 
       <p>Elige tu aventura de aprendizaje</p>
     </div>
     <div class="exp-grid" id="expGrid"></div>
-    <button class="btn sec" id="btnExpBack" style="margin-top:18px">← Volver</button>
+    <button class="btn sec" id="btnExpTienda" style="margin-top:18px">🛍️ Tienda de skins</button>
+    <button class="btn sec" id="btnExpBack" style="margin-top:10px">← Volver</button>
   </section>
 
   <!-- ============ MAPAS DE UNA ASIGNATURA (nivel 2) ============ -->
@@ -775,6 +776,7 @@ body.es-maestro .badge-img{filter:drop-shadow(0 0 10px #ffc93ccc) drop-shadow(0 
     <p style="color:var(--dim);font-weight:800;font-size:13px">Gasta tus monedas en avatares nuevos.</p>
     <div class="coins" style="width:max-content;margin:12px 0">🪙 <span id="tiendaCoins">0</span></div>
     <div class="shopgrid" id="tiendaGrid"></div>
+    <button class="btn sec" id="btnTiendaBack" style="margin-top:14px">← Volver</button>
   </section>
 
   <!-- ============ PERFIL: LOGROS E INSIGNIAS ============ -->
@@ -2375,6 +2377,10 @@ function entrarExpedicion(exp){
  });
 }
 $('btnJugador').onclick=()=>{SND.init();SND.tap();$('nav').style.display='none';renderExpediciones();go('scr-expediciones');};
+// Acceso a la tienda desde Expediciones (la tienda recuerda de dónde se abrió para volver).
+let tiendaOrigen='scr-mapa';
+$('btnExpTienda').onclick=()=>{SND.tap();tiendaOrigen='scr-expediciones';$('nav').style.display='none';renderTienda();go('scr-tienda');};
+$('btnTiendaBack').onclick=()=>{SND.tap();go(tiendaOrigen);};
 $('btnExpBack').onclick=()=>{SND.tap();go('scr-rol');};
 $('btnMapasBack').onclick=()=>{SND.tap();go('scr-expediciones');};
 
@@ -2912,7 +2918,7 @@ document.querySelectorAll('.nav button').forEach(b=>b.onclick=()=>{
  const dst=b.dataset.go;
  document.querySelectorAll('.nav button').forEach(x=>x.classList.remove('on'));b.classList.add('on');
  if(dst==='perfil'){renderPerfil();go('scr-perfil');}
- else if(dst==='scr-tienda'){renderTienda();go('scr-tienda');}
+ else if(dst==='scr-tienda'){tiendaOrigen='scr-mapa';renderTienda();go('scr-tienda');}
  else{renderMapa();renderRanking();go('scr-mapa');}
 });
 

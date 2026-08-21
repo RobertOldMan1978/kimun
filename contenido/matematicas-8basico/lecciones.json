@@ -12,7 +12,7 @@
         {"t":"texto","md":"Al multiplicar o dividir, mira los signos: si son IGUALES el resultado es positivo (+); si son DISTINTOS, es negativo (−)."},
         {"t":"ejemplo","intro":"Sigue el ejemplo paso a paso (toca para avanzar):","pasos":["(−4) · (−3)","Signos iguales → resultado positivo","= 12"]},
         {"t":"ejemplo","intro":"Otro caso:","pasos":["(−15) : (+3)","Signos distintos → resultado negativo","= −5"]},
-        {"t":"practica","fromBank":{"oa":"MA08 OA 01","n":3}}
+        {"t":"practica","fromBank":{"oa":"MA08 OA 01","n":6}}
       ]
     },
     {
@@ -24,7 +24,7 @@
         {"t":"diagrama","kind":"fracciones","params":{"partes":4,"pintadas":1,"etiqueta":"1/4"},"intro":"La barra está dividida en cuatro partes iguales y pintamos una: eso es una parte de cuatro, es decir 1/4."},
         {"t":"ejemplo","intro":"Multipliquemos dos fracciones paso a paso (toca para avanzar):","pasos":["2/3 · 3/5","Numeradores: 2 · 3 = 6. Denominadores: 3 · 5 = 15","= 6/15","Simplifica dividiendo arriba y abajo por 3","= 2/5"]},
         {"t":"ejemplo","intro":"La regla de los signos también sirve con fracciones y decimales:","pasos":["(−1/2) · (+4)","Signos distintos → resultado negativo","= −4/2 = −2"]},
-        {"t":"practica","fromBank":{"oa":"MA08 OA 02","n":3}}
+        {"t":"practica","fromBank":{"oa":"MA08 OA 02","n":6}}
       ]
     },
     {
@@ -36,7 +36,7 @@
         {"t":"diagrama","kind":"potencias","params":{"lado":3,"etiqueta":"3² = 9"},"intro":"Un cuadrado de lado 3 tiene 3 · 3 = 9 casillas. Por eso 3² = 9."},
         {"t":"texto","md":"Cuando las potencias tienen la MISMA base: al multiplicar se SUMAN los exponentes y al dividir se RESTAN."},
         {"t":"ejemplo","intro":"Multipliquemos dos potencias de igual base (toca para avanzar):","pasos":["2² · 2³","Misma base → suma los exponentes: 2 + 3 = 5","= 2⁵","2⁵ = 2 · 2 · 2 · 2 · 2","= 32"]},
-        {"t":"practica","fromBank":{"oa":"MA08 OA 03","n":3}}
+        {"t":"practica","fromBank":{"oa":"MA08 OA 03","n":6}}
       ]
     },
     {
@@ -47,7 +47,7 @@
         {"t":"texto","md":"La raíz cuadrada de un número es el lado de un cuadrado cuya área es ese número. Como 4 · 4 = 16, la raíz cuadrada de 16 es 4."},
         {"t":"diagrama","kind":"potencias","params":{"lado":4,"etiqueta":"√16 = 4"},"intro":"Este cuadrado tiene un área de 16 casillas, así que su lado mide 4. Por eso √16 = 4."},
         {"t":"ejemplo","intro":"Estimemos una raíz que no es exacta (toca para avanzar):","pasos":["¿Cuánto es √20?","20 está entre 16 (=4²) y 25 (=5²)","Entonces √20 está entre 4 y 5"]},
-        {"t":"practica","fromBank":{"oa":"MA08 OA 04","n":3}}
+        {"t":"practica","fromBank":{"oa":"MA08 OA 04","n":6}}
       ]
     },
     {
@@ -59,7 +59,7 @@
         {"t":"diagrama","kind":"fracciones","params":{"partes":10,"pintadas":3,"etiqueta":"30%"},"intro":"Si divides el total en 10 partes iguales y tomas 3, eso es 3 de cada 10, lo mismo que 30 de cada 100: un 30%."},
         {"t":"texto","md":"En un aumento porcentual sumas ese porcentaje al total. En un descuento, lo restas del total."},
         {"t":"ejemplo","intro":"Calculemos un descuento paso a paso (toca para avanzar):","pasos":["Un producto cuesta $2000 y tiene 20% de descuento","Calcula el 20% de 2000: 20/100 · 2000 = 400","El descuento es de $400","Réstalo del precio: 2000 − 400 = 1600","Pagas $1600"]},
-        {"t":"practica","fromBank":{"oa":"MA08 OA 05","n":3}}
+        {"t":"practica","fromBank":{"oa":"MA08 OA 05","n":6}}
       ]
     },
     {
@@ -72,7 +72,7 @@
         {"t":"texto","md":"Los términos semejantes son los que tienen la misma parte con letra; solo esos se pueden juntar. La propiedad distributiva reparte una multiplicación sobre una suma: a·(b + c) = a·b + a·c."},
         {"t":"ejemplo","intro":"Juntemos términos semejantes (toca para avanzar):","pasos":["2x + 3x","Son términos semejantes (los dos llevan x)","= 5x"]},
         {"t":"ejemplo","intro":"Ahora usemos la propiedad distributiva:","pasos":["3·(x + 2)","Reparte el 3: 3·x + 3·2","= 3x + 6"]},
-        {"t":"practica","fromBank":{"oa":"MA08 OA 06","n":3}}
+        {"t":"practica","fromBank":{"oa":"MA08 OA 06","n":6}}
       ]
     },
     {
@@ -84,7 +84,7 @@
         {"t":"diagrama","kind":"funcion","params":{"a":2,"b":0,"interactivo":true},"intro":"Mueve la pendiente y observa cómo cambia la inclinación de la recta."},
         {"t":"texto","md":"La pendiente a dice cuánto sube y por cada 1 que avanza x. Mientras mayor es a, más inclinada es la recta."},
         {"t":"ejemplo","intro":"Evaluemos una función lineal (toca para avanzar):","pasos":["Si y = 3x","cuando x = 2","y = 3·2 = 6"]},
-        {"t":"practica","fromBank":{"oa":"MA08 OA 07","n":3}}
+        {"t":"practica","fromBank":{"oa":"MA08 OA 07","n":6}}
       ]
     },
     {
@@ -96,7 +96,7 @@
         {"t":"diagrama","kind":"balanza","params":{"izqX":2,"izqU":1,"derU":7,"etiqueta":"2x + 1 = 7"},"intro":"Los dos lados pesan lo mismo."},
         {"t":"texto","md":"Para despejar x, haces lo MISMO a ambos lados (restar, sumar, dividir). Así la balanza sigue equilibrada."},
         {"t":"ejemplo","intro":"Resolvamos una ecuación paso a paso (toca para avanzar):","pasos":["2x + 1 = 7","Resta 1 a ambos lados: 2x = 6","Divide por 2: x = 3"]},
-        {"t":"practica","fromBank":{"oa":"MA08 OA 08","n":3}}
+        {"t":"practica","fromBank":{"oa":"MA08 OA 08","n":6}}
       ]
     },
     {
@@ -109,7 +109,7 @@
         {"t":"texto","md":"Se resuelve casi como una ecuación, PERO al multiplicar o dividir por un número negativo se INVIERTE el signo de la desigualdad."},
         {"t":"ejemplo","intro":"Una inecuación sencilla (toca para avanzar):","pasos":["x + 3 > 5","Resta 3: x > 2"]},
         {"t":"ejemplo","intro":"Ahora un caso con número negativo:","pasos":["−2x > 4","Divide por −2 e invierte el signo","x < −2"]},
-        {"t":"practica","fromBank":{"oa":"MA08 OA 09","n":3}}
+        {"t":"practica","fromBank":{"oa":"MA08 OA 09","n":6}}
       ]
     },
     {
@@ -121,7 +121,7 @@
         {"t":"diagrama","kind":"funcion","params":{"a":1,"b":2,"interactivo":true},"intro":"Mueve a y b: b sube o baja la recta, a cambia su inclinación."},
         {"t":"texto","md":"Si b = 0 es una función lineal (pasa por el origen); si b ≠ 0 la recta no pasa por el origen."},
         {"t":"ejemplo","intro":"Evaluemos una función afín (toca para avanzar):","pasos":["f(x) = 2x + 1","en x = 0: f(0) = 1","en x = 1: f(1) = 3"]},
-        {"t":"practica","fromBank":{"oa":"MA08 OA 10","n":3}}
+        {"t":"practica","fromBank":{"oa":"MA08 OA 10","n":6}}
       ]
     },
     {
@@ -134,7 +134,7 @@
         {"t":"texto","md":"El cilindro es como un prisma de base circular; su volumen es π·r²·altura (el área del círculo por la altura)."},
         {"t":"diagrama","kind":"solido","params":{"tipo":"cilindro"}},
         {"t":"ejemplo","intro":"Calculemos el volumen de un prisma (toca para avanzar):","pasos":["Prisma de base 4 × 3 y altura 5","Área de la base = 4 · 3 = 12","Volumen = 12 · 5 = 60"]},
-        {"t":"practica","fromBank":{"oa":"MA08 OA 11","n":3}}
+        {"t":"practica","fromBank":{"oa":"MA08 OA 11","n":6}}
       ]
     },
     {
@@ -146,7 +146,7 @@
         {"t":"diagrama","kind":"triangulo","params":{"a":3,"b":4},"intro":"Los cuadrados de los catetos (a² y b²) suman el cuadrado de la hipotenusa."},
         {"t":"texto","md":"Sirve para hallar un lado cuando conoces los otros dos."},
         {"t":"ejemplo","intro":"Hallemos la hipotenusa (toca para avanzar):","pasos":["Catetos a = 3 y b = 4","3² + 4² = 9 + 16 = 25","c = √25 = 5"]},
-        {"t":"practica","fromBank":{"oa":"MA08 OA 12","n":3}}
+        {"t":"practica","fromBank":{"oa":"MA08 OA 12","n":6}}
       ]
     },
     {
@@ -159,7 +159,7 @@
         {"t":"diagrama","kind":"transformacion","params":{"tipo":"traslacion"},"intro":"La traslación desliza la figura según un vector."},
         {"t":"texto","md":"La reflexión usa un eje; la traslación, un vector; la rotación, un punto y un ángulo."},
         {"t":"ejemplo","intro":"Reflejemos un punto (toca para avanzar):","pasos":["Reflejar el punto (2, 3) sobre el eje y","Cambia el signo de x","La imagen es (−2, 3)"]},
-        {"t":"practica","fromBank":{"oa":"MA08 OA 13","n":3}}
+        {"t":"practica","fromBank":{"oa":"MA08 OA 13","n":6}}
       ]
     },
     {
@@ -171,7 +171,7 @@
         {"t":"diagrama","kind":"transformacion","params":{"tipo":"rotacion"},"intro":"Al rotar 90°, la figura gira alrededor de un punto."},
         {"t":"texto","md":"Las teselaciones cubren el plano repitiendo una figura con estos movimientos, sin dejar huecos."},
         {"t":"ejemplo","intro":"Rotemos un punto (toca para avanzar):","pasos":["Rotar el punto (1, 0) un cuarto de vuelta (90°)","Gira alrededor del origen","La imagen es (0, 1)"]},
-        {"t":"practica","fromBank":{"oa":"MA08 OA 14","n":3}}
+        {"t":"practica","fromBank":{"oa":"MA08 OA 14","n":6}}
       ]
     },
     {
@@ -183,7 +183,7 @@
         {"t":"diagrama","kind":"cajon","params":{"min":2,"q1":5,"mediana":7,"q3":10,"max":14},"intro":"La caja va de Q1 a Q3 y contiene la mitad central de los datos; la línea dorada es la mediana."},
         {"t":"texto","md":"Los cuartiles dividen los datos en cuatro partes: Q1 deja abajo un cuarto, la mediana la mitad y Q3 tres cuartos."},
         {"t":"ejemplo","intro":"Encontremos la mediana paso a paso (toca para avanzar):","pasos":["Datos ordenados: 3, 5, 7, 9, 11","El valor del medio es la mediana","Mediana = 7"]},
-        {"t":"practica","fromBank":{"oa":"MA08 OA 15","n":3}}
+        {"t":"practica","fromBank":{"oa":"MA08 OA 15","n":6}}
       ]
     },
     {
@@ -195,7 +195,7 @@
         {"t":"diagrama","kind":"barras","params":{"datos":[{"etiqueta":"A","valor":92},{"etiqueta":"B","valor":95},{"etiqueta":"C","valor":98}],"desde":0},"intro":"Con el eje desde 0, las tres barras se parecen bastante."},
         {"t":"diagrama","kind":"barras","params":{"datos":[{"etiqueta":"A","valor":92},{"etiqueta":"B","valor":95},{"etiqueta":"C","valor":98}],"desde":90},"intro":"Con el eje desde 90, ¡parecen muy distintas! Pero son los mismos datos."},
         {"t":"texto","md":"Cuando el eje no empieza en 0, las diferencias se ven exageradas. Revisa siempre la escala antes de sacar conclusiones."},
-        {"t":"practica","fromBank":{"oa":"MA08 OA 16","n":3}}
+        {"t":"practica","fromBank":{"oa":"MA08 OA 16","n":6}}
       ]
     },
     {
@@ -207,7 +207,7 @@
         {"t":"diagrama","kind":"arbol","params":{"n1":2,"n2":3},"intro":"2 opciones y luego 3 opciones: el árbol muestra los 6 caminos posibles."},
         {"t":"texto","md":"El diagrama de árbol y la tabla de doble entrada ayudan a contar todas las posibilidades sin olvidar ninguna."},
         {"t":"ejemplo","intro":"Contemos combinaciones paso a paso (toca para avanzar):","pasos":["Tienes 2 poleras y 3 pantalones","Combinaciones: 2 × 3","= 6 conjuntos distintos"]},
-        {"t":"practica","fromBank":{"oa":"MA08 OA 17","n":3}}
+        {"t":"practica","fromBank":{"oa":"MA08 OA 17","n":6}}
       ]
     }
   ]
