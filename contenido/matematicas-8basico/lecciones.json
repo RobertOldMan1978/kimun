@@ -173,6 +173,42 @@
         {"t":"ejemplo","intro":"Rotemos un punto (toca para avanzar):","pasos":["Rotar el punto (1, 0) un cuarto de vuelta (90°)","Gira alrededor del origen","La imagen es (0, 1)"]},
         {"t":"practica","fromBank":{"oa":"MA08 OA 14","n":3}}
       ]
+    },
+    {
+      "id": "ma-oa15",
+      "oa": "MA08 OA 15",
+      "titulo": "Cuartiles y diagrama de cajón",
+      "bloques": [
+        {"t":"texto","md":"Para describir un conjunto de datos usamos medidas de posición. La mediana parte los datos ordenados en dos mitades iguales."},
+        {"t":"diagrama","kind":"cajon","params":{"min":2,"q1":5,"mediana":7,"q3":10,"max":14},"intro":"La caja va de Q1 a Q3 y contiene la mitad central de los datos; la línea dorada es la mediana."},
+        {"t":"texto","md":"Los cuartiles dividen los datos en cuatro partes: Q1 deja abajo un cuarto, la mediana la mitad y Q3 tres cuartos."},
+        {"t":"ejemplo","intro":"Encontremos la mediana paso a paso (toca para avanzar):","pasos":["Datos ordenados: 3, 5, 7, 9, 11","El valor del medio es la mediana","Mediana = 7"]},
+        {"t":"practica","fromBank":{"oa":"MA08 OA 15","n":3}}
+      ]
+    },
+    {
+      "id": "ma-oa16",
+      "oa": "MA08 OA 16",
+      "titulo": "¿El gráfico dice la verdad?",
+      "bloques": [
+        {"t":"texto","md":"Un mismo conjunto de datos puede verse muy distinto según cómo se dibuje. Lo primero que hay que mirar es dónde empieza el eje."},
+        {"t":"diagrama","kind":"barras","params":{"datos":[{"etiqueta":"A","valor":92},{"etiqueta":"B","valor":95},{"etiqueta":"C","valor":98}],"desde":0},"intro":"Con el eje desde 0, las tres barras se parecen bastante."},
+        {"t":"diagrama","kind":"barras","params":{"datos":[{"etiqueta":"A","valor":92},{"etiqueta":"B","valor":95},{"etiqueta":"C","valor":98}],"desde":90},"intro":"Con el eje desde 90, ¡parecen muy distintas! Pero son los mismos datos."},
+        {"t":"texto","md":"Cuando el eje no empieza en 0, las diferencias se ven exageradas. Revisa siempre la escala antes de sacar conclusiones."},
+        {"t":"practica","fromBank":{"oa":"MA08 OA 16","n":3}}
+      ]
+    },
+    {
+      "id": "ma-oa17",
+      "oa": "MA08 OA 17",
+      "titulo": "El principio multiplicativo",
+      "bloques": [
+        {"t":"texto","md":"Si una elección tiene varias opciones y luego otra elección tiene otras opciones, el total de combinaciones se obtiene multiplicando."},
+        {"t":"diagrama","kind":"arbol","params":{"n1":2,"n2":3},"intro":"2 opciones y luego 3 opciones: el árbol muestra los 6 caminos posibles."},
+        {"t":"texto","md":"El diagrama de árbol y la tabla de doble entrada ayudan a contar todas las posibilidades sin olvidar ninguna."},
+        {"t":"ejemplo","intro":"Contemos combinaciones paso a paso (toca para avanzar):","pasos":["Tienes 2 poleras y 3 pantalones","Combinaciones: 2 × 3","= 6 conjuntos distintos"]},
+        {"t":"practica","fromBank":{"oa":"MA08 OA 17","n":3}}
+      ]
     }
   ]
 }

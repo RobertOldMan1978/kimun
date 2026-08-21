@@ -73,9 +73,10 @@ backend Supabase para el duelo en línea. Historia de v0 al detalle en la Bitác
   **Modo Sin Fin**— se conserva idéntico, pero ahora **cada nivel se desbloquea al
   completar su lección** ("aprender desbloquea el Reto"). En el **Duelo**, Matemáticas
   ofrece los 5 niveles del Reto (operaciones al vuelo), ver Sesión 16. El banco de
-  álgebra queda de reserva. **Construidas las Unidades 1 (Números), 2 (Álgebra y
-  funciones) y 3 (Geometría)**; Estadística y el Jefe Final "La Incógnita" son planes de
-  seguimiento que reusan el mismo motor de lecciones.
+  álgebra queda de reserva. **Las 4 unidades del año están construidas** (Números, Álgebra
+  y funciones, Geometría, y Probabilidad y estadística): 17 lecciones para los 17 OA, con
+  11 widgets de diagrama interactivos. Solo queda pendiente el **Jefe Final "La Incógnita"**
+  (necesita el arte del villano y la skin; los datos ya están puestos pero inertes).
 - Regla de cada capítulo/expedición: **4 etapas + 1 jefe (5 nodos)** (algunos capítulos
   con 3 etapas cuando su unidad tiene 3 OA). Cada asignatura tiene, además, un **banco de
   año completo** (todos sus OA oficiales); con las 4 campañas activas ya casi no queda
@@ -1743,8 +1744,20 @@ implementador por tarea + revisión de spec y de calidad por separado).
   transformaciones y simetría) y se activó el capítulo `mate-geometria`. Verificado end-to-end,
   sin regresión (los dos fixes del quiz del Cap 2 siguen en pie).
   Plan: `docs/superpowers/plans/2026-08-21-camino-matematicas-cap3-geometria.md`.
-- **Pendientes:** el plan de seguimiento **Cap 4 Estadística** (contenido + los widgets que
-  faltan: `cajon`, `barras`, `arbol`) y el **Jefe Final "La Incógnita"** (necesita arte de
+- **Cap 4 (Probabilidad y estadística, OA15–17) — construido el mismo día (Plan 4), cierra las
+  4 unidades.** 3 widgets nuevos: `cajon` (diagrama de cajón: mín/Q1/mediana/Q3/máx),
+  `barras` (gráfico cuyo eje puede empezar en un valor distinto de 0, para enseñar cómo un
+  gráfico distorsiona —OA16 se juega mostrando los mismos datos con eje desde 0 y desde 90—) y
+  `arbol` (principio multiplicativo n1×n2). 3 lecciones (cuartiles, lectura crítica de
+  gráficos, principio multiplicativo) y se activó el capítulo `mate-datos`. Con esto Matemáticas
+  queda con **las 4 unidades y sus 17 lecciones jugables**. Verificado end-to-end, sin regresión.
+  Plan: `docs/superpowers/plans/2026-08-21-camino-matematicas-cap4-estadistica.md`.
+- **Hallazgo (banco preexistente, no del código nuevo):** la revisión notó **tildes faltantes**
+  en algunas preguntas del banco de OA15/OA16 en `preguntas.json` ("cajon", "linea", "esta",
+  "que"…), pese a estar marcado como revisado. No toca lecciones ni widgets. Pendiente opcional:
+  una pasada de ortografía al banco de Matemáticas.
+- **Pendientes:** el **Jefe Final "La Incógnita"** de la campaña de Matemáticas (necesita arte de
   Roberto: `villano-matematicas.png` + skin "Vulpi Matemático"; los datos ya están puestos pero
-  inertes); portadas propias por capítulo (opcional; hoy caen al fallback); y los de siempre
-  (los dos trámites INAPI y `vulpo.cl`, SMTP, la vuelta manual para decidir la v1).
+  inertes); portadas propias por capítulo de Matemáticas (opcional; hoy caen al fallback); la
+  pasada de tildes del banco (opcional); y los de siempre (los dos trámites INAPI y `vulpo.cl`,
+  SMTP, la vuelta manual para decidir la v1).
