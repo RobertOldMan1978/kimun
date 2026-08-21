@@ -1768,6 +1768,16 @@ implementador por tarea + revisión de spec y de calidad por separado).
   botón "Volver" propio**; se agregó un botón "🛍️ Tienda de skins" al final de `scr-expediciones`
   (antes de Volver) y un "← Volver" a `scr-tienda` que regresa a donde se abrió (variable
   `tiendaOrigen`: Expediciones o el mapa del juego).
+- **Panel del profesor — dos mejoras (`profesor.html`):** (1) **el curso ya no se contrae al
+  agregar un alumno.** `pintarLista` reconstruía toda la lista con los `<details>` cerrados;
+  ahora captura qué cursos y sublistas de alumnos estaban desplegados (por `data-cod`) y los
+  restaura tras el re-render, así el acordeón solo se cierra cuando el profe lo toca. (2)
+  **Carga masiva de alumnos:** en cada curso, un bloque plegable "➕ Cargar varios de una vez"
+  con un `textarea` donde se pegan los nombres (uno por línea) y "Agregar todos"; recorre la
+  lista llamando a la función existente `kimun_prof_alumno_agregar` (una por nombre, muestra
+  progreso, informa cuántos se agregaron y cuáles fallaron). **Sin cambios en Supabase.**
+  Verificado con backend simulado (stub de `SB.rpc`); la prueba real end-to-end queda del lado
+  de Roberto.
 - **Pendientes:** el **Jefe Final "La Incógnita"** de la campaña de Matemáticas (necesita arte de
   Roberto: `villano-matematicas.png` + skin "Vulpi Matemático"; los datos ya están puestos pero
   inertes); portadas propias por capítulo de Matemáticas (opcional; hoy caen al fallback); y los
