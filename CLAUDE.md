@@ -1752,12 +1752,17 @@ implementador por tarea + revisión de spec y de calidad por separado).
   gráficos, principio multiplicativo) y se activó el capítulo `mate-datos`. Con esto Matemáticas
   queda con **las 4 unidades y sus 17 lecciones jugables**. Verificado end-to-end, sin regresión.
   Plan: `docs/superpowers/plans/2026-08-21-camino-matematicas-cap4-estadistica.md`.
-- **Hallazgo (banco preexistente, no del código nuevo):** la revisión notó **tildes faltantes**
-  en algunas preguntas del banco de OA15/OA16 en `preguntas.json` ("cajon", "linea", "esta",
-  "que"…), pese a estar marcado como revisado. No toca lecciones ni widgets. Pendiente opcional:
-  una pasada de ortografía al banco de Matemáticas.
+- **Pasada de tildes del banco de Matemáticas (corregida).** La revisión había notado tildes
+  faltantes en preguntas de OA15/OA16 ("cajon", "linea", "esta", "que"…), pese a estar el banco
+  marcado como revisado. Se corrigió con una pasada verificada: 3 agentes revisores sobre las 603
+  preguntas (los OA01–14 estaban limpios; el problema estaba concentrado en Estadística OA15–17),
+  aplicando **solo cambios de acentuación** —verificados por script (el texto sin diacríticos debe
+  quedar idéntico y sin cambios de ñ, así no se altera ninguna palabra, número ni la respuesta
+  correcta) y revisados a mano los casos de criterio (el→él, esta→está, que→qué)—. **61
+  correcciones** en ~30 preguntas; el re-escaneo queda en cero. La estructura del banco quedó
+  intacta (603 preguntas, `correcta` y 4 opciones). Herramientas en el scratchpad de la sesión.
 - **Pendientes:** el **Jefe Final "La Incógnita"** de la campaña de Matemáticas (necesita arte de
   Roberto: `villano-matematicas.png` + skin "Vulpi Matemático"; los datos ya están puestos pero
-  inertes); portadas propias por capítulo de Matemáticas (opcional; hoy caen al fallback); la
-  pasada de tildes del banco (opcional); y los de siempre (los dos trámites INAPI y `vulpo.cl`,
+  inertes); portadas propias por capítulo de Matemáticas (opcional; hoy caen al fallback); y los
+  de siempre (los dos trámites INAPI y `vulpo.cl`,
   SMTP, la vuelta manual para decidir la v1).

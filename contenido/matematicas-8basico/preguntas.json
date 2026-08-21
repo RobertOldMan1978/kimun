@@ -6255,10 +6255,10 @@
       "oa": "MA08 OA 15",
       "pregunta": "El primer cuartil (Q1) de un conjunto de datos es el valor que:",
       "opciones": [
-        "deja aproximadamente el 25% de los datos por encima de el",
+        "deja aproximadamente el 25% de los datos por encima de él",
         "ocupa exactamente el centro de los datos",
         "es el mayor de todos los datos",
-        "deja aproximadamente el 25% de los datos por debajo de el"
+        "deja aproximadamente el 25% de los datos por debajo de él"
       ],
       "correcta": 3,
       "tip": "El primer cuartil (Q1) separa el 25% menor del resto. La mediana (Q2) deja el 50% por debajo.",
@@ -6281,7 +6281,7 @@
     {
       "id": "mate8-oa15-006",
       "oa": "MA08 OA 15",
-      "pregunta": "En un diagrama de cajon, ¿que representa la linea que esta dentro de la caja?",
+      "pregunta": "En un diagrama de cajón, ¿qué representa la línea que está dentro de la caja?",
       "opciones": [
         "el valor máximo",
         "la mediana",
@@ -6289,7 +6289,7 @@
         "el promedio"
       ],
       "correcta": 1,
-      "tip": "La linea interior de la caja marca la mediana (Q2). Los extremos de la caja son Q1 y Q3.",
+      "tip": "La línea interior de la caja marca la mediana (Q2). Los extremos de la caja son Q1 y Q3.",
       "revisada": true
     },
     {
@@ -6393,7 +6393,7 @@
     {
       "id": "mate8-oa15-014",
       "oa": "MA08 OA 15",
-      "pregunta": "El curso A tiene mediana de estatura 152 cm y el curso B, 145 cm. ¿Que puedes afirmar?",
+      "pregunta": "El curso A tiene mediana de estatura 152 cm y el curso B, 145 cm. ¿Qué puedes afirmar?",
       "opciones": [
         "todos los estudiantes de A son más altos que los de B",
         "las estaturas del curso A tienden a ser mayores que las del curso B",
@@ -6407,7 +6407,7 @@
     {
       "id": "mate8-oa15-015",
       "oa": "MA08 OA 15",
-      "pregunta": "En una prueba, Ana quedo en el percentil 90. Esto significa que:",
+      "pregunta": "En una prueba, Ana quedó en el percentil 90. Esto significa que:",
       "opciones": [
         "obtuvo 90 puntos en la prueba",
         "solo el 90% de las preguntas estaban bien",
@@ -6421,7 +6421,7 @@
     {
       "id": "mate8-oa15-016",
       "oa": "MA08 OA 15",
-      "pregunta": "¿Que medida de posición se ve MENOS afectada por un valor extremo (muy grande o muy chico)?",
+      "pregunta": "¿Qué medida de posición se ve MENOS afectada por un valor extremo (muy grande o muy chico)?",
       "opciones": [
         "el promedio",
         "el rango",
@@ -6449,7 +6449,7 @@
     {
       "id": "mate8-oa15-018",
       "oa": "MA08 OA 15",
-      "pregunta": "En un diagrama de cajon, la caja (entre Q1 y Q3) representa:",
+      "pregunta": "En un diagrama de cajón, la caja (entre Q1 y Q3) representa:",
       "opciones": [
         "el 25% menor de los datos",
         "el 50% central de los datos",
@@ -6463,7 +6463,7 @@
     {
       "id": "mate8-oa15-019",
       "oa": "MA08 OA 15",
-      "pregunta": "Un diagrama de cajon muestra: mínimo 2, Q1 = 5, mediana 8, Q3 = 12, máximo 20. El rango es:",
+      "pregunta": "Un diagrama de cajón muestra: mínimo 2, Q1 = 5, mediana 8, Q3 = 12, máximo 20. El rango es:",
       "opciones": [
         "7",
         "8",
@@ -6477,7 +6477,7 @@
     {
       "id": "mate8-oa15-020",
       "oa": "MA08 OA 15",
-      "pregunta": "Un diagrama de cajon muestra: mínimo 2, Q1 = 5, mediana 8, Q3 = 12, máximo 20. El rango intercuartil es:",
+      "pregunta": "Un diagrama de cajón muestra: mínimo 2, Q1 = 5, mediana 8, Q3 = 12, máximo 20. El rango intercuartil es:",
       "opciones": [
         "18",
         "12",
@@ -6485,13 +6485,13 @@
         "7"
       ],
       "correcta": 3,
-      "tip": "El rango intercuartil es Q3 - Q1 = 12 - 5 = 7. Mide cuan dispersos estan el 50% central de los datos.",
+      "tip": "El rango intercuartil es Q3 - Q1 = 12 - 5 = 7. Mide cuán dispersos están el 50% central de los datos.",
       "revisada": true
     },
     {
       "id": "mate8-oa15-021",
       "oa": "MA08 OA 15",
-      "pregunta": "Un diagrama de cajon muestra: mínimo 2, Q1 = 5, mediana 8, Q3 = 12, máximo 20. ¿Que porcentaje de los datos está entre Q1 y Q3?",
+      "pregunta": "Un diagrama de cajón muestra: mínimo 2, Q1 = 5, mediana 8, Q3 = 12, máximo 20. ¿Qué porcentaje de los datos está entre Q1 y Q3?",
       "opciones": [
         "aproximadamente el 50%",
         "aproximadamente el 25%",
@@ -6499,21 +6499,21 @@
         "el 100%"
       ],
       "correcta": 0,
-      "tip": "Entre Q1 y Q3 siempre esta cerca del 50% central de los datos, sin importar los valores concretos.",
+      "tip": "Entre Q1 y Q3 siempre está cerca del 50% central de los datos, sin importar los valores concretos.",
       "revisada": true
     },
     {
       "id": "mate8-oa15-022",
       "oa": "MA08 OA 15",
-      "pregunta": "Dos cursos tienen la misma mediana de notas, pero el curso A tiene un rango de 2,0 y el curso B un rango de 5,0. ¿Que curso es más parejo?",
+      "pregunta": "Dos cursos tienen la misma mediana de notas, pero el curso A tiene un rango de 2,0 y el curso B un rango de 5,0. ¿Qué curso es más parejo?",
       "opciones": [
         "el curso B, porque tiene mayor rango",
-        "el curso A, porque sus notas estan menos dispersas",
+        "el curso A, porque sus notas están menos dispersas",
         "son igual de parejos porque tienen la misma mediana",
         "no se puede saber con esa información"
       ],
       "correcta": 1,
-      "tip": "Un rango menor indica menos dispersión: las notas del curso A estan más juntas, o sea, es más parejo.",
+      "tip": "Un rango menor indica menos dispersión: las notas del curso A están más juntas, o sea, es más parejo.",
       "revisada": true
     },
     {
@@ -6547,7 +6547,7 @@
     {
       "id": "mate8-oa15-025",
       "oa": "MA08 OA 15",
-      "pregunta": "El percentil 50 de un conjunto de datos deja por debajo de el aproximadamente:",
+      "pregunta": "El percentil 50 de un conjunto de datos deja por debajo de él aproximadamente:",
       "opciones": [
         "la mitad de los datos",
         "un cuarto de los datos",
@@ -6611,7 +6611,7 @@
         "faltan los números exactos siempre"
       ],
       "correcta": 0,
-      "tip": "En un pictograma cada icono debe representar la misma cantidad y tener el mismo tamaño; si varian, engañan a la vista.",
+      "tip": "En un pictograma cada icono debe representar la misma cantidad y tener el mismo tamaño; si varían, engañan a la vista.",
       "revisada": true
     },
     {
@@ -6631,43 +6631,43 @@
     {
       "id": "mate8-oa16-006",
       "oa": "MA08 OA 16",
-      "pregunta": "¿Que tipo de gráfico es más adecuado para mostrar como se reparte un total en partes (por ejemplo, el gasto mensual)?",
+      "pregunta": "¿Qué tipo de gráfico es más adecuado para mostrar cómo se reparte un total en partes (por ejemplo, el gasto mensual)?",
       "opciones": [
-        "un gráfico de lineas",
-        "un diagrama de cajon",
+        "un gráfico de líneas",
+        "un diagrama de cajón",
         "un gráfico circular",
         "un diagrama de árbol"
       ],
       "correcta": 2,
-      "tip": "El gráfico circular muestra bien las partes de un todo. El de lineas sirve para evolución en el tiempo.",
+      "tip": "El gráfico circular muestra bien las partes de un todo. El de líneas sirve para evolución en el tiempo.",
       "revisada": true
     },
     {
       "id": "mate8-oa16-007",
       "oa": "MA08 OA 16",
-      "pregunta": "¿Que tipo de gráfico es más adecuado para mostrar la evolución de la temperatura durante una semana?",
+      "pregunta": "¿Qué tipo de gráfico es más adecuado para mostrar la evolución de la temperatura durante una semana?",
       "opciones": [
         "un gráfico circular",
         "un pictograma",
         "una tabla de doble entrada",
-        "un gráfico de lineas"
+        "un gráfico de líneas"
       ],
       "correcta": 3,
-      "tip": "El gráfico de lineas muestra bien como cambia una variable a lo largo del tiempo.",
+      "tip": "El gráfico de líneas muestra bien cómo cambia una variable a lo largo del tiempo.",
       "revisada": true
     },
     {
       "id": "mate8-oa16-008",
       "oa": "MA08 OA 16",
-      "pregunta": "Un gráfico de barras no tiene números ni título en los ejes. ¿Que problema tiene?",
+      "pregunta": "Un gráfico de barras no tiene números ni título en los ejes. ¿Qué problema tiene?",
       "opciones": [
-        "no se puede saber que representa ni cuánto vale cada barra",
+        "no se puede saber qué representa ni cuánto vale cada barra",
         "se ve más ordenado así",
-        "las barras son más faciles de dibujar",
-        "no tiene ningun problema"
+        "las barras son más fáciles de dibujar",
+        "no tiene ningún problema"
       ],
       "correcta": 0,
-      "tip": "Sin escala ni etiquetas, un gráfico no es confiable: no permite leer los valores ni saber que se esta comparando.",
+      "tip": "Sin escala ni etiquetas, un gráfico no es confiable: no permite leer los valores ni saber qué se está comparando.",
       "revisada": true
     },
     {
@@ -6687,15 +6687,15 @@
     {
       "id": "mate8-oa16-010",
       "oa": "MA08 OA 16",
-      "pregunta": "¿Que gráfico es más adecuado para comparar la cantidad de estudiantes de distintos cursos?",
+      "pregunta": "¿Qué gráfico es más adecuado para comparar la cantidad de estudiantes de distintos cursos?",
       "opciones": [
-        "un gráfico de lineas",
+        "un gráfico de líneas",
         "un gráfico circular con un solo sector",
         "un gráfico de barras",
         "un diagrama de árbol"
       ],
       "correcta": 2,
-      "tip": "El gráfico de barras permite comparar fácilmente categorias distintas (los cursos) segun su cantidad.",
+      "tip": "El gráfico de barras permite comparar fácilmente categorías distintas (los cursos) según su cantidad.",
       "revisada": true
     },
     {
@@ -6715,12 +6715,12 @@
     {
       "id": "mate8-oa16-012",
       "oa": "MA08 OA 16",
-      "pregunta": "En un gráfico de barras, una barra vale 102 y otra 100, pero la primera se ve el DOBLE de alta. ¿Que explica esto?",
+      "pregunta": "En un gráfico de barras, una barra vale 102 y otra 100, pero la primera se ve el DOBLE de alta. ¿Qué explica esto?",
       "opciones": [
         "el eje vertical no comienza en 0, sino en un valor alto",
         "la primera barra tiene más datos escondidos",
         "es imposible que ocurra",
-        "las barras estan pintadas de distinto color"
+        "las barras están pintadas de distinto color"
       ],
       "correcta": 0,
       "tip": "Si el eje parte, por ejemplo, en 99, la diferencia entre 100 y 102 se ve enorme aunque sea muy pequeña.",
@@ -6729,21 +6729,21 @@
     {
       "id": "mate8-oa16-013",
       "oa": "MA08 OA 16",
-      "pregunta": "Un gráfico de lineas usa intervalos de tiempo desiguales en el eje horizontal (2020, 2021, 2025). ¿Que problema causa?",
+      "pregunta": "Un gráfico de líneas usa intervalos de tiempo desiguales en el eje horizontal (2020, 2021, 2025). ¿Qué problema causa?",
       "opciones": [
         "hace el gráfico más exacto",
-        "distorsiona la percepción de como cambian los datos en el tiempo",
+        "distorsiona la percepción de cómo cambian los datos en el tiempo",
         "no afecta la lectura",
         "obliga a usar más colores"
       ],
       "correcta": 1,
-      "tip": "Si los intervalos del eje no son uniformes, la pendiente de la linea engaña sobre la rapidez real de los cambios.",
+      "tip": "Si los intervalos del eje no son uniformes, la pendiente de la línea engaña sobre la rapidez real de los cambios.",
       "revisada": true
     },
     {
       "id": "mate8-oa16-014",
       "oa": "MA08 OA 16",
-      "pregunta": "Dos gráficos circulares comparan 'la mitad de un curso de 20' con 'la mitad de un curso de 40'. Ambas mitades se ven iguales (50%). ¿Que información falta para comparar cuántos estudiantes son?",
+      "pregunta": "Dos gráficos circulares comparan 'la mitad de un curso de 20' con 'la mitad de un curso de 40'. Ambas mitades se ven iguales (50%). ¿Qué información falta para comparar cuántos estudiantes son?",
       "opciones": [
         "el color de cada sector",
         "el título del gráfico",
@@ -6771,15 +6771,15 @@
     {
       "id": "mate8-oa16-016",
       "oa": "MA08 OA 16",
-      "pregunta": "En un gráfico circular, un sector rotulado '25%' ocupa visiblemente la mitad del circulo. Esto indica que:",
+      "pregunta": "En un gráfico circular, un sector rotulado '25%' ocupa visiblemente la mitad del círculo. Esto indica que:",
       "opciones": [
-        "el gráfico esta mal construido y distorsiona los datos",
+        "el gráfico está mal construido y distorsiona los datos",
         "el 25% siempre es la mitad",
-        "el circulo es más grande de lo normal",
+        "el círculo es más grande de lo normal",
         "el sector tiene más colores"
       ],
       "correcta": 0,
-      "tip": "Un sector del 25% debe ocupar un cuarto del circulo. Si ocupa la mitad, el gráfico esta distorsionado.",
+      "tip": "Un sector del 25% debe ocupar un cuarto del círculo. Si ocupa la mitad, el gráfico está distorsionado.",
       "revisada": true
     },
     {
@@ -6799,12 +6799,12 @@
     {
       "id": "mate8-oa16-018",
       "oa": "MA08 OA 16",
-      "pregunta": "Una empresa dice '9 de cada 10 recomiendan el producto', pero solo encuesto a 10 personas elegidas por ella. ¿Que problema hay?",
+      "pregunta": "Una empresa dice '9 de cada 10 recomiendan el producto', pero solo encuestó a 10 personas elegidas por ella. ¿Qué problema hay?",
       "opciones": [
-        "el porcentaje esta mal calculado",
-        "debería haber usado un gráfico de lineas",
+        "el porcentaje está mal calculado",
+        "debería haber usado un gráfico de líneas",
         "la muestra es muy pequeña y no fue elegida al azar, por lo que no es confiable",
-        "no hay ningun problema"
+        "no hay ningún problema"
       ],
       "correcta": 2,
       "tip": "Una conclusión basada en pocos datos elegidos convenientemente no es representativa; los datos pueden estar sesgados.",
@@ -6827,11 +6827,11 @@
     {
       "id": "mate8-oa16-020",
       "oa": "MA08 OA 16",
-      "pregunta": "Un gráfico afirma que un equipo 'domino el partido', mostrando solo los minutos en que iba ganando. Esto es un ejemplo de:",
+      "pregunta": "Un gráfico afirma que un equipo 'dominó el partido', mostrando solo los minutos en que iba ganando. Esto es un ejemplo de:",
       "opciones": [
         "seleccionar datos para reforzar una conclusión (sesgo)",
         "un cálculo de promedio",
-        "un uso correcto del gráfico de lineas",
+        "un uso correcto del gráfico de líneas",
         "un error en la escala del eje"
       ],
       "correcta": 0,
@@ -6841,15 +6841,15 @@
     {
       "id": "mate8-oa16-021",
       "oa": "MA08 OA 16",
-      "pregunta": "¿Que representa mejor la proporción de estudiantes que prefieren cada color entre 4 opciones?",
+      "pregunta": "¿Qué representa mejor la proporción de estudiantes que prefieren cada color entre 4 opciones?",
       "opciones": [
-        "un gráfico de lineas con cuatro puntos",
+        "un gráfico de líneas con cuatro puntos",
         "un gráfico circular con cuatro sectores",
-        "un diagrama de cajon",
+        "un diagrama de cajón",
         "una sola barra"
       ],
       "correcta": 1,
-      "tip": "Cuando quieres mostrar como se reparte un total entre pocas categorias, el gráfico circular es muy claro.",
+      "tip": "Cuando quieres mostrar cómo se reparte un total entre pocas categorías, el gráfico circular es muy claro.",
       "revisada": true
     },
     {
@@ -6897,12 +6897,12 @@
     {
       "id": "mate8-oa16-025",
       "oa": "MA08 OA 16",
-      "pregunta": "En un gráfico de barras que compara 4 productos, se ordena a proposito para que uno quede primero aunque no sea el mayor. La mejor forma de leerlo con sentido critico es:",
+      "pregunta": "En un gráfico de barras que compara 4 productos, se ordena a propósito para que uno quede primero aunque no sea el mayor. La mejor forma de leerlo con sentido crítico es:",
       "opciones": [
         "confiar en que el primero es siempre el mayor",
-        "fijarse en los valores numericos de cada barra, no solo en el orden",
+        "fijarse en los valores numéricos de cada barra, no solo en el orden",
         "mirar solo el color de las barras",
-        "leer unicamente el título"
+        "leer únicamente el título"
       ],
       "correcta": 1,
       "tip": "El orden de las barras puede acomodarse para dar una impresión. Siempre conviene leer los valores reales de la escala.",
@@ -6925,7 +6925,7 @@
     {
       "id": "mate8-oa17-002",
       "oa": "MA08 OA 17",
-      "pregunta": "Una heladeria ofrece 4 sabores y 3 tamaños de cono. ¿Cuántas combinaciones de un sabor y un tamaño hay?",
+      "pregunta": "Una heladería ofrece 4 sabores y 3 tamaños de cono. ¿Cuántas combinaciones de un sabor y un tamaño hay?",
       "opciones": [
         "7",
         "9",
@@ -7009,7 +7009,7 @@
     {
       "id": "mate8-oa17-008",
       "oa": "MA08 OA 17",
-      "pregunta": "Una clave se forma con 2 digitos y cada digito puede ser del 0 al 9. ¿Cuántas claves distintas son posibles?",
+      "pregunta": "Una clave se forma con 2 dígitos y cada dígito puede ser del 0 al 9. ¿Cuántas claves distintas son posibles?",
       "opciones": [
         "20",
         "100",
@@ -7023,7 +7023,7 @@
     {
       "id": "mate8-oa17-009",
       "oa": "MA08 OA 17",
-      "pregunta": "Un sandwich se arma eligiendo 1 de 3 tipos de pan, 1 de 4 rellenos y 1 de 2 salsas. ¿Cuántos sandwich distintos se pueden armar?",
+      "pregunta": "Un sándwich se arma eligiendo 1 de 3 tipos de pan, 1 de 4 rellenos y 1 de 2 salsas. ¿Cuántos sándwich distintos se pueden armar?",
       "opciones": [
         "9",
         "12",
@@ -7121,7 +7121,7 @@
     {
       "id": "mate8-oa17-016",
       "oa": "MA08 OA 17",
-      "pregunta": "¿Cuántos números de 2 cifras se pueden formar usando solo los digitos 1, 2 y 3, si se permite repetir?",
+      "pregunta": "¿Cuántos números de 2 cifras se pueden formar usando solo los dígitos 1, 2 y 3, si se permite repetir?",
       "opciones": [
         "6",
         "9",
@@ -7219,7 +7219,7 @@
     {
       "id": "mate8-oa17-023",
       "oa": "MA08 OA 17",
-      "pregunta": "Un candado tiene 3 ruedas y cada una muestra un digito del 0 al 9. ¿Cuántas combinaciones distintas puede formar?",
+      "pregunta": "Un candado tiene 3 ruedas y cada una muestra un dígito del 0 al 9. ¿Cuántas combinaciones distintas puede formar?",
       "opciones": [
         "1000",
         "30",
