@@ -1822,5 +1822,10 @@ data-driven sobre el motor de quiz existente (no se tocó el motor).
 - **Verificado en el navegador:** pools cargan (20/origen, 9/tramo), se juega una etapa de cada
   módulo, las 3 portadas cargan 200, el dominio no se contamina, sin errores de consola. Spot-check
   factual del tramo final de Ana Frank correcto (Bergen-Belsen, tifus, delación incierta, Otto).
+- **Fix (botón Volver):** el mapa (`scr-mapa`) ocultaba el botón `btnMapaCamp` para expediciones
+  **sin campaña**, así que Vocabulario y Ana Frank quedaban sin salida; y su `onclick` caía por
+  error a `CAMP_ACT`. Ahora el botón se muestra siempre ("← Volver a la campaña" en campañas,
+  "← Volver" en el resto) y enruta explícito por contexto en `renderMapa`: campaña → `scr-campana`,
+  `voc-general` → `scr-lenguaje`, Lectura → `scr-biblioteca`, resto → `scr-expediciones`.
 - **Pendientes:** **aprobación pedagógica** de los 2 bancos nuevos (nacen `revisada:false`);
   sin cambios en el resto respecto a la Sesión 29.

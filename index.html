@@ -2515,8 +2515,10 @@ function abrirCampaña(c){CAMP_ACT=c; renderCampaña(); go('scr-campana');}
 $('btnCampBack').onclick=()=>{SND.tap();go('scr-expediciones');};
 // Volver desde el mapa de un capítulo a su campaña (refresca el desbloqueo)
 $('btnMapaCamp').onclick=()=>{SND.tap();
- const c=EXP_ACT&&EXP_ACT.campaña?campañaPorId(EXP_ACT.campaña):CAMP_ACT;
- if(c){CAMP_ACT=c;renderCampaña();go('scr-campana');}else{go('scr-expediciones');}};
+ if(EXP_ACT&&EXP_ACT.campaña){CAMP_ACT=campañaPorId(EXP_ACT.campaña);renderCampaña();go('scr-campana');return;}
+ if(EXP_ACT&&EXP_ACT.id==='voc-general'){go('scr-lenguaje');return;}   // Vocabulario → landing de Lenguaje
+ if(EXP_ACT&&EXP_ACT.asignatura==='Lectura'){go('scr-biblioteca');return;} // Lectura → biblioteca
+ go('scr-expediciones');};
 function renderCampaña(){
  const c=CAMP_ACT; if(!c)return;
  if(c.esLecciones){ renderCampañaMate(c); return; }
@@ -2937,7 +2939,8 @@ $('btnStart').onclick=()=>{
 function renderMapa(){
  renderModoSel();
  const bc=$('btnMapaCamp');
- if(bc) bc.style.display=(EXP_ACT&&EXP_ACT.campaña)?'block':'none';
+ if(bc){ bc.style.display='block';
+  bc.textContent=(EXP_ACT&&EXP_ACT.campaña)?'← Volver a la campaña':'← Volver'; }
  if($('mapaSub'))$('mapaSub').textContent=EXP_ACT.nivel;
  if($('mapaImg'))$('mapaImg').src=EXP_ACT.mapaImg||EXP_ACT.portada;
  const box=$('mapbox');box.innerHTML='';
