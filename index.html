@@ -2607,7 +2607,7 @@ function renderCampañaMate(c){
    cont.appendChild(nodoCampañaEl('⚔️', 'Expedición · '+cap.titulo, expAb, expHecho,
      expAb?()=>entrarExpedicion(exp):null,
      expHecho?'Completada':(expAb?'¡Al desafío!':'🔒 Termina las lecciones'),
-     portadaMapa(exp), portadaFallback(exp)));
+     'assets/portada-'+cap.id+'.png', c.portada));
   }
  });
  const reto=document.createElement('div');
