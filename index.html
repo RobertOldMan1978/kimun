@@ -1216,6 +1216,7 @@ const INSIGNIAS=[
   {id:'dif-historia', ic:'🔥', tx:'Historia · Difícil', asignatura:'Historia'},
   {id:'dif-ciencias', ic:'🔥', tx:'Ciencias · Difícil', asignatura:'Ciencias'},
   {id:'dif-lenguaje', ic:'🔥', tx:'Lenguaje · Difícil', asignatura:'Lenguaje'},
+  {id:'dif-matematicas', ic:'🔥', tx:'Matemáticas · Difícil', asignatura:'Matemáticas'},
 ];
 // Asignaturas con Modo Difícil (Matemáticas es el Reto de Cálculo, no usa Difícil).
 const DIF_ASIGS=['Historia','Ciencias','Lenguaje'];
@@ -1264,6 +1265,7 @@ const LOGROS={
  'dif-historia':{ic:"🔥",tx:"¡Historia en Difícil!"},
  'dif-ciencias':{ic:"🔥",tx:"¡Ciencias en Difícil!"},
  'dif-lenguaje':{ic:"🔥",tx:"¡Lenguaje en Difícil!"},
+ 'dif-matematicas':{ic:"🔥",tx:"¡Matemáticas en Difícil!"},
  'dif-maestro':{ic:"🏆",tx:"¡MAESTRÍA TOTAL: venciste a los 4 jefes!"},
  'mision-profe':{ic:"📣",tx:"¡Misión del profe cumplida!"},
 };
@@ -3170,8 +3172,8 @@ function responder(el,ok,P,e){
 function capDificilCompleto(capId){const r=S.rutas[capId];
  return !!(r&&Array.isArray(r.progresoDificil)&&r.progresoDificil.length&&r.progresoDificil.every(n=>n.est==='done'));}
 function asignaturaDificilCompleta(asig){const c=CAMPAÑAS.find(x=>x.asignatura===asig);
- // Una campaña sin capítulos de expedición (Matemáticas, capitulos:[]) no cuenta para
- // Difícil: exige capítulos antes de evaluar para no generar una "Maestría" falsa.
+ // Una campaña sin capítulos de expedición no cuenta para Difícil: exige capítulos
+ // antes de evaluar para no generar una "Maestría" falsa.
  return !!(c&&c.capitulos.length&&c.capitulos.every(capDificilCompleto));}
 function asignaturasDificil(){return DIF_ASIGS.filter(asignaturaDificilCompleta);}
 // Maestría Total = 3 asignaturas en Difícil + vencer a El Autómata (los 4 jefes al máximo).
@@ -3199,6 +3201,11 @@ function revisarDificil(){
  let nuevo=false;
  hechas.forEach(asig=>{const id=ins[asig];
   if(id&&!S.insignias.has(id)){S.insignias.add(id);if(S.insigniaActiva===null)S.insigniaActiva=id;toast(id);nuevo=true;}});
+ // Matemáticas: insignia propia de Difícil. Se otorga aparte de DIF_ASIGS (3 core),
+ // así NO entra en asignaturasDificil() ni altera la Maestría Total.
+ if(asignaturaDificilCompleta('Matemáticas') && !S.insignias.has('dif-matematicas')){
+  S.insignias.add('dif-matematicas'); if(S.insigniaActiva===null)S.insigniaActiva='dif-matematicas'; toast('dif-matematicas'); nuevo=true;
+ }
  if(nuevo){guardar();refreshHud();}
  const cnt=hechas.length+((S.calc&&S.calc.jefe)?1:0);   // 0–4: suma El Autómata
  if(SB&&MI_PERFIL){try{Promise.resolve(SB.rpc('kimun_dificil',{p_n:cnt})).catch(()=>{});}catch(e){}}  // best-effort
