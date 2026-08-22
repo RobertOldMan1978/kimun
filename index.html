@@ -1249,7 +1249,7 @@ let MODO='normal';
 function esJefeLvl(lvl){return lvl===N_ETAPAS-1;}
 function progAct(){return MODO==='dificil'?S.progresoDificil:S.progreso;}
 function nPreguntas(lvl){if(MODO==='dificil')return esJefeLvl(lvl)?10:8;return EXPEDICION[lvl].n;}
-function tiempoInicial(){return MODO==='dificil'?10:15;}
+function tiempoInicial(){return MODO==='dificil'?15:20;}
 
 const $=id=>document.getElementById(id);
 const XP_POR_NIVEL=100;
@@ -1874,7 +1874,7 @@ const RC_N=10;                  // operaciones por etapa
 const RC_ETAPAS=3;              // etapas por nivel
 const RC_BASE=[1,2,2,3,3];      // dificultad base por nivel
 const RC_JEFE_VIDA=15, RC_JEFE_COR=3;
-let RC={modo:'nivel', nivel:0, etapa:0, cat:'calent', ops:[], idx:0, aciertos:0, combo:0, comboMax:0, timer:null, lock:false, tMax:10, vida:0, corazones:0, racha:0};
+let RC={modo:'nivel', nivel:0, etapa:0, cat:'calent', ops:[], idx:0, aciertos:0, combo:0, comboMax:0, timer:null, lock:false, tMax:20, vida:0, corazones:0, racha:0};
 
 function calcEstado(){ if(!S.calc||!Array.isArray(S.calc.etapas))S.calc={etapas:[0,0,0,0,0],jefe:false,record:0}; return S.calc; }
 // Mapeo lección → nivel del Reto. Migración cortés: un nivel ya dominado antes sigue abierto.
@@ -1893,7 +1893,7 @@ function nivelCalcDesbloqueado(i){
  return req.every(id=>S.mateLecciones[id]);
 }
 function jefeCalcDesbloqueado(){ return QA||calcEstado().etapas.every(e=>e>=RC_ETAPAS); }
-function calcTiempo(dif){ return dif>=5?6:dif>=4?7:dif>=3?8:10; }
+function calcTiempo(dif){ return 20; }  // tiempo fijo: no se acorta aunque suba la dificultad
 function abrirRetoCalculo(){ renderNivelesCalc(); go('scr-calc-mapa'); }
 function renderNivelesCalc(){
  const g=$('calcNiveles'); g.innerHTML=''; const st=calcEstado();
@@ -1926,11 +1926,11 @@ function iniciarEtapaCalc(nivel,etapa){
  mostrarHudCalc('nivel'); go('scr-calc'); pintaOpCalc();
 }
 function iniciarJefeCalc(){
- RC={modo:'jefe',cat:'relampago',idx:0,aciertos:0,combo:0,comboMax:0,timer:null,lock:false,tMax:6,vida:RC_JEFE_VIDA,corazones:RC_JEFE_COR};
+ RC={modo:'jefe',cat:'relampago',idx:0,aciertos:0,combo:0,comboMax:0,timer:null,lock:false,tMax:15,vida:RC_JEFE_VIDA,corazones:RC_JEFE_COR};
  mostrarHudCalc('jefe'); go('scr-calc'); pintaOpCalc();
 }
 function iniciarSinFin(){
- RC={modo:'sinfin',cat:'relampago',idx:0,aciertos:0,combo:0,comboMax:0,timer:null,lock:false,tMax:10,racha:0};
+ RC={modo:'sinfin',cat:'relampago',idx:0,aciertos:0,combo:0,comboMax:0,timer:null,lock:false,tMax:20,racha:0};
  mostrarHudCalc('sinfin'); go('scr-calc'); pintaOpCalc();
 }
 function _difActual(){ if(RC.modo==='jefe')return _ri(4,5); if(RC.modo==='sinfin')return Math.min(5,1+Math.floor(RC.racha/5)); return Math.min(5,RC_BASE[RC.nivel]+RC.etapa); }

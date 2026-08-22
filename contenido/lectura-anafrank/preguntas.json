@@ -1,1017 +1,1017 @@
 {
- "asignatura": "Lectura · El diario de Ana Frank",
- "nivel": "8° básico",
- "total_preguntas": 72,
- "revisadas": 0,
- "nota": "Preguntas de comprensión originales. No reproducen texto del libro.",
- "preguntas": [
-  {
-   "id": "af-t1-001",
-   "oa": "AF-T1",
-   "pregunta": "¿Qué motiva principalmente a Ana a comenzar a escribir un diario?",
-   "opciones": [
-    "Quería ganar un concurso literario",
-    "Su padre le exigió que practicara la escritura",
-    "Un profesor le pidió llevar un registro escolar",
-    "Sentía que no tenía una amiga a quien contarle todo, así que decidió que el diario cumpliría ese papel"
-   ],
-   "correcta": 3,
-   "tip": "Ana buscaba una confidente y encontró esa función en su cuaderno.",
-   "revisada": false
-  },
-  {
-   "id": "af-t1-002",
-   "oa": "AF-T1",
-   "pregunta": "¿Con qué ocasión especial recibe Ana el cuaderno que se convertirá en su diario?",
-   "opciones": [
-    "Su cumpleaños",
-    "Un premio escolar",
-    "Un regalo sorpresa sin motivo",
-    "La Navidad"
-   ],
-   "correcta": 0,
-   "tip": "Fue un obsequio de cumpleaños que ella misma había pedido.",
-   "revisada": false
-  },
-  {
-   "id": "af-t1-003",
-   "oa": "AF-T1",
-   "pregunta": "¿Qué nombre le da Ana a su diario, como si fuera una amiga a quien le escribe cartas?",
-   "opciones": [
-    "Peter",
-    "Kitty",
-    "Miep",
-    "Margot"
-   ],
-   "correcta": 1,
-   "tip": "Ana se dirige a su diario como si conversara con una amiga imaginaria.",
-   "revisada": false
-  },
-  {
-   "id": "af-t1-004",
-   "oa": "AF-T1",
-   "pregunta": "¿Qué tipo de medidas afectaban la vida cotidiana de las familias judías en Ámsterdam antes del escondite?",
-   "opciones": [
-    "Solo se les pedía pagar un impuesto extra",
-    "Debían mudarse a otro país voluntariamente",
-    "Ninguna, vivían con total normalidad",
-    "Restricciones y leyes discriminatorias impuestas por la ocupación nazi"
-   ],
-   "correcta": 3,
-   "tip": "Las leyes antijudías limitaban dónde podían ir, estudiar o trabajar.",
-   "revisada": false
-  },
-  {
-   "id": "af-t1-005",
-   "oa": "AF-T1",
-   "pregunta": "¿Por qué la familia Frank ya se había trasladado desde Alemania a Holanda años antes de esconderse?",
-   "opciones": [
-    "Para estudiar en una universidad holandesa",
-    "Para escapar de la persecución nazi que ya se vivía en Alemania",
-    "Por motivos de trabajo del padre",
-    "Por recomendación médica"
-   ],
-   "correcta": 1,
-   "tip": "La familia huyó de Alemania buscando mayor seguridad.",
-   "revisada": false
-  },
-  {
-   "id": "af-t1-006",
-   "oa": "AF-T1",
-   "pregunta": "¿Cómo se describe a sí misma Ana al comienzo del diario, en cuanto a su forma de ser?",
-   "opciones": [
-    "Habladora, extrovertida y le gusta ser el centro de atención",
-    "Muy seria y poco sociable",
-    "Indiferente a todo lo que sucede a su alrededor",
-    "Tímida y callada"
-   ],
-   "correcta": 0,
-   "tip": "Ana reconoce que le encanta conversar y destacar entre sus compañeros.",
-   "revisada": false
-  },
-  {
-   "id": "af-t1-007",
-   "oa": "AF-T1",
-   "pregunta": "¿Qué acontecimiento urgente apresura la decisión de la familia Frank de entrar al escondite antes de lo planeado?",
-   "opciones": [
-    "El padre pierde su trabajo",
-    "Margot recibe una citación de las autoridades para presentarse a un traslado forzado",
-    "Se vence el contrato de arriendo de su casa",
-    "Ana se enferma gravemente"
-   ],
-   "correcta": 1,
-   "tip": "La citación a Margot obligó a adelantar los planes de esconderse.",
-   "revisada": false
-  },
-  {
-   "id": "af-t1-008",
-   "oa": "AF-T1",
-   "pregunta": "¿Cómo describe Ana su relación con su hermana mayor, Margot, al inicio del diario?",
-   "opciones": [
-    "No tienen ningún tipo de relación",
-    "Son inseparables y nunca discuten",
-    "Margot es mucho menor que ella",
-    "Siente cierta rivalidad, pues percibe que Margot es vista como la hija ejemplar"
-   ],
-   "correcta": 3,
-   "tip": "Ana a veces se compara con Margot y siente que no está a su altura.",
-   "revisada": false
-  },
-  {
-   "id": "af-t1-009",
-   "oa": "AF-T1",
-   "pregunta": "¿Cuál es la razón principal por la que la familia Frank decide esconderse?",
-   "opciones": [
-    "Buscaban evitar ser capturados y deportados por el régimen nazi",
-    "Necesitaban ahorrar dinero de arriendo",
-    "Querían vivir una aventura",
-    "Fue una decisión tomada por el gobierno holandés"
-   ],
-   "correcta": 0,
-   "tip": "Esconderse era la manera de intentar salvar sus vidas frente a la persecución.",
-   "revisada": false
-  },
-  {
-   "id": "af-t2-001",
-   "oa": "AF-T2",
-   "pregunta": "¿Cuántas personas en total llegan a vivir escondidas en el anexo secreto?",
-   "opciones": [
-    "Ocho",
-    "Cuatro",
-    "Diez",
-    "Seis"
-   ],
-   "correcta": 0,
-   "tip": "Con el tiempo se suman las familias Frank y Van Daan, además de un dentista.",
-   "revisada": false
-  },
-  {
-   "id": "af-t2-002",
-   "oa": "AF-T2",
-   "pregunta": "¿Dónde se ubica el escondite en el que se refugian los Frank?",
-   "opciones": [
-    "En una casa de campo",
-    "En las habitaciones traseras y ocultas de un edificio, sobre un negocio",
-    "En un barco",
-    "En un sótano bajo tierra"
-   ],
-   "correcta": 1,
-   "tip": "El anexo secreto está escondido detrás de una estantería, encima de las oficinas.",
-   "revisada": false
-  },
-  {
-   "id": "af-t2-003",
-   "oa": "AF-T2",
-   "pregunta": "¿Quiénes son las personas que ayudan a los escondidos llevándoles comida y noticias desde el exterior?",
-   "opciones": [
-    "Vecinos desconocidos",
-    "Empleados de confianza del padre de Ana, como Miep y Bep",
-    "Los antiguos compañeros de colegio de Ana",
-    "Soldados aliados"
-   ],
-   "correcta": 1,
-   "tip": "Estos colaboradores arriesgaban su propia seguridad para ayudarlos.",
-   "revisada": false
-  },
-  {
-   "id": "af-t2-004",
-   "oa": "AF-T2",
-   "pregunta": "¿Qué norma estricta debían cumplir los escondidos durante el horario de trabajo en las oficinas de abajo?",
-   "opciones": [
-    "Podían recibir visitas",
-    "Podían salir a caminar",
-    "Debían guardar silencio absoluto y evitar hacer ruido",
-    "Debían cantar en voz baja"
-   ],
-   "correcta": 2,
-   "tip": "Cualquier ruido durante el día podía delatarlos ante los empleados del edificio.",
-   "revisada": false
-  },
-  {
-   "id": "af-t2-005",
-   "oa": "AF-T2",
-   "pregunta": "¿Cómo se enteraban los escondidos de lo que ocurría en la guerra y en el mundo exterior?",
-   "opciones": [
-    "A través de cartas diarias",
-    "No tenían forma de saberlo",
-    "Escuchando la radio a escondidas",
-    "Recibiendo visitas de periodistas"
-   ],
-   "correcta": 2,
-   "tip": "La radio era su principal fuente de noticias sobre el avance de la guerra.",
-   "revisada": false
-  },
-  {
-   "id": "af-t2-006",
-   "oa": "AF-T2",
-   "pregunta": "¿Qué funcionaba en la parte visible del edificio donde estaba escondido el anexo?",
-   "opciones": [
-    "Una escuela",
-    "Un hospital",
-    "Una biblioteca pública",
-    "Un negocio o empresa donde había trabajado el padre de Ana"
-   ],
-   "correcta": 3,
-   "tip": "El anexo estaba oculto justo encima de las oficinas de un negocio.",
-   "revisada": false
-  },
-  {
-   "id": "af-t2-007",
-   "oa": "AF-T2",
-   "pregunta": "¿Cuándo se incorpora la familia Van Daan al escondite en relación con los Frank?",
-   "opciones": [
-    "Nunca llegaron a compartir el escondite",
-    "El mismo día, exactamente a la misma hora",
-    "Antes que los Frank",
-    "Poco tiempo después de que los Frank ya estuvieran instalados"
-   ],
-   "correcta": 3,
-   "tip": "Los Van Daan se suman al anexo cuando los Frank ya llevaban un tiempo allí.",
-   "revisada": false
-  },
-  {
-   "id": "af-t2-008",
-   "oa": "AF-T2",
-   "pregunta": "¿Qué sensación describe Ana al principio sobre vivir encerrada en el anexo?",
-   "opciones": [
-    "Total indiferencia",
-    "Alegría constante sin ninguna preocupación",
-    "Aburrimiento absoluto desde el primer día",
-    "Una mezcla de miedo, extrañeza y el desafío de adaptarse a un espacio reducido"
-   ],
-   "correcta": 3,
-   "tip": "El encierro repentino le provoca inquietud mientras aprende a acostumbrarse.",
-   "revisada": false
-  },
-  {
-   "id": "af-t2-009",
-   "oa": "AF-T2",
-   "pregunta": "¿Por qué es fundamental mantener las ventanas cubiertas en todo momento en el anexo?",
-   "opciones": [
-    "Para decorar mejor el lugar",
-    "Porque no les gustaba la luz del sol",
-    "Para que nadie desde afuera pueda verlos y delatar su presencia",
-    "Para que no entre frío"
-   ],
-   "correcta": 2,
-   "tip": "Ser vistos por alguien desde la calle podía significar ser descubiertos.",
-   "revisada": false
-  },
-  {
-   "id": "af-t3-001",
-   "oa": "AF-T3",
-   "pregunta": "¿Con quién tiene Ana más roces y desacuerdos frecuentes dentro del anexo?",
-   "opciones": [
-    "Con su madre y con la señora Van Daan",
-    "Con Peter van Daan",
-    "Con Miep",
-    "Con su padre"
-   ],
-   "correcta": 0,
-   "tip": "Ana registra tensiones repetidas con su madre y con la señora Van Daan.",
-   "revisada": false
-  },
-  {
-   "id": "af-t3-002",
-   "oa": "AF-T3",
-   "pregunta": "¿Quién es el señor Dussel y cuándo se integra al grupo escondido?",
-   "opciones": [
-    "Un vecino que llega desde el primer día",
-    "Un soldado que los protege",
-    "Un dentista que se une al anexo algún tiempo después de los demás",
-    "El hermano de Otto Frank"
-   ],
-   "correcta": 2,
-   "tip": "Dussel llega más tarde y ocupa habitación con Ana.",
-   "revisada": false
-  },
-  {
-   "id": "af-t3-003",
-   "oa": "AF-T3",
-   "pregunta": "¿Por qué surge tensión específicamente entre Ana y el señor Dussel?",
-   "opciones": [
-    "Porque deben compartir la misma habitación y él es bastante exigente con las normas",
-    "Porque compiten por el mismo trabajo",
-    "Porque él le regala cosas que a ella no le gustan",
-    "Porque nunca se hablan"
-   ],
-   "correcta": 0,
-   "tip": "Compartir un espacio tan reducido genera fricciones cotidianas.",
-   "revisada": false
-  },
-  {
-   "id": "af-t3-004",
-   "oa": "AF-T3",
-   "pregunta": "¿Sobre qué temas suelen discutir con más frecuencia los adultos del anexo?",
-   "opciones": [
-    "Sobre la comida, el dinero y la forma de educar a los hijos",
-    "Sobre deportes",
-    "Sobre viajes que planeaban hacer",
-    "Sobre música clásica"
-   ],
-   "correcta": 0,
-   "tip": "La convivencia forzada agudiza los conflictos por recursos escasos y crianza.",
-   "revisada": false
-  },
-  {
-   "id": "af-t3-005",
-   "oa": "AF-T3",
-   "pregunta": "¿Cómo describe Ana a la señora Van Daan en varias entradas de su diario?",
-   "opciones": [
-    "Como alguien vanidoso y propenso a generar discusiones",
-    "Como una persona muy tranquila y silenciosa",
-    "Como su mejor amiga en el anexo",
-    "Como una persona ausente que casi no habla"
-   ],
-   "correcta": 0,
-   "tip": "Ana la retrata como conflictiva y algo presumida.",
-   "revisada": false
-  },
-  {
-   "id": "af-t3-006",
-   "oa": "AF-T3",
-   "pregunta": "¿Qué sentimiento predomina en la relación de Ana con su madre durante esta etapa?",
-   "opciones": [
-    "La sensación de no ser comprendida y cierto distanciamiento emocional",
-    "Una complicidad total sin conflictos",
-    "Indiferencia absoluta de ambas partes",
-    "Una relación idéntica a la de Margot con su madre"
-   ],
-   "correcta": 0,
-   "tip": "Ana siente que su madre no logra entender su forma de ser.",
-   "revisada": false
-  },
-  {
-   "id": "af-t3-007",
-   "oa": "AF-T3",
-   "pregunta": "¿Qué actividades usan los habitantes del anexo para ocupar el tiempo y sobrellevar la convivencia?",
-   "opciones": [
-    "Leer, estudiar y escuchar la radio",
-    "Salir a pasear regularmente",
-    "Ver televisión todos los días",
-    "Organizar fiestas frecuentes"
-   ],
-   "correcta": 0,
-   "tip": "Sin poder salir, la lectura y el estudio ocupan buena parte del día.",
-   "revisada": false
-  },
-  {
-   "id": "af-t3-008",
-   "oa": "AF-T3",
-   "pregunta": "¿Cómo procesa Ana principalmente los conflictos y tensiones que vive en el anexo?",
-   "opciones": [
-    "Huyendo del escondite",
-    "Los ignora por completo",
-    "Escribiendo sus sentimientos y reflexiones en el diario",
-    "Peleando físicamente con los demás"
-   ],
-   "correcta": 2,
-   "tip": "El diario funciona como su vía de desahogo frente a los roces diarios.",
-   "revisada": false
-  },
-  {
-   "id": "af-t3-009",
-   "oa": "AF-T3",
-   "pregunta": "¿Qué actitud suele tener Otto Frank frente al ambiente de tensión entre los adultos del anexo?",
-   "opciones": [
-    "Trata de mantener la calma y mediar los conflictos",
-    "Provoca más discusiones",
-    "Amenaza con abandonar el escondite",
-    "Se mantiene completamente al margen sin opinar nunca"
-   ],
-   "correcta": 0,
-   "tip": "Otto suele actuar como pacificador ante los roces del grupo.",
-   "revisada": false
-  },
-  {
-   "id": "af-t4-001",
-   "oa": "AF-T4",
-   "pregunta": "¿Qué situaciones externas aumentan el miedo de quienes viven en el anexo durante esta etapa?",
-   "opciones": [
-    "Los bombardeos aliados y los robos que ocurren en el edificio",
-    "El buen clima",
-    "Las fiestas del vecindario",
-    "Las visitas inesperadas de amigos"
-   ],
-   "correcta": 0,
-   "tip": "Tanto los ataques aéreos como los intentos de robo ponen en riesgo su escondite.",
-   "revisada": false
-  },
-  {
-   "id": "af-t4-002",
-   "oa": "AF-T4",
-   "pregunta": "¿Cómo reaccionan los escondidos cuando se producen robos en el edificio donde está el anexo?",
-   "opciones": [
-    "Salen a enfrentar a los ladrones",
-    "Llaman a la policía de inmediato",
-    "Permanecen inmóviles y en silencio para no ser descubiertos",
-    "No les afecta en absoluto"
-   ],
-   "correcta": 2,
-   "tip": "Cualquier movimiento o ruido podía delatar su presencia ante los intrusos.",
-   "revisada": false
-  },
-  {
-   "id": "af-t4-003",
-   "oa": "AF-T4",
-   "pregunta": "¿Quiénes son las personas que, arriesgando su propia seguridad, siguen llevando alimentos y noticias al anexo?",
-   "opciones": [
-    "Soldados alemanes",
-    "Desconocidos que cobraban por el servicio",
-    "Los protectores que trabajaban con la familia antes del escondite",
-    "Familiares lejanos"
-   ],
-   "correcta": 2,
-   "tip": "Los protectores continúan ayudando pese al peligro que eso representaba.",
-   "revisada": false
-  },
-  {
-   "id": "af-t4-004",
-   "oa": "AF-T4",
-   "pregunta": "¿Qué tipo de información sobre la guerra sigue con atención el grupo escondido a través de la radio?",
-   "opciones": [
-    "El avance de las tropas aliadas y noticias del frente de guerra",
-    "Programas de entretenimiento",
-    "Pronósticos del clima",
-    "Resultados deportivos"
-   ],
-   "correcta": 0,
-   "tip": "Seguir el curso de la guerra les daba esperanza sobre un posible fin del encierro.",
-   "revisada": false
-  },
-  {
-   "id": "af-t4-005",
-   "oa": "AF-T4",
-   "pregunta": "¿Qué es lo que más temen que ocurra si finalmente son descubiertos en el anexo?",
-   "opciones": [
-    "Ser detenidos y enviados a campos de concentración",
-    "Que pierdan su trabajo",
-    "Que los multen económicamente",
-    "Que los obliguen a mudarse de casa"
-   ],
-   "correcta": 0,
-   "tip": "El miedo constante es a la deportación hacia los campos nazis.",
-   "revisada": false
-  },
-  {
-   "id": "af-t4-006",
-   "oa": "AF-T4",
-   "pregunta": "¿Cómo reaccionan generalmente ante las alarmas y ataques aéreos que se producen cerca?",
-   "opciones": [
-    "Con total indiferencia",
-    "Festejando el suceso",
-    "Saliendo a mirar por curiosidad",
-    "Con miedo, buscando resguardo dentro del anexo"
-   ],
-   "correcta": 3,
-   "tip": "Los bombardeos cercanos generan pánico entre los habitantes del escondite.",
-   "revisada": false
-  },
-  {
-   "id": "af-t4-007",
-   "oa": "AF-T4",
-   "pregunta": "¿Qué recurso comienza a escasear conforme avanza el tiempo de encierro?",
-   "opciones": [
-    "Los libros",
-    "La electricidad únicamente",
-    "La comida y otras provisiones básicas",
-    "El papel para escribir"
-   ],
-   "correcta": 2,
-   "tip": "La escasez de alimentos se vuelve un problema cada vez más serio.",
-   "revisada": false
-  },
-  {
-   "id": "af-t4-008",
-   "oa": "AF-T4",
-   "pregunta": "¿Qué efecto tiene en la salud de los escondidos el estrés y la mala alimentación prolongada?",
-   "opciones": [
-    "Los hace más fuertes físicamente",
-    "No genera ningún efecto negativo",
-    "Mejora su ánimo general",
-    "Provoca problemas de salud y malestar entre los habitantes del anexo"
-   ],
-   "correcta": 3,
-   "tip": "Las condiciones difíciles del encierro afectan el bienestar físico del grupo.",
-   "revisada": false
-  },
-  {
-   "id": "af-t4-009",
-   "oa": "AF-T4",
-   "pregunta": "¿Cómo cambia el ánimo general del grupo cuando llegan noticias favorables sobre el avance aliado?",
-   "opciones": [
-    "Deciden abandonar el escondite de inmediato",
-    "Renace la esperanza de que el encierro pueda terminar pronto",
-    "Se vuelve más pesimista",
-    "No provoca ninguna reacción"
-   ],
-   "correcta": 1,
-   "tip": "Las buenas noticias bélicas alimentan la esperanza de libertad.",
-   "revisada": false
-  },
-  {
-   "id": "af-t5-001",
-   "oa": "AF-T5",
-   "pregunta": "¿Qué tipo de cambios experimenta Ana durante el tiempo que lleva encerrada?",
-   "opciones": [
-    "Ningún cambio, permanece igual todo el tiempo",
-    "Cambios físicos y emocionales propios de crecer y madurar",
-    "Deja de tener sentimientos por completo",
-    "Solo cambios en su apariencia, nada emocional"
-   ],
-   "correcta": 1,
-   "tip": "El encierro coincide con su paso de niña a adolescente, con todos esos cambios.",
-   "revisada": false
-  },
-  {
-   "id": "af-t5-002",
-   "oa": "AF-T5",
-   "pregunta": "¿Cuál es uno de los principales conflictos internos que Ana expresa respecto a su madre en esta etapa?",
-   "opciones": [
-    "Sentir que su madre la comprende perfectamente",
-    "No tener ningún tipo de sentimiento hacia ella",
-    "Sentirse incomprendida y percibir mayor cercanía con su padre",
-    "Admirarla como su modelo absoluto a seguir"
-   ],
-   "correcta": 2,
-   "tip": "Ana reconoce sentirse más cerca de Otto que de su madre.",
-   "revisada": false
-  },
-  {
-   "id": "af-t5-003",
-   "oa": "AF-T5",
-   "pregunta": "¿Qué actividades favorecen el desarrollo personal de Ana durante el encierro?",
-   "opciones": [
-    "Ninguna, pasa el tiempo sin hacer nada",
-    "Trabajar en el negocio familiar",
-    "Leer, estudiar distintas materias y escribir en su diario",
-    "Practicar deportes al aire libre"
-   ],
-   "correcta": 2,
-   "tip": "La lectura y la escritura son claves en su crecimiento personal.",
-   "revisada": false
-  },
-  {
-   "id": "af-t5-004",
-   "oa": "AF-T5",
-   "pregunta": "¿Cómo describe Ana su propio mundo interior en esta parte del diario?",
-   "opciones": [
-    "Como idéntico al de su hermana Margot",
-    "Como algo que no le interesa analizar",
-    "Como algo complejo, reconociendo una dualidad entre cómo la ven y cómo se siente por dentro",
-    "Como algo simple y sin ninguna complejidad"
-   ],
-   "correcta": 2,
-   "tip": "Ana reflexiona sobre la diferencia entre su lado externo y su lado más íntimo.",
-   "revisada": false
-  },
-  {
-   "id": "af-t5-005",
-   "oa": "AF-T5",
-   "pregunta": "¿Cómo es la relación de Ana con su padre, Otto Frank, durante el encierro?",
-   "opciones": [
-    "Cercana; él es su principal confidente dentro de la familia",
-    "Muy conflictiva y llena de peleas",
-    "Distante y fría",
-    "Inexistente, casi no se hablan"
-   ],
-   "correcta": 0,
-   "tip": "Ana confía especialmente en su padre entre los miembros de su familia.",
-   "revisada": false
-  },
-  {
-   "id": "af-t5-006",
-   "oa": "AF-T5",
-   "pregunta": "¿Qué sentimiento describe Ana pese a estar rodeada de otras siete personas todo el tiempo?",
-   "opciones": [
-    "Una sensación constante de soledad",
-    "Nunca se siente sola en ningún momento",
-    "Indiferencia total ante los demás",
-    "Compañía perfecta sin ningún vacío emocional"
-   ],
-   "correcta": 0,
-   "tip": "Ana puede sentirse sola emocionalmente aunque esté acompañada físicamente.",
-   "revisada": false
-  },
-  {
-   "id": "af-t5-007",
-   "oa": "AF-T5",
-   "pregunta": "¿Cómo evoluciona el estilo de escritura de Ana a medida que avanza el diario?",
-   "opciones": [
-    "Se vuelve más superficial con el tiempo",
-    "No presenta ningún cambio",
-    "Se vuelve más profundo y reflexivo sobre sí misma y su entorno",
-    "Deja de escribir por completo"
-   ],
-   "correcta": 2,
-   "tip": "Sus reflexiones se hacen cada vez más maduras conforme crece.",
-   "revisada": false
-  },
-  {
-   "id": "af-t5-008",
-   "oa": "AF-T5",
-   "pregunta": "¿Qué aspiración menciona Ana sobre su futuro profesional?",
-   "opciones": [
-    "No tener ninguna aspiración concreta",
-    "Ser doctora",
-    "Dedicarse al comercio familiar",
-    "Convertirse en escritora o periodista"
-   ],
-   "correcta": 3,
-   "tip": "Ana sueña con que sus escritos algún día sean leídos por más personas.",
-   "revisada": false
-  },
-  {
-   "id": "af-t5-009",
-   "oa": "AF-T5",
-   "pregunta": "¿Qué hace especialmente difícil para Ana el paso de niña a adolescente en su situación?",
-   "opciones": [
-    "Tener demasiada libertad para experimentar",
-    "Vivirlo en un espacio reducido, sin privacidad y bajo constante tensión",
-    "Vivirlo rodeada de muchos amigos de su edad",
-    "No tiene ninguna dificultad especial"
-   ],
-   "correcta": 1,
-   "tip": "El encierro y la falta de espacio propio complican esta etapa de cambios.",
-   "revisada": false
-  },
-  {
-   "id": "af-t6-001",
-   "oa": "AF-T6",
-   "pregunta": "¿Quién es Peter van Daan dentro del grupo de escondidos?",
-   "opciones": [
-    "El dentista que se integra después",
-    "El hijo de la familia Van Daan que vive también en el anexo",
-    "Un primo de Ana",
-    "Un protector externo que los visita"
-   ],
-   "correcta": 1,
-   "tip": "Peter es el hijo adolescente de los Van Daan, compañero de encierro.",
-   "revisada": false
-  },
-  {
-   "id": "af-t6-002",
-   "oa": "AF-T6",
-   "pregunta": "¿Cómo era la relación entre Ana y Peter al principio de convivir en el anexo?",
-   "opciones": [
-    "Eran mejores amigos desde antes del escondite",
-    "Se llevaban muy mal y peleaban constantemente",
-    "Muy cercana desde el primer día",
-    "Distante, casi sin mucho contacto entre ellos"
-   ],
-   "correcta": 3,
-   "tip": "Al inicio apenas interactuaban; el acercamiento llega después.",
-   "revisada": false
-  },
-  {
-   "id": "af-t6-003",
-   "oa": "AF-T6",
-   "pregunta": "¿Qué provoca que Ana y Peter comiencen a acercarse con el paso del tiempo?",
-   "opciones": [
-    "El compartir tiempo, confidencias y conversaciones en el encierro",
-    "La intervención directa de sus padres",
-    "Una discusión familiar que los obliga a hablar",
-    "Una tarea escolar en conjunto"
-   ],
-   "correcta": 0,
-   "tip": "El tiempo compartido en el anexo los va acercando poco a poco.",
-   "revisada": false
-  },
-  {
-   "id": "af-t6-004",
-   "oa": "AF-T6",
-   "pregunta": "¿Qué tipo de sentimiento desarrolla Ana hacia Peter conforme avanza esta etapa del diario?",
-   "opciones": [
-    "Indiferencia total",
-    "Un primer enamoramiento",
-    "Una relación de tipo maternal",
-    "Un profundo desagrado"
-   ],
-   "correcta": 1,
-   "tip": "Ana describe en su diario los sentimientos propios de un primer amor.",
-   "revisada": false
-  },
-  {
-   "id": "af-t6-005",
-   "oa": "AF-T6",
-   "pregunta": "¿Qué suelen compartir Ana y Peter en sus encuentros dentro del anexo?",
-   "opciones": [
-    "Juegos de mesa exclusivamente",
-    "Discusiones políticas complejas",
-    "No comparten nada relevante",
-    "Conversaciones sobre sus miedos, sueños y pensamientos íntimos"
-   ],
-   "correcta": 3,
-   "tip": "Sus conversaciones abordan temas personales y profundos para su edad.",
-   "revisada": false
-  },
-  {
-   "id": "af-t6-006",
-   "oa": "AF-T6",
-   "pregunta": "¿Cómo reaccionan los adultos del anexo ante el acercamiento entre Ana y Peter?",
-   "opciones": [
-    "Notan la cercanía y algunos expresan cierta preocupación u opinión al respecto",
-    "Los obligan a casarse",
-    "Celebran con una fiesta",
-    "Los ignoran por completo"
-   ],
-   "correcta": 0,
-   "tip": "La convivencia cercana hace que los adultos también noten y comenten esta relación.",
-   "revisada": false
-  },
-  {
-   "id": "af-t6-007",
-   "oa": "AF-T6",
-   "pregunta": "¿Qué mascota tiene Peter que también forma parte de la vida diaria en el anexo?",
-   "opciones": [
-    "Un perro",
-    "Un conejo",
-    "Un canario",
-    "Un gato llamado Mouschi"
-   ],
-   "correcta": 3,
-   "tip": "El gato de Peter, Mouschi, convive con ellos en el escondite.",
-   "revisada": false
-  },
-  {
-   "id": "af-t6-008",
-   "oa": "AF-T6",
-   "pregunta": "¿Qué duda plantea Ana sobre sus sentimientos hacia Peter en algunas entradas del diario?",
-   "opciones": [
-    "Se pregunta si es amor verdadero o solo producto de estar tan encerrados juntos",
-    "Se pregunta si prefiere a otro miembro del grupo",
-    "No tiene ninguna duda al respecto",
-    "Duda de si Peter existe realmente"
-   ],
-   "correcta": 0,
-   "tip": "Ana reflexiona sobre si sus sentimientos nacen del aislamiento o son genuinos.",
-   "revisada": false
-  },
-  {
-   "id": "af-t6-009",
-   "oa": "AF-T6",
-   "pregunta": "¿Qué aprende Ana sobre sí misma a partir de su cercanía con Peter?",
-   "opciones": [
-    "Que no le interesa relacionarse con nadie",
-    "Que prefiere estar siempre sola",
-    "Que no es capaz de sentir afecto por nadie",
-    "Aspectos de su propia madurez emocional y su necesidad de ser comprendida"
-   ],
-   "correcta": 3,
-   "tip": "Esta relación la ayuda a conocerse mejor emocionalmente.",
-   "revisada": false
-  },
-  {
-   "id": "af-t7-001",
-   "oa": "AF-T7",
-   "pregunta": "¿Qué idea expresa Ana sobre la naturaleza humana pese a las dificultades que vive?",
-   "opciones": [
-    "Que ya no cree en nada ni nadie",
-    "Que prefiere no pensar en el tema",
-    "Que, a pesar de todo, sigue creyendo en la bondad de las personas",
-    "Que las personas son fundamentalmente malas"
-   ],
-   "correcta": 2,
-   "tip": "Una de sus reflexiones más conocidas es su fe en la bondad humana.",
-   "revisada": false
-  },
-  {
-   "id": "af-t7-002",
-   "oa": "AF-T7",
-   "pregunta": "¿Qué postura tiene Ana frente a la guerra y la violencia en sus reflexiones?",
-   "opciones": [
-    "La rechaza y expresa su deseo de que llegue la paz",
-    "Considera que no le afecta en nada",
-    "No tiene ninguna opinión al respecto",
-    "La apoya completamente"
-   ],
-   "correcta": 0,
-   "tip": "Ana manifiesta un fuerte anhelo de paz frente al horror de la guerra.",
-   "revisada": false
-  },
-  {
-   "id": "af-t7-003",
-   "oa": "AF-T7",
-   "pregunta": "¿Qué sueños expresa Ana sobre su vida una vez que termine el encierro?",
-   "opciones": [
-    "No pensar más en el futuro",
-    "Mudarse a otro país lejano de forma permanente",
-    "Dejar de escribir para siempre",
-    "Volver a la escuela y quizás publicar sus escritos"
-   ],
-   "correcta": 3,
-   "tip": "Ana imagina un futuro donde puede estudiar y compartir lo que escribe.",
-   "revisada": false
-  },
-  {
-   "id": "af-t7-004",
-   "oa": "AF-T7",
-   "pregunta": "¿Cómo logra Ana mantener cierta esperanza en medio de una situación tan difícil?",
-   "opciones": [
-    "Dejando de comunicarse con su familia",
-    "No es posible, pierde toda esperanza",
-    "Aferrándose a sus reflexiones, sus sueños futuros y su escritura",
-    "Evitando pensar por completo en su situación"
-   ],
-   "correcta": 2,
-   "tip": "Escribir y soñar con el futuro son formas en que Ana sostiene su esperanza.",
-   "revisada": false
-  },
-  {
-   "id": "af-t7-005",
-   "oa": "AF-T7",
-   "pregunta": "¿Qué opinión expresa Ana respecto a la discriminación y la injusticia que vive su pueblo?",
-   "opciones": [
-    "No tiene ninguna opinión formada",
-    "La critica y reflexiona sobre lo injusto de la persecución que sufren",
-    "Cree que merecen ese trato",
-    "La considera justificada"
-   ],
-   "correcta": 1,
-   "tip": "Ana cuestiona la discriminación y la violencia contra los judíos.",
-   "revisada": false
-  },
-  {
-   "id": "af-t7-006",
-   "oa": "AF-T7",
-   "pregunta": "¿Qué función cumple la escritura para Ana durante todo este período de encierro?",
-   "opciones": [
-    "Es una forma de resistencia interior y de desahogo emocional",
-    "Ninguna, escribe solo por obligación",
-    "Es un castigo que debe cumplir",
-    "Solo la usa para hacer listas de tareas"
-   ],
-   "correcta": 0,
-   "tip": "Escribir le permite procesar lo que vive y mantenerse firme emocionalmente.",
-   "revisada": false
-  },
-  {
-   "id": "af-t7-007",
-   "oa": "AF-T7",
-   "pregunta": "¿Qué tipo de valores destaca Ana como importantes para ella en sus reflexiones más profundas?",
-   "opciones": [
-    "La resignación total ante todo",
-    "El egoísmo y la indiferencia",
-    "Valores como la bondad, la esperanza y la búsqueda de sentido",
-    "El deseo de venganza"
-   ],
-   "correcta": 2,
-   "tip": "Ana valora profundamente la bondad y mantener la esperanza pese a todo.",
-   "revisada": false
-  },
-  {
-   "id": "af-t7-008",
-   "oa": "AF-T7",
-   "pregunta": "¿Qué extraña especialmente Ana relacionado con el mundo natural, al estar encerrada tanto tiempo?",
-   "opciones": [
-    "El ruido de la ciudad",
-    "Las tiendas y los centros comerciales",
-    "Ver el cielo, los árboles y disfrutar del aire libre",
-    "No extraña nada de eso"
-   ],
-   "correcta": 2,
-   "tip": "El encierro le hace valorar y añorar elementos simples de la naturaleza.",
-   "revisada": false
-  },
-  {
-   "id": "af-t7-009",
-   "oa": "AF-T7",
-   "pregunta": "¿Qué mensaje transmite Ana, en general, sobre cómo enfrentar momentos difíciles?",
-   "opciones": [
-    "Que no vale la pena reflexionar sobre nada",
-    "Que es mejor rendirse ante la adversidad",
-    "Que, incluso en la adversidad, es posible encontrar sentido y mantener la esperanza",
-    "Que la felicidad es imposible en cualquier circunstancia"
-   ],
-   "correcta": 2,
-   "tip": "Su actitud transmite que la esperanza puede sostenerse incluso en tiempos duros.",
-   "revisada": false
-  },
-  {
-   "id": "af-t8-001",
-   "oa": "AF-T8",
-   "pregunta": "¿Qué característica tiene la última entrada del diario de Ana, en comparación con las anteriores?",
-   "opciones": [
-    "Anuncia claramente que serán descubiertos",
-    "Es una carta de despedida explícita",
-    "Es mucho más extensa que todas las demás",
-    "Es relativamente breve y no da indicios de lo que ocurrirá después"
-   ],
-   "correcta": 3,
-   "tip": "El diario termina de forma abrupta, sin que Ana supiera lo que vendría.",
-   "revisada": false
-  },
-  {
-   "id": "af-t8-002",
-   "oa": "AF-T8",
-   "pregunta": "¿Qué sucede finalmente con los ocho habitantes del anexo secreto?",
-   "opciones": [
-    "Logran escapar a otro país",
-    "Permanecen escondidos hasta el fin de la guerra",
-    "Son descubiertos y detenidos por las autoridades",
-    "Deciden entregarse voluntariamente sin motivo"
-   ],
-   "correcta": 2,
-   "tip": "El escondite es descubierto y todos son arrestados.",
-   "revisada": false
-  },
-  {
-   "id": "af-t8-003",
-   "oa": "AF-T8",
-   "pregunta": "¿Se sabe con total certeza quién delató a los escondidos del anexo?",
-   "opciones": [
-    "No existe una certeza absoluta; ha sido motivo de investigación y sospechas",
-    "Sí, quedó comprobado sin ninguna duda",
-    "Nadie los delató, fue pura casualidad",
-    "Fue uno de los propios escondidos"
-   ],
-   "correcta": 0,
-   "tip": "El origen exacto de la delación sigue siendo un tema debatido históricamente.",
-   "revisada": false
-  },
-  {
-   "id": "af-t8-004",
-   "oa": "AF-T8",
-   "pregunta": "¿A qué tipo de lugares son enviados los ocho tras ser detenidos?",
-   "opciones": [
-    "A campos de concentración nazis",
-    "A un hospital para su cuidado",
-    "A sus casas de origen",
-    "A otro país neutral"
-   ],
-   "correcta": 0,
-   "tip": "Tras el arresto, son deportados a distintos campos de concentración.",
-   "revisada": false
-  },
-  {
-   "id": "af-t8-005",
-   "oa": "AF-T8",
-   "pregunta": "¿Qué les ocurre finalmente a Ana y a su hermana Margot?",
-   "opciones": [
-    "Logran escapar del campo",
-    "Se reencuentran con su padre poco después",
-    "Sobreviven juntas hasta el final de la guerra",
-    "Mueren de tifus en el campo de Bergen-Belsen poco antes de la liberación"
-   ],
-   "correcta": 3,
-   "tip": "Ambas hermanas mueren por una enfermedad, muy cerca del fin de la guerra.",
-   "revisada": false
-  },
-  {
-   "id": "af-t8-006",
-   "oa": "AF-T8",
-   "pregunta": "¿Quién es el único integrante de los ocho escondidos que sobrevive a la guerra?",
-   "opciones": [
-    "La señora Van Daan",
-    "El señor Dussel",
-    "Peter van Daan",
-    "Otto Frank, el padre de Ana"
-   ],
-   "correcta": 3,
-   "tip": "Otto Frank es el único sobreviviente entre los ocho del anexo.",
-   "revisada": false
-  },
-  {
-   "id": "af-t8-007",
-   "oa": "AF-T8",
-   "pregunta": "¿Cómo logra conservarse el diario de Ana después de la detención del grupo?",
-   "opciones": [
-    "Ana se lo lleva consigo al campo de concentración",
-    "Se pierde para siempre",
-    "Lo encuentran las autoridades y lo destruyen",
-    "Miep lo encuentra y lo guarda a la espera de poder devolverlo"
-   ],
-   "correcta": 3,
-   "tip": "Una de las protectoras rescata los escritos de Ana tras la detención.",
-   "revisada": false
-  },
-  {
-   "id": "af-t8-008",
-   "oa": "AF-T8",
-   "pregunta": "¿Qué decisión toma Otto Frank respecto al diario de su hija una vez que lo recibe?",
-   "opciones": [
-    "Lo guarda en privado y nunca lo comparte",
-    "Lo destruye por respeto a la privacidad de Ana",
-    "Decide publicarlo para que otras personas puedan leerlo",
-    "Se lo entrega a otra familia"
-   ],
-   "correcta": 2,
-   "tip": "Otto decide dar a conocer los escritos de Ana al mundo.",
-   "revisada": false
-  },
-  {
-   "id": "af-t8-009",
-   "oa": "AF-T8",
-   "pregunta": "¿Por qué se considera que el diario de Ana Frank es un testimonio histórico importante?",
-   "opciones": [
-    "Porque es una novela de ficción sin relación con hechos reales",
-    "Porque da voz y rostro humano a las víctimas del Holocausto",
-    "Porque describe únicamente paisajes y viajes",
-    "Porque fue escrito por un historiador profesional"
-   ],
-   "correcta": 1,
-   "tip": "El diario permite comprender de forma cercana el sufrimiento humano durante el Holocausto.",
-   "revisada": false
-  }
- ]
+  "asignatura": "Lectura · El diario de Ana Frank",
+  "nivel": "8° básico",
+  "total_preguntas": 72,
+  "revisadas": 0,
+  "nota": "Preguntas de comprensión originales. No reproducen texto del libro. Opciones barajadas para evitar sesgo de posicion.",
+  "preguntas": [
+    {
+      "id": "af-t1-001",
+      "oa": "AF-T1",
+      "pregunta": "¿Qué motiva principalmente a Ana a comenzar a escribir un diario?",
+      "opciones": [
+        "Un profesor le pidió llevar un registro escolar",
+        "Su padre le exigió que practicara la escritura",
+        "Quería ganar un concurso literario",
+        "Sentía que no tenía una amiga a quien contarle todo, así que decidió que el diario cumpliría ese papel"
+      ],
+      "correcta": 3,
+      "tip": "Ana buscaba una confidente y encontró esa función en su cuaderno.",
+      "revisada": false
+    },
+    {
+      "id": "af-t1-002",
+      "oa": "AF-T1",
+      "pregunta": "¿Con qué ocasión especial recibe Ana el cuaderno que se convertirá en su diario?",
+      "opciones": [
+        "La Navidad",
+        "Un regalo sorpresa sin motivo",
+        "Su cumpleaños",
+        "Un premio escolar"
+      ],
+      "correcta": 2,
+      "tip": "Fue un obsequio de cumpleaños que ella misma había pedido.",
+      "revisada": false
+    },
+    {
+      "id": "af-t1-003",
+      "oa": "AF-T1",
+      "pregunta": "¿Qué nombre le da Ana a su diario, como si fuera una amiga a quien le escribe cartas?",
+      "opciones": [
+        "Miep",
+        "Margot",
+        "Kitty",
+        "Peter"
+      ],
+      "correcta": 2,
+      "tip": "Ana se dirige a su diario como si conversara con una amiga imaginaria.",
+      "revisada": false
+    },
+    {
+      "id": "af-t1-004",
+      "oa": "AF-T1",
+      "pregunta": "¿Qué tipo de medidas afectaban la vida cotidiana de las familias judías en Ámsterdam antes del escondite?",
+      "opciones": [
+        "Ninguna, vivían con total normalidad",
+        "Solo se les pedía pagar un impuesto extra",
+        "Debían mudarse a otro país voluntariamente",
+        "Restricciones y leyes discriminatorias impuestas por la ocupación nazi"
+      ],
+      "correcta": 3,
+      "tip": "Las leyes antijudías limitaban dónde podían ir, estudiar o trabajar.",
+      "revisada": false
+    },
+    {
+      "id": "af-t1-005",
+      "oa": "AF-T1",
+      "pregunta": "¿Por qué la familia Frank ya se había trasladado desde Alemania a Holanda años antes de esconderse?",
+      "opciones": [
+        "Por recomendación médica",
+        "Para escapar de la persecución nazi que ya se vivía en Alemania",
+        "Para estudiar en una universidad holandesa",
+        "Por motivos de trabajo del padre"
+      ],
+      "correcta": 1,
+      "tip": "La familia huyó de Alemania buscando mayor seguridad.",
+      "revisada": false
+    },
+    {
+      "id": "af-t1-006",
+      "oa": "AF-T1",
+      "pregunta": "¿Cómo se describe a sí misma Ana al comienzo del diario, en cuanto a su forma de ser?",
+      "opciones": [
+        "Indiferente a todo lo que sucede a su alrededor",
+        "Habladora, extrovertida y le gusta ser el centro de atención",
+        "Muy seria y poco sociable",
+        "Tímida y callada"
+      ],
+      "correcta": 1,
+      "tip": "Ana reconoce que le encanta conversar y destacar entre sus compañeros.",
+      "revisada": false
+    },
+    {
+      "id": "af-t1-007",
+      "oa": "AF-T1",
+      "pregunta": "¿Qué acontecimiento urgente apresura la decisión de la familia Frank de entrar al escondite antes de lo planeado?",
+      "opciones": [
+        "El padre pierde su trabajo",
+        "Se vence el contrato de arriendo de su casa",
+        "Ana se enferma gravemente",
+        "Margot recibe una citación de las autoridades para presentarse a un traslado forzado"
+      ],
+      "correcta": 3,
+      "tip": "La citación a Margot obligó a adelantar los planes de esconderse.",
+      "revisada": false
+    },
+    {
+      "id": "af-t1-008",
+      "oa": "AF-T1",
+      "pregunta": "¿Cómo describe Ana su relación con su hermana mayor, Margot, al inicio del diario?",
+      "opciones": [
+        "Margot es mucho menor que ella",
+        "Son inseparables y nunca discuten",
+        "No tienen ningún tipo de relación",
+        "Siente cierta rivalidad, pues percibe que Margot es vista como la hija ejemplar"
+      ],
+      "correcta": 3,
+      "tip": "Ana a veces se compara con Margot y siente que no está a su altura.",
+      "revisada": false
+    },
+    {
+      "id": "af-t1-009",
+      "oa": "AF-T1",
+      "pregunta": "¿Cuál es la razón principal por la que la familia Frank decide esconderse?",
+      "opciones": [
+        "Fue una decisión tomada por el gobierno holandés",
+        "Querían vivir una aventura",
+        "Buscaban evitar ser capturados y deportados por el régimen nazi",
+        "Necesitaban ahorrar dinero de arriendo"
+      ],
+      "correcta": 2,
+      "tip": "Esconderse era la manera de intentar salvar sus vidas frente a la persecución.",
+      "revisada": false
+    },
+    {
+      "id": "af-t2-001",
+      "oa": "AF-T2",
+      "pregunta": "¿Cuántas personas en total llegan a vivir escondidas en el anexo secreto?",
+      "opciones": [
+        "Cuatro",
+        "Ocho",
+        "Diez",
+        "Seis"
+      ],
+      "correcta": 1,
+      "tip": "Con el tiempo se suman las familias Frank y Van Daan, además de un dentista.",
+      "revisada": false
+    },
+    {
+      "id": "af-t2-002",
+      "oa": "AF-T2",
+      "pregunta": "¿Dónde se ubica el escondite en el que se refugian los Frank?",
+      "opciones": [
+        "En un barco",
+        "En las habitaciones traseras y ocultas de un edificio, sobre un negocio",
+        "En una casa de campo",
+        "En un sótano bajo tierra"
+      ],
+      "correcta": 1,
+      "tip": "El anexo secreto está escondido detrás de una estantería, encima de las oficinas.",
+      "revisada": false
+    },
+    {
+      "id": "af-t2-003",
+      "oa": "AF-T2",
+      "pregunta": "¿Quiénes son las personas que ayudan a los escondidos llevándoles comida y noticias desde el exterior?",
+      "opciones": [
+        "Soldados aliados",
+        "Empleados de confianza del padre de Ana, como Miep y Bep",
+        "Vecinos desconocidos",
+        "Los antiguos compañeros de colegio de Ana"
+      ],
+      "correcta": 1,
+      "tip": "Estos colaboradores arriesgaban su propia seguridad para ayudarlos.",
+      "revisada": false
+    },
+    {
+      "id": "af-t2-004",
+      "oa": "AF-T2",
+      "pregunta": "¿Qué norma estricta debían cumplir los escondidos durante el horario de trabajo en las oficinas de abajo?",
+      "opciones": [
+        "Debían guardar silencio absoluto y evitar hacer ruido",
+        "Podían recibir visitas",
+        "Podían salir a caminar",
+        "Debían cantar en voz baja"
+      ],
+      "correcta": 0,
+      "tip": "Cualquier ruido durante el día podía delatarlos ante los empleados del edificio.",
+      "revisada": false
+    },
+    {
+      "id": "af-t2-005",
+      "oa": "AF-T2",
+      "pregunta": "¿Cómo se enteraban los escondidos de lo que ocurría en la guerra y en el mundo exterior?",
+      "opciones": [
+        "Recibiendo visitas de periodistas",
+        "A través de cartas diarias",
+        "Escuchando la radio a escondidas",
+        "No tenían forma de saberlo"
+      ],
+      "correcta": 2,
+      "tip": "La radio era su principal fuente de noticias sobre el avance de la guerra.",
+      "revisada": false
+    },
+    {
+      "id": "af-t2-006",
+      "oa": "AF-T2",
+      "pregunta": "¿Qué funcionaba en la parte visible del edificio donde estaba escondido el anexo?",
+      "opciones": [
+        "Una biblioteca pública",
+        "Un hospital",
+        "Una escuela",
+        "Un negocio o empresa donde había trabajado el padre de Ana"
+      ],
+      "correcta": 3,
+      "tip": "El anexo estaba oculto justo encima de las oficinas de un negocio.",
+      "revisada": false
+    },
+    {
+      "id": "af-t2-007",
+      "oa": "AF-T2",
+      "pregunta": "¿Cuándo se incorpora la familia Van Daan al escondite en relación con los Frank?",
+      "opciones": [
+        "Nunca llegaron a compartir el escondite",
+        "Antes que los Frank",
+        "El mismo día, exactamente a la misma hora",
+        "Poco tiempo después de que los Frank ya estuvieran instalados"
+      ],
+      "correcta": 3,
+      "tip": "Los Van Daan se suman al anexo cuando los Frank ya llevaban un tiempo allí.",
+      "revisada": false
+    },
+    {
+      "id": "af-t2-008",
+      "oa": "AF-T2",
+      "pregunta": "¿Qué sensación describe Ana al principio sobre vivir encerrada en el anexo?",
+      "opciones": [
+        "Total indiferencia",
+        "Alegría constante sin ninguna preocupación",
+        "Aburrimiento absoluto desde el primer día",
+        "Una mezcla de miedo, extrañeza y el desafío de adaptarse a un espacio reducido"
+      ],
+      "correcta": 3,
+      "tip": "El encierro repentino le provoca inquietud mientras aprende a acostumbrarse.",
+      "revisada": false
+    },
+    {
+      "id": "af-t2-009",
+      "oa": "AF-T2",
+      "pregunta": "¿Por qué es fundamental mantener las ventanas cubiertas en todo momento en el anexo?",
+      "opciones": [
+        "Para que nadie desde afuera pueda verlos y delatar su presencia",
+        "Para que no entre frío",
+        "Para decorar mejor el lugar",
+        "Porque no les gustaba la luz del sol"
+      ],
+      "correcta": 0,
+      "tip": "Ser vistos por alguien desde la calle podía significar ser descubiertos.",
+      "revisada": false
+    },
+    {
+      "id": "af-t3-001",
+      "oa": "AF-T3",
+      "pregunta": "¿Con quién tiene Ana más roces y desacuerdos frecuentes dentro del anexo?",
+      "opciones": [
+        "Con Peter van Daan",
+        "Con Miep",
+        "Con su padre",
+        "Con su madre y con la señora Van Daan"
+      ],
+      "correcta": 3,
+      "tip": "Ana registra tensiones repetidas con su madre y con la señora Van Daan.",
+      "revisada": false
+    },
+    {
+      "id": "af-t3-002",
+      "oa": "AF-T3",
+      "pregunta": "¿Quién es el señor Dussel y cuándo se integra al grupo escondido?",
+      "opciones": [
+        "Un soldado que los protege",
+        "Un dentista que se une al anexo algún tiempo después de los demás",
+        "Un vecino que llega desde el primer día",
+        "El hermano de Otto Frank"
+      ],
+      "correcta": 1,
+      "tip": "Dussel llega más tarde y ocupa habitación con Ana.",
+      "revisada": false
+    },
+    {
+      "id": "af-t3-003",
+      "oa": "AF-T3",
+      "pregunta": "¿Por qué surge tensión específicamente entre Ana y el señor Dussel?",
+      "opciones": [
+        "Porque él le regala cosas que a ella no le gustan",
+        "Porque deben compartir la misma habitación y él es bastante exigente con las normas",
+        "Porque nunca se hablan",
+        "Porque compiten por el mismo trabajo"
+      ],
+      "correcta": 1,
+      "tip": "Compartir un espacio tan reducido genera fricciones cotidianas.",
+      "revisada": false
+    },
+    {
+      "id": "af-t3-004",
+      "oa": "AF-T3",
+      "pregunta": "¿Sobre qué temas suelen discutir con más frecuencia los adultos del anexo?",
+      "opciones": [
+        "Sobre la comida, el dinero y la forma de educar a los hijos",
+        "Sobre deportes",
+        "Sobre música clásica",
+        "Sobre viajes que planeaban hacer"
+      ],
+      "correcta": 0,
+      "tip": "La convivencia forzada agudiza los conflictos por recursos escasos y crianza.",
+      "revisada": false
+    },
+    {
+      "id": "af-t3-005",
+      "oa": "AF-T3",
+      "pregunta": "¿Cómo describe Ana a la señora Van Daan en varias entradas de su diario?",
+      "opciones": [
+        "Como una persona muy tranquila y silenciosa",
+        "Como una persona ausente que casi no habla",
+        "Como su mejor amiga en el anexo",
+        "Como alguien vanidoso y propenso a generar discusiones"
+      ],
+      "correcta": 3,
+      "tip": "Ana la retrata como conflictiva y algo presumida.",
+      "revisada": false
+    },
+    {
+      "id": "af-t3-006",
+      "oa": "AF-T3",
+      "pregunta": "¿Qué sentimiento predomina en la relación de Ana con su madre durante esta etapa?",
+      "opciones": [
+        "Indiferencia absoluta de ambas partes",
+        "Una relación idéntica a la de Margot con su madre",
+        "La sensación de no ser comprendida y cierto distanciamiento emocional",
+        "Una complicidad total sin conflictos"
+      ],
+      "correcta": 2,
+      "tip": "Ana siente que su madre no logra entender su forma de ser.",
+      "revisada": false
+    },
+    {
+      "id": "af-t3-007",
+      "oa": "AF-T3",
+      "pregunta": "¿Qué actividades usan los habitantes del anexo para ocupar el tiempo y sobrellevar la convivencia?",
+      "opciones": [
+        "Ver televisión todos los días",
+        "Salir a pasear regularmente",
+        "Leer, estudiar y escuchar la radio",
+        "Organizar fiestas frecuentes"
+      ],
+      "correcta": 2,
+      "tip": "Sin poder salir, la lectura y el estudio ocupan buena parte del día.",
+      "revisada": false
+    },
+    {
+      "id": "af-t3-008",
+      "oa": "AF-T3",
+      "pregunta": "¿Cómo procesa Ana principalmente los conflictos y tensiones que vive en el anexo?",
+      "opciones": [
+        "Los ignora por completo",
+        "Huyendo del escondite",
+        "Escribiendo sus sentimientos y reflexiones en el diario",
+        "Peleando físicamente con los demás"
+      ],
+      "correcta": 2,
+      "tip": "El diario funciona como su vía de desahogo frente a los roces diarios.",
+      "revisada": false
+    },
+    {
+      "id": "af-t3-009",
+      "oa": "AF-T3",
+      "pregunta": "¿Qué actitud suele tener Otto Frank frente al ambiente de tensión entre los adultos del anexo?",
+      "opciones": [
+        "Amenaza con abandonar el escondite",
+        "Se mantiene completamente al margen sin opinar nunca",
+        "Trata de mantener la calma y mediar los conflictos",
+        "Provoca más discusiones"
+      ],
+      "correcta": 2,
+      "tip": "Otto suele actuar como pacificador ante los roces del grupo.",
+      "revisada": false
+    },
+    {
+      "id": "af-t4-001",
+      "oa": "AF-T4",
+      "pregunta": "¿Qué situaciones externas aumentan el miedo de quienes viven en el anexo durante esta etapa?",
+      "opciones": [
+        "El buen clima",
+        "Las fiestas del vecindario",
+        "Los bombardeos aliados y los robos que ocurren en el edificio",
+        "Las visitas inesperadas de amigos"
+      ],
+      "correcta": 2,
+      "tip": "Tanto los ataques aéreos como los intentos de robo ponen en riesgo su escondite.",
+      "revisada": false
+    },
+    {
+      "id": "af-t4-002",
+      "oa": "AF-T4",
+      "pregunta": "¿Cómo reaccionan los escondidos cuando se producen robos en el edificio donde está el anexo?",
+      "opciones": [
+        "Salen a enfrentar a los ladrones",
+        "No les afecta en absoluto",
+        "Permanecen inmóviles y en silencio para no ser descubiertos",
+        "Llaman a la policía de inmediato"
+      ],
+      "correcta": 2,
+      "tip": "Cualquier movimiento o ruido podía delatar su presencia ante los intrusos.",
+      "revisada": false
+    },
+    {
+      "id": "af-t4-003",
+      "oa": "AF-T4",
+      "pregunta": "¿Quiénes son las personas que, arriesgando su propia seguridad, siguen llevando alimentos y noticias al anexo?",
+      "opciones": [
+        "Desconocidos que cobraban por el servicio",
+        "Los protectores que trabajaban con la familia antes del escondite",
+        "Soldados alemanes",
+        "Familiares lejanos"
+      ],
+      "correcta": 1,
+      "tip": "Los protectores continúan ayudando pese al peligro que eso representaba.",
+      "revisada": false
+    },
+    {
+      "id": "af-t4-004",
+      "oa": "AF-T4",
+      "pregunta": "¿Qué tipo de información sobre la guerra sigue con atención el grupo escondido a través de la radio?",
+      "opciones": [
+        "Resultados deportivos",
+        "El avance de las tropas aliadas y noticias del frente de guerra",
+        "Programas de entretenimiento",
+        "Pronósticos del clima"
+      ],
+      "correcta": 1,
+      "tip": "Seguir el curso de la guerra les daba esperanza sobre un posible fin del encierro.",
+      "revisada": false
+    },
+    {
+      "id": "af-t4-005",
+      "oa": "AF-T4",
+      "pregunta": "¿Qué es lo que más temen que ocurra si finalmente son descubiertos en el anexo?",
+      "opciones": [
+        "Que los multen económicamente",
+        "Que pierdan su trabajo",
+        "Que los obliguen a mudarse de casa",
+        "Ser detenidos y enviados a campos de concentración"
+      ],
+      "correcta": 3,
+      "tip": "El miedo constante es a la deportación hacia los campos nazis.",
+      "revisada": false
+    },
+    {
+      "id": "af-t4-006",
+      "oa": "AF-T4",
+      "pregunta": "¿Cómo reaccionan generalmente ante las alarmas y ataques aéreos que se producen cerca?",
+      "opciones": [
+        "Con total indiferencia",
+        "Con miedo, buscando resguardo dentro del anexo",
+        "Saliendo a mirar por curiosidad",
+        "Festejando el suceso"
+      ],
+      "correcta": 1,
+      "tip": "Los bombardeos cercanos generan pánico entre los habitantes del escondite.",
+      "revisada": false
+    },
+    {
+      "id": "af-t4-007",
+      "oa": "AF-T4",
+      "pregunta": "¿Qué recurso comienza a escasear conforme avanza el tiempo de encierro?",
+      "opciones": [
+        "El papel para escribir",
+        "La electricidad únicamente",
+        "Los libros",
+        "La comida y otras provisiones básicas"
+      ],
+      "correcta": 3,
+      "tip": "La escasez de alimentos se vuelve un problema cada vez más serio.",
+      "revisada": false
+    },
+    {
+      "id": "af-t4-008",
+      "oa": "AF-T4",
+      "pregunta": "¿Qué efecto tiene en la salud de los escondidos el estrés y la mala alimentación prolongada?",
+      "opciones": [
+        "Los hace más fuertes físicamente",
+        "Provoca problemas de salud y malestar entre los habitantes del anexo",
+        "No genera ningún efecto negativo",
+        "Mejora su ánimo general"
+      ],
+      "correcta": 1,
+      "tip": "Las condiciones difíciles del encierro afectan el bienestar físico del grupo.",
+      "revisada": false
+    },
+    {
+      "id": "af-t4-009",
+      "oa": "AF-T4",
+      "pregunta": "¿Cómo cambia el ánimo general del grupo cuando llegan noticias favorables sobre el avance aliado?",
+      "opciones": [
+        "No provoca ninguna reacción",
+        "Deciden abandonar el escondite de inmediato",
+        "Se vuelve más pesimista",
+        "Renace la esperanza de que el encierro pueda terminar pronto"
+      ],
+      "correcta": 3,
+      "tip": "Las buenas noticias bélicas alimentan la esperanza de libertad.",
+      "revisada": false
+    },
+    {
+      "id": "af-t5-001",
+      "oa": "AF-T5",
+      "pregunta": "¿Qué tipo de cambios experimenta Ana durante el tiempo que lleva encerrada?",
+      "opciones": [
+        "Cambios físicos y emocionales propios de crecer y madurar",
+        "Deja de tener sentimientos por completo",
+        "Solo cambios en su apariencia, nada emocional",
+        "Ningún cambio, permanece igual todo el tiempo"
+      ],
+      "correcta": 0,
+      "tip": "El encierro coincide con su paso de niña a adolescente, con todos esos cambios.",
+      "revisada": false
+    },
+    {
+      "id": "af-t5-002",
+      "oa": "AF-T5",
+      "pregunta": "¿Cuál es uno de los principales conflictos internos que Ana expresa respecto a su madre en esta etapa?",
+      "opciones": [
+        "Sentir que su madre la comprende perfectamente",
+        "Admirarla como su modelo absoluto a seguir",
+        "Sentirse incomprendida y percibir mayor cercanía con su padre",
+        "No tener ningún tipo de sentimiento hacia ella"
+      ],
+      "correcta": 2,
+      "tip": "Ana reconoce sentirse más cerca de Otto que de su madre.",
+      "revisada": false
+    },
+    {
+      "id": "af-t5-003",
+      "oa": "AF-T5",
+      "pregunta": "¿Qué actividades favorecen el desarrollo personal de Ana durante el encierro?",
+      "opciones": [
+        "Ninguna, pasa el tiempo sin hacer nada",
+        "Practicar deportes al aire libre",
+        "Trabajar en el negocio familiar",
+        "Leer, estudiar distintas materias y escribir en su diario"
+      ],
+      "correcta": 3,
+      "tip": "La lectura y la escritura son claves en su crecimiento personal.",
+      "revisada": false
+    },
+    {
+      "id": "af-t5-004",
+      "oa": "AF-T5",
+      "pregunta": "¿Cómo describe Ana su propio mundo interior en esta parte del diario?",
+      "opciones": [
+        "Como algo simple y sin ninguna complejidad",
+        "Como idéntico al de su hermana Margot",
+        "Como algo que no le interesa analizar",
+        "Como algo complejo, reconociendo una dualidad entre cómo la ven y cómo se siente por dentro"
+      ],
+      "correcta": 3,
+      "tip": "Ana reflexiona sobre la diferencia entre su lado externo y su lado más íntimo.",
+      "revisada": false
+    },
+    {
+      "id": "af-t5-005",
+      "oa": "AF-T5",
+      "pregunta": "¿Cómo es la relación de Ana con su padre, Otto Frank, durante el encierro?",
+      "opciones": [
+        "Cercana; él es su principal confidente dentro de la familia",
+        "Inexistente, casi no se hablan",
+        "Distante y fría",
+        "Muy conflictiva y llena de peleas"
+      ],
+      "correcta": 0,
+      "tip": "Ana confía especialmente en su padre entre los miembros de su familia.",
+      "revisada": false
+    },
+    {
+      "id": "af-t5-006",
+      "oa": "AF-T5",
+      "pregunta": "¿Qué sentimiento describe Ana pese a estar rodeada de otras siete personas todo el tiempo?",
+      "opciones": [
+        "Una sensación constante de soledad",
+        "Indiferencia total ante los demás",
+        "Nunca se siente sola en ningún momento",
+        "Compañía perfecta sin ningún vacío emocional"
+      ],
+      "correcta": 0,
+      "tip": "Ana puede sentirse sola emocionalmente aunque esté acompañada físicamente.",
+      "revisada": false
+    },
+    {
+      "id": "af-t5-007",
+      "oa": "AF-T5",
+      "pregunta": "¿Cómo evoluciona el estilo de escritura de Ana a medida que avanza el diario?",
+      "opciones": [
+        "Se vuelve más superficial con el tiempo",
+        "Se vuelve más profundo y reflexivo sobre sí misma y su entorno",
+        "No presenta ningún cambio",
+        "Deja de escribir por completo"
+      ],
+      "correcta": 1,
+      "tip": "Sus reflexiones se hacen cada vez más maduras conforme crece.",
+      "revisada": false
+    },
+    {
+      "id": "af-t5-008",
+      "oa": "AF-T5",
+      "pregunta": "¿Qué aspiración menciona Ana sobre su futuro profesional?",
+      "opciones": [
+        "Convertirse en escritora o periodista",
+        "No tener ninguna aspiración concreta",
+        "Dedicarse al comercio familiar",
+        "Ser doctora"
+      ],
+      "correcta": 0,
+      "tip": "Ana sueña con que sus escritos algún día sean leídos por más personas.",
+      "revisada": false
+    },
+    {
+      "id": "af-t5-009",
+      "oa": "AF-T5",
+      "pregunta": "¿Qué hace especialmente difícil para Ana el paso de niña a adolescente en su situación?",
+      "opciones": [
+        "Vivirlo en un espacio reducido, sin privacidad y bajo constante tensión",
+        "Vivirlo rodeada de muchos amigos de su edad",
+        "Tener demasiada libertad para experimentar",
+        "No tiene ninguna dificultad especial"
+      ],
+      "correcta": 0,
+      "tip": "El encierro y la falta de espacio propio complican esta etapa de cambios.",
+      "revisada": false
+    },
+    {
+      "id": "af-t6-001",
+      "oa": "AF-T6",
+      "pregunta": "¿Quién es Peter van Daan dentro del grupo de escondidos?",
+      "opciones": [
+        "Un protector externo que los visita",
+        "El hijo de la familia Van Daan que vive también en el anexo",
+        "Un primo de Ana",
+        "El dentista que se integra después"
+      ],
+      "correcta": 1,
+      "tip": "Peter es el hijo adolescente de los Van Daan, compañero de encierro.",
+      "revisada": false
+    },
+    {
+      "id": "af-t6-002",
+      "oa": "AF-T6",
+      "pregunta": "¿Cómo era la relación entre Ana y Peter al principio de convivir en el anexo?",
+      "opciones": [
+        "Eran mejores amigos desde antes del escondite",
+        "Muy cercana desde el primer día",
+        "Distante, casi sin mucho contacto entre ellos",
+        "Se llevaban muy mal y peleaban constantemente"
+      ],
+      "correcta": 2,
+      "tip": "Al inicio apenas interactuaban; el acercamiento llega después.",
+      "revisada": false
+    },
+    {
+      "id": "af-t6-003",
+      "oa": "AF-T6",
+      "pregunta": "¿Qué provoca que Ana y Peter comiencen a acercarse con el paso del tiempo?",
+      "opciones": [
+        "Una discusión familiar que los obliga a hablar",
+        "El compartir tiempo, confidencias y conversaciones en el encierro",
+        "La intervención directa de sus padres",
+        "Una tarea escolar en conjunto"
+      ],
+      "correcta": 1,
+      "tip": "El tiempo compartido en el anexo los va acercando poco a poco.",
+      "revisada": false
+    },
+    {
+      "id": "af-t6-004",
+      "oa": "AF-T6",
+      "pregunta": "¿Qué tipo de sentimiento desarrolla Ana hacia Peter conforme avanza esta etapa del diario?",
+      "opciones": [
+        "Indiferencia total",
+        "Un profundo desagrado",
+        "Un primer enamoramiento",
+        "Una relación de tipo maternal"
+      ],
+      "correcta": 2,
+      "tip": "Ana describe en su diario los sentimientos propios de un primer amor.",
+      "revisada": false
+    },
+    {
+      "id": "af-t6-005",
+      "oa": "AF-T6",
+      "pregunta": "¿Qué suelen compartir Ana y Peter en sus encuentros dentro del anexo?",
+      "opciones": [
+        "Conversaciones sobre sus miedos, sueños y pensamientos íntimos",
+        "Discusiones políticas complejas",
+        "Juegos de mesa exclusivamente",
+        "No comparten nada relevante"
+      ],
+      "correcta": 0,
+      "tip": "Sus conversaciones abordan temas personales y profundos para su edad.",
+      "revisada": false
+    },
+    {
+      "id": "af-t6-006",
+      "oa": "AF-T6",
+      "pregunta": "¿Cómo reaccionan los adultos del anexo ante el acercamiento entre Ana y Peter?",
+      "opciones": [
+        "Notan la cercanía y algunos expresan cierta preocupación u opinión al respecto",
+        "Los ignoran por completo",
+        "Celebran con una fiesta",
+        "Los obligan a casarse"
+      ],
+      "correcta": 0,
+      "tip": "La convivencia cercana hace que los adultos también noten y comenten esta relación.",
+      "revisada": false
+    },
+    {
+      "id": "af-t6-007",
+      "oa": "AF-T6",
+      "pregunta": "¿Qué mascota tiene Peter que también forma parte de la vida diaria en el anexo?",
+      "opciones": [
+        "Un canario",
+        "Un perro",
+        "Un gato llamado Mouschi",
+        "Un conejo"
+      ],
+      "correcta": 2,
+      "tip": "El gato de Peter, Mouschi, convive con ellos en el escondite.",
+      "revisada": false
+    },
+    {
+      "id": "af-t6-008",
+      "oa": "AF-T6",
+      "pregunta": "¿Qué duda plantea Ana sobre sus sentimientos hacia Peter en algunas entradas del diario?",
+      "opciones": [
+        "No tiene ninguna duda al respecto",
+        "Duda de si Peter existe realmente",
+        "Se pregunta si prefiere a otro miembro del grupo",
+        "Se pregunta si es amor verdadero o solo producto de estar tan encerrados juntos"
+      ],
+      "correcta": 3,
+      "tip": "Ana reflexiona sobre si sus sentimientos nacen del aislamiento o son genuinos.",
+      "revisada": false
+    },
+    {
+      "id": "af-t6-009",
+      "oa": "AF-T6",
+      "pregunta": "¿Qué aprende Ana sobre sí misma a partir de su cercanía con Peter?",
+      "opciones": [
+        "Aspectos de su propia madurez emocional y su necesidad de ser comprendida",
+        "Que no es capaz de sentir afecto por nadie",
+        "Que prefiere estar siempre sola",
+        "Que no le interesa relacionarse con nadie"
+      ],
+      "correcta": 0,
+      "tip": "Esta relación la ayuda a conocerse mejor emocionalmente.",
+      "revisada": false
+    },
+    {
+      "id": "af-t7-001",
+      "oa": "AF-T7",
+      "pregunta": "¿Qué idea expresa Ana sobre la naturaleza humana pese a las dificultades que vive?",
+      "opciones": [
+        "Que, a pesar de todo, sigue creyendo en la bondad de las personas",
+        "Que las personas son fundamentalmente malas",
+        "Que ya no cree en nada ni nadie",
+        "Que prefiere no pensar en el tema"
+      ],
+      "correcta": 0,
+      "tip": "Una de sus reflexiones más conocidas es su fe en la bondad humana.",
+      "revisada": false
+    },
+    {
+      "id": "af-t7-002",
+      "oa": "AF-T7",
+      "pregunta": "¿Qué postura tiene Ana frente a la guerra y la violencia en sus reflexiones?",
+      "opciones": [
+        "No tiene ninguna opinión al respecto",
+        "Considera que no le afecta en nada",
+        "La rechaza y expresa su deseo de que llegue la paz",
+        "La apoya completamente"
+      ],
+      "correcta": 2,
+      "tip": "Ana manifiesta un fuerte anhelo de paz frente al horror de la guerra.",
+      "revisada": false
+    },
+    {
+      "id": "af-t7-003",
+      "oa": "AF-T7",
+      "pregunta": "¿Qué sueños expresa Ana sobre su vida una vez que termine el encierro?",
+      "opciones": [
+        "No pensar más en el futuro",
+        "Volver a la escuela y quizás publicar sus escritos",
+        "Dejar de escribir para siempre",
+        "Mudarse a otro país lejano de forma permanente"
+      ],
+      "correcta": 1,
+      "tip": "Ana imagina un futuro donde puede estudiar y compartir lo que escribe.",
+      "revisada": false
+    },
+    {
+      "id": "af-t7-004",
+      "oa": "AF-T7",
+      "pregunta": "¿Cómo logra Ana mantener cierta esperanza en medio de una situación tan difícil?",
+      "opciones": [
+        "Evitando pensar por completo en su situación",
+        "No es posible, pierde toda esperanza",
+        "Aferrándose a sus reflexiones, sus sueños futuros y su escritura",
+        "Dejando de comunicarse con su familia"
+      ],
+      "correcta": 2,
+      "tip": "Escribir y soñar con el futuro son formas en que Ana sostiene su esperanza.",
+      "revisada": false
+    },
+    {
+      "id": "af-t7-005",
+      "oa": "AF-T7",
+      "pregunta": "¿Qué opinión expresa Ana respecto a la discriminación y la injusticia que vive su pueblo?",
+      "opciones": [
+        "La critica y reflexiona sobre lo injusto de la persecución que sufren",
+        "La considera justificada",
+        "No tiene ninguna opinión formada",
+        "Cree que merecen ese trato"
+      ],
+      "correcta": 0,
+      "tip": "Ana cuestiona la discriminación y la violencia contra los judíos.",
+      "revisada": false
+    },
+    {
+      "id": "af-t7-006",
+      "oa": "AF-T7",
+      "pregunta": "¿Qué función cumple la escritura para Ana durante todo este período de encierro?",
+      "opciones": [
+        "Solo la usa para hacer listas de tareas",
+        "Es una forma de resistencia interior y de desahogo emocional",
+        "Ninguna, escribe solo por obligación",
+        "Es un castigo que debe cumplir"
+      ],
+      "correcta": 1,
+      "tip": "Escribir le permite procesar lo que vive y mantenerse firme emocionalmente.",
+      "revisada": false
+    },
+    {
+      "id": "af-t7-007",
+      "oa": "AF-T7",
+      "pregunta": "¿Qué tipo de valores destaca Ana como importantes para ella en sus reflexiones más profundas?",
+      "opciones": [
+        "Valores como la bondad, la esperanza y la búsqueda de sentido",
+        "La resignación total ante todo",
+        "El deseo de venganza",
+        "El egoísmo y la indiferencia"
+      ],
+      "correcta": 0,
+      "tip": "Ana valora profundamente la bondad y mantener la esperanza pese a todo.",
+      "revisada": false
+    },
+    {
+      "id": "af-t7-008",
+      "oa": "AF-T7",
+      "pregunta": "¿Qué extraña especialmente Ana relacionado con el mundo natural, al estar encerrada tanto tiempo?",
+      "opciones": [
+        "No extraña nada de eso",
+        "Las tiendas y los centros comerciales",
+        "El ruido de la ciudad",
+        "Ver el cielo, los árboles y disfrutar del aire libre"
+      ],
+      "correcta": 3,
+      "tip": "El encierro le hace valorar y añorar elementos simples de la naturaleza.",
+      "revisada": false
+    },
+    {
+      "id": "af-t7-009",
+      "oa": "AF-T7",
+      "pregunta": "¿Qué mensaje transmite Ana, en general, sobre cómo enfrentar momentos difíciles?",
+      "opciones": [
+        "Que, incluso en la adversidad, es posible encontrar sentido y mantener la esperanza",
+        "Que es mejor rendirse ante la adversidad",
+        "Que la felicidad es imposible en cualquier circunstancia",
+        "Que no vale la pena reflexionar sobre nada"
+      ],
+      "correcta": 0,
+      "tip": "Su actitud transmite que la esperanza puede sostenerse incluso en tiempos duros.",
+      "revisada": false
+    },
+    {
+      "id": "af-t8-001",
+      "oa": "AF-T8",
+      "pregunta": "¿Qué característica tiene la última entrada del diario de Ana, en comparación con las anteriores?",
+      "opciones": [
+        "Es mucho más extensa que todas las demás",
+        "Es relativamente breve y no da indicios de lo que ocurrirá después",
+        "Anuncia claramente que serán descubiertos",
+        "Es una carta de despedida explícita"
+      ],
+      "correcta": 1,
+      "tip": "El diario termina de forma abrupta, sin que Ana supiera lo que vendría.",
+      "revisada": false
+    },
+    {
+      "id": "af-t8-002",
+      "oa": "AF-T8",
+      "pregunta": "¿Qué sucede finalmente con los ocho habitantes del anexo secreto?",
+      "opciones": [
+        "Permanecen escondidos hasta el fin de la guerra",
+        "Deciden entregarse voluntariamente sin motivo",
+        "Logran escapar a otro país",
+        "Son descubiertos y detenidos por las autoridades"
+      ],
+      "correcta": 3,
+      "tip": "El escondite es descubierto y todos son arrestados.",
+      "revisada": false
+    },
+    {
+      "id": "af-t8-003",
+      "oa": "AF-T8",
+      "pregunta": "¿Se sabe con total certeza quién delató a los escondidos del anexo?",
+      "opciones": [
+        "Fue uno de los propios escondidos",
+        "Sí, quedó comprobado sin ninguna duda",
+        "No existe una certeza absoluta; ha sido motivo de investigación y sospechas",
+        "Nadie los delató, fue pura casualidad"
+      ],
+      "correcta": 2,
+      "tip": "El origen exacto de la delación sigue siendo un tema debatido históricamente.",
+      "revisada": false
+    },
+    {
+      "id": "af-t8-004",
+      "oa": "AF-T8",
+      "pregunta": "¿A qué tipo de lugares son enviados los ocho tras ser detenidos?",
+      "opciones": [
+        "A campos de concentración nazis",
+        "A sus casas de origen",
+        "A un hospital para su cuidado",
+        "A otro país neutral"
+      ],
+      "correcta": 0,
+      "tip": "Tras el arresto, son deportados a distintos campos de concentración.",
+      "revisada": false
+    },
+    {
+      "id": "af-t8-005",
+      "oa": "AF-T8",
+      "pregunta": "¿Qué les ocurre finalmente a Ana y a su hermana Margot?",
+      "opciones": [
+        "Mueren de tifus en el campo de Bergen-Belsen poco antes de la liberación",
+        "Sobreviven juntas hasta el final de la guerra",
+        "Logran escapar del campo",
+        "Se reencuentran con su padre poco después"
+      ],
+      "correcta": 0,
+      "tip": "Ambas hermanas mueren por una enfermedad, muy cerca del fin de la guerra.",
+      "revisada": false
+    },
+    {
+      "id": "af-t8-006",
+      "oa": "AF-T8",
+      "pregunta": "¿Quién es el único integrante de los ocho escondidos que sobrevive a la guerra?",
+      "opciones": [
+        "El señor Dussel",
+        "Peter van Daan",
+        "Otto Frank, el padre de Ana",
+        "La señora Van Daan"
+      ],
+      "correcta": 2,
+      "tip": "Otto Frank es el único sobreviviente entre los ocho del anexo.",
+      "revisada": false
+    },
+    {
+      "id": "af-t8-007",
+      "oa": "AF-T8",
+      "pregunta": "¿Cómo logra conservarse el diario de Ana después de la detención del grupo?",
+      "opciones": [
+        "Miep lo encuentra y lo guarda a la espera de poder devolverlo",
+        "Se pierde para siempre",
+        "Lo encuentran las autoridades y lo destruyen",
+        "Ana se lo lleva consigo al campo de concentración"
+      ],
+      "correcta": 0,
+      "tip": "Una de las protectoras rescata los escritos de Ana tras la detención.",
+      "revisada": false
+    },
+    {
+      "id": "af-t8-008",
+      "oa": "AF-T8",
+      "pregunta": "¿Qué decisión toma Otto Frank respecto al diario de su hija una vez que lo recibe?",
+      "opciones": [
+        "Se lo entrega a otra familia",
+        "Decide publicarlo para que otras personas puedan leerlo",
+        "Lo guarda en privado y nunca lo comparte",
+        "Lo destruye por respeto a la privacidad de Ana"
+      ],
+      "correcta": 1,
+      "tip": "Otto decide dar a conocer los escritos de Ana al mundo.",
+      "revisada": false
+    },
+    {
+      "id": "af-t8-009",
+      "oa": "AF-T8",
+      "pregunta": "¿Por qué se considera que el diario de Ana Frank es un testimonio histórico importante?",
+      "opciones": [
+        "Porque es una novela de ficción sin relación con hechos reales",
+        "Porque describe únicamente paisajes y viajes",
+        "Porque fue escrito por un historiador profesional",
+        "Porque da voz y rostro humano a las víctimas del Holocausto"
+      ],
+      "correcta": 3,
+      "tip": "El diario permite comprender de forma cercana el sufrimiento humano durante el Holocausto.",
+      "revisada": false
+    }
+  ]
 }
