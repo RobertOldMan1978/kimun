@@ -1753,10 +1753,9 @@ function avanzarBloque(){
 }
 
 // Toma n preguntas del banco de Matemáticas para un OA. Devuelve el formato del quiz.
-// Nota: Matemáticas no está registrada en EXPEDICIONES (se juega como Reto de Cálculo),
-// así que contenidoDeAsignatura('Matemáticas') devuelve null; se usa la ruta directa como
-// respaldo (el banco de año completo de Matemáticas —603 preguntas, 17 OA— vive en
-// contenido/matematicas-8basico/preguntas.json).
+// Nota: contenidoDeAsignatura('Matemáticas') ahora devuelve la URL del banco (Matemáticas
+// tiene expediciones registradas en EXPEDICIONES); el fallback literal queda por robustez
+// (el banco de año completo —603 preguntas, 17 OA— vive en contenido/matematicas-8basico/preguntas.json).
 async function preguntasDeOA(oa,n){
  const url=contenidoDeAsignatura('Matemáticas')||'contenido/matematicas-8basico/preguntas.json';
  let pool=[];
@@ -2588,7 +2587,6 @@ function renderCampaña(){
    c.jefeFinal.villanoImg||''));
 }
 // Campaña de Matemáticas: capítulos = grupos de lecciones. Además, acceso al Reto.
-function campañaMateCompleta(c){ return QA || c.capitulosMate.every(capMateCompleto); }
 function renderCampañaMate(c){
  CAP_MATE=null;   // no dejar un capítulo colgante de una visita anterior
  $('campHead').innerHTML=`<h1 style="font-size:26px">${c.asignatura} ${campañaCompleta(c)?'👑':''}</h1><p>${c.intro}</p>`;
