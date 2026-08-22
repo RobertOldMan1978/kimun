@@ -1794,3 +1794,33 @@ implementador por tarea + revisión de spec y de calidad por separado).
   recompensas (skin equipable, insignia, corona, +500🪙/+300 XP), sin errores.
 - **Pendientes:** portadas propias por capítulo de las OTRAS asignaturas (opcional); los dos
   trámites (INAPI y `vulpo.cl`), SMTP, la vuelta manual para decidir la v1.
+
+### Sesión 30 (2026-08-21) — Vocabulario y Lectura del colegio
+Dos módulos de estudio complementarios al plan, con flujo brainstorming → spec → plan →
+subagentes. Specs/planes en `docs/superpowers/*/2026-08-21-vocabulario-y-lectura*`. Todo
+data-driven sobre el motor de quiz existente (no se tocó el motor).
+- **Decisiones (Roberto):** Vocabulario = quiz de opción múltiple; Lectura dividida por tramos
+  de tiempo; Lectura como **módulo aparte** (biblioteca, crecerá con más libros) y Vocabulario
+  **dentro de Lenguaje**; palabras de **todo el curso** (4 asignaturas + lecturas); contenido
+  **generado con agentes**.
+- **Derechos de autor:** la Lectura **no reproduce texto del libro** — el alumno lee el libro
+  físico (edición Nube de Tinta) y el juego solo hace **preguntas de comprensión originales**.
+- **Contenido (agentes en paralelo, `revisada:false`):** `contenido/vocabulario/preguntas.json`
+  (**100 palabras**, 20 × VOC-HIST/CIEN/MATE/LENG/LECT) y `contenido/lectura-anafrank/`
+  (`libro.json` con 8 tramos + `preguntas.json` con **72** preguntas, 9 × AF-T1…T8). **Catch de
+  calidad:** los agentes dejaron la correcta casi siempre en posición 0/1 → se **barajaron las
+  opciones** de ambos bancos (como `consolidar-pool`) para repartir en las 4 posiciones.
+- **OA de apoyo:** las preguntas usan códigos `VOC-*` y `AF-T#` (no OA oficiales). Guard en
+  `registrarOA`: los prefijos `AF-`/`VOC-` **no entran al mapa de dominio** del profesor.
+- **Integración (`index.html`):** expediciones `voc-general` (5 etapas) y `lect-anafrank` (8
+  tramos); módulo **📖 Lectura** (biblioteca, `LIBROS`, `abrirBiblioteca`, `scr-biblioteca`)
+  como tarjeta extra en `renderExpediciones`; **Lenguaje** abre un landing (`scr-lenguaje`) con
+  **Campaña** y **Vocabulario** (`abrirLenguaje`). Reusa `entrarExpedicion`/quiz sin cambios.
+- **Arte (3 portadas 512px):** `portada-lectura.png` (zorro en biblioteca), `portada-voc-general.png`
+  (zorro + palabras) y `portada-lectura-anafrank.png` (el diario a cuadros con candado y castaño —
+  **respetuoso, sin mascota**, por el tema histórico). Originales en `assets/originales/`.
+- **Verificado en el navegador:** pools cargan (20/origen, 9/tramo), se juega una etapa de cada
+  módulo, las 3 portadas cargan 200, el dominio no se contamina, sin errores de consola. Spot-check
+  factual del tramo final de Ana Frank correcto (Bergen-Belsen, tifus, delación incierta, Otto).
+- **Pendientes:** **aprobación pedagógica** de los 2 bancos nuevos (nacen `revisada:false`);
+  sin cambios en el resto respecto a la Sesión 29.

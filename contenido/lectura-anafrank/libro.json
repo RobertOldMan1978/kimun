@@ -1,0 +1,15 @@
+{
+  "titulo": "El diario de Ana Frank",
+  "autor": "Ana Frank",
+  "editorial": "Nube de Tinta",
+  "tramos": [
+    { "oa": "AF-T1", "titulo": "Antes del escondite", "periodo": "Ámsterdam, 1942: la vida de Ana, su cumpleaños, el diario y las leyes antijudías" },
+    { "oa": "AF-T2", "titulo": "Los primeros meses en el anexo", "periodo": "La mudanza al escondite y la rutina de los ocho" },
+    { "oa": "AF-T3", "titulo": "La convivencia y los roces", "periodo": "Tensiones entre los escondidos (los Van Daan, Dussel, la madre)" },
+    { "oa": "AF-T4", "titulo": "El miedo y las bombas", "periodo": "Robos, bombardeos, el peligro de ser descubiertos y los protectores" },
+    { "oa": "AF-T5", "titulo": "Crecer encerrada", "periodo": "Los cambios de Ana, su mundo interior y su relación con la madre" },
+    { "oa": "AF-T6", "titulo": "Peter y la amistad", "periodo": "El acercamiento a Peter van Daan y el primer amor" },
+    { "oa": "AF-T7", "titulo": "Esperanza y reflexión", "periodo": "Sus ideas sobre la humanidad, el futuro y la bondad" },
+    { "oa": "AF-T8", "titulo": "El final", "periodo": "La última entrada, la captura y la nota histórica (Ana muere en Bergen-Belsen; Otto publica el diario)" }
+  ]
+}

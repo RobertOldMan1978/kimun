@@ -589,6 +589,31 @@ body.es-maestro .badge-img{filter:drop-shadow(0 0 10px #ffc93ccc) drop-shadow(0 
     <button class="btn sec" id="btnMapasBack" style="margin-top:18px">← Volver</button>
   </section>
 
+  <!-- ============ LANDING DE LENGUAJE (Campaña / Vocabulario) ============ -->
+  <section class="screen" id="scr-lenguaje">
+    <div class="logo" style="margin:20px 0 4px">
+      <span class="badge">📚</span>
+      <h1 style="font-size:26px">Lenguaje</h1>
+      <p>Elige qué practicar</p>
+    </div>
+    <div class="card">
+      <button class="btn" id="btnLengCampana">🗺️ Campaña</button>
+      <button class="btn sec" id="btnLengVocab">📚 Vocabulario</button>
+    </div>
+    <button class="btn sec" id="btnLengBack" style="margin-top:10px">← Volver</button>
+  </section>
+
+  <!-- ============ BIBLIOTECA (Lectura del colegio) ============ -->
+  <section class="screen" id="scr-biblioteca">
+    <div class="logo" style="margin:20px 0 4px">
+      <span class="badge">📖</span>
+      <h1 style="font-size:26px">Lectura</h1>
+      <p>Lecturas del colegio</p>
+    </div>
+    <div class="exp-grid" id="biblioGrid"></div>
+    <button class="btn sec" id="btnBiblioBack" style="margin-top:18px">← Volver</button>
+  </section>
+
   <!-- ============ RETO DE CÁLCULO (Matemáticas) ============ -->
   <section class="screen" id="scr-calc-mapa">
     <div class="logo" style="margin:18px 0 4px">
@@ -1038,6 +1063,29 @@ const EXPEDICIONES=[
      {oa:"LE08 OA 14", nombre:"Escribir para explicar", icono:"📝", n:6},
      {oa:"LE08 OA 15", nombre:"Escribir para persuadir", icono:"📢", n:6},
      {oa:"BOSS", nombre:"⚡ JEFE: Escritura", icono:"✒️", n:8, oas:["LE08 OA 13","LE08 OA 14","LE08 OA 15"]},
+   ]},
+ // --- Vocabulario (dentro de Lenguaje): palabras de todo el curso. OA de apoyo VOC-* ---
+ { id:'voc-general', asignatura:'Vocabulario', nivel:'8° Básico · Vocabulario del curso',
+   portada:'assets/portada-voc-general.png', contenido:'contenido/vocabulario/preguntas.json', activa:true,
+   etapas:[
+     {oa:"VOC-HIST", nombre:"Palabras de Historia", icono:"📜", n:6},
+     {oa:"VOC-CIEN", nombre:"Palabras de Ciencias", icono:"🔬", n:6},
+     {oa:"VOC-MATE", nombre:"Palabras de Matemáticas", icono:"🔢", n:6},
+     {oa:"VOC-LENG", nombre:"Palabras de Lenguaje", icono:"📚", n:6},
+     {oa:"VOC-LECT", nombre:"Palabras de las lecturas", icono:"📖", n:6},
+   ]},
+ // --- Lectura del colegio (biblioteca): El diario de Ana Frank. OA de apoyo AF-T# ---
+ { id:'lect-anafrank', asignatura:'Lectura', nivel:'El diario de Ana Frank',
+   portada:'assets/portada-lectura-anafrank.png', contenido:'contenido/lectura-anafrank/preguntas.json', activa:true,
+   etapas:[
+     {oa:"AF-T1", nombre:"Antes del escondite", icono:"🏠", n:6},
+     {oa:"AF-T2", nombre:"Los primeros meses en el anexo", icono:"🚪", n:6},
+     {oa:"AF-T3", nombre:"La convivencia y los roces", icono:"👥", n:6},
+     {oa:"AF-T4", nombre:"El miedo y las bombas", icono:"💥", n:6},
+     {oa:"AF-T5", nombre:"Crecer encerrada", icono:"🌱", n:6},
+     {oa:"AF-T6", nombre:"Peter y la amistad", icono:"💛", n:6},
+     {oa:"AF-T7", nombre:"Esperanza y reflexión", icono:"✨", n:6},
+     {oa:"AF-T8", nombre:"El final", icono:"🕯️", n:6},
    ]},
 ];
 
@@ -2120,6 +2168,7 @@ const DOM_PEND = 'kimun_dom_pend';      // resúmenes que no se pudieron enviar
 function registrarOA(oa, ok){
  if(QA) return;                         // el modo QA marca las respuestas: no mide nada
  if(!oa) return;
+ if(/^(AF-|VOC-)/.test(oa)) return;     // OA de apoyo (Vocabulario/Lectura): no van al mapa de dominio
  const d = DOM_BUF[oa] || (DOM_BUF[oa] = {n:0, ok:0});
  d.n++; if(ok) d.ok++;
 }
@@ -2350,11 +2399,30 @@ function renderExpediciones(){
   const sub=camp?`Campaña · ${capsCompletos(camp)}/${camp.capitulos.length} capítulos`
                 :`${exps.length} ${exps.length===1?'mapa':'mapas'}`;
   const card=document.createElement('div');card.className='exp-card'+(done?' camp-done':'');
-  card.innerHTML=`<img src="${portada}" alt="${asig}"><div class="exp-info"><b>${asig} ${done?'👑':''}</b><small>${sub}</small></div><span class="exp-go">▶</span>`;
-  card.onclick=()=>{SND.tap(); if(camp)abrirCampaña(camp); else abrirAsignatura(asig);};
+  const subL=(asig==='Lenguaje')?'Campaña + Vocabulario':sub;
+  card.innerHTML=`<img src="${portada}" alt="${asig}"><div class="exp-info"><b>${asig} ${done?'👑':''}</b><small>${subL}</small></div><span class="exp-go">▶</span>`;
+  card.onclick=()=>{SND.tap(); if(asig==='Lenguaje')abrirLenguaje(); else if(camp)abrirCampaña(camp); else abrirAsignatura(asig);};
   g.appendChild(card);
  });
+ // Módulo Lectura (biblioteca): fuera de las asignaturas, crece con más libros.
+ const bib=document.createElement('div'); bib.className='exp-card';
+ bib.innerHTML=`<img src="assets/portada-lectura.png" alt="Lectura"><div class="exp-info"><b>📖 Lectura</b><small>Lecturas del colegio · ${LIBROS.length} libro${LIBROS.length===1?'':'s'}</small></div><span class="exp-go">▶</span>`;
+ bib.onclick=()=>{SND.tap();abrirBiblioteca();};
+ g.appendChild(bib);
 }
+// Biblioteca de lecturas (hoy: El diario de Ana Frank). Cada libro = una expedición de tramos.
+const LIBROS=[{id:'lect-anafrank', titulo:'El diario de Ana Frank', autor:'Ana Frank', tramos:8}];
+function abrirBiblioteca(){
+ const g=$('biblioGrid'); g.innerHTML='';
+ LIBROS.forEach(lb=>{const exp=EXPEDICIONES.find(e=>e.id===lb.id);
+  const card=document.createElement('div'); card.className='exp-card';
+  card.innerHTML=`<img src="${exp.portada}" alt="" onerror="this.onerror=null;this.src='assets/portada-lenguaje.png'"><div class="exp-info"><b>${lb.titulo}</b><small>${lb.autor} · ${lb.tramos} tramos</small></div><span class="exp-go">▶</span>`;
+  card.onclick=()=>{SND.tap();entrarExpedicion(exp);};
+  g.appendChild(card);});
+ go('scr-biblioteca');
+}
+// Landing de Lenguaje: elegir entre la Campaña y el Vocabulario.
+function abrirLenguaje(){ go('scr-lenguaje'); }
 
 // NIVEL 2: los mapas de una asignatura (sin campaña), cada uno con su portada propia
 function abrirAsignatura(asig){
@@ -2385,6 +2453,12 @@ $('btnExpTienda').onclick=()=>{SND.tap();tiendaOrigen='scr-expediciones';$('nav'
 $('btnTiendaBack').onclick=()=>{SND.tap();go(tiendaOrigen);};
 $('btnExpBack').onclick=()=>{SND.tap();go('scr-rol');};
 $('btnMapasBack').onclick=()=>{SND.tap();go('scr-expediciones');};
+// Landing de Lenguaje
+$('btnLengCampana').onclick=()=>{SND.tap();abrirCampaña(campañaDe('Lenguaje'));};
+$('btnLengVocab').onclick=()=>{SND.tap();entrarExpedicion(EXPEDICIONES.find(e=>e.id==='voc-general'));};
+$('btnLengBack').onclick=()=>{SND.tap();go('scr-expediciones');};
+// Biblioteca
+$('btnBiblioBack').onclick=()=>{SND.tap();go('scr-expediciones');};
 
 /* ===== Canje del código de alumno ===== */
 // Pantalla desde la que se abrió el canje, para volver justo a donde estaba el jugador.
