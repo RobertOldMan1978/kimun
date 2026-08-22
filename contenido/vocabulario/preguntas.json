@@ -1,7 +1,7 @@
 {
  "asignatura": "Vocabulario",
  "nivel": "8° básico",
- "total_preguntas": 100,
+ "total_preguntas": 150,
  "revisadas": 0,
  "nota": "Palabras de todo el curso (4 asignaturas + lecturas). Apoyo de estudio, no OA oficial.",
  "preguntas": [
@@ -10,12 +10,12 @@
    "oa": "VOC-HIST",
    "pregunta": "¿Qué significa \"humanismo\"?",
    "opciones": [
-    "Corriente de pensamiento renacentista que pone al ser humano y su capacidad de razonar en el centro",
-    "Doctrina religiosa impulsada por Martín Lutero",
+    "Sistema político donde el rey concentra todo el poder",
     "Método para acumular oro y plata mediante el comercio",
-    "Sistema político donde el rey concentra todo el poder"
+    "Corriente de pensamiento renacentista que pone al ser humano y su capacidad de razonar en el centro",
+    "Doctrina religiosa impulsada por Martín Lutero"
    ],
-   "correcta": 0,
+   "correcta": 2,
    "tip": "Piensa en 'humano' + centro de todo.",
    "revisada": false
   },
@@ -24,12 +24,12 @@
    "oa": "VOC-HIST",
    "pregunta": "¿Qué significa \"antropocentrismo\"?",
    "opciones": [
-    "El estudio científico de los astros y planetas",
-    "La organización de la sociedad en castas según el origen étnico",
+    "La visión que coloca al ser humano como centro del universo y del pensamiento",
     "La creencia de que Dios es el centro de todas las cosas",
-    "La visión que coloca al ser humano como centro del universo y del pensamiento"
+    "El estudio científico de los astros y planetas",
+    "La organización de la sociedad en castas según el origen étnico"
    ],
-   "correcta": 3,
+   "correcta": 0,
    "tip": "Antropo = ser humano; centrismo = en el centro.",
    "revisada": false
   },
@@ -38,12 +38,12 @@
    "oa": "VOC-HIST",
    "pregunta": "¿Qué fue el \"Renacimiento\"?",
    "opciones": [
-    "Una guerra religiosa entre católicos y protestantes",
     "El proceso de independencia de las colonias americanas",
+    "Un movimiento cultural y artístico que renovó el interés por la cultura grecolatina y el ser humano",
     "Un sistema económico basado en la acumulación de metales preciosos",
-    "Un movimiento cultural y artístico que renovó el interés por la cultura grecolatina y el ser humano"
+    "Una guerra religiosa entre católicos y protestantes"
    ],
-   "correcta": 3,
+   "correcta": 1,
    "tip": "'Re-nacer' de las ideas y el arte clásico.",
    "revisada": false
   },
@@ -52,12 +52,12 @@
    "oa": "VOC-HIST",
    "pregunta": "¿Qué fue la \"Reforma protestante\"?",
    "opciones": [
-    "La creación de ejércitos profesionales por los reyes europeos",
     "La reorganización del comercio atlántico en el siglo XVII",
-    "El proceso de evangelización de los pueblos americanos",
-    "El movimiento religioso liderado por Martín Lutero que rompió la unidad de la Iglesia católica"
+    "El movimiento religioso liderado por Martín Lutero que rompió la unidad de la Iglesia católica",
+    "La creación de ejércitos profesionales por los reyes europeos",
+    "El proceso de evangelización de los pueblos americanos"
    ],
-   "correcta": 3,
+   "correcta": 1,
    "tip": "Lutero cuestionó a la Iglesia y provocó una división religiosa.",
    "revisada": false
   },
@@ -67,9 +67,9 @@
    "pregunta": "¿Qué fue la \"Contrarreforma\"?",
    "opciones": [
     "La respuesta de la Iglesia católica para frenar el avance del protestantismo y renovarse internamente",
+    "La independencia de las trece colonias inglesas",
     "El proceso por el cual los reyes perdieron poder frente a la nobleza",
-    "La invención de la imprenta por Gutenberg",
-    "La independencia de las trece colonias inglesas"
+    "La invención de la imprenta por Gutenberg"
    ],
    "correcta": 0,
    "tip": "Es la reacción católica 'contra' la Reforma.",
@@ -81,11 +81,11 @@
    "pregunta": "¿Qué fue la \"imprenta\"?",
    "opciones": [
     "Un impuesto cobrado a los comerciantes coloniales",
+    "Un tipo de gobierno centralizado en la figura del rey",
     "Una institución que administraba las colonias españolas",
-    "Una técnica que permitió reproducir textos en serie, facilitando la difusión del conocimiento",
-    "Un tipo de gobierno centralizado en la figura del rey"
+    "Una técnica que permitió reproducir textos en serie, facilitando la difusión del conocimiento"
    ],
-   "correcta": 2,
+   "correcta": 3,
    "tip": "Gutenberg la perfeccionó y cambió la difusión de las ideas.",
    "revisada": false
   },
@@ -94,12 +94,12 @@
    "oa": "VOC-HIST",
    "pregunta": "¿Qué es el \"mercantilismo\"?",
    "opciones": [
-    "El sistema de trabajo indígena obligatorio en las minas coloniales",
     "La filosofía que defiende la separación de los poderes del Estado",
-    "Sistema económico de la Edad Moderna basado en acumular metales preciosos y controlar el comercio",
-    "La organización social basada en el mestizaje"
+    "La organización social basada en el mestizaje",
+    "El sistema de trabajo indígena obligatorio en las minas coloniales",
+    "Sistema económico de la Edad Moderna basado en acumular metales preciosos y controlar el comercio"
    ],
-   "correcta": 2,
+   "correcta": 3,
    "tip": "Relaciónalo con 'mercader' y la acumulación de riqueza.",
    "revisada": false
   },
@@ -108,12 +108,12 @@
    "oa": "VOC-HIST",
    "pregunta": "¿Qué es una \"monarquía absoluta\"?",
    "opciones": [
+    "Una forma de gobierno en la que el rey concentra todo el poder sin límites legales",
     "Un sistema de gobierno elegido por votación popular",
     "Una alianza comercial entre distintas ciudades europeas",
-    "Un gobierno donde el poder se reparte entre distintas instituciones",
-    "Una forma de gobierno en la que el rey concentra todo el poder sin límites legales"
+    "Un gobierno donde el poder se reparte entre distintas instituciones"
    ],
-   "correcta": 3,
+   "correcta": 0,
    "tip": "'Absoluta' significa sin límites ni controles.",
    "revisada": false
   },
@@ -124,10 +124,10 @@
    "opciones": [
     "Un tipo de arte religioso del período colonial",
     "La resistencia armada de un pueblo frente a un invasor",
-    "El conjunto de funcionarios y oficinas que administran el Estado",
-    "Un sistema de impuestos sobre el comercio atlántico"
+    "Un sistema de impuestos sobre el comercio atlántico",
+    "El conjunto de funcionarios y oficinas que administran el Estado"
    ],
-   "correcta": 2,
+   "correcta": 3,
    "tip": "Son los funcionarios que hacen funcionar la administración.",
    "revisada": false
   },
@@ -137,11 +137,11 @@
    "pregunta": "¿Qué fue la \"encomienda\"?",
    "opciones": [
     "El sistema de gobierno de las ciudades coloniales",
-    "Un tipo de embarcación usada en el comercio atlántico",
+    "Institución colonial que obligaba a los indígenas a trabajar para un español a cambio de 'protección' y evangelización",
     "Un tributo pagado por los criollos a la Corona",
-    "Institución colonial que obligaba a los indígenas a trabajar para un español a cambio de 'protección' y evangelización"
+    "Un tipo de embarcación usada en el comercio atlántico"
    ],
-   "correcta": 3,
+   "correcta": 1,
    "tip": "Un español 'encomendaba' su cuidado a cambio de trabajo indígena.",
    "revisada": false
   },
@@ -150,9 +150,9 @@
    "oa": "VOC-HIST",
    "pregunta": "¿Qué fue la \"mita\"?",
    "opciones": [
+    "Una alianza militar entre pueblos indígenas",
     "Un tipo de escritura usada por los incas",
     "Una fiesta religiosa del período colonial",
-    "Una alianza militar entre pueblos indígenas",
     "Un sistema de trabajo obligatorio y rotativo impuesto a los indígenas, especialmente en minas"
    ],
    "correcta": 3,
@@ -192,12 +192,12 @@
    "oa": "VOC-HIST",
    "pregunta": "¿Qué fue un \"virreinato\"?",
    "opciones": [
+    "Una alianza comercial entre colonias americanas",
     "Un tribunal que juzgaba a los indígenas",
     "Una unidad territorial administrativa del imperio español gobernada por un virrey en nombre del rey",
-    "Una alianza comercial entre colonias americanas",
     "Un movimiento de independencia americano"
    ],
-   "correcta": 1,
+   "correcta": 2,
    "tip": "El virrey representaba al rey en América.",
    "revisada": false
   },
@@ -206,9 +206,9 @@
    "oa": "VOC-HIST",
    "pregunta": "¿Qué era el \"cabildo\"?",
    "opciones": [
-    "El tribunal supremo de justicia del virreinato",
     "Un impuesto colonial sobre la producción agrícola",
     "Un tipo de vivienda indígena",
+    "El tribunal supremo de justicia del virreinato",
     "La institución de gobierno local de las ciudades coloniales, controlada por las élites criollas"
    ],
    "correcta": 3,
@@ -220,10 +220,10 @@
    "oa": "VOC-HIST",
    "pregunta": "¿Qué fue la \"Ilustración\"?",
    "opciones": [
+    "Un estilo artístico religioso del Renacimiento",
     "El sistema de trabajo esclavo en las colonias",
-    "La organización política del Imperio español",
     "Corriente de pensamiento del siglo XVIII que defendía la razón como guía para entender el mundo y la sociedad",
-    "Un estilo artístico religioso del Renacimiento"
+    "La organización política del Imperio español"
    ],
    "correcta": 2,
    "tip": "Buscaba 'iluminar' con la razón las ideas antiguas.",
@@ -234,12 +234,12 @@
    "oa": "VOC-HIST",
    "pregunta": "¿Qué significa \"soberanía popular\"?",
    "opciones": [
-    "El principio de que el poder político reside en el pueblo, no en el rey",
-    "La obligación de pagar tributos a la Corona",
+    "El derecho exclusivo del rey a gobernar sin límites",
     "El control del comercio por parte de la nobleza",
-    "El derecho exclusivo del rey a gobernar sin límites"
+    "La obligación de pagar tributos a la Corona",
+    "El principio de que el poder político reside en el pueblo, no en el rey"
    ],
-   "correcta": 0,
+   "correcta": 3,
    "tip": "El pueblo ('popular') es la fuente del poder.",
    "revisada": false
   },
@@ -248,12 +248,12 @@
    "oa": "VOC-HIST",
    "pregunta": "¿Qué significa \"separación de poderes\"?",
    "opciones": [
-    "La división del territorio en distintas regiones administrativas",
-    "La ruptura entre la Iglesia católica y protestante",
+    "La división de la sociedad en distintas castas",
     "La organización del Estado en poderes ejecutivo, legislativo y judicial independientes entre sí, para evitar abusos",
-    "La división de la sociedad en distintas castas"
+    "La división del territorio en distintas regiones administrativas",
+    "La ruptura entre la Iglesia católica y protestante"
    ],
-   "correcta": 2,
+   "correcta": 1,
    "tip": "Idea clave de Montesquieu para limitar el poder absoluto.",
    "revisada": false
   },
@@ -262,12 +262,12 @@
    "oa": "VOC-HIST",
    "pregunta": "¿Qué fue la \"independencia hispanoamericana\"?",
    "opciones": [
-    "La expansión del comercio atlántico en el siglo XVIII",
     "La creación de la sociedad de castas colonial",
     "El proceso mediante el cual las colonias españolas en América rompieron sus lazos políticos con España y se convirtieron en Estados soberanos",
+    "La expansión del comercio atlántico en el siglo XVIII",
     "El movimiento artístico del barroco americano"
    ],
-   "correcta": 2,
+   "correcta": 1,
    "tip": "Fue un proceso continental de fines del siglo XVIII e inicios del XIX.",
    "revisada": false
   },
@@ -290,12 +290,12 @@
    "oa": "VOC-CIEN",
    "pregunta": "¿Qué es la \"célula\"?",
    "opciones": [
-    "Un tipo de tejido muscular",
     "La unidad básica estructural y funcional de todos los seres vivos",
+    "Un tipo de tejido muscular",
     "Un órgano encargado de la respiración",
     "Una molécula formada por átomos de carbono"
    ],
-   "correcta": 1,
+   "correcta": 0,
    "tip": "Todo ser vivo está formado por una o más de ellas.",
    "revisada": false
   },
@@ -305,11 +305,11 @@
    "pregunta": "¿Qué plantea la \"teoría celular\"?",
    "opciones": [
     "Que la energía no se crea ni se destruye",
-    "Que la materia está formada por átomos indivisibles",
+    "Que todos los seres vivos están formados por células, y que estas provienen de células preexistentes",
     "Que los seres vivos evolucionan por selección natural",
-    "Que todos los seres vivos están formados por células, y que estas provienen de células preexistentes"
+    "Que la materia está formada por átomos indivisibles"
    ],
-   "correcta": 3,
+   "correcta": 1,
    "tip": "Es la base de la biología moderna sobre las células.",
    "revisada": false
   },
@@ -318,10 +318,10 @@
    "oa": "VOC-CIEN",
    "pregunta": "¿Qué es la \"membrana celular\"?",
    "opciones": [
-    "El núcleo donde se guarda el material genético",
-    "La estructura que envuelve la célula y regula el paso de sustancias hacia dentro y fuera de ella",
     "La sustancia gelatinosa que llena el interior de la célula",
-    "Un organelo que produce energía"
+    "La estructura que envuelve la célula y regula el paso de sustancias hacia dentro y fuera de ella",
+    "Un organelo que produce energía",
+    "El núcleo donde se guarda el material genético"
    ],
    "correcta": 1,
    "tip": "Es como una 'puerta' selectiva de la célula.",
@@ -332,12 +332,12 @@
    "oa": "VOC-CIEN",
    "pregunta": "¿Qué es la \"mitocondria\"?",
    "opciones": [
-    "La parte de la célula que contiene el ADN",
+    "El organelo celular encargado de producir la energía que la célula necesita",
     "El pigmento que capta la luz solar en las plantas",
-    "La estructura que da rigidez a las células vegetales",
-    "El organelo celular encargado de producir la energía que la célula necesita"
+    "La parte de la célula que contiene el ADN",
+    "La estructura que da rigidez a las células vegetales"
    ],
-   "correcta": 3,
+   "correcta": 0,
    "tip": "Se le conoce como la 'central energética' de la célula.",
    "revisada": false
   },
@@ -347,11 +347,11 @@
    "pregunta": "¿Qué es el \"cloroplasto\"?",
    "opciones": [
     "La membrana que protege a las bacterias",
-    "El organelo que produce proteínas en la célula",
     "Un organelo presente en células vegetales que realiza la fotosíntesis",
+    "El organelo que produce proteínas en la célula",
     "El líquido que llena las vacuolas"
    ],
-   "correcta": 2,
+   "correcta": 1,
    "tip": "Contiene clorofila y da el color verde a las plantas.",
    "revisada": false
   },
@@ -360,9 +360,9 @@
    "oa": "VOC-CIEN",
    "pregunta": "¿Qué es la \"difusión\" (en biología)?",
    "opciones": [
-    "El transporte de sustancias usando energía",
-    "El movimiento de partículas desde una zona de mayor concentración hacia una de menor concentración",
     "El proceso por el cual la célula se divide en dos",
+    "El movimiento de partículas desde una zona de mayor concentración hacia una de menor concentración",
+    "El transporte de sustancias usando energía",
     "La absorción de luz solar por la clorofila"
    ],
    "correcta": 1,
@@ -374,12 +374,12 @@
    "oa": "VOC-CIEN",
    "pregunta": "¿Qué es la \"osmosis\"?",
    "opciones": [
-    "El intercambio de gases entre la célula y el ambiente",
     "La producción de energía en la mitocondria",
     "El paso de agua a través de una membrana semipermeable, desde donde hay menos solutos hacia donde hay más",
+    "El intercambio de gases entre la célula y el ambiente",
     "El proceso de división celular"
    ],
-   "correcta": 2,
+   "correcta": 1,
    "tip": "Es un tipo especial de difusión, pero solo de agua.",
    "revisada": false
   },
@@ -389,8 +389,8 @@
    "pregunta": "¿Qué es la \"fotosíntesis\"?",
    "opciones": [
     "El proceso por el cual las plantas producen su propio alimento usando luz solar, agua y dióxido de carbono",
-    "La reproducción de las células vegetales",
     "El proceso digestivo de los animales herbívoros",
+    "La reproducción de las células vegetales",
     "La transferencia de calor entre dos cuerpos"
    ],
    "correcta": 0,
@@ -402,12 +402,12 @@
    "oa": "VOC-CIEN",
    "pregunta": "¿Qué significa \"homeostasis\"?",
    "opciones": [
-    "La transmisión de electricidad a través de un circuito",
-    "El proceso de transformación de nutrientes en energía",
     "La capacidad de un organismo de mantener estable su equilibrio interno pese a los cambios del ambiente",
-    "La formación de nuevas especies con el tiempo"
+    "La formación de nuevas especies con el tiempo",
+    "El proceso de transformación de nutrientes en energía",
+    "La transmisión de electricidad a través de un circuito"
    ],
-   "correcta": 2,
+   "correcta": 0,
    "tip": "Es el 'equilibrio interno' del cuerpo.",
    "revisada": false
   },
@@ -416,12 +416,12 @@
    "oa": "VOC-CIEN",
    "pregunta": "¿Qué son los \"nutrientes\"?",
    "opciones": [
-    "Los desechos que el cuerpo elimina por la orina",
     "Las células que forman parte del sistema inmune",
-    "Los gases que se intercambian en la respiración",
-    "Sustancias presentes en los alimentos que el cuerpo usa para obtener energía y funcionar correctamente"
+    "Sustancias presentes en los alimentos que el cuerpo usa para obtener energía y funcionar correctamente",
+    "Los desechos que el cuerpo elimina por la orina",
+    "Los gases que se intercambian en la respiración"
    ],
-   "correcta": 3,
+   "correcta": 1,
    "tip": "Ejemplos: carbohidratos, proteínas, grasas, vitaminas.",
    "revisada": false
   },
@@ -430,12 +430,12 @@
    "oa": "VOC-CIEN",
    "pregunta": "¿Qué función cumple el \"sistema circulatorio\"?",
    "opciones": [
-    "Filtrar y eliminar los desechos del cuerpo mediante la orina",
-    "Absorber los nutrientes de los alimentos",
     "Transportar la sangre, con oxígeno y nutrientes, a todo el cuerpo",
+    "Absorber los nutrientes de los alimentos",
+    "Filtrar y eliminar los desechos del cuerpo mediante la orina",
     "Producir las células reproductoras"
    ],
-   "correcta": 2,
+   "correcta": 0,
    "tip": "El corazón y los vasos sanguíneos son sus protagonistas.",
    "revisada": false
   },
@@ -445,11 +445,11 @@
    "pregunta": "¿Qué es la \"carga eléctrica\"?",
    "opciones": [
     "La velocidad con que se mueve la corriente eléctrica",
-    "La cantidad de calor que almacena un cuerpo",
     "La resistencia que ofrece un material al paso de electricidad",
-    "Una propiedad de la materia que produce fuerzas de atracción o repulsión entre partículas"
+    "Una propiedad de la materia que produce fuerzas de atracción o repulsión entre partículas",
+    "La cantidad de calor que almacena un cuerpo"
    ],
-   "correcta": 3,
+   "correcta": 2,
    "tip": "Puede ser positiva o negativa, y genera atracción o repulsión.",
    "revisada": false
   },
@@ -458,12 +458,12 @@
    "oa": "VOC-CIEN",
    "pregunta": "¿Qué es un \"circuito eléctrico\"?",
    "opciones": [
-    "Un instrumento para medir la temperatura",
     "Un tipo de energía renovable",
     "Un camino cerrado por el que circula la corriente eléctrica desde una fuente hasta un consumo",
+    "Un instrumento para medir la temperatura",
     "Una fuerza que atrae objetos con carga distinta"
    ],
-   "correcta": 2,
+   "correcta": 1,
    "tip": "Necesita un camino cerrado para que la electricidad fluya.",
    "revisada": false
   },
@@ -472,12 +472,12 @@
    "oa": "VOC-CIEN",
    "pregunta": "¿Qué es la \"conducción\" (como forma de propagación del calor)?",
    "opciones": [
-    "El movimiento de un fluido caliente que transporta calor",
-    "La producción de electricidad a partir del calor",
     "La transferencia de calor a través de un material por contacto directo entre sus partículas",
+    "La producción de electricidad a partir del calor",
+    "El movimiento de un fluido caliente que transporta calor",
     "La transferencia de calor mediante ondas, sin necesidad de un medio material"
    ],
-   "correcta": 2,
+   "correcta": 0,
    "tip": "Ocurre, por ejemplo, cuando tocas un metal caliente.",
    "revisada": false
   },
@@ -487,9 +487,9 @@
    "pregunta": "¿Qué es la \"convección\"?",
    "opciones": [
     "La transferencia de calor por contacto directo entre sólidos",
-    "La emisión de calor en forma de ondas a través del vacío",
+    "El equilibrio térmico entre dos cuerpos",
     "La transferencia de calor mediante el movimiento de un fluido (líquido o gas)",
-    "El equilibrio térmico entre dos cuerpos"
+    "La emisión de calor en forma de ondas a través del vacío"
    ],
    "correcta": 2,
    "tip": "Ocurre en líquidos y gases que se mueven al calentarse.",
@@ -500,12 +500,12 @@
    "oa": "VOC-CIEN",
    "pregunta": "¿Qué es el \"átomo\"?",
    "opciones": [
-    "Una combinación de dos o más elementos químicos",
     "Un tipo de energía almacenada en los enlaces",
-    "La unidad básica de los seres vivos",
-    "La partícula más pequeña de un elemento que conserva sus propiedades químicas"
+    "Una combinación de dos o más elementos químicos",
+    "La partícula más pequeña de un elemento que conserva sus propiedades químicas",
+    "La unidad básica de los seres vivos"
    ],
-   "correcta": 3,
+   "correcta": 2,
    "tip": "Está formado por protones, neutrones y electrones.",
    "revisada": false
   },
@@ -514,10 +514,10 @@
    "oa": "VOC-CIEN",
    "pregunta": "¿Qué es un \"modelo atómico\"?",
    "opciones": [
-    "Una fórmula para calcular el volumen de un cuerpo",
-    "Una representación científica que explica cómo está estructurado el átomo",
     "Una tabla que ordena los elementos según sus propiedades",
-    "Un tipo de reacción química entre dos elementos"
+    "Una representación científica que explica cómo está estructurado el átomo",
+    "Un tipo de reacción química entre dos elementos",
+    "Una fórmula para calcular el volumen de un cuerpo"
    ],
    "correcta": 1,
    "tip": "Thomson, Rutherford y Bohr propusieron distintos modelos.",
@@ -529,8 +529,8 @@
    "pregunta": "¿Qué es la \"tabla periódica\"?",
    "opciones": [
     "Un instrumento para medir la carga eléctrica",
-    "Un diagrama que muestra la estructura de una célula",
     "Un modelo que representa el sistema circulatorio",
+    "Un diagrama que muestra la estructura de una célula",
     "Un sistema que organiza los elementos químicos según su número atómico y propiedades"
    ],
    "correcta": 3,
@@ -542,10 +542,10 @@
    "oa": "VOC-CIEN",
    "pregunta": "¿Qué es un \"enlace químico\"?",
    "opciones": [
-    "La cantidad de energía que libera una reacción",
+    "La transferencia de calor entre dos sustancias",
     "El proceso de división de una célula",
     "La fuerza que mantiene unidos a los átomos para formar moléculas o compuestos",
-    "La transferencia de calor entre dos sustancias"
+    "La cantidad de energía que libera una reacción"
    ],
    "correcta": 2,
    "tip": "Es lo que 'pega' los átomos entre sí.",
@@ -556,12 +556,12 @@
    "oa": "VOC-CIEN",
    "pregunta": "¿Qué es un \"elemento químico\"?",
    "opciones": [
+    "Una célula especializada en producir energía",
     "Un instrumento usado para medir la masa atómica",
     "Una sustancia pura formada por un solo tipo de átomo",
-    "Una célula especializada en producir energía",
     "Una mezcla de dos o más sustancias diferentes"
    ],
-   "correcta": 1,
+   "correcta": 2,
    "tip": "Ejemplos: oxígeno, carbono, hidrógeno.",
    "revisada": false
   },
@@ -570,12 +570,12 @@
    "oa": "VOC-MATE",
    "pregunta": "¿Qué es un \"número entero\"?",
    "opciones": [
+    "Un número que incluye los positivos, los negativos y el cero, sin parte decimal",
     "Un número que representa un porcentaje",
     "Una fracción entre dos números naturales",
-    "Un número que incluye los positivos, los negativos y el cero, sin parte decimal",
     "Un número que solo puede ser positivo"
    ],
-   "correcta": 2,
+   "correcta": 0,
    "tip": "Incluye al cero y a los negativos, sin decimales.",
    "revisada": false
   },
@@ -586,10 +586,10 @@
    "opciones": [
     "Un número irracional como pi",
     "Un número que no puede expresarse como fracción",
-    "Un número que puede expresarse como una fracción de dos enteros, incluyendo decimales exactos o periódicos",
-    "Un número exclusivamente entero y positivo"
+    "Un número exclusivamente entero y positivo",
+    "Un número que puede expresarse como una fracción de dos enteros, incluyendo decimales exactos o periódicos"
    ],
-   "correcta": 2,
+   "correcta": 3,
    "tip": "Se puede escribir como fracción a/b.",
    "revisada": false
   },
@@ -598,12 +598,12 @@
    "oa": "VOC-MATE",
    "pregunta": "¿Qué es una \"potencia\"?",
    "opciones": [
-    "La operación que representa la multiplicación repetida de un mismo número (la base) tantas veces como indica el exponente",
-    "El resultado de dividir dos números racionales",
     "La suma de dos números iguales",
-    "La raíz cuadrada de un número"
+    "El resultado de dividir dos números racionales",
+    "La raíz cuadrada de un número",
+    "La operación que representa la multiplicación repetida de un mismo número (la base) tantas veces como indica el exponente"
    ],
-   "correcta": 0,
+   "correcta": 3,
    "tip": "Ejemplo: 2³ = 2×2×2.",
    "revisada": false
   },
@@ -613,11 +613,11 @@
    "pregunta": "¿Qué es la \"raíz cuadrada\" de un número?",
    "opciones": [
     "El resultado de sumar un número a sí mismo",
-    "El doble de un número dado",
     "El número que, elevado al cuadrado, da como resultado el número original",
-    "La mitad de un número dado"
+    "La mitad de un número dado",
+    "El doble de un número dado"
    ],
-   "correcta": 2,
+   "correcta": 1,
    "tip": "La raíz cuadrada de 9 es 3, porque 3² = 9.",
    "revisada": false
   },
@@ -626,12 +626,12 @@
    "oa": "VOC-MATE",
    "pregunta": "¿Qué es un \"porcentaje\"?",
    "opciones": [
-    "Una ecuación con una incógnita",
+    "Un tipo de número entero negativo",
     "La raíz cuadrada de un número decimal",
-    "Una forma de expresar una cantidad como parte de cien",
-    "Un tipo de número entero negativo"
+    "Una ecuación con una incógnita",
+    "Una forma de expresar una cantidad como parte de cien"
    ],
-   "correcta": 2,
+   "correcta": 3,
    "tip": "El símbolo % significa 'por cada cien'.",
    "revisada": false
   },
@@ -640,12 +640,12 @@
    "oa": "VOC-MATE",
    "pregunta": "¿Qué es una \"expresión algebraica\"?",
    "opciones": [
+    "Una combinación de números, letras (variables) y operaciones matemáticas",
     "Una tabla que organiza datos estadísticos",
     "Un número que no tiene parte decimal",
-    "Una combinación de números, letras (variables) y operaciones matemáticas",
     "Un gráfico que representa una función en el plano"
    ],
-   "correcta": 2,
+   "correcta": 0,
    "tip": "Ejemplo: 3x + 5, donde x es una variable.",
    "revisada": false
   },
@@ -654,12 +654,12 @@
    "oa": "VOC-MATE",
    "pregunta": "¿Qué son los \"términos semejantes\"?",
    "opciones": [
-    "Fracciones que representan la misma cantidad",
     "Términos algebraicos que tienen exactamente la misma parte literal (misma variable y exponente)",
-    "Números que tienen el mismo signo",
-    "Ecuaciones que tienen la misma solución"
+    "Fracciones que representan la misma cantidad",
+    "Ecuaciones que tienen la misma solución",
+    "Números que tienen el mismo signo"
    ],
-   "correcta": 1,
+   "correcta": 0,
    "tip": "Por ejemplo, 3x y 5x son semejantes; 3x y 5x² no lo son.",
    "revisada": false
   },
@@ -668,12 +668,12 @@
    "oa": "VOC-MATE",
    "pregunta": "¿Qué es una \"función lineal\"?",
    "opciones": [
-    "Una ecuación que no tiene solución",
     "Una figura geométrica con lados iguales",
-    "Un conjunto de datos organizados en una tabla",
-    "Una relación entre dos variables donde una depende de la otra según una proporcionalidad directa, representada por una recta que pasa por el origen"
+    "Una relación entre dos variables donde una depende de la otra según una proporcionalidad directa, representada por una recta que pasa por el origen",
+    "Una ecuación que no tiene solución",
+    "Un conjunto de datos organizados en una tabla"
    ],
-   "correcta": 3,
+   "correcta": 1,
    "tip": "Su gráfico es una línea recta que pasa por el origen (0,0).",
    "revisada": false
   },
@@ -682,10 +682,10 @@
    "oa": "VOC-MATE",
    "pregunta": "¿Qué es una \"ecuación lineal\"?",
    "opciones": [
-    "Una tabla que muestra la relación entre dos variables",
+    "Una figura formada por la traslación de un polígono",
     "Una igualdad matemática con una incógnita de primer grado, cuya solución es un único valor",
     "Una expresión que compara dos cantidades usando los símbolos < o >",
-    "Una figura formada por la traslación de un polígono"
+    "Una tabla que muestra la relación entre dos variables"
    ],
    "correcta": 1,
    "tip": "Ejemplo: 2x + 3 = 7, se resuelve encontrando el valor de x.",
@@ -696,12 +696,12 @@
    "oa": "VOC-MATE",
    "pregunta": "¿Qué es una \"inecuación\"?",
    "opciones": [
-    "Una ecuación que siempre tiene una única solución",
+    "Un tipo de función que no se puede graficar",
     "Una expresión algebraica sin variables",
-    "Una expresión matemática que compara dos cantidades usando los símbolos <, >, ≤ o ≥, y cuya solución es un conjunto de valores",
-    "Un tipo de función que no se puede graficar"
+    "Una ecuación que siempre tiene una única solución",
+    "Una expresión matemática que compara dos cantidades usando los símbolos <, >, ≤ o ≥, y cuya solución es un conjunto de valores"
    ],
-   "correcta": 2,
+   "correcta": 3,
    "tip": "A diferencia de una ecuación, su solución es un rango de valores.",
    "revisada": false
   },
@@ -710,12 +710,12 @@
    "oa": "VOC-MATE",
    "pregunta": "¿Qué es una \"función afín\"?",
    "opciones": [
-    "Una función que solo puede tomar valores negativos",
-    "Una función de la forma f(x) = ax + b, cuyo gráfico es una recta que no necesariamente pasa por el origen",
+    "Una ecuación de segundo grado",
     "Una tabla de valores sin relación matemática",
-    "Una ecuación de segundo grado"
+    "Una función de la forma f(x) = ax + b, cuyo gráfico es una recta que no necesariamente pasa por el origen",
+    "Una función que solo puede tomar valores negativos"
    ],
-   "correcta": 1,
+   "correcta": 2,
    "tip": "Es como la función lineal, pero desplazada por el valor b.",
    "revisada": false
   },
@@ -738,12 +738,12 @@
    "oa": "VOC-MATE",
    "pregunta": "¿Qué establece el \"teorema de Pitágoras\"?",
    "opciones": [
-    "Que en todo triángulo rectángulo, la suma de los cuadrados de los catetos es igual al cuadrado de la hipotenusa",
-    "Que la suma de los ángulos interiores de un triángulo es 180°",
     "Que dos rectas paralelas nunca se cruzan",
-    "Que el área de un círculo es pi por el radio al cuadrado"
+    "Que el área de un círculo es pi por el radio al cuadrado",
+    "Que la suma de los ángulos interiores de un triángulo es 180°",
+    "Que en todo triángulo rectángulo, la suma de los cuadrados de los catetos es igual al cuadrado de la hipotenusa"
    ],
-   "correcta": 0,
+   "correcta": 3,
    "tip": "Se resume en la fórmula a² + b² = c².",
    "revisada": false
   },
@@ -752,12 +752,12 @@
    "oa": "VOC-MATE",
    "pregunta": "¿Qué es la \"hipotenusa\"?",
    "opciones": [
-    "El perímetro total de un triángulo",
-    "Cualquiera de los dos lados menores de un triángulo rectángulo",
     "El lado más largo de un triángulo rectángulo, opuesto al ángulo recto",
-    "La altura de un triángulo equilátero"
+    "Cualquiera de los dos lados menores de un triángulo rectángulo",
+    "La altura de un triángulo equilátero",
+    "El perímetro total de un triángulo"
    ],
-   "correcta": 2,
+   "correcta": 0,
    "tip": "Es el lado opuesto al ángulo de 90°.",
    "revisada": false
   },
@@ -766,12 +766,12 @@
    "oa": "VOC-MATE",
    "pregunta": "¿Qué es el \"plano cartesiano\"?",
    "opciones": [
+    "Un sistema de dos ejes perpendiculares (X e Y) que permite ubicar puntos mediante coordenadas",
     "Una figura geométrica de tres dimensiones",
-    "Una tabla que organiza datos estadísticos",
     "Un tipo de gráfico circular",
-    "Un sistema de dos ejes perpendiculares (X e Y) que permite ubicar puntos mediante coordenadas"
+    "Una tabla que organiza datos estadísticos"
    ],
-   "correcta": 3,
+   "correcta": 0,
    "tip": "Cada punto se ubica con un par de coordenadas (x, y).",
    "revisada": false
   },
@@ -781,11 +781,11 @@
    "pregunta": "¿Qué es una \"traslación\" (transformación isométrica)?",
    "opciones": [
     "Un giro de la figura en torno a un punto fijo",
+    "Un reflejo de la figura respecto de una línea",
     "Un cambio de tamaño de la figura",
-    "Un movimiento que desplaza una figura de un lugar a otro sin cambiar su forma, tamaño ni orientación",
-    "Un reflejo de la figura respecto de una línea"
+    "Un movimiento que desplaza una figura de un lugar a otro sin cambiar su forma, tamaño ni orientación"
    ],
-   "correcta": 2,
+   "correcta": 3,
    "tip": "La figura se mueve en línea recta, sin girar ni rotar.",
    "revisada": false
   },
@@ -794,12 +794,12 @@
    "oa": "VOC-MATE",
    "pregunta": "¿Qué es una \"rotación\" (transformación isométrica)?",
    "opciones": [
+    "El giro de una figura en torno a un punto fijo, según un ángulo determinado",
     "El reflejo de una figura respecto de un eje",
-    "El desplazamiento de una figura en línea recta",
     "La reducción de una figura a la mitad de su tamaño",
-    "El giro de una figura en torno a un punto fijo, según un ángulo determinado"
+    "El desplazamiento de una figura en línea recta"
    ],
-   "correcta": 3,
+   "correcta": 0,
    "tip": "Piensa en 'rotar', como las manecillas de un reloj.",
    "revisada": false
   },
@@ -808,12 +808,12 @@
    "oa": "VOC-MATE",
    "pregunta": "¿Qué significa que una figura tenga \"simetría\"?",
    "opciones": [
-    "Que no puede ser trasladada ni rotada",
     "Que puede dividirse en dos partes iguales que son reflejo una de la otra",
+    "Que no puede ser trasladada ni rotada",
     "Que su área es mayor a su perímetro",
     "Que tiene lados de distinto largo"
    ],
-   "correcta": 1,
+   "correcta": 0,
    "tip": "Piensa en una mariposa: sus dos alas son un reflejo.",
    "revisada": false
   },
@@ -823,9 +823,9 @@
    "pregunta": "¿Qué es la \"mediana\" en un conjunto de datos?",
    "opciones": [
     "El valor que queda justo al centro cuando los datos están ordenados de menor a mayor",
+    "La diferencia entre el valor mayor y el menor",
     "El valor que se repite con mayor frecuencia",
-    "El promedio de todos los valores",
-    "La diferencia entre el valor mayor y el menor"
+    "El promedio de todos los valores"
    ],
    "correcta": 0,
    "tip": "Ordena los datos y busca el que queda justo al medio.",
@@ -836,12 +836,12 @@
    "oa": "VOC-MATE",
    "pregunta": "¿Qué es un \"percentil\"?",
    "opciones": [
-    "La suma total de todos los datos de una muestra",
-    "Un valor que divide un conjunto de datos ordenados en cien partes iguales",
+    "El resultado de multiplicar un número por cien",
     "Un tipo de gráfico usado para representar porcentajes",
-    "El resultado de multiplicar un número por cien"
+    "Un valor que divide un conjunto de datos ordenados en cien partes iguales",
+    "La suma total de todos los datos de una muestra"
    ],
-   "correcta": 1,
+   "correcta": 2,
    "tip": "Indica qué porcentaje de datos queda por debajo de un valor.",
    "revisada": false
   },
@@ -851,11 +851,11 @@
    "pregunta": "¿Qué es el \"narrador\"?",
    "opciones": [
     "El autor real del libro",
-    "La voz que cuenta los hechos dentro de una obra narrativa",
     "El lugar y tiempo donde ocurre la acción",
-    "El personaje principal de la historia"
+    "El personaje principal de la historia",
+    "La voz que cuenta los hechos dentro de una obra narrativa"
    ],
-   "correcta": 1,
+   "correcta": 3,
    "tip": "Es quien 'narra' la historia, no siempre es el autor.",
    "revisada": false
   },
@@ -864,12 +864,12 @@
    "oa": "VOC-LENG",
    "pregunta": "¿Qué es el \"conflicto\" en una narración?",
    "opciones": [
-    "La descripción del ambiente de la obra",
-    "El estilo de escritura utilizado por el autor",
     "El lugar físico donde transcurre la historia",
-    "La tensión o problema que enfrenta un personaje y que impulsa la acción de la historia"
+    "La tensión o problema que enfrenta un personaje y que impulsa la acción de la historia",
+    "La descripción del ambiente de la obra",
+    "El estilo de escritura utilizado por el autor"
    ],
-   "correcta": 3,
+   "correcta": 1,
    "tip": "Es el problema central que mueve la trama.",
    "revisada": false
   },
@@ -878,12 +878,12 @@
    "oa": "VOC-LENG",
    "pregunta": "¿Qué es el \"lenguaje figurado\"?",
    "opciones": [
-    "El conjunto de reglas gramaticales de un idioma",
-    "Un lenguaje que expresa ideas de forma literal y directa",
+    "El uso del lenguaje con un sentido distinto al literal, para crear efectos expresivos o estéticos",
     "El lenguaje que se usa en textos informativos y noticias",
-    "El uso del lenguaje con un sentido distinto al literal, para crear efectos expresivos o estéticos"
+    "El conjunto de reglas gramaticales de un idioma",
+    "Un lenguaje que expresa ideas de forma literal y directa"
    ],
-   "correcta": 3,
+   "correcta": 0,
    "tip": "Incluye metáforas, comparaciones y otras figuras literarias.",
    "revisada": false
   },
@@ -892,12 +892,12 @@
    "oa": "VOC-LENG",
    "pregunta": "¿Qué es una \"metáfora\"?",
    "opciones": [
-    "La repetición de un sonido al final de los versos",
     "Una figura literaria que identifica un elemento con otro sin usar nexos comparativos, dando a entender una semejanza",
-    "Una figura literaria que compara dos elementos usando la palabra 'como'",
-    "La descripción detallada de un lugar o personaje"
+    "La descripción detallada de un lugar o personaje",
+    "La repetición de un sonido al final de los versos",
+    "Una figura literaria que compara dos elementos usando la palabra 'como'"
    ],
-   "correcta": 1,
+   "correcta": 0,
    "tip": "Ejemplo: 'sus ojos son dos luceros' (sin usar 'como').",
    "revisada": false
   },
@@ -906,8 +906,8 @@
    "oa": "VOC-LENG",
    "pregunta": "¿Qué es la \"personificación\"?",
    "opciones": [
-    "El uso de un narrador en primera persona",
     "La descripción física detallada de un personaje",
+    "El uso de un narrador en primera persona",
     "La comparación directa entre dos elementos usando 'como'",
     "Una figura literaria que atribuye cualidades humanas a objetos, animales o ideas"
    ],
@@ -920,12 +920,12 @@
    "oa": "VOC-LENG",
    "pregunta": "¿Qué es el \"hablante lírico\"?",
    "opciones": [
-    "El autor real de un poema",
-    "La voz ficticia que expresa sentimientos y emociones dentro de un poema",
     "El narrador de una novela",
-    "El personaje principal de una obra de teatro"
+    "El autor real de un poema",
+    "El personaje principal de una obra de teatro",
+    "La voz ficticia que expresa sentimientos y emociones dentro de un poema"
    ],
-   "correcta": 1,
+   "correcta": 3,
    "tip": "Es la voz que 'habla' dentro del poema, no el poeta real.",
    "revisada": false
   },
@@ -934,12 +934,12 @@
    "oa": "VOC-LENG",
    "pregunta": "¿Qué es un \"texto dramático\"?",
    "opciones": [
-    "Un texto escrito para ser representado ante un público, compuesto principalmente por diálogos",
-    "Un poema que expresa sentimientos profundos",
+    "Un relato narrado en tercera persona",
     "Un texto que expone información de manera objetiva",
-    "Un relato narrado en tercera persona"
+    "Un poema que expresa sentimientos profundos",
+    "Un texto escrito para ser representado ante un público, compuesto principalmente por diálogos"
    ],
-   "correcta": 0,
+   "correcta": 3,
    "tip": "Piensa en obras de teatro, con diálogos y acotaciones.",
    "revisada": false
   },
@@ -948,12 +948,12 @@
    "oa": "VOC-LENG",
    "pregunta": "¿Qué es una \"acotación\" en un texto dramático?",
    "opciones": [
-    "Una indicación del autor sobre gestos, movimientos o el escenario, que no se dice en voz alta",
-    "El parlamento principal de un personaje",
     "La descripción del conflicto central de la obra",
-    "El título de la obra teatral"
+    "Una indicación del autor sobre gestos, movimientos o el escenario, que no se dice en voz alta",
+    "El título de la obra teatral",
+    "El parlamento principal de un personaje"
    ],
-   "correcta": 0,
+   "correcta": 1,
    "tip": "Suele ir entre paréntesis, indicando cómo actuar.",
    "revisada": false
   },
@@ -962,12 +962,12 @@
    "oa": "VOC-LENG",
    "pregunta": "¿Qué es una \"epopeya\"?",
    "opciones": [
-    "Un poema narrativo extenso que relata las hazañas de un héroe, ligado a la tradición de un pueblo",
     "Un texto informativo sobre hechos históricos",
-    "Una carta dirigida a un medio de comunicación",
-    "Una obra de teatro cómica"
+    "Un poema narrativo extenso que relata las hazañas de un héroe, ligado a la tradición de un pueblo",
+    "Una obra de teatro cómica",
+    "Una carta dirigida a un medio de comunicación"
    ],
-   "correcta": 0,
+   "correcta": 1,
    "tip": "Ejemplo clásico: 'La Odisea'.",
    "revisada": false
   },
@@ -977,11 +977,11 @@
    "pregunta": "¿Qué caracteriza a la \"comedia\" como género dramático?",
    "opciones": [
     "Presenta un conflicto trágico que termina en la muerte del protagonista",
-    "Utiliza el humor y el enredo para criticar o divertir, y suele tener un desenlace feliz",
     "Es un texto exclusivamente informativo",
-    "Se centra en describir paisajes naturales"
+    "Se centra en describir paisajes naturales",
+    "Utiliza el humor y el enredo para criticar o divertir, y suele tener un desenlace feliz"
    ],
-   "correcta": 1,
+   "correcta": 3,
    "tip": "Busca hacer reír mientras cuenta una historia con final feliz.",
    "revisada": false
   },
@@ -990,12 +990,12 @@
    "oa": "VOC-LENG",
    "pregunta": "¿Qué es un \"texto argumentativo\"?",
    "opciones": [
+    "Un poema que expresa emociones del hablante lírico",
     "Un texto que busca convencer al lector mediante una tesis respaldada por argumentos",
     "Un texto que solo describe un objeto o lugar",
-    "Un poema que expresa emociones del hablante lírico",
     "Un texto que narra hechos ficticios en orden cronológico"
    ],
-   "correcta": 0,
+   "correcta": 1,
    "tip": "Piensa en columnas de opinión o discursos.",
    "revisada": false
   },
@@ -1004,9 +1004,9 @@
    "oa": "VOC-LENG",
    "pregunta": "¿Qué es la \"tesis\" en un texto argumentativo?",
    "opciones": [
-    "Un ejemplo que apoya una idea secundaria",
-    "La idea principal o postura que el autor defiende y busca sustentar con argumentos",
     "El resumen final del texto",
+    "La idea principal o postura que el autor defiende y busca sustentar con argumentos",
+    "Un ejemplo que apoya una idea secundaria",
     "La fuente de información citada por el autor"
    ],
    "correcta": 1,
@@ -1018,12 +1018,12 @@
    "oa": "VOC-LENG",
    "pregunta": "¿Cuál es la diferencia entre \"hecho\" y \"opinión\"?",
    "opciones": [
+    "Ambos términos significan exactamente lo mismo",
     "Un hecho es algo comprobable y objetivo; una opinión es un juicio personal o subjetivo",
     "Un hecho siempre es falso y una opinión siempre es verdadera",
-    "Un hecho solo aparece en textos literarios y la opinión en textos científicos",
-    "Ambos términos significan exactamente lo mismo"
+    "Un hecho solo aparece en textos literarios y la opinión en textos científicos"
    ],
-   "correcta": 0,
+   "correcta": 1,
    "tip": "El hecho se puede verificar; la opinión depende del punto de vista.",
    "revisada": false
   },
@@ -1032,12 +1032,12 @@
    "oa": "VOC-LENG",
    "pregunta": "¿Qué es un \"texto expositivo\"?",
    "opciones": [
-    "Un poema que utiliza lenguaje figurado",
-    "Un texto cuyo propósito es explicar o informar sobre un tema de manera clara y organizada",
+    "Un texto que busca convencer al lector de una postura",
     "Un diálogo teatral entre dos personajes",
-    "Un texto que busca convencer al lector de una postura"
+    "Un texto cuyo propósito es explicar o informar sobre un tema de manera clara y organizada",
+    "Un poema que utiliza lenguaje figurado"
    ],
-   "correcta": 1,
+   "correcta": 2,
    "tip": "Su objetivo principal es informar, no persuadir ni narrar.",
    "revisada": false
   },
@@ -1046,12 +1046,12 @@
    "oa": "VOC-LENG",
    "pregunta": "¿Qué es la \"propaganda\"?",
    "opciones": [
-    "Mensajes o recursos usados para influir en las ideas o el comportamiento de las personas, muchas veces con fines políticos o ideológicos",
     "Un resumen objetivo de una noticia",
+    "Mensajes o recursos usados para influir en las ideas o el comportamiento de las personas, muchas veces con fines políticos o ideológicos",
     "Un tipo de texto informativo sin intención persuasiva",
     "Un texto literario que expresa sentimientos"
    ],
-   "correcta": 0,
+   "correcta": 1,
    "tip": "Busca convencer o influir, a menudo de forma masiva.",
    "revisada": false
   },
@@ -1060,12 +1060,12 @@
    "oa": "VOC-LENG",
    "pregunta": "¿Qué es un \"estereotipo\"?",
    "opciones": [
-    "Una idea o imagen simplificada y generalizada sobre un grupo de personas, que no siempre es verdadera",
     "Un hecho comprobado científicamente",
+    "El tema central de un texto expositivo",
     "Una figura literaria usada en la poesía",
-    "El tema central de un texto expositivo"
+    "Una idea o imagen simplificada y generalizada sobre un grupo de personas, que no siempre es verdadera"
    ],
-   "correcta": 0,
+   "correcta": 3,
    "tip": "Son generalizaciones, muchas veces injustas, sobre un grupo.",
    "revisada": false
   },
@@ -1074,12 +1074,12 @@
    "oa": "VOC-LENG",
    "pregunta": "¿Qué es una \"inferencia\" al leer un texto?",
    "opciones": [
+    "Una conclusión que el lector deduce a partir de pistas del texto, aunque no esté dicho explícitamente",
     "El resumen literal del contenido de un texto",
     "Una cita textual copiada del texto original",
-    "Una conclusión que el lector deduce a partir de pistas del texto, aunque no esté dicho explícitamente",
     "El título asignado por el autor a su obra"
    ],
-   "correcta": 2,
+   "correcta": 0,
    "tip": "Es 'leer entre líneas', deducir algo no dicho directamente.",
    "revisada": false
   },
@@ -1089,9 +1089,9 @@
    "pregunta": "¿Qué es una \"crónica\"?",
    "opciones": [
     "Un texto narrativo que relata hechos reales o verosímiles, ordenados generalmente en el tiempo, con estilo personal",
+    "Una obra teatral basada en hechos históricos",
     "Una fórmula matemática usada en estadística",
-    "Un poema que sigue una estructura fija de versos",
-    "Una obra teatral basada en hechos históricos"
+    "Un poema que sigue una estructura fija de versos"
    ],
    "correcta": 0,
    "tip": "Es un género que mezcla información y narración, muy usado en periodismo.",
@@ -1103,9 +1103,9 @@
    "pregunta": "¿Qué es un \"conector\" en un texto?",
    "opciones": [
     "Una palabra o frase que relaciona ideas dentro de un texto, dando coherencia y orden",
+    "Un personaje que conecta dos historias distintas",
     "El título principal de un texto",
-    "Un signo de puntuación que separa oraciones",
-    "Un personaje que conecta dos historias distintas"
+    "Un signo de puntuación que separa oraciones"
    ],
    "correcta": 0,
    "tip": "Ejemplos: 'sin embargo', 'por lo tanto', 'además'.",
@@ -1116,9 +1116,9 @@
    "oa": "VOC-LENG",
    "pregunta": "¿Qué significa \"coherencia\" en un texto?",
    "opciones": [
+    "Que el texto está escrito en primera persona",
     "Que el texto usa exclusivamente lenguaje figurado",
     "Que el texto tiene una extensión muy larga",
-    "Que el texto está escrito en primera persona",
     "Que las ideas de un texto se relacionan lógicamente entre sí y tienen sentido global"
    ],
    "correcta": 3,
@@ -1131,11 +1131,11 @@
    "pregunta": "¿Qué es un \"anexo\" (como el que habitó Ana Frank)?",
    "opciones": [
     "Un edificio público destinado a oficinas de gobierno",
-    "Un tipo de campo de trabajo forzado",
+    "Una construcción o espacio adicional unido a un edificio principal, que en el diario sirvió de escondite secreto",
     "Un documento legal que acompaña un contrato",
-    "Una construcción o espacio adicional unido a un edificio principal, que en el diario sirvió de escondite secreto"
+    "Un tipo de campo de trabajo forzado"
    ],
-   "correcta": 3,
+   "correcta": 1,
    "tip": "La familia Frank se ocultó en un anexo, una parte añadida al edificio.",
    "revisada": false
   },
@@ -1145,11 +1145,11 @@
    "pregunta": "¿Qué significa \"clandestino\"?",
    "opciones": [
     "Que se realiza de manera oficial y con permiso",
-    "Que pertenece a una organización internacional",
     "Que actúa o existe en secreto, ocultándose de la ley o de una autoridad",
+    "Que pertenece a una organización internacional",
     "Que es reconocido públicamente por el gobierno"
    ],
-   "correcta": 2,
+   "correcta": 1,
    "tip": "La familia Frank vivió de forma clandestina, escondida.",
    "revisada": false
   },
@@ -1158,8 +1158,8 @@
    "oa": "VOC-LECT",
    "pregunta": "¿Qué significa \"persecución\" (en el contexto histórico)?",
    "opciones": [
-    "Un tipo de gobierno democrático",
     "Una competencia deportiva entre países",
+    "Un tipo de gobierno democrático",
     "El hostigamiento y maltrato sistemático hacia un grupo de personas por su origen, religión o ideas",
     "Una alianza política entre dos naciones"
    ],
@@ -1172,12 +1172,12 @@
    "oa": "VOC-LECT",
    "pregunta": "¿Qué es el \"antisemitismo\"?",
    "opciones": [
-    "Un sistema económico basado en el comercio",
-    "Una ideología que defiende la igualdad entre todos los pueblos",
+    "Un movimiento artístico del siglo XX",
     "La hostilidad, discriminación o rechazo hacia las personas judías",
-    "Un movimiento artístico del siglo XX"
+    "Un sistema económico basado en el comercio",
+    "Una ideología que defiende la igualdad entre todos los pueblos"
    ],
-   "correcta": 2,
+   "correcta": 1,
    "tip": "Es el odio o discriminación específicamente contra el pueblo judío.",
    "revisada": false
   },
@@ -1186,12 +1186,12 @@
    "oa": "VOC-LECT",
    "pregunta": "¿Qué significa \"ocupación\" (militar)?",
    "opciones": [
-    "El control de un territorio por parte de fuerzas militares extranjeras",
     "La firma de un tratado de paz",
+    "El control de un territorio por parte de fuerzas militares extranjeras",
     "Una alianza voluntaria entre dos países",
     "El trabajo que una persona realiza para ganarse la vida"
    ],
-   "correcta": 0,
+   "correcta": 1,
    "tip": "Los Países Bajos vivieron bajo ocupación alemana durante la guerra.",
    "revisada": false
   },
@@ -1215,11 +1215,11 @@
    "pregunta": "¿Qué es un \"diario íntimo\"?",
    "opciones": [
     "Un periódico que se publica todos los días",
+    "Un texto personal donde alguien registra sus pensamientos, sentimientos y experiencias, generalmente sin intención de publicarlo",
     "Un texto argumentativo publicado en un medio de comunicación",
-    "Un documento oficial del gobierno",
-    "Un texto personal donde alguien registra sus pensamientos, sentimientos y experiencias, generalmente sin intención de publicarlo"
+    "Un documento oficial del gobierno"
    ],
-   "correcta": 3,
+   "correcta": 1,
    "tip": "Es el tipo de texto que escribió Ana Frank.",
    "revisada": false
   },
@@ -1229,11 +1229,11 @@
    "pregunta": "¿Qué significa \"escondite\"?",
    "opciones": [
     "Un documento que certifica una identidad",
-    "Un edificio público de gran tamaño",
     "Un tipo de transporte usado en la guerra",
-    "Un lugar donde algo o alguien se oculta para no ser encontrado"
+    "Un lugar donde algo o alguien se oculta para no ser encontrado",
+    "Un edificio público de gran tamaño"
    ],
-   "correcta": 3,
+   "correcta": 2,
    "tip": "El anexo funcionó como escondite para la familia Frank.",
    "revisada": false
   },
@@ -1242,12 +1242,12 @@
    "oa": "VOC-LECT",
    "pregunta": "¿Qué es el \"toque de queda\"?",
    "opciones": [
-    "Una celebración religiosa nocturna",
-    "Una medida que prohíbe a la población circular libremente por las calles durante ciertas horas, generalmente impuesta por una autoridad",
     "Un tipo de música tradicional europea",
-    "Un permiso especial para viajar entre países"
+    "Un permiso especial para viajar entre países",
+    "Una medida que prohíbe a la población circular libremente por las calles durante ciertas horas, generalmente impuesta por una autoridad",
+    "Una celebración religiosa nocturna"
    ],
-   "correcta": 1,
+   "correcta": 2,
    "tip": "Se imponía para controlar los movimientos de la población durante la ocupación.",
    "revisada": false
   },
@@ -1256,12 +1256,12 @@
    "oa": "VOC-LECT",
    "pregunta": "¿Qué fue un \"gueto\" (en el contexto de la Segunda Guerra Mundial)?",
    "opciones": [
-    "Un mercado internacional de productos agrícolas",
+    "Un barrio de la ciudad donde se obligaba a vivir, aislados y en condiciones precarias, a la población judía",
     "Un tipo de vivienda de lujo para las élites",
-    "Un tribunal encargado de juzgar crímenes de guerra",
-    "Un barrio de la ciudad donde se obligaba a vivir, aislados y en condiciones precarias, a la población judía"
+    "Un mercado internacional de productos agrícolas",
+    "Un tribunal encargado de juzgar crímenes de guerra"
    ],
-   "correcta": 3,
+   "correcta": 0,
    "tip": "Los nazis confinaban a los judíos en estos barrios aislados.",
    "revisada": false
   },
@@ -1270,12 +1270,12 @@
    "oa": "VOC-LECT",
    "pregunta": "¿Qué fue el \"nazismo\"?",
    "opciones": [
-    "Un sistema económico basado en el libre comercio",
+    "Un movimiento artístico moderno de Alemania",
     "Una alianza democrática entre países europeos",
-    "La ideología y régimen político totalitario liderado por Adolf Hitler en Alemania, basado en el racismo y el nacionalismo extremo",
-    "Un movimiento artístico moderno de Alemania"
+    "Un sistema económico basado en el libre comercio",
+    "La ideología y régimen político totalitario liderado por Adolf Hitler en Alemania, basado en el racismo y el nacionalismo extremo"
    ],
-   "correcta": 2,
+   "correcta": 3,
    "tip": "Fue el régimen responsable de la persecución de los judíos.",
    "revisada": false
   },
@@ -1284,12 +1284,12 @@
    "oa": "VOC-LECT",
    "pregunta": "¿Qué fue el \"Holocausto\"?",
    "opciones": [
-    "Una celebración cultural judía tradicional",
-    "El exterminio sistemático de millones de judíos y otros grupos por parte del régimen nazi",
     "Un movimiento de resistencia armada en Francia",
-    "Un tratado de paz firmado al final de la Segunda Guerra Mundial"
+    "Un tratado de paz firmado al final de la Segunda Guerra Mundial",
+    "Una celebración cultural judía tradicional",
+    "El exterminio sistemático de millones de judíos y otros grupos por parte del régimen nazi"
    ],
-   "correcta": 1,
+   "correcta": 3,
    "tip": "Es el nombre que se da al genocidio judío durante el nazismo.",
    "revisada": false
   },
@@ -1298,12 +1298,12 @@
    "oa": "VOC-LECT",
    "pregunta": "¿Qué fue un \"campo de concentración\"?",
    "opciones": [
-    "Un recinto donde el régimen nazi encerraba, explotaba y exterminaba a prisioneros, especialmente judíos",
     "Un centro educativo para refugiados",
+    "Un lugar de entrenamiento militar para soldados",
     "Un espacio destinado a reuniones diplomáticas",
-    "Un lugar de entrenamiento militar para soldados"
+    "Un recinto donde el régimen nazi encerraba, explotaba y exterminaba a prisioneros, especialmente judíos"
    ],
-   "correcta": 0,
+   "correcta": 3,
    "tip": "Auschwitz es uno de los campos de concentración más conocidos.",
    "revisada": false
   },
@@ -1313,11 +1313,11 @@
    "pregunta": "¿Qué es un \"delator\"?",
    "opciones": [
     "Un funcionario encargado de repartir alimentos",
-    "Una persona que informa a las autoridades sobre otra, poniéndola en peligro",
     "Una persona que ayuda a esconder a otra de las autoridades",
-    "Un soldado que lucha en el frente de batalla"
+    "Un soldado que lucha en el frente de batalla",
+    "Una persona que informa a las autoridades sobre otra, poniéndola en peligro"
    ],
-   "correcta": 1,
+   "correcta": 3,
    "tip": "Se cree que un delator informó del escondite de la familia Frank.",
    "revisada": false
   },
@@ -1327,11 +1327,11 @@
    "pregunta": "¿Qué es una \"redada\"?",
    "opciones": [
     "Un acuerdo firmado entre dos países en conflicto",
-    "Una operación sorpresiva de las autoridades para capturar o detener a un grupo de personas",
+    "Un tipo de transporte usado durante la guerra",
     "Una reunión familiar de celebración",
-    "Un tipo de transporte usado durante la guerra"
+    "Una operación sorpresiva de las autoridades para capturar o detener a un grupo de personas"
    ],
-   "correcta": 1,
+   "correcta": 3,
    "tip": "Los nazis realizaban redadas para capturar a personas escondidas.",
    "revisada": false
   },
@@ -1369,11 +1369,11 @@
    "pregunta": "¿Qué es un \"régimen totalitario\"?",
    "opciones": [
     "Un sistema judicial basado en jurados populares",
-    "Un sistema de gobierno que controla todos los aspectos de la vida social y política, sin permitir oposición ni libertades",
     "Un gobierno elegido democráticamente cada cuatro años",
-    "Una alianza comercial entre varios países"
+    "Una alianza comercial entre varios países",
+    "Un sistema de gobierno que controla todos los aspectos de la vida social y política, sin permitir oposición ni libertades"
    ],
-   "correcta": 1,
+   "correcta": 3,
    "tip": "El régimen nazi es un ejemplo de gobierno totalitario.",
    "revisada": false
   },
@@ -1383,9 +1383,9 @@
    "pregunta": "¿Qué significa \"resistencia\" (en el contexto de la ocupación nazi)?",
    "opciones": [
     "La oposición organizada, muchas veces clandestina, de un pueblo frente a un régimen opresor u ocupante",
+    "Un tipo de arma usada en la guerra",
     "La rendición inmediata de un país ante el invasor",
-    "Un tratado de colaboración con el enemigo",
-    "Un tipo de arma usada en la guerra"
+    "Un tratado de colaboración con el enemigo"
    ],
    "correcta": 0,
    "tip": "Grupos de resistencia ayudaban a esconder a perseguidos por el nazismo.",
@@ -1398,11 +1398,711 @@
    "opciones": [
     "La firma de un contrato comercial entre países",
     "La construcción de un nuevo campo de concentración",
-    "El inicio de un nuevo conflicto armado",
-    "El momento en que un territorio o un pueblo recupera su libertad tras ser ocupado o sometido"
+    "El momento en que un territorio o un pueblo recupera su libertad tras ser ocupado o sometido",
+    "El inicio de un nuevo conflicto armado"
+   ],
+   "correcta": 2,
+   "tip": "Los Países Bajos fueron liberados al finalizar la Segunda Guerra Mundial.",
+   "revisada": false
+  },
+  {
+   "id": "voc-hist-101",
+   "oa": "VOC-HIST",
+   "pregunta": "¿Qué significa \"feudalismo\"?",
+   "opciones": [
+    "Forma de gobierno donde el pueblo elige a sus autoridades",
+    "Sistema económico basado en el comercio internacional",
+    "Sistema de producción basado en fábricas",
+    "Sistema de organización social y política medieval basado en lazos de vasallaje y entrega de tierras"
    ],
    "correcta": 3,
-   "tip": "Los Países Bajos fueron liberados al finalizar la Segunda Guerra Mundial.",
+   "tip": "Piensa en señores feudales y vasallos en la Edad Media.",
+   "revisada": false
+  },
+  {
+   "id": "voc-hist-102",
+   "oa": "VOC-HIST",
+   "pregunta": "¿Qué es el \"vasallaje\"?",
+   "opciones": [
+    "Una asamblea de representantes populares",
+    "Un tipo de moneda colonial",
+    "Un impuesto cobrado a los comerciantes",
+    "Relación de fidelidad y servicio de un vasallo hacia un señor feudal a cambio de protección"
+   ],
+   "correcta": 3,
+   "tip": "Relación de lealtad a cambio de tierra o protección.",
+   "revisada": false
+  },
+  {
+   "id": "voc-hist-103",
+   "oa": "VOC-HIST",
+   "pregunta": "¿Qué fue la \"Inquisición\"?",
+   "opciones": [
+    "Un consejo de nobles que asesoraba al rey",
+    "Una institución que administraba las colonias americanas",
+    "Una feria comercial de la época medieval",
+    "Un tribunal religioso que perseguía y juzgaba a quienes se apartaban de la fe católica"
+   ],
+   "correcta": 3,
+   "tip": "Tribunal eclesiástico ligado a la Contrarreforma.",
+   "revisada": false
+  },
+  {
+   "id": "voc-hist-104",
+   "oa": "VOC-HIST",
+   "pregunta": "¿Qué significa \"colonialismo\"?",
+   "opciones": [
+    "Forma de gobierno basada en la elección popular",
+    "Sistema de intercambio de bienes sin uso de dinero",
+    "Sistema de dominación política y económica de una potencia sobre territorios extranjeros",
+    "Movimiento cultural que valoraba al ser humano"
+   ],
+   "correcta": 2,
+   "tip": "Un país domina y explota otros territorios.",
+   "revisada": false
+  },
+  {
+   "id": "voc-hist-105",
+   "oa": "VOC-HIST",
+   "pregunta": "¿Qué es un \"criollo\" en la sociedad colonial?",
+   "opciones": [
+    "Un esclavo liberado",
+    "Un hijo de españoles nacido en América",
+    "Un funcionario enviado desde España",
+    "Un indígena convertido al catolicismo"
+   ],
+   "correcta": 1,
+   "tip": "Nacido en América, de ascendencia española.",
+   "revisada": false
+  },
+  {
+   "id": "voc-hist-106",
+   "oa": "VOC-HIST",
+   "pregunta": "¿Qué era una \"junta de gobierno\" en el contexto independentista?",
+   "opciones": [
+    "Un tribunal que juzgaba a los criollos",
+    "Un impuesto especial de guerra",
+    "Un ejército organizado para defender la colonia",
+    "Un cuerpo colegiado que asumía el poder ante la ausencia del rey"
+   ],
+   "correcta": 3,
+   "tip": "Gobierno provisional formado ante la crisis de la monarquía española.",
+   "revisada": false
+  },
+  {
+   "id": "voc-hist-107",
+   "oa": "VOC-HIST",
+   "pregunta": "¿Qué significa \"república\"?",
+   "opciones": [
+    "Forma de organización política donde el poder reside en el pueblo y se ejerce mediante representantes electos",
+    "Asamblea religiosa que gobierna un país",
+    "Forma de gobierno hereditaria encabezada por un rey",
+    "Territorio administrado directamente por otra nación"
+   ],
+   "correcta": 0,
+   "tip": "Opuesta a la monarquía; autoridades elegidas por tiempo determinado.",
+   "revisada": false
+  },
+  {
+   "id": "voc-hist-108",
+   "oa": "VOC-HIST",
+   "pregunta": "¿Qué es el \"caudillismo\"?",
+   "opciones": [
+    "Forma de comercio entre colonias",
+    "Sistema donde líderes con fuerte autoridad personal y apoyo militar concentran el poder político",
+    "Alianza entre distintas naciones americanas",
+    "Sistema de votación popular directa"
+   ],
+   "correcta": 1,
+   "tip": "Líder carismático y militar que domina la política, común tras la independencia.",
+   "revisada": false
+  },
+  {
+   "id": "voc-hist-109",
+   "oa": "VOC-HIST",
+   "pregunta": "¿Qué significa \"abolición\" (de la esclavitud)?",
+   "opciones": [
+    "La venta de personas esclavizadas",
+    "La creación de nuevas colonias",
+    "La supresión legal y definitiva de una práctica, como la esclavitud",
+    "El aumento de impuestos a los esclavos"
+   ],
+   "correcta": 2,
+   "tip": "Poner fin oficialmente a una institución injusta.",
+   "revisada": false
+  },
+  {
+   "id": "voc-hist-110",
+   "oa": "VOC-HIST",
+   "pregunta": "¿Qué es un \"tratado\" en historia?",
+   "opciones": [
+    "Un documento que declara la independencia",
+    "Un impuesto cobrado por el rey",
+    "Un acuerdo formal entre dos o más naciones o partes en conflicto",
+    "Un tipo de moneda usada en la colonia"
+   ],
+   "correcta": 2,
+   "tip": "Acuerdo escrito y oficial, por ejemplo para poner fin a una guerra.",
+   "revisada": false
+  },
+  {
+   "id": "voc-cien-101",
+   "oa": "VOC-CIEN",
+   "pregunta": "¿Qué es el \"núcleo celular\"?",
+   "opciones": [
+    "Una estructura que produce energía para la célula",
+    "La membrana que envuelve la célula",
+    "La estructura que contiene el material genético (ADN) y controla las actividades de la célula",
+    "Un tipo de célula vegetal"
+   ],
+   "correcta": 2,
+   "tip": "Es el centro de control de la célula, guarda el ADN.",
+   "revisada": false
+  },
+  {
+   "id": "voc-cien-102",
+   "oa": "VOC-CIEN",
+   "pregunta": "¿Qué es el \"ADN\"?",
+   "opciones": [
+    "Una molécula que contiene la información genética de los seres vivos",
+    "Un componente de la membrana celular",
+    "Un tipo de proteína muscular",
+    "Una fuente de energía celular"
+   ],
+   "correcta": 0,
+   "tip": "Molécula que guarda las instrucciones hereditarias.",
+   "revisada": false
+  },
+  {
+   "id": "voc-cien-103",
+   "oa": "VOC-CIEN",
+   "pregunta": "¿Qué es un \"tejido\" en biología?",
+   "opciones": [
+    "Un conjunto de órganos que forman un sistema",
+    "Un conjunto de células con la misma función que trabajan juntas",
+    "Una sola célula especializada",
+    "Un tipo de energía usada por el cuerpo"
+   ],
+   "correcta": 1,
+   "tip": "Ejemplo: tejido muscular, tejido nervioso.",
+   "revisada": false
+  },
+  {
+   "id": "voc-cien-104",
+   "oa": "VOC-CIEN",
+   "pregunta": "¿Qué es la \"mitosis\"?",
+   "opciones": [
+    "El movimiento de sustancias a través de la membrana",
+    "La combinación de dos células reproductivas",
+    "El proceso por el cual las plantas fabrican su alimento",
+    "El proceso de división celular que produce dos células hijas idénticas"
+   ],
+   "correcta": 3,
+   "tip": "Es cómo las células se reproducen para crecer y reparar tejidos.",
+   "revisada": false
+  },
+  {
+   "id": "voc-cien-105",
+   "oa": "VOC-CIEN",
+   "pregunta": "¿Qué es una \"vacuola\"?",
+   "opciones": [
+    "El centro de control genético de la célula",
+    "Una estructura celular que almacena agua, nutrientes y desechos",
+    "Una capa protectora que rodea a la célula vegetal",
+    "Un organelo que produce proteínas"
+   ],
+   "correcta": 1,
+   "tip": "Es especialmente grande en las células vegetales.",
+   "revisada": false
+  },
+  {
+   "id": "voc-cien-106",
+   "oa": "VOC-CIEN",
+   "pregunta": "¿Qué es el \"voltaje\"?",
+   "opciones": [
+    "La oposición de un material al paso de la corriente",
+    "La cantidad de carga eléctrica que fluye por segundo",
+    "La capacidad de un material para conducir calor",
+    "La diferencia de potencial eléctrico que impulsa el flujo de corriente"
+   ],
+   "correcta": 3,
+   "tip": "Se mide en volts; es la 'fuerza' que empuja la corriente.",
+   "revisada": false
+  },
+  {
+   "id": "voc-cien-107",
+   "oa": "VOC-CIEN",
+   "pregunta": "¿Qué es la \"resistencia eléctrica\"?",
+   "opciones": [
+    "La cantidad de electrones libres en un material",
+    "La oposición que un material ofrece al paso de la corriente eléctrica",
+    "La energía almacenada en una batería",
+    "La fuerza que impulsa la corriente por un circuito"
+   ],
+   "correcta": 1,
+   "tip": "Se mide en ohms; a mayor resistencia, más difícil pasa la corriente.",
+   "revisada": false
+  },
+  {
+   "id": "voc-cien-108",
+   "oa": "VOC-CIEN",
+   "pregunta": "¿Qué es un \"electrón\"?",
+   "opciones": [
+    "Un tipo de molécula orgánica",
+    "Una partícula con carga positiva dentro del núcleo",
+    "Una partícula sin carga eléctrica dentro del núcleo",
+    "Una partícula subatómica con carga negativa que se ubica alrededor del núcleo del átomo"
+   ],
+   "correcta": 3,
+   "tip": "Gira en torno al núcleo y tiene carga negativa.",
+   "revisada": false
+  },
+  {
+   "id": "voc-cien-109",
+   "oa": "VOC-CIEN",
+   "pregunta": "¿Qué es una \"molécula\"?",
+   "opciones": [
+    "Un conjunto de dos o más átomos unidos químicamente",
+    "Una partícula con carga eléctrica",
+    "La unidad básica de un elemento químico",
+    "Una estructura que forma parte de la célula"
+   ],
+   "correcta": 0,
+   "tip": "Por ejemplo, el agua es una molécula formada por hidrógeno y oxígeno.",
+   "revisada": false
+  },
+  {
+   "id": "voc-cien-110",
+   "oa": "VOC-CIEN",
+   "pregunta": "¿Qué es una \"reacción química\"?",
+   "opciones": [
+    "El movimiento de un objeto por acción de una fuerza",
+    "La medición de la masa de un objeto",
+    "El paso de una sustancia del estado sólido al líquido",
+    "Un proceso donde una o más sustancias se transforman en otras diferentes"
+   ],
+   "correcta": 3,
+   "tip": "Se rompen y forman nuevos enlaces entre átomos.",
+   "revisada": false
+  },
+  {
+   "id": "voc-mate-101",
+   "oa": "VOC-MATE",
+   "pregunta": "¿Qué es un \"número irracional\"?",
+   "opciones": [
+    "Un número decimal infinito y no periódico que no puede escribirse como fracción",
+    "Un número negativo",
+    "Un número que resulta de elevar una base a un exponente",
+    "Un número que se puede escribir como fracción exacta"
+   ],
+   "correcta": 0,
+   "tip": "Ejemplo: el número pi (π).",
+   "revisada": false
+  },
+  {
+   "id": "voc-mate-102",
+   "oa": "VOC-MATE",
+   "pregunta": "¿Qué es el \"valor absoluto\" de un número?",
+   "opciones": [
+    "El resultado de sumarle uno al número",
+    "La distancia de ese número al cero en la recta numérica, siempre positiva o cero",
+    "La mitad del número",
+    "El opuesto del número"
+   ],
+   "correcta": 1,
+   "tip": "Se escribe entre barras verticales, por ejemplo |−5| = 5.",
+   "revisada": false
+  },
+  {
+   "id": "voc-mate-103",
+   "oa": "VOC-MATE",
+   "pregunta": "¿Qué es la \"factorización\"?",
+   "opciones": [
+    "Elevar un número a una potencia",
+    "Calcular el promedio de varios números",
+    "Descomponer un número o expresión algebraica en un producto de factores",
+    "Sumar todos los términos de una expresión"
+   ],
+   "correcta": 2,
+   "tip": "Por ejemplo, 12 = 2 × 2 × 3.",
+   "revisada": false
+  },
+  {
+   "id": "voc-mate-104",
+   "oa": "VOC-MATE",
+   "pregunta": "¿Qué es la \"proporcionalidad directa\"?",
+   "opciones": [
+    "Una ecuación con dos incógnitas",
+    "Una expresión con términos semejantes",
+    "Relación entre dos cantidades donde al aumentar una, la otra disminuye en la misma razón",
+    "Relación entre dos cantidades donde al aumentar una, la otra aumenta en la misma razón"
+   ],
+   "correcta": 3,
+   "tip": "Si el doble de una cantidad da el doble de la otra, es directa.",
+   "revisada": false
+  },
+  {
+   "id": "voc-mate-105",
+   "oa": "VOC-MATE",
+   "pregunta": "¿Qué es el \"dominio de una función\"?",
+   "opciones": [
+    "El punto donde la función corta el eje Y",
+    "El conjunto de todos los valores de entrada (x) para los cuales la función está definida",
+    "El conjunto de todos los valores de salida (y) que produce la función",
+    "La pendiente de la recta que representa la función"
+   ],
+   "correcta": 1,
+   "tip": "Son los valores que puede tomar la variable independiente x.",
+   "revisada": false
+  },
+  {
+   "id": "voc-mate-106",
+   "oa": "VOC-MATE",
+   "pregunta": "¿Qué es un \"coeficiente\" en una expresión algebraica?",
+   "opciones": [
+    "La letra que representa una cantidad desconocida",
+    "El exponente de una potencia",
+    "El resultado final de una ecuación",
+    "El número que multiplica a una variable"
+   ],
+   "correcta": 3,
+   "tip": "En 5x, el 5 es el coeficiente.",
+   "revisada": false
+  },
+  {
+   "id": "voc-mate-107",
+   "oa": "VOC-MATE",
+   "pregunta": "¿Qué es un \"polinomio\"?",
+   "opciones": [
+    "Un tipo de figura geométrica con muchos lados",
+    "Una expresión algebraica formada por la suma de varios términos con variables y exponentes enteros",
+    "Una ecuación con una sola solución",
+    "Un número con muchas cifras decimales"
+   ],
+   "correcta": 1,
+   "tip": "Ejemplo: 3x² + 2x − 5.",
+   "revisada": false
+  },
+  {
+   "id": "voc-mate-108",
+   "oa": "VOC-MATE",
+   "pregunta": "¿Qué es una \"homotecia\"?",
+   "opciones": [
+    "Un giro de una figura alrededor de un punto",
+    "Un desplazamiento de una figura sin cambiar su tamaño",
+    "Una transformación que agranda o achica una figura manteniendo su forma, a partir de un centro",
+    "Un reflejo de una figura respecto a un eje"
+   ],
+   "correcta": 2,
+   "tip": "Cambia el tamaño de la figura pero conserva su forma (semejanza).",
+   "revisada": false
+  },
+  {
+   "id": "voc-mate-109",
+   "oa": "VOC-MATE",
+   "pregunta": "¿Qué es la \"probabilidad\"?",
+   "opciones": [
+    "La medida numérica de qué tan posible es que ocurra un evento",
+    "El promedio de un conjunto de datos",
+    "La diferencia entre el mayor y el menor dato",
+    "El valor que más se repite en un conjunto de datos"
+   ],
+   "correcta": 0,
+   "tip": "Se expresa entre 0 (imposible) y 1 (seguro).",
+   "revisada": false
+  },
+  {
+   "id": "voc-mate-110",
+   "oa": "VOC-MATE",
+   "pregunta": "¿Qué es el \"rango\" de un conjunto de datos?",
+   "opciones": [
+    "El valor central de los datos ordenados",
+    "La diferencia entre el valor máximo y el valor mínimo del conjunto",
+    "El dato que se repite con más frecuencia",
+    "El promedio de todos los datos"
+   ],
+   "correcta": 1,
+   "tip": "Mide qué tan dispersos están los datos.",
+   "revisada": false
+  },
+  {
+   "id": "voc-leng-101",
+   "oa": "VOC-LENG",
+   "pregunta": "¿Qué es el \"protagonista\" de una narración?",
+   "opciones": [
+    "El personaje principal, en torno al cual gira la historia",
+    "El personaje secundario que ayuda al héroe",
+    "El lugar donde ocurre la historia",
+    "El narrador de la historia"
+   ],
+   "correcta": 0,
+   "tip": "Es quien vive el conflicto central de la historia.",
+   "revisada": false
+  },
+  {
+   "id": "voc-leng-102",
+   "oa": "VOC-LENG",
+   "pregunta": "¿Qué es el \"antagonista\"?",
+   "opciones": [
+    "El personaje que narra la historia en primera persona",
+    "El momento de mayor tensión en la trama",
+    "El personaje que se opone al protagonista y genera el conflicto",
+    "El escenario donde transcurre la acción"
+   ],
+   "correcta": 2,
+   "tip": "Es el rival o adversario del protagonista.",
+   "revisada": false
+  },
+  {
+   "id": "voc-leng-103",
+   "oa": "VOC-LENG",
+   "pregunta": "¿Qué es el \"clímax\" de una historia?",
+   "opciones": [
+    "La presentación inicial de los personajes",
+    "La resolución final del conflicto",
+    "La descripción del ambiente",
+    "El momento de mayor tensión o intensidad de la trama"
+   ],
+   "correcta": 3,
+   "tip": "Es el punto culminante antes del desenlace.",
+   "revisada": false
+  },
+  {
+   "id": "voc-leng-104",
+   "oa": "VOC-LENG",
+   "pregunta": "¿Qué es el \"punto de vista\" narrativo?",
+   "opciones": [
+    "La opinión personal del lector sobre la obra",
+    "El lugar y tiempo donde ocurre la acción",
+    "El tema principal de la obra",
+    "La perspectiva desde la cual se cuenta la historia"
+   ],
+   "correcta": 3,
+   "tip": "Puede ser en primera, segunda o tercera persona.",
+   "revisada": false
+  },
+  {
+   "id": "voc-leng-105",
+   "oa": "VOC-LENG",
+   "pregunta": "¿Qué es la \"rima\"?",
+   "opciones": [
+    "El ritmo silencioso de un poema",
+    "La repetición de sonidos semejantes al final de los versos",
+    "La comparación entre dos elementos usando 'como'",
+    "La cantidad de versos en una estrofa"
+   ],
+   "correcta": 1,
+   "tip": "Puede ser consonante o asonante.",
+   "revisada": false
+  },
+  {
+   "id": "voc-leng-106",
+   "oa": "VOC-LENG",
+   "pregunta": "¿Qué es un \"símil\"?",
+   "opciones": [
+    "El uso de una palabra en sentido figurado sin nexo comparativo",
+    "Una figura literaria que compara dos elementos usando un nexo comparativo como 'como'",
+    "Una exageración notoria de una idea",
+    "Atribuir cualidades humanas a objetos o animales"
+   ],
+   "correcta": 1,
+   "tip": "Ejemplo: 'sus ojos son como estrellas'.",
+   "revisada": false
+  },
+  {
+   "id": "voc-leng-107",
+   "oa": "VOC-LENG",
+   "pregunta": "¿Qué es una \"hipérbole\"?",
+   "opciones": [
+    "Una comparación con nexo explícito",
+    "Una exageración intencional para producir un efecto expresivo",
+    "La atribución de cualidades humanas a seres inanimados",
+    "Un tipo de rima entre versos"
+   ],
+   "correcta": 1,
+   "tip": "Ejemplo: 'te lo he dicho un millón de veces'.",
+   "revisada": false
+  },
+  {
+   "id": "voc-leng-108",
+   "oa": "VOC-LENG",
+   "pregunta": "¿Qué es un \"monólogo\"?",
+   "opciones": [
+    "El resumen de una obra teatral",
+    "Una acotación escénica en una obra dramática",
+    "Una conversación entre dos o más personajes",
+    "El discurso de un solo personaje que expresa sus pensamientos en voz alta"
+   ],
+   "correcta": 3,
+   "tip": "Habla un único personaje, a menudo revelando sus sentimientos.",
+   "revisada": false
+  },
+  {
+   "id": "voc-leng-109",
+   "oa": "VOC-LENG",
+   "pregunta": "¿Qué es un \"ensayo\"?",
+   "opciones": [
+    "Un poema dividido en estrofas",
+    "Un texto en el que el autor expone y argumenta su punto de vista sobre un tema",
+    "Una obra escrita para ser representada en un escenario",
+    "Un texto narrativo de ficción con personajes inventados"
+   ],
+   "correcta": 1,
+   "tip": "Es un texto reflexivo y argumentativo en prosa.",
+   "revisada": false
+  },
+  {
+   "id": "voc-leng-110",
+   "oa": "VOC-LENG",
+   "pregunta": "¿Qué es la \"idea principal\" de un texto?",
+   "opciones": [
+    "El enunciado que resume lo más importante que el texto quiere comunicar",
+    "Un ejemplo secundario que apoya el tema",
+    "La opinión del lector sobre el texto",
+    "La primera oración del texto"
+   ],
+   "correcta": 0,
+   "tip": "Es el mensaje central alrededor del cual gira todo el texto.",
+   "revisada": false
+  },
+  {
+   "id": "voc-lect-101",
+   "oa": "VOC-LECT",
+   "pregunta": "¿Qué es la \"propaganda\" en el contexto de la Segunda Guerra Mundial?",
+   "opciones": [
+    "Un documento oficial de identidad",
+    "Una carta escrita en secreto",
+    "Información difundida de forma sesgada para influir en las creencias u opiniones de la población",
+    "Un tipo de refugio subterráneo contra bombardeos"
+   ],
+   "correcta": 2,
+   "tip": "Los regímenes totalitarios la usaban para manipular a la opinión pública.",
+   "revisada": false
+  },
+  {
+   "id": "voc-lect-102",
+   "oa": "VOC-LECT",
+   "pregunta": "¿Qué es la \"censura\"?",
+   "opciones": [
+    "El registro oficial de la población judía",
+    "La reunión secreta de un grupo perseguido",
+    "El control y restricción de la información, la prensa o las expresiones artísticas por parte de una autoridad",
+    "El traslado forzado de personas a otro país"
+   ],
+   "correcta": 2,
+   "tip": "Los regímenes autoritarios prohibían libros, prensa y opiniones contrarias.",
+   "revisada": false
+  },
+  {
+   "id": "voc-lect-103",
+   "oa": "VOC-LECT",
+   "pregunta": "¿Qué significa \"exilio\"?",
+   "opciones": [
+    "La celebración de una fiesta religiosa",
+    "La condición de vivir fuera del propio país, generalmente de forma forzada por motivos políticos",
+    "La firma de un tratado de paz",
+    "El encierro en un campo de concentración"
+   ],
+   "correcta": 1,
+   "tip": "Muchas personas debieron huir de su país por la persecución nazi.",
+   "revisada": false
+  },
+  {
+   "id": "voc-lect-104",
+   "oa": "VOC-LECT",
+   "pregunta": "¿Qué es un \"testimonio\"?",
+   "opciones": [
+    "Una canción popular de la época",
+    "Un relato de ficción inventado por un autor",
+    "Un documento legal que autoriza un viaje",
+    "El relato de una persona que narra hechos que vivió o presenció directamente"
+   ],
+   "correcta": 3,
+   "tip": "El diario de Ana Frank es un testimonio de lo vivido durante la guerra.",
+   "revisada": false
+  },
+  {
+   "id": "voc-lect-105",
+   "oa": "VOC-LECT",
+   "pregunta": "¿Qué es la \"memoria histórica\"?",
+   "opciones": [
+    "Una ley que prohibía ciertos libros",
+    "El conjunto de recuerdos y relatos que una sociedad conserva sobre hechos del pasado",
+    "Un tipo de documento oficial nazi",
+    "El lugar donde se escondían las familias perseguidas"
+   ],
+   "correcta": 1,
+   "tip": "Sirve para que hechos como el Holocausto no se olviden ni se repitan.",
+   "revisada": false
+  },
+  {
+   "id": "voc-lect-106",
+   "oa": "VOC-LECT",
+   "pregunta": "¿Qué significa \"tolerancia\"?",
+   "opciones": [
+    "La obligación de seguir las órdenes de una autoridad",
+    "El rechazo hacia quienes piensan o son diferentes",
+    "El respeto y la aceptación de las diferencias entre las personas",
+    "La discriminación basada en el origen étnico"
+   ],
+   "correcta": 2,
+   "tip": "Es el valor opuesto al prejuicio y la discriminación.",
+   "revisada": false
+  },
+  {
+   "id": "voc-lect-107",
+   "oa": "VOC-LECT",
+   "pregunta": "¿Qué es un \"prejuicio\"?",
+   "opciones": [
+    "Una ley aprobada por un gobierno totalitario",
+    "Una opinión o juicio negativo hacia una persona o grupo formado sin conocerlo realmente",
+    "Un refugio secreto usado durante la ocupación",
+    "Un documento que identificaba a los judíos"
+   ],
+   "correcta": 1,
+   "tip": "Es una idea previa, generalmente injusta, sobre alguien.",
+   "revisada": false
+  },
+  {
+   "id": "voc-lect-108",
+   "oa": "VOC-LECT",
+   "pregunta": "¿Qué es la \"discriminación\"?",
+   "opciones": [
+    "Un tipo de propaganda visual",
+    "Un tratado firmado entre países en guerra",
+    "El trato desigual e injusto hacia una persona o grupo por sus características o su origen",
+    "El registro de nacimientos de una comunidad"
+   ],
+   "correcta": 2,
+   "tip": "Los nazis discriminaban y perseguían a los judíos y otros grupos.",
+   "revisada": false
+  },
+  {
+   "id": "voc-lect-109",
+   "oa": "VOC-LECT",
+   "pregunta": "¿Qué es un \"armisticio\"?",
+   "opciones": [
+    "Un campo destinado a prisioneros de guerra",
+    "Un acuerdo temporal para suspender las acciones bélicas entre bandos enfrentados",
+    "Una ley que prohibía la libre expresión",
+    "Un desfile militar de celebración"
+   ],
+   "correcta": 1,
+   "tip": "Detiene los combates, aunque no siempre pone fin definitivo a la guerra.",
+   "revisada": false
+  },
+  {
+   "id": "voc-lect-110",
+   "oa": "VOC-LECT",
+   "pregunta": "¿Qué significa \"invasión\"?",
+   "opciones": [
+    "La firma de un pacto de no agresión entre países",
+    "La celebración de elecciones democráticas",
+    "La entrega voluntaria de territorio entre naciones aliadas",
+    "La entrada de fuerzas militares de un país en el territorio de otro sin su consentimiento"
+   ],
+   "correcta": 3,
+   "tip": "Así comenzó la ocupación de varios países durante la Segunda Guerra Mundial.",
    "revisada": false
   }
  ]

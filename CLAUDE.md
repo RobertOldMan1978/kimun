@@ -1827,5 +1827,13 @@ data-driven sobre el motor de quiz existente (no se tocó el motor).
   error a `CAMP_ACT`. Ahora el botón se muestra siempre ("← Volver a la campaña" en campañas,
   "← Volver" en el resto) y enruta explícito por contexto en `renderMapa`: campaña → `scr-campana`,
   `voc-general` → `scr-lenguaje`, Lectura → `scr-biblioteca`, resto → `scr-expediciones`.
+- **Ajustes post-feedback de Roberto:** (1) **Vocabulario ampliado a 30 palabras por área**
+  (150 total; agente `vocab-mas` generó 10 nuevas por origen sin repetir, ids `voc-*-1NN`; se
+  fusionaron y **se barajaron todas** las opciones), y cada ronda ahora manda **15 al azar**
+  (`n:15` en las 5 etapas). (2) **Portadas rehechas al estilo del juego** (zorro de frente con
+  lentes redondos, marco circular, tono crema): `portada-lectura.png` (zorro con bufanda +
+  libro en biblioteca), `portada-voc-general.png` (zorro + libro + letras flotantes) y
+  `portada-lectura-anafrank.png` (diario a cuadros ilustrado, cálido y respetuoso, **sin
+  mascota** por el tema). Las primeras versiones desentonaban (estilos mezclados / realista).
 - **Pendientes:** **aprobación pedagógica** de los 2 bancos nuevos (nacen `revisada:false`);
   sin cambios en el resto respecto a la Sesión 29.
