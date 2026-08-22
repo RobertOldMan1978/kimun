@@ -1087,6 +1087,44 @@ const EXPEDICIONES=[
      {oa:"AF-T7", nombre:"Esperanza y reflexión", icono:"✨", n:6},
      {oa:"AF-T8", nombre:"El final", icono:"🕯️", n:6},
    ]},
+ // --- Campaña Matemáticas (expedición · usa el banco de año completo de 603) ---
+ { id:'mate-exp-numeros', asignatura:'Matemáticas', nivel:'8° Básico · Números',
+   portada:'assets/portada-mate-numeros.png', contenido:'contenido/matematicas-8basico/preguntas.json', activa:true, campaña:'mate',
+   etapas:[
+     {oa:"MA08 OA 01", nombre:"Enteros", icono:"🔢", n:6},
+     {oa:"MA08 OA 02", nombre:"Fracciones y decimales", icono:"➗", n:6},
+     {oa:"MA08 OA 03", nombre:"Potencias", icono:"✖️", n:6},
+     {oa:"MA08 OA 04", nombre:"Raíces cuadradas", icono:"√", n:6},
+     {oa:"MA08 OA 05", nombre:"Porcentajes", icono:"％", n:6},
+     {oa:"BOSS", nombre:"⚡ JEFE: Números", icono:"🧮", n:8, oas:["MA08 OA 01","MA08 OA 02","MA08 OA 03","MA08 OA 04","MA08 OA 05"]},
+   ]},
+ { id:'mate-exp-algebra', asignatura:'Matemáticas', nivel:'8° Básico · Álgebra y funciones',
+   portada:'assets/portada-mate-algebra.png', contenido:'contenido/matematicas-8basico/preguntas.json', activa:true, campaña:'mate',
+   etapas:[
+     {oa:"MA08 OA 06", nombre:"Lenguaje algebraico", icono:"✏️", n:6},
+     {oa:"MA08 OA 07", nombre:"Función lineal", icono:"📈", n:6},
+     {oa:"MA08 OA 08", nombre:"Ecuaciones", icono:"⚖️", n:6},
+     {oa:"MA08 OA 09", nombre:"Inecuaciones", icono:"🚦", n:6},
+     {oa:"MA08 OA 10", nombre:"Función afín", icono:"📉", n:6},
+     {oa:"BOSS", nombre:"⚡ JEFE: Álgebra", icono:"🧮", n:8, oas:["MA08 OA 06","MA08 OA 07","MA08 OA 08","MA08 OA 09","MA08 OA 10"]},
+   ]},
+ { id:'mate-exp-geometria', asignatura:'Matemáticas', nivel:'8° Básico · Geometría',
+   portada:'assets/portada-mate-geometria.png', contenido:'contenido/matematicas-8basico/preguntas.json', activa:true, campaña:'mate',
+   etapas:[
+     {oa:"MA08 OA 11", nombre:"Área y volumen", icono:"📦", n:6},
+     {oa:"MA08 OA 12", nombre:"Teorema de Pitágoras", icono:"📐", n:6},
+     {oa:"MA08 OA 13", nombre:"Movimientos en el plano", icono:"🔃", n:6},
+     {oa:"MA08 OA 14", nombre:"Simetría", icono:"🔷", n:6},
+     {oa:"BOSS", nombre:"⚡ JEFE: Geometría", icono:"🧮", n:8, oas:["MA08 OA 11","MA08 OA 12","MA08 OA 13","MA08 OA 14"]},
+   ]},
+ { id:'mate-exp-datos', asignatura:'Matemáticas', nivel:'8° Básico · Probabilidad y estadística',
+   portada:'assets/portada-mate-datos.png', contenido:'contenido/matematicas-8basico/preguntas.json', activa:true, campaña:'mate',
+   etapas:[
+     {oa:"MA08 OA 15", nombre:"Cuartiles y cajón", icono:"📊", n:6},
+     {oa:"MA08 OA 16", nombre:"Gráficos honestos", icono:"📈", n:6},
+     {oa:"MA08 OA 17", nombre:"Principio multiplicativo", icono:"🎲", n:6},
+     {oa:"BOSS", nombre:"⚡ JEFE: Datos y azar", icono:"🧮", n:8, oas:["MA08 OA 15","MA08 OA 16","MA08 OA 17"]},
+   ]},
 ];
 
 /* ===== CAMPAÑAS (capa "asignatura completa" · data-driven) =====
@@ -1146,7 +1184,7 @@ const CAMPAÑAS=[{
   id:'mate', asignatura:'Matemáticas', portada:'assets/portada-matematicas.png',
   intro:'Aprende los números, el álgebra, la geometría y los datos… y desafía tu cálculo.',
   esLecciones:true,
-  capitulos:[],   // Matemáticas no usa expediciones; ver capitulosMate
+  capitulos:['mate-exp-numeros','mate-exp-algebra','mate-exp-geometria','mate-exp-datos'],
   capitulosMate:[
     {id:'mate-numeros', titulo:'Números', lecciones:['ma-oa01','ma-oa02','ma-oa03','ma-oa04','ma-oa05']},
     {id:'mate-algebra', titulo:'Álgebra y funciones', lecciones:['ma-oa06','ma-oa07','ma-oa08','ma-oa09','ma-oa10']},
